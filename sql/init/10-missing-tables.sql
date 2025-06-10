@@ -10,7 +10,7 @@ CREATE TABLE content_generation_prompts (
     category NVARCHAR(100),
     parameters NVARCHAR(MAX), -- JSON format
     is_active BIT DEFAULT 1,
-    created_by UNIQUEIDENTIFIER REFERENCES users(user_id),
+    created_by UNIQUEIDENTIFIER REFERENCES users(id),
     created_at DATETIME2 DEFAULT GETDATE(),
     updated_at DATETIME2 DEFAULT GETDATE()
 );
@@ -18,7 +18,7 @@ CREATE TABLE content_generation_prompts (
 -- Session Materials and Resources
 CREATE TABLE session_materials (
     material_id UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
-    appointment_id UNIQUEIDENTIFIER REFERENCES appointments(appointment_id),
+    appointment_id UNIQUEIDENTIFIER REFERENCES appointments(id),
     material_type NVARCHAR(50) NOT NULL,
     material_name NVARCHAR(200) NOT NULL,
     file_path NVARCHAR(500),
@@ -29,7 +29,7 @@ CREATE TABLE session_materials (
 -- Teletherapy Technical Logs
 CREATE TABLE teletherapy_logs (
     log_id UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
-    session_id UNIQUEIDENTIFIER REFERENCES virtual_sessions(session_id),
+    session_id UNIQUEIDENTIFIER REFERENCES virtual_sessions(id),
     event_type NVARCHAR(50) NOT NULL,
     event_timestamp DATETIME2 NOT NULL,
     connection_quality NVARCHAR(20),
@@ -40,8 +40,8 @@ CREATE TABLE teletherapy_logs (
 -- Parent Portal Activity
 CREATE TABLE parent_portal_activity (
     activity_id UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
-    parent_id UNIQUEIDENTIFIER REFERENCES parent_accounts(parent_id),
-    student_id UNIQUEIDENTIFIER REFERENCES students(student_id),
+    parent_id UNIQUEIDENTIFIER REFERENCES parent_accounts(id),
+    student_id UNIQUEIDENTIFIER REFERENCES students(id),
     activity_type NVARCHAR(50) NOT NULL,
     activity_details NVARCHAR(MAX),
     ip_address NVARCHAR(45),
@@ -52,7 +52,7 @@ CREATE TABLE parent_portal_activity (
 -- Compliance Training Records
 CREATE TABLE compliance_training (
     training_id UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
-    user_id UNIQUEIDENTIFIER REFERENCES users(user_id),
+    user_id UNIQUEIDENTIFIER REFERENCES users(id),
     training_type NVARCHAR(100) NOT NULL,
     completion_date DATE,
     expiration_date DATE,
@@ -65,13 +65,13 @@ CREATE TABLE compliance_training (
 -- Caseload Transfer History
 CREATE TABLE caseload_transfers (
     transfer_id UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
-    student_id UNIQUEIDENTIFIER REFERENCES students(student_id),
-    from_therapist_id UNIQUEIDENTIFIER REFERENCES users(user_id),
-    to_therapist_id UNIQUEIDENTIFIER REFERENCES users(user_id),
+    student_id UNIQUEIDENTIFIER REFERENCES students(id),
+    from_therapist_id UNIQUEIDENTIFIER REFERENCES users(id),
+    to_therapist_id UNIQUEIDENTIFIER REFERENCES users(id),
     transfer_date DATE NOT NULL,
     transfer_reason NVARCHAR(500),
     notes NVARCHAR(MAX),
-    created_by UNIQUEIDENTIFIER REFERENCES users(user_id),
+    created_by UNIQUEIDENTIFIER REFERENCES users(id),
     created_at DATETIME2 DEFAULT GETDATE()
 );
 
@@ -86,7 +86,7 @@ CREATE TABLE report_schedules (
     next_run_date DATETIME2,
     last_run_date DATETIME2,
     is_active BIT DEFAULT 1,
-    created_by UNIQUEIDENTIFIER REFERENCES users(user_id),
+    created_by UNIQUEIDENTIFIER REFERENCES users(id),
     created_at DATETIME2 DEFAULT GETDATE()
 );
 
@@ -112,6 +112,6 @@ CREATE TABLE archive_records (
     archive_path NVARCHAR(500),
     archive_size_mb BIGINT,
     retention_years INT NOT NULL,
-    archived_by UNIQUEIDENTIFIER REFERENCES users(user_id),
+    archived_by UNIQUEIDENTIFIER REFERENCES users(id),
     archived_at DATETIME2 DEFAULT GETDATE()
 );
