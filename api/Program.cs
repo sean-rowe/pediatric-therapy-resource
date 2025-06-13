@@ -22,7 +22,10 @@ Log.Logger = new LoggerConfiguration()
 builder.Host.UseSerilog();
 
 // Add services to the container.
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<TherapyDocs.Api.Filters.ValidationExceptionFilter>();
+});
 builder.Services.AddEndpointsApiExplorer();
 
 // Add Swagger/OpenAPI
@@ -111,14 +114,36 @@ builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 // Add Memory Cache
 builder.Services.AddMemoryCache();
 
+// Add Secure Configuration for encrypted connection strings
+builder.Services.AddSecureConfiguration();
+
+// Add Antiforgery
+builder.Services.AddAntiforgery(options =>
+{
+    options.HeaderName = "X-CSRF-TOKEN";
+    options.Cookie.HttpOnly = true;
+    options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+    options.Cookie.SameSite = SameSiteMode.Strict;
+});
+
 // Register services
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IEmailVerificationRepository, EmailVerificationRepository>();
 builder.Services.AddScoped<IRegistrationAuditRepository, RegistrationAuditRepository>();
-builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IAccountLockoutRepository, AccountLockoutRepository>();
+builder.Services.AddScoped<IPasswordHistoryRepository, PasswordHistoryRepository>();
+
+// Register refactored services following SRP
+builder.Services.AddScoped<IUserRegistrationService, UserRegistrationService>();
+builder.Services.AddScoped<IEmailVerificationService, EmailVerificationService>();
+builder.Services.AddScoped<ILoginService, LoginService>();
+// Use refactored AuthService
+builder.Services.AddScoped<IAuthService, AuthServiceRefactored>();
+
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<ILicenseVerificationService, LicenseVerificationService>();
 builder.Services.AddScoped<IPasswordService, PasswordService>();
+builder.Services.AddHttpClient<IHaveIBeenPwnedService, HaveIBeenPwnedService>();
 
 // Add HttpClient for external API calls
 builder.Services.AddHttpClient();
@@ -131,6 +156,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// Add global exception handling middleware
+app.UseMiddleware<TherapyDocs.Api.Middleware.GlobalExceptionMiddleware>();
 
 app.UseHttpsRedirection();
 app.UseCors("AllowFrontend");

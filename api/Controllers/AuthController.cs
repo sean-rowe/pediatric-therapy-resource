@@ -8,18 +8,22 @@ namespace TherapyDocs.Api.Controllers;
 
 [ApiController]
 [Route("api/auth")]
+[AutoValidateAntiforgeryToken]
 public class AuthController : ControllerBase
 {
     private readonly IAuthService _authService;
+    private readonly ILoginService _loginService;
     private readonly IValidator<RegisterRequest> _registerValidator;
     private readonly ILogger<AuthController> _logger;
 
     public AuthController(
-        IAuthService authService, 
+        IAuthService authService,
+        ILoginService loginService,
         IValidator<RegisterRequest> registerValidator,
         ILogger<AuthController> logger)
     {
         _authService = authService;
+        _loginService = loginService;
         _registerValidator = registerValidator;
         _logger = logger;
     }
@@ -58,7 +62,7 @@ public class AuthController : ControllerBase
 
         if (result.Success)
         {
-            _logger.LogInformation("User registered successfully: {Email}", request.Email);
+            _logger.LogInformation("User registered successfully");
             return Ok(result);
         }
 
@@ -84,7 +88,7 @@ public class AuthController : ControllerBase
 
         if (result)
         {
-            _logger.LogInformation("Email verified successfully with token: {Token}", token);
+            _logger.LogInformation("Email verified successfully");
             return Ok(new { success = true, message = "Email verified successfully! You can now log in." });
         }
 
@@ -112,11 +116,48 @@ public class AuthController : ControllerBase
 
         if (result)
         {
-            _logger.LogInformation("Verification email resent to: {Email}", request.Email);
+            _logger.LogInformation("Verification email resent successfully");
             return Ok(new { success = true, message = "Verification email sent successfully" });
         }
 
         return BadRequest(new { success = false, message = "Unable to resend verification email. Please check your email address." });
+    }
+
+    /// <summary>
+    /// Login with email and password
+    /// </summary>
+    /// <param name="request">Login credentials</param>
+    /// <returns>JWT token and user info</returns>
+    [HttpPost("login")]
+    [EnableRateLimiting("registration")]
+    [ProducesResponseType(typeof(LoginResponse), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(LoginResponse), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status429TooManyRequests)]
+    public async Task<IActionResult> Login([FromBody] LoginRequest request)
+    {
+        if (string.IsNullOrWhiteSpace(request.Email) || string.IsNullOrWhiteSpace(request.Password))
+        {
+            return BadRequest(new LoginResponse 
+            { 
+                Success = false, 
+                Message = "Email and password are required" 
+            });
+        }
+
+        // Get client IP and user agent for audit
+        var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString();
+        var userAgent = Request.Headers.UserAgent.ToString();
+
+        // Attempt login
+        var result = await _loginService.LoginAsync(request, ipAddress, userAgent);
+
+        if (result.Success)
+        {
+            _logger.LogInformation("User logged in successfully");
+            return Ok(result);
+        }
+
+        return BadRequest(result);
     }
 }
 

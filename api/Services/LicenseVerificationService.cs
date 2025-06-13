@@ -61,57 +61,57 @@ public class LicenseVerificationService : ILicenseVerificationService
 
     private async Task<LicenseVerificationResult> VerifyLicenseWithStateApiAsync(string licenseNumber, string state, string licenseType)
     {
-        // This is a mock implementation - in real scenarios, you'd integrate with actual state APIs
-        // Each state has different APIs and formats for license verification
-        
         var apiUrl = GetStateApiUrl(state);
         if (string.IsNullOrEmpty(apiUrl))
         {
-            return new LicenseVerificationResult
-            {
-                Valid = false,
-                ErrorMessage = $"License verification not available for state: {state}"
-            };
+            _logger.LogWarning("License verification not configured for state: {State}", state);
+            throw new NotImplementedException($"License verification for state {state} is not yet implemented. Manual verification required.");
         }
 
-        // For demonstration, we'll simulate different responses
-        // In real implementation, this would call the actual state API
-        
-        await Task.Delay(500); // Simulate API call delay
-        
-        // Mock verification logic
-        var isValidFormat = licenseNumber.Length >= 4 && licenseNumber.All(c => char.IsLetterOrDigit(c) || c == '-');
-        
-        if (!isValidFormat)
+        try
         {
+            // TODO: Implement actual state API integration
+            // Each state has different APIs, authentication methods, and response formats
+            // This requires:
+            // 1. API credentials for each state
+            // 2. Custom parsers for each state's response format
+            // 3. Error handling for each state's specific error codes
+            // 4. Retry logic with exponential backoff
+            
+            throw new NotImplementedException("State license verification API integration pending. Manual verification required.");
+            
+            // Example of what real implementation would look like:
+            /*
+            var request = new HttpRequestMessage(HttpMethod.Post, apiUrl);
+            request.Headers.Add("Authorization", $"Bearer {await GetStateApiTokenAsync(state)}");
+            request.Content = new StringContent(JsonSerializer.Serialize(new 
+            {
+                licenseNumber = licenseNumber,
+                licenseType = licenseType
+            }), Encoding.UTF8, "application/json");
+            
+            var response = await _httpClient.SendAsync(request);
+            response.EnsureSuccessStatusCode();
+            
+            var content = await response.Content.ReadAsStringAsync();
+            var stateResponse = JsonSerializer.Deserialize<StateApiResponse>(content);
+            
             return new LicenseVerificationResult
             {
-                Valid = false,
-                ErrorMessage = "Invalid license number format"
+                Valid = stateResponse.IsValid,
+                PractitionerName = stateResponse.PractitionerName,
+                LicenseType = stateResponse.LicenseType,
+                ExpirationDate = stateResponse.ExpirationDate,
+                DisciplinaryActions = stateResponse.HasDisciplinaryActions,
+                ErrorMessage = stateResponse.ErrorMessage
             };
+            */
         }
-
-        // Simulate some licenses being invalid
-        var hash = licenseNumber.GetHashCode();
-        var isValid = Math.Abs(hash % 10) != 0; // 90% success rate for demo
-        
-        if (!isValid)
+        catch (HttpRequestException ex)
         {
-            return new LicenseVerificationResult
-            {
-                Valid = false,
-                ErrorMessage = "License not found in state database"
-            };
+            _logger.LogError(ex, "Error calling state license API for state: {State}", state);
+            throw new InvalidOperationException("Unable to verify license at this time. Please try again later.");
         }
-
-        return new LicenseVerificationResult
-        {
-            Valid = true,
-            PractitionerName = "John Doe", // In real scenario, this would come from API
-            LicenseType = licenseType,
-            ExpirationDate = DateTime.Now.AddYears(2),
-            DisciplinaryActions = false
-        };
     }
 
     private string? GetStateApiUrl(string state)
