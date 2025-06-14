@@ -1,0 +1,44 @@
+name: Deploy to Production
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy-staging:
+    environment: staging
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy Database to Staging
+        run: |
+          sqlcmd -S ${{ secrets.STAGING_SQL_SERVER }} -U ${{ secrets.SQL_USERNAME }} -P ${{ secrets.STAGING_SQL_PASSWORD }} -i database/migrations/*.sql
+      - name: Deploy API to Staging
+        run: |
+          docker run -d --name api-staging -p 5000:5000 -e ConnectionString="${{ secrets.STAGING_CONNECTION_STRING }}" ${{ secrets.DOCKER_REGISTRY }}/api:${{ github.sha }}
+      - name: Deploy UI to Staging
+        run: |
+          docker run -d --name ui-staging -p 3000:3000 ${{ secrets.DOCKER_REGISTRY }}/ui:${{ github.sha }}
+      - name: Run Smoke Tests
+        run: |
+          curl -f http://localhost:5000/health || exit 1
+          curl -f http://localhost:3000 || exit 1
+
+  deploy-production:
+    needs: deploy-staging
+    environment: production
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy Database to Production
+        run: |
+          sqlcmd -S ${{ secrets.PROD_SQL_SERVER }} -U ${{ secrets.SQL_USERNAME }} -P ${{ secrets.PROD_SQL_PASSWORD }} -i database/migrations/*.sql
+      - name: Deploy API to Production
+        run: |
+          docker run -d --name api-prod -p 5000:5000 -e ConnectionString="${{ secrets.PROD_CONNECTION_STRING }}" ${{ secrets.DOCKER_REGISTRY }}/api:${{ github.sha }}
+      - name: Deploy UI to Production
+        run: |
+          docker run -d --name ui-prod -p 3000:3000 ${{ secrets.DOCKER_REGISTRY }}/ui:${{ github.sha }}
+      - name: Run Health Checks
+        run: |
+          curl -f https://api.therapydocs.com/health || exit 1
+          curl -f https://app.therapydocs.com || exit 1

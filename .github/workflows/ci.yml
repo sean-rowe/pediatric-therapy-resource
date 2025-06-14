@@ -1,0 +1,85 @@
+name: Continuous Integration
+on:
+  push:
+    branches: [main, develop, 'feature/**']
+  pull_request:
+    branches: [main, develop]
+  workflow_dispatch:
+
+jobs:
+  database-tests:
+    runs-on: ubuntu-latest
+    services:
+      sqlserver:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        env:
+          SA_PASSWORD: ${{ secrets.SA_PASSWORD }}
+          ACCEPT_EULA: Y
+        options: >-
+          --health-cmd "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P $SA_PASSWORD -Q 'SELECT 1'"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy Database Schema
+        run: sqlcmd -S localhost -U sa -P ${{ secrets.SA_PASSWORD }} -i database/schemas/*.sql
+      - name: Deploy Stored Procedures
+        run: sqlcmd -S localhost -U sa -P ${{ secrets.SA_PASSWORD }} -i database/procedures/*.sql
+      - name: Install TSQLt
+        run: sqlcmd -S localhost -U sa -P ${{ secrets.SA_PASSWORD }} -i scripts/install-tsqlt.sql
+      - name: Run TSQLt Tests
+        run: sqlcmd -S localhost -U sa -P ${{ secrets.SA_PASSWORD }} -Q "EXEC tSQLt.RunAll"
+      - name: Generate Coverage Report
+        run: sqlcmd -S localhost -U sa -P ${{ secrets.SA_PASSWORD }} -Q "EXEC tSQLt.GetCoverage"
+
+  api-tests:
+    needs: database-tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+      - name: Restore Dependencies
+        run: dotnet restore api/
+      - name: Build API (with linting)
+        run: dotnet build api/ --no-restore --verbosity normal
+      - name: Run Linter Analysis
+        run: dotnet build api/ --no-restore --verbosity normal --no-incremental
+      - name: Run Unit Tests
+        run: dotnet test api/ --no-build --collect:"XPlat Code Coverage" --results-directory coverage --verbosity normal
+      - name: Generate Coverage Report
+        run: dotnet test api/ --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=./TestResults/coverage.opencover.xml
+      - name: Upload Coverage
+        uses: codecov/codecov-action@v3
+        with:
+          directory: ./coverage
+
+  ui-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install Dependencies
+        run: npm ci
+        working-directory: ui/
+      - name: Run Linting
+        run: npm run lint
+        working-directory: ui/
+      - name: Run Unit Tests
+        run: npm run test:coverage
+        working-directory: ui/
+      - name: Upload Coverage
+        uses: codecov/codecov-action@v3
+
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v2
+        with:
+          languages: csharp, javascript
+      - uses: github/codeql-action/analyze@v2

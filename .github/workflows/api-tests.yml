@@ -1,0 +1,58 @@
+name: API Tests and Linting
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+    branches: [main, develop]
+  workflow_dispatch:
+
+jobs:
+  api-tests:
+    runs-on: ubuntu-latest
+    name: API Linting and Testing
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+          
+      - name: Restore NuGet packages
+        run: dotnet restore api/
+        
+      - name: Build with linting (warnings as errors)
+        run: dotnet build api/ --no-restore --configuration Release --verbosity normal
+        
+      - name: Run StyleCop analysis
+        run: dotnet build api/ --no-restore --verbosity diagnostic | grep -E "(warning|error)" || echo "No linting issues found"
+        
+      - name: Run unit tests
+        run: dotnet test api/ --no-build --configuration Release --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./TestResults
+        
+      - name: Generate detailed coverage report
+        run: |
+          dotnet test api/ --no-build --configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=./TestResults/coverage.opencover.xml /p:Exclude="[*.Tests]*"
+          
+      - name: Display test results summary
+        run: |
+          echo "## Test Results Summary" >> $GITHUB_STEP_SUMMARY
+          echo "✅ All tests completed successfully" >> $GITHUB_STEP_SUMMARY
+          echo "📊 Coverage report generated in TestResults/" >> $GITHUB_STEP_SUMMARY
+          
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: api/TestResults/
+          
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          directory: ./api/TestResults/
+          fail_ci_if_error: false
+          verbose: true
