@@ -1,0 +1,128 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# All files
+[*]
+charset = utf-8
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Code files
+[*.{cs,csx,vb,vbx}]
+indent_style = space
+indent_size = 4
+
+# C# files
+[*.cs]
+
+# New line preferences
+csharp_new_line_before_open_brace = all
+csharp_new_line_before_else = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_finally = true
+csharp_new_line_before_members_in_object_initializers = true
+csharp_new_line_before_members_in_anonymous_types = true
+csharp_new_line_between_query_expression_clauses = true
+
+# Indentation preferences
+csharp_indent_case_contents = true
+csharp_indent_switch_labels = true
+csharp_indent_labels = flush_left
+
+# Space preferences
+csharp_space_after_cast = false
+csharp_space_after_keywords_in_control_flow_statements = true
+csharp_space_between_method_declaration_parameter_list_parentheses = false
+csharp_space_between_method_call_parameter_list_parentheses = false
+csharp_space_between_parentheses = false
+
+# Wrapping preferences
+csharp_preserve_single_line_statements = false
+csharp_preserve_single_line_blocks = true
+
+# StyleCop Rules
+dotnet_diagnostic.SA1000.severity = warning # Keywords should be spaced correctly
+dotnet_diagnostic.SA1001.severity = warning # Commas should be spaced correctly
+dotnet_diagnostic.SA1008.severity = warning # Opening parenthesis should be spaced correctly
+dotnet_diagnostic.SA1009.severity = warning # Closing parenthesis should be spaced correctly
+dotnet_diagnostic.SA1011.severity = warning # Closing square brackets should be spaced correctly
+dotnet_diagnostic.SA1012.severity = warning # Opening braces should be spaced correctly
+dotnet_diagnostic.SA1013.severity = warning # Closing braces should be spaced correctly
+dotnet_diagnostic.SA1024.severity = warning # Colons should be spaced correctly
+dotnet_diagnostic.SA1025.severity = warning # Code should not contain multiple whitespace in a row
+dotnet_diagnostic.SA1028.severity = warning # Code should not contain trailing whitespace
+dotnet_diagnostic.SA1100.severity = warning # Do not prefix calls with base unless local implementation exists
+dotnet_diagnostic.SA1101.severity = none    # Prefix local calls with this
+dotnet_diagnostic.SA1200.severity = none    # Using directives should be placed correctly
+dotnet_diagnostic.SA1201.severity = warning # Elements should appear in the correct order
+dotnet_diagnostic.SA1202.severity = warning # Elements should be ordered by access
+dotnet_diagnostic.SA1204.severity = warning # Static elements should appear before instance elements
+dotnet_diagnostic.SA1214.severity = warning # Readonly fields should appear before non-readonly fields
+dotnet_diagnostic.SA1300.severity = warning # Element should begin with upper-case letter
+dotnet_diagnostic.SA1303.severity = warning # Const field names should begin with upper-case letter
+dotnet_diagnostic.SA1304.severity = warning # Non-private readonly fields should begin with upper-case letter
+dotnet_diagnostic.SA1306.severity = warning # Field names should begin with lower-case letter
+dotnet_diagnostic.SA1309.severity = none    # Field names should not begin with underscore
+dotnet_diagnostic.SA1310.severity = warning # Field names should not contain underscore
+dotnet_diagnostic.SA1312.severity = warning # Variable names should begin with lower-case letter
+dotnet_diagnostic.SA1313.severity = warning # Parameter names should begin with lower-case letter
+dotnet_diagnostic.SA1400.severity = warning # Access modifier should be declared
+dotnet_diagnostic.SA1401.severity = warning # Fields should be private
+dotnet_diagnostic.SA1402.severity = warning # File may only contain a single type
+dotnet_diagnostic.SA1403.severity = warning # File may only contain a single namespace
+dotnet_diagnostic.SA1404.severity = warning # Code analysis suppression should have justification
+dotnet_diagnostic.SA1405.severity = warning # Debug.Assert should provide message text
+dotnet_diagnostic.SA1406.severity = warning # Debug.Fail should provide message text
+dotnet_diagnostic.SA1407.severity = warning # Arithmetic expressions should declare precedence
+dotnet_diagnostic.SA1408.severity = warning # Conditional expressions should declare precedence
+dotnet_diagnostic.SA1410.severity = warning # Remove delegate parenthesis when possible
+dotnet_diagnostic.SA1411.severity = warning # Attribute constructor should not use unnecessary parenthesis
+dotnet_diagnostic.SA1500.severity = warning # Braces for multi-line statements should not share line
+dotnet_diagnostic.SA1501.severity = warning # Statement should not be on a single line
+dotnet_diagnostic.SA1502.severity = warning # Element should not be on a single line
+dotnet_diagnostic.SA1503.severity = warning # Braces should not be omitted
+dotnet_diagnostic.SA1504.severity = warning # All accessors should be single-line or multi-line
+dotnet_diagnostic.SA1505.severity = warning # Opening braces should not be followed by blank line
+dotnet_diagnostic.SA1506.severity = warning # Element documentation headers should not be followed by blank line
+dotnet_diagnostic.SA1507.severity = warning # Code should not contain multiple blank lines in a row
+dotnet_diagnostic.SA1508.severity = warning # Closing braces should not be preceded by blank line
+dotnet_diagnostic.SA1509.severity = warning # Opening braces should not be preceded by blank line
+dotnet_diagnostic.SA1510.severity = warning # Chained statement blocks should not be preceded by blank line
+dotnet_diagnostic.SA1511.severity = warning # While-do footer should not be preceded by blank line
+dotnet_diagnostic.SA1512.severity = warning # Single-line comments should not be followed by blank line
+dotnet_diagnostic.SA1513.severity = warning # Closing brace should be followed by blank line
+dotnet_diagnostic.SA1514.severity = warning # Element documentation header should be preceded by blank line
+dotnet_diagnostic.SA1515.severity = warning # Single-line comment should be preceded by blank line
+dotnet_diagnostic.SA1516.severity = warning # Elements should be separated by blank line
+dotnet_diagnostic.SA1517.severity = warning # Code should not contain blank lines at start of file
+dotnet_diagnostic.SA1518.severity = warning # Use line endings correctly at end of file
+dotnet_diagnostic.SA1519.severity = warning # Braces should not be omitted from multi-line child statement
+dotnet_diagnostic.SA1520.severity = warning # Use braces consistently
+dotnet_diagnostic.SA1600.severity = none    # Elements should be documented
+dotnet_diagnostic.SA1601.severity = none    # Partial elements should be documented
+dotnet_diagnostic.SA1602.severity = none    # Enumeration items should be documented
+dotnet_diagnostic.SA1633.severity = none    # File should have header
+dotnet_diagnostic.SA1649.severity = warning # File name should match first type name
+
+# Code quality rules
+dotnet_diagnostic.CA1062.severity = warning # Validate arguments of public methods
+dotnet_diagnostic.CA1303.severity = none    # Do not pass literals as localized parameters
+dotnet_diagnostic.CA1031.severity = warning # Do not catch general exception types
+dotnet_diagnostic.CA1032.severity = warning # Implement standard exception constructors
+dotnet_diagnostic.CA1063.severity = warning # Implement IDisposable correctly
+dotnet_diagnostic.CA1305.severity = warning # Specify IFormatProvider
+dotnet_diagnostic.CA2007.severity = none    # Do not directly await a Task (disabled for ASP.NET Core)
+
+# Naming rules
+dotnet_naming_rule.private_fields_should_be_camel_case.severity = warning
+dotnet_naming_rule.private_fields_should_be_camel_case.symbols = private_fields
+dotnet_naming_rule.private_fields_should_be_camel_case.style = camel_case_style
+
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+dotnet_naming_symbols.private_fields.required_modifiers = 
+
+dotnet_naming_style.camel_case_style.capitalization = camel_case
+dotnet_naming_style.camel_case_style.required_prefix = _
