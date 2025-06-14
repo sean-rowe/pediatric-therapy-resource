@@ -1,13 +1,7 @@
+using TherapyDocs.Api.Interfaces;
 using TherapyDocs.Api.Repositories;
 
 namespace TherapyDocs.Api.Services;
-
-public interface IEmailVerificationService
-{
-    Task<bool> VerifyEmailAsync(string token);
-    Task<bool> ResendVerificationEmailAsync(string email);
-    Task SendVerificationEmailAsync(int userId, string email, string firstName);
-}
 
 public class EmailVerificationService : IEmailVerificationService
 {

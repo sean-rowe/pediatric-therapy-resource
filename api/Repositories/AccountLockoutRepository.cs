@@ -1,15 +1,10 @@
 using System.Data;
 using Microsoft.Data.SqlClient;
 using Dapper;
+using TherapyDocs.Api.Interfaces;
+using TherapyDocs.Api.Models.DTOs;
 
 namespace TherapyDocs.Api.Repositories;
-
-public interface IAccountLockoutRepository
-{
-    Task RecordFailedLoginAttemptAsync(string email, string? ipAddress, string? userAgent);
-    Task<AccountLockoutStatus> CheckAccountLockoutAsync(string email);
-    Task ClearFailedLoginAttemptsAsync(string email);
-}
 
 public class AccountLockoutRepository : IAccountLockoutRepository
 {

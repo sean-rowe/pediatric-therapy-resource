@@ -2,15 +2,11 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using TherapyDocs.Api.Interfaces;
 using TherapyDocs.Api.Models.DTOs;
 using TherapyDocs.Api.Repositories;
 
 namespace TherapyDocs.Api.Services;
-
-public interface ILoginService
-{
-    Task<LoginResponse> LoginAsync(LoginRequest request, string? ipAddress, string? userAgent);
-}
 
 public class LoginService : ILoginService
 {

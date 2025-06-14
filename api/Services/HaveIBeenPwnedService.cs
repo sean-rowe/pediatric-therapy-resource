@@ -1,12 +1,8 @@
 using System.Security.Cryptography;
 using System.Text;
+using TherapyDocs.Api.Interfaces;
 
 namespace TherapyDocs.Api.Services;
-
-public interface IHaveIBeenPwnedService
-{
-    Task<bool> IsPasswordPwnedAsync(string password);
-}
 
 public class HaveIBeenPwnedService : IHaveIBeenPwnedService
 {

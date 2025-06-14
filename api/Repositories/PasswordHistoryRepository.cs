@@ -1,15 +1,10 @@
 using System.Data;
 using Microsoft.Data.SqlClient;
 using Dapper;
+using TherapyDocs.Api.Interfaces;
+using TherapyDocs.Api.Models.DTOs;
 
 namespace TherapyDocs.Api.Repositories;
-
-public interface IPasswordHistoryRepository
-{
-    Task<bool> IsPasswordReusedAsync(int userId, string passwordHash);
-    Task AddPasswordToHistoryAsync(int userId, string passwordHash);
-    Task<PasswordChangeRequirement> CheckPasswordChangeRequiredAsync(int userId);
-}
 
 public class PasswordHistoryRepository : IPasswordHistoryRepository
 {

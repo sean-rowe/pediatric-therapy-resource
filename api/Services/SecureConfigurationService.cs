@@ -1,14 +1,9 @@
 using System.Security.Cryptography;
 using System.Text;
 using Microsoft.AspNetCore.DataProtection;
+using TherapyDocs.Api.Interfaces;
 
 namespace TherapyDocs.Api.Services;
-
-public interface ISecureConfigurationService
-{
-    string GetConnectionString(string name);
-    string EncryptConnectionString(string connectionString);
-}
 
 public class SecureConfigurationService : ISecureConfigurationService
 {

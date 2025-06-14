@@ -1,14 +1,10 @@
 using TherapyDocs.Api.Constants;
+using TherapyDocs.Api.Interfaces;
 using TherapyDocs.Api.Models;
 using TherapyDocs.Api.Models.DTOs;
 using TherapyDocs.Api.Repositories;
 
 namespace TherapyDocs.Api.Services;
-
-public interface IUserRegistrationService
-{
-    Task<RegisterResponse> RegisterUserAsync(RegisterRequest request, string? ipAddress, string? userAgent);
-}
 
 public class UserRegistrationService : IUserRegistrationService
 {

@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using System.Text;
+using TherapyDocs.Api.Interfaces;
 using TherapyDocs.Api.Services;
 using TherapyDocs.Api.Repositories;
 using FluentValidation;

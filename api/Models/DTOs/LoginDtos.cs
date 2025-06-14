@@ -28,3 +28,16 @@ public class UserDto
     public string LastName { get; set; } = string.Empty;
     public string ServiceType { get; set; } = string.Empty;
 }
+
+public class AccountLockoutStatus
+{
+    public bool IsLocked { get; set; }
+    public DateTime? LockedUntil { get; set; }
+    public int RemainingAttempts { get; set; }
+}
+
+public class PasswordChangeRequirement
+{
+    public bool ChangeRequired { get; set; }
+    public int DaysUntilExpiry { get; set; }
+}
