@@ -1,3 +1,4 @@
+using TherapyDocs.Api.Constants;
 using TherapyDocs.Api.Models;
 using TherapyDocs.Api.Models.DTOs;
 using TherapyDocs.Api.Repositories;
@@ -36,7 +37,7 @@ public class AuthService : IAuthService
     {
         var response = new RegisterResponse();
         var stopwatch = System.Diagnostics.Stopwatch.StartNew();
-        var minimumResponseTime = TimeSpan.FromMilliseconds(500); // Constant time to prevent timing attacks
+        var minimumResponseTime = SecurityConstants.MinimumRegistrationResponseTime;
 
         try
         {
@@ -293,7 +294,7 @@ public class AuthService : IAuthService
     public async Task<bool> ResendVerificationEmailAsync(string email)
     {
         var stopwatch = System.Diagnostics.Stopwatch.StartNew();
-        var minimumResponseTime = TimeSpan.FromMilliseconds(300); // Constant time to prevent timing attacks
+        var minimumResponseTime = SecurityConstants.MinimumEmailVerificationResponseTime;
         
         try
         {

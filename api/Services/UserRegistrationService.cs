@@ -1,3 +1,4 @@
+using TherapyDocs.Api.Constants;
 using TherapyDocs.Api.Models;
 using TherapyDocs.Api.Models.DTOs;
 using TherapyDocs.Api.Repositories;
@@ -39,9 +40,12 @@ public class UserRegistrationService : IUserRegistrationService
 
     public async Task<RegisterResponse> RegisterUserAsync(RegisterRequest request, string? ipAddress, string? userAgent)
     {
+        // Input validation
+        ArgumentNullException.ThrowIfNull(request);
+        
         var response = new RegisterResponse();
         var stopwatch = System.Diagnostics.Stopwatch.StartNew();
-        var minimumResponseTime = TimeSpan.FromMilliseconds(500); // Constant time to prevent timing attacks
+        var minimumResponseTime = SecurityConstants.MinimumRegistrationResponseTime;
 
         try
         {
