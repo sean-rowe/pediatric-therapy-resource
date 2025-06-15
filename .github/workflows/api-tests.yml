@@ -22,20 +22,25 @@ jobs:
           dotnet-version: '8.0.x'
           
       - name: Restore NuGet packages
-        run: dotnet restore api/
+        run: |
+          dotnet restore api/TherapyDocs.Api.csproj
+          dotnet restore api/Tests/TherapyDocs.Api.Tests.csproj
         
-      - name: Build with linting (warnings as errors)
-        run: dotnet build api/ --no-restore --configuration Release --verbosity normal
+      - name: Build API with linting (warnings as errors)
+        run: dotnet build api/TherapyDocs.Api.csproj --no-restore --configuration Release --verbosity normal
+        
+      - name: Build Tests
+        run: dotnet build api/Tests/TherapyDocs.Api.Tests.csproj --no-restore --configuration Release --verbosity normal
         
       - name: Run StyleCop analysis
-        run: dotnet build api/ --no-restore --verbosity diagnostic | grep -E "(warning|error)" || echo "No linting issues found"
+        run: dotnet build api/TherapyDocs.Api.csproj --no-restore --verbosity diagnostic | grep -E "(warning|error)" || echo "No linting issues found"
         
       - name: Run unit tests
-        run: dotnet test api/ --no-build --configuration Release --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./TestResults
+        run: dotnet test api/Tests/TherapyDocs.Api.Tests.csproj --no-build --configuration Release --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./TestResults
         
       - name: Generate detailed coverage report
         run: |
-          dotnet test api/ --no-build --configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=./TestResults/coverage.opencover.xml /p:Exclude="[*.Tests]*"
+          dotnet test api/Tests/TherapyDocs.Api.Tests.csproj --no-build --configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=./TestResults/coverage.opencover.xml /p:Exclude="[*.Tests]*"
           
       - name: Display test results summary
         run: |
