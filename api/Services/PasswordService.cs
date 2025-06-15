@@ -1,5 +1,6 @@
 using BCrypt.Net;
 using System.Text.RegularExpressions;
+using TherapyDocs.Api.Interfaces;
 
 namespace TherapyDocs.Api.Services;
 
