@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 using TherapyDocs.Api.Models.DTOs;
 using TherapyDocs.Api.Services;
+using TherapyDocs.Api.Interfaces;
 using FluentValidation;
 
 namespace TherapyDocs.Api.Controllers;
