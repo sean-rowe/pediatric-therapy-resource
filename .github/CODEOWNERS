@@ -1,0 +1,17 @@
+# Global code owners - require review from designated reviewers
+* @sean-rowe
+
+# API code requires extra scrutiny
+/api/ @sean-rowe
+
+# Security-sensitive files require review
+/api/Controllers/AuthController.cs @sean-rowe
+/api/Services/AuthService*.cs @sean-rowe
+/api/Services/PasswordService.cs @sean-rowe
+/api/Middleware/GlobalExceptionMiddleware.cs @sean-rowe
+
+# Database migrations require careful review  
+/sql/migrations/ @sean-rowe
+
+# Test files can be reviewed by either developer or reviewer
+/api/Tests/ @sean-rowe

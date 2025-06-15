@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: therapydocs-dev
+  labels:
+    name: therapydocs-dev
+    compliance: hipaa
+    environment: development
+    application: therapydocs
+  annotations:
+    description: "TherapyDocs Development Environment - HIPAA Compliant"
+    created-by: "infrastructure-setup"
+    compliance-level: "hipaa-ba"
+    data-classification: "phi-test-data-only"
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: therapydocs-staging
+  labels:
+    name: therapydocs-staging
+    compliance: hipaa
+    environment: staging
+    application: therapydocs
+  annotations:
+    description: "TherapyDocs Staging Environment - HIPAA Compliant"
+    created-by: "infrastructure-setup"
+    compliance-level: "hipaa-ce"
+    data-classification: "phi-synthetic-data"
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: therapydocs-prod
+  labels:
+    name: therapydocs-prod
+    compliance: hipaa
+    environment: production
+    application: therapydocs
+  annotations:
+    description: "TherapyDocs Production Environment - HIPAA Compliant"
+    created-by: "infrastructure-setup"
+    compliance-level: "hipaa-ce"
+    data-classification: "phi-production-data"

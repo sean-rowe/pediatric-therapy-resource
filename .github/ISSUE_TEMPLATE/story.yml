@@ -1,0 +1,48 @@
+name: User Story
+description: Create a user story for a specific feature
+title: "[STORY] "
+labels: ["story"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        User stories help us understand the user's perspective.
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story
+      description: Describe the story from the user's perspective
+      placeholder: |
+        As a therapist
+        I want to create SOAP notes on my mobile device
+        So that I can document sessions immediately after completion
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What must be true for this story to be complete?
+      placeholder: |
+        - [ ] User can create new SOAP note
+        - [ ] All SOAP sections (S, O, A, P) are available
+        - [ ] Notes auto-save every 30 seconds
+        - [ ] Works offline with sync when connected
+    validations:
+      required: true
+  - type: input
+    id: story-points
+    attributes:
+      label: Story Points
+      description: Estimated complexity (1, 2, 3, 5, 8, 13)
+      placeholder: "5"
+    validations:
+      required: true
+  - type: input
+    id: epic-link
+    attributes:
+      label: Epic Link
+      description: Link to parent epic (issue number)
+      placeholder: "#1"
+    validations:
+      required: false

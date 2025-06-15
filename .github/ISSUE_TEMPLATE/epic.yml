@@ -1,0 +1,51 @@
+name: Epic
+description: Create an epic for a major feature
+title: "[EPIC] "
+labels: ["epic"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for creating an epic! This template helps structure major features.
+  - type: input
+    id: feature
+    attributes:
+      label: Feature Name
+      description: What is the name of this feature?
+      placeholder: User Authentication System
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the feature and its business value
+      placeholder: |
+        As a [user type]
+        I want [feature]
+        So that [business value]
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What conditions must be met for this epic to be considered complete?
+      placeholder: |
+        - [ ] All user stories completed
+        - [ ] 100% test coverage achieved
+        - [ ] Documentation updated
+        - [ ] Security review passed
+    validations:
+      required: true
+  - type: textarea
+    id: user-stories
+    attributes:
+      label: User Stories
+      description: List the user stories that comprise this epic
+      placeholder: |
+        - [ ] #123 User Registration
+        - [ ] #124 User Login
+        - [ ] #125 Password Reset
+    validations:
+      required: false

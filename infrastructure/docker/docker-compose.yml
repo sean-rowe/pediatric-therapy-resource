@@ -1,0 +1,193 @@
+version: '3.8'
+
+services:
+  # DATABASES - HIPAA COMPLIANT
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=${MSSQL_SA_PASSWORD:-Th3r@pyD0cs2024!}
+      - MSSQL_PID=Enterprise
+      - MSSQL_AGENT_ENABLED=true
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+      - ./init-scripts/sqlserver:/docker-entrypoint-initdb.d
+      - ./encryption-keys:/var/opt/mssql/encryption
+    healthcheck:
+      test: /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P ${MSSQL_SA_PASSWORD:-Th3r@pyD0cs2024!} -Q "SELECT 1"
+      interval: 10s
+      timeout: 3s
+      retries: 10
+    networks:
+      - therapydocs-hipaa
+
+  redis-sessions:
+    image: redis/redis-stack-server:latest
+    command: >
+      redis-server
+      --requirepass ${REDIS_PASSWORD:-R3d1s_S3cur3!}
+      --appendonly yes
+      --tls-port 6380
+      --port 0
+      --tls-cert-file /tls/redis.crt
+      --tls-key-file /tls/redis.key
+      --tls-ca-cert-file /tls/ca.crt
+    ports:
+      - "6380:6380"
+    volumes:
+      - redis-sessions-data:/data
+      - ./certs/redis:/tls
+    networks:
+      - therapydocs-hipaa
+
+  redis-cache:
+    image: redis/redis-stack-server:latest
+    command: >
+      redis-server
+      --requirepass ${REDIS_CACHE_PASSWORD:-C@ch3_S3cur3!}
+      --maxmemory 256mb
+      --maxmemory-policy allkeys-lru
+    ports:
+      - "6379:6379"
+    networks:
+      - therapydocs-hipaa
+
+  # MESSAGE QUEUES - HEALTHCARE GRADE
+  rabbitmq:
+    image: rabbitmq:3-management
+    environment:
+      - RABBITMQ_DEFAULT_USER=therapydocs
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_PASSWORD:-R@bb1t_H1paa!}
+      - RABBITMQ_VM_MEMORY_HIGH_WATERMARK=0.6
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+      - ./rabbitmq/definitions.json:/etc/rabbitmq/definitions.json
+    networks:
+      - therapydocs-hipaa
+
+  # SEARCH - ENCRYPTED
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+      - xpack.security.enabled=true
+      - xpack.security.transport.ssl.enabled=true
+      - xpack.security.transport.ssl.verification_mode=certificate
+      - xpack.security.transport.ssl.keystore.path=/usr/share/elasticsearch/config/elastic-certificates.p12
+      - xpack.security.transport.ssl.truststore.path=/usr/share/elasticsearch/config/elastic-certificates.p12
+      - ELASTIC_PASSWORD=${ELASTIC_PASSWORD:-3last1c_H1paa!}
+    ports:
+      - "9200:9200"
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+      - ./certs/elasticsearch:/usr/share/elasticsearch/config/
+    networks:
+      - therapydocs-hipaa
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.11.0
+    ports:
+      - "5601:5601"
+    environment:
+      - ELASTICSEARCH_HOSTS=https://elasticsearch:9200
+      - ELASTICSEARCH_USERNAME=elastic
+      - ELASTICSEARCH_PASSWORD=${ELASTIC_PASSWORD:-3last1c_H1paa!}
+      - ELASTICSEARCH_SSL_VERIFICATIONMODE=none
+    depends_on:
+      - elasticsearch
+    networks:
+      - therapydocs-hipaa
+
+  # HEALTHCARE INTEGRATIONS
+  hapi-fhir:
+    image: hapiproject/hapi:latest
+    ports:
+      - "8090:8080"
+    environment:
+      - spring.datasource.url=jdbc:sqlserver://sqlserver:1433;databaseName=therapydocs_fhir;encrypt=false
+      - spring.datasource.username=sa
+      - spring.datasource.password=${MSSQL_SA_PASSWORD:-Th3r@pyD0cs2024!}
+      - spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
+      - hapi.fhir.server_address=http://localhost:8090/fhir
+    depends_on:
+      - sqlserver
+    networks:
+      - therapydocs-hipaa
+
+  # MONITORING - HIPAA COMPLIANT
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.retention.time=90d'
+      - '--web.enable-admin-api'
+    networks:
+      - therapydocs-hipaa
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-Gr@f@n@_H1paa!}
+      - GF_AUTH_LDAP_ENABLED=true
+      - GF_AUTH_DISABLE_LOGIN_FORM=false
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./grafana/dashboards:/etc/grafana/provisioning/dashboards
+    networks:
+      - therapydocs-hipaa
+
+  # DEVELOPMENT TOOLS
+  mailhog:
+    image: mailhog/mailhog:latest
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    networks:
+      - therapydocs-hipaa
+
+  # AZURE STORAGE EMULATOR
+  azurite:
+    image: mcr.microsoft.com/azure-storage/azurite
+    ports:
+      - "10000:10000"  # Blob service
+      - "10001:10001"  # Queue service
+      - "10002:10002"  # Table service
+    volumes:
+      - azurite-data:/data
+    networks:
+      - therapydocs-hipaa
+
+volumes:
+  sqlserver-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./volumes/sqlserver
+  redis-sessions-data:
+  redis-cache-data:
+  rabbitmq-data:
+  elasticsearch-data:
+  prometheus-data:
+  grafana-data:
+  azurite-data:
+
+networks:
+  therapydocs-hipaa:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

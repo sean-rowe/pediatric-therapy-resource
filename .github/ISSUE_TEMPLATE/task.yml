@@ -1,0 +1,59 @@
+name: Task
+description: Create a technical task
+title: "[TASK] "
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tasks are specific technical work items.
+  - type: input
+    id: title
+    attributes:
+      label: Task Title
+      description: Brief description of the task
+      placeholder: Implement user registration stored procedure
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Detailed description of what needs to be done
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Layer
+      description: Which layer does this task affect?
+      options:
+        - Database
+        - API
+        - UI
+        - Infrastructure
+        - Documentation
+      multiple: true
+    validations:
+      required: true
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Implementation Checklist
+      description: Break down the task into subtasks
+      placeholder: |
+        - [ ] Create stored procedure
+        - [ ] Write TSQLt tests (100% coverage)
+        - [ ] Update API service
+        - [ ] Write API tests
+        - [ ] Update documentation
+    validations:
+      required: true
+  - type: input
+    id: story-link
+    attributes:
+      label: Story Link
+      description: Link to parent story (issue number)
+      placeholder: "#5"
+    validations:
+      required: false

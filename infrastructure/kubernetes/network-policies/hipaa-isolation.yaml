@@ -1,0 +1,279 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: hipaa-isolation-policy
+  namespace: therapydocs-dev
+  labels:
+    compliance: hipaa
+    security-level: high
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
+  - Egress
+  
+  # Ingress rules - only allow specific traffic
+  ingress:
+  # Allow traffic from same namespace
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: therapydocs-dev
+    
+  # Allow traffic from monitoring namespace
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: monitoring
+    ports:
+    - protocol: TCP
+      port: 8080  # Metrics endpoint
+  
+  # Allow ingress controller traffic
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: ingress-nginx
+    ports:
+    - protocol: TCP
+      port: 80
+    - protocol: TCP
+      port: 443
+  
+  # Egress rules - restrict outbound traffic
+  egress:
+  # Allow DNS resolution
+  - to: []
+    ports:
+    - protocol: UDP
+      port: 53
+    - protocol: TCP
+      port: 53
+  
+  # Allow traffic within same namespace
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          name: therapydocs-dev
+  
+  # Allow HTTPS for external integrations (clearinghouse, FHIR)
+  - to: []
+    ports:
+    - protocol: TCP
+      port: 443
+  
+  # Allow SMTP for notifications (port 587 for TLS)
+  - to: []
+    ports:
+    - protocol: TCP
+      port: 587
+  
+  # Block all other traffic
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: database-isolation-policy
+  namespace: therapydocs-dev
+  labels:
+    compliance: hipaa
+    security-level: critical
+spec:
+  podSelector:
+    matchLabels:
+      app: sqlserver
+  policyTypes:
+  - Ingress
+  - Egress
+  
+  ingress:
+  # Only allow database access from API pods
+  - from:
+    - podSelector:
+        matchLabels:
+          component: api
+    ports:
+    - protocol: TCP
+      port: 1433
+  
+  # Allow from backup/maintenance pods
+  - from:
+    - podSelector:
+        matchLabels:
+          component: maintenance
+    ports:
+    - protocol: TCP
+      port: 1433
+  
+  egress:
+  # Allow DNS only
+  - to: []
+    ports:
+    - protocol: UDP
+      port: 53
+    - protocol: TCP
+      port: 53
+  
+  # Allow Azure SQL backup (if using managed service)
+  - to: []
+    ports:
+    - protocol: TCP
+      port: 1433
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: redis-isolation-policy
+  namespace: therapydocs-dev
+  labels:
+    compliance: hipaa
+    security-level: high
+spec:
+  podSelector:
+    matchLabels:
+      app: redis-sessions
+  policyTypes:
+  - Ingress
+  - Egress
+  
+  ingress:
+  # Only allow Redis access from API pods
+  - from:
+    - podSelector:
+        matchLabels:
+          component: api
+    ports:
+    - protocol: TCP
+      port: 6380  # TLS port
+  
+  egress:
+  # Allow DNS only
+  - to: []
+    ports:
+    - protocol: UDP
+      port: 53
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: api-pod-policy
+  namespace: therapydocs-dev
+  labels:
+    compliance: hipaa
+    security-level: high
+spec:
+  podSelector:
+    matchLabels:
+      component: api
+  policyTypes:
+  - Ingress
+  - Egress
+  
+  ingress:
+  # Allow traffic from frontend pods
+  - from:
+    - podSelector:
+        matchLabels:
+          component: frontend
+    ports:
+    - protocol: TCP
+      port: 8000
+  
+  # Allow traffic from ingress controller
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: ingress-nginx
+    ports:
+    - protocol: TCP
+      port: 8000
+  
+  # Allow monitoring
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: monitoring
+    ports:
+    - protocol: TCP
+      port: 8080  # Metrics
+  
+  egress:
+  # Allow DNS
+  - to: []
+    ports:
+    - protocol: UDP
+      port: 53
+    - protocol: TCP
+      port: 53
+  
+  # Allow database access
+  - to:
+    - podSelector:
+        matchLabels:
+          app: sqlserver
+    ports:
+    - protocol: TCP
+      port: 1433
+  
+  # Allow Redis access
+  - to:
+    - podSelector:
+        matchLabels:
+          app: redis-sessions
+    ports:
+    - protocol: TCP
+      port: 6380
+  
+  - to:
+    - podSelector:
+        matchLabels:
+          app: redis-cache
+    ports:
+    - protocol: TCP
+      port: 6379
+  
+  # Allow RabbitMQ access
+  - to:
+    - podSelector:
+        matchLabels:
+          app: rabbitmq
+    ports:
+    - protocol: TCP
+      port: 5672
+  
+  # Allow Elasticsearch access
+  - to:
+    - podSelector:
+        matchLabels:
+          app: elasticsearch
+    ports:
+    - protocol: TCP
+      port: 9200
+  
+  # Allow external HTTPS for integrations
+  - to: []
+    ports:
+    - protocol: TCP
+      port: 443
+  
+  # Allow SMTP
+  - to: []
+    ports:
+    - protocol: TCP
+      port: 587
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-all-default
+  namespace: therapydocs-dev
+  labels:
+    compliance: hipaa
+    security-level: default
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
+  - Egress
+  
+  # Default deny all - other policies will allow specific traffic
