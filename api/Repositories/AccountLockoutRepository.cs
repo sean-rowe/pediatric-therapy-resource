@@ -83,10 +83,3 @@ public class AccountLockoutRepository : IAccountLockoutRepository
         }
     }
 }
-
-public class AccountLockoutStatus
-{
-    public bool IsLocked { get; set; }
-    public DateTime? LockedUntil { get; set; }
-    public int RemainingAttempts { get; set; }
-}

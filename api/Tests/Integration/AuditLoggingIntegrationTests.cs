@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Moq;
+using TherapyDocs.Api.Interfaces;
 using TherapyDocs.Api.Models.DTOs;
 using TherapyDocs.Api.Repositories;
 using TherapyDocs.Api.Services;
@@ -304,9 +305,9 @@ public class AuditLoggingIntegrationTests : IDisposable
         _mockPasswordService.Setup(s => s.IsCommonPassword(It.IsAny<string>())).Returns(false);
         _mockPasswordService.Setup(s => s.HashPassword(It.IsAny<string>())).Returns("hashedpassword");
         _mockLicenseService.Setup(s => s.VerifyLicenseAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
-            .ReturnsAsync(new Models.LicenseVerificationResult { Valid = true, DisciplinaryActions = false });
-        _mockUserRepository.Setup(r => r.CreateUserAsync(It.IsAny<Models.User>())).ReturnsAsync(1);
-        _mockPasswordHistoryRepository.Setup(r => r.AddPasswordToHistoryAsync(It.IsAny<int>(), It.IsAny<string>())).Returns(Task.CompletedTask);
+            .ReturnsAsync(new Models.DTOs.LicenseVerificationResult { Valid = true, DisciplinaryActions = false });
+        _mockUserRepository.Setup(r => r.CreateUserAsync(It.IsAny<Models.User>())).ReturnsAsync(Guid.NewGuid());
+        _mockPasswordHistoryRepository.Setup(r => r.AddPasswordToHistoryAsync(It.IsAny<Guid>(), It.IsAny<string>())).Returns(Task.CompletedTask);
     }
 
     private void SetupDuplicateEmailRegistration()
@@ -324,7 +325,7 @@ public class AuditLoggingIntegrationTests : IDisposable
         _mockPasswordService.Setup(s => s.IsCommonPassword(It.IsAny<string>())).Returns(false);
         _mockPasswordService.Setup(s => s.HashPassword(It.IsAny<string>())).Returns("hashedpassword");
         _mockLicenseService.Setup(s => s.VerifyLicenseAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
-            .ReturnsAsync(new Models.LicenseVerificationResult { Valid = false, ErrorMessage = "License not found" });
+            .ReturnsAsync(new Models.DTOs.LicenseVerificationResult { Valid = false, ErrorMessage = "License not found" });
     }
 
     private void SetupWeakPasswordRegistration()

@@ -1,5 +1,6 @@
 using Microsoft.Extensions.Logging;
 using Moq;
+using TherapyDocs.Api.Interfaces;
 using TherapyDocs.Api.Models;
 using TherapyDocs.Api.Models.DTOs;
 using TherapyDocs.Api.Repositories;
@@ -57,8 +58,8 @@ public class UserRegistrationServiceTests
 
         // Verify all services were called
         _mockUserRepository.Verify(r => r.CreateUserAsync(It.IsAny<User>()), Times.Once);
-        _mockPasswordHistoryRepository.Verify(r => r.AddPasswordToHistoryAsync(It.IsAny<int>(), It.IsAny<string>()), Times.Once);
-        _mockEmailVerificationService.Verify(s => s.SendVerificationEmailAsync(It.IsAny<int>(), request.Email, request.FirstName), Times.Once);
+        _mockPasswordHistoryRepository.Verify(r => r.AddPasswordToHistoryAsync(It.IsAny<Guid>(), It.IsAny<string>()), Times.Once);
+        _mockEmailVerificationService.Verify(s => s.SendVerificationEmailAsync(It.IsAny<Guid>(), request.Email, request.FirstName), Times.Once);
         _mockRegistrationAuditRepository.Verify(r => r.LogRegistrationAttemptAsync(
             request.Email, request.LicenseNumber, request.LicenseState, true, null, "192.168.1.1", "TestBrowser"), Times.Once);
     }
@@ -231,7 +232,7 @@ public class UserRegistrationServiceTests
         User? capturedUser = null;
         _mockUserRepository.Setup(r => r.CreateUserAsync(It.IsAny<User>()))
             .Callback<User>(user => capturedUser = user)
-            .ReturnsAsync(1);
+            .ReturnsAsync(Guid.NewGuid());
 
         // Act
         await _service.RegisterUserAsync(request, "192.168.1.1", "TestBrowser");
@@ -286,7 +287,7 @@ public class UserRegistrationServiceTests
         User? capturedUser = null;
         _mockUserRepository.Setup(r => r.CreateUserAsync(It.IsAny<User>()))
             .Callback<User>(user => capturedUser = user)
-            .ReturnsAsync(1);
+            .ReturnsAsync(Guid.NewGuid());
 
         // Act
         await _service.RegisterUserAsync(request, "192.168.1.1", "TestBrowser");
@@ -347,9 +348,9 @@ public class UserRegistrationServiceTests
         _mockPasswordService.Setup(s => s.HashPassword(It.IsAny<string>())).Returns("hashedpassword");
         _mockLicenseVerificationService.Setup(s => s.VerifyLicenseAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
             .ReturnsAsync(new LicenseVerificationResult { Valid = true, DisciplinaryActions = false });
-        _mockUserRepository.Setup(r => r.CreateUserAsync(It.IsAny<User>())).ReturnsAsync(1);
-        _mockPasswordHistoryRepository.Setup(r => r.AddPasswordToHistoryAsync(It.IsAny<int>(), It.IsAny<string>())).Returns(Task.CompletedTask);
-        _mockEmailVerificationService.Setup(s => s.SendVerificationEmailAsync(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>())).Returns(Task.CompletedTask);
+        _mockUserRepository.Setup(r => r.CreateUserAsync(It.IsAny<User>())).ReturnsAsync(Guid.NewGuid());
+        _mockPasswordHistoryRepository.Setup(r => r.AddPasswordToHistoryAsync(It.IsAny<Guid>(), It.IsAny<string>())).Returns(Task.CompletedTask);
+        _mockEmailVerificationService.Setup(s => s.SendVerificationEmailAsync(It.IsAny<Guid>(), It.IsAny<string>(), It.IsAny<string>())).Returns(Task.CompletedTask);
         _mockRegistrationAuditRepository.Setup(r => r.LogRegistrationAttemptAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<bool>(), It.IsAny<string?>(), It.IsAny<string?>(), It.IsAny<string?>())).Returns(Task.CompletedTask);
     }
 }

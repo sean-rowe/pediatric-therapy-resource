@@ -7,7 +7,7 @@ namespace TherapyDocs.Api.Utilities;
 // Utility program to encrypt connection strings
 public class ConnectionStringEncryptor
 {
-    public static void Main(string[] args)
+    public static void EncryptConnectionString(string[] args)
     {
         if (args.Length == 0)
         {

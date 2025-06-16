@@ -14,7 +14,12 @@ public class EmailService : IEmailService
         _configuration = configuration;
         _logger = logger;
         
-        var apiKey = _configuration["SendGrid:ApiKey"] ?? throw new InvalidOperationException("SendGrid API key not configured");
+        var apiKey = _configuration["SendGrid:ApiKey"];
+        if (string.IsNullOrWhiteSpace(apiKey))
+        {
+            throw new InvalidOperationException("SendGrid API key not configured");
+        }
+
         _sendGridClient = new SendGridClient(apiKey);
     }
 

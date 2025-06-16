@@ -172,7 +172,7 @@ public class DatabaseFixture : IDisposable
         // Create test database and tables if needed
     }
     
-    public async Task CleanupUser(int userId)
+    public async Task CleanupUser(Guid userId)
     {
         // Clean up test data
         using var connection = new SqlConnection(Configuration.GetConnectionString("DefaultConnection"));

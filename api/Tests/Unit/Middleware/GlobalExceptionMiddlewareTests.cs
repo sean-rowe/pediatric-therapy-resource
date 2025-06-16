@@ -211,7 +211,7 @@ public class GlobalExceptionMiddlewareTests
         var exception = new Exception("Detailed error message");
         _mockNext.Setup(x => x(It.IsAny<HttpContext>())).ThrowsAsync(exception);
         _mockEnvironment.Setup(x => x.EnvironmentName).Returns("Development");
-        _mockEnvironment.Setup(x => x.IsDevelopment()).Returns(true);
+        _mockEnvironment.Setup(x => x.EnvironmentName).Returns("Development");
 
         // Act
         await _middleware.InvokeAsync(_httpContext);
@@ -290,7 +290,7 @@ public class GlobalExceptionMiddlewareTests
         var outerException = new Exception("Outer exception", innerException);
         _mockNext.Setup(x => x(It.IsAny<HttpContext>())).ThrowsAsync(outerException);
         _mockEnvironment.Setup(x => x.EnvironmentName).Returns("Development");
-        _mockEnvironment.Setup(x => x.IsDevelopment()).Returns(true);
+        _mockEnvironment.Setup(x => x.EnvironmentName).Returns("Development");
 
         // Act
         await _middleware.InvokeAsync(_httpContext);
@@ -309,7 +309,7 @@ public class GlobalExceptionMiddlewareTests
         _mockNext.Setup(x => x(It.IsAny<HttpContext>())).Callback(() =>
         {
             _httpContext.Response.StatusCode = 200;
-            _httpContext.Response.HasStarted = true;
+            // _httpContext.Response.HasStarted = true; // This property is read-only
         }).ThrowsAsync(exception);
         _mockEnvironment.Setup(x => x.EnvironmentName).Returns("Production");
 

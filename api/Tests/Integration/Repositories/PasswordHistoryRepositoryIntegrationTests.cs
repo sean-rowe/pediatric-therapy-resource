@@ -234,7 +234,7 @@ public class PasswordHistoryDatabaseFixture : IDisposable
         connection.Execute(@"
             IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='users' AND xtype='U')
             CREATE TABLE users (
-                id INT IDENTITY(1,1) PRIMARY KEY,
+                id UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
                 email NVARCHAR(255) NOT NULL,
                 password_hash NVARCHAR(255),
                 password_changed_at DATETIME2 DEFAULT GETUTCDATE(),
@@ -245,7 +245,7 @@ public class PasswordHistoryDatabaseFixture : IDisposable
             IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='password_history' AND xtype='U')
             CREATE TABLE password_history (
                 id INT IDENTITY(1,1) PRIMARY KEY,
-                user_id INT NOT NULL,
+                user_id UNIQUEIDENTIFIER NOT NULL,
                 password_hash NVARCHAR(255) NOT NULL,
                 created_at DATETIME2 DEFAULT GETUTCDATE(),
                 FOREIGN KEY (user_id) REFERENCES users(id)
@@ -263,7 +263,7 @@ public class PasswordHistoryDatabaseFixture : IDisposable
                 DROP PROCEDURE sp_check_password_history;
             
             CREATE PROCEDURE sp_check_password_history
-                @user_id INT,
+                @user_id UNIQUEIDENTIFIER,
                 @password_hash NVARCHAR(255),
                 @is_reused BIT OUTPUT
             AS
@@ -286,7 +286,7 @@ public class PasswordHistoryDatabaseFixture : IDisposable
                 DROP PROCEDURE sp_add_password_history;
             
             CREATE PROCEDURE sp_add_password_history
-                @user_id INT,
+                @user_id UNIQUEIDENTIFIER,
                 @password_hash NVARCHAR(255)
             AS
             BEGIN
@@ -310,7 +310,7 @@ public class PasswordHistoryDatabaseFixture : IDisposable
                 DROP PROCEDURE sp_check_password_change_required;
             
             CREATE PROCEDURE sp_check_password_change_required
-                @user_id INT,
+                @user_id UNIQUEIDENTIFIER,
                 @change_required BIT OUTPUT,
                 @days_until_expiry INT OUTPUT
             AS
@@ -331,19 +331,19 @@ public class PasswordHistoryDatabaseFixture : IDisposable
             END");
     }
 
-    public async Task<int> CreateTestUser()
+    public async Task<Guid> CreateTestUser()
     {
         using var connection = new SqlConnection(_connectionString);
-        var userId = await connection.QuerySingleAsync<int>(@"
-            INSERT INTO users (email, password_hash)
-            VALUES (@email, @hash);
-            SELECT SCOPE_IDENTITY();",
-            new { email = $"test_{Guid.NewGuid()}@example.com", hash = "initial-hash" });
+        var userId = await connection.QuerySingleAsync<Guid>(@"
+            INSERT INTO users (id, email, password_hash)
+            VALUES (@id, @email, @hash);
+            SELECT @id;",
+            new { id = Guid.NewGuid(), email = $"test_{Guid.NewGuid()}@example.com", hash = "initial-hash" });
         
         return userId;
     }
 
-    public async Task SetPasswordChangeDate(int userId, DateTime changedAt)
+    public async Task SetPasswordChangeDate(Guid userId, DateTime changedAt)
     {
         using var connection = new SqlConnection(_connectionString);
         await connection.ExecuteAsync(
@@ -351,7 +351,7 @@ public class PasswordHistoryDatabaseFixture : IDisposable
             new { userId, changedAt });
     }
 
-    public async Task CleanupUser(int userId)
+    public async Task CleanupUser(Guid userId)
     {
         using var connection = new SqlConnection(_connectionString);
         await connection.ExecuteAsync("DELETE FROM password_history WHERE user_id = @userId", new { userId });

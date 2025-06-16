@@ -18,7 +18,7 @@ public class PasswordHistoryRepository : IPasswordHistoryRepository
         _logger = logger;
     }
 
-    public async Task<bool> IsPasswordReusedAsync(int userId, string passwordHash)
+    public async Task<bool> IsPasswordReusedAsync(Guid userId, string passwordHash)
     {
         try
         {
@@ -40,7 +40,7 @@ public class PasswordHistoryRepository : IPasswordHistoryRepository
         }
     }
 
-    public async Task AddPasswordToHistoryAsync(int userId, string passwordHash)
+    public async Task AddPasswordToHistoryAsync(Guid userId, string passwordHash)
     {
         try
         {
@@ -60,7 +60,7 @@ public class PasswordHistoryRepository : IPasswordHistoryRepository
         }
     }
 
-    public async Task<PasswordChangeRequirement> CheckPasswordChangeRequiredAsync(int userId)
+    public async Task<PasswordChangeRequirement> CheckPasswordChangeRequiredAsync(Guid userId)
     {
         try
         {
@@ -85,10 +85,4 @@ public class PasswordHistoryRepository : IPasswordHistoryRepository
             throw;
         }
     }
-}
-
-public class PasswordChangeRequirement
-{
-    public bool ChangeRequired { get; set; }
-    public int DaysUntilExpiry { get; set; }
 }

@@ -59,7 +59,7 @@ public class LicenseVerificationService : ILicenseVerificationService
         }
     }
 
-    private async Task<LicenseVerificationResult> VerifyLicenseWithStateApiAsync(string licenseNumber, string state, string licenseType)
+    private Task<LicenseVerificationResult> VerifyLicenseWithStateApiAsync(string licenseNumber, string state, string licenseType)
     {
         var apiUrl = GetStateApiUrl(state);
         if (string.IsNullOrEmpty(apiUrl))

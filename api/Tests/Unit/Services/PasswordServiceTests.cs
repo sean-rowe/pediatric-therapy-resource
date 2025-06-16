@@ -1,4 +1,7 @@
 using FluentAssertions;
+using Microsoft.Extensions.Logging;
+using Moq;
+using TherapyDocs.Api.Interfaces;
 using TherapyDocs.Api.Services;
 using Xunit;
 
@@ -7,10 +10,14 @@ namespace TherapyDocs.Api.Tests.Unit.Services;
 public class PasswordServiceTests
 {
     private readonly PasswordService _passwordService;
+    private readonly Mock<IHaveIBeenPwnedService> _mockHibpService;
+    private readonly Mock<ILogger<PasswordService>> _mockLogger;
 
     public PasswordServiceTests()
     {
-        _passwordService = new PasswordService();
+        _mockHibpService = new Mock<IHaveIBeenPwnedService>();
+        _mockLogger = new Mock<ILogger<PasswordService>>();
+        _passwordService = new PasswordService(_mockHibpService.Object, _mockLogger.Object);
     }
 
     [Fact]

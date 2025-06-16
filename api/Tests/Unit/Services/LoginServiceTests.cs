@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Moq;
+using TherapyDocs.Api.Interfaces;
 using TherapyDocs.Api.Models;
 using TherapyDocs.Api.Models.DTOs;
 using TherapyDocs.Api.Repositories;
@@ -318,7 +319,7 @@ public class LoginServiceTests
     {
         return new User
         {
-            Id = 1,
+            Id = Guid.NewGuid(),
             Email = "test@test.com",
             PasswordHash = "$2a$12$dummy.hash.for.testing",
             FirstName = "Test",

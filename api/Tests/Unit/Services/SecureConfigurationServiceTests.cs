@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
 using System.Security.Cryptography;
+using TherapyDocs.Api.Interfaces;
 using TherapyDocs.Api.Services;
 using Xunit;
 

@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Moq;
+using TherapyDocs.Api.Interfaces;
 using TherapyDocs.Api.Models;
 using TherapyDocs.Api.Models.DTOs;
 using TherapyDocs.Api.Repositories;
@@ -304,9 +305,9 @@ public class TimingAttackTests
         _mockPasswordService.Setup(s => s.IsCommonPassword(It.IsAny<string>())).Returns(false);
         _mockPasswordService.Setup(s => s.HashPassword(It.IsAny<string>())).Returns("hashedpassword");
         _mockLicenseService.Setup(s => s.VerifyLicenseAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
-            .ReturnsAsync(new Models.LicenseVerificationResult { Valid = true, DisciplinaryActions = false });
-        _mockUserRepository.Setup(r => r.CreateUserAsync(It.IsAny<Models.User>())).ReturnsAsync(1);
-        _mockPasswordHistoryRepository.Setup(r => r.AddPasswordToHistoryAsync(It.IsAny<int>(), It.IsAny<string>())).Returns(Task.CompletedTask);
+            .ReturnsAsync(new Models.DTOs.LicenseVerificationResult { Valid = true, DisciplinaryActions = false });
+        _mockUserRepository.Setup(r => r.CreateUserAsync(It.IsAny<Models.User>())).ReturnsAsync(Guid.NewGuid());
+        _mockPasswordHistoryRepository.Setup(r => r.AddPasswordToHistoryAsync(It.IsAny<Guid>(), It.IsAny<string>())).Returns(Task.CompletedTask);
     }
 
     private void SetupFastScenario(string email)
@@ -328,7 +329,7 @@ public class TimingAttackTests
         
         // Add delay to license verification to simulate slow operation
         _mockLicenseService.Setup(s => s.VerifyLicenseAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
-            .ReturnsAsync(new Models.LicenseVerificationResult { Valid = false, ErrorMessage = "License not found" });
+            .ReturnsAsync(new Models.DTOs.LicenseVerificationResult { Valid = false, ErrorMessage = "License not found" });
     }
 
     private void SetupEmailFailureScenario(string email)
@@ -383,7 +384,7 @@ public class TimingAttackTests
         // Existing user scenario
         var existingUser = new User 
         { 
-            Id = 1, 
+            Id = Guid.NewGuid(), 
             Email = "existing@test.com", 
             EmailVerified = false 
         };
@@ -391,8 +392,8 @@ public class TimingAttackTests
         userRepo.Setup(r => r.GetUserByEmailAsync("existing@test.com")).ReturnsAsync(existingUser);
         userRepo.Setup(r => r.GetUserByEmailAsync("nonexistent@test.com")).ReturnsAsync((User?)null);
         
-        emailVerificationRepo.Setup(r => r.HasValidTokenAsync(It.IsAny<int>())).ReturnsAsync(false);
-        emailVerificationRepo.Setup(r => r.CreateVerificationTokenAsync(It.IsAny<int>())).ReturnsAsync("token123");
+        emailVerificationRepo.Setup(r => r.HasValidTokenAsync(It.IsAny<Guid>())).ReturnsAsync(false);
+        emailVerificationRepo.Setup(r => r.CreateVerificationTokenAsync(It.IsAny<Guid>())).ReturnsAsync("token123");
         emailService.Setup(s => s.SendVerificationEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>())).ReturnsAsync(true);
     }
 }

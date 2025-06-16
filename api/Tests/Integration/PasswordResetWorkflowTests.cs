@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Moq;
+using TherapyDocs.Api.Interfaces;
 using TherapyDocs.Api.Models;
 using TherapyDocs.Api.Models.DTOs;
 using TherapyDocs.Api.Repositories;
@@ -15,7 +16,7 @@ public class PasswordResetWorkflowTests
     private readonly Mock<IPasswordService> _mockPasswordService;
     private readonly Mock<IEmailService> _mockEmailService;
     private readonly Mock<IPasswordHistoryRepository> _mockPasswordHistoryRepository;
-    private readonly Mock<ILogger<PasswordResetService>> _mockLogger;
+    private readonly Mock<ILogger<EmailService>> _mockLogger;
     
     // Note: PasswordResetService would need to be implemented
     // For now, we'll test the workflow through existing services
@@ -26,7 +27,7 @@ public class PasswordResetWorkflowTests
         _mockPasswordService = new Mock<IPasswordService>();
         _mockEmailService = new Mock<IEmailService>();
         _mockPasswordHistoryRepository = new Mock<IPasswordHistoryRepository>();
-        _mockLogger = new Mock<ILogger<PasswordResetService>>();
+        _mockLogger = new Mock<ILogger<EmailService>>();
     }
 
     [Fact]
@@ -37,7 +38,7 @@ public class PasswordResetWorkflowTests
         var user = CreateValidUser(email);
         
         _mockUserRepository.Setup(r => r.GetUserByEmailAsync(email)).ReturnsAsync(user);
-        _mockEmailService.Setup(s => s.SendPasswordResetEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+        _mockEmailService.Setup(s => s.SendVerificationEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
             .ReturnsAsync(true);
 
         // This test demonstrates the expected workflow
@@ -45,14 +46,14 @@ public class PasswordResetWorkflowTests
         
         // Act
         var userExists = await _mockUserRepository.Object.GetUserByEmailAsync(email);
-        var emailSent = await _mockEmailService.Object.SendPasswordResetEmailAsync(email, user.FirstName, "reset-token-123");
+        var emailSent = await _mockEmailService.Object.SendVerificationEmailAsync(email, user.FirstName, "reset-token-123");
 
         // Assert
         Assert.NotNull(userExists);
         Assert.True(emailSent);
         
         // Verify email service was called with correct parameters
-        _mockEmailService.Verify(s => s.SendPasswordResetEmailAsync(email, user.FirstName, It.IsAny<string>()), Times.Once);
+        _mockEmailService.Verify(s => s.SendVerificationEmailAsync(email, user.FirstName, It.IsAny<string>()), Times.Once);
     }
 
     [Fact]
@@ -71,7 +72,7 @@ public class PasswordResetWorkflowTests
         
         // In a proper implementation, the service should still return success
         // to prevent email enumeration, but not actually send an email
-        _mockEmailService.Verify(s => s.SendPasswordResetEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()), Times.Never);
+        _mockEmailService.Verify(s => s.SendVerificationEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()), Times.Never);
     }
 
     [Fact]
@@ -211,7 +212,7 @@ public class PasswordResetWorkflowTests
         var user = CreateValidUser(email);
         
         _mockUserRepository.Setup(r => r.GetUserByEmailAsync(email)).ReturnsAsync(user);
-        _mockEmailService.Setup(s => s.SendPasswordResetEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+        _mockEmailService.Setup(s => s.SendVerificationEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
             .ReturnsAsync(true);
 
         // Act - Simulate concurrent password reset requests
@@ -221,7 +222,7 @@ public class PasswordResetWorkflowTests
                 var userResult = await _mockUserRepository.Object.GetUserByEmailAsync(email);
                 if (userResult != null)
                 {
-                    return await _mockEmailService.Object.SendPasswordResetEmailAsync(
+                    return await _mockEmailService.Object.SendVerificationEmailAsync(
                         email, userResult.FirstName, Guid.NewGuid().ToString());
                 }
                 return false;
@@ -262,12 +263,12 @@ public class PasswordResetWorkflowTests
         var user = CreateValidUser(email);
         
         _mockUserRepository.Setup(r => r.GetUserByEmailAsync(email)).ReturnsAsync(user);
-        _mockEmailService.Setup(s => s.SendPasswordResetEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+        _mockEmailService.Setup(s => s.SendVerificationEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
             .ReturnsAsync(false); // Email delivery fails
 
         // Act
         var userExists = await _mockUserRepository.Object.GetUserByEmailAsync(email);
-        var emailSent = await _mockEmailService.Object.SendPasswordResetEmailAsync(email, user.FirstName, "token");
+        var emailSent = await _mockEmailService.Object.SendVerificationEmailAsync(email, user.FirstName, "token");
 
         // Assert
         Assert.NotNull(userExists);

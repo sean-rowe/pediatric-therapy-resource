@@ -24,7 +24,7 @@ public class ConnectionStringEncryptorTests
         try
         {
             // Act
-            ConnectionStringEncryptor.Main(args);
+            ConnectionStringEncryptor.EncryptConnectionString(args);
 
             // Assert
             var output = sw.ToString();
@@ -52,7 +52,7 @@ public class ConnectionStringEncryptorTests
         try
         {
             // Act
-            ConnectionStringEncryptor.Main(args);
+            ConnectionStringEncryptor.EncryptConnectionString(args);
 
             // Assert
             var output = sw.ToString();
@@ -82,7 +82,7 @@ public class ConnectionStringEncryptorTests
         try
         {
             // Act
-            ConnectionStringEncryptor.Main(args);
+            ConnectionStringEncryptor.EncryptConnectionString(args);
 
             // Assert
             var output = sw.ToString();
@@ -268,7 +268,7 @@ public class ConnectionStringEncryptorTests
         try
         {
             // Act
-            ConnectionStringEncryptor.Main(args);
+            ConnectionStringEncryptor.EncryptConnectionString(args);
 
             // Assert
             var output = sw.ToString();
@@ -295,7 +295,7 @@ public class ConnectionStringEncryptorTests
         try
         {
             // Act
-            ConnectionStringEncryptor.Main(args);
+            ConnectionStringEncryptor.EncryptConnectionString(args);
 
             // Assert
             var output = sw.ToString();

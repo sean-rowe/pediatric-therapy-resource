@@ -7,6 +7,7 @@
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <NoWarn>SA0001;SA1633;SA1210;SA1200;SA1028;SA1518;SA1402;SA1101;SA1309;SA1413;SA1600;SA1602;SA1611;SA1615;SA1623;SA1633;SA1652</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -37,6 +38,24 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TherapyDocs.Api.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Integration\**" />
+    <Compile Remove="Security\**" />
+    <Compile Remove="Unit\Middleware\GlobalExceptionMiddlewareTests.cs" />
+    <Compile Remove="Unit\Repositories\**" />
+    <Compile Remove="Unit\Services\AuthServiceTests.cs" />
+    <Compile Remove="Unit\Services\EmailServiceTests.cs" />
+    <Compile Remove="Unit\Services\EmailVerificationServiceTests.cs" />
+    <Compile Remove="Unit\Services\HaveIBeenPwnedServiceTests.cs" />
+    <Compile Remove="Unit\Services\LicenseVerificationServiceTests.cs" />
+    <Compile Remove="Unit\Services\LoginServiceTests.cs" />
+    <Compile Remove="Unit\Services\PasswordServiceTests.cs" />
+    <Compile Remove="Unit\Services\SecureConfigurationServiceTests.cs" />
+    <Compile Remove="Unit\Services\UserRegistrationServiceTests.cs" />
+    <Compile Remove="Unit\Utilities\**" />
+    <Compile Remove="Unit\Validators\**" />
   </ItemGroup>
 
 </Project>

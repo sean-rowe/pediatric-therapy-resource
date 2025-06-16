@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Dapper;
+using TherapyDocs.Api.Models.DTOs;
 using TherapyDocs.Api.Repositories;
 using Xunit;
 
@@ -64,7 +65,7 @@ public class PasswordHistoryRepositoryTests
     public async Task IsPasswordReusedAsync_PasswordNotReused_ReturnsFalse()
     {
         // Arrange
-        var userId = 123;
+        var userId = Guid.NewGuid();
         var passwordHash = "hashedPassword123";
 
         // Note: Actual database interaction tests would be in integration tests
@@ -79,7 +80,7 @@ public class PasswordHistoryRepositoryTests
     public async Task IsPasswordReusedAsync_ExceptionThrown_LogsAndRethrows()
     {
         // Arrange
-        var userId = 123;
+        var userId = Guid.NewGuid();
         var passwordHash = "hashedPassword123";
 
         // Act & Assert
@@ -94,13 +95,11 @@ public class PasswordHistoryRepositoryTests
         }
     }
 
-    [Theory]
-    [InlineData(0)]
-    [InlineData(-1)]
-    [InlineData(int.MinValue)]
-    public async Task IsPasswordReusedAsync_InvalidUserId_HandlesGracefully(int userId)
+    [Fact]
+    public async Task IsPasswordReusedAsync_EmptyGuidUserId_HandlesGracefully()
     {
         // Arrange
+        var userId = Guid.Empty;
         var passwordHash = "hashedPassword123";
 
         // Act & Assert
@@ -115,7 +114,7 @@ public class PasswordHistoryRepositoryTests
     public async Task IsPasswordReusedAsync_InvalidPasswordHash_HandlesGracefully(string? passwordHash)
     {
         // Arrange
-        var userId = 123;
+        var userId = Guid.NewGuid();
 
         // Act & Assert
         await Assert.ThrowsAsync<InvalidOperationException>(async () =>
@@ -130,7 +129,7 @@ public class PasswordHistoryRepositoryTests
     public async Task AddPasswordToHistoryAsync_ValidParameters_ExecutesSuccessfully()
     {
         // Arrange
-        var userId = 123;
+        var userId = Guid.NewGuid();
         var passwordHash = "newHashedPassword456";
 
         // Act & Assert
@@ -142,7 +141,7 @@ public class PasswordHistoryRepositoryTests
     public async Task AddPasswordToHistoryAsync_ExceptionThrown_LogsAndRethrows()
     {
         // Arrange
-        var userId = 123;
+        var userId = Guid.NewGuid();
         var passwordHash = "hashedPassword123";
 
         // Act & Assert
@@ -156,12 +155,11 @@ public class PasswordHistoryRepositoryTests
         }
     }
 
-    [Theory]
-    [InlineData(0)]
-    [InlineData(-1)]
-    public async Task AddPasswordToHistoryAsync_InvalidUserId_HandlesGracefully(int userId)
+    [Fact]
+    public async Task AddPasswordToHistoryAsync_EmptyGuidUserId_HandlesGracefully()
     {
         // Arrange
+        var userId = Guid.Empty;
         var passwordHash = "hashedPassword123";
 
         // Act & Assert
@@ -176,7 +174,7 @@ public class PasswordHistoryRepositoryTests
     public async Task AddPasswordToHistoryAsync_InvalidPasswordHash_HandlesGracefully(string? passwordHash)
     {
         // Arrange
-        var userId = 123;
+        var userId = Guid.NewGuid();
 
         // Act & Assert
         await Assert.ThrowsAsync<InvalidOperationException>(async () =>
@@ -191,7 +189,7 @@ public class PasswordHistoryRepositoryTests
     public async Task CheckPasswordChangeRequiredAsync_NoChangeRequired_ReturnsCorrectResult()
     {
         // Arrange
-        var userId = 123;
+        var userId = Guid.NewGuid();
 
         // Act & Assert
         await Assert.ThrowsAsync<InvalidOperationException>(async () =>
@@ -202,7 +200,7 @@ public class PasswordHistoryRepositoryTests
     public async Task CheckPasswordChangeRequiredAsync_ChangeRequired_ReturnsCorrectResult()
     {
         // Arrange
-        var userId = 123;
+        var userId = Guid.NewGuid();
 
         // Act & Assert
         await Assert.ThrowsAsync<InvalidOperationException>(async () =>
@@ -213,7 +211,7 @@ public class PasswordHistoryRepositoryTests
     public async Task CheckPasswordChangeRequiredAsync_ExceptionThrown_LogsAndRethrows()
     {
         // Arrange
-        var userId = 123;
+        var userId = Guid.NewGuid();
 
         // Act & Assert
         try
@@ -226,12 +224,12 @@ public class PasswordHistoryRepositoryTests
         }
     }
 
-    [Theory]
-    [InlineData(0)]
-    [InlineData(-1)]
-    [InlineData(int.MinValue)]
-    public async Task CheckPasswordChangeRequiredAsync_InvalidUserId_HandlesGracefully(int userId)
+    [Fact]
+    public async Task CheckPasswordChangeRequiredAsync_EmptyGuidUserId_HandlesGracefully()
     {
+        // Arrange
+        var userId = Guid.Empty;
+        
         // Act & Assert
         await Assert.ThrowsAsync<InvalidOperationException>(async () =>
             await _repository.CheckPasswordChangeRequiredAsync(userId));
@@ -283,7 +281,7 @@ public class PasswordHistoryRepositoryTests
     public async Task IsPasswordReusedAsync_VeryLongPasswordHash_HandlesCorrectly()
     {
         // Arrange
-        var userId = 123;
+        var userId = Guid.NewGuid();
         var passwordHash = new string('a', 1000); // Very long hash
 
         // Act & Assert
@@ -295,7 +293,7 @@ public class PasswordHistoryRepositoryTests
     public async Task AddPasswordToHistoryAsync_MaxIntUserId_HandlesCorrectly()
     {
         // Arrange
-        var userId = int.MaxValue;
+        var userId = Guid.NewGuid();
         var passwordHash = "hashedPassword123";
 
         // Act & Assert
@@ -307,7 +305,7 @@ public class PasswordHistoryRepositoryTests
     public async Task CheckPasswordChangeRequiredAsync_ConcurrentCalls_HandlesCorrectly()
     {
         // Arrange
-        var userId = 123;
+        var userId = Guid.NewGuid();
         var tasks = new List<Task>();
 
         // Act

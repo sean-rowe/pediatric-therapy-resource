@@ -196,8 +196,8 @@ public class LoginService : ILoginService
             new Claim(ClaimTypes.Email, user.Email),
             new Claim(ClaimTypes.Name, $"{user.FirstName} {user.LastName}"),
             new Claim("service_type", user.ServiceType),
-            new Claim("license_number", user.LicenseNumber),
-            new Claim("license_state", user.LicenseState)
+            new Claim("license_number", user.LicenseNumber ?? ""),
+            new Claim("license_state", user.LicenseState ?? "")
         };
 
         var tokenDescriptor = new SecurityTokenDescriptor

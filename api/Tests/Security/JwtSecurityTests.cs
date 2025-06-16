@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using Moq;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using TherapyDocs.Api.Interfaces;
 using TherapyDocs.Api.Models;
 using TherapyDocs.Api.Models.DTOs;
 using TherapyDocs.Api.Repositories;
@@ -211,11 +212,11 @@ public class JwtSecurityTests
     {
         // Arrange
         var user1 = CreateValidUser();
-        user1.Id = 1;
+        user1.Id = Guid.NewGuid();
         user1.Email = "user1@test.com";
         
         var user2 = CreateValidUser();
-        user2.Id = 2;
+        user2.Id = Guid.NewGuid();
         user2.Email = "user2@test.com";
 
         var request1 = new LoginRequest { Email = user1.Email, Password = "ValidPassword123!" };
@@ -290,7 +291,7 @@ public class JwtSecurityTests
     {
         return new User
         {
-            Id = 1,
+            Id = Guid.NewGuid(),
             Email = "test@test.com",
             PasswordHash = "$2a$12$dummy.hash.for.testing",
             FirstName = "Test",

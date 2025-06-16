@@ -35,7 +35,7 @@ public class EmailVerificationServiceTests
     public async Task SendVerificationEmailAsync_Success_CreatesTokenAndSendsEmail()
     {
         // Arrange
-        var userId = 123;
+        var userId = Guid.NewGuid();
         var email = "test@example.com";
         var firstName = "John";
         var token = "verification-token-123";
@@ -68,7 +68,7 @@ public class EmailVerificationServiceTests
     public async Task SendVerificationEmailAsync_EmailServiceFails_LogsWarning()
     {
         // Arrange
-        var userId = 123;
+        var userId = Guid.NewGuid();
         var email = "test@example.com";
         var firstName = "John";
         var token = "verification-token-123";
@@ -99,7 +99,7 @@ public class EmailVerificationServiceTests
     public async Task SendVerificationEmailAsync_RepositoryThrows_PropagatesException()
     {
         // Arrange
-        var userId = 123;
+        var userId = Guid.NewGuid();
         var email = "test@example.com";
         var firstName = "John";
 
@@ -121,7 +121,7 @@ public class EmailVerificationServiceTests
     {
         // Arrange
         var token = "valid-token";
-        var userId = 123;
+        var userId = Guid.NewGuid();
         var verificationToken = new EmailVerificationToken
         {
             Id = Guid.NewGuid(),
@@ -212,7 +212,7 @@ public class EmailVerificationServiceTests
         var verificationToken = new EmailVerificationToken
         {
             Id = Guid.NewGuid(),
-            UserId = 123,
+            UserId = Guid.NewGuid(),
             Token = token,
             ExpiresAt = DateTime.UtcNow.AddHours(1),
             UsedAt = DateTime.UtcNow.AddMinutes(-10),
@@ -246,7 +246,7 @@ public class EmailVerificationServiceTests
         var verificationToken = new EmailVerificationToken
         {
             Id = Guid.NewGuid(),
-            UserId = 123,
+            UserId = Guid.NewGuid(),
             Token = token,
             ExpiresAt = DateTime.UtcNow.AddHours(-1),
             UsedAt = null,
@@ -280,7 +280,7 @@ public class EmailVerificationServiceTests
         var verificationToken = new EmailVerificationToken
         {
             Id = Guid.NewGuid(),
-            UserId = 123,
+            UserId = Guid.NewGuid(),
             Token = token,
             ExpiresAt = DateTime.UtcNow.AddHours(1),
             UsedAt = null,
@@ -300,7 +300,7 @@ public class EmailVerificationServiceTests
 
         // Assert
         Assert.False(result);
-        _mockUserRepository.Verify(x => x.VerifyEmailAsync(It.IsAny<int>()), Times.Never);
+        _mockUserRepository.Verify(x => x.VerifyEmailAsync(It.IsAny<Guid>()), Times.Never);
     }
 
     [Fact]
@@ -308,7 +308,7 @@ public class EmailVerificationServiceTests
     {
         // Arrange
         var token = "valid-token";
-        var userId = 123;
+        var userId = Guid.NewGuid();
         var verificationToken = new EmailVerificationToken
         {
             Id = Guid.NewGuid(),
@@ -336,7 +336,7 @@ public class EmailVerificationServiceTests
 
         // Assert
         Assert.False(result);
-        _mockUserRepository.Verify(x => x.GetUserByIdAsync(It.IsAny<int>()), Times.Never);
+        _mockUserRepository.Verify(x => x.GetUserByIdAsync(It.IsAny<Guid>()), Times.Never);
     }
 
     [Fact]
@@ -344,7 +344,7 @@ public class EmailVerificationServiceTests
     {
         // Arrange
         var token = "valid-token";
-        var userId = 123;
+        var userId = Guid.NewGuid();
         var verificationToken = new EmailVerificationToken
         {
             Id = Guid.NewGuid(),
@@ -416,7 +416,7 @@ public class EmailVerificationServiceTests
         var email = "test@example.com";
         var user = new User
         {
-            Id = 123,
+            Id = Guid.NewGuid(),
             Email = email,
             FirstName = "John",
             EmailVerified = false
@@ -455,7 +455,7 @@ public class EmailVerificationServiceTests
         var email = "test@example.com";
         var user = new User
         {
-            Id = 123,
+            Id = Guid.NewGuid(),
             Email = email,
             FirstName = "John",
             EmailVerified = false
@@ -474,7 +474,7 @@ public class EmailVerificationServiceTests
 
         // Assert
         Assert.False(result);
-        _mockEmailVerificationRepository.Verify(x => x.CreateVerificationTokenAsync(It.IsAny<int>()), Times.Never);
+        _mockEmailVerificationRepository.Verify(x => x.CreateVerificationTokenAsync(It.IsAny<Guid>()), Times.Never);
         _mockEmailService.Verify(x => x.SendVerificationEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()), Times.Never);
         _mockLogger.Verify(
             x => x.Log(
@@ -501,8 +501,8 @@ public class EmailVerificationServiceTests
 
         // Assert
         Assert.False(result);
-        _mockEmailVerificationRepository.Verify(x => x.HasValidTokenAsync(It.IsAny<int>()), Times.Never);
-        _mockEmailVerificationRepository.Verify(x => x.CreateVerificationTokenAsync(It.IsAny<int>()), Times.Never);
+        _mockEmailVerificationRepository.Verify(x => x.HasValidTokenAsync(It.IsAny<Guid>()), Times.Never);
+        _mockEmailVerificationRepository.Verify(x => x.CreateVerificationTokenAsync(It.IsAny<Guid>()), Times.Never);
     }
 
     [Fact]
@@ -512,7 +512,7 @@ public class EmailVerificationServiceTests
         var email = "test@example.com";
         var user = new User
         {
-            Id = 123,
+            Id = Guid.NewGuid(),
             Email = email,
             FirstName = "John",
             EmailVerified = true
@@ -527,7 +527,7 @@ public class EmailVerificationServiceTests
 
         // Assert
         Assert.False(result);
-        _mockEmailVerificationRepository.Verify(x => x.HasValidTokenAsync(It.IsAny<int>()), Times.Never);
+        _mockEmailVerificationRepository.Verify(x => x.HasValidTokenAsync(It.IsAny<Guid>()), Times.Never);
     }
 
     [Fact]
@@ -537,7 +537,7 @@ public class EmailVerificationServiceTests
         var email = "test@example.com";
         var user = new User
         {
-            Id = 123,
+            Id = Guid.NewGuid(),
             Email = email,
             FirstName = "John",
             EmailVerified = false

@@ -55,8 +55,8 @@ public class GlobalExceptionMiddleware
                 response.ErrorCode = "UNAUTHORIZED";
                 break;
                 
-            case ArgumentException:
             case ArgumentNullException:
+            case ArgumentException:
                 context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
                 response.Message = "Invalid request parameters";
                 response.ErrorCode = "INVALID_REQUEST";

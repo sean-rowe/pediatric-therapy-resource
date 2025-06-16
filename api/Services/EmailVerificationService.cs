@@ -22,7 +22,7 @@ public class EmailVerificationService : IEmailVerificationService
         _logger = logger;
     }
 
-    public async Task SendVerificationEmailAsync(int userId, string email, string firstName)
+    public async Task SendVerificationEmailAsync(Guid userId, string email, string firstName)
     {
         // Create email verification token
         var verificationToken = await _emailVerificationRepository.CreateVerificationTokenAsync(userId);
