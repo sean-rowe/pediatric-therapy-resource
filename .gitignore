@@ -203,3 +203,5 @@ logs/
 # Application specific
 appsettings.Development.json
 appsettings.*.user.json
+.aider*
+venv/
