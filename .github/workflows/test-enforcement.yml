@@ -1,0 +1,103 @@
+name: Test Coverage Enforcement
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+  push:
+    branches: [ main, develop ]
+
+jobs:
+  test-coverage:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Run unit tests with coverage
+      run: npm run test:coverage
+    
+    - name: Enforce 100% coverage for new code
+      run: |
+        # Get changed files
+        git diff --name-only HEAD~1..HEAD | grep -E '\.(ts|tsx|js|jsx)$' > changed_files.txt || true
+        
+        # Check if any code files changed
+        if [ -s changed_files.txt ]; then
+          echo "Code files changed, enforcing test coverage..."
+          
+          # Run coverage check (this should fail if coverage < 100% for new code)
+          npm run test:coverage:enforce
+          
+          # Fail if no test files were added/modified for new features
+          git diff --name-only HEAD~1..HEAD | grep -E '\.(test|spec)\.(ts|tsx|js|jsx)$' > test_files.txt || true
+          
+          if [ ! -s test_files.txt ]; then
+            echo "ERROR: Code changes detected but no test files added/modified"
+            echo "All new code requires corresponding tests"
+            exit 1
+          fi
+        fi
+    
+    - name: Run integration tests
+      run: npm run test:integration
+      
+    - name: Run E2E tests
+      run: npm run test:e2e
+      
+    - name: Security scan
+      run: npm audit --audit-level high
+    
+    - name: Upload coverage reports
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage/lcov.info
+        fail_ci_if_error: true
+        
+  quality-gates:
+    runs-on: ubuntu-latest
+    needs: test-coverage
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Code quality check
+      run: |
+        # Lint check
+        npm run lint
+        
+        # Type check
+        npm run type-check
+        
+        # Check for TODO/FIXME in PR code
+        if git diff --name-only HEAD~1..HEAD | xargs grep -l "TODO\|FIXME\|XXX" 2>/dev/null; then
+          echo "ERROR: TODO/FIXME found in new code. Please resolve before merging."
+          exit 1
+        fi
+        
+    - name: Enforce Definition of Done
+      run: |
+        echo "Checking Definition of Done compliance..."
+        
+        # Check if PR has required labels
+        gh pr view ${{ github.event.number }} --json labels -q '.labels[].name' | grep -E "(P[0-3]-(Critical|High|Medium|Low)|size:(XS|S|M|L|XL)|type:(feature|technical-debt|security))" || {
+          echo "ERROR: PR must have priority, size, and type labels"
+          exit 1
+        }
+        
+        # Check if API docs are updated for API changes
+        if git diff --name-only HEAD~1..HEAD | grep -E "routes|controllers|api" > /dev/null; then
+          if ! git diff --name-only HEAD~1..HEAD | grep -E "docs|swagger|openapi" > /dev/null; then
+            echo "WARNING: API changes detected but no documentation updates found"
+          fi
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

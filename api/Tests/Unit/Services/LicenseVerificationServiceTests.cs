@@ -2,8 +2,10 @@ using System.Net;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Moq;
 using Moq.Protected;
+using TherapyDocs.Api.Models.Configuration;
 using TherapyDocs.Api.Models.DTOs;
 using TherapyDocs.Api.Services;
 using Xunit;
@@ -16,7 +18,7 @@ public class LicenseVerificationServiceTests
     private readonly HttpClient _httpClient;
     private readonly Mock<IMemoryCache> _mockCache;
     private readonly Mock<ILogger<LicenseVerificationService>> _mockLogger;
-    private readonly Mock<IConfiguration> _mockConfiguration;
+    private readonly Mock<IOptions<LicenseVerificationConfig>> _mockOptions;
     private readonly LicenseVerificationService _service;
 
     public LicenseVerificationServiceTests()
@@ -28,13 +30,53 @@ public class LicenseVerificationServiceTests
         };
         _mockCache = new Mock<IMemoryCache>();
         _mockLogger = new Mock<ILogger<LicenseVerificationService>>();
-        _mockConfiguration = new Mock<IConfiguration>();
+        _mockOptions = new Mock<IOptions<LicenseVerificationConfig>>();
+
+        var config = new LicenseVerificationConfig
+        {
+            CacheHours = 24,
+            RetryCount = 3,
+            RetryDelayMs = 1000,
+            States = new Dictionary<string, StateApiConfig>
+            {
+                ["CA"] = new StateApiConfig
+                {
+                    ApiUrl = "https://api.ca.gov/license-verification",
+                    AuthType = "ApiKey",
+                    ApiKey = "test-key",
+                    TimeoutMs = 30000
+                },
+                ["NY"] = new StateApiConfig
+                {
+                    ApiUrl = "https://api.nysed.gov/license-lookup",
+                    AuthType = "ApiKey",
+                    ApiKey = "test-key",
+                    TimeoutMs = 30000
+                },
+                ["TX"] = new StateApiConfig
+                {
+                    ApiUrl = "https://api.texas.gov/license-verify",
+                    AuthType = "ApiKey",
+                    ApiKey = "test-key",
+                    TimeoutMs = 30000
+                },
+                ["FL"] = new StateApiConfig
+                {
+                    ApiUrl = "https://api.florida.gov/license-check",
+                    AuthType = "ApiKey",
+                    ApiKey = "test-key",
+                    TimeoutMs = 30000
+                }
+            }
+        };
+
+        _mockOptions.Setup(x => x.Value).Returns(config);
 
         _service = new LicenseVerificationService(
             _httpClient,
             _mockCache.Object,
             _mockLogger.Object,
-            _mockConfiguration.Object);
+            _mockOptions.Object);
     }
 
     #region VerifyLicenseAsync Tests
@@ -335,6 +377,316 @@ public class LicenseVerificationServiceTests
         Assert.False(result1.Valid); // First call returns manual verification
         Assert.True(result2.Valid); // Second call returns cached value
         Assert.Equal(cachedResult.PractitionerName, result2.PractitionerName);
+    }
+
+    #endregion
+
+    #region California Response Parsing Tests
+
+    [Fact]
+    public async Task ParseCaliforniaResponse_ValidActiveResponse_ReturnsValidResult()
+    {
+        // Arrange
+        var licenseNumber = "VALID123456";
+        var state = "CA";
+        var licenseType = "MFT";
+        var cacheKey = $"license_{state}_{licenseNumber}";
+
+        object? cacheValue = null;
+        _mockCache
+            .Setup(x => x.TryGetValue(cacheKey, out cacheValue))
+            .Returns(false);
+
+        var responseJson = @"{
+            ""licenseFound"": true,
+            ""status"": ""ACTIVE"",
+            ""practitionerName"": ""Jane Smith"",
+            ""licenseType"": ""Marriage and Family Therapist"",
+            ""expirationDate"": ""2025-12-31"",
+            ""disciplinaryActions"": false
+        }";
+
+        _mockHttpMessageHandler.Protected()
+            .Setup<Task<HttpResponseMessage>>(
+                "SendAsync",
+                ItExpr.IsAny<HttpRequestMessage>(),
+                ItExpr.IsAny<CancellationToken>())
+            .ReturnsAsync(new HttpResponseMessage
+            {
+                StatusCode = HttpStatusCode.OK,
+                Content = new StringContent(responseJson)
+            });
+
+        var cacheEntryMock = new Mock<ICacheEntry>();
+        _mockCache
+            .Setup(x => x.CreateEntry(cacheKey))
+            .Returns(cacheEntryMock.Object);
+
+        // Act
+        var result = await _service.VerifyLicenseAsync(licenseNumber, state, licenseType);
+
+        // Assert
+        Assert.True(result.Valid);
+        Assert.Equal("Jane Smith", result.PractitionerName);
+        Assert.Equal("Marriage and Family Therapist", result.LicenseType);
+        Assert.Equal(new DateTime(2025, 12, 31), result.ExpirationDate);
+        Assert.False(result.DisciplinaryActions);
+        Assert.Null(result.ErrorMessage);
+    }
+
+    [Fact]
+    public async Task ParseCaliforniaResponse_LicenseNotFound_ReturnsInvalidResult()
+    {
+        // Arrange
+        var licenseNumber = "NOTFOUND123";
+        var state = "CA";
+        var licenseType = "MFT";
+        var cacheKey = $"license_{state}_{licenseNumber}";
+
+        object? cacheValue = null;
+        _mockCache
+            .Setup(x => x.TryGetValue(cacheKey, out cacheValue))
+            .Returns(false);
+
+        var responseJson = @"{
+            ""licenseFound"": false
+        }";
+
+        _mockHttpMessageHandler.Protected()
+            .Setup<Task<HttpResponseMessage>>(
+                "SendAsync",
+                ItExpr.IsAny<HttpRequestMessage>(),
+                ItExpr.IsAny<CancellationToken>())
+            .ReturnsAsync(new HttpResponseMessage
+            {
+                StatusCode = HttpStatusCode.OK,
+                Content = new StringContent(responseJson)
+            });
+
+        // Act
+        var result = await _service.VerifyLicenseAsync(licenseNumber, state, licenseType);
+
+        // Assert
+        Assert.False(result.Valid);
+        Assert.Equal("License not found in California state records", result.ErrorMessage);
+    }
+
+    [Fact]
+    public async Task ParseCaliforniaResponse_InactiveStatus_ReturnsInvalidResult()
+    {
+        // Arrange
+        var licenseNumber = "INACTIVE123";
+        var state = "CA";
+        var licenseType = "MFT";
+        var cacheKey = $"license_{state}_{licenseNumber}";
+
+        object? cacheValue = null;
+        _mockCache
+            .Setup(x => x.TryGetValue(cacheKey, out cacheValue))
+            .Returns(false);
+
+        var responseJson = @"{
+            ""licenseFound"": true,
+            ""status"": ""INACTIVE"",
+            ""practitionerName"": ""John Doe"",
+            ""licenseType"": ""Marriage and Family Therapist"",
+            ""expirationDate"": ""2023-12-31"",
+            ""disciplinaryActions"": false
+        }";
+
+        _mockHttpMessageHandler.Protected()
+            .Setup<Task<HttpResponseMessage>>(
+                "SendAsync",
+                ItExpr.IsAny<HttpRequestMessage>(),
+                ItExpr.IsAny<CancellationToken>())
+            .ReturnsAsync(new HttpResponseMessage
+            {
+                StatusCode = HttpStatusCode.OK,
+                Content = new StringContent(responseJson)
+            });
+
+        // Act
+        var result = await _service.VerifyLicenseAsync(licenseNumber, state, licenseType);
+
+        // Assert
+        Assert.False(result.Valid);
+        Assert.Equal("License status: INACTIVE", result.ErrorMessage);
+        Assert.Equal("John Doe", result.PractitionerName);
+        Assert.Equal("Marriage and Family Therapist", result.LicenseType);
+    }
+
+    [Fact]
+    public async Task ParseCaliforniaResponse_WithDisciplinaryActions_ReturnsInvalidResult()
+    {
+        // Arrange
+        var licenseNumber = "DISCIPLINARY456";
+        var state = "CA";
+        var licenseType = "MFT";
+        var cacheKey = $"license_{state}_{licenseNumber}";
+
+        object? cacheValue = null;
+        _mockCache
+            .Setup(x => x.TryGetValue(cacheKey, out cacheValue))
+            .Returns(false);
+
+        var responseJson = @"{
+            ""licenseFound"": true,
+            ""status"": ""ACTIVE"",
+            ""practitionerName"": ""Bob Johnson"",
+            ""licenseType"": ""Marriage and Family Therapist"",
+            ""expirationDate"": ""2025-06-30"",
+            ""disciplinaryActions"": true,
+            ""disciplinaryDetails"": ""Suspension for unprofessional conduct""
+        }";
+
+        _mockHttpMessageHandler.Protected()
+            .Setup<Task<HttpResponseMessage>>(
+                "SendAsync",
+                ItExpr.IsAny<HttpRequestMessage>(),
+                ItExpr.IsAny<CancellationToken>())
+            .ReturnsAsync(new HttpResponseMessage
+            {
+                StatusCode = HttpStatusCode.OK,
+                Content = new StringContent(responseJson)
+            });
+
+        // Act
+        var result = await _service.VerifyLicenseAsync(licenseNumber, state, licenseType);
+
+        // Assert
+        Assert.False(result.Valid);
+        Assert.Equal("License has disciplinary actions: Suspension for unprofessional conduct", result.ErrorMessage);
+        Assert.True(result.DisciplinaryActions);
+        Assert.Equal("Bob Johnson", result.PractitionerName);
+    }
+
+    [Fact]
+    public async Task ParseCaliforniaResponse_InvalidJson_FallsBackToTestImplementation()
+    {
+        // Arrange
+        var licenseNumber = "VALID789";
+        var state = "CA";
+        var licenseType = "MFT";
+        var cacheKey = $"license_{state}_{licenseNumber}";
+
+        object? cacheValue = null;
+        _mockCache
+            .Setup(x => x.TryGetValue(cacheKey, out cacheValue))
+            .Returns(false);
+
+        var invalidJson = "{ invalid json content }";
+
+        _mockHttpMessageHandler.Protected()
+            .Setup<Task<HttpResponseMessage>>(
+                "SendAsync",
+                ItExpr.IsAny<HttpRequestMessage>(),
+                ItExpr.IsAny<CancellationToken>())
+            .ReturnsAsync(new HttpResponseMessage
+            {
+                StatusCode = HttpStatusCode.OK,
+                Content = new StringContent(invalidJson)
+            });
+
+        var cacheEntryMock = new Mock<ICacheEntry>();
+        _mockCache
+            .Setup(x => x.CreateEntry(cacheKey))
+            .Returns(cacheEntryMock.Object);
+
+        // Act
+        var result = await _service.VerifyLicenseAsync(licenseNumber, state, licenseType);
+
+        // Assert
+        Assert.True(result.Valid); // VALID prefix means valid in test implementation
+        Assert.Equal("Test Practitioner", result.PractitionerName);
+        Assert.Equal("Professional License", result.LicenseType);
+        Assert.NotNull(result.ExpirationDate);
+        _mockLogger.Verify(
+            x => x.Log(
+                LogLevel.Error,
+                It.IsAny<EventId>(),
+                It.Is<It.IsAnyType>((v, t) => v.ToString()!.Contains("Error parsing California API response")),
+                It.IsAny<Exception>(),
+                It.IsAny<Func<It.IsAnyType, Exception?, string>>()),
+            Times.Once);
+    }
+
+    [Fact]
+    public async Task ParseCaliforniaResponse_MissingFields_HandlesGracefully()
+    {
+        // Arrange
+        var licenseNumber = "PARTIAL123";
+        var state = "CA";
+        var licenseType = "MFT";
+        var cacheKey = $"license_{state}_{licenseNumber}";
+
+        object? cacheValue = null;
+        _mockCache
+            .Setup(x => x.TryGetValue(cacheKey, out cacheValue))
+            .Returns(false);
+
+        var responseJson = @"{
+            ""licenseFound"": true,
+            ""status"": ""ACTIVE""
+        }";
+
+        _mockHttpMessageHandler.Protected()
+            .Setup<Task<HttpResponseMessage>>(
+                "SendAsync",
+                ItExpr.IsAny<HttpRequestMessage>(),
+                ItExpr.IsAny<CancellationToken>())
+            .ReturnsAsync(new HttpResponseMessage
+            {
+                StatusCode = HttpStatusCode.OK,
+                Content = new StringContent(responseJson)
+            });
+
+        var cacheEntryMock = new Mock<ICacheEntry>();
+        _mockCache
+            .Setup(x => x.CreateEntry(cacheKey))
+            .Returns(cacheEntryMock.Object);
+
+        // Act
+        var result = await _service.VerifyLicenseAsync(licenseNumber, state, licenseType);
+
+        // Assert
+        Assert.True(result.Valid);
+        Assert.Null(result.PractitionerName);
+        Assert.Null(result.LicenseType);
+        Assert.Null(result.ExpirationDate);
+        Assert.False(result.DisciplinaryActions);
+    }
+
+    [Fact]
+    public async Task ParseCaliforniaResponse_EmptyResponse_FallsBackToTestImplementation()
+    {
+        // Arrange
+        var licenseNumber = "INVALID999";
+        var state = "CA";
+        var licenseType = "MFT";
+        var cacheKey = $"license_{state}_{licenseNumber}";
+
+        object? cacheValue = null;
+        _mockCache
+            .Setup(x => x.TryGetValue(cacheKey, out cacheValue))
+            .Returns(false);
+
+        _mockHttpMessageHandler.Protected()
+            .Setup<Task<HttpResponseMessage>>(
+                "SendAsync",
+                ItExpr.IsAny<HttpRequestMessage>(),
+                ItExpr.IsAny<CancellationToken>())
+            .ReturnsAsync(new HttpResponseMessage
+            {
+                StatusCode = HttpStatusCode.OK,
+                Content = new StringContent("")
+            });
+
+        // Act
+        var result = await _service.VerifyLicenseAsync(licenseNumber, state, licenseType);
+
+        // Assert
+        Assert.False(result.Valid); // INVALID prefix means invalid in test implementation
+        Assert.Equal("License not found in state records", result.ErrorMessage);
     }
 
     #endregion
