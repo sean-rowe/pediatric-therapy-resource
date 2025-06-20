@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker build:*)",
+      "Bash(docker-compose up:*)",
+      "Bash(find:*)",
+      "Bash(dotnet build:*)",
+      "Bash(ls:*)",
+      "Bash(grep:*)",
+      "Bash(dotnet test:*)",
+      "Bash(npm install)",
+      "Bash(chmod:*)",
+      "Bash(/tmp/create-demo-recording.sh:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": []
+  }
+}

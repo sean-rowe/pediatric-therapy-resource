@@ -1,10 +1,13 @@
+using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using TherapyDocs.Api.Interfaces;
 using TherapyDocs.Api.Models.DTOs;
-using TherapyDocs.Api.Repositories;
 
 namespace TherapyDocs.Api.Services;
 

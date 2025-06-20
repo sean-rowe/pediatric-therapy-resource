@@ -1,5 +1,8 @@
-using BCrypt.Net;
+using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using BCrypt.Net;
+using Microsoft.Extensions.Logging;
 using TherapyDocs.Api.Interfaces;
 
 namespace TherapyDocs.Api.Services;
@@ -80,6 +83,7 @@ public class PasswordService : IPasswordService
         catch (Exception ex)
         {
             _logger.LogWarning(ex, "Could not check password against HIBP, allowing password");
+            
             // Fail open - if HIBP is down, don't block users
         }
 

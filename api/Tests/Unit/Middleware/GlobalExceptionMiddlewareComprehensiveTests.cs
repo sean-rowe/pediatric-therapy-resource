@@ -1,6 +1,7 @@
 using FluentAssertions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Moq;
 using System.Net;
@@ -24,7 +25,7 @@ public class GlobalExceptionMiddlewareComprehensiveTests
         _mockLogger = new Mock<ILogger<GlobalExceptionMiddleware>>();
         _mockEnvironment = new Mock<IWebHostEnvironment>();
         
-        _mockEnvironment.Setup(x => x.IsDevelopment()).Returns(false); // Default to production
+        _mockEnvironment.Setup(x => x.EnvironmentName).Returns(Environments.Production); // Default to production
         
         _middleware = new GlobalExceptionMiddleware(
             _mockNext.Object,
@@ -254,7 +255,7 @@ public class GlobalExceptionMiddlewareComprehensiveTests
     public async Task InvokeAsync_DevelopmentEnvironment_IncludesDetails()
     {
         // Arrange
-        _mockEnvironment.Setup(x => x.IsDevelopment()).Returns(true);
+        _mockEnvironment.Setup(x => x.EnvironmentName).Returns(Environments.Development);
         var exception = new Exception("Detailed error message");
         _mockNext.Setup(x => x(_httpContext)).ThrowsAsync(exception);
 
@@ -280,7 +281,7 @@ public class GlobalExceptionMiddlewareComprehensiveTests
     public async Task InvokeAsync_ProductionEnvironment_ExcludesDetails()
     {
         // Arrange
-        _mockEnvironment.Setup(x => x.IsDevelopment()).Returns(false);
+        _mockEnvironment.Setup(x => x.EnvironmentName).Returns(Environments.Production);
         var exception = new Exception("Sensitive error details");
         _mockNext.Setup(x => x(_httpContext)).ThrowsAsync(exception);
 

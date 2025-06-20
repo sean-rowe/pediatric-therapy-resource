@@ -1,3 +1,5 @@
+using System;
+
 namespace TherapyDocs.Api.Constants;
 
 /// <summary>

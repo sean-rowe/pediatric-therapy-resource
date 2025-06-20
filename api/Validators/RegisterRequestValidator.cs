@@ -1,6 +1,6 @@
+using System.Text.RegularExpressions;
 using FluentValidation;
 using TherapyDocs.Api.Models.DTOs;
-using System.Text.RegularExpressions;
 
 namespace TherapyDocs.Api.Validators;
 

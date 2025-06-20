@@ -1,8 +1,12 @@
+using System;
 using System.Data;
-using Microsoft.Data.SqlClient;
+using System.Threading.Tasks;
 using Dapper;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using TherapyDocs.Api.Interfaces;
-using TherapyDocs.Api.Models.DTOs;
+using TherapyDocs.Api.Models;
 
 namespace TherapyDocs.Api.Repositories;
 

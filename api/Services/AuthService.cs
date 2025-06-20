@@ -1,7 +1,10 @@
+using System;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using TherapyDocs.Api.Constants;
+using TherapyDocs.Api.Interfaces;
 using TherapyDocs.Api.Models;
 using TherapyDocs.Api.Models.DTOs;
-using TherapyDocs.Api.Repositories;
 
 namespace TherapyDocs.Api.Services;
 

@@ -1,14 +1,14 @@
+using System.Text;
+using System.Threading.RateLimiting;
+using FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
-using System.Text;
 using TherapyDocs.Api.Interfaces;
-using TherapyDocs.Api.Services;
 using TherapyDocs.Api.Repositories;
-using FluentValidation;
-using System.Threading.RateLimiting;
+using TherapyDocs.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

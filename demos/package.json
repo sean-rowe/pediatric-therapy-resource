@@ -1,0 +1,32 @@
+{
+  "name": "therapydocs-demos",
+  "version": "1.0.0",
+  "description": "Comprehensive demonstration suite for TherapyDocs system",
+  "scripts": {
+    "install-tools": "npm install && npx playwright install",
+    "demo:all": "npm run demo:e2e && npm run demo:api && npm run demo:database && npm run demo:integration",
+    "demo:e2e": "npx playwright test --project=chromium --reporter=html",
+    "demo:api": "newman run postman/TherapyDocs-API-Collection.json -e postman/environments/demo.json --reporters cli,html --reporter-html-export reports/api-demo.html",
+    "demo:database": "node scripts/database-demo.js",
+    "demo:integration": "node scripts/integration-demo.js",
+    "test:coverage": "cd ../api && dotnet test Tests/TherapyDocs.Api.Tests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=../demos/reports/coverage.xml",
+    "start:api": "cd ../api && dotnet run",
+    "start:db": "docker-compose -f ../docker-compose.yml up -d mssql"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "newman": "^6.0.0",
+    "dotenv": "^16.3.1",
+    "sql": "^1.0.0",
+    "axios": "^1.6.0",
+    "chalk": "^5.3.0",
+    "ora": "^7.0.1"
+  },
+  "keywords": [
+    "demo",
+    "e2e",
+    "api",
+    "testing",
+    "therapydocs"
+  ]
+}

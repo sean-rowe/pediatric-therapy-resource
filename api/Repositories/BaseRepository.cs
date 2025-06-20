@@ -1,4 +1,5 @@
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Logging;
 using TherapyDocs.Api.Interfaces;
 
 namespace TherapyDocs.Api.Repositories;

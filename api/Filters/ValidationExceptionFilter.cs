@@ -1,6 +1,7 @@
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using FluentValidation;
+using Microsoft.Extensions.Logging;
 
 namespace TherapyDocs.Api.Filters;
 

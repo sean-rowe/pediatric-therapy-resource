@@ -1,6 +1,8 @@
+using System;
+using System.Threading.Tasks;
 using TherapyDocs.Api.Models;
 
-namespace TherapyDocs.Api.Repositories;
+namespace TherapyDocs.Api.Interfaces;
 
 public interface IUserRepository
 {

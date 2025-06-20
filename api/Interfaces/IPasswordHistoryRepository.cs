@@ -1,3 +1,4 @@
+using TherapyDocs.Api.Models;
 using TherapyDocs.Api.Models.DTOs;
 
 namespace TherapyDocs.Api.Interfaces;

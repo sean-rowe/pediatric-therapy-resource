@@ -1,14 +1,18 @@
+using System;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using TherapyDocs.Api.Interfaces;
 
 namespace TherapyDocs.Api.Services;
 
 public class HaveIBeenPwnedService : IHaveIBeenPwnedService
 {
+    private const string ApiBaseUrl = "https://api.pwnedpasswords.com/range/";
+    
     private readonly HttpClient _httpClient;
     private readonly ILogger<HaveIBeenPwnedService> _logger;
-    private const string ApiBaseUrl = "https://api.pwnedpasswords.com/range/";
 
     public HaveIBeenPwnedService(HttpClient httpClient, ILogger<HaveIBeenPwnedService> logger)
     {

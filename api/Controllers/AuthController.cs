@@ -1,9 +1,11 @@
+using System.Net;
+using System.Threading.Tasks;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
-using TherapyDocs.Api.Models.DTOs;
-using TherapyDocs.Api.Services;
+using Microsoft.Extensions.Logging;
 using TherapyDocs.Api.Interfaces;
-using FluentValidation;
+using TherapyDocs.Api.Models.DTOs;
 
 namespace TherapyDocs.Api.Controllers;
 

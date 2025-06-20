@@ -1,6 +1,7 @@
+using System.Threading.Tasks;
 using TherapyDocs.Api.Models.DTOs;
 
-namespace TherapyDocs.Api.Services;
+namespace TherapyDocs.Api.Interfaces;
 
 public interface IAuthService
 {

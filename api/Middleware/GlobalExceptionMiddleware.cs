@@ -1,5 +1,10 @@
+using System;
 using System.Net;
 using System.Text.Json;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace TherapyDocs.Api.Middleware;
 
@@ -14,9 +19,9 @@ public class GlobalExceptionMiddleware
         ILogger<GlobalExceptionMiddleware> logger,
         IWebHostEnvironment environment)
     {
-        _next = next;
-        _logger = logger;
-        _environment = environment;
+        _next = next ?? throw new ArgumentNullException(nameof(next));
+        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        _environment = environment ?? throw new ArgumentNullException(nameof(environment));
     }
 
     public async Task InvokeAsync(HttpContext context)

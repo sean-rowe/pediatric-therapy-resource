@@ -1,5 +1,9 @@
+using System.Net;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using SendGrid;
 using SendGrid.Helpers.Mail;
+using TherapyDocs.Api.Interfaces;
 
 namespace TherapyDocs.Api.Services;
 
@@ -85,7 +89,7 @@ The TherapyDocs Team";
             var msg = MailHelper.CreateSingleEmail(fromEmail, toEmail, subject, plainTextContent, htmlContent);
             var response = await _sendGridClient.SendEmailAsync(msg);
 
-            if (response.StatusCode == System.Net.HttpStatusCode.Accepted)
+            if (response.StatusCode == HttpStatusCode.Accepted)
             {
                 _logger.LogInformation("Verification email sent successfully to: {Email}", email);
                 return true;
@@ -174,7 +178,7 @@ The TherapyDocs Team";
             var msg = MailHelper.CreateSingleEmail(fromEmail, toEmail, subject, plainTextContent, htmlContent);
             var response = await _sendGridClient.SendEmailAsync(msg);
 
-            if (response.StatusCode == System.Net.HttpStatusCode.Accepted)
+            if (response.StatusCode == HttpStatusCode.Accepted)
             {
                 _logger.LogInformation("Welcome email sent successfully to: {Email}", email);
                 return true;

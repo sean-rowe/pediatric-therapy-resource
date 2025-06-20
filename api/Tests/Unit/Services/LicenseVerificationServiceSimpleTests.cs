@@ -1,7 +1,9 @@
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Moq;
+using TherapyDocs.Api.Models.Configuration;
 using TherapyDocs.Api.Services;
 using Xunit;
 using FluentAssertions;
@@ -14,18 +16,27 @@ public class LicenseVerificationServiceSimpleTests
     private readonly Mock<HttpClient> _mockHttpClient;
     private readonly Mock<IMemoryCache> _mockCache;
     private readonly Mock<ILogger<LicenseVerificationService>> _mockLogger;
-    private readonly Mock<IConfiguration> _mockConfiguration;
+    private readonly Mock<IOptions<LicenseVerificationConfig>> _mockConfig;
 
     public LicenseVerificationServiceSimpleTests()
     {
         _mockHttpClient = new Mock<HttpClient>();
         _mockCache = new Mock<IMemoryCache>();
         _mockLogger = new Mock<ILogger<LicenseVerificationService>>();
-        _mockConfiguration = new Mock<IConfiguration>();
+        _mockConfig = new Mock<IOptions<LicenseVerificationConfig>>();
+        
+        var config = new LicenseVerificationConfig
+        {
+            CacheHours = 24,
+            RetryCount = 3,
+            RetryDelayMs = 1000,
+            States = new Dictionary<string, StateApiConfig>()
+        };
+        _mockConfig.Setup(x => x.Value).Returns(config);
         
         // Use a real HttpClient since mocking it is complex
         var httpClient = new HttpClient();
-        _service = new LicenseVerificationService(httpClient, _mockCache.Object, _mockLogger.Object, _mockConfiguration.Object);
+        _service = new LicenseVerificationService(httpClient, _mockCache.Object, _mockLogger.Object, _mockConfig.Object);
     }
 
     [Fact]

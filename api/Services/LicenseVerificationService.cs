@@ -1,9 +1,14 @@
-using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Options;
-using TherapyDocs.Api.Models.DTOs;
-using TherapyDocs.Api.Models.Configuration;
-using System.Text.Json;
+using System;
 using System.Text;
+using System.Text.Json;
+using System.Threading;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using TherapyDocs.Api.Interfaces;
+using TherapyDocs.Api.Models.Configuration;
+using TherapyDocs.Api.Models.DTOs;
 
 namespace TherapyDocs.Api.Services;
 

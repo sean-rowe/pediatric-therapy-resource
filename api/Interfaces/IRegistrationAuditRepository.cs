@@ -1,6 +1,6 @@
 using TherapyDocs.Api.Models;
 
-namespace TherapyDocs.Api.Repositories;
+namespace TherapyDocs.Api.Interfaces;
 
 public interface IRegistrationAuditRepository
 {

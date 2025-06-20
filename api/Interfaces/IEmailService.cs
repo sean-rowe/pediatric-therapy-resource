@@ -1,4 +1,6 @@
-namespace TherapyDocs.Api.Services;
+using System.Threading.Tasks;
+
+namespace TherapyDocs.Api.Interfaces;
 
 public interface IEmailService
 {
