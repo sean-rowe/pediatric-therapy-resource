@@ -1,6 +1,56 @@
 # Enterprise Project Requirements Document: Unified Pediatric Therapy Resource Platform (UPTRMS)
 ## Complete 100% Feature Union of All Major Therapy Resource Platforms
 
+## GIT WORKFLOW AND DEVELOPMENT PRACTICES
+
+### Branch Strategy
+This project follows a Git Flow-based branching strategy:
+
+1. **master** - Production-ready code only. Protected branch.
+2. **develop** - Main development branch. All feature branches must be created from and merged back to develop.
+3. **feature/** - Feature branches (e.g., `feature/user-authentication`, `feature/resource-management`)
+4. **bugfix/** - Bug fix branches (e.g., `bugfix/login-validation`)
+5. **hotfix/** - Emergency fixes for production (created from master)
+6. **release/** - Release preparation branches
+
+### Development Workflow
+
+```bash
+# Always start new work from develop
+git checkout develop
+git pull origin develop
+
+# Create a new feature branch
+git checkout -b feature/your-feature-name
+
+# Make changes and commit
+git add .
+git commit -m "feat: Your descriptive commit message"
+
+# Push to origin
+git push -u origin feature/your-feature-name
+
+# Create PR to develop (never directly to master)
+gh pr create --base develop
+```
+
+### Commit Message Convention
+Follow conventional commits specification:
+- `feat:` - New feature
+- `fix:` - Bug fix
+- `docs:` - Documentation changes
+- `style:` - Code style changes (formatting, etc.)
+- `refactor:` - Code refactoring
+- `test:` - Test additions or modifications
+- `chore:` - Maintenance tasks
+
+### Important Rules
+1. **NEVER commit directly to master or develop**
+2. **Always create feature branches from develop**
+3. **All PRs must target develop branch**
+4. **Master is only updated through release merges from develop**
+5. **Use PR reviews for all code changes**
+
 ## 1. EXECUTIVE SUMMARY
 
 ```
