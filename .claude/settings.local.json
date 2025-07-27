@@ -52,7 +52,10 @@
       "Bash(gh auth:*)",
       "Bash(git remote set-url:*)",
       "Bash(git fetch:*)",
-      "Bash(gh repo view:*)"
+      "Bash(gh repo view:*)",
+      "Bash(gh pr create:*)",
+      "Bash(gh pr:*)",
+      "Bash(git stash:*)"
     ],
     "deny": []
   }
