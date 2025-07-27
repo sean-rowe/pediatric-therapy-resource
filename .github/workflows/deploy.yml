@@ -1,44 +1,409 @@
-name: Deploy to Production
+name: Deployment Pipeline
+
 on:
-  release:
-    types: [published]
+  push:
+    branches: [main]
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy'
+        required: true
+        type: choice
+        options:
+          - development
+          - staging
+          - production
+      skip_tests:
+        description: 'Skip BDD tests'
+        required: false
+        type: boolean
+        default: false
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_PREFIX: ${{ github.repository_owner }}/uptrms
+
+permissions:
+  contents: read
+  packages: write
+  id-token: write
+  deployments: write
 
 jobs:
-  deploy-staging:
-    environment: staging
+  validate-deployment:
+    name: Validate Deployment Requirements
     runs-on: ubuntu-latest
+    outputs:
+      can-deploy: ${{ steps.checks.outputs.can-deploy }}
+      version: ${{ steps.version.outputs.version }}
     steps:
-      - uses: actions/checkout@v4
-      - name: Deploy Database to Staging
-        run: |
-          sqlcmd -S ${{ secrets.STAGING_SQL_SERVER }} -U ${{ secrets.SQL_USERNAME }} -P ${{ secrets.STAGING_SQL_PASSWORD }} -i database/migrations/*.sql
-      - name: Deploy API to Staging
-        run: |
-          docker run -d --name api-staging -p 5000:5000 -e ConnectionString="${{ secrets.STAGING_CONNECTION_STRING }}" ${{ secrets.DOCKER_REGISTRY }}/api:${{ github.sha }}
-      - name: Deploy UI to Staging
-        run: |
-          docker run -d --name ui-staging -p 3000:3000 ${{ secrets.DOCKER_REGISTRY }}/ui:${{ github.sha }}
-      - name: Run Smoke Tests
-        run: |
-          curl -f http://localhost:5000/health || exit 1
-          curl -f http://localhost:3000 || exit 1
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-  deploy-production:
-    needs: deploy-staging
-    environment: production
+      - name: Determine version
+        id: version
+        run: |
+          if [[ "${{ github.ref }}" == refs/tags/* ]]; then
+            VERSION=${GITHUB_REF#refs/tags/}
+          else
+            VERSION="dev-${GITHUB_SHA::8}"
+          fi
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+
+      - name: Check deployment requirements
+        id: checks
+        run: |
+          CAN_DEPLOY=true
+          
+          # Check for required secrets
+          if [[ -z "${{ secrets.AZURE_CREDENTIALS }}" ]]; then
+            echo "❌ Missing AZURE_CREDENTIALS secret"
+            CAN_DEPLOY=false
+          fi
+          
+          if [[ -z "${{ secrets.MSSQL_SA_PASSWORD }}" ]]; then
+            echo "❌ Missing MSSQL_SA_PASSWORD secret"
+            CAN_DEPLOY=false
+          fi
+          
+          # For production, require a tag
+          if [[ "${{ github.event.inputs.environment }}" == "production" ]] && [[ "${{ github.ref }}" != refs/tags/* ]]; then
+            echo "❌ Production deployment requires a version tag"
+            CAN_DEPLOY=false
+          fi
+          
+          echo "can-deploy=${CAN_DEPLOY}" >> $GITHUB_OUTPUT
+
+  run-bdd-tests:
+    name: Run BDD Tests
     runs-on: ubuntu-latest
+    needs: validate-deployment
+    if: needs.validate-deployment.outputs.can-deploy == 'true' && github.event.inputs.skip_tests != 'true'
     steps:
-      - uses: actions/checkout@v4
-      - name: Deploy Database to Production
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run BDD test workflow
+        uses: ./.github/workflows/bdd-tests.yml
+        with:
+          test_tags: '@smoke @critical'
+          environment: 'staging'
+
+  build-images:
+    name: Build Container Images
+    runs-on: ubuntu-latest
+    needs: validate-deployment
+    if: needs.validate-deployment.outputs.can-deploy == 'true'
+    strategy:
+      matrix:
+        component:
+          - name: api
+            context: ./api
+            dockerfile: ./docker/Dockerfile.api
+          - name: web
+            context: ./web
+            dockerfile: ./docker/Dockerfile.web
+          - name: migrations
+            context: ./database
+            dockerfile: ./docker/Dockerfile.migrations
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-${{ matrix.component.name }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=raw,value=${{ needs.validate-deployment.outputs.version }}
+
+      - name: Build and push image
+        uses: docker/build-push-action@v5
+        with:
+          context: ${{ matrix.component.context }}
+          file: ${{ matrix.component.dockerfile }}
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          build-args: |
+            VERSION=${{ needs.validate-deployment.outputs.version }}
+            BUILD_DATE=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+            VCS_REF=${{ github.sha }}
+
+  security-scan-images:
+    name: Security Scan Images
+    runs-on: ubuntu-latest
+    needs: build-images
+    strategy:
+      matrix:
+        component: [api, web, migrations]
+    steps:
+      - name: Run Trivy scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-${{ matrix.component }}:${{ needs.validate-deployment.outputs.version }}
+          format: 'sarif'
+          output: 'trivy-${{ matrix.component }}.sarif'
+          severity: 'CRITICAL,HIGH'
+
+      - name: Upload scan results
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: 'trivy-${{ matrix.component }}.sarif'
+
+  deploy-infrastructure:
+    name: Deploy Infrastructure
+    runs-on: ubuntu-latest
+    needs: [validate-deployment, build-images, security-scan-images]
+    if: success() || (needs.run-bdd-tests.result == 'skipped' && needs.security-scan-images.result == 'success')
+    environment:
+      name: ${{ github.event.inputs.environment || 'development' }}
+      url: ${{ steps.deploy.outputs.app-url }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.6.0
+
+      - name: Terraform init
+        working-directory: ./infrastructure/terraform
         run: |
-          sqlcmd -S ${{ secrets.PROD_SQL_SERVER }} -U ${{ secrets.SQL_USERNAME }} -P ${{ secrets.PROD_SQL_PASSWORD }} -i database/migrations/*.sql
-      - name: Deploy API to Production
+          terraform init \
+            -backend-config="resource_group_name=uptrms-tfstate-rg" \
+            -backend-config="storage_account_name=uptrmstfstate" \
+            -backend-config="container_name=tfstate" \
+            -backend-config="key=${{ github.event.inputs.environment || 'development' }}.terraform.tfstate"
+
+      - name: Terraform plan
+        working-directory: ./infrastructure/terraform
         run: |
-          docker run -d --name api-prod -p 5000:5000 -e ConnectionString="${{ secrets.PROD_CONNECTION_STRING }}" ${{ secrets.DOCKER_REGISTRY }}/api:${{ github.sha }}
-      - name: Deploy UI to Production
+          terraform plan \
+            -var="environment=${{ github.event.inputs.environment || 'development' }}" \
+            -var="version=${{ needs.validate-deployment.outputs.version }}" \
+            -out=tfplan
+
+      - name: Terraform apply
+        id: deploy
+        working-directory: ./infrastructure/terraform
         run: |
-          docker run -d --name ui-prod -p 3000:3000 ${{ secrets.DOCKER_REGISTRY }}/ui:${{ github.sha }}
-      - name: Run Health Checks
+          terraform apply -auto-approve tfplan
+          
+          # Capture outputs
+          echo "app-url=$(terraform output -raw app_url)" >> $GITHUB_OUTPUT
+          echo "api-url=$(terraform output -raw api_url)" >> $GITHUB_OUTPUT
+
+  deploy-database:
+    name: Deploy Database Migrations
+    runs-on: ubuntu-latest
+    needs: deploy-infrastructure
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Run database migrations
         run: |
-          curl -f https://api.therapydocs.com/health || exit 1
-          curl -f https://app.therapydocs.com || exit 1
+          # Get connection string from Key Vault
+          CONNECTION_STRING=$(az keyvault secret show \
+            --vault-name "uptrms-${{ github.event.inputs.environment || 'development' }}-kv" \
+            --name "sql-connection-string" \
+            --query "value" -o tsv)
+          
+          # Run migrations container
+          docker run --rm \
+            -e "ConnectionStrings__DefaultConnection=${CONNECTION_STRING}" \
+            ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-migrations:${{ needs.validate-deployment.outputs.version }}
+
+  deploy-applications:
+    name: Deploy Applications
+    runs-on: ubuntu-latest
+    needs: [deploy-infrastructure, deploy-database]
+    strategy:
+      matrix:
+        component:
+          - name: api
+            service: uptrms-api
+          - name: web
+            service: uptrms-web
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Get AKS credentials
+        run: |
+          az aks get-credentials \
+            --resource-group "uptrms-${{ github.event.inputs.environment || 'development' }}-rg" \
+            --name "uptrms-${{ github.event.inputs.environment || 'development' }}-aks"
+
+      - name: Deploy to Kubernetes
+        run: |
+          # Update image in deployment
+          kubectl set image deployment/${{ matrix.component.service }} \
+            ${{ matrix.component.name }}=${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-${{ matrix.component.name }}:${{ needs.validate-deployment.outputs.version }} \
+            -n uptrms-${{ github.event.inputs.environment || 'development' }}
+          
+          # Wait for rollout
+          kubectl rollout status deployment/${{ matrix.component.service }} \
+            -n uptrms-${{ github.event.inputs.environment || 'development' }} \
+            --timeout=10m
+
+  post-deployment-tests:
+    name: Post-Deployment Tests
+    runs-on: ubuntu-latest
+    needs: deploy-applications
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run smoke tests
+        run: |
+          # API health check
+          curl -f "${{ needs.deploy-infrastructure.outputs.api-url }}/health" || exit 1
+          
+          # Web app check
+          curl -f "${{ needs.deploy-infrastructure.outputs.app-url }}" || exit 1
+
+      - name: Run E2E tests
+        run: |
+          cd tests/e2e
+          npm ci
+          npm run test:ci -- \
+            --base-url="${{ needs.deploy-infrastructure.outputs.app-url }}" \
+            --api-url="${{ needs.deploy-infrastructure.outputs.api-url }}"
+
+      - name: Security validation
+        run: |
+          # Check TLS configuration
+          echo | openssl s_client -connect \
+            $(echo "${{ needs.deploy-infrastructure.outputs.app-url }}" | sed 's|https://||'):443 \
+            -tls1_2 2>/dev/null | grep "TLSv1.2"
+          
+          # Check security headers
+          curl -I "${{ needs.deploy-infrastructure.outputs.app-url }}" | \
+            grep -E "(Strict-Transport-Security|X-Frame-Options|Content-Security-Policy)"
+
+  update-deployment-status:
+    name: Update Deployment Status
+    runs-on: ubuntu-latest
+    needs: [deploy-applications, post-deployment-tests]
+    if: always()
+    steps:
+      - name: Create deployment record
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const environment = '${{ github.event.inputs.environment || 'development' }}';
+            const version = '${{ needs.validate-deployment.outputs.version }}';
+            const status = '${{ needs.post-deployment-tests.result }}' === 'success' ? 'success' : 'failure';
+            
+            // Create deployment
+            const deployment = await github.rest.repos.createDeployment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: context.sha,
+              environment: environment,
+              description: `Deploy ${version} to ${environment}`,
+              auto_merge: false,
+              required_contexts: []
+            });
+            
+            // Update deployment status
+            await github.rest.repos.createDeploymentStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: deployment.data.id,
+              state: status,
+              environment_url: '${{ needs.deploy-infrastructure.outputs.app-url }}',
+              description: status === 'success' ? 'Deployment completed successfully' : 'Deployment failed'
+            });
+
+      - name: Notify team
+        if: always()
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          text: |
+            Deployment to ${{ github.event.inputs.environment || 'development' }} ${{ needs.post-deployment-tests.result == 'success' && 'succeeded' || 'failed' }}
+            Version: ${{ needs.validate-deployment.outputs.version }}
+            URL: ${{ needs.deploy-infrastructure.outputs.app-url }}
+          webhook_url: ${{ secrets.SLACK_WEBHOOK }}
+
+  rollback-on-failure:
+    name: Rollback on Failure
+    runs-on: ubuntu-latest
+    needs: [deploy-applications, post-deployment-tests]
+    if: failure()
+    steps:
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Get AKS credentials
+        run: |
+          az aks get-credentials \
+            --resource-group "uptrms-${{ github.event.inputs.environment || 'development' }}-rg" \
+            --name "uptrms-${{ github.event.inputs.environment || 'development' }}-aks"
+
+      - name: Rollback deployments
+        run: |
+          # Rollback API
+          kubectl rollout undo deployment/uptrms-api \
+            -n uptrms-${{ github.event.inputs.environment || 'development' }}
+          
+          # Rollback Web
+          kubectl rollout undo deployment/uptrms-web \
+            -n uptrms-${{ github.event.inputs.environment || 'development' }}
+          
+          # Wait for rollback
+          kubectl rollout status deployment/uptrms-api \
+            -n uptrms-${{ github.event.inputs.environment || 'development' }}
+          kubectl rollout status deployment/uptrms-web \
+            -n uptrms-${{ github.event.inputs.environment || 'development' }}"
+
+      - name: Notify rollback
+        uses: 8398a7/action-slack@v3
+        with:
+          status: custom
+          custom_payload: |
+            {
+              text: "⚠️ Deployment to ${{ github.event.inputs.environment || 'development' }} failed and was rolled back",
+              color: "warning"
+            }
+          webhook_url: ${{ secrets.SLACK_WEBHOOK }}

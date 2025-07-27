@@ -1,170 +1,329 @@
-using System.Net;
-using System.Threading.Tasks;
-using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.RateLimiting;
-using Microsoft.Extensions.Logging;
-using TherapyDocs.Api.Interfaces;
-using TherapyDocs.Api.Models.DTOs;
+using Microsoft.AspNetCore.Authorization;
+using UPTRMS.Api.Models.DTOs;
+using UPTRMS.Api.Models.Domain;
+using UPTRMS.Api.Services;
 
-namespace TherapyDocs.Api.Controllers;
+namespace UPTRMS.Api.Controllers;
 
 [ApiController]
 [Route("api/auth")]
-[AutoValidateAntiforgeryToken]
 public class AuthController : ControllerBase
 {
-    private readonly IAuthService _authService;
-    private readonly ILoginService _loginService;
-    private readonly IValidator<RegisterRequest> _registerValidator;
+    private readonly IAuthenticationService _authService;
     private readonly ILogger<AuthController> _logger;
 
-    public AuthController(
-        IAuthService authService,
-        ILoginService loginService,
-        IValidator<RegisterRequest> registerValidator,
-        ILogger<AuthController> logger)
+    public AuthController(IAuthenticationService authService, ILogger<AuthController> logger)
     {
         _authService = authService;
-        _loginService = loginService;
-        _registerValidator = registerValidator;
         _logger = logger;
     }
 
-    /// <summary>
-    /// Register a new therapist user
-    /// </summary>
-    /// <param name="request">Registration details</param>
-    /// <returns>Registration result</returns>
     [HttpPost("register")]
-    [EnableRateLimiting("registration")]
-    [ProducesResponseType(typeof(RegisterResponse), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(RegisterResponse), StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(StatusCodes.Status429TooManyRequests)]
+    [AllowAnonymous]
     public async Task<IActionResult> Register([FromBody] RegisterRequest request)
     {
-        // Validate request
-        var validationResult = await _registerValidator.ValidateAsync(request);
-        if (!validationResult.IsValid)
+        // Basic validation for required fields
+        if (!ModelState.IsValid)
         {
-            var response = new RegisterResponse
+            // Extract specific validation errors
+            string? firstError = ModelState
+                .Where(x => x.Value?.Errors.Count > 0)
+                .Select(x => x.Value?.Errors.First().ErrorMessage)
+                .FirstOrDefault();
+                
+            return BadRequest(new { error = firstError ?? "Invalid request data" });
+        }
+        
+        try
+        {
+            (User user, string token, string refreshToken) = await _authService.RegisterAsync(request);
+            
+            // Return response in expected format
+            return Ok(new
             {
-                Success = false,
-                Message = "Validation failed",
-                Errors = validationResult.Errors.Select(e => e.ErrorMessage).ToList()
-            };
-            return BadRequest(response);
-        }
-
-        // Get client IP and user agent for audit
-        var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString();
-        var userAgent = Request.Headers.UserAgent.ToString();
-
-        // Register user
-        var result = await _authService.RegisterUserAsync(request, ipAddress, userAgent);
-
-        if (result.Success)
-        {
-            _logger.LogInformation("User registered successfully");
-            return Ok(result);
-        }
-
-        return BadRequest(result);
-    }
-
-    /// <summary>
-    /// Verify email address using token
-    /// </summary>
-    /// <param name="token">Verification token from email</param>
-    /// <returns>Verification result</returns>
-    [HttpGet("verify-email/{token}")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> VerifyEmail(string token)
-    {
-        if (string.IsNullOrWhiteSpace(token))
-        {
-            return BadRequest(new { success = false, message = "Invalid verification token" });
-        }
-
-        var result = await _authService.VerifyEmailAsync(token);
-
-        if (result)
-        {
-            _logger.LogInformation("Email verified successfully");
-            return Ok(new { success = true, message = "Email verified successfully! You can now log in." });
-        }
-
-        return BadRequest(new { success = false, message = "Invalid or expired verification token" });
-    }
-
-    /// <summary>
-    /// Resend email verification
-    /// </summary>
-    /// <param name="request">Email to resend verification to</param>
-    /// <returns>Result of resend operation</returns>
-    [HttpPost("resend-verification")]
-    [EnableRateLimiting("registration")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(StatusCodes.Status429TooManyRequests)]
-    public async Task<IActionResult> ResendVerification([FromBody] ResendVerificationRequest request)
-    {
-        if (string.IsNullOrWhiteSpace(request.Email))
-        {
-            return BadRequest(new { success = false, message = "Email is required" });
-        }
-
-        var result = await _authService.ResendVerificationEmailAsync(request.Email);
-
-        if (result)
-        {
-            _logger.LogInformation("Verification email resent successfully");
-            return Ok(new { success = true, message = "Verification email sent successfully" });
-        }
-
-        return BadRequest(new { success = false, message = "Unable to resend verification email. Please check your email address." });
-    }
-
-    /// <summary>
-    /// Login with email and password
-    /// </summary>
-    /// <param name="request">Login credentials</param>
-    /// <returns>JWT token and user info</returns>
-    [HttpPost("login")]
-    [EnableRateLimiting("registration")]
-    [ProducesResponseType(typeof(LoginResponse), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(LoginResponse), StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(StatusCodes.Status429TooManyRequests)]
-    public async Task<IActionResult> Login([FromBody] LoginRequest request)
-    {
-        if (string.IsNullOrWhiteSpace(request.Email) || string.IsNullOrWhiteSpace(request.Password))
-        {
-            return BadRequest(new LoginResponse 
-            { 
-                Success = false, 
-                Message = "Email and password are required" 
+                success = true,
+                message = "Registration successful. Please check your email to verify your account.",
+                userId = user.UserId.ToString(),
+                token = token,
+                refreshToken = refreshToken
             });
         }
-
-        // Get client IP and user agent for audit
-        var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString();
-        var userAgent = Request.Headers.UserAgent.ToString();
-
-        // Attempt login
-        var result = await _loginService.LoginAsync(request, ipAddress, userAgent);
-
-        if (result.Success)
+        catch (InvalidOperationException ex)
         {
-            _logger.LogInformation("User logged in successfully");
-            return Ok(result);
+            // Handle specific registration errors
+            if (ex.Message.Contains("already exists"))
+            {
+                return BadRequest(new { error = "Email already registered" });
+            }
+            return BadRequest(new { error = ex.Message });
         }
-
-        return BadRequest(result);
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error during registration");
+            return StatusCode(500, new { error = "An error occurred during registration" });
+        }
     }
-}
 
-public class ResendVerificationRequest
-{
-    public string Email { get; set; } = string.Empty;
+    [HttpPost("login")]
+    [AllowAnonymous]
+    public async Task<IActionResult> Login([FromBody] LoginRequest request)
+    {
+        // Log the incoming request for debugging
+        _logger.LogInformation("Login request received for email: {Email}", request?.Email ?? "null");
+        
+        // Log the request object state
+        if (request == null)
+        {
+            _logger.LogWarning("Login request is null");
+            return BadRequest(new { error = "Invalid request data" });
+        }
+        
+        _logger.LogInformation("Login request - Email: {Email}, Password length: {Length}, Has TwoFactorCode: {HasCode}", 
+            request.Email ?? "null", 
+            request.Password?.Length ?? 0,
+            !string.IsNullOrEmpty(request.TwoFactorCode));
+        
+        // Check model state before processing
+        if (!ModelState.IsValid)
+        {
+            Dictionary<string, List<string>> errors = new Dictionary<string, List<string>>();
+            foreach (KeyValuePair<string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateEntry> kvp in ModelState)
+            {
+                if (kvp.Value.Errors.Count > 0)
+                {
+                    foreach (Microsoft.AspNetCore.Mvc.ModelBinding.ModelError error in kvp.Value.Errors)
+                    {
+                        _logger.LogWarning("Validation error for field '{Field}': {Error}", kvp.Key, error.ErrorMessage);
+                    }
+                }
+            }
+            return BadRequest(new { error = "Invalid request data" });
+        }
+        
+        try
+        {
+            (User user, string token, string refreshToken) = await _authService.LoginAsync(request);
+            
+            // Return successful response with expected fields
+            return Ok(new
+            {
+                success = true,
+                token = token,
+                refreshToken = refreshToken,
+                user = new
+                {
+                    userId = user.UserId,
+                    email = user.Email,
+                    firstName = user.FirstName,
+                    lastName = user.LastName,
+                    role = user.Role.ToString(),
+                    subscriptionTier = user.SubscriptionTier.ToString()
+                }
+            });
+        }
+        catch (UnauthorizedAccessException)
+        {
+            // Return consistent error message for invalid credentials
+            return BadRequest(new { error = "Invalid credentials" });
+        }
+        catch (InvalidOperationException ex)
+        {
+            return BadRequest(new { error = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error during login");
+            return StatusCode(500, new { error = "An error occurred during login" });
+        }
+    }
+
+    [HttpGet("verify-email/{token}")]
+    [AllowAnonymous]
+    public async Task<IActionResult> VerifyEmail(string token)
+    {
+        try
+        {
+            bool success = await _authService.VerifyEmailAsync(token);
+            
+            if (success)
+            {
+                return Ok(new { success = true, message = "Email verified successfully" });
+            }
+            else
+            {
+                return BadRequest(new { success = false, message = "Invalid or expired verification token" });
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error during email verification");
+            return StatusCode(500, new { error = "An error occurred during email verification" });
+        }
+    }
+
+    [HttpPost("resend-verification")]
+    [AllowAnonymous]
+    public async Task<IActionResult> ResendVerification([FromBody] ResendVerificationRequest request)
+    {
+        try
+        {
+            await _authService.ResendVerificationEmailAsync(request.Email);
+            return Ok(new { message = "Verification email sent if account exists" });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error resending verification email");
+            return StatusCode(500, new { error = "An error occurred while resending verification email" });
+        }
+    }
+
+    [HttpPost("logout")]
+    [Authorize]
+    public async Task<IActionResult> Logout()
+    {
+        try
+        {
+            // Get the token from the Authorization header
+            string? authHeader = Request.Headers["Authorization"];
+            if (string.IsNullOrEmpty(authHeader) || !authHeader.StartsWith("Bearer "))
+            {
+                return BadRequest(new { error = "Invalid authorization header" });
+            }
+            
+            string token = authHeader.Substring("Bearer ".Length).Trim();
+            await _authService.LogoutAsync(token);
+            
+            return Ok(new { message = "Logged out successfully" });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error during logout");
+            return StatusCode(500, new { error = "An error occurred during logout" });
+        }
+    }
+
+    [HttpPost("forgot-password")]
+    [AllowAnonymous]
+    public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordRequest request)
+    {
+        try
+        {
+            await _authService.GeneratePasswordResetTokenAsync(request.Email);
+            // Always return success to prevent user enumeration
+            return Ok(new { message = "If the email exists, a password reset link has been sent" });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error during forgot password");
+            return StatusCode(500, new { error = "An error occurred while processing your request" });
+        }
+    }
+
+    [HttpPost("reset-password")]
+    [AllowAnonymous]
+    public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordRequest request)
+    {
+        try
+        {
+            await _authService.GeneratePasswordResetTokenAsync(request.Email);
+            // Always return success to prevent user enumeration
+            return Ok(new { message = "If the email exists, a password reset link has been sent" });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error during password reset request");
+            return StatusCode(500, new { error = "An error occurred while processing your request" });
+        }
+    }
+
+    [HttpPost("reset-password/confirm")]
+    [AllowAnonymous]
+    public async Task<IActionResult> ResetPasswordConfirm([FromBody] ResetPasswordConfirmRequest request)
+    {
+        try
+        {
+            await _authService.ResetPasswordAsync(request.Token, request.NewPassword);
+            return Ok(new { message = "Password reset successfully" });
+        }
+        catch (InvalidOperationException ex)
+        {
+            return BadRequest(new { error = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error during password reset confirmation");
+            return StatusCode(500, new { error = "An error occurred while resetting password" });
+        }
+    }
+
+    [HttpPost("change-password")]
+    [Authorize]
+    public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordRequest request)
+    {
+        try
+        {
+            // Get user ID from claims
+            string? userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(userIdClaim) || !Guid.TryParse(userIdClaim, out Guid userId))
+            {
+                return Unauthorized(new { error = "Invalid user authentication" });
+            }
+            
+            await _authService.ChangePasswordAsync(userId, request.CurrentPassword, request.NewPassword);
+            return Ok(new { message = "Password changed successfully" });
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return BadRequest(new { error = ex.Message });
+        }
+        catch (InvalidOperationException ex)
+        {
+            return BadRequest(new { error = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error changing password");
+            return StatusCode(500, new { error = "An error occurred while changing password" });
+        }
+    }
+
+    [HttpPost("refresh")]
+    [AllowAnonymous]
+    public async Task<IActionResult> RefreshToken([FromBody] RefreshTokenRequest request)
+    {
+        try
+        {
+            (string token, string refreshToken) = await _authService.RefreshTokenAsync(request.RefreshToken);
+            
+            return Ok(new 
+            { 
+                token = token,
+                refreshToken = refreshToken
+            });
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return Unauthorized(new { error = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error refreshing token");
+            return StatusCode(500, new { error = "An error occurred while refreshing token" });
+        }
+    }
+
+    [HttpGet("sso/providers")]
+    [AllowAnonymous]
+    public IActionResult GetSsoProviders()
+    {
+        object[] providers = new[]
+        {
+            new { id = "google", name = "Google", type = "oauth2", enabled = true },
+            new { id = "clever", name = "Clever", type = "saml", enabled = true },
+            new { id = "classlink", name = "ClassLink", type = "oauth2", enabled = true }
+        };
+        
+        return Ok(providers);
+    }
 }

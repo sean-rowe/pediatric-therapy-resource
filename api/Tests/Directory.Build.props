@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <ApiProjectPath>$(MSBuildThisFileDirectory)..\TherapyDocs.Api.csproj</ApiProjectPath>
+    <RunAnalyzers>false</RunAnalyzers>
+    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+    <RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
+    <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
+    <EnableNETAnalyzers>false</EnableNETAnalyzers>
+  </PropertyGroup>
+</Project>

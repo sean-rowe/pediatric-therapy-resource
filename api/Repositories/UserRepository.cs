@@ -1,275 +1,82 @@
-using System;
-using System.Data;
-using System.Threading.Tasks;
-using Microsoft.Data.SqlClient;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
-using TherapyDocs.Api.Interfaces;
-using TherapyDocs.Api.Models;
+using Microsoft.EntityFrameworkCore;
+using UPTRMS.Api.Data;
+using UPTRMS.Api.Models.Domain;
 
-namespace TherapyDocs.Api.Repositories;
+namespace UPTRMS.Api.Repositories;
 
-public class UserRepository : IUserRepository
+public class UserRepository : Repository<User>, IUserRepository
 {
-    private readonly IConfiguration _configuration;
-    private readonly ILogger<UserRepository> _logger;
-
-    public UserRepository(IConfiguration configuration, ILogger<UserRepository> logger)
+    public UserRepository(ApplicationDbContext context) : base(context)
     {
-        _configuration = configuration;
-        _logger = logger;
     }
 
-    private string GetConnectionString()
+    public async Task<User?> GetByEmailAsync(string email)
     {
-        return _configuration.GetConnectionString("DefaultConnection") 
-            ?? throw new InvalidOperationException("Connection string not configured");
+        return await _dbSet
+            .FirstOrDefaultAsync(u => u.Email == email);
     }
 
-    public async Task<User?> GetUserByEmailAsync(string email)
+    public async Task<User?> GetByIdWithOrganizationAsync(Guid userId)
     {
-        try
-        {
-            using var connection = new SqlConnection(GetConnectionString());
-            using var command = new SqlCommand("sp_user_get_by_email", connection)
-            {
-                CommandType = CommandType.StoredProcedure
-            };
-            
-            command.Parameters.AddWithValue("@email", email);
-            
-            await connection.OpenAsync();
-            using var reader = await command.ExecuteReaderAsync();
-            
-            if (await reader.ReadAsync())
-            {
-                return MapUserFromReader(reader);
-            }
-            
-            return null;
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Error getting user by email: {Email}", email);
-            throw;
-        }
+        return await _dbSet
+            .Include(u => u.Organization)
+            .FirstOrDefaultAsync(u => u.UserId == userId);
     }
 
-    public async Task<User?> GetUserByIdAsync(Guid id)
+    public async Task<IEnumerable<User>> GetByOrganizationAsync(Guid organizationId)
     {
-        try
-        {
-            using var connection = new SqlConnection(GetConnectionString());
-            using var command = new SqlCommand("sp_user_get_by_id", connection)
-            {
-                CommandType = CommandType.StoredProcedure
-            };
-            
-            command.Parameters.AddWithValue("@user_id", id);
-            
-            await connection.OpenAsync();
-            using var reader = await command.ExecuteReaderAsync();
-            
-            if (await reader.ReadAsync())
-            {
-                return MapUserFromReader(reader);
-            }
-            
-            return null;
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Error getting user by ID: {UserId}", id);
-            throw;
-        }
+        return await _dbSet
+            .Where(u => u.OrganizationId == organizationId)
+            .OrderBy(u => u.LastName)
+            .ThenBy(u => u.FirstName)
+            .ToListAsync();
     }
 
-    public async Task<bool> EmailExistsAsync(string email)
+    public async Task<IEnumerable<User>> GetSellersAsync(bool approvedOnly = true)
     {
-        try
+        var query = _dbSet.AsQueryable();
+        
+        if (approvedOnly)
         {
-            using var connection = new SqlConnection(GetConnectionString());
-            using var command = new SqlCommand("sp_user_email_exists", connection)
-            {
-                CommandType = CommandType.StoredProcedure
-            };
-            
-            command.Parameters.AddWithValue("@email", email);
-            
-            var existsParam = new SqlParameter("@exists", SqlDbType.Bit)
-            {
-                Direction = ParameterDirection.Output
-            };
-            command.Parameters.Add(existsParam);
-            
-            await connection.OpenAsync();
-            await command.ExecuteNonQueryAsync();
-            
-            return (bool)existsParam.Value;
+            query = query.Where(u => u.IsSellerApproved);
         }
-        catch (Exception ex)
+        else
         {
-            _logger.LogError(ex, "Error checking email exists: {Email}", email);
-            throw;
+            query = query.Where(u => u.SellerProfile != null);
         }
+
+        return await query
+            .Include(u => u.SellerProfile)
+            .OrderByDescending(u => u.SellerProfile!.TotalSales)
+            .ToListAsync();
     }
 
-    public async Task<bool> LicenseExistsAsync(string licenseNumber, string licenseState)
+    public async Task<bool> IsEmailUniqueAsync(string email, Guid? excludeUserId = null)
     {
-        try
+        var query = _dbSet.Where(u => u.Email == email);
+        
+        if (excludeUserId.HasValue)
         {
-            using var connection = new SqlConnection(GetConnectionString());
-            using var command = new SqlCommand("sp_license_exists", connection)
-            {
-                CommandType = CommandType.StoredProcedure
-            };
-            
-            command.Parameters.AddWithValue("@license_number", licenseNumber);
-            command.Parameters.AddWithValue("@license_state", licenseState);
-            
-            var existsParam = new SqlParameter("@exists", SqlDbType.Bit)
-            {
-                Direction = ParameterDirection.Output
-            };
-            command.Parameters.Add(existsParam);
-            
-            await connection.OpenAsync();
-            await command.ExecuteNonQueryAsync();
-            
-            return (bool)existsParam.Value;
+            query = query.Where(u => u.UserId != excludeUserId.Value);
         }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Error checking license exists: {LicenseNumber}, {State}", licenseNumber, licenseState);
-            throw;
-        }
+
+        return !await query.AnyAsync();
     }
 
-    public async Task<Guid> CreateUserAsync(User user)
+    public async Task<IEnumerable<User>> SearchUsersAsync(string searchTerm, int skip = 0, int take = 20)
     {
-        try
-        {
-            using var connection = new SqlConnection(GetConnectionString());
-            using var command = new SqlCommand("sp_user_register", connection)
-            {
-                CommandType = CommandType.StoredProcedure
-            };
-            
-            command.Parameters.AddWithValue("@email", user.Email);
-            command.Parameters.AddWithValue("@password_hash", user.PasswordHash);
-            command.Parameters.AddWithValue("@first_name", user.FirstName);
-            command.Parameters.AddWithValue("@last_name", user.LastName);
-            command.Parameters.AddWithValue("@phone", (object?)user.Phone ?? DBNull.Value);
-            command.Parameters.AddWithValue("@license_number", (object?)user.LicenseNumber ?? DBNull.Value);
-            command.Parameters.AddWithValue("@license_state", (object?)user.LicenseState ?? DBNull.Value);
-            command.Parameters.AddWithValue("@service_type", user.ServiceType);
-            
-            var userIdParam = new SqlParameter("@user_id", SqlDbType.UniqueIdentifier)
-            {
-                Direction = ParameterDirection.Output
-            };
-            command.Parameters.Add(userIdParam);
-            
-            await connection.OpenAsync();
-            await command.ExecuteNonQueryAsync();
-            
-            return (Guid)userIdParam.Value;
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Error creating user: {Email}", user.Email);
-            throw;
-        }
-    }
-
-    public async Task UpdateUserAsync(User user)
-    {
-        try
-        {
-            using var connection = new SqlConnection(GetConnectionString());
-            using var command = new SqlCommand("sp_user_update", connection)
-            {
-                CommandType = CommandType.StoredProcedure
-            };
-            
-            command.Parameters.AddWithValue("@user_id", user.Id);
-            command.Parameters.AddWithValue("@email", user.Email);
-            command.Parameters.AddWithValue("@first_name", user.FirstName);
-            command.Parameters.AddWithValue("@last_name", user.LastName);
-            command.Parameters.AddWithValue("@phone", (object?)user.Phone ?? DBNull.Value);
-            command.Parameters.AddWithValue("@email_verified", user.EmailVerified);
-            command.Parameters.AddWithValue("@status", user.Status);
-            command.Parameters.AddWithValue("@is_active", user.IsActive);
-            
-            await connection.OpenAsync();
-            await command.ExecuteNonQueryAsync();
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Error updating user: {UserId}", user.Id);
-            throw;
-        }
-    }
-
-    public async Task<bool> VerifyEmailAsync(Guid userId)
-    {
-        try
-        {
-            using var connection = new SqlConnection(GetConnectionString());
-            using var command = new SqlCommand("sp_user_verify_email", connection)
-            {
-                CommandType = CommandType.StoredProcedure
-            };
-            
-            command.Parameters.AddWithValue("@user_id", userId);
-            
-            var successParam = new SqlParameter("@success", SqlDbType.Bit)
-            {
-                Direction = ParameterDirection.Output
-            };
-            command.Parameters.Add(successParam);
-            
-            await connection.OpenAsync();
-            await command.ExecuteNonQueryAsync();
-            
-            return (bool)successParam.Value;
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Error verifying email for user: {UserId}", userId);
-            throw;
-        }
-    }
-
-    private static User MapUserFromReader(SqlDataReader reader)
-    {
-        return new User
-        {
-            Id = reader.GetGuid("id"),
-            Email = reader.GetString("email"),
-            PasswordHash = reader.GetString("password_hash"),
-            FirstName = reader.GetString("first_name"),
-            LastName = reader.GetString("last_name"),
-            Role = reader.GetString("role"),
-            LicenseNumber = reader.IsDBNull("license_number") ? null : reader.GetString("license_number"),
-            LicenseState = reader.IsDBNull("license_state") ? null : reader.GetString("license_state"),
-            ServiceType = reader.GetString("service_type"),
-            SubscriptionTier = reader.GetString("subscription_tier"),
-            SubscriptionExpires = reader.IsDBNull("subscription_expires") ? null : reader.GetDateTime("subscription_expires"),
-            MonthlyContentGenerated = reader.GetInt32("monthly_content_generated"),
-            ContentGenerationLimit = reader.GetInt32("content_generation_limit"),
-            Timezone = reader.GetString("timezone"),
-            PreferredNoteTemplate = reader.GetString("preferred_note_template"),
-            AutoSaveNotes = reader.GetBoolean("auto_save_notes"),
-            OfflineSyncEnabled = reader.GetBoolean("offline_sync_enabled"),
-            PushNotifications = reader.GetBoolean("push_notifications"),
-            IsActive = reader.GetBoolean("is_active"),
-            EmailVerified = reader.GetBoolean("email_verified"),
-            LastLogin = reader.IsDBNull("last_login") ? null : reader.GetDateTime("last_login"),
-            CreatedAt = reader.GetDateTime("created_at"),
-            UpdatedAt = reader.GetDateTime("updated_at"),
-            Phone = reader.IsDBNull("phone") ? null : reader.GetString("phone"),
-            Status = reader.GetString("status")
-        };
+        var loweredSearch = searchTerm.ToLower();
+        
+        return await _dbSet
+            .Where(u => 
+                u.Email.ToLower().Contains(loweredSearch) ||
+                u.FirstName.ToLower().Contains(loweredSearch) ||
+                u.LastName.ToLower().Contains(loweredSearch) ||
+                (u.LicenseNumber != null && u.LicenseNumber.ToLower().Contains(loweredSearch)))
+            .OrderBy(u => u.LastName)
+            .ThenBy(u => u.FirstName)
+            .Skip(skip)
+            .Take(take)
+            .ToListAsync();
     }
 }

@@ -1,50 +1,125 @@
 using System.Text;
-using System.Threading.RateLimiting;
-using FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.RateLimiting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using Serilog;
-using TherapyDocs.Api.Interfaces;
-using TherapyDocs.Api.Repositories;
-using TherapyDocs.Api.Services;
+using UPTRMS.Api.Data;
+using UPTRMS.Api.Models.Domain;
+using UPTRMS.Api.Services;
+using UPTRMS.Api.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add Serilog
-Log.Logger = new LoggerConfiguration()
-    .ReadFrom.Configuration(builder.Configuration)
-    .Enrich.FromLogContext()
-    .WriteTo.Console()
-    .WriteTo.File("logs/therapydocs-.txt", rollingInterval: RollingInterval.Day)
-    .CreateLogger();
+// Add services to the container
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+    });
 
-builder.Host.UseSerilog();
-
-// Add services to the container.
-builder.Services.AddControllers(options =>
+// Configure CORS
+builder.Services.AddCors(options =>
 {
-    options.Filters.Add<TherapyDocs.Api.Filters.ValidationExceptionFilter>();
+    options.AddPolicy("AllowWebApp",
+        policy =>
+        {
+            policy.WithOrigins(
+                    builder.Configuration["Cors:AllowedOrigins"]?.Split(',') ?? new[] { "http://localhost:3000" })
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials();
+        });
 });
-builder.Services.AddEndpointsApiExplorer();
 
-// Add Swagger/OpenAPI
+// Configure Database
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Password hasher configuration (using custom implementation without Identity)
+builder.Services.Configure<PasswordHasherOptions>(options =>
+{
+    options.IterationCount = 10000;
+    options.CompatibilityMode = PasswordHasherCompatibilityMode.IdentityV3;
+});
+
+// Configure JWT Authentication
+var jwtSecret = builder.Configuration["Jwt:Secret"] ?? throw new InvalidOperationException("JWT Secret not configured");
+var key = Encoding.ASCII.GetBytes(jwtSecret);
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.RequireHttpsMetadata = !builder.Environment.IsDevelopment();
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(key),
+        ValidateIssuer = true,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidateAudience = true,
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero
+    };
+});
+
+// Configure Authorization
+builder.Services.AddAuthorization(options =>
+{
+    // Add role-based policies
+    options.AddPolicy("TherapistOnly", policy => policy.RequireRole("Therapist", "Admin"));
+    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+    options.AddPolicy("SellerOnly", policy => policy.RequireClaim("is_seller", "true"));
+    options.AddPolicy("OrganizationAdmin", policy => policy.RequireRole("OrganizationAdmin", "Admin"));
+    
+    // Add subscription-based policies
+    options.AddPolicy("ProSubscription", policy => 
+        policy.RequireClaim("subscription_tier", "Pro", "SmallGroup", "LargeGroup", "Enterprise"));
+    options.AddPolicy("GroupSubscription", policy => 
+        policy.RequireClaim("subscription_tier", "SmallGroup", "LargeGroup", "Enterprise"));
+});
+
+// Register application services
+builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+builder.Services.AddScoped<IEncryptionService, EncryptionService>();
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IAuditService, AuditService>();
+
+// Register repositories
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IResourceRepository, ResourceRepository>();
+
+// Register HttpContextAccessor for audit service
+builder.Services.AddHttpContextAccessor();
+
+// Configure Swagger/OpenAPI
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "TherapyDocs API",
+        Title = "UPTRMS API",
         Version = "v1",
-        Description = "Therapy Documentation Platform API"
+        Description = "Unified Pediatric Therapy Resource Management System API"
     });
 
+    // Add JWT authentication to Swagger
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
-        In = ParameterLocation.Header,
-        Description = "Please enter JWT with Bearer into field",
+        Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
         Name = "Authorization",
-        Type = SecuritySchemeType.ApiKey
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer"
     });
 
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
@@ -58,130 +133,75 @@ builder.Services.AddSwaggerGen(c =>
                     Id = "Bearer"
                 }
             },
-            new string[] { }
+            Array.Empty<string>()
         }
     });
 });
 
-// Add JWT Authentication
-var jwtKey = builder.Configuration["Jwt:Key"] ?? throw new InvalidOperationException("JWT Key not configured");
-var key = Encoding.ASCII.GetBytes(jwtKey);
+// Configure logging
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+builder.Logging.AddDebug();
 
-builder.Services.AddAuthentication(x =>
+if (!builder.Environment.IsDevelopment())
 {
-    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-.AddJwtBearer(x =>
-{
-    x.RequireHttpsMetadata = false;
-    x.SaveToken = true;
-    x.TokenValidationParameters = new TokenValidationParameters
-    {
-        ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(key),
-        ValidateIssuer = false,
-        ValidateAudience = false
-    };
-});
-
-// Add Rate Limiting
-builder.Services.AddRateLimiter(options =>
-{
-    options.AddFixedWindowLimiter("registration", opt =>
-    {
-        opt.PermitLimit = 3;
-        opt.Window = TimeSpan.FromHours(1);
-        opt.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
-        opt.QueueLimit = 2;
-    });
-});
-
-// Add CORS
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowFrontend", policy =>
-    {
-        policy.WithOrigins("http://localhost:3000", "https://localhost:3000")
-              .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials();
-    });
-});
-
-// Add FluentValidation
-builder.Services.AddValidatorsFromAssemblyContaining<Program>();
-
-// Add Memory Cache
-builder.Services.AddMemoryCache();
-
-// Add Secure Configuration for encrypted connection strings
-builder.Services.AddSecureConfiguration();
-
-// Add Antiforgery
-builder.Services.AddAntiforgery(options =>
-{
-    options.HeaderName = "X-CSRF-TOKEN";
-    options.Cookie.HttpOnly = true;
-    options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
-    options.Cookie.SameSite = SameSiteMode.Strict;
-});
-
-// Register services
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IEmailVerificationRepository, EmailVerificationRepository>();
-builder.Services.AddScoped<IRegistrationAuditRepository, RegistrationAuditRepository>();
-builder.Services.AddScoped<IAccountLockoutRepository, AccountLockoutRepository>();
-builder.Services.AddScoped<IPasswordHistoryRepository, PasswordHistoryRepository>();
-
-// Register refactored services following SRP
-builder.Services.AddScoped<IUserRegistrationService, UserRegistrationService>();
-builder.Services.AddScoped<IEmailVerificationService, EmailVerificationService>();
-builder.Services.AddScoped<ILoginService, LoginService>();
-// Use refactored AuthService
-builder.Services.AddScoped<IAuthService, AuthServiceRefactored>();
-
-builder.Services.AddScoped<IEmailService, EmailService>();
-builder.Services.AddScoped<ILicenseVerificationService, LicenseVerificationService>();
-builder.Services.AddScoped<IPasswordService, PasswordService>();
-builder.Services.AddHttpClient<IHaveIBeenPwnedService, HaveIBeenPwnedService>();
-
-// Add HttpClient for external API calls
-builder.Services.AddHttpClient();
+    // Add production logging providers (e.g., Application Insights, Serilog, etc.)
+}
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "UPTRMS API v1");
+        c.RoutePrefix = string.Empty; // Set Swagger UI at app's root
+    });
+}
+else
+{
+    // Production error handling
+    app.UseExceptionHandler("/error");
+    app.UseHsts();
 }
 
-// Add global exception handling middleware
-app.UseMiddleware<TherapyDocs.Api.Middleware.GlobalExceptionMiddleware>();
-
 app.UseHttpsRedirection();
-app.UseCors("AllowFrontend");
-app.UseRateLimiter();
+app.UseCors("AllowWebApp");
+
+// Security headers
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
+    context.Response.Headers.Add("X-Frame-Options", "DENY");
+    context.Response.Headers.Add("X-XSS-Protection", "1; mode=block");
+    context.Response.Headers.Add("Referrer-Policy", "no-referrer");
+    await next();
+});
 
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
 
-try
+// Health check endpoint
+app.MapGet("/health", () => Results.Ok(new { status = "healthy", timestamp = DateTime.UtcNow }))
+    .AllowAnonymous();
+
+// Error handling endpoint
+app.Map("/error", () => Results.Problem("An error occurred processing your request"))
+    .AllowAnonymous();
+
+// Apply database migrations in development
+if (app.Environment.IsDevelopment())
 {
-    Log.Information("Starting TherapyDocs API");
-    app.Run();
-}
-catch (Exception ex)
-{
-    Log.Fatal(ex, "Application terminated unexpectedly");
-}
-finally
-{
-    Log.CloseAndFlush();
+    using var scope = app.Services.CreateScope();
+    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    await context.Database.MigrateAsync();
 }
 
+app.Run();
+
+// Make the implicit Program class public so test projects can access it
 public partial class Program { }

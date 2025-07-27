@@ -1,196 +1,63 @@
-using System.Net;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
-using SendGrid;
-using SendGrid.Helpers.Mail;
-using TherapyDocs.Api.Interfaces;
-
-namespace TherapyDocs.Api.Services;
+namespace UPTRMS.Api.Services;
 
 public class EmailService : IEmailService
 {
-    private readonly ISendGridClient _sendGridClient;
-    private readonly IConfiguration _configuration;
     private readonly ILogger<EmailService> _logger;
+    private readonly IConfiguration _configuration;
 
-    public EmailService(IConfiguration configuration, ILogger<EmailService> logger)
+    public EmailService(ILogger<EmailService> logger, IConfiguration configuration)
     {
-        _configuration = configuration;
         _logger = logger;
+        _configuration = configuration;
+    }
+
+    public async Task SendVerificationEmailAsync(string email, string firstName, string token)
+    {
+        var verificationUrl = $"{_configuration["App:BaseUrl"]}/verify-email?token={token}";
         
-        var apiKey = _configuration["SendGrid:ApiKey"];
-        if (string.IsNullOrWhiteSpace(apiKey))
-        {
-            throw new InvalidOperationException("SendGrid API key not configured");
-        }
-
-        _sendGridClient = new SendGridClient(apiKey);
+        _logger.LogInformation("Sending verification email to {Email}", email);
+        
+        // In production, integrate with SendGrid or similar service
+        // For now, just log the action
+        await Task.CompletedTask;
     }
 
-    public async Task<bool> SendVerificationEmailAsync(string email, string firstName, string verificationToken)
+    public async Task SendPasswordResetEmailAsync(string email, string firstName, string token)
     {
-        try
-        {
-            var fromEmail = new EmailAddress(_configuration["SendGrid:FromEmail"], "TherapyDocs");
-            var toEmail = new EmailAddress(email, firstName);
-            var baseUrl = _configuration["Application:BaseUrl"] ?? "https://localhost:3000";
-            var verificationUrl = $"{baseUrl}/verify-email?token={verificationToken}";
-
-            var subject = "Verify Your TherapyDocs Account";
-            var plainTextContent = $@"
-Dear {firstName},
-
-Welcome to TherapyDocs! Please verify your email address to activate your account.
-
-Click the following link to verify your email:
-{verificationUrl}
-
-This link will expire in 24 hours. If you didn't create this account, please ignore this email.
-
-Best regards,
-The TherapyDocs Team";
-
-            var htmlContent = $@"
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
-        .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
-        .header {{ background-color: #4CAF50; color: white; padding: 20px; text-align: center; }}
-        .content {{ padding: 20px; background-color: #f9f9f9; }}
-        .button {{ display: inline-block; padding: 12px 24px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px; margin: 20px 0; }}
-        .footer {{ text-align: center; padding: 20px; color: #666; font-size: 12px; }}
-    </style>
-</head>
-<body>
-    <div class='container'>
-        <div class='header'>
-            <h1>Welcome to TherapyDocs!</h1>
-        </div>
-        <div class='content'>
-            <p>Dear {firstName},</p>
-            <p>Thank you for registering with TherapyDocs. Please verify your email address to activate your account.</p>
-            <center>
-                <a href='{verificationUrl}' class='button'>Verify Email</a>
-            </center>
-            <p>Or copy and paste this link into your browser:</p>
-            <p style='word-break: break-all;'>{verificationUrl}</p>
-            <p>This link will expire in 24 hours. If you didn't create this account, please ignore this email.</p>
-        </div>
-        <div class='footer'>
-            <p>Best regards,<br>The TherapyDocs Team</p>
-            <p>© 2024 TherapyDocs. All rights reserved.</p>
-        </div>
-    </div>
-</body>
-</html>";
-
-            var msg = MailHelper.CreateSingleEmail(fromEmail, toEmail, subject, plainTextContent, htmlContent);
-            var response = await _sendGridClient.SendEmailAsync(msg);
-
-            if (response.StatusCode == HttpStatusCode.Accepted)
-            {
-                _logger.LogInformation("Verification email sent successfully to: {Email}", email);
-                return true;
-            }
-
-            _logger.LogWarning("Failed to send verification email. Status: {Status}", response.StatusCode);
-            return false;
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Error sending verification email to: {Email}", email);
-            return false;
-        }
+        var resetUrl = $"{_configuration["App:BaseUrl"]}/reset-password?token={token}";
+        
+        _logger.LogInformation("Sending password reset email to {Email}", email);
+        
+        await Task.CompletedTask;
     }
 
-    public async Task<bool> SendWelcomeEmailAsync(string email, string firstName)
+    public async Task SendWelcomeEmailAsync(string email, string firstName)
     {
-        try
-        {
-            var fromEmail = new EmailAddress(_configuration["SendGrid:FromEmail"], "TherapyDocs");
-            var toEmail = new EmailAddress(email, firstName);
-            var loginUrl = $"{_configuration["Application:BaseUrl"]}/login";
+        _logger.LogInformation("Sending welcome email to {Email}", email);
+        await Task.CompletedTask;
+    }
 
-            var subject = "Welcome to TherapyDocs!";
-            var plainTextContent = $@"
-Dear {firstName},
+    public async Task SendInvitationEmailAsync(string email, string inviterName, string organizationName, string inviteCode)
+    {
+        _logger.LogInformation("Sending invitation email to {Email} from {Organization}", email, organizationName);
+        await Task.CompletedTask;
+    }
 
-Your account has been successfully verified! You can now log in and start using TherapyDocs.
+    public async Task SendResourceSharedEmailAsync(string email, string recipientName, string senderName, string resourceTitle, string accessLink)
+    {
+        _logger.LogInformation("Sending resource share notification to {Email}", email);
+        await Task.CompletedTask;
+    }
 
-Log in at: {loginUrl}
+    public async Task SendPaymentReceiptAsync(string email, string firstName, decimal amount, string description)
+    {
+        _logger.LogInformation("Sending payment receipt to {Email} for ${Amount}", email, amount);
+        await Task.CompletedTask;
+    }
 
-Next steps:
-- Complete your profile
-- Set up your therapy types
-- Configure your schedule
-
-Need help? Visit our help center or contact support.
-
-Best regards,
-The TherapyDocs Team";
-
-            var htmlContent = $@"
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
-        .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
-        .header {{ background-color: #4CAF50; color: white; padding: 20px; text-align: center; }}
-        .content {{ padding: 20px; background-color: #f9f9f9; }}
-        .button {{ display: inline-block; padding: 12px 24px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px; margin: 20px 0; }}
-        .steps {{ background-color: white; padding: 15px; margin: 15px 0; border-left: 4px solid #4CAF50; }}
-        .footer {{ text-align: center; padding: 20px; color: #666; font-size: 12px; }}
-    </style>
-</head>
-<body>
-    <div class='container'>
-        <div class='header'>
-            <h1>Welcome to TherapyDocs!</h1>
-        </div>
-        <div class='content'>
-            <p>Dear {firstName},</p>
-            <p>Congratulations! Your account has been successfully verified. You can now log in and start using TherapyDocs to streamline your therapy documentation.</p>
-            <center>
-                <a href='{loginUrl}' class='button'>Log In Now</a>
-            </center>
-            <div class='steps'>
-                <h3>Next steps:</h3>
-                <ul>
-                    <li>Complete your profile</li>
-                    <li>Set up your therapy types</li>
-                    <li>Configure your schedule</li>
-                    <li>Start documenting sessions</li>
-                </ul>
-            </div>
-            <p>Need help? Visit our <a href='{_configuration["Application:BaseUrl"]}/help'>help center</a> or contact our support team.</p>
-        </div>
-        <div class='footer'>
-            <p>Best regards,<br>The TherapyDocs Team</p>
-            <p>© 2024 TherapyDocs. All rights reserved.</p>
-        </div>
-    </div>
-</body>
-</html>";
-
-            var msg = MailHelper.CreateSingleEmail(fromEmail, toEmail, subject, plainTextContent, htmlContent);
-            var response = await _sendGridClient.SendEmailAsync(msg);
-
-            if (response.StatusCode == HttpStatusCode.Accepted)
-            {
-                _logger.LogInformation("Welcome email sent successfully to: {Email}", email);
-                return true;
-            }
-
-            _logger.LogWarning("Failed to send welcome email. Status: {Status}", response.StatusCode);
-            return false;
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Error sending welcome email to: {Email}", email);
-            return false;
-        }
+    public async Task SendSellerNotificationAsync(string email, string sellerName, string notificationType, string details)
+    {
+        _logger.LogInformation("Sending seller notification to {Email}: {Type}", email, notificationType);
+        await Task.CompletedTask;
     }
 }

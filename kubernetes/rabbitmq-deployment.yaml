@@ -1,0 +1,390 @@
+# RabbitMQ deployment for message queuing with HIPAA compliance
+apiVersion: v1
+kind: Secret
+metadata:
+  name: rabbitmq-secret
+  namespace: uptrms-data
+type: Opaque
+stringData:
+  rabbitmq-password: "RabbitP@ssw0rd!234#Secure"
+  rabbitmq-erlang-cookie: "UPTRMS-ERLANG-COOKIE-SECURE-VALUE"
+---
+# ConfigMap for RabbitMQ configuration
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rabbitmq-config
+  namespace: uptrms-data
+data:
+  rabbitmq.conf: |
+    # RabbitMQ configuration for HIPAA compliance
+    
+    # Default user and vhost
+    default_user = admin
+    default_pass = ${RABBITMQ_PASSWORD}
+    default_vhost = /
+    
+    # Network Configuration
+    listeners.tcp.default = 5672
+    listeners.ssl.default = 5671
+    management.tcp.port = 15672
+    management.ssl.port = 15671
+    
+    # SSL/TLS Configuration
+    ssl_options.verify = verify_peer
+    ssl_options.fail_if_no_peer_cert = true
+    ssl_options.cacertfile = /certs/ca.crt
+    ssl_options.certfile = /certs/tls.crt
+    ssl_options.keyfile = /certs/tls.key
+    ssl_options.versions.1 = tlsv1.2
+    ssl_options.versions.2 = tlsv1.3
+    ssl_options.ciphers.1 = ECDHE-RSA-AES256-GCM-SHA384
+    ssl_options.ciphers.2 = ECDHE-RSA-AES256-SHA384
+    ssl_options.ciphers.3 = ECDHE-RSA-AES128-GCM-SHA256
+    ssl_options.ciphers.4 = ECDHE-RSA-AES128-SHA256
+    ssl_options.honor_cipher_order = true
+    
+    # Management Plugin SSL
+    management.ssl.port = 15671
+    management.ssl.cacertfile = /certs/ca.crt
+    management.ssl.certfile = /certs/tls.crt
+    management.ssl.keyfile = /certs/tls.key
+    management.ssl.verify = verify_none
+    management.ssl.fail_if_no_peer_cert = false
+    management.ssl.client_renegotiation = false
+    management.ssl.secure_renegotiate = true
+    management.ssl.honor_cipher_order = true
+    management.ssl.honor_ecc_order = true
+    
+    # Memory and Disk Alarms
+    vm_memory_high_watermark.relative = 0.6
+    vm_memory_high_watermark_paging_ratio = 0.75
+    disk_free_limit.absolute = 2GB
+    
+    # Message TTL and Size Limits
+    max_message_size = 134217728
+    channel_max = 2047
+    heartbeat = 60
+    frame_max = 131072
+    
+    # Logging
+    log.dir = /var/log/rabbitmq
+    log.file = rabbit.log
+    log.file.level = info
+    log.console = true
+    log.console.level = info
+    
+    # Clustering
+    cluster_formation.peer_discovery_backend = rabbit_peer_discovery_k8s
+    cluster_formation.k8s.host = kubernetes.default.svc.cluster.local
+    cluster_formation.k8s.address_type = hostname
+    cluster_formation.k8s.service_name = rabbitmq-headless
+    cluster_formation.k8s.hostname_suffix = .rabbitmq-headless.uptrms-data.svc.cluster.local
+    
+    # Queue Master Location
+    queue_master_locator = min-masters
+    
+    # Mirroring for HA
+    cluster_partition_handling = autoheal
+    
+    # Background GC
+    background_gc_enabled = true
+    background_gc_target_interval = 60000
+    
+    # Metrics
+    prometheus.tcp.port = 15692
+  enabled_plugins: |
+    [rabbitmq_management,
+     rabbitmq_management_agent,
+     rabbitmq_prometheus,
+     rabbitmq_peer_discovery_k8s,
+     rabbitmq_shovel,
+     rabbitmq_shovel_management,
+     rabbitmq_federation,
+     rabbitmq_federation_management,
+     rabbitmq_auth_backend_ldap,
+     rabbitmq_mqtt,
+     rabbitmq_web_mqtt,
+     rabbitmq_stomp,
+     rabbitmq_web_stomp,
+     rabbitmq_trust_store,
+     rabbitmq_auth_mechanism_ssl].
+---
+# PersistentVolumeClaim for RabbitMQ data
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: rabbitmq-data-pvc
+  namespace: uptrms-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+  storageClassName: standard
+---
+# StatefulSet for RabbitMQ
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: rabbitmq
+  namespace: uptrms-data
+spec:
+  serviceName: rabbitmq-headless
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rabbitmq
+  template:
+    metadata:
+      labels:
+        app: rabbitmq
+        security: high
+        compliance: hipaa
+    spec:
+      serviceAccountName: rabbitmq
+      securityContext:
+        fsGroup: 999
+        runAsUser: 999
+        runAsNonRoot: true
+      initContainers:
+      # Generate TLS certificates
+      - name: tls-init
+        image: smallstep/step-cli:latest
+        command:
+        - sh
+        - -c
+        - |
+          step certificate create rabbitmq-server /certs/tls.crt /certs/tls.key \
+            --profile self-signed --subtle --no-password --insecure \
+            --san rabbitmq-service --san rabbitmq-service.uptrms-data.svc.cluster.local \
+            --san rabbitmq-headless --san "*.rabbitmq-headless.uptrms-data.svc.cluster.local" \
+            --san localhost --san 127.0.0.1
+          step certificate create rabbitmq-ca /certs/ca.crt /certs/ca.key \
+            --profile root-ca --no-password --insecure
+          chmod 600 /certs/*
+          chown 999:999 /certs/*
+        volumeMounts:
+        - name: rabbitmq-certs
+          mountPath: /certs
+        securityContext:
+          runAsUser: 0
+      containers:
+      - name: rabbitmq
+        image: rabbitmq:3.12-management-alpine
+        ports:
+        - containerPort: 5672
+          name: amqp
+        - containerPort: 5671
+          name: amqps
+        - containerPort: 15672
+          name: management
+        - containerPort: 15671
+          name: management-ssl
+        - containerPort: 15692
+          name: prometheus
+        env:
+        - name: RABBITMQ_USE_LONGNAME
+          value: "true"
+        - name: RABBITMQ_NODENAME
+          value: "rabbit@$(POD_NAME).rabbitmq-headless.uptrms-data.svc.cluster.local"
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: RABBITMQ_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: rabbitmq-secret
+              key: rabbitmq-password
+        - name: RABBITMQ_ERLANG_COOKIE
+          valueFrom:
+            secretKeyRef:
+              name: rabbitmq-secret
+              key: rabbitmq-erlang-cookie
+        - name: RABBITMQ_CONFIG_FILE
+          value: "/etc/rabbitmq/rabbitmq"
+        volumeMounts:
+        - name: rabbitmq-config
+          mountPath: /etc/rabbitmq
+        - name: rabbitmq-data
+          mountPath: /var/lib/rabbitmq
+        - name: rabbitmq-certs
+          mountPath: /certs
+          readOnly: true
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "500m"
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+        livenessProbe:
+          exec:
+            command:
+            - rabbitmq-diagnostics
+            - -q
+            - ping
+          initialDelaySeconds: 60
+          periodSeconds: 30
+          timeoutSeconds: 10
+        readinessProbe:
+          exec:
+            command:
+            - rabbitmq-diagnostics
+            - -q
+            - check_running
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 10
+      volumes:
+      - name: rabbitmq-config
+        configMap:
+          name: rabbitmq-config
+      - name: rabbitmq-data
+        persistentVolumeClaim:
+          claimName: rabbitmq-data-pvc
+      - name: rabbitmq-certs
+        emptyDir: {}
+---
+# Headless service for StatefulSet
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbitmq-headless
+  namespace: uptrms-data
+spec:
+  clusterIP: None
+  selector:
+    app: rabbitmq
+  ports:
+  - port: 5672
+    name: amqp
+  - port: 5671
+    name: amqps
+  - port: 15672
+    name: management
+---
+# Service for RabbitMQ
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbitmq-service
+  namespace: uptrms-data
+  labels:
+    app: rabbitmq
+spec:
+  type: ClusterIP
+  selector:
+    app: rabbitmq
+  ports:
+  - port: 5672
+    targetPort: 5672
+    protocol: TCP
+    name: amqp
+  - port: 5671
+    targetPort: 5671
+    protocol: TCP
+    name: amqps
+  - port: 15672
+    targetPort: 15672
+    protocol: TCP
+    name: management
+  - port: 15671
+    targetPort: 15671
+    protocol: TCP
+    name: management-ssl
+  - port: 15692
+    targetPort: 15692
+    protocol: TCP
+    name: prometheus
+---
+# ServiceAccount for RabbitMQ
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: rabbitmq
+  namespace: uptrms-data
+---
+# Role for RabbitMQ peer discovery
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: rabbitmq-peer-discovery
+  namespace: uptrms-data
+rules:
+- apiGroups: [""]
+  resources: ["endpoints"]
+  verbs: ["get", "list"]
+- apiGroups: [""]
+  resources: ["events"]
+  verbs: ["create"]
+---
+# RoleBinding for RabbitMQ
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: rabbitmq-peer-discovery
+  namespace: uptrms-data
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: rabbitmq-peer-discovery
+subjects:
+- kind: ServiceAccount
+  name: rabbitmq
+  namespace: uptrms-data
+---
+# Network Policy for RabbitMQ
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: rabbitmq-network-policy
+  namespace: uptrms-data
+spec:
+  podSelector:
+    matchLabels:
+      app: rabbitmq
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: uptrms-api
+    - podSelector:
+        matchLabels:
+          app: uptrms-api
+    ports:
+    - protocol: TCP
+      port: 5672
+    - protocol: TCP
+      port: 5671
+  - from:
+    - podSelector:
+        matchLabels:
+          app: rabbitmq
+    ports:
+    - protocol: TCP
+      port: 25672  # Erlang distribution
+    - protocol: TCP
+      port: 4369   # EPMD
+  egress:
+  - to:
+    - namespaceSelector: {}
+    ports:
+    - protocol: TCP
+      port: 53  # DNS
+    - protocol: UDP
+      port: 53  # DNS
+  - to:
+    - podSelector:
+        matchLabels:
+          app: rabbitmq
+    ports:
+    - protocol: TCP
+      port: 25672  # Erlang distribution
+    - protocol: TCP
+      port: 4369   # EPMD

@@ -1,0 +1,252 @@
+# Prometheus alerting rules for UPTRMS
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-rules
+  namespace: uptrms-monitoring
+data:
+  alerts.yml: |
+    groups:
+    # Application alerts
+    - name: uptrms_application
+      interval: 30s
+      rules:
+      # API availability
+      - alert: APIDown
+        expr: up{job="uptrms-api"} == 0
+        for: 2m
+        labels:
+          severity: critical
+          team: backend
+        annotations:
+          summary: "UPTRMS API is down"
+          description: "UPTRMS API instance {{ $labels.instance }} has been down for more than 2 minutes."
+          runbook_url: "https://wiki.uptrms.com/runbooks/api-down"
+
+      # High error rate
+      - alert: HighErrorRate
+        expr: |
+          (
+            sum(rate(http_requests_total{job="uptrms-api",status=~"5.."}[5m]))
+            /
+            sum(rate(http_requests_total{job="uptrms-api"}[5m]))
+          ) > 0.05
+        for: 5m
+        labels:
+          severity: warning
+          team: backend
+        annotations:
+          summary: "High error rate detected"
+          description: "Error rate is {{ $value | humanizePercentage }} for the last 5 minutes"
+
+      # Response time
+      - alert: HighResponseTime
+        expr: |
+          histogram_quantile(0.95,
+            sum(rate(http_request_duration_seconds_bucket{job="uptrms-api"}[5m])) by (le)
+          ) > 0.5
+        for: 5m
+        labels:
+          severity: warning
+          team: backend
+        annotations:
+          summary: "High API response time"
+          description: "95th percentile response time is {{ $value }}s"
+
+      # HIPAA compliance - failed logins
+      - alert: ExcessiveFailedLogins
+        expr: |
+          sum(rate(security_failed_login_attempts_total[5m])) by (user) > 0.5
+        for: 2m
+        labels:
+          severity: warning
+          team: security
+          compliance: hipaa
+        annotations:
+          summary: "Excessive failed login attempts"
+          description: "User {{ $labels.user }} has excessive failed login attempts"
+
+    # Database alerts
+    - name: uptrms_database
+      interval: 30s
+      rules:
+      # Database connection
+      - alert: DatabaseDown
+        expr: up{job="mssql"} == 0
+        for: 2m
+        labels:
+          severity: critical
+          team: database
+        annotations:
+          summary: "MSSQL database is down"
+          description: "MSSQL database has been down for more than 2 minutes"
+
+      # Connection pool exhaustion
+      - alert: DatabaseConnectionPoolExhausted
+        expr: |
+          mssql_connections_active / mssql_connections_max > 0.9
+        for: 5m
+        labels:
+          severity: warning
+          team: database
+        annotations:
+          summary: "Database connection pool nearly exhausted"
+          description: "{{ $value | humanizePercentage }} of connection pool is in use"
+
+      # Long running queries
+      - alert: LongRunningQueries
+        expr: mssql_query_duration_seconds > 30
+        for: 5m
+        labels:
+          severity: warning
+          team: database
+        annotations:
+          summary: "Long running database queries detected"
+          description: "Query has been running for {{ $value }}s"
+
+      # Database backup
+      - alert: DatabaseBackupMissing
+        expr: |
+          time() - mssql_last_backup_timestamp > 86400
+        for: 1h
+        labels:
+          severity: critical
+          team: database
+          compliance: hipaa
+        annotations:
+          summary: "Database backup is overdue"
+          description: "Last backup was {{ $value | humanizeDuration }} ago"
+
+    # Infrastructure alerts
+    - name: uptrms_infrastructure
+      interval: 30s
+      rules:
+      # High CPU usage
+      - alert: HighCPUUsage
+        expr: |
+          100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 10m
+        labels:
+          severity: warning
+          team: infrastructure
+        annotations:
+          summary: "High CPU usage detected"
+          description: "CPU usage is {{ $value }}% on {{ $labels.instance }}"
+
+      # High memory usage
+      - alert: HighMemoryUsage
+        expr: |
+          (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 85
+        for: 10m
+        labels:
+          severity: warning
+          team: infrastructure
+        annotations:
+          summary: "High memory usage detected"
+          description: "Memory usage is {{ $value }}% on {{ $labels.instance }}"
+
+      # Disk space
+      - alert: DiskSpaceLow
+        expr: |
+          (node_filesystem_avail_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"}) * 100 < 15
+        for: 5m
+        labels:
+          severity: warning
+          team: infrastructure
+        annotations:
+          summary: "Low disk space"
+          description: "Only {{ $value }}% disk space remaining on {{ $labels.instance }}"
+
+      # Pod restarts
+      - alert: PodRestartingTooOften
+        expr: |
+          increase(kube_pod_container_status_restarts_total[1h]) > 5
+        for: 5m
+        labels:
+          severity: warning
+          team: infrastructure
+        annotations:
+          summary: "Pod restarting frequently"
+          description: "Pod {{ $labels.namespace }}/{{ $labels.pod }} has restarted {{ $value }} times in the last hour"
+
+    # Security alerts
+    - name: uptrms_security
+      interval: 30s
+      rules:
+      # Unauthorized access attempts
+      - alert: UnauthorizedAccessAttempts
+        expr: |
+          sum(rate(security_unauthorized_access_total[5m])) > 10
+        for: 2m
+        labels:
+          severity: critical
+          team: security
+          compliance: hipaa
+        annotations:
+          summary: "Multiple unauthorized access attempts detected"
+          description: "{{ $value }} unauthorized access attempts per second"
+
+      # Certificate expiry
+      - alert: CertificateExpiringSoon
+        expr: |
+          (probe_ssl_earliest_cert_expiry - time()) / 86400 < 30
+        for: 1h
+        labels:
+          severity: warning
+          team: security
+        annotations:
+          summary: "SSL certificate expiring soon"
+          description: "Certificate for {{ $labels.instance }} expires in {{ $value }} days"
+
+      # Encryption failures
+      - alert: EncryptionFailures
+        expr: |
+          sum(rate(encryption_failures_total[5m])) > 0
+        for: 2m
+        labels:
+          severity: critical
+          team: security
+          compliance: hipaa
+        annotations:
+          summary: "Encryption failures detected"
+          description: "{{ $value }} encryption failures per second"
+
+    # Business metrics
+    - name: uptrms_business
+      interval: 30s
+      rules:
+      # Low user activity
+      - alert: LowUserActivity
+        expr: |
+          sum(rate(user_login_total[1h])) < 10
+        for: 2h
+        labels:
+          severity: info
+          team: product
+        annotations:
+          summary: "Unusually low user activity"
+          description: "Only {{ $value }} logins per hour"
+
+      # Payment failures
+      - alert: PaymentFailures
+        expr: |
+          sum(rate(payment_failures_total[5m])) > 5
+        for: 5m
+        labels:
+          severity: warning
+          team: billing
+        annotations:
+          summary: "High payment failure rate"
+          description: "{{ $value }} payment failures per second"
+
+      # AI generation quota
+      - alert: AIGenerationQuotaExhausted
+        expr: |
+          ai_generation_quota_remaining / ai_generation_quota_total < 0.1
+        for: 5m
+        labels:
+          severity: warning
+          team: product
+        annotations:
+          summary: "AI generation quota nearly exhausted"
+          description: "Only {{ $value | humanizePercentage }} of AI generation quota remaining"

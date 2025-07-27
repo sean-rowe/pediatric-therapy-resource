@@ -1,0 +1,1098 @@
+using System.Net;
+using System.Text;
+using System.Text.Json;
+using FluentAssertions;
+using Microsoft.AspNetCore.Mvc.Testing;
+using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
+
+namespace TherapyDocs.Api.Tests.BDD.StepDefinitions;
+
+/// <summary>
+/// Step definitions for comprehensive GDPR compliance scenarios
+/// These tests will FAIL initially (RED phase) until GDPR compliance services are implemented
+/// </summary>
+[Binding]
+public class GdprComplianceSteps : BaseStepDefinitions
+{
+    private readonly Dictionary<string, object> _gdprContext = new();
+    private HttpResponseMessage? _lastResponse;
+    private List<ProcessingActivity> _processingActivities = new();
+    private List<DataSubjectRequest> _dataSubjectRequests = new();
+    private string _dataSubjectId = string.Empty;
+    private string _processingPurpose = string.Empty;
+
+    public GdprComplianceSteps(WebApplicationFactory<Program> factory, ScenarioContext scenarioContext) 
+        : base(factory, scenarioContext)
+    {
+    }
+
+    #region Background Steps
+
+    [Given(@"GDPR compliance systems are operational")]
+    public async Task GivenGdprComplianceSystemsAreOperational()
+    {
+        // This will FAIL initially - no GDPR compliance system implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/systems/status");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var gdprStatus = JsonSerializer.Deserialize<GdprSystemStatus>(content);
+        gdprStatus?.SystemsOperational.Should().BeTrue();
+        gdprStatus?.ComplianceActive.Should().BeTrue();
+        gdprStatus?.DataSubjectRightsActive.Should().BeTrue();
+        gdprStatus?.PrivacyByDesignImplemented.Should().BeTrue();
+    }
+
+    [Given(@"lawful basis for processing is established")]
+    public async Task GivenLawfulBasisForProcessingIsEstablished()
+    {
+        // This will FAIL initially - no lawful basis establishment implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/lawful-basis/status");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var lawfulBasis = JsonSerializer.Deserialize<LawfulBasisStatus>(content);
+        lawfulBasis?.LawfulBasisEstablished.Should().BeTrue();
+        lawfulBasis?.AllProcessingCovered.Should().BeTrue();
+        lawfulBasis?.DocumentationComplete.Should().BeTrue();
+        lawfulBasis?.CommunicationClear.Should().BeTrue();
+    }
+
+    [Given(@"data subject rights mechanisms are implemented")]
+    public async Task GivenDataSubjectRightsMechanismsAreImplemented()
+    {
+        // This will FAIL initially - no data subject rights mechanisms implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/data-subject-rights/status");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var rightsStatus = JsonSerializer.Deserialize<DataSubjectRightsStatus>(content);
+        rightsStatus?.RightsMechanismsImplemented.Should().BeTrue();
+        rightsStatus?.SelfServicePortalActive.Should().BeTrue();
+        rightsStatus?.RequestProcessingActive.Should().BeTrue();
+        rightsStatus?.ResponseTimelinesConfigured.Should().BeTrue();
+    }
+
+    [Given(@"privacy by design principles are applied")]
+    public async Task GivenPrivacyByDesignPrinciplesAreApplied()
+    {
+        // This will FAIL initially - no privacy by design implementation validated yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/privacy-by-design/status");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var privacyByDesign = JsonSerializer.Deserialize<PrivacyByDesignStatus>(content);
+        privacyByDesign?.PrinciplesApplied.Should().BeTrue();
+        privacyByDesign?.DataProtectionByDefault.Should().BeTrue();
+        privacyByDesign?.DataMinimizationActive.Should().BeTrue();
+        privacyByDesign?.PurposeLimitationEnforced.Should().BeTrue();
+    }
+
+    [Given(@"data protection measures are active")]
+    public async Task GivenDataProtectionMeasuresAreActive()
+    {
+        // This will FAIL initially - no data protection measures validation implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/data-protection/measures");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var dataProtection = JsonSerializer.Deserialize<GdprDataProtectionMeasures>(content);
+        dataProtection?.MeasuresActive.Should().BeTrue();
+        dataProtection?.EncryptionImplemented.Should().BeTrue();
+        dataProtection?.AccessControlsActive.Should().BeTrue();
+        dataProtection?.AuditTrailMaintained.Should().BeTrue();
+    }
+
+    #endregion
+
+    #region Lawful Basis Establishment Steps
+
+    [Given(@"GDPR requires lawful basis for all processing")]
+    public async Task GivenGdprRequiresLawfulBasisForAllProcessing()
+    {
+        // This will FAIL initially - no lawful basis requirement validation implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/lawful-basis/requirements");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var requirements = JsonSerializer.Deserialize<LawfulBasisRequirements>(content);
+        requirements?.LawfulBasisRequired.Should().BeTrue();
+        requirements?.AllProcessingMustBeCovered.Should().BeTrue();
+        requirements?.DocumentationMandatory.Should().BeTrue();
+    }
+
+    [Given(@"basis must be documented and communicated")]
+    public async Task GivenBasisMustBeDocumentedAndCommunicated()
+    {
+        // This will FAIL initially - no documentation and communication requirement validation implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/lawful-basis/documentation-requirements");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var docRequirements = JsonSerializer.Deserialize<DocumentationRequirements>(content);
+        docRequirements?.DocumentationRequired.Should().BeTrue();
+        docRequirements?.CommunicationRequired.Should().BeTrue();
+        docRequirements?.RecordsKeptUpdated.Should().BeTrue();
+    }
+
+    [When(@"establishing lawful basis:")]
+    public async Task WhenEstablishingLawfulBasis(Table table)
+    {
+        // This will FAIL initially - no lawful basis establishment service implemented yet
+        foreach (var row in table.Rows)
+        {
+            var processingActivity = row["Processing Activity"];
+            var lawfulBasis = row["Lawful Basis"];
+            var justification = row["Justification"];
+            var dataSubjectsAffected = row["Data Subjects Affected"];
+            var documentationRequired = row["Documentation Required"];
+            var reviewSchedule = row["Review Schedule"];
+
+            var basisEstablishment = new
+            {
+                ProcessingActivity = processingActivity,
+                LawfulBasis = lawfulBasis,
+                Justification = justification,
+                DataSubjectsAffected = dataSubjectsAffected,
+                DocumentationRequired = documentationRequired,
+                ReviewSchedule = reviewSchedule,
+                EstablishmentDate = DateTime.UtcNow
+            };
+
+            var json = JsonSerializer.Serialize(basisEstablishment);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await Client.PostAsync("/api/compliance/gdpr/lawful-basis/establish", content);
+            
+            // This will fail because lawful basis establishment service doesn't exist yet
+            response.StatusCode.Should().Be(HttpStatusCode.Created);
+        }
+    }
+
+    [Then(@"lawful basis should be established for all processing")]
+    public async Task ThenLawfulBasisShouldBeEstablishedForAllProcessing()
+    {
+        // This will FAIL initially - no lawful basis validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/lawful-basis/validation");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var validation = JsonSerializer.Deserialize<LawfulBasisValidation>(content);
+        validation?.AllProcessingCovered.Should().BeTrue();
+        validation?.BasisEstablished.Should().BeTrue();
+        validation?.NoGapsIdentified.Should().BeTrue();
+    }
+
+    [Then(@"justifications should be documented")]
+    public async Task ThenJustificationsShouldBeDocumented()
+    {
+        // This will FAIL initially - no justification documentation validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/lawful-basis/justification-documentation");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var documentation = JsonSerializer.Deserialize<JustificationDocumentation>(content);
+        documentation?.JustificationsDocumented.Should().BeTrue();
+        documentation?.DocumentationComplete.Should().BeTrue();
+        documentation?.DocumentationAccessible.Should().BeTrue();
+    }
+
+    [Then(@"communications should be clear")]
+    public async Task ThenCommunicationsShouldBeClear()
+    {
+        // This will FAIL initially - no communication clarity validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/lawful-basis/communication-validation");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var communication = JsonSerializer.Deserialize<CommunicationValidation>(content);
+        communication?.CommunicationsClear.Should().BeTrue();
+        communication?.PlainLanguageUsed.Should().BeTrue();
+        communication?.AccessibleToDataSubjects.Should().BeTrue();
+    }
+
+    [Then(@"reviews should ensure continued validity")]
+    public async Task ThenReviewsShouldEnsureContinuedValidity()
+    {
+        // This will FAIL initially - no review validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/lawful-basis/review-validation");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var reviews = JsonSerializer.Deserialize<ReviewValidation>(content);
+        reviews?.ReviewsScheduled.Should().BeTrue();
+        reviews?.ValidityMaintained.Should().BeTrue();
+        reviews?.ReviewsDocumented.Should().BeTrue();
+    }
+
+    #endregion
+
+    #region Data Subject Rights Steps
+
+    [Given(@"GDPR grants specific rights to individuals")]
+    public async Task GivenGdprGrantsSpecificRightsToIndividuals()
+    {
+        // This will FAIL initially - no individual rights validation implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/individual-rights/granted");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var individualRights = JsonSerializer.Deserialize<IndividualRightsGranted>(content);
+        individualRights?.RightsGranted.Should().BeTrue();
+        individualRights?.SpecificRightsEnumerated.Should().NotBeEmpty();
+        individualRights?.RightsEnforceable.Should().BeTrue();
+    }
+
+    [Given(@"rights must be easily exercisable")]
+    public async Task GivenRightsMustBeEasilyExercisable()
+    {
+        // This will FAIL initially - no rights exercisability validation implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/individual-rights/exercisability");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var exercisability = JsonSerializer.Deserialize<RightsExercisability>(content);
+        exercisability?.EasilyExercisable.Should().BeTrue();
+        exercisability?.MinimalBarriers.Should().BeTrue();
+        exercisability?.SelfServiceAvailable.Should().BeTrue();
+    }
+
+    [When(@"implementing data subject rights:")]
+    public async Task WhenImplementingDataSubjectRights(Table table)
+    {
+        // This will FAIL initially - no data subject rights implementation service implemented yet
+        foreach (var row in table.Rows)
+        {
+            var rightType = row["Right Type"];
+            var implementationMethod = row["Implementation Method"];
+            var responseTimeline = row["Response Timeline"];
+            var verificationProcess = row["Verification Process"];
+            var systemSupport = row["System Support"];
+            var exceptions = row["Exceptions"];
+
+            var rightsImplementation = new
+            {
+                RightType = rightType,
+                ImplementationMethod = implementationMethod,
+                ResponseTimeline = responseTimeline,
+                VerificationProcess = verificationProcess,
+                SystemSupport = systemSupport,
+                Exceptions = exceptions,
+                ImplementationDate = DateTime.UtcNow
+            };
+
+            var json = JsonSerializer.Serialize(rightsImplementation);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await Client.PostAsync("/api/compliance/gdpr/data-subject-rights/implement", content);
+            
+            // This will fail because data subject rights implementation doesn't exist yet
+            response.StatusCode.Should().Be(HttpStatusCode.Created);
+        }
+    }
+
+    [Then(@"all rights should be implementable")]
+    public async Task ThenAllRightsShouldBeImplementable()
+    {
+        // This will FAIL initially - no rights implementation validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/data-subject-rights/implementation-validation");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var implementation = JsonSerializer.Deserialize<RightsImplementationValidation>(content);
+        implementation?.AllRightsImplementable.Should().BeTrue();
+        implementation?.ImplementationComplete.Should().BeTrue();
+        implementation?.NoGapsInRights.Should().BeTrue();
+    }
+
+    [Then(@"timelines should be met")]
+    public async Task ThenTimelinesShouldBeMet()
+    {
+        // This will FAIL initially - no timeline compliance validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/data-subject-rights/timeline-validation");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var timelines = JsonSerializer.Deserialize<GdprTimelineValidation>(content);
+        timelines?.TimelinesMet.Should().BeTrue();
+        timelines?.ResponseTimesCompliant.Should().BeTrue();
+        timelines?.NoDelaysDetected.Should().BeTrue();
+    }
+
+    [Then(@"processes should be user-friendly")]
+    public async Task ThenProcessesShouldBeUserFriendly()
+    {
+        // This will FAIL initially - no user-friendliness validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/data-subject-rights/user-friendliness");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var userFriendliness = JsonSerializer.Deserialize<ProcessUserFriendliness>(content);
+        userFriendliness?.ProcessesUserFriendly.Should().BeTrue();
+        userFriendliness?.EasyToUse.Should().BeTrue();
+        userFriendliness?.ClearInstructions.Should().BeTrue();
+    }
+
+    [Then(@"exceptions should be documented")]
+    public async Task ThenExceptionsShouldBeDocumented()
+    {
+        // This will FAIL initially - no exception documentation validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/data-subject-rights/exception-documentation");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var exceptions = JsonSerializer.Deserialize<ExceptionDocumentation>(content);
+        exceptions?.ExceptionsDocumented.Should().BeTrue();
+        exceptions?.JustificationProvided.Should().BeTrue();
+        exceptions?.LegalBasisClear.Should().BeTrue();
+    }
+
+    #endregion
+
+    #region Data Subject Request Processing Steps
+
+    [Given(@"a data subject requests access to their personal data")]
+    public async Task GivenADataSubjectRequestsAccessToTheirPersonalData()
+    {
+        // This will FAIL initially - set up data subject access request context
+        _dataSubjectId = "data-subject-123";
+        _gdprContext["requestType"] = "Access Request";
+        _gdprContext["requestDate"] = DateTime.UtcNow;
+
+        var accessRequest = new
+        {
+            DataSubjectId = _dataSubjectId,
+            RequestType = "Access Request",
+            RequestedData = "All personal data",
+            RequestDate = DateTime.UtcNow,
+            ContactEmail = "datasubject@example.com"
+        };
+
+        var json = JsonSerializer.Serialize(accessRequest);
+        var content = new StringContent(json, Encoding.UTF8, "application/json");
+        var response = await Client.PostAsync("/api/compliance/gdpr/data-subject-requests/access", content);
+        
+        // This will fail because data subject request service doesn't exist yet
+        response.StatusCode.Should().Be(HttpStatusCode.Created);
+    }
+
+    [When(@"processing the access request:")]
+    public async Task WhenProcessingTheAccessRequest(Table table)
+    {
+        // This will FAIL initially - no access request processing service implemented yet
+        foreach (var row in table.Rows)
+        {
+            var processStep = row["Process Step"];
+            var timelineRequirement = row["Timeline Requirement"];
+            var verificationMethod = row["Verification Method"];
+            var dataScope = row["Data Scope"];
+            var deliveryMethod = row["Delivery Method"];
+
+            var requestProcessing = new
+            {
+                DataSubjectId = _dataSubjectId,
+                ProcessStep = processStep,
+                TimelineRequirement = timelineRequirement,
+                VerificationMethod = verificationMethod,
+                DataScope = dataScope,
+                DeliveryMethod = deliveryMethod,
+                ProcessingTimestamp = DateTime.UtcNow
+            };
+
+            var json = JsonSerializer.Serialize(requestProcessing);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await Client.PostAsync("/api/compliance/gdpr/data-subject-requests/process", content);
+            
+            // This will fail because request processing doesn't exist yet
+            response.StatusCode.Should().Be(HttpStatusCode.Created);
+        }
+    }
+
+    [Then(@"personal data should be provided in structured format")]
+    public async Task ThenPersonalDataShouldBeProvidedInStructuredFormat()
+    {
+        // This will FAIL initially - no structured data provision validation service implemented yet
+        var response = await Client.GetAsync($"/api/compliance/gdpr/data-subject-requests/{_dataSubjectId}/structured-data");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var structuredData = JsonSerializer.Deserialize<StructuredDataProvision>(content);
+        structuredData?.DataProvidedInStructuredFormat.Should().BeTrue();
+        structuredData?.FormatMachineReadable.Should().BeTrue();
+        structuredData?.FormatCommonlyUsed.Should().BeTrue();
+    }
+
+    [Then(@"response should be provided within 30 days")]
+    public async Task ThenResponseShouldBeProvidedWithin30Days()
+    {
+        // This will FAIL initially - no 30-day response validation service implemented yet
+        var response = await Client.GetAsync($"/api/compliance/gdpr/data-subject-requests/{_dataSubjectId}/response-timeline");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var responseTimeline = JsonSerializer.Deserialize<ResponseTimelineValidation>(content);
+        responseTimeline?.ResponseWithin30Days.Should().BeTrue();
+        responseTimeline?.TimelineCompliant.Should().BeTrue();
+        responseTimeline?.NoUnreasonableDelays.Should().BeTrue();
+    }
+
+    #endregion
+
+    #region Privacy Notice and Transparency Steps
+
+    [Given(@"GDPR requires detailed privacy information")]
+    public async Task GivenGdprRequiresDetailedPrivacyInformation()
+    {
+        // This will FAIL initially - no privacy information requirement validation implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/privacy-notice/requirements");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var privacyRequirements = JsonSerializer.Deserialize<PrivacyInformationRequirements>(content);
+        privacyRequirements?.DetailedInformationRequired.Should().BeTrue();
+        privacyRequirements?.TransparencyRequired.Should().BeTrue();
+        privacyRequirements?.SpecificElementsRequired.Should().NotBeEmpty();
+    }
+
+    [When(@"providing privacy notices:")]
+    public async Task WhenProvidingPrivacyNotices(Table table)
+    {
+        // This will FAIL initially - no privacy notice provision service implemented yet
+        foreach (var row in table.Rows)
+        {
+            var informationElement = row["Information Element"];
+            var contentRequirement = row["Content Requirement"];
+            var presentationMethod = row["Presentation Method"];
+            var accessibilityLevel = row["Accessibility Level"];
+            var updateFrequency = row["Update Frequency"];
+
+            var privacyNotice = new
+            {
+                InformationElement = informationElement,
+                ContentRequirement = contentRequirement,
+                PresentationMethod = presentationMethod,
+                AccessibilityLevel = accessibilityLevel,
+                UpdateFrequency = updateFrequency,
+                NoticeTimestamp = DateTime.UtcNow
+            };
+
+            var json = JsonSerializer.Serialize(privacyNotice);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await Client.PostAsync("/api/compliance/gdpr/privacy-notice/provide", content);
+            
+            // This will fail because privacy notice provision doesn't exist yet
+            response.StatusCode.Should().Be(HttpStatusCode.Created);
+        }
+    }
+
+    [Then(@"privacy information should be comprehensive")]
+    public async Task ThenPrivacyInformationShouldBeComprehensive()
+    {
+        // This will FAIL initially - no comprehensive privacy information validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/privacy-notice/comprehensiveness");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var comprehensiveness = JsonSerializer.Deserialize<PrivacyInformationComprehensiveness>(content);
+        comprehensiveness?.InformationComprehensive.Should().BeTrue();
+        comprehensiveness?.AllRequiredElementsPresent.Should().BeTrue();
+        comprehensiveness?.NoInformationGaps.Should().BeTrue();
+    }
+
+    [Then(@"information should be easily accessible")]
+    public async Task ThenInformationShouldBeEasilyAccessible()
+    {
+        // This will FAIL initially - no accessibility validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/privacy-notice/accessibility");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var accessibility = JsonSerializer.Deserialize<PrivacyInformationAccessibility>(content);
+        accessibility?.EasilyAccessible.Should().BeTrue();
+        accessibility?.NoBarriersToAccess.Should().BeTrue();
+        accessibility?.AccessibleToAllUsers.Should().BeTrue();
+    }
+
+    [Then(@"language should be clear and plain")]
+    public async Task ThenLanguageShouldBeClearAndPlain()
+    {
+        // This will FAIL initially - no language clarity validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/privacy-notice/language-clarity");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var languageClarity = JsonSerializer.Deserialize<LanguageClarityValidation>(content);
+        languageClarity?.LanguageClearAndPlain.Should().BeTrue();
+        languageClarity?.NoLegalJargon.Should().BeTrue();
+        languageClarity?.UnderstandableByAverage.Should().BeTrue();
+    }
+
+    [Then(@"information should be regularly updated")]
+    public async Task ThenInformationShouldBeRegularlyUpdated()
+    {
+        // This will FAIL initially - no information update validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/privacy-notice/update-validation");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var updateValidation = JsonSerializer.Deserialize<InformationUpdateValidation>(content);
+        updateValidation?.RegularlyUpdated.Should().BeTrue();
+        updateValidation?.UpdatesTimely.Should().BeTrue();
+        updateValidation?.UpdateNotificationProvided.Should().BeTrue();
+    }
+
+    #endregion
+
+    #region Consent Management Steps
+
+    [Given(@"GDPR consent must be freely given and specific")]
+    public async Task GivenGdprConsentMustBeFreelyGivenAndSpecific()
+    {
+        // This will FAIL initially - no consent requirements validation implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/consent/requirements");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var consentRequirements = JsonSerializer.Deserialize<GdprConsentRequirements>(content);
+        consentRequirements?.FreelyGivenRequired.Should().BeTrue();
+        consentRequirements?.SpecificRequired.Should().BeTrue();
+        consentRequirements?.InformedRequired.Should().BeTrue();
+        consentRequirements?.UnambiguousRequired.Should().BeTrue();
+    }
+
+    [Given(@"withdrawal must be as easy as giving consent")]
+    public async Task GivenWithdrawalMustBeAsEasyAsGivingConsent()
+    {
+        // This will FAIL initially - no consent withdrawal equality validation implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/consent/withdrawal-equality");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var withdrawalEquality = JsonSerializer.Deserialize<ConsentWithdrawalEquality>(content);
+        withdrawalEquality?.WithdrawalAsEasyAsConsent.Should().BeTrue();
+        withdrawalEquality?.NoBarriersToWithdrawal.Should().BeTrue();
+        withdrawalEquality?.SameChannelsAvailable.Should().BeTrue();
+    }
+
+    [When(@"managing consent:")]
+    public async Task WhenManagingConsent(Table table)
+    {
+        // This will FAIL initially - no consent management service implemented yet
+        foreach (var row in table.Rows)
+        {
+            var consentType = row["Consent Type"];
+            var collectionMethod = row["Collection Method"];
+            var granularityLevel = row["Granularity Level"];
+            var withdrawalMethod = row["Withdrawal Method"];
+            var documentation = row["Documentation"];
+            var childProvisions = row["Child Provisions"];
+
+            var consentManagement = new
+            {
+                ConsentType = consentType,
+                CollectionMethod = collectionMethod,
+                GranularityLevel = granularityLevel,
+                WithdrawalMethod = withdrawalMethod,
+                Documentation = documentation,
+                ChildProvisions = childProvisions,
+                ManagementTimestamp = DateTime.UtcNow
+            };
+
+            var json = JsonSerializer.Serialize(consentManagement);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await Client.PostAsync("/api/compliance/gdpr/consent/manage", content);
+            
+            // This will fail because consent management doesn't exist yet
+            response.StatusCode.Should().Be(HttpStatusCode.Created);
+        }
+    }
+
+    [Then(@"consent should be properly obtained")]
+    public async Task ThenConsentShouldBeProperlyObtained()
+    {
+        // This will FAIL initially - no consent obtaining validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/consent/obtaining-validation");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var consentObtaining = JsonSerializer.Deserialize<GdprConsentObtainingValidation>(content);
+        consentObtaining?.ConsentProperlyObtained.Should().BeTrue();
+        consentObtaining?.ConsentValid.Should().BeTrue();
+        consentObtaining?.ConsentDocumented.Should().BeTrue();
+    }
+
+    [Then(@"controls should be granular")]
+    public async Task ThenControlsShouldBeGranular()
+    {
+        // This will FAIL initially - no granular controls validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/consent/granularity-validation");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var granularity = JsonSerializer.Deserialize<ConsentGranularityValidation>(content);
+        granularity?.ControlsGranular.Should().BeTrue();
+        granularity?.SpecificPurposes.Should().BeTrue();
+        granularity?.SeparateConsents.Should().BeTrue();
+    }
+
+    [Then(@"withdrawal should be simple")]
+    public async Task ThenWithdrawalShouldBeSimple()
+    {
+        // This will FAIL initially - no withdrawal simplicity validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/consent/withdrawal-simplicity");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var withdrawalSimplicity = JsonSerializer.Deserialize<ConsentWithdrawalSimplicity>(content);
+        withdrawalSimplicity?.WithdrawalSimple.Should().BeTrue();
+        withdrawalSimplicity?.NoComplexProcedures.Should().BeTrue();
+        withdrawalSimplicity?.ImmediateEffect.Should().BeTrue();
+    }
+
+    [Then(@"records should prove compliance")]
+    public async Task ThenRecordsShouldProveCompliance()
+    {
+        // This will FAIL initially - no consent compliance proof service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/consent/compliance-proof");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var complianceProof = JsonSerializer.Deserialize<ConsentComplianceProof>(content);
+        complianceProof?.RecordsProveCompliance.Should().BeTrue();
+        complianceProof?.AuditTrailComplete.Should().BeTrue();
+        complianceProof?.ConsentEvidence.Should().BeTrue();
+    }
+
+    #endregion
+
+    #region Data Breach Notification Steps
+
+    [Given(@"GDPR requires 72-hour breach notification")]
+    public async Task GivenGdprRequires72HourBreachNotification()
+    {
+        // This will FAIL initially - no 72-hour notification requirement validation implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/breach-notification/72-hour-requirement");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var notificationRequirement = JsonSerializer.Deserialize<GdprBreachNotificationRequirement>(content);
+        notificationRequirement?.SeventyTwoHourRequirement.Should().BeTrue();
+        notificationRequirement?.SupervisoryAuthorityNotification.Should().BeTrue();
+        notificationRequirement?.DataSubjectNotificationRequired.Should().BeTrue();
+    }
+
+    [Given(@"high-risk breaches require individual notification")]
+    public async Task GivenHighRiskBreachesRequireIndividualNotification()
+    {
+        // This will FAIL initially - no individual notification requirement validation implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/breach-notification/individual-notification");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var individualNotification = JsonSerializer.Deserialize<GdprIndividualNotificationRequirement>(content);
+        individualNotification?.HighRiskRequiresNotification.Should().BeTrue();
+        individualNotification?.IndividualNotificationCriteria.Should().NotBeEmpty();
+        individualNotification?.NotificationContent.Should().NotBeEmpty();
+    }
+
+    [When(@"managing breach notifications:")]
+    public async Task WhenManagingBreachNotifications(Table table)
+    {
+        // This will FAIL initially - no breach notification management service implemented yet
+        foreach (var row in table.Rows)
+        {
+            var breachDetection = row["Breach Detection"];
+            var riskAssessment = row["Risk Assessment"];
+            var authorityNotification = row["Authority Notification"];
+            var individualNotification = row["Individual Notification"];
+            var documentation = row["Documentation"];
+            var mitigation = row["Mitigation"];
+
+            var breachNotification = new
+            {
+                BreachDetection = breachDetection,
+                RiskAssessment = riskAssessment,
+                AuthorityNotification = authorityNotification,
+                IndividualNotification = individualNotification,
+                Documentation = documentation,
+                Mitigation = mitigation,
+                NotificationTimestamp = DateTime.UtcNow
+            };
+
+            var json = JsonSerializer.Serialize(breachNotification);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await Client.PostAsync("/api/compliance/gdpr/breach-notification/manage", content);
+            
+            // This will fail because breach notification management doesn't exist yet
+            response.StatusCode.Should().Be(HttpStatusCode.Created);
+        }
+    }
+
+    [Then(@"breaches should be detected quickly")]
+    public async Task ThenBreachesShouldBeDetectedQuickly()
+    {
+        // This will FAIL initially - no breach detection speed validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/breach-notification/detection-speed");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var detectionSpeed = JsonSerializer.Deserialize<BreachDetectionSpeed>(content);
+        detectionSpeed?.QuickDetection.Should().BeTrue();
+        detectionSpeed?.AutomatedDetection.Should().BeTrue();
+        detectionSpeed?.DetectionTimeMeetsRequirements.Should().BeTrue();
+    }
+
+    [Then(@"notifications should meet deadlines")]
+    public async Task ThenNotificationsShouldMeetDeadlines()
+    {
+        // This will FAIL initially - no notification deadline validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/breach-notification/deadline-validation");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var deadlineValidation = JsonSerializer.Deserialize<NotificationDeadlineValidation>(content);
+        deadlineValidation?.DeadlinesMet.Should().BeTrue();
+        deadlineValidation?.SeventyTwoHourCompliance.Should().BeTrue();
+        deadlineValidation?.DelayJustificationProvided.Should().BeTrue();
+    }
+
+    [Then(@"communications should be clear")]
+    public async Task ThenCommunicationsShouldBeClear()
+    {
+        // This will FAIL initially - no communication clarity validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/breach-notification/communication-clarity");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var communicationClarity = JsonSerializer.Deserialize<BreachCommunicationClarity>(content);
+        communicationClarity?.CommunicationsClear.Should().BeTrue();
+        communicationClarity?.PlainLanguageUsed.Should().BeTrue();
+        communicationClarity?.RequiredInformationIncluded.Should().BeTrue();
+    }
+
+    [Then(@"improvements should prevent recurrence")]
+    public async Task ThenImprovementsShouldPreventRecurrence()
+    {
+        // This will FAIL initially - no breach prevention improvement validation service implemented yet
+        var response = await Client.GetAsync("/api/compliance/gdpr/breach-notification/prevention-improvements");
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        var content = await response.Content.ReadAsStringAsync();
+        var preventionImprovements = JsonSerializer.Deserialize<BreachPreventionImprovements>(content);
+        preventionImprovements?.ImprovementsImplemented.Should().BeTrue();
+        preventionImprovements?.RecurrencePrevention.Should().BeTrue();
+        preventionImprovements?.LessonsLearned.Should().BeTrue();
+    }
+
+    #endregion
+
+    #region Helper Classes (These represent the expected API models that don't exist yet)
+
+    public class GdprSystemStatus
+    {
+        public bool SystemsOperational { get; set; }
+        public bool ComplianceActive { get; set; }
+        public bool DataSubjectRightsActive { get; set; }
+        public bool PrivacyByDesignImplemented { get; set; }
+        public DateTime LastStatusCheck { get; set; }
+    }
+
+    public class LawfulBasisStatus
+    {
+        public bool LawfulBasisEstablished { get; set; }
+        public bool AllProcessingCovered { get; set; }
+        public bool DocumentationComplete { get; set; }
+        public bool CommunicationClear { get; set; }
+    }
+
+    public class DataSubjectRightsStatus
+    {
+        public bool RightsMechanismsImplemented { get; set; }
+        public bool SelfServicePortalActive { get; set; }
+        public bool RequestProcessingActive { get; set; }
+        public bool ResponseTimelinesConfigured { get; set; }
+    }
+
+    public class PrivacyByDesignStatus
+    {
+        public bool PrinciplesApplied { get; set; }
+        public bool DataProtectionByDefault { get; set; }
+        public bool DataMinimizationActive { get; set; }
+        public bool PurposeLimitationEnforced { get; set; }
+    }
+
+    public class GdprDataProtectionMeasures
+    {
+        public bool MeasuresActive { get; set; }
+        public bool EncryptionImplemented { get; set; }
+        public bool AccessControlsActive { get; set; }
+        public bool AuditTrailMaintained { get; set; }
+    }
+
+    public class LawfulBasisRequirements
+    {
+        public bool LawfulBasisRequired { get; set; }
+        public bool AllProcessingMustBeCovered { get; set; }
+        public bool DocumentationMandatory { get; set; }
+        public string[] AcceptableBases { get; set; } = Array.Empty<string>();
+    }
+
+    public class DocumentationRequirements
+    {
+        public bool DocumentationRequired { get; set; }
+        public bool CommunicationRequired { get; set; }
+        public bool RecordsKeptUpdated { get; set; }
+        public string[] RequiredDocuments { get; set; } = Array.Empty<string>();
+    }
+
+    public class LawfulBasisValidation
+    {
+        public bool AllProcessingCovered { get; set; }
+        public bool BasisEstablished { get; set; }
+        public bool NoGapsIdentified { get; set; }
+        public decimal ComplianceScore { get; set; }
+    }
+
+    public class JustificationDocumentation
+    {
+        public bool JustificationsDocumented { get; set; }
+        public bool DocumentationComplete { get; set; }
+        public bool DocumentationAccessible { get; set; }
+        public DateTime LastDocumentationUpdate { get; set; }
+    }
+
+    public class CommunicationValidation
+    {
+        public bool CommunicationsClear { get; set; }
+        public bool PlainLanguageUsed { get; set; }
+        public bool AccessibleToDataSubjects { get; set; }
+        public decimal ClarityScore { get; set; }
+    }
+
+    public class ReviewValidation
+    {
+        public bool ReviewsScheduled { get; set; }
+        public bool ValidityMaintained { get; set; }
+        public bool ReviewsDocumented { get; set; }
+        public DateTime NextReviewDate { get; set; }
+    }
+
+    public class IndividualRightsGranted
+    {
+        public bool RightsGranted { get; set; }
+        public string[] SpecificRightsEnumerated { get; set; } = Array.Empty<string>();
+        public bool RightsEnforceable { get; set; }
+    }
+
+    public class RightsExercisability
+    {
+        public bool EasilyExercisable { get; set; }
+        public bool MinimalBarriers { get; set; }
+        public bool SelfServiceAvailable { get; set; }
+        public decimal ExercisabilityScore { get; set; }
+    }
+
+    public class RightsImplementationValidation
+    {
+        public bool AllRightsImplementable { get; set; }
+        public bool ImplementationComplete { get; set; }
+        public bool NoGapsInRights { get; set; }
+        public string[] ImplementedRights { get; set; } = Array.Empty<string>();
+    }
+
+    public class GdprTimelineValidation
+    {
+        public bool TimelinesMet { get; set; }
+        public bool ResponseTimesCompliant { get; set; }
+        public bool NoDelaysDetected { get; set; }
+        public decimal TimelineCompliance { get; set; }
+    }
+
+    public class ProcessUserFriendliness
+    {
+        public bool ProcessesUserFriendly { get; set; }
+        public bool EasyToUse { get; set; }
+        public bool ClearInstructions { get; set; }
+        public decimal UserSatisfactionScore { get; set; }
+    }
+
+    public class ExceptionDocumentation
+    {
+        public bool ExceptionsDocumented { get; set; }
+        public bool JustificationProvided { get; set; }
+        public bool LegalBasisClear { get; set; }
+        public string[] DocumentedExceptions { get; set; } = Array.Empty<string>();
+    }
+
+    public class StructuredDataProvision
+    {
+        public bool DataProvidedInStructuredFormat { get; set; }
+        public bool FormatMachineReadable { get; set; }
+        public bool FormatCommonlyUsed { get; set; }
+        public string DataFormat { get; set; } = string.Empty;
+    }
+
+    public class ResponseTimelineValidation
+    {
+        public bool ResponseWithin30Days { get; set; }
+        public bool TimelineCompliant { get; set; }
+        public bool NoUnreasonableDelays { get; set; }
+        public TimeSpan AverageResponseTime { get; set; }
+    }
+
+    public class PrivacyInformationRequirements
+    {
+        public bool DetailedInformationRequired { get; set; }
+        public bool TransparencyRequired { get; set; }
+        public string[] SpecificElementsRequired { get; set; } = Array.Empty<string>();
+    }
+
+    public class PrivacyInformationComprehensiveness
+    {
+        public bool InformationComprehensive { get; set; }
+        public bool AllRequiredElementsPresent { get; set; }
+        public bool NoInformationGaps { get; set; }
+        public decimal CompletenessScore { get; set; }
+    }
+
+    public class PrivacyInformationAccessibility
+    {
+        public bool EasilyAccessible { get; set; }
+        public bool NoBarriersToAccess { get; set; }
+        public bool AccessibleToAllUsers { get; set; }
+        public decimal AccessibilityScore { get; set; }
+    }
+
+    public class LanguageClarityValidation
+    {
+        public bool LanguageClearAndPlain { get; set; }
+        public bool NoLegalJargon { get; set; }
+        public bool UnderstandableByAverage { get; set; }
+        public decimal ReadabilityScore { get; set; }
+    }
+
+    public class InformationUpdateValidation
+    {
+        public bool RegularlyUpdated { get; set; }
+        public bool UpdatesTimely { get; set; }
+        public bool UpdateNotificationProvided { get; set; }
+        public DateTime LastUpdate { get; set; }
+    }
+
+    public class ProcessingActivity
+    {
+        public string ActivityId { get; set; } = string.Empty;
+        public string ActivityName { get; set; } = string.Empty;
+        public string LawfulBasis { get; set; } = string.Empty;
+        public string Purpose { get; set; } = string.Empty;
+        public DateTime CreatedDate { get; set; }
+    }
+
+    public class DataSubjectRequest
+    {
+        public string RequestId { get; set; } = string.Empty;
+        public string DataSubjectId { get; set; } = string.Empty;
+        public string RequestType { get; set; } = string.Empty;
+        public DateTime RequestDate { get; set; }
+        public string Status { get; set; } = string.Empty;
+    }
+
+    // Consent Management Helper Classes
+    public class GdprConsentRequirements
+    {
+        public bool FreelyGivenRequired { get; set; }
+        public bool SpecificRequired { get; set; }
+        public bool InformedRequired { get; set; }
+        public bool UnambiguousRequired { get; set; }
+        public string[] ConsentCriteria { get; set; } = Array.Empty<string>();
+    }
+
+    public class ConsentWithdrawalEquality
+    {
+        public bool WithdrawalAsEasyAsConsent { get; set; }
+        public bool NoBarriersToWithdrawal { get; set; }
+        public bool SameChannelsAvailable { get; set; }
+        public decimal WithdrawalEaseScore { get; set; }
+    }
+
+    public class GdprConsentObtainingValidation
+    {
+        public bool ConsentProperlyObtained { get; set; }
+        public bool ConsentValid { get; set; }
+        public bool ConsentDocumented { get; set; }
+        public DateTime ConsentValidationDate { get; set; }
+    }
+
+    public class ConsentGranularityValidation
+    {
+        public bool ControlsGranular { get; set; }
+        public bool SpecificPurposes { get; set; }
+        public bool SeparateConsents { get; set; }
+        public int GranularityLevel { get; set; }
+    }
+
+    public class ConsentWithdrawalSimplicity
+    {
+        public bool WithdrawalSimple { get; set; }
+        public bool NoComplexProcedures { get; set; }
+        public bool ImmediateEffect { get; set; }
+        public decimal SimplicityScore { get; set; }
+    }
+
+    public class ConsentComplianceProof
+    {
+        public bool RecordsProveCompliance { get; set; }
+        public bool AuditTrailComplete { get; set; }
+        public bool ConsentEvidence { get; set; }
+        public DateTime ProofGenerationDate { get; set; }
+    }
+
+    // Breach Notification Helper Classes
+    public class GdprBreachNotificationRequirement
+    {
+        public bool SeventyTwoHourRequirement { get; set; }
+        public bool SupervisoryAuthorityNotification { get; set; }
+        public bool DataSubjectNotificationRequired { get; set; }
+        public string[] NotificationCriteria { get; set; } = Array.Empty<string>();
+    }
+
+    public class GdprIndividualNotificationRequirement
+    {
+        public bool HighRiskRequiresNotification { get; set; }
+        public string[] IndividualNotificationCriteria { get; set; } = Array.Empty<string>();
+        public string[] NotificationContent { get; set; } = Array.Empty<string>();
+    }
+
+    public class BreachDetectionSpeed
+    {
+        public bool QuickDetection { get; set; }
+        public bool AutomatedDetection { get; set; }
+        public bool DetectionTimeMeetsRequirements { get; set; }
+        public TimeSpan AverageDetectionTime { get; set; }
+    }
+
+    public class NotificationDeadlineValidation
+    {
+        public bool DeadlinesMet { get; set; }
+        public bool SeventyTwoHourCompliance { get; set; }
+        public bool DelayJustificationProvided { get; set; }
+        public decimal DeadlineCompliance { get; set; }
+    }
+
+    public class BreachCommunicationClarity
+    {
+        public bool CommunicationsClear { get; set; }
+        public bool PlainLanguageUsed { get; set; }
+        public bool RequiredInformationIncluded { get; set; }
+        public decimal ClarityScore { get; set; }
+    }
+
+    public class BreachPreventionImprovements
+    {
+        public bool ImprovementsImplemented { get; set; }
+        public bool RecurrencePrevention { get; set; }
+        public bool LessonsLearned { get; set; }
+        public string[] ImprovementActions { get; set; } = Array.Empty<string>();
+    }
+
+    #endregion
+}
