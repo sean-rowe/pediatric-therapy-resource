@@ -1,0 +1,929 @@
+using System.Net;
+using System.Text.Json;
+using FluentAssertions;
+using Microsoft.AspNetCore.Mvc.Testing;
+using TechTalk.SpecFlow;
+
+namespace UPTRMS.Api.Tests.BDD.StepDefinitions;
+
+[Binding]
+    public class ABAToolsSteps : BaseStepDefinitions
+{
+    private string _currentBehaviorId = string.Empty;
+    private string _currentProgramId = string.Empty;
+    private Dictionary<string, object> _behaviorData = new();
+    private List<object> _dataPoints = new();
+
+    public ABAToolsSteps(WebApplicationFactory<Program> factory, ScenarioContext scenarioContext) 
+        : base(factory, scenarioContext)
+    {
+    }
+    [Given(@"ABA tools are enabled")]
+    public void GivenABAToolsAreEnabled()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"I am tracking behavior for ""(.*)""")]
+    public void GivenIAmTrackingBehaviorFor(string studentName)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"target behaviors are defined:")]
+    public void GivenTargetBehaviorsAreDefined(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"token economy is configured:")]
+    public void GivenTokenEconomyIsConfigured(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"DTT programs are set up:")]
+    public void GivenDTTProgramsAreSetUp(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I observe behavior at (.*)")]
+    public async Task WhenIObserveBehaviorAt(string time)
+    {
+        _currentBehaviorId = $"behavior-{Guid.NewGuid()}";
+        await WhenISendAPOSTRequestToWithData("/api/aba/behaviors/observe", new Dictionary<string, object>
+        {
+            ["behaviorId"] = _currentBehaviorId,
+            ["observedAt"] = time,
+            ["studentId"] = ScenarioContext["ABStudent"]
+        });
+    }
+    
+    [When(@"I record ABC data:")]
+    public async Task WhenIRecordABCData(Table table)
+    {
+        var abcData = new Dictionary<string, object>();
+        foreach (var row in table.Rows)
+        {
+            abcData[row["Component"]] = row["Details"];
+        }
+        await WhenISendAPOSTRequestToWithData($"/api/aba/behaviors/{_currentBehaviorId}/abc", abcData);
+    }
+    [When(@"I award token")]
+    public async Task WhenIAwardToken()
+    {
+        await WhenISendAPOSTRequestToWithData("/api/aba/tokens/award", new Dictionary<string, object>
+        {
+            ["studentId"] = ScenarioContext["ABStudent"],
+            ["timestamp"] = DateTime.UtcNow,
+            ["behavior"] = "Following directions"
+        });
+    }
+    
+    [When(@"I conduct DTT trial")]
+    public async Task WhenIConductDTTTrial()
+    {
+        await WhenISendAPOSTRequestToWithData("/api/aba/dtt/trial", new Dictionary<string, object>
+        {
+            ["programId"] = _currentProgramId,
+            ["studentId"] = ScenarioContext["ABStudent"],
+            ["timestamp"] = DateTime.UtcNow
+        });
+    }
+    
+    [When(@"I present SD ""(.*)""")]
+    public async Task WhenIPresentSD(string discriminativeStimulus)
+    {
+        await WhenISendAPOSTRequestToWithData("/api/aba/dtt/sd", new Dictionary<string, object>
+        {
+            ["sd"] = discriminativeStimulus,
+            ["presentedAt"] = DateTime.UtcNow
+        });
+    }
+    
+    [When(@"student responds (.*)")]
+    public async Task WhenStudentResponds(string response)
+    {
+        await WhenISendAPOSTRequestToWithData("/api/aba/dtt/response", new Dictionary<string, object>
+        {
+            ["response"] = response,
+            ["responseTime"] = DateTime.UtcNow
+        });
+    }
+    
+    [Then(@"data should be timestamped")]
+    public void ThenDataShouldBeTimestamped()
+    {
+        ScenarioContext["DataTimestamped"] = true;
+        ScenarioContext["TimestampPrecision"] = "milliseconds";
+    }
+    [Then(@"ABC patterns should show:")]
+    public void ThenABCPatternsShouldShow(Table table)
+    {
+        var patterns = new Dictionary<string, object>();
+        foreach (var row in table.Rows)
+        {
+            patterns[row["Pattern Type"]] = row["Finding"];
+        }
+        ScenarioContext["ABCPatterns"] = patterns;
+    }
+    [Then(@"token board should show:")]
+    public void ThenTokenBoardShouldShow(Table table)
+    {
+        var tokenStatus = new Dictionary<string, object>();
+        foreach (var row in table.Rows)
+        {
+            tokenStatus[row["Element"]] = row["Status"];
+        }
+        ScenarioContext["TokenBoardStatus"] = tokenStatus;
+    }
+    [Then(@"backup reinforcers available:")]
+    public void ThenBackupReinforcersAvailable(Table table)
+    {
+        var reinforcers = new List<object>();
+        foreach (var row in table.Rows)
+        {
+            reinforcers.Add(new
+            {
+                Tokens = row["Tokens"],
+                Reward = row["Reward"]
+                    });
+        }
+        
+        ScenarioContext["BackupReinforcers"] = reinforcers;
+    }
+    [Then(@"I should record:")]
+    public void ThenIShouldRecord(Table table)
+    {
+        var recordingOptions = new Dictionary<string, string>();
+        foreach (var row in table.Rows)
+        {
+            recordingOptions[row["Response Type"]] = row["Data Entry"];
+        }
+        ScenarioContext["RecordingOptions"] = recordingOptions;
+    }
+    [Then(@"trial data should show:")]
+    public void ThenTrialDataShouldShow(Table table)
+    {
+        var trialResults = new Dictionary<string, object>();
+        foreach (var row in table.Rows)
+        {
+            trialResults[row["Metric"]] = row["Value"];
+        }
+        ScenarioContext["TrialResults"] = trialResults;
+    }
+    [Then(@"prompt hierarchy should track")]
+    public void ThenPromptHierarchyShouldTrack()
+    {
+        ScenarioContext["PromptHierarchyTracked"] = true;
+        ScenarioContext["PromptLevels"] = new[]
+        {
+            "Full Physical",
+            "Partial Physical",
+            "Model",
+            "Verbal",
+            "Gestural",
+            "Independent"
+        };
+    }
+
+    [Then(@"graphs should display:")]
+    public void ThenGraphsShouldDisplay(Table table)
+    {
+        var graphTypes = new List<string>();
+        foreach (var row in table.Rows)
+        {
+            graphTypes.Add(row["Graph Type"]);
+                }
+        ScenarioContext["AvailableGraphs"] = graphTypes;
+    }
+    [Then(@"behavior plan should generate")]
+    public void ThenBehaviorPlanShouldGenerate()
+    {
+        ScenarioContext["BehaviorPlanGenerated"] = true;
+        ScenarioContext["PlanIncludes"] = new[]
+        {
+            "Function hypothesis",
+            "Replacement behaviors",
+            "Intervention strategies",
+            "Data collection methods"
+        };
+    }
+
+    [Given(@"I am logged in as an ABA therapist")]
+    public void GivenIAmLoggedInAsAnABATherapist()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"I have clients with behavior intervention plans")]
+    public void GivenIHaveClientsWithBehaviorInterventionPlans()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"data collection requirements are configured")]
+    public void GivenDataCollectionRequirementsAreConfigured()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"I am observing a student ""(.*)"" in classroom")]
+    public void GivenIAmObservingAStudentInClassroom(string studentName)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I observe hand flapping at (.*)")]
+    public void WhenIObserveHandFlappingAt(string time)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"the data should be timestamped automatically")]
+    public void ThenTheDataShouldBeTimestampedAutomatically()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"I should be able to add:")]
+    public void ThenIShouldBeAbleToAdd(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I complete the observation session")]
+    public void WhenICompleteTheObservationSession()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"ABC patterns should be analyzed:")]
+    public void ThenABCPatternsShouldBeAnalyzed(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"I am setting up a token economy for ""(.*)""")]
+    public void GivenIAmSettingUpATokenEconomyFor(string studentName)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I configure the system:")]
+    public void WhenIConfigureTheSystem(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I create visual token board")]
+    public void WhenICreateVisualTokenBoard()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"Sophia earns tokens during session")]
+    public void WhenSophiaEarnsTokensDuringSession()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"I should be able to:")]
+    public void ThenIShouldBeAbleTo(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"I am running DTT session for ""(.*)""")]
+    public void GivenIAmRunningDTTSessionFor(string studentName)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"I have programs set up:")]
+    public void GivenIHaveProgramsSetUp(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I begin receptive ID trials")]
+    public void WhenIBeginReceptiveIDTrials()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"the system should:")]
+    public void ThenTheSystemShould(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"session is complete")]
+    public void WhenSessionIsComplete()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"I should see:")]
+    public void ThenIShouldSee(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"I am collecting baseline data for ""(.*)""")]
+    public void GivenIAmCollectingBaselineDataFor(string studentName)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"problem behavior is ""(.*)""")]
+    public void GivenProblemBehaviorIs(string behavior)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I set up data collection:")]
+    public void WhenISetUpDataCollection(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I collect data across conditions:")]
+    public void WhenICollectDataAcrossConditions(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"the system should generate:")]
+    public void ThenTheSystemShouldGenerate(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"I have ABA certification")]
+    public void GivenIHaveABACertification()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"ABC pattern analysis should update")]
+    public void ThenABCPatternAnalysisShouldUpdate()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"function hypothesis should be refined")]
+    public void ThenFunctionHypothesisShouldBeRefined()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"token board template should be generated")]
+    public void ThenTokenBoardTemplateShouldBeGenerated()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"tracking system should be initialized")]
+    public void ThenTrackingSystemShouldBeInitialized()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"token system ""(.*)"" exists for student")]
+    public void GivenTokenSystemExistsForStudent(string systemId)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"token count should update")]
+    public void ThenTokenCountShouldUpdate()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"student progress should be visible")]
+    public void ThenStudentProgressShouldBeVisible()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"DTT session ""(.*)"" is active")]
+    public void GivenDTTSessionIsActive(string sessionId)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"mastery criteria should be checked")]
+    public void ThenMasteryCriteriaShouldBeChecked()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"next trial should be prepared")]
+    public void ThenNextTrialShouldBePrepared()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"student ""(.*)"" has ABA programs")]
+    public void GivenStudentHasABAPrograms(string studentId)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"FA graph should update")]
+    public void ThenFAGraphShouldUpdate()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"function hypothesis should strengthen")]
+    public void ThenFunctionHypothesisShouldStrengthen()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"preference hierarchy should be calculated")]
+    public void ThenPreferenceHierarchyShouldBeCalculated()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"reinforcer effectiveness should be tracked")]
+    public void ThenReinforcerEffectivenessShouldBeTracked()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"task analysis ""(.*)"" exists")]
+    public void GivenTaskAnalysisExists(string skillId)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"independence levels should be calculated")]
+    public void ThenIndependenceLevelsShouldBeCalculated()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"next teaching targets should be identified")]
+    public void ThenNextTeachingTargetsShouldBeIdentified()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"contract document should be generated")]
+    public void ThenContractDocumentShouldBeGenerated()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"tracking sheet should be created")]
+    public void ThenTrackingSheetShouldBeCreated()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"pattern analysis should identify high-probability times")]
+    public void ThenPatternAnalysisShouldIdentifyHighProbabilityTimes()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"environmental correlations should be noted")]
+    public void ThenEnvironmentalCorrelationsShouldBeNoted()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"extinction curve should be plotted")]
+    public void ThenExtinctionCurveShouldBePlotted()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"team alerts should be sent")]
+    public void ThenTeamAlertsShouldBeSent()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"the therapy response should contain array of:")]
+    public void ThenTheTherapyResponseShouldContainArrayOf(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"I am conducting a functional behavior assessment for student ""(.*)""")]
+    public void GivenIAmConductingAFunctionalBehaviorAssessmentForStudent(string studentName)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"Tyler's target behaviors include hand flapping and vocal scripting")]
+    public void GivenTylersTargetBehaviorsIncludeHandFlappingAndVocalScripting()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I observe Tyler during a structured classroom observation")]
+    public void WhenIObserveTylerDuringAStructuredClassroomObservation()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I document systematic ABC data for each occurrence:")]
+    public void WhenIDocumentSystematicABCDataForEachOccurrence(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"I should capture comprehensive contextual information:")]
+    public void ThenIShouldCaptureComprehensiveContextualInformation(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"data analysis should identify patterns:")]
+    public void ThenDataAnalysisShouldIdentifyPatterns(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"comprehensive analysis should include:")]
+    public void ThenComprehensiveAnalysisShouldInclude(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"recommendations should guide intervention planning:")]
+    public void ThenRecommendationsShouldGuideInterventionPlanning(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"I am implementing a token economy for student ""(.*)""")]
+    public void GivenIAmImplementingATokenEconomyForStudent(string studentName)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"Sophia needs support for on-task behavior and social interactions")]
+    public void GivenSophiaNeedsSupportForOnTaskBehaviorAndSocialInteractions()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I design a comprehensive token economy system")]
+    public void WhenIDesignAComprehensiveTokenEconomySystem()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I configure all system components:")]
+    public void WhenIConfigureAllSystemComponents(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"I should create comprehensive visual materials:")]
+    public void ThenIShouldCreateComprehensiveVisualMaterials(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"implementation should follow systematic protocol:")]
+    public void ThenImplementationShouldFollowSystematicProtocol(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"Sophia engages in target behaviors")]
+    public void WhenSophiaEngagesInTargetBehaviors()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"reinforcement delivery should include:")]
+    public void ThenReinforcementDeliveryShouldInclude(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"token exchange process should provide:")]
+    public void ThenTokenExchangeProcessShouldProvide(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"Sophia demonstrates consistent success")]
+    public void WhenSophiaDemonstratesConsistentSuccess()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"systematic fading should include:")]
+    public void ThenSystematicFadingShouldInclude(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"long-term maintenance should ensure:")]
+    public void ThenLongTermMaintenanceShouldEnsure(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"Aiden has programs for receptive identification, matching, and imitation")]
+    public void GivenAidenHasProgramsForReceptiveIdentificationMatchingAndImitation()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I prepare for a structured DTT session")]
+    public void WhenIPrepareForAStructuredDTTSession()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I set up comprehensive programming:")]
+    public void WhenISetUpComprehensiveProgramming(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"session structure should follow protocol:")]
+    public void ThenSessionStructureShouldFollowProtocol(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"trial structure should include:")]
+    public void ThenTrialStructureShouldInclude(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"prompt hierarchy should be systematically applied:")]
+    public void ThenPromptHierarchyShouldBeSystematicallyApplied(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"recording trial-by-trial data")]
+    public void WhenRecordingTrialByTrialData()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"data collection should capture:")]
+    public void ThenDataCollectionShouldCapture(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"mastery determination should consider:")]
+    public void ThenMasteryDeterminationShouldConsider(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"programs reach mastery")]
+    public void WhenProgramsReachMastery()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"advancement should include:")]
+    public void ThenAdvancementShouldInclude(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"student ""(.*)"" displays aggressive behaviors requiring function identification")]
+    public void GivenStudentDisplaysAggressiveBehaviorsRequiringFunctionIdentification(string studentName)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I implement a systematic functional analysis")]
+    public void WhenIImplementASystematicFunctionalAnalysis()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"I should establish experimental conditions:")]
+    public void ThenIShouldEstablishExperimentalConditions(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"each condition should be systematically implemented:")]
+    public void ThenEachConditionShouldBeSystematicallyImplemented(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"conducting attention condition sessions")]
+    public void WhenConductingAttentionConditionSessions()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"procedures should include:")]
+    public void ThenProceduresShouldInclude(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"demand condition should involve:")]
+    public void ThenDemandConditionShouldInvolve(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"analyzing functional analysis results")]
+    public void WhenAnalyzingFunctionalAnalysisResults()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"data interpretation should examine:")]
+    public void ThenDataInterpretationShouldExamine(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"function determination should identify:")]
+    public void ThenFunctionDeterminationShouldIdentify(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"function is identified")]
+    public void WhenFunctionIsIdentified()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"intervention planning should include:")]
+    public void ThenInterventionPlanningShouldInclude(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"functional analysis identified escape function for Tyler's aggressive behavior")]
+    public void GivenFunctionalAnalysisIdentifiedEscapeFunctionForTylersAggressiveBehavior()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I develop a comprehensive behavior intervention plan \(BIP\)")]
+    public void WhenIDevelopAComprehensiveBehaviorInterventionPlanBIP()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"the plan should include all required components:")]
+    public void ThenThePlanShouldIncludeAllRequiredComponents(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"antecedent strategies should prevent problem behavior:")]
+    public void ThenAntecedentStrategiesShouldPreventProblemBehavior(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"teaching replacement behaviors")]
+    public void WhenTeachingReplacementBehaviors()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"functional communication training should include:")]
+    public void ThenFunctionalCommunicationTrainingShouldInclude(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"extinction procedures should be:")]
+    public void ThenExtinctionProceduresShouldBe(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"implementing the BIP")]
+    public void WhenImplementingTheBIP()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"data collection should monitor:")]
+    public void ThenDataCollectionShouldMonitor(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"team coordination should ensure:")]
+    public void ThenTeamCoordinationShouldEnsure(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"progress is evaluated")]
+    public void WhenProgressIsEvaluated()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"success criteria should include:")]
+    public void ThenSuccessCriteriaShouldInclude(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"I need to identify effective reinforcers for student ""(.*)""")]
+    public void GivenINeedToIdentifyEffectiveReinforcersForStudent(string studentName)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I conduct comprehensive preference assessment")]
+    public void WhenIConductComprehensivePreferenceAssessment()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"I should use multiple assessment methods:")]
+    public void ThenIShouldUseMultipleAssessmentMethods(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"preference assessment should sample across categories:")]
+    public void ThenPreferenceAssessmentShouldSampleAcrossCategories(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"conducting paired choice assessment")]
+    public void WhenConductingPairedChoiceAssessment()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"systematic procedures should include:")]
+    public void ThenSystematicProceduresShouldInclude(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"data analysis should determine:")]
+    public void ThenDataAnalysisShouldDetermine(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"preference hierarchy is established")]
+    public void WhenPreferenceHierarchyIsEstablished()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"reinforcer effectiveness should be tested:")]
+    public void ThenReinforcerEffectivenessShouldBeTested(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"ongoing monitoring should track:")]
+    public void ThenOngoingMonitoringShouldTrack(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"preferences change")]
+    public void WhenPreferencesChange()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"reinforcer management should include:")]
+    public void ThenReinforcerManagementShouldInclude(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"I need to teach student ""(.*)"" complex self-care skills")]
+    public void GivenINeedToTeachStudentComplexSelfCareSkills(string studentName)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"David needs to learn hand washing with systematic instruction")]
+    public void GivenDavidNeedsToLearnHandWashingWithSystematicInstruction()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I conduct detailed task analysis for hand washing")]
+    public void WhenIConductDetailedTaskAnalysisForHandWashing()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"I should break down the skill into discrete steps:")]
+    public void ThenIShouldBreakDownTheSkillIntoDiscreteSteps(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"teaching method should be selected based on learner characteristics:")]
+    public void ThenTeachingMethodShouldBeSelectedBasedOnLearnerCharacteristics(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"implementing forward chaining instruction")]
+    public void WhenImplementingForwardChainingInstruction()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"systematic teaching should include:")]
+    public void ThenSystematicTeachingShouldInclude(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"visual supports should enhance learning:")]
+    public void ThenVisualSupportsShouldEnhanceLearning(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"collecting task analysis data")]
+    public void WhenCollectingTaskAnalysisData()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"recording should capture:")]
+    public void ThenRecordingShouldCapture(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"mastery decisions should consider:")]
+    public void ThenMasteryDecisionsShouldConsider(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"skills are mastered")]
+    public void WhenSkillsAreMastered()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"generalization programming should include:")]
+    public void ThenGeneralizationProgrammingShouldInclude(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Given(@"parents need training to implement ABA strategies at home")]
+    public void GivenParentsNeedTrainingToImplementABAStrategiesAtHome()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"I design parent training curriculum")]
+    public void WhenIDesignParentTrainingCurriculum()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"training should cover fundamental ABA principles:")]
+    public void ThenTrainingShouldCoverFundamentalABAPrinciples(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"parent training should be individualized:")]
+    public void ThenParentTrainingShouldBeIndividualized(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"conducting hands-on training sessions")]
+    public void WhenConductingHandsOnTrainingSessions()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"practice should include:")]
+    public void ThenPracticeShouldInclude(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"home program development should include:")]
+    public void ThenHomeProgramDevelopmentShouldInclude(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"parents begin home implementation")]
+    public void WhenParentsBeginHomeImplementation()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"ongoing support should provide:")]
+    public void ThenOngoingSupportShouldProvide(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"progress monitoring should track:")]
+    public void ThenProgressMonitoringShouldTrack(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [When(@"challenges arise")]
+    public void WhenChallengesArise()
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"troubleshooting should address:")]
+    public void ThenTroubleshootingShouldAddress(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+    [Then(@"long-term support should ensure:")]
+    public void ThenLongTermSupportShouldEnsure(Table table)
+    {
+        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    }
+}

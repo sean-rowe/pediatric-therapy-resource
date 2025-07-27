@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "1JgdTVCl9ZbbUknGSWtYGdD03+vc2Lq1a6jPVqEJAS8=",
+  "Source": "UPTRMS.Api",
+  "BasePath": "_content/UPTRMS.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

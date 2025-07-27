@@ -1,0 +1,351 @@
+name: BDD Test Execution Pipeline
+
+on:
+  push:
+    branches: [main, develop, feature/*]
+  pull_request:
+    branches: [main, develop]
+  workflow_dispatch:
+    inputs:
+      test_tags:
+        description: 'Cucumber tags to run (e.g., @smoke, @regression)'
+        required: false
+        default: '@all'
+      environment:
+        description: 'Environment to test against'
+        required: true
+        default: 'test'
+        type: choice
+        options:
+          - test
+          - staging
+          - integration
+
+env:
+  DOTNET_VERSION: '8.0.x'
+  NODE_VERSION: '20.x'
+  MSSQL_SA_PASSWORD: 'TestP@ssw0rd!234'
+  REDIS_PASSWORD: 'TestRedisP@ss!234'
+
+jobs:
+  setup-test-infrastructure:
+    name: Setup Test Infrastructure
+    runs-on: ubuntu-latest
+    outputs:
+      infrastructure-ready: ${{ steps.verify.outputs.ready }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Start test containers
+        run: |
+          docker-compose -f docker/docker-compose.test.yml up -d
+          
+          # Wait for MSSQL
+          timeout 60 bash -c 'until docker exec uptrms-test-mssql /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "$MSSQL_SA_PASSWORD" -Q "SELECT 1" &> /dev/null; do sleep 1; done'
+          
+          # Wait for Redis
+          timeout 30 bash -c 'until docker exec uptrms-test-redis redis-cli -a "$REDIS_PASSWORD" ping &> /dev/null; do sleep 1; done'
+
+      - name: Initialize test database
+        run: |
+          # Run database initialization scripts
+          docker exec -i uptrms-test-mssql /opt/mssql-tools/bin/sqlcmd \
+            -S localhost -U SA -P "$MSSQL_SA_PASSWORD" \
+            -i /docker-entrypoint-initdb.d/01-create-database.sql
+          
+          docker exec -i uptrms-test-mssql /opt/mssql-tools/bin/sqlcmd \
+            -S localhost -U SA -P "$MSSQL_SA_PASSWORD" \
+            -i /docker-entrypoint-initdb.d/02-enable-features.sql
+          
+          docker exec -i uptrms-test-mssql /opt/mssql-tools/bin/sqlcmd \
+            -S localhost -U SA -P "$MSSQL_SA_PASSWORD" \
+            -i /docker-entrypoint-initdb.d/03-create-schemas.sql
+
+      - name: Run database migrations
+        run: |
+          cd api
+          dotnet tool install --global dotnet-ef
+          dotnet ef database update --connection "Server=localhost;Database=UPTRMS_Test;User Id=SA;Password=$MSSQL_SA_PASSWORD;TrustServerCertificate=True"
+
+      - name: Verify infrastructure
+        id: verify
+        run: |
+          # Verify all services are healthy
+          docker-compose -f docker/docker-compose.test.yml ps
+          echo "ready=true" >> $GITHUB_OUTPUT
+
+  run-bdd-tests:
+    name: Execute BDD Tests - ${{ matrix.phase }}
+    runs-on: ubuntu-latest
+    needs: setup-test-infrastructure
+    strategy:
+      fail-fast: false
+      matrix:
+        phase:
+          - { name: "Security & Compliance", tags: "@security @compliance", parallel: 4 }
+          - { name: "Performance & Scale", tags: "@performance @scalability", parallel: 2 }
+          - { name: "Integration", tags: "@integration", parallel: 3 }
+          - { name: "AI/ML Features", tags: "@ai @ml", parallel: 2 }
+          - { name: "Specialized Protocols", tags: "@protocols @clinical", parallel: 2 }
+          - { name: "Enterprise Features", tags: "@enterprise @multi-tenant", parallel: 2 }
+          - { name: "Error Handling", tags: "@error-handling @resilience", parallel: 3 }
+          - { name: "Advanced Features", tags: "@advanced @specialized", parallel: 2 }
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Restore dependencies
+        run: |
+          cd api
+          dotnet restore
+          
+          cd ../web
+          npm ci
+
+      - name: Build API
+        run: |
+          cd api
+          dotnet build --no-restore --configuration Release
+
+      - name: Build Angular app
+        run: |
+          cd web
+          npm run build -- --configuration=test
+
+      - name: Configure test settings
+        run: |
+          cat > api/Tests/appsettings.BDD.json << EOF
+          {
+            "ConnectionStrings": {
+              "DefaultConnection": "Server=localhost;Database=UPTRMS_Test;User Id=SA;Password=$MSSQL_SA_PASSWORD;TrustServerCertificate=True"
+            },
+            "Redis": {
+              "ConnectionString": "localhost:6379,password=$REDIS_PASSWORD,ssl=False"
+            },
+            "TestSettings": {
+              "BaseUrl": "http://localhost:5000",
+              "AngularUrl": "http://localhost:4200",
+              "TestDataPath": "./TestData",
+              "ScreenshotPath": "./TestResults/Screenshots",
+              "VideoPath": "./TestResults/Videos"
+            }
+          }
+          EOF
+
+      - name: Start API server
+        run: |
+          cd api
+          dotnet run --project TherapyDocs.Api --configuration Release --urls "http://localhost:5000" &
+          
+          # Wait for API to be ready
+          timeout 60 bash -c 'until curl -f http://localhost:5000/health &> /dev/null; do sleep 1; done'
+
+      - name: Start Angular app
+        run: |
+          cd web
+          npm run serve:test &
+          
+          # Wait for Angular to be ready
+          timeout 60 bash -c 'until curl -f http://localhost:4200 &> /dev/null; do sleep 1; done'
+
+      - name: Run BDD tests
+        run: |
+          cd api/Tests
+          
+          # Run tests with specified tags and parallelization
+          dotnet test \
+            --configuration Release \
+            --logger "trx;LogFileName=${{ matrix.phase.name }}-results.trx" \
+            --logger "html;LogFileName=${{ matrix.phase.name }}-results.html" \
+            --collect:"XPlat Code Coverage" \
+            --filter "Category=${{ matrix.phase.tags }}" \
+            -- NUnit.NumberOfTestWorkers=${{ matrix.phase.parallel }} \
+            -- RunConfiguration.MaxCpuCount=${{ matrix.phase.parallel }}
+
+      - name: Generate living documentation
+        if: always()
+        run: |
+          cd api/Tests
+          dotnet tool install --global SpecFlow.Plus.LivingDoc.CLI
+          
+          livingdoc test-assembly \
+            bin/Release/net8.0/TherapyDocs.Api.Tests.dll \
+            -t TestResults/${{ matrix.phase.name }}-results.trx \
+            -o TestResults/${{ matrix.phase.name }}-living-doc.html
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bdd-test-results-${{ matrix.phase.name }}
+          path: |
+            api/Tests/TestResults/*.trx
+            api/Tests/TestResults/*.html
+            api/Tests/TestResults/Screenshots/
+            api/Tests/TestResults/Videos/
+            api/Tests/TestResults/*-living-doc.html
+
+      - name: Upload coverage results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-results-${{ matrix.phase.name }}
+          path: api/Tests/TestResults/**/coverage.cobertura.xml
+
+      - name: Comment PR with results
+        if: github.event_name == 'pull_request' && always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const phase = '${{ matrix.phase.name }}';
+            const status = '${{ job.status }}';
+            
+            let comment = `## BDD Test Results - ${phase}\n\n`;
+            comment += `Status: ${status === 'success' ? '✅ Passed' : '❌ Failed'}\n\n`;
+            
+            // Add summary if available
+            try {
+              const summary = fs.readFileSync(`api/Tests/TestResults/${phase}-summary.txt`, 'utf8');
+              comment += `### Summary\n\`\`\`\n${summary}\n\`\`\`\n`;
+            } catch (e) {
+              // Summary not available
+            }
+            
+            comment += `\n[View detailed results](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+
+  aggregate-results:
+    name: Aggregate Test Results
+    runs-on: ubuntu-latest
+    needs: run-bdd-tests
+    if: always()
+    steps:
+      - name: Download all test results
+        uses: actions/download-artifact@v4
+        with:
+          pattern: bdd-test-results-*
+          merge-multiple: true
+          path: test-results
+
+      - name: Download all coverage results
+        uses: actions/download-artifact@v4
+        with:
+          pattern: coverage-results-*
+          merge-multiple: true
+          path: coverage-results
+
+      - name: Merge coverage reports
+        run: |
+          dotnet tool install --global dotnet-reportgenerator-globaltool
+          
+          reportgenerator \
+            -reports:"coverage-results/**/coverage.cobertura.xml" \
+            -targetdir:"coverage-report" \
+            -reporttypes:"Html;Cobertura;MarkdownSummary" \
+            -title:"UPTRMS BDD Test Coverage" \
+            -tag:"${{ github.sha }}"
+
+      - name: Generate test summary
+        run: |
+          cat > test-summary.md << EOF
+          # BDD Test Execution Summary
+          
+          **Run Date**: $(date)
+          **Branch**: ${{ github.ref_name }}
+          **Commit**: ${{ github.sha }}
+          
+          ## Test Results by Phase
+          EOF
+          
+          # Parse test results and add to summary
+          for file in test-results/*.trx; do
+            if [ -f "$file" ]; then
+              phase=$(basename "$file" .trx | sed 's/-results//')
+              echo "### $phase" >> test-summary.md
+              # Extract test counts from TRX file (simplified)
+              echo "Results from: $file" >> test-summary.md
+              echo "" >> test-summary.md
+            fi
+          done
+          
+          # Add coverage summary
+          if [ -f "coverage-report/Summary.md" ]; then
+            echo "## Code Coverage Summary" >> test-summary.md
+            cat "coverage-report/Summary.md" >> test-summary.md
+          fi
+
+      - name: Upload aggregated results
+        uses: actions/upload-artifact@v4
+        with:
+          name: bdd-test-summary
+          path: |
+            test-summary.md
+            coverage-report/
+
+      - name: Check coverage thresholds
+        run: |
+          # Extract coverage percentage from report
+          coverage=$(grep -oP 'Line coverage: \K[0-9.]+' coverage-report/Summary.md || echo "0")
+          
+          # Check against threshold (100% required)
+          if (( $(echo "$coverage < 100" | bc -l) )); then
+            echo "❌ Code coverage is ${coverage}%, but 100% is required!"
+            exit 1
+          else
+            echo "✅ Code coverage is ${coverage}% - meets requirement!"
+          fi
+
+      - name: Update GitHub status
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const summary = require('fs').readFileSync('test-summary.md', 'utf8');
+            
+            // Create or update check run
+            await github.rest.checks.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: 'BDD Tests',
+              head_sha: context.sha,
+              status: 'completed',
+              conclusion: '${{ job.status }}',
+              output: {
+                title: 'BDD Test Results',
+                summary: summary
+              }
+            });
+
+  cleanup:
+    name: Cleanup Test Infrastructure
+    runs-on: ubuntu-latest
+    needs: [run-bdd-tests, aggregate-results]
+    if: always()
+    steps:
+      - name: Stop test containers
+        run: |
+          docker-compose -f docker/docker-compose.test.yml down -v
+          docker system prune -f

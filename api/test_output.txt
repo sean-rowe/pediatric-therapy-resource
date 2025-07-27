@@ -1,0 +1,152 @@
+Test run for /home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/UPTRMS.Api.Tests.dll (.NETCoreApp,Version=v9.0)
+VSTest version 17.12.0 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+/home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/UPTRMS.Api.Tests.dll
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.4.1+b9eacec401 (64-bit .NET 9.0.6)
+[xUnit.net 00:00:00.08]   Discovering: UPTRMS.Api.Tests
+[xUnit.net 00:00:00.48]   Discovered:  UPTRMS.Api.Tests
+[xUnit.net 00:00:00.48]   Starting:    UPTRMS.Api.Tests
+-> Loading plugin /home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/LivingDoc.SpecFlowPlugin.dll
+-> Loading plugin /home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/TechTalk.SpecFlow.xUnit.SpecFlowPlugin.dll
+-> Loading plugin /home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/UPTRMS.Api.Tests.dll
+-> Using specflow.json
+[MockAuthenticationService] Email verified for user: 
+[AuthenticationSteps] Created verified user:  with password: SecurePass123!
+[AuthenticationSteps] User ID: abba6452-4e8e-4f4c-bc54-cb124866bc03, EmailVerified: True
+[TableToJson] Processing table with 2 rows
+[TableToJson] Row keys: field, value
+[TableToJson] Added email = user@clinic.com (type: String)
+[TableToJson] Row keys: field, value
+[TableToJson] Added password = SecurePass123! (type: String)
+[TableToJson] Final JSON: {"email":"user@clinic.com","password":"SecurePass123!"}
+[BaseStepDefinitions] Sending POST to /api/auth/login with body: {"email":"user@clinic.com","password":"SecurePass123!"}
+[BaseStepDefinitions] Content-Type: application/json; charset=utf-8
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+[MockAuthenticationService] LoginAsync called with email: user@clinic.com
+[MockAuthenticationService] User not found: user@clinic.com
+[MockAuthenticationService] Available users: 
+[BaseStepDefinitions] Response Status: BadRequest
+[BaseStepDefinitions] Response Content: {"error":"Invalid credentials"}
+[BaseStepDefinitions] Bad Request - checking validation errors
+[BaseStepDefinitions] Error message: Invalid credentials
+Expected status 200 but got 400
+Response content: {"error":"Invalid credentials"}
+[xUnit.net 00:00:01.07]     Successfully login with valid credentials [FAIL]
+[xUnit.net 00:00:01.07]       Expected ((int)LastResponse!.StatusCode) to be 200, but found 400 (difference of 200).
+[xUnit.net 00:00:01.07]       Stack Trace:
+[xUnit.net 00:00:01.07]            at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+[xUnit.net 00:00:01.07]            at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+[xUnit.net 00:00:01.07]            at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+[xUnit.net 00:00:01.07]            at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+[xUnit.net 00:00:01.07]            at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+[xUnit.net 00:00:01.07]            at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+[xUnit.net 00:00:01.07]            at FluentAssertions.Numeric.NumericAssertions`2.Be(T expected, String because, Object[] becauseArgs)
+[xUnit.net 00:00:01.07]         /home/srowe/workspace/pediatric-therapy-resource/api/Tests/BDD/StepDefinitions/BaseStepDefinitions.cs(131,0): at UPTRMS.Api.Tests.BDD.StepDefinitions.BaseStepDefinitions.ThenTheResponseStatusShouldBe(Int32 statusCode)
+[xUnit.net 00:00:01.07]         /home/srowe/workspace/pediatric-therapy-resource/api/Tests/BDD/StepDefinitions/CommonStepDefinitions.cs(72,0): at UPTRMS.Api.Tests.BDD.StepDefinitions.CommonStepDefinitions.ThenTheResponseStatusShouldBeStep(Int32 statusCode)
+[xUnit.net 00:00:01.07]            at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+[xUnit.net 00:00:01.07]            at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+[xUnit.net 00:00:01.07]            at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+[xUnit.net 00:00:01.07]            at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)
+[xUnit.net 00:00:01.07]            at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+[xUnit.net 00:00:01.07]            at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+[xUnit.net 00:00:01.07]            at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+[xUnit.net 00:00:01.07]            at UPTRMS.Api.Tests.BDD.Features.Auth.AuthenticationAPIEndpointsFR_001Feature.ScenarioCleanup()
+[xUnit.net 00:00:01.07]         /home/srowe/workspace/pediatric-therapy-resource/api/Tests/BDD/Features/auth/authentication.feature(79,0): at UPTRMS.Api.Tests.BDD.Features.Auth.AuthenticationAPIEndpointsFR_001Feature.SuccessfullyLoginWithValidCredentials()
+[xUnit.net 00:00:01.07]            at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+[xUnit.net 00:00:01.07]            at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:01.07]       Output:
+[xUnit.net 00:00:01.07]         Given the API is available
+[xUnit.net 00:00:01.07]         -> done: CommonStepDefinitions.GivenTheAPIIsAvailable() (0.0s)
+[xUnit.net 00:00:01.07]         And the database is connected
+[xUnit.net 00:00:01.07]         -> done: AuthenticationSteps.GivenTheDatabaseIsConnected() (0.0s)
+[xUnit.net 00:00:01.07]         Given a verified user exists with:
+[xUnit.net 00:00:01.07]           --- table step argument ---
+[xUnit.net 00:00:01.07]           | email    | user@clinic.com |
+[xUnit.net 00:00:01.07]           | password | SecurePass123!  |
+[xUnit.net 00:00:01.07]         -> done: AuthenticationSteps.GivenAVerifiedUserExistsWith(<table>) (0.1s)
+[xUnit.net 00:00:01.07]         When I send a POST request to "/api/auth/login" with:
+[xUnit.net 00:00:01.07]           --- table step argument ---
+[xUnit.net 00:00:01.07]           | field    | value           |
+[xUnit.net 00:00:01.07]           | email    | user@clinic.com |
+[xUnit.net 00:00:01.07]           | password | SecurePass123!  |
+[xUnit.net 00:00:01.07]         -> done: CommonStepDefinitions.WhenISendAPOSTRequestToWithStep("/api/auth/login", <table>) (0.1s)
+[xUnit.net 00:00:01.07]         Then the response status should be 200
+[xUnit.net 00:00:01.07]         -> error: Expected ((int)LastResponse!.StatusCode) to be 200, but found 400 (difference of 200). (0.0s)
+[xUnit.net 00:00:01.07]         And the response should contain:
+[xUnit.net 00:00:01.07]           --- table step argument ---
+[xUnit.net 00:00:01.07]           | field        | type    |
+[xUnit.net 00:00:01.07]           | success      | boolean |
+[xUnit.net 00:00:01.07]           | token        | string  |
+[xUnit.net 00:00:01.07]           | refreshToken | string  |
+[xUnit.net 00:00:01.07]           | user         | object  |
+[xUnit.net 00:00:01.07]         -> skipped because of previous errors
+[xUnit.net 00:00:01.07]         And the JWT token should be valid
+[xUnit.net 00:00:01.07]         -> skipped because of previous errors
+[xUnit.net 00:00:01.07]         And the refresh token should be stored
+[xUnit.net 00:00:01.07]         -> skipped because of previous errors
+-> LivingDocPlugin: Output generated in: /home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/TestExecution.json
+[xUnit.net 00:00:01.13]   Finished:    UPTRMS.Api.Tests
+  Failed Successfully login with valid credentials [433 ms]
+  Error Message:
+   Expected ((int)LastResponse!.StatusCode) to be 200, but found 400 (difference of 200).
+  Stack Trace:
+     at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Numeric.NumericAssertions`2.Be(T expected, String because, Object[] becauseArgs)
+   at UPTRMS.Api.Tests.BDD.StepDefinitions.BaseStepDefinitions.ThenTheResponseStatusShouldBe(Int32 statusCode) in /home/srowe/workspace/pediatric-therapy-resource/api/Tests/BDD/StepDefinitions/BaseStepDefinitions.cs:line 131
+   at UPTRMS.Api.Tests.BDD.StepDefinitions.CommonStepDefinitions.ThenTheResponseStatusShouldBeStep(Int32 statusCode) in /home/srowe/workspace/pediatric-therapy-resource/api/Tests/BDD/StepDefinitions/CommonStepDefinitions.cs:line 72
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at UPTRMS.Api.Tests.BDD.Features.Auth.AuthenticationAPIEndpointsFR_001Feature.ScenarioCleanup()
+   at UPTRMS.Api.Tests.BDD.Features.Auth.AuthenticationAPIEndpointsFR_001Feature.SuccessfullyLoginWithValidCredentials() in /home/srowe/workspace/pediatric-therapy-resource/api/Tests/BDD/Features/auth/authentication.feature:line 79
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Standard Output Messages:
+ Given the API is available
+ -> done: CommonStepDefinitions.GivenTheAPIIsAvailable() (0.0s)
+ And the database is connected
+ -> done: AuthenticationSteps.GivenTheDatabaseIsConnected() (0.0s)
+ Given a verified user exists with:
+   --- table step argument ---
+   | email    | user@clinic.com |
+   | password | SecurePass123!  |
+ -> done: AuthenticationSteps.GivenAVerifiedUserExistsWith(<table>) (0.1s)
+ When I send a POST request to "/api/auth/login" with:
+   --- table step argument ---
+   | field    | value           |
+   | email    | user@clinic.com |
+   | password | SecurePass123!  |
+ -> done: CommonStepDefinitions.WhenISendAPOSTRequestToWithStep("/api/auth/login", <table>) (0.1s)
+ Then the response status should be 200
+ -> error: Expected ((int)LastResponse!.StatusCode) to be 200, but found 400 (difference of 200). (0.0s)
+ And the response should contain:
+   --- table step argument ---
+   | field        | type    |
+   | success      | boolean |
+   | token        | string  |
+   | refreshToken | string  |
+   | user         | object  |
+ -> skipped because of previous errors
+ And the JWT token should be valid
+ -> skipped because of previous errors
+ And the refresh token should be stored
+ -> skipped because of previous errors
+
+
+
+Test Run Failed.
+Total tests: 1
+     Failed: 1
+ Total time: 1.4061 Seconds

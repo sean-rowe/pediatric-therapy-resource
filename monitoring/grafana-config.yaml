@@ -1,0 +1,322 @@
+# Grafana deployment configuration for UPTRMS
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-config
+  namespace: uptrms-monitoring
+data:
+  grafana.ini: |
+    [server]
+    protocol = https
+    cert_file = /etc/grafana/certs/grafana.crt
+    cert_key = /etc/grafana/certs/grafana.key
+    root_url = https://grafana.uptrms.local
+    
+    [database]
+    type = postgres
+    host = postgres-service.uptrms-monitoring:5432
+    name = grafana
+    user = grafana
+    password = ${GRAFANA_DB_PASSWORD}
+    ssl_mode = require
+    
+    [security]
+    admin_user = admin
+    admin_password = ${GRAFANA_ADMIN_PASSWORD}
+    secret_key = ${GRAFANA_SECRET_KEY}
+    disable_gravatar = true
+    cookie_secure = true
+    cookie_samesite = strict
+    strict_transport_security = true
+    strict_transport_security_max_age_seconds = 31536000
+    strict_transport_security_preload = true
+    strict_transport_security_subdomains = true
+    content_security_policy = true
+    
+    [auth]
+    disable_login_form = false
+    oauth_auto_login = false
+    
+    [auth.generic_oauth]
+    enabled = true
+    name = UPTRMS SSO
+    allow_sign_up = true
+    client_id = ${OAUTH_CLIENT_ID}
+    client_secret = ${OAUTH_CLIENT_SECRET}
+    scopes = openid profile email
+    auth_url = https://auth.uptrms.local/oauth/authorize
+    token_url = https://auth.uptrms.local/oauth/token
+    api_url = https://auth.uptrms.local/oauth/userinfo
+    allowed_domains = uptrms.com
+    role_attribute_path = contains(groups[*], 'admin') && 'Admin' || contains(groups[*], 'editor') && 'Editor' || 'Viewer'
+    
+    [users]
+    allow_sign_up = false
+    allow_org_create = false
+    auto_assign_org = true
+    auto_assign_org_id = 1
+    auto_assign_org_role = Viewer
+    
+    [log]
+    mode = console
+    level = info
+    filters = rendering:debug
+    
+    [log.console]
+    format = json
+    
+    [alerting]
+    enabled = true
+    execute_alerts = true
+    
+    [unified_alerting]
+    enabled = true
+    
+    [metrics]
+    enabled = true
+    interval_seconds = 10
+    
+    [analytics]
+    reporting_enabled = false
+    check_for_updates = false
+    
+    [snapshots]
+    external_enabled = false
+    
+    [dashboards]
+    versions_to_keep = 20
+    
+    [feature_toggles]
+    enable = ngalert
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grafana
+  namespace: uptrms-monitoring
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: grafana
+  template:
+    metadata:
+      labels:
+        app: grafana
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "3000"
+    spec:
+      serviceAccountName: grafana
+      securityContext:
+        fsGroup: 472
+        runAsNonRoot: true
+        runAsUser: 472
+      containers:
+      - name: grafana
+        image: grafana/grafana:10.2.0
+        env:
+        - name: GRAFANA_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: grafana-secrets
+              key: db-password
+        - name: GRAFANA_ADMIN_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: grafana-secrets
+              key: admin-password
+        - name: GRAFANA_SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: grafana-secrets
+              key: secret-key
+        - name: OAUTH_CLIENT_ID
+          valueFrom:
+            secretKeyRef:
+              name: grafana-oauth
+              key: client-id
+        - name: OAUTH_CLIENT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: grafana-oauth
+              key: client-secret
+        ports:
+        - containerPort: 3000
+          name: https
+        resources:
+          requests:
+            cpu: 250m
+            memory: 512Mi
+          limits:
+            cpu: 1000m
+            memory: 1Gi
+        volumeMounts:
+        - name: config
+          mountPath: /etc/grafana
+        - name: dashboards
+          mountPath: /var/lib/grafana/dashboards
+        - name: datasources
+          mountPath: /etc/grafana/provisioning/datasources
+        - name: dashboard-provisioning
+          mountPath: /etc/grafana/provisioning/dashboards
+        - name: storage
+          mountPath: /var/lib/grafana
+        - name: certificates
+          mountPath: /etc/grafana/certs
+          readOnly: true
+        livenessProbe:
+          httpGet:
+            path: /api/health
+            port: 3000
+            scheme: HTTPS
+          initialDelaySeconds: 60
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /api/health
+            port: 3000
+            scheme: HTTPS
+          initialDelaySeconds: 30
+          periodSeconds: 10
+      volumes:
+      - name: config
+        configMap:
+          name: grafana-config
+      - name: dashboards
+        configMap:
+          name: grafana-dashboards
+      - name: datasources
+        configMap:
+          name: grafana-datasources
+      - name: dashboard-provisioning
+        configMap:
+          name: grafana-dashboard-provisioning
+      - name: storage
+        persistentVolumeClaim:
+          claimName: grafana-pvc
+      - name: certificates
+        secret:
+          secretName: grafana-certificates
+---
+# Grafana datasources
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-datasources
+  namespace: uptrms-monitoring
+data:
+  prometheus.yaml: |
+    apiVersion: 1
+    datasources:
+    - name: Prometheus
+      type: prometheus
+      access: proxy
+      url: http://prometheus:9090
+      isDefault: true
+      jsonData:
+        httpMethod: POST
+        timeInterval: 5s
+    - name: Elasticsearch
+      type: elasticsearch
+      access: proxy
+      url: https://elasticsearch.uptrms-logging:9200
+      jsonData:
+        esVersion: "8.10.0"
+        timeField: "@timestamp"
+        tlsSkipVerify: true
+      secureJsonData:
+        basicAuthPassword: ${ELASTICSEARCH_PASSWORD}
+      basicAuth: true
+      basicAuthUser: elastic
+---
+# Dashboard provisioning
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-dashboard-provisioning
+  namespace: uptrms-monitoring
+data:
+  dashboards.yaml: |
+    apiVersion: 1
+    providers:
+    - name: 'default'
+      orgId: 1
+      folder: ''
+      type: file
+      disableDeletion: false
+      updateIntervalSeconds: 10
+      allowUiUpdates: true
+      options:
+        path: /var/lib/grafana/dashboards
+---
+# PVC for Grafana
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: grafana-pvc
+  namespace: uptrms-monitoring
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: managed-premium
+---
+# Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana
+  namespace: uptrms-monitoring
+spec:
+  type: ClusterIP
+  selector:
+    app: grafana
+  ports:
+  - port: 3000
+    targetPort: 3000
+    protocol: TCP
+    name: https
+---
+# ServiceAccount
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: grafana
+  namespace: uptrms-monitoring
+---
+# ClusterRole for Grafana
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: grafana
+rules:
+- apiGroups: [""]
+  resources:
+  - nodes
+  - nodes/proxy
+  - services
+  - endpoints
+  - pods
+  verbs: ["get", "list", "watch"]
+- apiGroups: [""]
+  resources:
+  - configmaps
+  verbs: ["get"]
+---
+# ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: grafana
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: grafana
+subjects:
+- kind: ServiceAccount
+  name: grafana
+  namespace: uptrms-monitoring

@@ -1,0 +1,271 @@
+# MSSQL Server 2022 Enterprise deployment with HIPAA compliance features
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: uptrms-data
+  labels:
+    name: uptrms-data
+    security: high
+---
+# Secret for MSSQL SA password
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mssql-secret
+  namespace: uptrms-data
+type: Opaque
+stringData:
+  SA_PASSWORD: "P@ssw0rd!234#Secure"  # Change in production
+  MSSQL_PID: "Enterprise"  # For full security features
+---
+# PersistentVolumeClaim for MSSQL data
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mssql-data-pvc
+  namespace: uptrms-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 50Gi
+  storageClassName: standard
+---
+# PersistentVolumeClaim for MSSQL logs
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mssql-logs-pvc
+  namespace: uptrms-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+  storageClassName: standard
+---
+# PersistentVolumeClaim for MSSQL backups
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mssql-backup-pvc
+  namespace: uptrms-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Gi
+  storageClassName: standard
+---
+# ConfigMap for MSSQL initialization scripts
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mssql-init-scripts
+  namespace: uptrms-data
+data:
+  init.sh: |
+    #!/bin/bash
+    # Wait for SQL Server to start
+    sleep 30
+    
+    # Run initialization scripts
+    for i in {1..50}; do
+      /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P $SA_PASSWORD -Q "SELECT 1" > /dev/null 2>&1
+      if [ $? -eq 0 ]; then
+        echo "SQL Server is ready"
+        break
+      else
+        echo "Waiting for SQL Server to be ready..."
+        sleep 3
+      fi
+    done
+    
+    # Execute all SQL scripts in order
+    for script in /docker-entrypoint-initdb.d/*.sql; do
+      echo "Running $script"
+      /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P $SA_PASSWORD -i "$script"
+    done
+---
+# StatefulSet for MSSQL
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mssql
+  namespace: uptrms-data
+spec:
+  serviceName: mssql-service
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mssql
+  template:
+    metadata:
+      labels:
+        app: mssql
+        security: high
+        compliance: hipaa
+    spec:
+      securityContext:
+        fsGroup: 10001
+      containers:
+      - name: mssql
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        ports:
+        - containerPort: 1433
+          name: mssql
+        env:
+        - name: ACCEPT_EULA
+          value: "Y"
+        - name: SA_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mssql-secret
+              key: SA_PASSWORD
+        - name: MSSQL_PID
+          valueFrom:
+            secretKeyRef:
+              name: mssql-secret
+              key: MSSQL_PID
+        - name: MSSQL_ENABLE_HADR
+          value: "1"
+        - name: MSSQL_AGENT_ENABLED
+          value: "true"
+        - name: MSSQL_ENABLE_TRANSPARENT_DATA_ENCRYPTION
+          value: "true"
+        - name: MSSQL_AUDIT_LEVEL
+          value: "3"
+        - name: MSSQL_DATA_DIR
+          value: "/var/opt/mssql/data"
+        - name: MSSQL_LOG_DIR
+          value: "/var/opt/mssql/log"
+        - name: MSSQL_BACKUP_DIR
+          value: "/var/opt/mssql/backup"
+        volumeMounts:
+        - name: mssql-data
+          mountPath: /var/opt/mssql/data
+        - name: mssql-logs
+          mountPath: /var/opt/mssql/log
+        - name: mssql-backup
+          mountPath: /var/opt/mssql/backup
+        - name: init-scripts
+          mountPath: /docker-entrypoint-initdb.d
+        - name: init-script-runner
+          mountPath: /usr/local/bin/init.sh
+          subPath: init.sh
+        resources:
+          requests:
+            memory: "4Gi"
+            cpu: "2000m"
+          limits:
+            memory: "8Gi"
+            cpu: "4000m"
+        livenessProbe:
+          tcpSocket:
+            port: 1433
+          initialDelaySeconds: 60
+          periodSeconds: 20
+          timeoutSeconds: 10
+        readinessProbe:
+          exec:
+            command:
+              - /opt/mssql-tools/bin/sqlcmd
+              - -S
+              - localhost
+              - -U
+              - SA
+              - -P
+              - $(SA_PASSWORD)
+              - -Q
+              - "SELECT 1"
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+        lifecycle:
+          postStart:
+            exec:
+              command: ["/bin/bash", "/usr/local/bin/init.sh"]
+      volumes:
+      - name: init-scripts
+        configMap:
+          name: mssql-init-scripts
+      - name: init-script-runner
+        configMap:
+          name: mssql-init-scripts
+          defaultMode: 0755
+  volumeClaimTemplates:
+  - metadata:
+      name: mssql-data
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 50Gi
+  - metadata:
+      name: mssql-logs
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 20Gi
+  - metadata:
+      name: mssql-backup
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 100Gi
+---
+# Service for MSSQL
+apiVersion: v1
+kind: Service
+metadata:
+  name: mssql-service
+  namespace: uptrms-data
+  labels:
+    app: mssql
+spec:
+  type: ClusterIP
+  selector:
+    app: mssql
+  ports:
+  - port: 1433
+    targetPort: 1433
+    protocol: TCP
+    name: mssql
+---
+# Network Policy for MSSQL
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: mssql-network-policy
+  namespace: uptrms-data
+spec:
+  podSelector:
+    matchLabels:
+      app: mssql
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: uptrms-api
+    - podSelector:
+        matchLabels:
+          app: uptrms-api
+    ports:
+    - protocol: TCP
+      port: 1433
+  egress:
+  - to:
+    - namespaceSelector: {}
+    ports:
+    - protocol: TCP
+      port: 53  # DNS
+    - protocol: UDP
+      port: 53  # DNS

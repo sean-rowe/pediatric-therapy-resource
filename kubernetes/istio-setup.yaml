@@ -1,0 +1,397 @@
+# Istio Service Mesh Configuration for UPTRMS
+# Provides zero-trust networking, mTLS, and observability
+
+---
+# Istio namespace
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: istio-system
+  labels:
+    istio-injection: disabled
+---
+# Istio configuration
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+metadata:
+  name: uptrms-istio-control-plane
+  namespace: istio-system
+spec:
+  profile: production
+  tag: 1.20.1
+  hub: docker.io/istio
+  meshConfig:
+    accessLogFile: /dev/stdout
+    defaultConfig:
+      proxyStatsMatcher:
+        inclusionRegexps:
+        - ".*outlier_detection.*"
+        - ".*circuit_breakers.*"
+        - ".*upstream_rq_retry.*"
+        - ".*upstream_rq_pending.*"
+        - ".*upstream_rq_timeout.*"
+        - ".*_cx_.*"
+      holdApplicationUntilProxyStarts: true
+    extensionProviders:
+    - name: otel
+      envoyOtelAls:
+        service: opentelemetry-collector.istio-system.svc.cluster.local
+        port: 4317
+    - name: zipkin
+      zipkin:
+        service: zipkin.istio-system.svc.cluster.local
+        port: 9411
+    defaultProviders:
+      tracing:
+      - otel
+    trustDomain: cluster.local
+    # Enable mTLS by default
+    mtls:
+      mode: STRICT
+  components:
+    base:
+      enabled: true
+    pilot:
+      enabled: true
+      k8s:
+        resources:
+          requests:
+            cpu: 500m
+            memory: 512Mi
+          limits:
+            cpu: 1000m
+            memory: 1024Mi
+        hpaSpec:
+          minReplicas: 2
+          maxReplicas: 5
+        strategy:
+          rollingUpdate:
+            maxSurge: 1
+            maxUnavailable: 0
+    ingressGateways:
+    - name: istio-ingressgateway
+      enabled: true
+      k8s:
+        resources:
+          requests:
+            cpu: 500m
+            memory: 512Mi
+          limits:
+            cpu: 1000m
+            memory: 1024Mi
+        hpaSpec:
+          minReplicas: 2
+          maxReplicas: 5
+        service:
+          type: LoadBalancer
+          ports:
+          - port: 15021
+            targetPort: 15021
+            name: status-port
+          - port: 80
+            targetPort: 8080
+            name: http2
+          - port: 443
+            targetPort: 8443
+            name: https
+        serviceAnnotations:
+          service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+          service.beta.kubernetes.io/aws-load-balancer-backend-protocol: "tcp"
+          service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
+    egressGateways:
+    - name: istio-egressgateway
+      enabled: false
+  values:
+    global:
+      istiod:
+        enableAnalysis: true
+    telemetry:
+      v2:
+        prometheus:
+          configOverride:
+            inboundSidecar:
+              disable_host_header_fallback: true
+            outboundSidecar:
+              disable_host_header_fallback: true
+            gateway:
+              disable_host_header_fallback: true
+        stackdriver:
+          configOverride:
+            enable_audit_log: true
+---
+# PeerAuthentication for strict mTLS
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
+metadata:
+  name: default
+  namespace: istio-system
+spec:
+  mtls:
+    mode: STRICT
+---
+# AuthorizationPolicy - Deny all by default
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: deny-all
+  namespace: istio-system
+spec:
+  {}  # Empty spec means deny all
+---
+# Gateway for HTTPS ingress
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: uptrms-gateway
+  namespace: istio-system
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "*"
+    tls:
+      httpsRedirect: true  # Redirect HTTP to HTTPS
+  - port:
+      number: 443
+      name: https
+      protocol: HTTPS
+    tls:
+      mode: SIMPLE
+      credentialName: uptrms-tls-cert
+    hosts:
+    - "*.uptrms.local"
+    - "api.uptrms.com"
+    - "app.uptrms.com"
+---
+# Virtual Service for API
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: uptrms-api
+  namespace: uptrms-api
+spec:
+  hosts:
+  - "api.uptrms.local"
+  - "api.uptrms.com"
+  gateways:
+  - istio-system/uptrms-gateway
+  http:
+  - match:
+    - uri:
+        prefix: "/api"
+    route:
+    - destination:
+        host: uptrms-api-service
+        port:
+          number: 80
+      weight: 100
+    timeout: 30s
+    retries:
+      attempts: 3
+      perTryTimeout: 10s
+      retryOn: gateway-error,connect-failure,refused-stream
+---
+# Virtual Service for Web App
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: uptrms-web
+  namespace: uptrms-web
+spec:
+  hosts:
+  - "app.uptrms.local"
+  - "app.uptrms.com"
+  gateways:
+  - istio-system/uptrms-gateway
+  http:
+  - match:
+    - uri:
+        prefix: "/"
+    route:
+    - destination:
+        host: uptrms-web-service
+        port:
+          number: 80
+      weight: 100
+    timeout: 30s
+---
+# Service Entry for external services
+apiVersion: networking.istio.io/v1beta1
+kind: ServiceEntry
+metadata:
+  name: external-https-services
+  namespace: istio-system
+spec:
+  hosts:
+  - "api.openai.com"
+  - "api.stripe.com"
+  - "login.microsoftonline.com"
+  - "graph.microsoft.com"
+  - "*.amazonaws.com"
+  ports:
+  - number: 443
+    name: https
+    protocol: HTTPS
+  location: MESH_EXTERNAL
+  resolution: DNS
+---
+# Destination Rule for circuit breaking
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: uptrms-api-circuit-breaker
+  namespace: uptrms-api
+spec:
+  host: uptrms-api-service
+  trafficPolicy:
+    connectionPool:
+      tcp:
+        maxConnections: 100
+      http:
+        http1MaxPendingRequests: 50
+        http2MaxRequests: 100
+        maxRequestsPerConnection: 2
+    outlierDetection:
+      consecutiveErrors: 5
+      interval: 30s
+      baseEjectionTime: 30s
+      maxEjectionPercent: 50
+      minHealthPercent: 50
+      splitExternalLocalOriginErrors: true
+---
+# Telemetry configuration
+apiVersion: telemetry.istio.io/v1alpha1
+kind: Telemetry
+metadata:
+  name: uptrms-metrics
+  namespace: istio-system
+spec:
+  metrics:
+  - providers:
+    - name: prometheus
+    overrides:
+    - match:
+        metric: ALL_METRICS
+      tagOverrides:
+        method:
+          value: request.method | "unknown"
+        response_code:
+          value: response.code | 0
+        grpc_response_status:
+          value: response.grpc_status | "unknown"
+---
+# Authorization Policy for API namespace
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: uptrms-api-authz
+  namespace: uptrms-api
+spec:
+  selector:
+    matchLabels:
+      app: uptrms-api
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        principals: ["cluster.local/ns/istio-system/sa/istio-ingressgateway-service-account"]
+    to:
+    - operation:
+        methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"]
+        paths: ["/api/*"]
+    when:
+    - key: request.headers[authorization]
+      values: ["Bearer*"]
+  - from:
+    - source:
+        namespaces: ["uptrms-api", "uptrms-web"]
+    to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/health", "/ready"]
+---
+# Rate limiting configuration
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ratelimit-config
+  namespace: istio-system
+data:
+  config.yaml: |
+    domain: uptrms-ratelimit
+    descriptors:
+      - key: header_match
+        value: api-limit
+        rate_limit:
+          unit: minute
+          requests_per_unit: 1000
+      - key: header_match
+        value: ai-generation-limit
+        rate_limit:
+          unit: hour
+          requests_per_unit: 100
+      - key: remote_address
+        rate_limit:
+          unit: second
+          requests_per_unit: 10
+---
+# EnvoyFilter for custom headers
+apiVersion: networking.istio.io/v1alpha3
+kind: EnvoyFilter
+metadata:
+  name: uptrms-security-headers
+  namespace: istio-system
+spec:
+  configPatches:
+  - applyTo: HTTP_FILTER
+    match:
+      context: SIDECAR_INBOUND
+      listener:
+        filterChain:
+          filter:
+            name: "envoy.filters.network.http_connection_manager"
+    patch:
+      operation: INSERT_BEFORE
+      value:
+        typed_config:
+          "@type": type.googleapis.com/envoy.extensions.filters.http.lua.v3.Lua
+          inline_code: |
+            function envoy_on_response(response_handle)
+              response_handle:headers():add("X-Frame-Options", "DENY")
+              response_handle:headers():add("X-Content-Type-Options", "nosniff")
+              response_handle:headers():add("X-XSS-Protection", "1; mode=block")
+              response_handle:headers():add("Referrer-Policy", "strict-origin-when-cross-origin")
+              response_handle:headers():add("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://apis.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.openai.com https://api.stripe.com; frame-ancestors 'none';")
+              response_handle:headers():add("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload")
+              response_handle:headers():add("Permissions-Policy", "geolocation=(), microphone=(), camera=()")
+            end
+---
+# WASM plugin for request validation
+apiVersion: extensions.istio.io/v1alpha1
+kind: WasmPlugin
+metadata:
+  name: uptrms-request-validator
+  namespace: uptrms-api
+spec:
+  selector:
+    matchLabels:
+      app: uptrms-api
+  url: oci://ghcr.io/uptrms/request-validator:1.0.0
+  phase: AUTHN
+  pluginConfig:
+    rules:
+      - path_regex: "^/api/v1/therapy/.*"
+        required_headers:
+          - "X-Tenant-ID"
+          - "X-Request-ID"
+      - path_regex: "^/api/v1/marketplace/.*"
+        max_body_size: 10485760  # 10MB
+      - path_regex: "^/api/v1/ai/generate.*"
+        rate_limit:
+          requests_per_minute: 10
+          by_header: "X-User-ID"

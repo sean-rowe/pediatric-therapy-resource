@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <NoWarn>SA0001;SA1633;SA1210;SA1200;SA1028;SA1518;SA1402;SA1101;SA1309;SA1413;SA1600;SA1602;SA1611;SA1615;SA1623;SA1633;SA1652</NoWarn>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <AssemblyName>UPTRMS.Api.Tests</AssemblyName>
+    <RootNamespace>UPTRMS.Api.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="xunit" Version="2.6.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.4" />
+    <PackageReference Include="coverlet.collector" Version="6.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.msbuild" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Moq" Version="4.20.70" />
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.1" />
+    <PackageReference Include="Dapper" Version="2.1.35" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+    <PackageReference Include="SendGrid" Version="9.29.3" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection" Version="9.0.0" />
+    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
+    <PackageReference Include="SpecFlow.xUnit" Version="3.9.74" />
+    <PackageReference Include="SpecFlow" Version="3.9.74" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UPTRMS.Api.csproj">
+      <GlobalPropertiesToRemove>TargetFramework</GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Remove="..\Program.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="BDD\Features\**\*.feature">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </None>
+    <None Update="appsettings.Test.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Integration\**" />
+    <Compile Remove="Security\**" />
+    <Compile Remove="Unit\**" />
+    <EmbeddedResource Remove="Integration\**" />
+    <EmbeddedResource Remove="Security\**" />
+    <EmbeddedResource Remove="Unit\**" />
+    <None Remove="Integration\**" />
+    <None Remove="Security\**" />
+    <None Remove="Unit\**" />
+  </ItemGroup>
+
+</Project>

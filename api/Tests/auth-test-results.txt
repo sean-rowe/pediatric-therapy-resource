@@ -1,0 +1,202 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  SpecFlowFeatureFiles: BDD/Features/admin/billing-insurance.feature;BDD/Features/admin/content-management.feature;BDD/Features/admin/system-administration.feature;BDD/Features/admin/system-management.feature;BDD/Features/advanced/ar-features.feature;BDD/Features/advanced/character-encoding.feature;BDD/Features/advanced/cultural-adaptation.feature;BDD/Features/advanced/custom-reports.feature;BDD/Features/advanced/data-visualization.feature;BDD/Features/advanced/device-sync.feature;BDD/Features/advanced/export-capabilities.feature;BDD/Features/advanced/multilingual-rtl-languages.feature;BDD/Features/advanced/offline-capabilities.feature;BDD/Features/advanced/push-notifications.feature;BDD/Features/advanced/real-time-dashboards.feature;BDD/Features/advanced/translation-workflows.feature;BDD/Features/ai/ai-generation.feature;BDD/Features/ai/ai-quality-assurance.feature;BDD/Features/ai/clinical-review-pipeline.feature;BDD/Features/ai/content-moderation.feature;BDD/Features/ai/cost-control.feature;BDD/Features/ai/hybrid-generation.feature;BDD/Features/ai/model-training.feature;BDD/Features/ai/quality-assurance-advanced.feature;BDD/Features/analytics/outcome-prediction.feature;BDD/Features/analytics/predictive-models.feature;BDD/Features/analytics/recommendation-engine.feature;BDD/Features/analytics/reporting-analytics.feature;BDD/Features/analytics/usage-patterns.feature;BDD/Features/auth/authentication.feature;BDD/Features/auth/organization-management.feature;BDD/Features/auth/subscription-management.feature;BDD/Features/auth/user-management.feature;BDD/Features/billing/enterprise-licensing.feature;BDD/Features/billing/subscription-lifecycle.feature;BDD/Features/communication/communication-tools.feature;BDD/Features/communication/parent-portal.feature;BDD/Features/compliance/accessibility-wcag.feature;BDD/Features/compliance/compliance-reporting.feature;BDD/Features/compliance/coppa-compliance.feature;BDD/Features/compliance/data-privacy.feature;BDD/Features/compliance/ferpa-compliance.feature;BDD/Features/compliance/gdpr-compliance.feature;BDD/Features/compliance/hipaa-compliance.feature;BDD/Features/compliance/pci-dss.feature;BDD/Features/compliance/sox-compliance.feature;BDD/Features/education/clinical-supervision.feature;BDD/Features/education/competency-tracking.feature;BDD/Features/education/continuing-education.feature;BDD/Features/education/video-supervision.feature;BDD/Features/enterprise/change-management.feature;BDD/Features/enterprise/enterprise-analytics.feature;BDD/Features/enterprise/enterprise-integration.feature;BDD/Features/enterprise/enterprise-security.feature;BDD/Features/enterprise/global-deployment.feature;BDD/Features/enterprise/multi-tenant-architecture.feature;BDD/Features/errors/accessibility-errors.feature;BDD/Features/errors/api-rate-limiting.feature;BDD/Features/errors/backup-recovery.feature;BDD/Features/errors/browser-compatibility.feature;BDD/Features/errors/concurrent-access.feature;BDD/Features/errors/data-corruption.feature;BDD/Features/errors/external-service-failures.feature;BDD/Features/errors/graceful-degradation.feature;BDD/Features/errors/input-validation.feature;BDD/Features/errors/network-failures.feature;BDD/Features/errors/offline-online-transitions.feature;BDD/Features/errors/partial-connectivity.feature;BDD/Features/errors/security-errors.feature;BDD/Features/errors/storage-limits.feature;BDD/Features/errors/sync-conflicts.feature;BDD/Features/errors/timeout-handling.feature;BDD/Features/errors/user-error-recovery.feature;BDD/Features/integration/analytics-platforms.feature;BDD/Features/integration/cloud-services.feature;BDD/Features/integration/communication-tools.feature;BDD/Features/integration/ehr-systems.feature;BDD/Features/integration/payment-processors.feature;BDD/Features/integration/school-systems.feature;BDD/Features/integration/third-party-apis.feature;BDD/Features/integrations/ai-services.feature;BDD/Features/integrations/analytics-platforms.feature;BDD/Features/integrations/communication-services.feature;BDD/Features/integrations/ehr-comprehensive.feature;BDD/Features/integrations/ehr-integration.feature;BDD/Features/integrations/external-integrations.feature;BDD/Features/integrations/payment-processing.feature;BDD/Features/integrations/storage-services.feature;BDD/Features/integrations/video-platforms.feature;BDD/Features/marketplace/buyer-experience.feature;BDD/Features/marketplace/follower-system.feature;BDD/Features/marketplace/fraud-detection.feature;BDD/Features/marketplace/quality-ratings.feature;BDD/Features/marketplace/revenue-calculations.feature;BDD/Features/marketplace/seller-analytics-advanced.feature;BDD/Features/marketplace/seller-features.feature;BDD/Features/notifications/notifications-realtime.feature;BDD/Features/performance/api-response-times.feature;BDD/Features/performance/database-performance.feature;BDD/Features/performance/interactive-activities.feature;BDD/Features/performance/load-testing.feature;BDD/Features/performance/mobile-performance.feature;BDD/Features/performance/offline-sync.feature;BDD/Features/performance/search-performance.feature;BDD/Features/performance/video-streaming.feature;BDD/Features/platform/api-management.feature;BDD/Features/platform/batch-operations.feature;BDD/Features/platform/community-features.feature;BDD/Features/platform/file-management.feature;BDD/Features/platform/gamification.feature;BDD/Features/platform/multilingual-support.feature;BDD/Features/protocols/clinical-procedures.feature;BDD/Features/protocols/protocol-compliance.feature;BDD/Features/protocols/therapy-protocols.feature;BDD/Features/resources/advocacy-legal.feature;BDD/Features/resources/bulk-operations.feature;BDD/Features/resources/creation-tools.feature;BDD/Features/resources/free-resources.feature;BDD/Features/resources/interactive-activities.feature;BDD/Features/resources/physical-digital-hybrid.feature;BDD/Features/resources/research-evidence.feature;BDD/Features/resources/resource-creation.feature;BDD/Features/resources/resource-management.feature;BDD/Features/resources/resource-search.feature;BDD/Features/resources/seasonal-holiday.feature;BDD/Features/resources/specialized-content.feature;BDD/Features/scalability/auto-scaling.feature;BDD/Features/scalability/concurrent-sessions.feature;BDD/Features/scalability/data-volume.feature;BDD/Features/scalability/geographic-distribution.feature;BDD/Features/scalability/resource-limits.feature;BDD/Features/security/audit-logging.feature;BDD/Features/security/authentication-security.feature;BDD/Features/security/authorization-rbac.feature;BDD/Features/security/data-encryption.feature;BDD/Features/security/incident-response.feature;BDD/Features/security/penetration-testing.feature;BDD/Features/security/zero-trust.feature;BDD/Features/specialized/aac-communication-boards.feature;BDD/Features/specialized/aac-comprehensive.feature;BDD/Features/specialized/aac-device-integration.feature;BDD/Features/specialized/aac-partner-training.feature;BDD/Features/specialized/aac-symbol-management.feature;BDD/Features/specialized/aba-behavior-intervention.feature;BDD/Features/specialized/aba-data-collection-advanced.feature;BDD/Features/specialized/aba-discrete-trial.feature;BDD/Features/specialized/aba-functional-analysis.feature;BDD/Features/specialized/aba-token-economies.feature;BDD/Features/specialized/aba-tools.feature;BDD/Features/specialized/evidence-based-protocols.feature;BDD/Features/specialized/feeding-therapy.feature;BDD/Features/specialized/pecs-generalization.feature;BDD/Features/specialized/pecs-implementation.feature;BDD/Features/specialized/pecs-picture-discrimination.feature;BDD/Features/specialized/pecs-reinforcer-sampling.feature;BDD/Features/specialized/pecs-six-phases.feature;BDD/Features/specialized/pecs-two-person-training.feature;BDD/Features/specialized/prompt-techniques.feature;BDD/Features/specialized/sensory-integration.feature;BDD/Features/students/iep-goal-tracking.feature;BDD/Features/students/student-management.feature;BDD/Features/therapy/adult-therapy.feature;BDD/Features/therapy/assessment-screening.feature;BDD/Features/therapy/caseload-integration.feature;BDD/Features/therapy/caseload-management.feature;BDD/Features/therapy/curriculum-planning.feature;BDD/Features/therapy/data-collection.feature;BDD/Features/therapy/digital-evaluations.feature;BDD/Features/therapy/documentation-helpers.feature;BDD/Features/therapy/movement-sensory.feature;BDD/Features/therapy/outcome-measurement.feature;BDD/Features/therapy/sensory-rooms.feature;BDD/Features/therapy/session-documentation.feature;BDD/Features/therapy/teletherapy.feature;BDD/Features/therapy/therapy-planning.feature;BDD/Features/therapy/transition-planning.feature;BDD/Features/therapy/virtual-tools.feature
+  -> Using specflow.json
+  SpecFlowGeneratedFiles: BDD/Features/admin/billing-insurance.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/admin/content-management.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/admin/system-administration.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/admin/system-management.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/advanced/ar-features.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/advanced/character-encoding.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/advanced/cultural-adaptation.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/advanced/custom-reports.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/advanced/data-visualization.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/advanced/device-sync.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/advanced/export-capabilities.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/advanced/multilingual-rtl-languages.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/advanced/offline-capabilities.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/advanced/push-notifications.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/advanced/real-time-dashboards.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/advanced/translation-workflows.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/ai/ai-generation.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/ai/ai-quality-assurance.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/ai/clinical-review-pipeline.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/ai/content-moderation.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/ai/cost-control.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/ai/hybrid-generation.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/ai/model-training.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/ai/quality-assurance-advanced.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/analytics/outcome-prediction.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/analytics/predictive-models.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/analytics/recommendation-engine.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/analytics/reporting-analytics.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/analytics/usage-patterns.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/auth/authentication.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/auth/organization-management.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/auth/subscription-management.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/auth/user-management.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/billing/enterprise-licensing.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/billing/subscription-lifecycle.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/communication/communication-tools.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/communication/parent-portal.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/compliance/accessibility-wcag.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/compliance/compliance-reporting.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/compliance/coppa-compliance.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/compliance/data-privacy.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/compliance/ferpa-compliance.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/compliance/gdpr-compliance.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/compliance/hipaa-compliance.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/compliance/pci-dss.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/compliance/sox-compliance.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/education/clinical-supervision.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/education/competency-tracking.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/education/continuing-education.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/education/video-supervision.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/enterprise/change-management.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/enterprise/enterprise-analytics.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/enterprise/enterprise-integration.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/enterprise/enterprise-security.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/enterprise/global-deployment.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/enterprise/multi-tenant-architecture.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/errors/accessibility-errors.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/errors/api-rate-limiting.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/errors/backup-recovery.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/errors/browser-compatibility.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/errors/concurrent-access.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/errors/data-corruption.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/errors/external-service-failures.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/errors/graceful-degradation.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/errors/input-validation.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/errors/network-failures.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/errors/offline-online-transitions.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/errors/partial-connectivity.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/errors/security-errors.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/errors/storage-limits.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/errors/sync-conflicts.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/errors/timeout-handling.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/errors/user-error-recovery.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/integration/analytics-platforms.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/integration/cloud-services.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/integration/communication-tools.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/integration/ehr-systems.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/integration/payment-processors.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/integration/school-systems.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/integration/third-party-apis.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/integrations/ai-services.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/integrations/analytics-platforms.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/integrations/communication-services.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/integrations/ehr-comprehensive.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/integrations/ehr-integration.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/integrations/external-integrations.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/integrations/payment-processing.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/integrations/storage-services.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/integrations/video-platforms.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/marketplace/buyer-experience.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/marketplace/follower-system.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/marketplace/fraud-detection.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/marketplace/quality-ratings.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/marketplace/revenue-calculations.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/marketplace/seller-analytics-advanced.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/marketplace/seller-features.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/notifications/notifications-realtime.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/performance/api-response-times.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/performance/database-performance.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/performance/interactive-activities.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/performance/load-testing.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/performance/mobile-performance.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/performance/offline-sync.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/performance/search-performance.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/performance/video-streaming.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/platform/api-management.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/platform/batch-operations.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/platform/community-features.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/platform/file-management.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/platform/gamification.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/platform/multilingual-support.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/protocols/clinical-procedures.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/protocols/protocol-compliance.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/protocols/therapy-protocols.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/resources/advocacy-legal.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/resources/bulk-operations.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/resources/creation-tools.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/resources/free-resources.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/resources/interactive-activities.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/resources/physical-digital-hybrid.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/resources/research-evidence.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/resources/resource-creation.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/resources/resource-management.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/resources/resource-search.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/resources/seasonal-holiday.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/resources/specialized-content.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/scalability/auto-scaling.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/scalability/concurrent-sessions.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/scalability/data-volume.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/scalability/geographic-distribution.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/scalability/resource-limits.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/security/audit-logging.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/security/authentication-security.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/security/authorization-rbac.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/security/data-encryption.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/security/incident-response.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/security/penetration-testing.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/security/zero-trust.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/aac-communication-boards.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/aac-comprehensive.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/aac-device-integration.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/aac-partner-training.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/aac-symbol-management.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/aba-behavior-intervention.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/aba-data-collection-advanced.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/aba-discrete-trial.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/aba-functional-analysis.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/aba-token-economies.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/aba-tools.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/evidence-based-protocols.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/feeding-therapy.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/pecs-generalization.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/pecs-implementation.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/pecs-picture-discrimination.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/pecs-reinforcer-sampling.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/pecs-six-phases.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/pecs-two-person-training.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/prompt-techniques.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/specialized/sensory-integration.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/students/iep-goal-tracking.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/students/student-management.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/therapy/adult-therapy.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/therapy/assessment-screening.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/therapy/caseload-integration.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/therapy/caseload-management.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/therapy/curriculum-planning.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/therapy/data-collection.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/therapy/digital-evaluations.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/therapy/documentation-helpers.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/therapy/movement-sensory.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/therapy/outcome-measurement.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/therapy/sensory-rooms.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/therapy/session-documentation.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/therapy/teletherapy.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/therapy/therapy-planning.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/therapy/transition-planning.feature.cs
+  SpecFlowGeneratedFiles: BDD/Features/therapy/virtual-tools.feature.cs
+  UPTRMS.Api -> /home/srowe/workspace/pediatric-therapy-resource/api/bin/Debug/net9.0/UPTRMS.Api.dll
+/usr/lib/dotnet/sdk/9.0.107/Microsoft.Common.CurrentVersion.targets(5322,5): warning MSB3026: Could not copy "/home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/Tests/obj/Debug/MvcTestingAppManifest.json" to "bin/Debug/Tests/bin/Debug/Tests/obj/Debug/MvcTestingAppManifest.json". Beginning retry 1 in 1000ms. Could not find file '/home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/Tests/obj/Debug/MvcTestingAppManifest.json'.  [/home/srowe/workspace/pediatric-therapy-resource/api/Tests/UPTRMS.Api.Tests.csproj]
+  UPTRMS.Api.Tests -> /home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/UPTRMS.Api.Tests.dll
+Test run for /home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/UPTRMS.Api.Tests.dll (.NETCoreApp,Version=v9.0)
+VSTest version 17.12.0 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+/home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/UPTRMS.Api.Tests.dll
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.4.1+b9eacec401 (64-bit .NET 9.0.6)
+[xUnit.net 00:00:00.08]   Discovering: UPTRMS.Api.Tests
+[xUnit.net 00:00:00.48]   Discovered:  UPTRMS.Api.Tests
+[xUnit.net 00:00:00.49]   Starting:    UPTRMS.Api.Tests
+-> Loading plugin /home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/LivingDoc.SpecFlowPlugin.dll
+-> Loading plugin /home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/TechTalk.SpecFlow.xUnit.SpecFlowPlugin.dll
+-> Loading plugin /home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/UPTRMS.Api.Tests.dll
+-> Using specflow.json
+-> LivingDocPlugin: Output generated in: /home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/TestExecution.json
+[xUnit.net 00:00:00.88]   Finished:    UPTRMS.Api.Tests
+No test matches the given testcase filter `FullyQualifiedName~AuthenticationFeature` in /home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/UPTRMS.Api.Tests.dll
+

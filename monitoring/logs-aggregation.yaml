@@ -1,0 +1,566 @@
+# EFK Stack configuration for UPTRMS logging
+# Elasticsearch, Fluentd, Kibana for HIPAA-compliant log aggregation
+---
+# Elasticsearch namespace
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: uptrms-logging
+---
+# Elasticsearch StatefulSet
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: elasticsearch
+  namespace: uptrms-logging
+spec:
+  serviceName: elasticsearch
+  replicas: 3
+  selector:
+    matchLabels:
+      app: elasticsearch
+  template:
+    metadata:
+      labels:
+        app: elasticsearch
+    spec:
+      initContainers:
+      - name: increase-vm-max-map
+        image: busybox
+        command: ["sysctl", "-w", "vm.max_map_count=262144"]
+        securityContext:
+          privileged: true
+      - name: increase-fd-ulimit
+        image: busybox
+        command: ["sh", "-c", "ulimit -n 65536"]
+        securityContext:
+          privileged: true
+      containers:
+      - name: elasticsearch
+        image: docker.elastic.co/elasticsearch/elasticsearch:8.10.0
+        env:
+        - name: cluster.name
+          value: uptrms-logs
+        - name: node.name
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: discovery.seed_hosts
+          value: "elasticsearch-0.elasticsearch,elasticsearch-1.elasticsearch,elasticsearch-2.elasticsearch"
+        - name: cluster.initial_master_nodes
+          value: "elasticsearch-0,elasticsearch-1,elasticsearch-2"
+        - name: ES_JAVA_OPTS
+          value: "-Xms2g -Xmx2g"
+        # Security settings for HIPAA compliance
+        - name: xpack.security.enabled
+          value: "true"
+        - name: xpack.security.transport.ssl.enabled
+          value: "true"
+        - name: xpack.security.transport.ssl.verification_mode
+          value: certificate
+        - name: xpack.security.transport.ssl.keystore.path
+          value: /usr/share/elasticsearch/config/certs/elastic-certificates.p12
+        - name: xpack.security.transport.ssl.truststore.path
+          value: /usr/share/elasticsearch/config/certs/elastic-certificates.p12
+        - name: xpack.security.http.ssl.enabled
+          value: "true"
+        - name: xpack.security.http.ssl.keystore.path
+          value: /usr/share/elasticsearch/config/certs/elastic-certificates.p12
+        - name: xpack.security.http.ssl.truststore.path
+          value: /usr/share/elasticsearch/config/certs/elastic-certificates.p12
+        # Audit logging for HIPAA
+        - name: xpack.security.audit.enabled
+          value: "true"
+        - name: xpack.security.audit.outputs
+          value: "logfile"
+        - name: ELASTIC_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: elasticsearch-credentials
+              key: password
+        resources:
+          requests:
+            cpu: 1000m
+            memory: 2Gi
+          limits:
+            cpu: 2000m
+            memory: 4Gi
+        ports:
+        - containerPort: 9200
+          name: http
+        - containerPort: 9300
+          name: transport
+        volumeMounts:
+        - name: data
+          mountPath: /usr/share/elasticsearch/data
+        - name: certificates
+          mountPath: /usr/share/elasticsearch/config/certs
+          readOnly: true
+        livenessProbe:
+          tcpSocket:
+            port: 9200
+          initialDelaySeconds: 60
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /_cluster/health
+            port: 9200
+            scheme: HTTPS
+            httpHeaders:
+            - name: Authorization
+              value: Basic ZWxhc3RpYzpjaGFuZ2VtZQ==
+          initialDelaySeconds: 30
+          periodSeconds: 10
+      volumes:
+      - name: certificates
+        secret:
+          secretName: elasticsearch-certificates
+  volumeClaimTemplates:
+  - metadata:
+      name: data
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      storageClassName: managed-premium-retain
+      resources:
+        requests:
+          storage: 100Gi
+---
+# Elasticsearch Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: elasticsearch
+  namespace: uptrms-logging
+spec:
+  clusterIP: None
+  selector:
+    app: elasticsearch
+  ports:
+  - port: 9200
+    name: http
+  - port: 9300
+    name: transport
+---
+# Fluentd DaemonSet
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: fluentd
+  namespace: uptrms-logging
+spec:
+  selector:
+    matchLabels:
+      app: fluentd
+  template:
+    metadata:
+      labels:
+        app: fluentd
+    spec:
+      serviceAccountName: fluentd
+      containers:
+      - name: fluentd
+        image: fluent/fluentd-kubernetes-daemonset:v1.16-debian-elasticsearch8
+        env:
+        - name: FLUENT_ELASTICSEARCH_HOST
+          value: elasticsearch.uptrms-logging.svc.cluster.local
+        - name: FLUENT_ELASTICSEARCH_PORT
+          value: "9200"
+        - name: FLUENT_ELASTICSEARCH_SCHEME
+          value: https
+        - name: FLUENT_ELASTICSEARCH_SSL_VERIFY
+          value: "false"
+        - name: FLUENT_ELASTICSEARCH_USER
+          value: elastic
+        - name: FLUENT_ELASTICSEARCH_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: elasticsearch-credentials
+              key: password
+        - name: FLUENT_ELASTICSEARCH_LOGSTASH_FORMAT
+          value: "true"
+        - name: FLUENT_ELASTICSEARCH_LOGSTASH_PREFIX
+          value: uptrms
+        - name: FLUENT_ELASTICSEARCH_BUFFER_CHUNK_LIMIT_SIZE
+          value: 2M
+        - name: FLUENT_ELASTICSEARCH_BUFFER_QUEUE_LIMIT_LENGTH
+          value: "32"
+        - name: FLUENT_ELASTICSEARCH_RETRY_MAX_TIMES
+          value: "30"
+        - name: FLUENT_ELASTICSEARCH_RETRY_WAIT
+          value: 10s
+        - name: FLUENT_ELASTICSEARCH_RELOAD_CONNECTIONS
+          value: "false"
+        resources:
+          requests:
+            cpu: 100m
+            memory: 200Mi
+          limits:
+            cpu: 500m
+            memory: 500Mi
+        volumeMounts:
+        - name: varlog
+          mountPath: /var/log
+        - name: dockercontainerlogdirectory
+          mountPath: /var/log/pods
+          readOnly: true
+        - name: config
+          mountPath: /fluentd/etc
+        - name: buffer
+          mountPath: /var/log/fluentd-buffers
+      volumes:
+      - name: varlog
+        hostPath:
+          path: /var/log
+      - name: dockercontainerlogdirectory
+        hostPath:
+          path: /var/log/pods
+      - name: config
+        configMap:
+          name: fluentd-config
+      - name: buffer
+        emptyDir: {}
+---
+# Fluentd ConfigMap
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fluentd-config
+  namespace: uptrms-logging
+data:
+  fluent.conf: |
+    <system>
+      log_level info
+    </system>
+
+    # Input from Kubernetes
+    <source>
+      @type tail
+      path /var/log/pods/*/*/*.log
+      pos_file /var/log/fluentd-containers.log.pos
+      tag kubernetes.*
+      read_from_head true
+      <parse>
+        @type multi_format
+        <pattern>
+          format json
+          time_format %Y-%m-%dT%H:%M:%S.%NZ
+          keep_time_key true
+        </pattern>
+        <pattern>
+          format /^(?<time>.+) (?<stream>stdout|stderr) [^ ]* (?<log>.*)$/
+          time_format %Y-%m-%dT%H:%M:%S.%N%:z
+          keep_time_key true
+        </pattern>
+      </parse>
+    </source>
+
+    # Enrich with Kubernetes metadata
+    <filter kubernetes.**>
+      @type kubernetes_metadata
+      @id filter_kube_metadata
+      kubernetes_url "#{ENV['KUBERNETES_URL'] || 'https://' + ENV.fetch('KUBERNETES_SERVICE_HOST') + ':' + ENV.fetch('KUBERNETES_SERVICE_PORT') + '/api'}"
+      verify_ssl "#{ENV['KUBERNETES_VERIFY_SSL'] || true}"
+      ca_file "#{ENV['KUBERNETES_CA_FILE'] || '/var/run/secrets/kubernetes.io/serviceaccount/ca.crt'}"
+      skip_labels false
+      skip_container_metadata false
+      skip_master_url false
+      skip_namespace_metadata false
+    </filter>
+
+    # HIPAA compliance - filter PHI
+    <filter kubernetes.var.log.pods.uptrms-**>
+      @type record_modifier
+      <record>
+        # Mask potential PHI fields
+        ${record["log"].gsub(/\b\d{3}-\d{2}-\d{4}\b/, "XXX-XX-XXXX") if record["log"]} # SSN
+        ${record["log"].gsub(/\b\d{10}\b/, "XXXXXXXXXX") if record["log"]} # Phone
+        ${record["log"].gsub(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i, "XXXXX@XXXXX.XXX") if record["log"]} # Email
+      </record>
+    </filter>
+
+    # Add security context
+    <filter kubernetes.**>
+      @type record_transformer
+      enable_ruby true
+      <record>
+        cluster_name uptrms-prod
+        environment ${record["kubernetes"]["namespace_name"].split("-").last}
+        compliance_tag hipaa
+        timestamp ${Time.now.utc.iso8601}
+      </record>
+    </filter>
+
+    # Buffer and send to Elasticsearch
+    <match kubernetes.**>
+      @type elasticsearch
+      @id out_es
+      @log_level info
+      include_tag_key true
+      host "#{ENV['FLUENT_ELASTICSEARCH_HOST']}"
+      port "#{ENV['FLUENT_ELASTICSEARCH_PORT']}"
+      path ""
+      scheme "#{ENV['FLUENT_ELASTICSEARCH_SCHEME'] || 'http'}"
+      ssl_verify "#{ENV['FLUENT_ELASTICSEARCH_SSL_VERIFY'] || 'true'}"
+      ssl_version TLSv1_2
+      user "#{ENV['FLUENT_ELASTICSEARCH_USER'] || 'elastic'}"
+      password "#{ENV['FLUENT_ELASTICSEARCH_PASSWORD']}"
+      reload_connections "#{ENV['FLUENT_ELASTICSEARCH_RELOAD_CONNECTIONS'] || 'false'}"
+      reconnect_on_error true
+      reload_on_failure true
+      log_es_400_reason true
+      logstash_prefix "#{ENV['FLUENT_ELASTICSEARCH_LOGSTASH_PREFIX'] || 'logstash'}"
+      logstash_dateformat %Y.%m.%d
+      logstash_format true
+      index_name uptrms-logs
+      type_name _doc
+      include_timestamp true
+      template_name uptrms-logs
+      template_file /fluentd/etc/elasticsearch-template.json
+      <buffer>
+        @type file
+        path /var/log/fluentd-buffers/kubernetes.system.buffer
+        flush_mode interval
+        retry_type exponential_backoff
+        flush_thread_count 2
+        flush_interval 5s
+        retry_forever
+        retry_max_interval 30
+        chunk_limit_size "#{ENV['FLUENT_ELASTICSEARCH_BUFFER_CHUNK_LIMIT_SIZE'] || '2M'}"
+        queue_limit_length "#{ENV['FLUENT_ELASTICSEARCH_BUFFER_QUEUE_LIMIT_LENGTH'] || 8}"
+        overflow_action block
+      </buffer>
+    </match>
+
+  elasticsearch-template.json: |
+    {
+      "index_patterns": ["uptrms-logs-*"],
+      "settings": {
+        "number_of_shards": 3,
+        "number_of_replicas": 1,
+        "index.lifecycle.name": "uptrms-logs-policy",
+        "index.lifecycle.rollover_alias": "uptrms-logs"
+      },
+      "mappings": {
+        "properties": {
+          "@timestamp": { "type": "date" },
+          "kubernetes": {
+            "properties": {
+              "container_name": { "type": "keyword" },
+              "namespace_name": { "type": "keyword" },
+              "pod_name": { "type": "keyword" },
+              "pod_id": { "type": "keyword" },
+              "host": { "type": "keyword" },
+              "labels": { "type": "object" }
+            }
+          },
+          "log": { "type": "text" },
+          "stream": { "type": "keyword" },
+          "cluster_name": { "type": "keyword" },
+          "environment": { "type": "keyword" },
+          "compliance_tag": { "type": "keyword" }
+        }
+      }
+    }
+---
+# Kibana Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kibana
+  namespace: uptrms-logging
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kibana
+  template:
+    metadata:
+      labels:
+        app: kibana
+    spec:
+      containers:
+      - name: kibana
+        image: docker.elastic.co/kibana/kibana:8.10.0
+        env:
+        - name: ELASTICSEARCH_HOSTS
+          value: '["https://elasticsearch:9200"]'
+        - name: ELASTICSEARCH_USERNAME
+          value: elastic
+        - name: ELASTICSEARCH_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: elasticsearch-credentials
+              key: password
+        - name: ELASTICSEARCH_SSL_VERIFICATIONMODE
+          value: none
+        - name: SERVER_SSL_ENABLED
+          value: "true"
+        - name: SERVER_SSL_CERTIFICATE
+          value: /usr/share/kibana/config/certs/kibana.crt
+        - name: SERVER_SSL_KEY
+          value: /usr/share/kibana/config/certs/kibana.key
+        # Security headers for HIPAA
+        - name: SERVER_SECURITYRESPONSEHEADERS_STRICTTRANSPORTSECURITY
+          value: "max-age=31536000; includeSubDomains"
+        - name: SERVER_SECURITYRESPONSEHEADERS_XCONTENTTYPOPTIONS
+          value: "nosniff"
+        - name: SERVER_SECURITYRESPONSEHEADERS_XFRAMEOPTIONS
+          value: "DENY"
+        - name: XPACK_SECURITY_ENABLED
+          value: "true"
+        - name: XPACK_SECURITY_ENCRYPTIONKEY
+          valueFrom:
+            secretKeyRef:
+              name: kibana-encryption-key
+              key: key
+        - name: XPACK_ENCRYPTEDSAVEDOBJECTS_ENCRYPTIONKEY
+          valueFrom:
+            secretKeyRef:
+              name: kibana-encryption-key
+              key: key
+        - name: XPACK_REPORTING_ENCRYPTIONKEY
+          valueFrom:
+            secretKeyRef:
+              name: kibana-encryption-key
+              key: key
+        resources:
+          requests:
+            cpu: 500m
+            memory: 1Gi
+          limits:
+            cpu: 1000m
+            memory: 2Gi
+        ports:
+        - containerPort: 5601
+          name: http
+        volumeMounts:
+        - name: certificates
+          mountPath: /usr/share/kibana/config/certs
+          readOnly: true
+        livenessProbe:
+          httpGet:
+            path: /api/status
+            port: 5601
+            scheme: HTTPS
+          initialDelaySeconds: 60
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /api/status
+            port: 5601
+            scheme: HTTPS
+          initialDelaySeconds: 30
+          periodSeconds: 10
+      volumes:
+      - name: certificates
+        secret:
+          secretName: kibana-certificates
+---
+# Kibana Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: kibana
+  namespace: uptrms-logging
+spec:
+  type: ClusterIP
+  selector:
+    app: kibana
+  ports:
+  - port: 5601
+    targetPort: 5601
+    protocol: TCP
+---
+# ServiceAccount for Fluentd
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: fluentd
+  namespace: uptrms-logging
+---
+# ClusterRole for Fluentd
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: fluentd
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  - namespaces
+  verbs:
+  - get
+  - list
+  - watch
+---
+# ClusterRoleBinding for Fluentd
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: fluentd
+roleRef:
+  kind: ClusterRole
+  name: fluentd
+  apiGroup: rbac.authorization.k8s.io
+subjects:
+- kind: ServiceAccount
+  name: fluentd
+  namespace: uptrms-logging
+---
+# ILM Policy for log retention (HIPAA requires 7 years)
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: elasticsearch-ilm-policy
+  namespace: uptrms-logging
+data:
+  ilm-policy.json: |
+    {
+      "policy": {
+        "phases": {
+          "hot": {
+            "actions": {
+              "rollover": {
+                "max_size": "50GB",
+                "max_age": "30d"
+              },
+              "set_priority": {
+                "priority": 100
+              }
+            }
+          },
+          "warm": {
+            "min_age": "30d",
+            "actions": {
+              "set_priority": {
+                "priority": 50
+              },
+              "allocate": {
+                "number_of_replicas": 1
+              },
+              "forcemerge": {
+                "max_num_segments": 1
+              }
+            }
+          },
+          "cold": {
+            "min_age": "90d",
+            "actions": {
+              "set_priority": {
+                "priority": 0
+              },
+              "allocate": {
+                "number_of_replicas": 0
+              }
+            }
+          },
+          "delete": {
+            "min_age": "2555d",
+            "actions": {
+              "delete": {}
+            }
+          }
+        }
+      }
+    }
