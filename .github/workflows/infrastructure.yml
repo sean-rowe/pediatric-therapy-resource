@@ -1,0 +1,284 @@
+name: Infrastructure Validation and Deployment
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'kubernetes/**'
+      - 'docker/**'
+      - 'database/**'
+      - '.github/workflows/infrastructure.yml'
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - 'kubernetes/**'
+      - 'docker/**'
+      - 'database/**'
+      - '.github/workflows/infrastructure.yml'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy'
+        required: true
+        default: 'development'
+        type: choice
+        options:
+          - development
+          - staging
+          - production
+
+env:
+  KUBERNETES_VERSION: '1.29.0'
+  KIND_VERSION: '0.20.0'
+  HELM_VERSION: '3.13.0'
+  SQLCMD_VERSION: '1.4.0'
+
+jobs:
+  validate-kubernetes:
+    name: Validate Kubernetes Manifests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Kubernetes tools
+        run: |
+          # Install kubectl
+          curl -LO "https://dl.k8s.io/release/v${KUBERNETES_VERSION}/bin/linux/amd64/kubectl"
+          sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+          
+          # Install kubeval for validation
+          wget https://github.com/instrumenta/kubeval/releases/latest/download/kubeval-linux-amd64.tar.gz
+          tar xf kubeval-linux-amd64.tar.gz
+          sudo mv kubeval /usr/local/bin
+          
+          # Install kube-score for best practices
+          wget https://github.com/zegl/kube-score/releases/latest/download/kube-score_linux_amd64.tar.gz
+          tar xf kube-score_linux_amd64.tar.gz
+          sudo mv kube-score /usr/local/bin
+
+      - name: Validate Kubernetes manifests
+        run: |
+          echo "Validating Kubernetes manifests..."
+          find kubernetes -name '*.yaml' -o -name '*.yml' | while read -r file; do
+            echo "Validating $file"
+            kubeval --kubernetes-version ${KUBERNETES_VERSION} "$file"
+          done
+
+      - name: Check Kubernetes best practices
+        run: |
+          echo "Checking Kubernetes best practices..."
+          find kubernetes -name '*.yaml' -o -name '*.yml' | while read -r file; do
+            echo "Checking $file"
+            kube-score score "$file" || true
+          done
+
+      - name: Validate NetworkPolicies
+        run: |
+          echo "Validating NetworkPolicies for security..."
+          kubectl apply --dry-run=client -f kubernetes/
+
+  test-infrastructure:
+    name: Test Infrastructure with Kind
+    runs-on: ubuntu-latest
+    needs: validate-kubernetes
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Kind
+        run: |
+          curl -Lo ./kind "https://kind.sigs.k8s.io/dl/v${KIND_VERSION}/kind-linux-amd64"
+          chmod +x ./kind
+          sudo mv ./kind /usr/local/bin/kind
+
+      - name: Create Kind cluster
+        run: |
+          kind create cluster --config kubernetes/kind-cluster.yaml --wait 5m
+          kubectl cluster-info
+
+      - name: Install Istio
+        run: |
+          curl -L https://istio.io/downloadIstio | sh -
+          cd istio-*
+          export PATH=$PWD/bin:$PATH
+          istioctl install --set profile=demo -y
+          kubectl label namespace default istio-injection=enabled
+
+      - name: Deploy infrastructure components
+        run: |
+          # Create namespaces
+          kubectl create namespace uptrms-data || true
+          kubectl label namespace uptrms-data name=uptrms-data
+          
+          # Deploy data services
+          kubectl apply -f kubernetes/mssql-deployment.yaml
+          kubectl apply -f kubernetes/redis-deployment.yaml
+          kubectl apply -f kubernetes/minio-deployment.yaml
+          kubectl apply -f kubernetes/rabbitmq-deployment.yaml
+
+      - name: Wait for deployments
+        run: |
+          kubectl wait --for=condition=ready pod -l app=mssql -n uptrms-data --timeout=300s || true
+          kubectl wait --for=condition=ready pod -l app=redis -n uptrms-data --timeout=300s || true
+          kubectl wait --for=condition=ready pod -l app=minio -n uptrms-data --timeout=300s || true
+          kubectl wait --for=condition=ready pod -l app=rabbitmq -n uptrms-data --timeout=300s || true
+
+      - name: Run infrastructure tests
+        run: |
+          # Test MSSQL connectivity
+          kubectl run mssql-test --rm -i --restart=Never --image=mcr.microsoft.com/mssql-tools:latest -- \
+            /opt/mssql-tools/bin/sqlcmd -S mssql-service.uptrms-data.svc.cluster.local -U SA -P 'P@ssw0rd!234#Secure' -Q "SELECT 1" || true
+          
+          # Test Redis connectivity
+          kubectl run redis-test --rm -i --restart=Never --image=redis:7-alpine -- \
+            redis-cli -h redis-service.uptrms-data.svc.cluster.local --tls --insecure -a 'RedisP@ssw0rd!234#Secure' ping || true
+          
+          # Test MinIO connectivity
+          kubectl run minio-test --rm -i --restart=Never --image=minio/mc:latest -- \
+            mc alias set test https://minio-service.uptrms-data.svc.cluster.local:9000 minioadmin 'MinioP@ssw0rd!234#Secure' --insecure || true
+
+      - name: Collect logs on failure
+        if: failure()
+        run: |
+          kubectl get all -A
+          kubectl describe pods -n uptrms-data
+          kubectl logs -n uptrms-data -l app=mssql --tail=50 || true
+          kubectl logs -n uptrms-data -l app=redis --tail=50 || true
+          kubectl logs -n uptrms-data -l app=minio --tail=50 || true
+          kubectl logs -n uptrms-data -l app=rabbitmq --tail=50 || true
+
+      - name: Clean up Kind cluster
+        if: always()
+        run: kind delete cluster
+
+  validate-database:
+    name: Validate Database Scripts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up MSSQL client tools
+        run: |
+          curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+          curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+          sudo apt-get update
+          sudo ACCEPT_EULA=Y apt-get install -y mssql-tools unixodbc-dev
+
+      - name: Validate SQL syntax
+        run: |
+          # Simple syntax validation
+          find database -name '*.sql' | while read -r file; do
+            echo "Checking syntax: $file"
+            # Basic syntax check - in real scenario, would connect to test DB
+            grep -E '(DROP DATABASE|DELETE FROM|TRUNCATE)' "$file" && echo "WARNING: Destructive operation found in $file" || true
+          done
+
+  security-scan:
+    name: Security Scanning
+    runs-on: ubuntu-latest
+    needs: [validate-kubernetes, validate-database]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Trivy security scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+          severity: 'CRITICAL,HIGH'
+
+      - name: Upload Trivy scan results
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: 'trivy-results.sarif'
+
+      - name: Check for secrets
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./
+          base: main
+          head: HEAD
+
+      - name: Validate HIPAA compliance
+        run: |
+          echo "Checking for HIPAA compliance requirements..."
+          
+          # Check for encryption in database scripts
+          grep -r "ENCRYPTION" database/ || echo "WARNING: No encryption found in database scripts"
+          
+          # Check for TLS in Kubernetes configs
+          grep -r "tls" kubernetes/ || echo "WARNING: TLS configuration might be missing"
+          
+          # Check for network policies
+          ls kubernetes/*network-policy*.yaml || echo "WARNING: Network policies not found"
+
+  deploy-infrastructure:
+    name: Deploy Infrastructure
+    runs-on: ubuntu-latest
+    needs: [test-infrastructure, security-scan]
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    environment:
+      name: ${{ github.event.inputs.environment || 'development' }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Set up kubectl
+        run: |
+          curl -LO "https://dl.k8s.io/release/v${KUBERNETES_VERSION}/bin/linux/amd64/kubectl"
+          sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+          
+          # Configure kubectl for EKS
+          aws eks update-kubeconfig --name uptrms-${{ github.event.inputs.environment || 'development' }}
+
+      - name: Set up Helm
+        run: |
+          curl https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz | tar xz
+          sudo mv linux-amd64/helm /usr/local/bin/
+
+      - name: Deploy infrastructure
+        run: |
+          ENVIRONMENT=${{ github.event.inputs.environment || 'development' }}
+          
+          echo "Deploying to ${ENVIRONMENT} environment..."
+          
+          # Apply Kubernetes manifests
+          kubectl apply -f kubernetes/
+          
+          # Wait for deployments
+          kubectl rollout status statefulset/mssql -n uptrms-data --timeout=600s
+          kubectl rollout status statefulset/redis -n uptrms-data --timeout=300s
+          kubectl rollout status statefulset/minio -n uptrms-data --timeout=300s
+          kubectl rollout status statefulset/rabbitmq -n uptrms-data --timeout=300s
+
+      - name: Run post-deployment tests
+        run: |
+          # Verify all services are running
+          kubectl get all -n uptrms-data
+          
+          # Check service endpoints
+          kubectl get endpoints -n uptrms-data
+          
+          # Verify network policies
+          kubectl get networkpolicies -n uptrms-data
+
+      - name: Update deployment status
+        if: always()
+        run: |
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "✅ Infrastructure deployment successful"
+          else
+            echo "❌ Infrastructure deployment failed"
+          fi

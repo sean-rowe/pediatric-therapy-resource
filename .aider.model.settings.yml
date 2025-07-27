@@ -1,0 +1,3 @@
+- name: ollama_chat/deepseek-coder-v2:16b
+  extra_params:
+    num_ctx: 65536  # or even 65536 for really large contexts

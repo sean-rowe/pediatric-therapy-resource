@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>SpecFlow.Plus.LivingDocPlugin</id>
+    <version>3.9.57</version>
+    <title>SpecFlow.Plus.LivingDocPlugin</title>
+    <authors>SpecFlow Team</authors>
+    <owners>SpecFlow Team</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <icon>images\specflow-icon.png</icon>
+    <projectUrl>https://docs.specflow.org/projects/specflow-livingdoc</projectUrl>
+    <description>A plugin for SpecFlow to generate a shareable HTML Gherkin feature execution report (living documentation). Use together with SpecFlow.Plus.LivingDoc.CLI.</description>
+    <summary>A plugin for SpecFlow to generate a shareable HTML Gherkin feature execution report (living documentation). Use together with SpecFlow.Plus.LivingDoc.CLI.</summary>
+    <copyright>Copyright © SpecFlow Team</copyright>
+    <language>en-US</language>
+    <tags>specflow livingdoc report</tags>
+    <dependencies>
+      <dependency id="SpecFlow" version="[3.9.8, 3.10.0)" />
+      <dependency id="SpecFlow.Tools.MsBuild.Generation" version="[3.9.8, 3.10.0)" />
+      <dependency id="SpecFlow.Internal.Json" version="1.0.8" />
+    </dependencies>
+  </metadata>
+</package>

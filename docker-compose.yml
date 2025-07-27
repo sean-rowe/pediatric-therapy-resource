@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: therapydocs-mssql
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD:-TherapyDocs2024!}
+      - MSSQL_PID=Developer
+      - MSSQL_USER=SA
+    ports:
+      - "1434:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql
+      - ./sql:/docker-entrypoint-initdb.d
+      - ./sql/init:/opt/mssql-init
+    healthcheck:
+      test: ["CMD", "/opt/mssql-tools/bin/sqlcmd", "-S", "localhost", "-U", "SA", "-P", "${MSSQL_SA_PASSWORD:-TherapyDocs2024!}", "-Q", "SELECT 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+    networks:
+      - therapydocs-network
+
+volumes:
+  mssql-data:
+    driver: local
+
+networks:
+  therapydocs-network:
+    driver: bridge

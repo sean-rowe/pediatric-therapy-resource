@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UPTRMS.Api</name>
+    </assembly>
+    <members>
+        <member name="M:UPTRMS.Api.Controllers.AdminController.GetAdminDashboard">
+            <summary>
+            Gets admin dashboard with system metrics and health status
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.UploadResource(UPTRMS.Api.Controllers.ContentUploadRequest)">
+            <summary>
+            Content upload portal for verified content creators
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.GetPendingReviews">
+            <summary>
+            Gets resources pending review for clinical accuracy
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.AssignReviewer(UPTRMS.Api.Controllers.AssignReviewerRequest)">
+            <summary>
+            Assigns a resource to a clinical reviewer for peer review
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.SubmitReview(UPTRMS.Api.Controllers.SubmitReviewRequest)">
+            <summary>
+            Submits peer review evaluation for clinical accuracy
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.GetResourceReviews(System.Guid)">
+            <summary>
+            Gets review history for a specific resource
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.RetireResource(UPTRMS.Api.Controllers.RetireResourceRequest)">
+            <summary>
+            Initiates content retirement workflow for outdated resources
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.VerifyCopyright(UPTRMS.Api.Controllers.CopyrightVerificationRequest)">
+            <summary>
+            Initiates automated copyright verification for uploaded content
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.BulkUpload(UPTRMS.Api.Controllers.BulkUploadRequest)">
+            <summary>
+            Initiates bulk upload process for content partners
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.GetBulkUploadStatus(System.Guid)">
+            <summary>
+            Gets bulk upload job status and progress
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.GetRetiredResources">
+            <summary>
+            Gets retired resources with their alternatives
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.SubmitVersionUpdate(UPTRMS.Api.Models.DTOs.VersionUpdateRequest)">
+            <summary>
+            Submits updated version of existing resource
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.ApproveVersionUpdate(UPTRMS.Api.Models.DTOs.VersionApprovalRequest)">
+            <summary>
+            Approves version update and manages version history
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.GetVersionHistory(System.Guid)">
+            <summary>
+            Gets version history for a resource
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.GetQualityMetrics">
+            <summary>
+            Gets quality review analytics and metrics for the content management dashboard
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.AutoAssignReviewers(UPTRMS.Api.Models.DTOs.AutoAssignmentRequest)">
+            <summary>
+            Runs intelligent reviewer assignment system for pending resources
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.CreateCategory(UPTRMS.Api.Models.DTOs.CategoryCreationRequest)">
+            <summary>
+            Manages content categorization taxonomy for resource organization
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.GetCategoryTaxonomy(System.Boolean)">
+            <summary>
+            Gets category taxonomy with usage statistics
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.ReviewContentForCategory(System.Guid,UPTRMS.Api.Models.DTOs.CategoryReviewRequest)">
+            <summary>
+            Reviews existing content for new category assignment
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.ContentManagementController.ValidateMetadata(UPTRMS.Api.Models.DTOs.MetadataValidationRequest)">
+            <summary>
+            Validate content metadata quality according to platform standards
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:UPTRMS.Api.Migrations.AddAuthenticationTokenTables">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.AddAuthenticationTokenTables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.AddAuthenticationTokenTables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.AddAuthenticationTokenTables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.ParentAccess">
+            <summary>
+            Parent access to student information
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.StudentAssignment">
+            <summary>
+            Student assignment tracking
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.AIGeneration">
+            <summary>
+            AI content generation record
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.MarketplaceTransaction">
+            <summary>
+            Marketplace transaction for resource purchases
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.SellerFollower">
+            <summary>
+            Seller follower relationship
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.SellerPayout">
+            <summary>
+            Seller payout record
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.Organization">
+            <summary>
+            Organization entity for schools, clinics, and therapy practices
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.Resource">
+            <summary>
+            Therapy material entity representing worksheets, games, videos, assessments, etc.
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.Category">
+            <summary>
+            Category for organizing resources
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.ResourceCategory">
+            <summary>
+            Junction table for resource-category many-to-many relationship
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.SellerProfile">
+            <summary>
+            Marketplace seller entity for therapists selling resources
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.Session">
+            <summary>
+            Therapy session entity for tracking sessions and resource usage
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.SessionResource">
+            <summary>
+            Junction table for resources used in sessions
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.Student">
+            <summary>
+            Individual learner entity with encrypted PII
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.ResourceDownload">
+            <summary>
+            Resource download tracking
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.ResourceRating">
+            <summary>
+            Resource rating and review
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.StudentProgress">
+            <summary>
+            Student progress tracking
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.SessionDataPoint">
+            <summary>
+            Session data point for detailed tracking
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Models.Domain.User">
+            <summary>
+            Core user entity representing therapy professionals, parents, and other system users
+            </summary>
+        </member>
+    </members>
+</doc>

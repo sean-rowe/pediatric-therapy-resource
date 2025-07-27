@@ -1,0 +1,282 @@
+# MinIO deployment for S3-compatible object storage
+apiVersion: v1
+kind: Secret
+metadata:
+  name: minio-secret
+  namespace: uptrms-data
+type: Opaque
+stringData:
+  root-user: "minioadmin"
+  root-password: "MinioP@ssw0rd!234#Secure"
+---
+# PersistentVolumeClaim for MinIO data
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: minio-data-pvc
+  namespace: uptrms-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Gi
+  storageClassName: standard
+---
+# StatefulSet for MinIO
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: minio
+  namespace: uptrms-data
+spec:
+  serviceName: minio-service
+  replicas: 1
+  selector:
+    matchLabels:
+      app: minio
+  template:
+    metadata:
+      labels:
+        app: minio
+        security: high
+        compliance: hipaa
+    spec:
+      securityContext:
+        fsGroup: 1000
+        runAsUser: 1000
+        runAsNonRoot: true
+      initContainers:
+      # Generate TLS certificates
+      - name: tls-init
+        image: smallstep/step-cli:latest
+        command:
+        - sh
+        - -c
+        - |
+          step certificate create minio-server /certs/public.crt /certs/private.key \
+            --profile self-signed --subtle --no-password --insecure \
+            --san minio-service --san minio-service.uptrms-data.svc.cluster.local \
+            --san localhost --san 127.0.0.1
+          step certificate create minio-ca /certs/ca.crt /certs/ca.key \
+            --profile root-ca --no-password --insecure
+          chmod 600 /certs/*
+          chown 1000:1000 /certs/*
+        volumeMounts:
+        - name: minio-certs
+          mountPath: /certs
+        securityContext:
+          runAsUser: 0
+      containers:
+      - name: minio
+        image: quay.io/minio/minio:latest
+        command:
+        - /bin/bash
+        - -c
+        args:
+        - |
+          minio server /data \
+            --address :9000 \
+            --console-address :9001 \
+            --certs-dir /certs
+        ports:
+        - containerPort: 9000
+          name: api
+        - containerPort: 9001
+          name: console
+        env:
+        - name: MINIO_ROOT_USER
+          valueFrom:
+            secretKeyRef:
+              name: minio-secret
+              key: root-user
+        - name: MINIO_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: minio-secret
+              key: root-password
+        - name: MINIO_PROMETHEUS_AUTH_TYPE
+          value: "public"
+        - name: MINIO_BROWSER_REDIRECT_URL
+          value: "https://minio-console.local"
+        - name: MINIO_SERVER_URL
+          value: "https://minio-api.local"
+        # HIPAA compliance settings
+        - name: MINIO_API_SECURE_CONSOLE
+          value: "on"
+        - name: MINIO_IDENTITY_OPENID_ENABLE
+          value: "on"
+        - name: MINIO_AUDIT_WEBHOOK_ENABLE
+          value: "on"
+        - name: MINIO_AUDIT_WEBHOOK_ENDPOINT
+          value: "https://audit-service.uptrms-data.svc.cluster.local/minio-audit"
+        volumeMounts:
+        - name: minio-data
+          mountPath: /data
+        - name: minio-certs
+          mountPath: /certs
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "500m"
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+        livenessProbe:
+          httpGet:
+            path: /minio/health/live
+            port: 9000
+            scheme: HTTPS
+          initialDelaySeconds: 30
+          periodSeconds: 20
+          timeoutSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /minio/health/ready
+            port: 9000
+            scheme: HTTPS
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 5
+      - name: create-buckets
+        image: minio/mc:latest
+        command:
+        - /bin/bash
+        - -c
+        - |
+          sleep 30
+          mc alias set myminio https://localhost:9000 $MINIO_ROOT_USER $MINIO_ROOT_PASSWORD --insecure
+          
+          # Create buckets with versioning and encryption
+          mc mb myminio/therapy-resources --insecure || true
+          mc mb myminio/user-uploads --insecure || true
+          mc mb myminio/ai-generated --insecure || true
+          mc mb myminio/backups --insecure || true
+          mc mb myminio/audit-logs --insecure || true
+          
+          # Enable versioning
+          mc version enable myminio/therapy-resources --insecure || true
+          mc version enable myminio/user-uploads --insecure || true
+          mc version enable myminio/ai-generated --insecure || true
+          mc version enable myminio/backups --insecure || true
+          mc version enable myminio/audit-logs --insecure || true
+          
+          # Set lifecycle policies
+          cat > /tmp/lifecycle.json <<EOF
+          {
+              "Rules": [{
+                  "ID": "expire-old-versions",
+                  "Status": "Enabled",
+                  "NoncurrentVersionExpiration": {
+                      "NoncurrentDays": 90
+                  }
+              }]
+          }
+          EOF
+          
+          mc ilm import myminio/therapy-resources < /tmp/lifecycle.json --insecure || true
+          mc ilm import myminio/user-uploads < /tmp/lifecycle.json --insecure || true
+          
+          # Set bucket policies for compliance
+          cat > /tmp/bucket-policy.json <<EOF
+          {
+              "Version": "2012-10-17",
+              "Statement": [{
+                  "Effect": "Deny",
+                  "Principal": "*",
+                  "Action": ["s3:Delete*"],
+                  "Resource": ["arn:aws:s3:::audit-logs/*"]
+              }]
+          }
+          EOF
+          
+          mc policy set-json /tmp/bucket-policy.json myminio/audit-logs --insecure || true
+          
+          echo "MinIO bucket initialization complete"
+          
+          # Keep container running
+          tail -f /dev/null
+        env:
+        - name: MINIO_ROOT_USER
+          valueFrom:
+            secretKeyRef:
+              name: minio-secret
+              key: root-user
+        - name: MINIO_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: minio-secret
+              key: root-password
+        volumeMounts:
+        - name: minio-certs
+          mountPath: /certs
+      volumes:
+      - name: minio-data
+        persistentVolumeClaim:
+          claimName: minio-data-pvc
+      - name: minio-certs
+        emptyDir: {}
+---
+# Service for MinIO API
+apiVersion: v1
+kind: Service
+metadata:
+  name: minio-service
+  namespace: uptrms-data
+  labels:
+    app: minio
+spec:
+  type: ClusterIP
+  selector:
+    app: minio
+  ports:
+  - port: 9000
+    targetPort: 9000
+    protocol: TCP
+    name: api
+  - port: 9001
+    targetPort: 9001
+    protocol: TCP
+    name: console
+---
+# Network Policy for MinIO
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: minio-network-policy
+  namespace: uptrms-data
+spec:
+  podSelector:
+    matchLabels:
+      app: minio
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: uptrms-api
+    - podSelector:
+        matchLabels:
+          app: uptrms-api
+    ports:
+    - protocol: TCP
+      port: 9000
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: uptrms-web
+    ports:
+    - protocol: TCP
+      port: 9001
+  egress:
+  - to:
+    - namespaceSelector: {}
+    ports:
+    - protocol: TCP
+      port: 53  # DNS
+    - protocol: UDP
+      port: 53  # DNS
+    - protocol: TCP
+      port: 443  # HTTPS for webhooks

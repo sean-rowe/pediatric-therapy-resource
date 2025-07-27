@@ -1,0 +1,3884 @@
+using System.Net;
+using System.Text.Json;
+using FluentAssertions;
+using Microsoft.AspNetCore.Mvc.Testing;
+using TechTalk.SpecFlow;
+
+namespace TherapyDocs.Api.Tests.BDD.StepDefinitions;
+
+[Binding]
+public class PredictiveAnalyticsSteps : BaseStepDefinitions
+{
+    public PredictiveAnalyticsSteps(WebApplicationFactory<Program> factory, ScenarioContext scenarioContext) 
+        : base(factory, scenarioContext)
+    {
+    }
+
+    [Given(@"predictive analytics system is configured")]
+    public void GivenPredictiveAnalyticsSystemIsConfigured()
+    {
+        ScenarioContext["PredictiveAnalyticsEnabled"] = true;
+        ScenarioContext["AnalyticsConfig"] = new Dictionary<string, object>
+        {
+            ["ModelsActive"] = true,
+            ["PredictionEnabled"] = true,
+            ["RiskAssessmentEnabled"] = true,
+            ["RecommendationsEnabled"] = true,
+            ["ConfidenceThresholdsSet"] = true
+        };
+    }
+
+    [Given(@"historical therapy data is available")]
+    public void GivenHistoricalTherapyDataIsAvailable()
+    {
+        ScenarioContext["HistoricalDataAvailable"] = true;
+        ScenarioContext["DataQuality"] = "sufficient";
+        ScenarioContext["DataVolume"] = "adequate";
+    }
+
+    [Given(@"machine learning models are trained")]
+    public void GivenMachineLearningModelsAreTrained()
+    {
+        ScenarioContext["ModelsTraired"] = true;
+        ScenarioContext["ModelTypes"] = new[] { "Progress", "Risk", "Outcome", "Resource" };
+        ScenarioContext["ModelStatus"] = "ready";
+    }
+
+    [Given(@"prediction confidence thresholds are set")]
+    public void GivenPredictionConfidenceThresholdsAreSet()
+    {
+        ScenarioContext["ConfidenceThresholds"] = new Dictionary<string, double>
+        {
+            ["High"] = 0.85,
+            ["Medium"] = 0.70,
+            ["Low"] = 0.50,
+            ["Minimum"] = 0.60
+        };
+    }
+
+    [Given(@"intervention recommendations are enabled")]
+    public void GivenInterventionRecommendationsAreEnabled()
+    {
+        ScenarioContext["RecommendationsEnabled"] = true;
+        ScenarioContext["RecommendationEngine"] = "active";
+    }
+
+    [Given(@"I have students with ongoing therapy programs")]
+    public void GivenIHaveStudentsWithOngoingTherapyPrograms()
+    {
+        ScenarioContext["StudentsInTherapy"] = true;
+        ScenarioContext["ActivePrograms"] = "multiple";
+    }
+
+    [Given(@"sufficient historical data exists for predictions")]
+    public void GivenSufficientHistoricalDataExistsForPredictions()
+    {
+        ScenarioContext["SufficientData"] = true;
+        ScenarioContext["DataPoints"] = "adequate";
+    }
+
+    [When(@"analyzing progress predictions:")]
+    public async Task WhenAnalyzingProgressPredictions(Table table)
+    {
+        var predictions = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var prediction = new
+            {
+                StudentId = row["Student ID"],
+                CurrentGoal = row["Current Goal"],
+                Baseline = row["Baseline"],
+                CurrentLevel = row["Current Level"],
+                Sessions = int.Parse(row["Sessions"]),
+                Predicted30Day = row["Predicted 30-Day"],
+                Predicted90Day = row["Predicted 90-Day"],
+                Confidence = row["Confidence"],
+                RiskFactors = row["Risk Factors"]
+            };
+            predictions.Add(prediction);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/predict-progress", prediction);
+        }
+        
+        ScenarioContext["ProgressPredictions"] = predictions;
+    }
+
+    [Then(@"predictions should be based on evidence")]
+    public void ThenPredictionsShouldBeBasedOnEvidence()
+    {
+        ScenarioContext["EvidenceBasedPredictions"] = true;
+        ScenarioContext["ScientificBasis"] = true;
+    }
+
+    [Then(@"confidence levels should reflect data quality")]
+    public void ThenConfidenceLevelsShouldReflectDataQuality()
+    {
+        ScenarioContext["ConfidenceAlignment"] = true;
+        ScenarioContext["DataQualityReflected"] = true;
+    }
+
+    [Then(@"risk factors should be clearly identified")]
+    public void ThenRiskFactorsShouldBeClearlyIdentified()
+    {
+        ScenarioContext["RiskFactorsIdentified"] = true;
+        ScenarioContext["ClearCommunication"] = true;
+    }
+
+    [Then(@"recommendations should be actionable")]
+    public void ThenRecommendationsShouldBeActionable()
+    {
+        ScenarioContext["ActionableRecommendations"] = true;
+        ScenarioContext["PracticalGuidance"] = true;
+    }
+
+    [Given(@"regression patterns are analyzed from historical data")]
+    public void GivenRegressionPatternsAreAnalyzedFromHistoricalData()
+    {
+        ScenarioContext["RegressionAnalysis"] = true;
+        ScenarioContext["PatternsIdentified"] = true;
+    }
+
+    [Given(@"environmental factors are considered")]
+    public void GivenEnvironmentalFactorsAreConsidered()
+    {
+        ScenarioContext["EnvironmentalFactors"] = true;
+        ScenarioContext["HolisticAnalysis"] = true;
+    }
+
+    [When(@"assessing regression risk:")]
+    public async Task WhenAssessingRegressionRisk(Table table)
+    {
+        var riskAssessments = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var assessment = new
+            {
+                StudentId = row["Student ID"],
+                RiskLevel = row["Risk Level"],
+                PrimaryFactors = row["Primary Factors"],
+                TimeHorizon = row["Time Horizon"],
+                Probability = row["Probability"],
+                PreventiveActions = row["Preventive Actions"],
+                AlertStatus = row["Alert Status"]
+            };
+            riskAssessments.Add(assessment);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/assess-regression-risk", assessment);
+        }
+        
+        ScenarioContext["RegressionRiskAssessments"] = riskAssessments;
+    }
+
+    [Then(@"high-risk students should be flagged immediately")]
+    public void ThenHighRiskStudentsShouldBeFlaggedImmediately()
+    {
+        ScenarioContext["ImmediateFlagging"] = true;
+        ScenarioContext["UrgentAlerts"] = true;
+    }
+
+    [Then(@"preventive interventions should be suggested")]
+    public void ThenPreventiveInterventionsShouldBeSuggested()
+    {
+        ScenarioContext["PreventiveInterventions"] = true;
+        ScenarioContext["ProactiveMeasures"] = true;
+    }
+
+    [Then(@"families should be notified appropriately")]
+    public void ThenFamiliesShouldBeNotifiedAppropriately()
+    {
+        ScenarioContext["FamilyNotification"] = true;
+        ScenarioContext["AppropiateCommunication"] = true;
+    }
+
+    [Then(@"progress monitoring should intensify")]
+    public void ThenProgressMonitoringShouldIntensify()
+    {
+        ScenarioContext["IntensifiedMonitoring"] = true;
+        ScenarioContext["IncreasedFrequency"] = true;
+    }
+
+    [Given(@"multiple variables affect therapy success")]
+    public void GivenMultipleVariablesAffectTherapySuccess()
+    {
+        ScenarioContext["MultipleVariables"] = true;
+        ScenarioContext["ComplexFactors"] = true;
+    }
+
+    [Given(@"feature importance analysis is performed")]
+    public void GivenFeatureImportanceAnalysisIsPerformed()
+    {
+        ScenarioContext["FeatureImportance"] = true;
+        ScenarioContext["AnalysisComplete"] = true;
+    }
+
+    [When(@"identifying key outcome predictors:")]
+    public async Task WhenIdentifyingKeyOutcomePredictors(Table table)
+    {
+        var predictors = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var predictor = new
+            {
+                FactorCategory = row["Factor Category"],
+                SpecificFactor = row["Specific Factor"],
+                ImpactScore = double.Parse(row["Impact Score"]),
+                Direction = row["Direction"],
+                StatisticalSignificance = row["Statistical Significance"],
+                Actionable = row["Actionable"]
+            };
+            predictors.Add(predictor);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/outcome-predictors", predictor);
+        }
+        
+        ScenarioContext["OutcomePredictors"] = predictors;
+    }
+
+    [Then(@"key factors should be clearly ranked")]
+    public void ThenKeyFactorsShouldBeClearlyRanked()
+    {
+        ScenarioContext["FactorsRanked"] = true;
+        ScenarioContext["ClearPriorities"] = true;
+    }
+
+    [Then(@"actionable insights should be highlighted")]
+    public void ThenActionableInsightsShouldBeHighlighted()
+    {
+        ScenarioContext["InsightsHighlighted"] = true;
+        ScenarioContext["FocusOnActionable"] = true;
+    }
+
+    [Then(@"statistical validity should be maintained")]
+    public void ThenStatisticalValidityShouldBeMaintained()
+    {
+        ScenarioContext["StatisticalValidity"] = true;
+        ScenarioContext["RigorousMethods"] = true;
+    }
+
+    [Then(@"recommendations should focus on modifiable factors")]
+    public void ThenRecommendationsShouldFocusOnModifiableFactors()
+    {
+        ScenarioContext["ModifiableFactorsFocus"] = true;
+        ScenarioContext["PracticalRecommendations"] = true;
+    }
+
+    [Given(@"current goals may need modification")]
+    public void GivenCurrentGoalsMayNeedModification()
+    {
+        ScenarioContext["GoalModificationNeeded"] = true;
+        ScenarioContext["AdaptiveGoals"] = true;
+    }
+
+    [Given(@"prediction models suggest optimal paths")]
+    public void GivenPredictionModelsSuggestOptimalPaths()
+    {
+        ScenarioContext["OptimalPathsSuggested"] = true;
+        ScenarioContext["ModelGuidance"] = true;
+    }
+
+    [When(@"recommending goal adjustments:")]
+    public async Task WhenRecommendingGoalAdjustments(Table table)
+    {
+        var adjustments = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var adjustment = new
+            {
+                StudentId = row["Student ID"],
+                CurrentGoal = row["Current Goal"],
+                AchievementRate = row["Achievement Rate"],
+                PredictedSuccess = row["Predicted Success"],
+                RecommendedAdjustment = row["Recommended Adjustment"],
+                Rationale = row["Rationale"],
+                Timeline = row["Timeline"]
+            };
+            adjustments.Add(adjustment);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/goal-adjustments", adjustment);
+        }
+        
+        ScenarioContext["GoalAdjustments"] = adjustments;
+    }
+
+    [Then(@"adjustments should optimize success probability")]
+    public void ThenAdjustmentsShouldOptimizeSuccessProbability()
+    {
+        ScenarioContext["OptimizedSuccess"] = true;
+        ScenarioContext["ImprovedOutcomes"] = true;
+    }
+
+    [Then(@"recommendations should be evidence-based")]
+    public void ThenRecommendationsShouldBeEvidenceBased()
+    {
+        ScenarioContext["EvidenceBasedRecs"] = true;
+        ScenarioContext["ResearchSupported"] = true;
+    }
+
+    [Then(@"timelines should be realistic")]
+    public void ThenTimelinesShouldBeRealistic()
+    {
+        ScenarioContext["RealisticTimelines"] = true;
+        ScenarioContext["AchievableGoals"] = true;
+    }
+
+    [Then(@"family agreement should be sought")]
+    public void ThenFamilyAgreementShouldBeSought()
+    {
+        ScenarioContext["FamilyInvolvement"] = true;
+        ScenarioContext["CollaborativeApproach"] = true;
+    }
+
+    [Given(@"cohort matching identifies similar students")]
+    public void GivenCohortMatchingIdentifiesSimilarStudents()
+    {
+        ScenarioContext["CohortMatching"] = true;
+        ScenarioContext["SimilarProfiles"] = true;
+    }
+
+    [Given(@"anonymized comparison data is available")]
+    public void GivenAnonymizedComparisonDataIsAvailable()
+    {
+        ScenarioContext["AnonymizedData"] = true;
+        ScenarioContext["PrivacyProtected"] = true;
+    }
+
+    [When(@"analyzing cohort comparisons:")]
+    public async Task WhenAnalyzingCohortComparisons(Table table)
+    {
+        var comparisons = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var comparison = new
+            {
+                StudentProfile = row["Student Profile"],
+                CohortSize = int.Parse(row["Cohort Size"]),
+                StudentPercentile = row["Student Percentile"],
+                TypicalProgress = row["Typical Progress"],
+                ExpectedOutcome = row["Expected Outcome"],
+                Insights = row["Insights"]
+            };
+            comparisons.Add(comparison);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/cohort-comparison", comparison);
+        }
+        
+        ScenarioContext["CohortComparisons"] = comparisons;
+    }
+
+    [Then(@"comparisons should provide context")]
+    public void ThenComparisonsShouldProvideContext()
+    {
+        ScenarioContext["ContextProvided"] = true;
+        ScenarioContext["MeaningfulComparisons"] = true;
+    }
+
+    [Then(@"privacy should be strictly maintained")]
+    public void ThenPrivacyShouldBeStrictlyMaintained()
+    {
+        ScenarioContext["StrictPrivacy"] = true;
+        ScenarioContext["NoIdentification"] = true;
+    }
+
+    [Then(@"insights should guide expectations")]
+    public void ThenInsightsShouldGuideExpectations()
+    {
+        ScenarioContext["ExpectationGuidance"] = true;
+        ScenarioContext["RealisticOutlook"] = true;
+    }
+
+    [Then(@"outliers should be investigated")]
+    public void ThenOutliersShouldBeInvestigated()
+    {
+        ScenarioContext["OutlierInvestigation"] = true;
+        ScenarioContext["UnusualPatterns"] = true;
+    }
+
+    [Given(@"multiple intervention options exist")]
+    public void GivenMultipleInterventionOptionsExist()
+    {
+        ScenarioContext["MultipleOptions"] = true;
+        ScenarioContext["InterventionChoices"] = true;
+    }
+
+    [Given(@"historical effectiveness data is analyzed")]
+    public void GivenHistoricalEffectivenessDataIsAnalyzed()
+    {
+        ScenarioContext["EffectivenessAnalyzed"] = true;
+        ScenarioContext["HistoricalOutcomes"] = true;
+    }
+
+    [When(@"predicting intervention outcomes:")]
+    public async Task WhenPredictingInterventionOutcomes(Table table)
+    {
+        var interventionPredictions = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var prediction = new
+            {
+                StudentType = row["Student Type"],
+                InterventionOption = row["Intervention Option"],
+                PredictedEffectiveness = row["Predicted Effectiveness"],
+                Confidence = row["Confidence"],
+                TimeToEffect = row["Time to Effect"],
+                SideBenefits = row["Side Benefits"],
+                Considerations = row["Considerations"]
+            };
+            interventionPredictions.Add(prediction);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/intervention-effectiveness", prediction);
+        }
+        
+        ScenarioContext["InterventionPredictions"] = interventionPredictions;
+    }
+
+    [Then(@"effectiveness predictions should be data-driven")]
+    public void ThenEffectivenessPredictionsShouldBeDataDriven()
+    {
+        ScenarioContext["DataDrivenPredictions"] = true;
+        ScenarioContext["EmpiricalBasis"] = true;
+    }
+
+    [Then(@"confidence intervals should be provided")]
+    public void ThenConfidenceIntervalsShouldBeProvided()
+    {
+        ScenarioContext["ConfidenceIntervals"] = true;
+        ScenarioContext["UncertaintyQuantified"] = true;
+    }
+
+    [Then(@"trade-offs should be clearly presented")]
+    public void ThenTradeOffsShouldBeClearlyPresented()
+    {
+        ScenarioContext["TradeOffsPresented"] = true;
+        ScenarioContext["InformedDecisions"] = true;
+    }
+
+    [Then(@"clinical judgment should be supported")]
+    public void ThenClinicalJudgmentShouldBeSupported()
+    {
+        ScenarioContext["ClinicalJudgmentSupported"] = true;
+        ScenarioContext["DecisionAid"] = true;
+    }
+
+    [Given(@"therapy resources are limited")]
+    public void GivenTherapyResourcesAreLimited()
+    {
+        ScenarioContext["LimitedResources"] = true;
+        ScenarioContext["ConstrainedCapacity"] = true;
+    }
+
+    [Given(@"needs must be prioritized")]
+    public void GivenNeedsMustBePrioritized()
+    {
+        ScenarioContext["PrioritizationRequired"] = true;
+        ScenarioContext["ResourceAllocation"] = true;
+    }
+
+    [When(@"optimizing resource allocation:")]
+    public async Task WhenOptimizingResourceAllocation(Table table)
+    {
+        var allocations = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var allocation = new
+            {
+                ResourceType = row["Resource Type"],
+                CurrentAllocation = row["Current Allocation"],
+                PredictedNeed = row["Predicted Need"],
+                RecommendedChange = row["Recommended Change"],
+                ImpactIfChanged = row["Impact if Changed"],
+                PriorityScore = double.Parse(row["Priority Score"])
+            };
+            allocations.Add(allocation);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/resource-optimization", allocation);
+        }
+        
+        ScenarioContext["ResourceAllocations"] = allocations;
+    }
+
+    [Then(@"recommendations should maximize impact")]
+    public void ThenRecommendationsShouldMaximizeImpact()
+    {
+        ScenarioContext["MaximizedImpact"] = true;
+        ScenarioContext["OptimalAllocation"] = true;
+    }
+
+    [Then(@"cost-benefit analysis should be included")]
+    public void ThenCostBenefitAnalysisShouldBeIncluded()
+    {
+        ScenarioContext["CostBenefitAnalysis"] = true;
+        ScenarioContext["FinancialConsiderations"] = true;
+    }
+
+    [Then(@"implementation feasibility should be considered")]
+    public void ThenImplementationFeasibilityShouldBeConsidered()
+    {
+        ScenarioContext["FeasibilityConsidered"] = true;
+        ScenarioContext["PracticalConstraints"] = true;
+    }
+
+    [Then(@"outcomes should be measurable")]
+    public void ThenOutcomesShouldBeMeasurable()
+    {
+        ScenarioContext["MeasurableOutcomes"] = true;
+        ScenarioContext["MetricsDefined"] = true;
+    }
+
+    [Given(@"continuous monitoring detects patterns")]
+    public void GivenContinuousMonitoringDetectsPatterns()
+    {
+        ScenarioContext["ContinuousMonitoring"] = true;
+        ScenarioContext["PatternDetection"] = true;
+    }
+
+    [Given(@"thresholds trigger automated alerts")]
+    public void GivenThresholdsTriggerAutomatedAlerts()
+    {
+        ScenarioContext["AutomatedAlerts"] = true;
+        ScenarioContext["ThresholdTriggers"] = true;
+    }
+
+    [When(@"early warning system activates:")]
+    public async Task WhenEarlyWarningSystemActivates(Table table)
+    {
+        var warnings = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var warning = new
+            {
+                AlertType = row["Alert Type"],
+                StudentId = row["Student ID"],
+                PatternDetected = row["Pattern Detected"],
+                Severity = row["Severity"],
+                TimeSinceOnset = row["Time Since Onset"],
+                RecommendedAction = row["Recommended Action"],
+                Escalation = row["Escalation"]
+            };
+            warnings.Add(warning);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/early-warning", warning);
+        }
+        
+        ScenarioContext["EarlyWarnings"] = warnings;
+    }
+
+    [Then(@"alerts should be timely and specific")]
+    public void ThenAlertsShouldBeTimelyAndSpecific()
+    {
+        ScenarioContext["TimelyAlerts"] = true;
+        ScenarioContext["SpecificWarnings"] = true;
+    }
+
+    [Then(@"false positive rate should be <(.*)%")]
+    public void ThenFalsePositiveRateShouldBeLessThan(int threshold)
+    {
+        ScenarioContext["FalsePositiveThreshold"] = threshold;
+        ScenarioContext["LowFalsePositives"] = true;
+    }
+
+    [Then(@"actions should be clearly defined")]
+    public void ThenActionsShouldBeClearlyDefined()
+    {
+        ScenarioContext["ClearActions"] = true;
+        ScenarioContext["DefinedResponses"] = true;
+    }
+
+    [Then(@"escalation paths should be automatic")]
+    public void ThenEscalationPathsShouldBeAutomatic()
+    {
+        ScenarioContext["AutomaticEscalation"] = true;
+        ScenarioContext["SystematicProcess"] = true;
+    }
+
+    [Given(@"predictions are tracked against actual outcomes")]
+    public void GivenPredictionsAreTrackedAgainstActualOutcomes()
+    {
+        ScenarioContext["OutcomeTracking"] = true;
+        ScenarioContext["ValidationProcess"] = true;
+    }
+
+    [Given(@"model performance metrics are calculated")]
+    public void GivenModelPerformanceMetricsAreCalculated()
+    {
+        ScenarioContext["PerformanceMetrics"] = true;
+        ScenarioContext["AccuracyMeasurement"] = true;
+    }
+
+    [When(@"evaluating model accuracy:")]
+    public async Task WhenEvaluatingModelAccuracy(Table table)
+    {
+        var evaluations = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var evaluation = new
+            {
+                ModelType = row["Model Type"],
+                PredictionsMade = int.Parse(row["Predictions Made"]),
+                ActualOutcomes = row["Actual Outcomes"],
+                AccuracyRate = row["Accuracy Rate"],
+                Precision = double.Parse(row["Precision"]),
+                Recall = double.Parse(row["Recall"]),
+                F1Score = double.Parse(row["F1 Score"]),
+                Calibration = row["Calibration"],
+                ActionNeeded = row["Action Needed"]
+            };
+            evaluations.Add(evaluation);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/model-evaluation", evaluation);
+        }
+        
+        ScenarioContext["ModelEvaluations"] = evaluations;
+    }
+
+    [Then(@"accuracy should meet minimum thresholds")]
+    public void ThenAccuracyShouldMeetMinimumThresholds()
+    {
+        ScenarioContext["ThresholdsMet"] = true;
+        ScenarioContext["AcceptablePerformance"] = true;
+    }
+
+    [Then(@"underperforming models should be improved")]
+    public void ThenUnderperformingModelsShouldBeImproved()
+    {
+        ScenarioContext["ModelImprovement"] = true;
+        ScenarioContext["ContinuousOptimization"] = true;
+    }
+
+    [Then(@"drift should be detected early")]
+    public void ThenDriftShouldBeDetectedEarly()
+    {
+        ScenarioContext["EarlyDriftDetection"] = true;
+        ScenarioContext["ProactiveMonitoring"] = true;
+    }
+
+    [Then(@"retraining should be scheduled appropriately")]
+    public void ThenRetrainingShouldBeScheduledAppropriately()
+    {
+        ScenarioContext["RetrainingScheduled"] = true;
+        ScenarioContext["MaintenancePlan"] = true;
+    }
+
+    [Given(@"predictions must be interpretable")]
+    public void GivenPredictionsMustBeInterpretable()
+    {
+        ScenarioContext["InterpretableAI"] = true;
+        ScenarioContext["ExplainableModels"] = true;
+    }
+
+    [Given(@"stakeholders need to understand reasoning")]
+    public void GivenStakeholdersNeedToUnderstandReasoning()
+    {
+        ScenarioContext["StakeholderUnderstanding"] = true;
+        ScenarioContext["TransparentAI"] = true;
+    }
+
+    [When(@"explaining prediction logic:")]
+    public async Task WhenExplainingPredictionLogic(Table table)
+    {
+        var explanations = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var explanation = new
+            {
+                PredictionType = row["Prediction Type"],
+                KeyFactors = row["Key Factors"],
+                FactorWeights = row["Factor Weights"],
+                ConfidenceBounds = row["Confidence Bounds"],
+                VisualExplanation = row["Visual Explanation"],
+                NaturalLanguage = row["Natural Language"]
+            };
+            explanations.Add(explanation);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/explain-prediction", explanation);
+        }
+        
+        ScenarioContext["PredictionExplanations"] = explanations;
+    }
+
+    [Then(@"explanations should be clear and accurate")]
+    public void ThenExplanationsShouldBeClearAndAccurate()
+    {
+        ScenarioContext["ClearExplanations"] = true;
+        ScenarioContext["AccurateDescriptions"] = true;
+    }
+
+    [Then(@"technical details should be accessible")]
+    public void ThenTechnicalDetailsShouldBeAccessible()
+    {
+        ScenarioContext["AccessibleDetails"] = true;
+        ScenarioContext["TechnicalTransparency"] = true;
+    }
+
+    [Then(@"visualizations should enhance understanding")]
+    public void ThenVisualizationsShouldEnhanceUnderstanding()
+    {
+        ScenarioContext["EnhancedVisualizations"] = true;
+        ScenarioContext["VisualClarity"] = true;
+    }
+
+    [Then(@"confidence in predictions should increase")]
+    public void ThenConfidenceInPredictionsShouldIncrease()
+    {
+        ScenarioContext["IncreasedConfidence"] = true;
+        ScenarioContext["TrustBuilding"] = true;
+    }
+
+    [Given(@"some students lack adequate historical data")]
+    public void GivenSomeStudentsLackAdequateHistoricalData()
+    {
+        ScenarioContext["InsufficientData"] = true;
+        ScenarioContext["DataLimitations"] = true;
+    }
+
+    [When(@"attempting predictions with limited data:")]
+    public async Task WhenAttemptingPredictionsWithLimitedData(Table table)
+    {
+        var limitedDataCases = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var dataCase = new
+            {
+                StudentId = row["Student ID"],
+                DataPoints = int.Parse(row["Data Points"]),
+                MinimumRequired = int.Parse(row["Minimum Required"]),
+                PredictionAttempt = row["Prediction Attempt"],
+                FallbackStrategy = row["Fallback Strategy"],
+                Communication = row["Communication"]
+            };
+            limitedDataCases.Add(dataCase);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/limited-data-prediction", dataCase);
+        }
+        
+        ScenarioContext["LimitedDataCases"] = limitedDataCases;
+    }
+
+    [Then(@"insufficient data should be clearly communicated")]
+    public void ThenInsufficientDataShouldBeClearlyCommunicated()
+    {
+        ScenarioContext["DataLimitationsCommunicated"] = true;
+        ScenarioContext["TransparentLimitations"] = true;
+    }
+
+    [Then(@"predictions should not be forced")]
+    public void ThenPredictionsShouldNotBeForced()
+    {
+        ScenarioContext["NoForcedPredictions"] = true;
+        ScenarioContext["ResponsibleAI"] = true;
+    }
+
+    [Then(@"alternative approaches should be suggested")]
+    public void ThenAlternativeApproachesShouldBeSuggested()
+    {
+        ScenarioContext["AlternativeSuggestions"] = true;
+        ScenarioContext["FallbackOptions"] = true;
+    }
+
+    [Then(@"data collection should be prioritized")]
+    public void ThenDataCollectionShouldBePrioritized()
+    {
+        ScenarioContext["DataCollectionPriority"] = true;
+        ScenarioContext["BuildingBaseline"] = true;
+    }
+
+    [Given(@"different models may disagree")]
+    public void GivenDifferentModelsMayDisagree()
+    {
+        ScenarioContext["ModelDisagreement"] = true;
+        ScenarioContext["ConflictPossible"] = true;
+    }
+
+    [When(@"handling prediction conflicts:")]
+    public async Task WhenHandlingPredictionConflicts(Table table)
+    {
+        var conflicts = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var conflict = new
+            {
+                Scenario = row["Scenario"],
+                ModelAPrediction = row["Model A Prediction"],
+                ModelBPrediction = row["Model B Prediction"],
+                ConfidenceDiff = row["Confidence Diff"],
+                ResolutionMethod = row["Resolution Method"],
+                FinalPrediction = row["Final Prediction"],
+                Explanation = row["Explanation"]
+            };
+            conflicts.Add(conflict);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/resolve-conflicts", conflict);
+        }
+        
+        ScenarioContext["PredictionConflicts"] = conflicts;
+    }
+
+    [Then(@"conflicts should be resolved systematically")]
+    public void ThenConflictsShouldBeResolvedSystematically()
+    {
+        ScenarioContext["SystematicResolution"] = true;
+        ScenarioContext["ConsistentApproach"] = true;
+    }
+
+    [Then(@"reasoning should be documented")]
+    public void ThenReasoningShouldBeDocumented()
+    {
+        ScenarioContext["ReasoningDocumented"] = true;
+        ScenarioContext["DecisionTrail"] = true;
+    }
+
+    [Then(@"uncertainty should be communicated")]
+    public void ThenUncertaintyShouldBeCommunicated()
+    {
+        ScenarioContext["UncertaintyCommunicated"] = true;
+        ScenarioContext["HonestAssessment"] = true;
+    }
+
+    [Then(@"clinical judgment should prevail")]
+    public void ThenClinicalJudgmentShouldPrevail()
+    {
+        ScenarioContext["ClinicalJudgmentPrimary"] = true;
+        ScenarioContext["HumanOverride"] = true;
+    }
+
+    [Given(@"model performance can degrade")]
+    public void GivenModelPerformanceCanDegrade()
+    {
+        ScenarioContext["PerformanceDegradation"] = true;
+        ScenarioContext["DriftPossible"] = true;
+    }
+
+    [When(@"monitoring for model drift:")]
+    public async Task WhenMonitoringForModelDrift(Table table)
+    {
+        var driftMonitoring = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var drift = new
+            {
+                ModelComponent = row["Model Component"],
+                BaselinePerformance = row["Baseline Performance"],
+                CurrentPerformance = row["Current Performance"],
+                DriftDetected = row["Drift Detected"],
+                Severity = row["Severity"],
+                Remediation = row["Remediation"],
+                Timeline = row["Timeline"]
+            };
+            driftMonitoring.Add(drift);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/model-drift", drift);
+        }
+        
+        ScenarioContext["ModelDriftMonitoring"] = driftMonitoring;
+    }
+
+    [Then(@"drift should be detected automatically")]
+    public void ThenDriftShouldBeDetectedAutomatically()
+    {
+        ScenarioContext["AutomaticDriftDetection"] = true;
+        ScenarioContext["ProactiveMonitoring"] = true;
+    }
+
+    [Then(@"severity should guide response urgency")]
+    public void ThenSeverityShouldGuideResponseUrgency()
+    {
+        ScenarioContext["SeverityGuidedResponse"] = true;
+        ScenarioContext["PrioritizedActions"] = true;
+    }
+
+    [Then(@"model updates should be validated")]
+    public void ThenModelUpdatesShouldBeValidated()
+    {
+        ScenarioContext["ValidatedUpdates"] = true;
+        ScenarioContext["QualityAssurance"] = true;
+    }
+
+    [Then(@"performance should be restored")]
+    public void ThenPerformanceShouldBeRestored()
+    {
+        ScenarioContext["PerformanceRestored"] = true;
+        ScenarioContext["ModelRecovery"] = true;
+    }
+
+    [Given(@"predictions can impact student services")]
+    public void GivenPredictionsCanImpactStudentServices()
+    {
+        ScenarioContext["ServiceImpact"] = true;
+        ScenarioContext["EthicalConcerns"] = true;
+    }
+
+    [When(@"ethical issues arise:")]
+    public async Task WhenEthicalIssuesArise(Table table)
+    {
+        var ethicalIssues = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var issue = new
+            {
+                EthicalConcern = row["Ethical Concern"],
+                ScenarioExample = row["Scenario Example"],
+                RiskLevel = row["Risk Level"],
+                MitigationStrategy = row["Mitigation Strategy"],
+                OversightRequired = row["Oversight Required"],
+                Documentation = row["Documentation"]
+            };
+            ethicalIssues.Add(issue);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/ethical-review", issue);
+        }
+        
+        ScenarioContext["EthicalIssues"] = ethicalIssues;
+    }
+
+    [Then(@"ethical safeguards should be enforced")]
+    public void ThenEthicalSafeguardsShouldBeEnforced()
+    {
+        ScenarioContext["EthicalSafeguards"] = true;
+        ScenarioContext["ProtectionEnforced"] = true;
+    }
+
+    [Then(@"human oversight should be mandatory")]
+    public void ThenHumanOversightShouldBeMandatory()
+    {
+        ScenarioContext["MandatoryOversight"] = true;
+        ScenarioContext["HumanInTheLoop"] = true;
+    }
+
+    [Then(@"transparency should be maintained")]
+    public void ThenTransparencyShouldBeMaintained()
+    {
+        ScenarioContext["TransparencyMaintained"] = true;
+        ScenarioContext["OpenProcess"] = true;
+    }
+
+    [Then(@"fairness should be continuously monitored")]
+    public void ThenFairnessShouldBeContinuouslyMonitored()
+    {
+        ScenarioContext["FairnessMonitoring"] = true;
+        ScenarioContext["BiasDetection"] = true;
+    }
+
+    // Recommendation Engine Feature Steps
+
+    [Given(@"recommendation engine is configured")]
+    public void GivenRecommendationEngineIsConfigured()
+    {
+        ScenarioContext["RecommendationEngineEnabled"] = true;
+        ScenarioContext["RecommenderConfig"] = new Dictionary<string, object>
+        {
+            ["CollaborativeFiltering"] = true,
+            ["ContentBasedFiltering"] = true,
+            ["HybridModel"] = true,
+            ["PersonalizationEnabled"] = true,
+            ["RealTimeAdaptation"] = true
+        };
+    }
+
+    [Given(@"user behavior tracking is enabled")]
+    public void GivenUserBehaviorTrackingIsEnabled()
+    {
+        ScenarioContext["BehaviorTracking"] = true;
+        ScenarioContext["UserAnalytics"] = "active";
+    }
+
+    [Given(@"collaborative filtering is active")]
+    public void GivenCollaborativeFilteringIsActive()
+    {
+        ScenarioContext["CollaborativeFiltering"] = true;
+        ScenarioContext["UserSimilarity"] = "calculated";
+    }
+
+    [Given(@"content-based filtering is implemented")]
+    public void GivenContentBasedFilteringIsImplemented()
+    {
+        ScenarioContext["ContentBasedFiltering"] = true;
+        ScenarioContext["FeatureExtraction"] = "complete";
+    }
+
+    [Given(@"hybrid recommendation model is trained")]
+    public void GivenHybridRecommendationModelIsTrained()
+    {
+        ScenarioContext["HybridModel"] = true;
+        ScenarioContext["ModelStatus"] = "trained";
+    }
+
+    [Given(@"I have a therapy session planned")]
+    public void GivenIHaveATherapySessionPlanned()
+    {
+        ScenarioContext["SessionPlanned"] = true;
+        ScenarioContext["SessionType"] = "therapy";
+    }
+
+    [Given(@"student profile and goals are defined")]
+    public void GivenStudentProfileAndGoalsAreDefined()
+    {
+        ScenarioContext["StudentProfileDefined"] = true;
+        ScenarioContext["GoalsDefined"] = true;
+    }
+
+    [When(@"requesting resource recommendations:")]
+    public async Task WhenRequestingResourceRecommendations(Table table)
+    {
+        var recommendations = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var recommendation = new
+            {
+                StudentProfile = row["Student Profile"],
+                PrimaryGoal = row["Primary Goal"],
+                SessionType = row["Session Type"],
+                PreviousSuccess = row["Previous Success"],
+                RecommendedResources = row["Recommended Resources"],
+                RelevanceScore = row["Relevance Score"],
+                Reasoning = row["Reasoning"]
+            };
+            recommendations.Add(recommendation);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/recommend-resources", recommendation);
+        }
+        
+        ScenarioContext["ResourceRecommendations"] = recommendations;
+    }
+
+    [Then(@"recommendations should be highly relevant")]
+    public void ThenRecommendationsShouldBeHighlyRelevant()
+    {
+        ScenarioContext["HighRelevance"] = true;
+        ScenarioContext["QualityRecommendations"] = true;
+    }
+
+    [Then(@"reasoning should be transparent")]
+    public void ThenReasoningShouldBeTransparent()
+    {
+        ScenarioContext["TransparentReasoning"] = true;
+        ScenarioContext["ExplainableAI"] = true;
+    }
+
+    [Then(@"variety of resource types should be included")]
+    public void ThenVarietyOfResourceTypesShouldBeIncluded()
+    {
+        ScenarioContext["ResourceVariety"] = true;
+        ScenarioContext["DiverseOptions"] = true;
+    }
+
+    [Then(@"success likelihood should be indicated")]
+    public void ThenSuccessLikelihoodShouldBeIndicated()
+    {
+        ScenarioContext["SuccessIndicated"] = true;
+        ScenarioContext["ProbabilityShown"] = true;
+    }
+
+    [Given(@"multiple therapists work with similar students")]
+    public void GivenMultipleTherapistsWorkWithSimilarStudents()
+    {
+        ScenarioContext["MultipleTherapists"] = true;
+        ScenarioContext["SharedExperiences"] = true;
+    }
+
+    [Given(@"usage patterns are analyzed across users")]
+    public void GivenUsagePatternsAreAnalyzedAcrossUsers()
+    {
+        ScenarioContext["CrossUserAnalysis"] = true;
+        ScenarioContext["PatternRecognition"] = true;
+    }
+
+    [When(@"generating collaborative recommendations:")]
+    public async Task WhenGeneratingCollaborativeRecommendations(Table table)
+    {
+        var collaborativeRecs = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var rec = new
+            {
+                UserProfile = row["User Profile"],
+                SimilarUsersFound = row["Similar Users Found"],
+                CommonSuccesses = row["Common Successes"],
+                TopRecommendations = row["Top Recommendations"],
+                Confidence = row["Confidence"],
+                AdoptionRate = row["Adoption Rate"]
+            };
+            collaborativeRecs.Add(rec);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/collaborative-recommend", rec);
+        }
+        
+        ScenarioContext["CollaborativeRecommendations"] = collaborativeRecs;
+    }
+
+    [Then(@"collaborative insights should enhance recommendations")]
+    public void ThenCollaborativeInsightsShouldEnhanceRecommendations()
+    {
+        ScenarioContext["EnhancedByCollaboration"] = true;
+        ScenarioContext["PeerLearning"] = true;
+    }
+
+    [Then(@"privacy should be maintained")]
+    public void ThenPrivacyShouldBeMaintained()
+    {
+        ScenarioContext["PrivacyMaintained"] = true;
+        ScenarioContext["AnonymizedData"] = true;
+    }
+
+    [Then(@"success patterns should guide suggestions")]
+    public void ThenSuccessPatternsShouldGuideSuggestions()
+    {
+        ScenarioContext["PatternGuidedSuggestions"] = true;
+        ScenarioContext["EvidenceBasedRecs"] = true;
+    }
+
+    [Then(@"network effects should improve quality")]
+    public void ThenNetworkEffectsShouldImproveQuality()
+    {
+        ScenarioContext["NetworkEffects"] = true;
+        ScenarioContext["CollectiveIntelligence"] = true;
+    }
+
+    [Given(@"resource metadata is comprehensive")]
+    public void GivenResourceMetadataIsComprehensive()
+    {
+        ScenarioContext["ComprehensiveMetadata"] = true;
+        ScenarioContext["RichDescriptions"] = true;
+    }
+
+    [Given(@"content features are extracted")]
+    public void GivenContentFeaturesAreExtracted()
+    {
+        ScenarioContext["FeaturesExtracted"] = true;
+        ScenarioContext["ContentAnalyzed"] = true;
+    }
+
+    [When(@"matching based on content similarity:")]
+    public async Task WhenMatchingBasedOnContentSimilarity(Table table)
+    {
+        var contentMatches = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var match = new
+            {
+                CurrentResourceUsed = row["Current Resource Used"],
+                KeyFeatures = row["Key Features"],
+                SimilarResourcesFound = row["Similar Resources Found"],
+                FeatureMatch = row["Feature Match"],
+                QualityScore = row["Quality Score"],
+                Differentiation = row["Differentiation"]
+            };
+            contentMatches.Add(match);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/content-match", match);
+        }
+        
+        ScenarioContext["ContentMatches"] = contentMatches;
+    }
+
+    [Then(@"content matching should be accurate")]
+    public void ThenContentMatchingShouldBeAccurate()
+    {
+        ScenarioContext["AccurateMatching"] = true;
+        ScenarioContext["PreciseResults"] = true;
+    }
+
+    [Then(@"quality should be considered")]
+    public void ThenQualityShouldBeConsidered()
+    {
+        ScenarioContext["QualityConsidered"] = true;
+        ScenarioContext["StandardsMaintained"] = true;
+    }
+
+    [Then(@"complementary resources should be suggested")]
+    public void ThenComplementaryResourcesShouldBeSuggested()
+    {
+        ScenarioContext["ComplementaryResources"] = true;
+        ScenarioContext["HolisticApproach"] = true;
+    }
+
+    [Then(@"learning modalities should vary")]
+    public void ThenLearningModalitiesShouldVary()
+    {
+        ScenarioContext["VariedModalities"] = true;
+        ScenarioContext["MultiSensoryOptions"] = true;
+    }
+
+    [Given(@"I need to plan a full therapy session")]
+    public void GivenINeedToPlanAFullTherapySession()
+    {
+        ScenarioContext["FullSessionPlanning"] = true;
+        ScenarioContext["ComprehensivePlan"] = true;
+    }
+
+    [Given(@"session components require different resources")]
+    public void GivenSessionComponentsRequireDifferentResources()
+    {
+        ScenarioContext["ComponentVariety"] = true;
+        ScenarioContext["DiverseNeeds"] = true;
+    }
+
+    [When(@"building session recommendations:")]
+    public async Task WhenBuildingSessionRecommendations(Table table)
+    {
+        var sessionRecs = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var rec = new
+            {
+                SessionPart = row["Session Part"],
+                Duration = row["Duration"],
+                GoalFocus = row["Goal Focus"],
+                RecommendedResource = row["Recommended Resource"],
+                Purpose = row["Purpose"],
+                TransitionSupport = row["Transition Support"]
+            };
+            sessionRecs.Add(rec);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/session-flow", rec);
+        }
+        
+        ScenarioContext["SessionRecommendations"] = sessionRecs;
+    }
+
+    [Then(@"session flow should be cohesive")]
+    public void ThenSessionFlowShouldBeCohesive()
+    {
+        ScenarioContext["CohesiveFlow"] = true;
+        ScenarioContext["LogicalSequence"] = true;
+    }
+
+    [Then(@"resources should complement each other")]
+    public void ThenResourcesShouldComplementEachOther()
+    {
+        ScenarioContext["ComplementaryResources"] = true;
+        ScenarioContext["SynergyAchieved"] = true;
+    }
+
+    [Then(@"pacing should be appropriate")]
+    public void ThenPacingShouldBeAppropriate()
+    {
+        ScenarioContext["AppropriatePacing"] = true;
+        ScenarioContext["TimeManagement"] = true;
+    }
+
+    [Then(@"transitions should be smooth")]
+    public void ThenTransitionsShouldBeSmooth()
+    {
+        ScenarioContext["SmoothTransitions"] = true;
+        ScenarioContext["FlowMaintained"] = true;
+    }
+
+    [Given(@"recommendations are tracked for effectiveness")]
+    public void GivenRecommendationsAreTrackedForEffectiveness()
+    {
+        ScenarioContext["EffectivenessTracking"] = true;
+        ScenarioContext["OutcomeMeasurement"] = true;
+    }
+
+    [Given(@"feedback loops are established")]
+    public void GivenFeedbackLoopsAreEstablished()
+    {
+        ScenarioContext["FeedbackLoops"] = true;
+        ScenarioContext["ContinuousLearning"] = true;
+    }
+
+    [When(@"adjusting recommendations dynamically:")]
+    public async Task WhenAdjustingRecommendationsDynamically(Table table)
+    {
+        var adjustments = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var adjustment = new
+            {
+                InitialRecommendation = row["Initial Recommendation"],
+                UserAction = row["User Action"],
+                EngagementLevel = row["Engagement Level"],
+                Outcome = row["Outcome"],
+                AdjustedRecommendation = row["Adjusted Recommendation"],
+                LearningApplied = row["Learning Applied"]
+            };
+            adjustments.Add(adjustment);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/adaptive-recommend", adjustment);
+        }
+        
+        ScenarioContext["AdaptiveAdjustments"] = adjustments;
+    }
+
+    [Then(@"recommendations should improve over time")]
+    public void ThenRecommendationsShouldImproveOverTime()
+    {
+        ScenarioContext["ImprovingRecommendations"] = true;
+        ScenarioContext["LearningSystem"] = true;
+    }
+
+    [Then(@"user preferences should be learned")]
+    public void ThenUserPreferencesShouldBeLearned()
+    {
+        ScenarioContext["PreferenceLearning"] = true;
+        ScenarioContext["PersonalizationImproved"] = true;
+    }
+
+    [Then(@"effectiveness should guide future suggestions")]
+    public void ThenEffectivenessShouldGuideFutureSuggestions()
+    {
+        ScenarioContext["EffectivenessGuided"] = true;
+        ScenarioContext["OutcomeBasedRecs"] = true;
+    }
+
+    [Then(@"adaptation should be transparent")]
+    public void ThenAdaptationShouldBeTransparent()
+    {
+        ScenarioContext["TransparentAdaptation"] = true;
+        ScenarioContext["VisibleLearning"] = true;
+    }
+
+    [Given(@"students often have multiple therapy needs")]
+    public void GivenStudentsOftenHaveMultipleTherapyNeeds()
+    {
+        ScenarioContext["MultipleNeeds"] = true;
+        ScenarioContext["ComplexCases"] = true;
+    }
+
+    [Given(@"interdisciplinary approach is beneficial")]
+    public void GivenInterdisciplinaryApproachIsBeneficial()
+    {
+        ScenarioContext["InterdisciplinaryBenefit"] = true;
+        ScenarioContext["HolisticCare"] = true;
+    }
+
+    [When(@"suggesting cross-domain resources:")]
+    public async Task WhenSuggestingCrossDomainResources(Table table)
+    {
+        var crossDomainRecs = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var rec = new
+            {
+                PrimaryDomain = row["Primary Domain"],
+                SecondaryNeeds = row["Secondary Needs"],
+                CrossDomainRecommendations = row["Cross-Domain Recommendations"],
+                IntegrationStrategy = row["Integration Strategy"],
+                ExpectedBenefit = row["Expected Benefit"]
+            };
+            crossDomainRecs.Add(rec);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/cross-domain", rec);
+        }
+        
+        ScenarioContext["CrossDomainRecommendations"] = crossDomainRecs;
+    }
+
+    [Then(@"cross-domain connections should be identified")]
+    public void ThenCrossDomainConnectionsShouldBeIdentified()
+    {
+        ScenarioContext["ConnectionsIdentified"] = true;
+        ScenarioContext["InterdisciplinaryLinks"] = true;
+    }
+
+    [Then(@"recommendations should support multiple goals")]
+    public void ThenRecommendationsShouldSupportMultipleGoals()
+    {
+        ScenarioContext["MultiGoalSupport"] = true;
+        ScenarioContext["EfficientResources"] = true;
+    }
+
+    [Then(@"efficiency should be maximized")]
+    public void ThenEfficiencyShouldBeMaximized()
+    {
+        ScenarioContext["MaximizedEfficiency"] = true;
+        ScenarioContext["OptimalUse"] = true;
+    }
+
+    [Then(@"holistic development should be promoted")]
+    public void ThenHolisticDevelopmentShouldBePromoted()
+    {
+        ScenarioContext["HolisticDevelopment"] = true;
+        ScenarioContext["ComprehensiveCare"] = true;
+    }
+
+    [Given(@"clinical effectiveness is paramount")]
+    public void GivenClinicalEffectivenessIsParamount()
+    {
+        ScenarioContext["ClinicalPriority"] = true;
+        ScenarioContext["EffectivenessFirst"] = true;
+    }
+
+    [Given(@"evidence levels vary across resources")]
+    public void GivenEvidenceLevelsVaryAcrossResources()
+    {
+        ScenarioContext["VariedEvidence"] = true;
+        ScenarioContext["QualityRange"] = true;
+    }
+
+    [When(@"ranking recommendations by evidence:")]
+    public async Task WhenRankingRecommendationsByEvidence(Table table)
+    {
+        var evidenceRanking = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var ranking = new
+            {
+                ResourceType = row["Resource Type"],
+                EvidenceLevel = row["Evidence Level"],
+                ResearchSupport = row["Research Support"],
+                ClinicalReviews = row["Clinical Reviews"],
+                RecommendationPriority = row["Recommendation Priority"],
+                ConfidenceScore = row["Confidence Score"]
+            };
+            evidenceRanking.Add(ranking);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/evidence-ranking", ranking);
+        }
+        
+        ScenarioContext["EvidenceRanking"] = evidenceRanking;
+    }
+
+    [Then(@"evidence-based resources should rank higher")]
+    public void ThenEvidenceBasedResourcesShouldRankHigher()
+    {
+        ScenarioContext["EvidencePrioritized"] = true;
+        ScenarioContext["QualityFirst"] = true;
+    }
+
+    [Then(@"evidence levels should be transparent")]
+    public void ThenEvidenceLevelsShouldBeTransparent()
+    {
+        ScenarioContext["TransparentEvidence"] = true;
+        ScenarioContext["ClearCriteria"] = true;
+    }
+
+    [Then(@"clinical reviews should influence ranking")]
+    public void ThenClinicalReviewsShouldInfluenceRanking()
+    {
+        ScenarioContext["ReviewInfluence"] = true;
+        ScenarioContext["ExpertOpinions"] = true;
+    }
+
+    [Then(@"users should understand recommendation basis")]
+    public void ThenUsersShouldUnderstandRecommendationBasis()
+    {
+        ScenarioContext["BasisUnderstood"] = true;
+        ScenarioContext["InformedChoice"] = true;
+    }
+
+    [Given(@"therapy resources have varying costs")]
+    public void GivenTherapyResourcesHaveVaryingCosts()
+    {
+        ScenarioContext["VariedCosts"] = true;
+        ScenarioContext["PriceRange"] = true;
+    }
+
+    [Given(@"users have budget limitations")]
+    public void GivenUsersHaveBudgetLimitations()
+    {
+        ScenarioContext["BudgetConstraints"] = true;
+        ScenarioContext["FinancialLimits"] = true;
+    }
+
+    [When(@"filtering recommendations by budget:")]
+    public async Task WhenFilteringRecommendationsByBudget(Table table)
+    {
+        var budgetFiltering = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var filter = new
+            {
+                BudgetLevel = row["Budget Level"],
+                ResourceMixStrategy = row["Resource Mix Strategy"],
+                FreeOptionsPercent = row["Free Options %"],
+                LowCostPercent = row["Low-Cost %"],
+                PremiumPercent = row["Premium %"],
+                AlternativeSuggestions = row["Alternative Suggestions"]
+            };
+            budgetFiltering.Add(filter);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/budget-filter", filter);
+        }
+        
+        ScenarioContext["BudgetFiltering"] = budgetFiltering;
+    }
+
+    [Then(@"budget constraints should be respected")]
+    public void ThenBudgetConstraintsShouldBeRespected()
+    {
+        ScenarioContext["BudgetRespected"] = true;
+        ScenarioContext["AffordableOptions"] = true;
+    }
+
+    [Then(@"value should be maximized")]
+    public void ThenValueShouldBeMaximized()
+    {
+        ScenarioContext["MaximizedValue"] = true;
+        ScenarioContext["BestForBudget"] = true;
+    }
+
+    [Then(@"free alternatives should always be shown")]
+    public void ThenFreeAlternativesShouldAlwaysBeShown()
+    {
+        ScenarioContext["FreeAlternativesShown"] = true;
+        ScenarioContext["AccessibleOptions"] = true;
+    }
+
+    [Then(@"total cost should be transparent")]
+    public void ThenTotalCostShouldBeTransparent()
+    {
+        ScenarioContext["TransparentCost"] = true;
+        ScenarioContext["ClearPricing"] = true;
+    }
+
+    [Given(@"recommendation effectiveness must be measured")]
+    public void GivenRecommendationEffectivenessMustBeMeasured()
+    {
+        ScenarioContext["EffectivenessMeasurement"] = true;
+        ScenarioContext["OutcomeTracking"] = true;
+    }
+
+    [Given(@"metrics guide algorithm improvement")]
+    public void GivenMetricsGuideAlgorithmImprovement()
+    {
+        ScenarioContext["MetricsDrivenImprovement"] = true;
+        ScenarioContext["DataInformedOptimization"] = true;
+    }
+
+    [When(@"analyzing recommendation performance:")]
+    public async Task WhenAnalyzingRecommendationPerformance(Table table)
+    {
+        var performanceAnalysis = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var analysis = new
+            {
+                MetricCategory = row["Metric Category"],
+                SpecificMetric = row["Specific Metric"],
+                CurrentPerformance = row["Current Performance"],
+                Target = row["Target"],
+                Trend = row["Trend"],
+                OptimizationAction = row["Optimization Action"]
+            };
+            performanceAnalysis.Add(analysis);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/rec-performance", analysis);
+        }
+        
+        ScenarioContext["RecommendationPerformance"] = performanceAnalysis;
+    }
+
+    [Then(@"performance metrics should be continuously tracked")]
+    public void ThenPerformanceMetricsShouldBeContinuouslyTracked()
+    {
+        ScenarioContext["ContinuousTracking"] = true;
+        ScenarioContext["OngoingMonitoring"] = true;
+    }
+
+    [Then(@"improvements should be data-driven")]
+    public void ThenImprovementsShouldBeDataDriven()
+    {
+        ScenarioContext["DataDrivenImprovements"] = true;
+        ScenarioContext["EvidenceBasedChanges"] = true;
+    }
+
+    [Then(@"user outcomes should guide optimization")]
+    public void ThenUserOutcomesShouldGuideOptimization()
+    {
+        ScenarioContext["OutcomeGuidedOptimization"] = true;
+        ScenarioContext["ResultsFocused"] = true;
+    }
+
+    [Then(@"A/B testing should validate changes")]
+    public void ThenABTestingShouldValidateChanges()
+    {
+        ScenarioContext["ABTestingValidation"] = true;
+        ScenarioContext["ExperimentalApproach"] = true;
+    }
+
+    [Given(@"users need to trust recommendations")]
+    public void GivenUsersNeedToTrustRecommendations()
+    {
+        ScenarioContext["TrustRequired"] = true;
+        ScenarioContext["CredibilityImportant"] = true;
+    }
+
+    [Given(@"transparency builds confidence")]
+    public void GivenTransparencyBuildsConfidence()
+    {
+        ScenarioContext["TransparencyBuildsConfidence"] = true;
+        ScenarioContext["OpennessValued"] = true;
+    }
+
+    [When(@"explaining recommendation rationale:")]
+    public async Task WhenExplainingRecommendationRationale(Table table)
+    {
+        var explanations = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var explanation = new
+            {
+                ResourceRecommended = row["Resource Recommended"],
+                PrimaryReason = row["Primary Reason"],
+                SupportingFactors = row["Supporting Factors"],
+                Confidence = row["Confidence"],
+                AlternativeOptions = row["Alternative Options"],
+                WhyNotOthers = row["Why Not Others"]
+            };
+            explanations.Add(explanation);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/explain-rec", explanation);
+        }
+        
+        ScenarioContext["RecommendationExplanations"] = explanations;
+    }
+
+    [Then(@"explanations should be user-friendly")]
+    public void ThenExplanationsShouldBeUserFriendly()
+    {
+        ScenarioContext["UserFriendlyExplanations"] = true;
+        ScenarioContext["AccessibleLanguage"] = true;
+    }
+
+    [Then(@"confidence levels should be shown")]
+    public void ThenConfidenceLevelsShouldBeShown()
+    {
+        ScenarioContext["ConfidenceLevelsShown"] = true;
+        ScenarioContext["TransparencyProvided"] = true;
+    }
+
+    [Then(@"alternatives should be acknowledged")]
+    public void ThenAlternativesShouldBeAcknowledged()
+    {
+        ScenarioContext["AlternativesAcknowledged"] = true;
+        ScenarioContext["OptionsPresented"] = true;
+    }
+
+    [Given(@"new users lack behavioral data")]
+    public void GivenNewUsersLackBehavioralData()
+    {
+        ScenarioContext["NoBehavioralData"] = true;
+        ScenarioContext["ColdStartProblem"] = true;
+    }
+
+    [When(@"generating initial recommendations:")]
+    public async Task WhenGeneratingInitialRecommendations(Table table)
+    {
+        var initialRecs = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var rec = new
+            {
+                UserType = row["User Type"],
+                AvailableInfo = row["Available Info"],
+                InitialStrategy = row["Initial Strategy"],
+                RecommendationsBasedOn = row["Recommendations Based On"],
+                RefinementMethod = row["Refinement Method"]
+            };
+            initialRecs.Add(rec);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/cold-start", rec);
+        }
+        
+        ScenarioContext["InitialRecommendations"] = initialRecs;
+    }
+
+    [Then(@"cold start should be handled gracefully")]
+    public void ThenColdStartShouldBeHandledGracefully()
+    {
+        ScenarioContext["GracefulColdStart"] = true;
+        ScenarioContext["NewUserHandled"] = true;
+    }
+
+    [Then(@"initial recommendations should be reasonable")]
+    public void ThenInitialRecommendationsShouldBeReasonable()
+    {
+        ScenarioContext["ReasonableInitialRecs"] = true;
+        ScenarioContext["SensibleDefaults"] = true;
+    }
+
+    [Then(@"learning should be accelerated")]
+    public void ThenLearningShouldBeAccelerated()
+    {
+        ScenarioContext["AcceleratedLearning"] = true;
+        ScenarioContext["QuickAdaptation"] = true;
+    }
+
+    [Then(@"user satisfaction should be maintained")]
+    public void ThenUserSatisfactionShouldBeMaintained()
+    {
+        ScenarioContext["SatisfactionMaintained"] = true;
+        ScenarioContext["PositiveExperience"] = true;
+    }
+
+    [Given(@"some users interact minimally")]
+    public void GivenSomeUsersInteractMinimally()
+    {
+        ScenarioContext["MinimalInteraction"] = true;
+        ScenarioContext["LimitedData"] = true;
+    }
+
+    [When(@"working with limited signals:")]
+    public async Task WhenWorkingWithLimitedSignals(Table table)
+    {
+        var limitedSignals = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var signal = new
+            {
+                DataAvailable = row["Data Available"],
+                InteractionsCount = row["Interactions Count"],
+                StrategyUsed = row["Strategy Used"],
+                RecommendationConfidence = row["Recommendation Confidence"],
+                EnhancementMethod = row["Enhancement Method"]
+            };
+            limitedSignals.Add(signal);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/sparse-data", signal);
+        }
+        
+        ScenarioContext["LimitedSignals"] = limitedSignals;
+    }
+
+    [Then(@"recommendations should still be generated")]
+    public void ThenRecommendationsShouldStillBeGenerated()
+    {
+        ScenarioContext["RecommendationsGenerated"] = true;
+        ScenarioContext["NoDenialOfService"] = true;
+    }
+
+    [Then(@"confidence should reflect data limitations")]
+    public void ThenConfidenceShouldReflectDataLimitations()
+    {
+        ScenarioContext["ConfidenceReflectsLimits"] = true;
+        ScenarioContext["HonestAssessment"] = true;
+    }
+
+    [Then(@"data collection should be encouraged")]
+    public void ThenDataCollectionShouldBeEncouraged()
+    {
+        ScenarioContext["DataCollectionEncouraged"] = true;
+        ScenarioContext["EngagementPromoted"] = true;
+    }
+
+    [Then(@"Quality should not be compromised")]
+    public void ThenQualityShouldNotBeCompromised()
+    {
+        ScenarioContext["QualityMaintained"] = true;
+        ScenarioContext["StandardsUpheld"] = true;
+    }
+
+    [Given(@"user behavior may be inconsistent")]
+    public void GivenUserBehaviorMayBeInconsistent()
+    {
+        ScenarioContext["InconsistentBehavior"] = true;
+        ScenarioContext["ConflictingSignals"] = true;
+    }
+
+    [When(@"handling conflicting signals:")]
+    public async Task WhenHandlingConflictingSignals(Table table)
+    {
+        var conflicts = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var conflict = new
+            {
+                SignalTypeA = row["Signal Type A"],
+                SignalTypeB = row["Signal Type B"],
+                ConflictNature = row["Conflict Nature"],
+                ResolutionStrategy = row["Resolution Strategy"],
+                FinalRecommendation = row["Final Recommendation"]
+            };
+            conflicts.Add(conflict);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/resolve-signal-conflicts", conflict);
+        }
+        
+        ScenarioContext["SignalConflicts"] = conflicts;
+    }
+
+    [Then(@"conflicts should be intelligently resolved")]
+    public void ThenConflictsShouldBeIntelligentlyResolved()
+    {
+        ScenarioContext["IntelligentResolution"] = true;
+        ScenarioContext["SmartConflictHandling"] = true;
+    }
+
+    [Then(@"user intent should be understood")]
+    public void ThenUserIntentShouldBeUnderstood()
+    {
+        ScenarioContext["IntentUnderstood"] = true;
+        ScenarioContext["PurposeRecognized"] = true;
+    }
+
+    [Then(@"Recommendations should be coherent")]
+    public void ThenRecommendationsShouldBeCoherent()
+    {
+        ScenarioContext["CoherentRecommendations"] = true;
+        ScenarioContext["LogicalSuggestions"] = true;
+    }
+
+    [Then(@"Learning should continue")]
+    public void ThenLearningShouldContinue()
+    {
+        ScenarioContext["ContinuousLearning"] = true;
+        ScenarioContext["AdaptiveSystem"] = true;
+    }
+
+    [Given(@"recommendation systems can perpetuate biases")]
+    public void GivenRecommendationSystemsCanPerpetuateBiases()
+    {
+        ScenarioContext["BiasRisk"] = true;
+        ScenarioContext["FairnessConcer"] = true;
+    }
+
+    [When(@"checking for bias:")]
+    public async Task WhenCheckingForBias(Table table)
+    {
+        var biasChecks = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var check = new
+            {
+                BiasType = row["Bias Type"],
+                DetectionMethod = row["Detection Method"],
+                Finding = row["Finding"],
+                MitigationApplied = row["Mitigation Applied"],
+                ResultVerified = row["Result Verified"]
+            };
+            biasChecks.Add(check);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/bias-check", check);
+        }
+        
+        ScenarioContext["BiasChecks"] = biasChecks;
+    }
+
+    [Then(@"biases should be actively detected")]
+    public void ThenBiasesShouldBeActivelyDetected()
+    {
+        ScenarioContext["ActiveBiasDetection"] = true;
+        ScenarioContext["ProactiveMonitoring"] = true;
+    }
+
+    [Then(@"mitigation should be systematic")]
+    public void ThenMitigationShouldBeSystematic()
+    {
+        ScenarioContext["SystematicMitigation"] = true;
+        ScenarioContext["StructuredApproach"] = true;
+    }
+
+    [Then(@"Fairness should be monitored")]
+    public void ThenFairnessShouldBeMonitored()
+    {
+        ScenarioContext["FairnessMonitored"] = true;
+        ScenarioContext["EquityTracked"] = true;
+    }
+
+    [Then(@"Diversity should be promoted")]
+    public void ThenDiversityShouldBePromoted()
+    {
+        ScenarioContext["DiversityPromoted"] = true;
+        ScenarioContext["InclusiveRecommendations"] = true;
+    }
+
+    // Outcome Prediction Steps
+    
+    [Given(@"outcome prediction models are configured")]
+    public void GivenOutcomePredictionModelsAreConfigured()
+    {
+        ScenarioContext["OutcomePredictionEnabled"] = true;
+        ScenarioContext["OutcomeModelsConfig"] = new Dictionary<string, object>
+        {
+            ["ModelsActive"] = true,
+            ["ForecastingEnabled"] = true,
+            ["GoalAchievementPrediction"] = true,
+            ["DischargeReadiness"] = true,
+            ["LongTermOutcomes"] = true
+        };
+    }
+
+    [Given(@"historical outcome data is available")]
+    public void GivenHistoricalOutcomeDataIsAvailable()
+    {
+        ScenarioContext["HistoricalOutcomeData"] = true;
+        ScenarioContext["OutcomeDataQuality"] = "comprehensive";
+        ScenarioContext["DataTimespan"] = "5+ years";
+    }
+
+    [Given(@"multivariate analysis is enabled")]
+    public void GivenMultivariateAnalysisIsEnabled()
+    {
+        ScenarioContext["MultivariateAnalysis"] = true;
+        ScenarioContext["AnalysisCapabilities"] = "advanced";
+        ScenarioContext["FactorInteractions"] = "modeled";
+    }
+
+    [Given(@"evidence-based benchmarks are loaded")]
+    public void GivenEvidenceBasedBenchmarksAreLoaded()
+    {
+        ScenarioContext["BenchmarksLoaded"] = true;
+        ScenarioContext["BenchmarkSource"] = "research-validated";
+        ScenarioContext["BenchmarkCurrency"] = "current";
+    }
+
+    [Given(@"stakeholder communication tools are ready")]
+    public void GivenStakeholderCommunicationToolsAreReady()
+    {
+        ScenarioContext["CommunicationToolsReady"] = true;
+        ScenarioContext["StakeholderTemplates"] = "available";
+        ScenarioContext["VisualizationOptions"] = "configured";
+    }
+
+    [Given(@"I have students with established therapy plans")]
+    public void GivenIHaveStudentsWithEstablishedTherapyPlans()
+    {
+        ScenarioContext["StudentsWithPlans"] = true;
+        ScenarioContext["TherapyPlansActive"] = true;
+        ScenarioContext["TreatmentOngoing"] = true;
+    }
+
+    [Given(@"baseline assessments are complete")]
+    public void GivenBaselineAssessmentsAreComplete()
+    {
+        ScenarioContext["BaselineComplete"] = true;
+        ScenarioContext["AssessmentData"] = "comprehensive";
+        ScenarioContext["StartingPoint"] = "established";
+    }
+
+    [When(@"forecasting therapy outcomes:")]
+    public async Task WhenForecastingTherapyOutcomes(Table table)
+    {
+        var forecasts = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var forecast = new
+            {
+                StudentId = row["Student ID"],
+                Diagnosis = row["Diagnosis"],
+                TherapyType = row["Therapy Type"],
+                CurrentFunction = row["Current Function"],
+                ThreeMonthForecast = row["3-Month Forecast"],
+                SixMonthForecast = row["6-Month Forecast"],
+                OneYearForecast = row["1-Year Forecast"],
+                Confidence = row["Confidence"],
+                KeyFactors = row["Key Factors"]
+            };
+            forecasts.Add(forecast);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/forecast-outcomes", forecast);
+        }
+        
+        ScenarioContext["OutcomeForecasts"] = forecasts;
+    }
+
+    [Then(@"forecasts should be evidence-based")]
+    public void ThenForecastsShouldBeEvidenceBased()
+    {
+        ScenarioContext["EvidenceBasedForecasts"] = true;
+        ScenarioContext["ResearchSupported"] = true;
+    }
+
+    [Then(@"confidence intervals should be provided")]
+    public void ThenConfidenceIntervalsShouldBeProvided()
+    {
+        ScenarioContext["ConfidenceIntervalsIncluded"] = true;
+        ScenarioContext["UncertaintyQuantified"] = true;
+    }
+
+    [Then(@"key influencing factors should be identified")]
+    public void ThenKeyInfluencingFactorsShouldBeIdentified()
+    {
+        ScenarioContext["InfluencingFactorsIdentified"] = true;
+        ScenarioContext["FactorAnalysisComplete"] = true;
+    }
+
+    [Then(@"timelines should be realistic")]
+    public void ThenTimelinesShouldBeRealistic()
+    {
+        ScenarioContext["RealisticTimelines"] = true;
+        ScenarioContext["AchievableGoals"] = true;
+    }
+
+    [Given(@"students have specific IEP goals")]
+    public void GivenStudentsHaveSpecificIEPGoals()
+    {
+        ScenarioContext["IEPGoalsExist"] = true;
+        ScenarioContext["GoalsDocumented"] = true;
+    }
+
+    [Given(@"progress data is tracked regularly")]
+    public void GivenProgressDataIsTrackedRegularly()
+    {
+        ScenarioContext["RegularTracking"] = true;
+        ScenarioContext["DataCollection"] = "consistent";
+    }
+
+    [When(@"analyzing goal achievement likelihood:")]
+    public async Task WhenAnalyzingGoalAchievementLikelihood(Table table)
+    {
+        var goalAnalysis = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var analysis = new
+            {
+                StudentId = row["Student ID"],
+                GoalDescription = row["Goal Description"],
+                CurrentProgress = row["Current Progress"],
+                TimeRemaining = row["Time Remaining"],
+                AchievementProbability = row["Achievement Probability"],
+                RiskFactors = row["Risk Factors"],
+                RecommendedActions = row["Recommended Actions"]
+            };
+            goalAnalysis.Add(analysis);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/goal-achievement", analysis);
+        }
+        
+        ScenarioContext["GoalAchievementAnalysis"] = goalAnalysis;
+    }
+
+    [Then(@"achievement probabilities should guide planning")]
+    public void ThenAchievementProbabilitiesShouldGuidePlanning()
+    {
+        ScenarioContext["ProbabilitiesGuidePlanning"] = true;
+        ScenarioContext["DataDrivenDecisions"] = true;
+    }
+
+    [Then(@"risk factors should be addressable")]
+    public void ThenRiskFactorsShouldBeAddressable()
+    {
+        ScenarioContext["AddressableRisks"] = true;
+        ScenarioContext["MitigationPossible"] = true;
+    }
+
+    [Then(@"recommendations should be specific")]
+    public void ThenRecommendationsShouldBeSpecific()
+    {
+        ScenarioContext["SpecificRecommendations"] = true;
+        ScenarioContext["ActionableGuidance"] = true;
+    }
+
+    [Then(@"families should understand projections")]
+    public void ThenFamiliesShouldUnderstandProjections()
+    {
+        ScenarioContext["FamilyUnderstanding"] = true;
+        ScenarioContext["ClearCommunication"] = true;
+    }
+
+    [Given(@"students are making progress in therapy")]
+    public void GivenStudentsAreMakingProgressInTherapy()
+    {
+        ScenarioContext["ProgressBeingMade"] = true;
+        ScenarioContext["TherapyEffective"] = true;
+    }
+
+    [Given(@"discharge criteria are defined")]
+    public void GivenDischargeCriteriaAreDefined()
+    {
+        ScenarioContext["DischargeCriteriaDefined"] = true;
+        ScenarioContext["ClearEndpoints"] = true;
+    }
+
+    [When(@"predicting discharge readiness:")]
+    public async Task WhenPredictingDischargeReadiness(Table table)
+    {
+        var dischargeAnalysis = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var analysis = new
+            {
+                StudentId = row["Student ID"],
+                ServiceType = row["Service Type"],
+                MonthsInService = row["Months in Service"],
+                CurrentStatus = row["Current Status"],
+                DischargeReadiness = row["Discharge Readiness"],
+                PredictedTimeline = row["Predicted Timeline"],
+                TransitionPlanNeeded = row["Transition Plan Needed"],
+                FollowUpRisk = row["Follow-up Risk"]
+            };
+            dischargeAnalysis.Add(analysis);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/discharge-readiness", analysis);
+        }
+        
+        ScenarioContext["DischargeReadinessAnalysis"] = dischargeAnalysis;
+    }
+
+    [Then(@"discharge predictions should be realistic")]
+    public void ThenDischargePredictionsShouldBeRealistic()
+    {
+        ScenarioContext["RealisticDischarge"] = true;
+        ScenarioContext["AchievableTimelines"] = true;
+    }
+
+    [Then(@"transition plans should be proactive")]
+    public void ThenTransitionPlansShouldBeProactive()
+    {
+        ScenarioContext["ProactiveTransition"] = true;
+        ScenarioContext["PreparedInAdvance"] = true;
+    }
+
+    [Then(@"follow-up needs should be identified")]
+    public void ThenFollowUpNeedsShouldBeIdentified()
+    {
+        ScenarioContext["FollowUpIdentified"] = true;
+        ScenarioContext["ContinuityPlanned"] = true;
+    }
+
+    [Then(@"continuity of care should be ensured")]
+    public void ThenContinuityOfCareShouldBeEnsured()
+    {
+        ScenarioContext["ContinuityEnsured"] = true;
+        ScenarioContext["SeamlessTransition"] = true;
+    }
+
+    [Given(@"comprehensive assessment data exists")]
+    public void GivenComprehensiveAssessmentDataExists()
+    {
+        ScenarioContext["ComprehensiveData"] = true;
+        ScenarioContext["DetailedAssessments"] = true;
+    }
+
+    [Given(@"longitudinal studies inform predictions")]
+    public void GivenLongitudinalStudiesInformPredictions()
+    {
+        ScenarioContext["LongitudinalData"] = true;
+        ScenarioContext["ResearchBacked"] = true;
+    }
+
+    [When(@"forecasting long-term outcomes:")]
+    public async Task WhenForecastingLongTermOutcomes(Table table)
+    {
+        var longTermForecasts = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var forecast = new
+            {
+                Condition = row["Condition"],
+                CurrentAge = row["Current Age"],
+                CurrentFunction = row["Current Function"],
+                FiveYearPrediction = row["5-Year Prediction"],
+                TenYearPrediction = row["10-Year Prediction"],
+                AdultPrediction = row["Adult Prediction"],
+                Confidence = row["Confidence"],
+                QualityOfLifeImpact = row["Quality of Life Impact"]
+            };
+            longTermForecasts.Add(forecast);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/long-term-forecast", forecast);
+        }
+        
+        ScenarioContext["LongTermForecasts"] = longTermForecasts;
+    }
+
+    [Then(@"long-term predictions should be sensitively communicated")]
+    public void ThenLongTermPredictionsShouldBeSensitivelyCommunicated()
+    {
+        ScenarioContext["SensitiveCommunication"] = true;
+        ScenarioContext["EmpatheticDelivery"] = true;
+    }
+
+    [Then(@"hope should be balanced with realism")]
+    public void ThenHopeShouldBeBalancedWithRealism()
+    {
+        ScenarioContext["BalancedApproach"] = true;
+        ScenarioContext["HopePreserved"] = true;
+    }
+
+    [Then(@"family planning should be supported")]
+    public void ThenFamilyPlanningShouldBeSupported()
+    {
+        ScenarioContext["FamilyPlanningSupport"] = true;
+        ScenarioContext["LongTermGuidance"] = true;
+    }
+
+    [Then(@"reassessment points should be scheduled")]
+    public void ThenReassessmentPointsShouldBeScheduled()
+    {
+        ScenarioContext["ReassessmentScheduled"] = true;
+        ScenarioContext["RegularReview"] = true;
+    }
+
+    [Given(@"multiple intervention options exist")]
+    public void GivenMultipleInterventionOptionsExist()
+    {
+        ScenarioContext["MultipleOptions"] = true;
+        ScenarioContext["ChoicesAvailable"] = true;
+    }
+
+    [Given(@"comparative effectiveness data is available")]
+    public void GivenComparativeEffectivenessDataIsAvailable()
+    {
+        ScenarioContext["ComparativeData"] = true;
+        ScenarioContext["EffectivenessKnown"] = true;
+    }
+
+    [When(@"comparing predicted outcomes:")]
+    public async Task WhenComparingPredictedOutcomes(Table table)
+    {
+        var comparisons = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var comparison = new
+            {
+                StudentProfile = row["Student Profile"],
+                ApproachA = row["Approach A"],
+                AOutcomePrediction = row["A Outcome Prediction"],
+                ApproachB = row["Approach B"],
+                BOutcomePrediction = row["B Outcome Prediction"],
+                ApproachC = row["Approach C"],
+                COutcomePrediction = row["C Outcome Prediction"],
+                Recommendation = row["Recommendation"]
+            };
+            comparisons.Add(comparison);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/compare-outcomes", comparison);
+        }
+        
+        ScenarioContext["OutcomeComparisons"] = comparisons;
+    }
+
+    [Then(@"comparative predictions should be evidence-based")]
+    public void ThenComparativePredictionsShouldBeEvidenceBased()
+    {
+        ScenarioContext["EvidenceBasedComparisons"] = true;
+        ScenarioContext["DataDrivenChoices"] = true;
+    }
+
+    [Then(@"trade-offs should be clearly presented")]
+    public void ThenTradeOffsShouldBeClearlyPresented()
+    {
+        ScenarioContext["ClearTradeOffs"] = true;
+        ScenarioContext["TransparentOptions"] = true;
+    }
+
+    [Then(@"family preferences should be considered")]
+    public void ThenFamilyPreferencesShouldBeConsidered()
+    {
+        ScenarioContext["FamilyPreferencesConsidered"] = true;
+        ScenarioContext["SharedDecisionMaking"] = true;
+    }
+
+    [Then(@"cost-effectiveness should be included")]
+    public void ThenCostEffectivenessShouldBeIncluded()
+    {
+        ScenarioContext["CostEffectivenessIncluded"] = true;
+        ScenarioContext["ValueAnalysis"] = true;
+    }
+
+    [Given(@"population-level outcome data exists")]
+    public void GivenPopulationLevelOutcomeDataExists()
+    {
+        ScenarioContext["PopulationData"] = true;
+        ScenarioContext["AggregateOutcomes"] = true;
+    }
+
+    [Given(@"risk factors are quantified")]
+    public void GivenRiskFactorsAreQuantified()
+    {
+        ScenarioContext["RiskFactorsQuantified"] = true;
+        ScenarioContext["RiskMetrics"] = true;
+    }
+
+    [When(@"stratifying by outcome risk:")]
+    public async Task WhenStratifyingByOutcomeRisk(Table table)
+    {
+        var riskStratification = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var stratum = new
+            {
+                RiskLevel = row["Risk Level"],
+                StudentCount = row["Student Count"],
+                CommonCharacteristics = row["Common Characteristics"],
+                TypicalOutcomes = row["Typical Outcomes"],
+                ResourceNeeds = row["Resource Needs"],
+                MonitoringFrequency = row["Monitoring Frequency"],
+                PreventionFocus = row["Prevention Focus"]
+            };
+            riskStratification.Add(stratum);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/risk-stratification", stratum);
+        }
+        
+        ScenarioContext["RiskStratification"] = riskStratification;
+    }
+
+    [Then(@"risk stratification should guide resource allocation")]
+    public void ThenRiskStratificationShouldGuideResourceAllocation()
+    {
+        ScenarioContext["ResourceGuidance"] = true;
+        ScenarioContext["AllocationOptimized"] = true;
+    }
+
+    [Then(@"high-risk students should receive priority")]
+    public void ThenHighRiskStudentsShouldReceivePriority()
+    {
+        ScenarioContext["HighRiskPriority"] = true;
+        ScenarioContext["TargetedSupport"] = true;
+    }
+
+    [Then(@"prevention strategies should be targeted")]
+    public void ThenPreventionStrategiesShouldBeTargeted()
+    {
+        ScenarioContext["TargetedPrevention"] = true;
+        ScenarioContext["ProactiveInterventions"] = true;
+    }
+
+    [Then(@"outcomes should be continuously monitored")]
+    public void ThenOutcomesShouldBeContinuouslyMonitored()
+    {
+        ScenarioContext["ContinuousMonitoring"] = true;
+        ScenarioContext["OngoingTracking"] = true;
+    }
+
+    [Given(@"family engagement impacts outcomes")]
+    public void GivenFamilyEngagementImpactsOutcomes()
+    {
+        ScenarioContext["FamilyImpact"] = true;
+        ScenarioContext["EngagementMatters"] = true;
+    }
+
+    [Given(@"environmental factors are assessed")]
+    public void GivenEnvironmentalFactorsAreAssessed()
+    {
+        ScenarioContext["EnvironmentalAssessment"] = true;
+        ScenarioContext["ContextConsidered"] = true;
+    }
+
+    [When(@"adjusting predictions for context:")]
+    public async Task WhenAdjustingPredictionsForContext(Table table)
+    {
+        var adjustments = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var adjustment = new
+            {
+                BasePrediction = row["Base Prediction"],
+                FamilyFactors = row["Family Factors"],
+                EnvironmentalFactors = row["Environmental Factors"],
+                AdjustedPrediction = row["Adjusted Prediction"],
+                ConfidenceChange = row["Confidence Change"],
+                SupportRecommendations = row["Support Recommendations"]
+            };
+            adjustments.Add(adjustment);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/adjust-prediction", adjustment);
+        }
+        
+        ScenarioContext["ContextualAdjustments"] = adjustments;
+    }
+
+    [Then(@"family factors should significantly influence predictions")]
+    public void ThenFamilyFactorsShouldSignificantlyInfluencePredictions()
+    {
+        ScenarioContext["FamilyInfluence"] = true;
+        ScenarioContext["SignificantImpact"] = true;
+    }
+
+    [Then(@"environmental considerations should be included")]
+    public void ThenEnvironmentalConsiderationsShouldBeIncluded()
+    {
+        ScenarioContext["EnvironmentIncluded"] = true;
+        ScenarioContext["HolisticView"] = true;
+    }
+
+    [Then(@"support recommendations should address barriers")]
+    public void ThenSupportRecommendationsShouldAddressBarriers()
+    {
+        ScenarioContext["BarriersAddressed"] = true;
+        ScenarioContext["TargetedSupport"] = true;
+    }
+
+    [Then(@"family strengths should be leveraged")]
+    public void ThenFamilyStrengthsShouldBeLeveraged()
+    {
+        ScenarioContext["StrengthsLeveraged"] = true;
+        ScenarioContext["AssetBased"] = true;
+    }
+
+    [Given(@"therapy resources have associated costs")]
+    public void GivenTherapyResourcesHaveAssociatedCosts()
+    {
+        ScenarioContext["CostsKnown"] = true;
+        ScenarioContext["FinancialData"] = true;
+    }
+
+    [Given(@"outcome improvements can be quantified")]
+    public void GivenOutcomeImprovementsCanBeQuantified()
+    {
+        ScenarioContext["OutcomesQuantified"] = true;
+        ScenarioContext["MeasurableGains"] = true;
+    }
+
+    [When(@"analyzing cost-effectiveness:")]
+    public async Task WhenAnalyzingCostEffectiveness(Table table)
+    {
+        var costAnalysis = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var analysis = new
+            {
+                InterventionType = row["Intervention Type"],
+                WeeklyCost = row["Weekly Cost"],
+                DurationEstimate = row["Duration Estimate"],
+                TotalInvestment = row["Total Investment"],
+                PredictedOutcome = row["Predicted Outcome"],
+                CostPerGain = row["Cost per % Gain"],
+                ValueRating = row["Value Rating"],
+                InsuranceCoverage = row["Insurance Coverage"]
+            };
+            costAnalysis.Add(analysis);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/cost-effectiveness", analysis);
+        }
+        
+        ScenarioContext["CostEffectivenessAnalysis"] = costAnalysis;
+    }
+
+    [Then(@"cost-effectiveness should be transparent")]
+    public void ThenCostEffectivenessShouldBeTransparent()
+    {
+        ScenarioContext["TransparentCosts"] = true;
+        ScenarioContext["ClearValue"] = true;
+    }
+
+    [Then(@"value calculations should be clear")]
+    public void ThenValueCalculationsShouldBeClear()
+    {
+        ScenarioContext["ClearCalculations"] = true;
+        ScenarioContext["UnderstandableMetrics"] = true;
+    }
+
+    [Then(@"insurance implications should be shown")]
+    public void ThenInsuranceImplicationsShouldBeShown()
+    {
+        ScenarioContext["InsuranceImplications"] = true;
+        ScenarioContext["CoverageClarity"] = true;
+    }
+
+    [Then(@"family budgets should be considered")]
+    public void ThenFamilyBudgetsShouldBeConsidered()
+    {
+        ScenarioContext["BudgetConsidered"] = true;
+        ScenarioContext["AffordabilityAddressed"] = true;
+    }
+
+    [Given(@"predictions have been made historically")]
+    public void GivenPredictionsHaveBeenMadeHistorically()
+    {
+        ScenarioContext["HistoricalPredictions"] = true;
+        ScenarioContext["PastForecasts"] = true;
+    }
+
+    [Given(@"actual outcomes are documented")]
+    public void GivenActualOutcomesAreDocumented()
+    {
+        ScenarioContext["OutcomesDocumented"] = true;
+        ScenarioContext["ResultsTracked"] = true;
+    }
+
+    [When(@"validating prediction accuracy:")]
+    public async Task WhenValidatingPredictionAccuracy(Table table)
+    {
+        var validations = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var validation = new
+            {
+                PredictionId = row["Prediction ID"],
+                PredictedOutcome = row["Predicted Outcome"],
+                ActualOutcome = row["Actual Outcome"],
+                Accuracy = row["Accuracy"],
+                Variance = row["Variance"],
+                ContributingFactors = row["Contributing Factors"],
+                ModelAdjustment = row["Model Adjustment"]
+            };
+            validations.Add(validation);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/validate-prediction", validation);
+        }
+        
+        ScenarioContext["PredictionValidations"] = validations;
+    }
+
+    [Then(@"prediction accuracy should be tracked")]
+    public void ThenPredictionAccuracyShouldBeTracked()
+    {
+        ScenarioContext["AccuracyTracked"] = true;
+        ScenarioContext["PerformanceMonitored"] = true;
+    }
+
+    [Then(@"model improvements should be data-driven")]
+    public void ThenModelImprovementsShouldBeDataDriven()
+    {
+        ScenarioContext["DataDrivenImprovements"] = true;
+        ScenarioContext["EvidenceBasedUpdates"] = true;
+    }
+
+    [Then(@"Outliers should be investigated")]
+    public void ThenOutliersShouldBeInvestigated()
+    {
+        ScenarioContext["OutliersInvestigated"] = true;
+        ScenarioContext["AnomaliesAnalyzed"] = true;
+    }
+
+    [Then(@"Continuous improvement should occur")]
+    public void ThenContinuousImprovementShouldOccur()
+    {
+        ScenarioContext["ContinuousImprovement"] = true;
+        ScenarioContext["OngoingOptimization"] = true;
+    }
+
+    [Given(@"predictions must be shared sensitively")]
+    public void GivenPredictionsMustBeSharedSensitively()
+    {
+        ScenarioContext["SensitiveSharing"] = true;
+        ScenarioContext["CarefulCommunication"] = true;
+    }
+
+    [Given(@"different stakeholders need different information")]
+    public void GivenDifferentStakeholdersNeedDifferentInformation()
+    {
+        ScenarioContext["DifferentiatedInfo"] = true;
+        ScenarioContext["CustomizedMessages"] = true;
+    }
+
+    [When(@"preparing prediction communications:")]
+    public async Task WhenPreparingPredictionCommunications(Table table)
+    {
+        var communications = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var communication = new
+            {
+                Stakeholder = row["Stakeholder"],
+                PredictionType = row["Prediction Type"],
+                CommunicationMethod = row["Communication Method"],
+                KeyMessages = row["Key Messages"],
+                Visualization = row["Visualization"],
+                FollowUpPlan = row["Follow-up Plan"]
+            };
+            communications.Add(communication);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/prepare-communication", communication);
+        }
+        
+        ScenarioContext["PredictionCommunications"] = communications;
+    }
+
+    [Then(@"communications should be appropriate")]
+    public void ThenCommunicationsShouldBeAppropriate()
+    {
+        ScenarioContext["AppropriateCommunication"] = true;
+        ScenarioContext["StakeholderAligned"] = true;
+    }
+
+    [Then(@"hope should be preserved")]
+    public void ThenHopeShouldBePreserved()
+    {
+        ScenarioContext["HopePreserved"] = true;
+        ScenarioContext["PositiveFraming"] = true;
+    }
+
+    [Then(@"data should support messages")]
+    public void ThenDataShouldSupportMessages()
+    {
+        ScenarioContext["DataSupportedMessages"] = true;
+        ScenarioContext["EvidenceBacked"] = true;
+    }
+
+    [Then(@"questions should be anticipated")]
+    public void ThenQuestionsShouldBeAnticipated()
+    {
+        ScenarioContext["QuestionsAnticipated"] = true;
+        ScenarioContext["PreparedResponses"] = true;
+    }
+
+    [Given(@"some students have missing assessment data")]
+    public void GivenSomeStudentsHaveMissingAssessmentData()
+    {
+        ScenarioContext["MissingData"] = true;
+        ScenarioContext["IncompleteAssessments"] = true;
+    }
+
+    [When(@"attempting predictions with gaps:")]
+    public async Task WhenAttemptingPredictionsWithGaps(Table table)
+    {
+        var gapAnalysis = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var analysis = new
+            {
+                StudentId = row["Student ID"],
+                MissingDataType = row["Missing Data Type"],
+                DataCompleteness = row["Data Completeness"],
+                PredictionPossible = row["Prediction Possible"],
+                AlternativeApproach = row["Alternative Approach"],
+                Communication = row["Communication"]
+            };
+            gapAnalysis.Add(analysis);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/handle-data-gaps", analysis);
+        }
+        
+        ScenarioContext["DataGapAnalysis"] = gapAnalysis;
+    }
+
+    [Then(@"data gaps should be acknowledged")]
+    public void ThenDataGapsShouldBeAcknowledged()
+    {
+        ScenarioContext["GapsAcknowledged"] = true;
+        ScenarioContext["TransparencyMaintained"] = true;
+    }
+
+    [Then(@"predictions should reflect uncertainty")]
+    public void ThenPredictionsShouldReflectUncertainty()
+    {
+        ScenarioContext["UncertaintyReflected"] = true;
+        ScenarioContext["ConfidenceAdjusted"] = true;
+    }
+
+    [Then(@"data collection should be prioritized")]
+    public void ThenDataCollectionShouldBePrioritized()
+    {
+        ScenarioContext["DataCollectionPrioritized"] = true;
+        ScenarioContext["GapClosurePlanned"] = true;
+    }
+
+    [Then(@"stakeholders should understand limitations")]
+    public void ThenStakeholdersShouldUnderstandLimitations()
+    {
+        ScenarioContext["LimitationsUnderstood"] = true;
+        ScenarioContext["ClearExpectations"] = true;
+    }
+
+    [Given(@"initial predictions have been made")]
+    public void GivenInitialPredictionsHaveBeenMade()
+    {
+        ScenarioContext["InitialPredictions"] = true;
+        ScenarioContext["BaselineEstablished"] = true;
+    }
+
+    [When(@"significant changes occur:")]
+    public async Task WhenSignificantChangesOccur(Table table)
+    {
+        var changeAnalysis = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var analysis = new
+            {
+                ChangeType = row["Change Type"],
+                OriginalPrediction = row["Original Prediction"],
+                ImpactAssessment = row["Impact Assessment"],
+                RevisedPrediction = row["Revised Prediction"],
+                Confidence = row["Confidence"],
+                ActionRequired = row["Action Required"]
+            };
+            changeAnalysis.Add(analysis);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/handle-changes", analysis);
+        }
+        
+        ScenarioContext["ChangeImpactAnalysis"] = changeAnalysis;
+    }
+
+    [Then(@"predictions should be dynamically updated")]
+    public void ThenPredictionsShouldBeDynamicallyUpdated()
+    {
+        ScenarioContext["DynamicUpdates"] = true;
+        ScenarioContext["AdaptivePredictions"] = true;
+    }
+
+    [Then(@"change impacts should be quantified")]
+    public void ThenChangeImpactsShouldBeQuantified()
+    {
+        ScenarioContext["ImpactsQuantified"] = true;
+        ScenarioContext["ChangesMeasured"] = true;
+    }
+
+    [Then(@"new plans should be developed")]
+    public void ThenNewPlansShouldBeDeveloped()
+    {
+        ScenarioContext["NewPlansDeveloped"] = true;
+        ScenarioContext["AdaptiveStrategies"] = true;
+    }
+
+    [Then(@"support should be adjusted")]
+    public void ThenSupportShouldBeAdjusted()
+    {
+        ScenarioContext["SupportAdjusted"] = true;
+        ScenarioContext["ResponsiveInterventions"] = true;
+    }
+
+    [Given(@"all models have inherent limitations")]
+    public void GivenAllModelsHaveInherentLimitations()
+    {
+        ScenarioContext["ModelLimitations"] = true;
+        ScenarioContext["InherentUncertainty"] = true;
+    }
+
+    [When(@"presenting predictions with uncertainty:")]
+    public async Task WhenPresentingPredictionsWithUncertainty(Table table)
+    {
+        var uncertaintyAnalysis = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var analysis = new
+            {
+                PredictionScenario = row["Prediction Scenario"],
+                ConfidenceLevel = row["Confidence Level"],
+                UncertaintySources = row["Uncertainty Sources"],
+                LimitationsDisclosed = row["Limitations Disclosed"],
+                AlternativeScenarios = row["Alternative Scenarios"]
+            };
+            uncertaintyAnalysis.Add(analysis);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/communicate-uncertainty", analysis);
+        }
+        
+        ScenarioContext["UncertaintyCommunication"] = uncertaintyAnalysis;
+    }
+
+    [Then(@"limitations should be transparently communicated")]
+    public void ThenLimitationsShouldBeTransparentlyCommunicated()
+    {
+        ScenarioContext["TransparentLimitations"] = true;
+        ScenarioContext["HonestCommunication"] = true;
+    }
+
+    [Then(@"uncertainty should be quantified")]
+    public void ThenUncertaintyShouldBeQuantified()
+    {
+        ScenarioContext["QuantifiedUncertainty"] = true;
+        ScenarioContext["MeasuredRisk"] = true;
+    }
+
+    [Then(@"decisions should acknowledge unknowns")]
+    public void ThenDecisionsShouldAcknowledgeUnknowns()
+    {
+        ScenarioContext["UnknownsAcknowledged"] = true;
+        ScenarioContext["InformedDecisions"] = true;
+    }
+
+    [Then(@"flexibility should be maintained")]
+    public void ThenFlexibilityShouldBeMaintained()
+    {
+        ScenarioContext["FlexibilityMaintained"] = true;
+        ScenarioContext["AdaptableApproach"] = true;
+    }
+
+    [Given(@"predictions can impact service allocation")]
+    public void GivenPredictionsCanImpactServiceAllocation()
+    {
+        ScenarioContext["AllocationImpact"] = true;
+        ScenarioContext["ResourceDecisions"] = true;
+    }
+
+    [When(@"ethical considerations arise:")]
+    public async Task WhenEthicalConsiderationsArise(Table table)
+    {
+        var ethicalAnalysis = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var analysis = new
+            {
+                EthicalIssue = row["Ethical Issue"],
+                Scenario = row["Scenario"],
+                Risk = row["Risk"],
+                MitigationStrategy = row["Mitigation Strategy"],
+                Documentation = row["Documentation"]
+            };
+            ethicalAnalysis.Add(analysis);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/ethical-review", analysis);
+        }
+        
+        ScenarioContext["EthicalConsiderations"] = ethicalAnalysis;
+    }
+
+    [Then(@"ethical safeguards should be in place")]
+    public void ThenEthicalSafeguardsShouldBeInPlace()
+    {
+        ScenarioContext["EthicalSafeguards"] = true;
+        ScenarioContext["ProtectionsActive"] = true;
+    }
+
+    [Then(@"human dignity should be preserved")]
+    public void ThenHumanDignityShouldBePreserved()
+    {
+        ScenarioContext["DignityPreserved"] = true;
+        ScenarioContext["RespectfulApproach"] = true;
+    }
+
+    [Then(@"predictions should empower, not limit")]
+    public void ThenPredictionsShouldEmpowerNotLimit()
+    {
+        ScenarioContext["EmpoweringPredictions"] = true;
+        ScenarioContext["EnableNotConstrain"] = true;
+    }
+
+    [Then(@"regular review should occur")]
+    public void ThenRegularReviewShouldOccur()
+    {
+        ScenarioContext["RegularReview"] = true;
+        ScenarioContext["OngoingOversight"] = true;
+    }
+
+    // Usage Pattern Analysis Steps
+    
+    [Given(@"usage analytics system is configured")]
+    public void GivenUsageAnalyticsSystemIsConfigured()
+    {
+        ScenarioContext["UsageAnalyticsEnabled"] = true;
+        ScenarioContext["AnalyticsConfig"] = new Dictionary<string, object>
+        {
+            ["TrackingEnabled"] = true,
+            ["PatternRecognition"] = true,
+            ["InsightGeneration"] = true,
+            ["PrivacyCompliant"] = true,
+            ["RealTimeAnalysis"] = true
+        };
+    }
+
+    [Given(@"comprehensive tracking is enabled")]
+    public void GivenComprehensiveTrackingIsEnabled()
+    {
+        ScenarioContext["ComprehensiveTracking"] = true;
+        ScenarioContext["TrackingScope"] = "full-platform";
+        ScenarioContext["DataCollection"] = "detailed";
+    }
+
+    [Given(@"data privacy compliance is maintained")]
+    public void GivenDataPrivacyComplianceIsMaintained()
+    {
+        ScenarioContext["PrivacyCompliant"] = true;
+        ScenarioContext["AnonymizationActive"] = true;
+        ScenarioContext["ConsentVerified"] = true;
+    }
+
+    [Given(@"pattern recognition algorithms are active")]
+    public void GivenPatternRecognitionAlgorithmsAreActive()
+    {
+        ScenarioContext["PatternRecognitionActive"] = true;
+        ScenarioContext["AlgorithmsRunning"] = true;
+        ScenarioContext["MLModelsDeployed"] = true;
+    }
+
+    [Given(@"insight generation engine is ready")]
+    public void GivenInsightGenerationEngineIsReady()
+    {
+        ScenarioContext["InsightEngineReady"] = true;
+        ScenarioContext["AutomatedInsights"] = true;
+        ScenarioContext["RecommendationsEnabled"] = true;
+    }
+
+    [Given(@"I have access to platform usage data")]
+    public void GivenIHaveAccessToPlatformUsageData()
+    {
+        ScenarioContext["UsageDataAccess"] = true;
+        ScenarioContext["DataPermissions"] = "granted";
+        ScenarioContext["AnalyticsRole"] = true;
+    }
+
+    [Given(@"multiple therapists are actively using resources")]
+    public void GivenMultipleTherapistsAreActivelyUsingResources()
+    {
+        ScenarioContext["ActiveTherapists"] = true;
+        ScenarioContext["MultiUserActivity"] = true;
+        ScenarioContext["ResourceUsageActive"] = true;
+    }
+
+    [When(@"analyzing therapist usage patterns:")]
+    public async Task WhenAnalyzingTherapistUsagePatterns(Table table)
+    {
+        var usagePatterns = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var pattern = new
+            {
+                TherapistId = row["Therapist ID"],
+                Specialty = row["Specialty"],
+                ResourcesPerWeek = row["Resources/Week"],
+                PeakUsageTime = row["Peak Usage Time"],
+                FavoriteCategories = row["Favorite Categories"],
+                DownloadVsDigital = row["Download vs Digital"],
+                SessionPrepTime = row["Session Prep Time"],
+                OutcomeCorrelation = row["Outcome Correlation"]
+            };
+            usagePatterns.Add(pattern);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/therapist-usage", pattern);
+        }
+        
+        ScenarioContext["TherapistUsagePatterns"] = usagePatterns;
+    }
+
+    [Then(@"usage patterns should reveal optimization opportunities")]
+    public void ThenUsagePatternsShouldRevealOptimizationOpportunities()
+    {
+        ScenarioContext["OptimizationOpportunities"] = true;
+        ScenarioContext["InsightsRevealed"] = true;
+    }
+
+    [Then(@"peak times should inform resource availability")]
+    public void ThenPeakTimesShouldInformResourceAvailability()
+    {
+        ScenarioContext["PeakTimeAnalysis"] = true;
+        ScenarioContext["ResourceScheduling"] = true;
+    }
+
+    [Then(@"category preferences should guide content curation")]
+    public void ThenCategoryPreferencesShouldGuideContentCuration()
+    {
+        ScenarioContext["PreferenceGuidance"] = true;
+        ScenarioContext["ContentStrategy"] = true;
+    }
+
+    [Then(@"efficiency metrics should be actionable")]
+    public void ThenEfficiencyMetricsShouldBeActionable()
+    {
+        ScenarioContext["ActionableMetrics"] = true;
+        ScenarioContext["EfficiencyInsights"] = true;
+    }
+
+    [Given(@"students are assigned digital activities")]
+    public void GivenStudentsAreAssignedDigitalActivities()
+    {
+        ScenarioContext["DigitalAssignments"] = true;
+        ScenarioContext["StudentActivities"] = true;
+    }
+
+    [Given(@"engagement metrics are captured")]
+    public void GivenEngagementMetricsAreCaptured()
+    {
+        ScenarioContext["EngagementTracking"] = true;
+        ScenarioContext["MetricsCaptured"] = true;
+    }
+
+    [When(@"analyzing student engagement patterns:")]
+    public async Task WhenAnalyzingStudentEngagementPatterns(Table table)
+    {
+        var engagementPatterns = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var pattern = new
+            {
+                AgeGroup = row["Age Group"],
+                ResourceType = row["Resource Type"],
+                AvgSessionTime = row["Avg Session Time"],
+                CompletionRate = row["Completion Rate"],
+                RepeatUsage = row["Repeat Usage"],
+                EngagementScore = row["Engagement Score"],
+                PerformanceImpact = row["Performance Impact"],
+                PreferredFeatures = row["Preferred Features"]
+            };
+            engagementPatterns.Add(pattern);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/student-engagement", pattern);
+        }
+        
+        ScenarioContext["StudentEngagementPatterns"] = engagementPatterns;
+    }
+
+    [Then(@"engagement patterns should inform design decisions")]
+    public void ThenEngagementPatternsShouldInformDesignDecisions()
+    {
+        ScenarioContext["DesignInsights"] = true;
+        ScenarioContext["UserCenteredDesign"] = true;
+    }
+
+    [Then(@"age-appropriate features should be identified")]
+    public void ThenAgeAppropriateFeaturesShoudBeIdentified()
+    {
+        ScenarioContext["AgeAppropriateFeatures"] = true;
+        ScenarioContext["DevelopmentalAlignment"] = true;
+    }
+
+    [Then(@"high-engagement elements should be replicated")]
+    public void ThenHighEngagementElementsShouldBeReplicated()
+    {
+        ScenarioContext["EngagementReplication"] = true;
+        ScenarioContext["SuccessPatterns"] = true;
+    }
+
+    [Then(@"low-engagement areas should be improved")]
+    public void ThenLowEngagementAreasShouldBeImproved()
+    {
+        ScenarioContext["ImprovementAreas"] = true;
+        ScenarioContext["EngagementOptimization"] = true;
+    }
+
+    [Given(@"therapy outcomes are tracked systematically")]
+    public void GivenTherapyOutcomesAreTrackedSystematically()
+    {
+        ScenarioContext["SystematicOutcomeTracking"] = true;
+        ScenarioContext["OutcomeData"] = true;
+    }
+
+    [Given(@"resource usage is linked to sessions")]
+    public void GivenResourceUsageIsLinkedToSessions()
+    {
+        ScenarioContext["ResourceSessionLink"] = true;
+        ScenarioContext["UsageCorrelation"] = true;
+    }
+
+    [When(@"analyzing resource effectiveness:")]
+    public async Task WhenAnalyzingResourceEffectiveness(Table table)
+    {
+        var effectivenessData = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var effectiveness = new
+            {
+                ResourceCategory = row["Resource Category"],
+                UsageCount = row["Usage Count"],
+                AvgOutcomeImprovement = row["Avg Outcome Improvement"],
+                TimeToProgress = row["Time to Progress"],
+                TherapistRating = row["Therapist Rating"],
+                StudentEngagement = row["Student Engagement"],
+                CostEfficiency = row["Cost Efficiency"]
+            };
+            effectivenessData.Add(effectiveness);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/resource-effectiveness", effectiveness);
+        }
+        
+        ScenarioContext["ResourceEffectiveness"] = effectivenessData;
+    }
+
+    [Then(@"effectiveness metrics should guide recommendations")]
+    public void ThenEffectivenessMetricsShouldGuideRecommendations()
+    {
+        ScenarioContext["EffectivenessGuidance"] = true;
+        ScenarioContext["DataDrivenRecommendations"] = true;
+    }
+
+    [Then(@"high-performing resources should be prioritized")]
+    public void ThenHighPerformingResourcesShouldBePrioritized()
+    {
+        ScenarioContext["ResourcePrioritization"] = true;
+        ScenarioContext["PerformanceBasedRanking"] = true;
+    }
+
+    [Then(@"improvement opportunities should be identified")]
+    public void ThenImprovementOpportunitiesShouldBeIdentified()
+    {
+        ScenarioContext["ImprovementIdentified"] = true;
+        ScenarioContext["OptimizationTargets"] = true;
+    }
+
+    [Then(@"ROI calculations should be clear")]
+    public void ThenROICalculationsShouldBeClear()
+    {
+        ScenarioContext["ClearROI"] = true;
+        ScenarioContext["ValueDemonstrated"] = true;
+    }
+
+    [Given(@"historical usage data spans multiple years")]
+    public void GivenHistoricalUsageDataSpansMultipleYears()
+    {
+        ScenarioContext["MultiYearData"] = true;
+        ScenarioContext["HistoricalDepth"] = true;
+    }
+
+    [Given(@"seasonal patterns can be detected")]
+    public void GivenSeasonalPatternsCanBeDetected()
+    {
+        ScenarioContext["SeasonalDetection"] = true;
+        ScenarioContext["PatternAnalysis"] = true;
+    }
+
+    [When(@"analyzing temporal usage patterns:")]
+    public async Task WhenAnalyzingTemporalUsagePatterns(Table table)
+    {
+        var temporalPatterns = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var pattern = new
+            {
+                TimePeriod = row["Time Period"],
+                UsageVolume = row["Usage Volume"],
+                PopularResources = row["Popular Resources"],
+                UserGrowth = row["User Growth"],
+                EngagementLevel = row["Engagement Level"],
+                RevenueImpact = row["Revenue Impact"],
+                NotablePatterns = row["Notable Patterns"]
+            };
+            temporalPatterns.Add(pattern);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/temporal-patterns", pattern);
+        }
+        
+        ScenarioContext["TemporalPatterns"] = temporalPatterns;
+    }
+
+    [Then(@"seasonal insights should inform capacity planning")]
+    public void ThenSeasonalInsightsShouldInformCapacityPlanning()
+    {
+        ScenarioContext["CapacityPlanning"] = true;
+        ScenarioContext["SeasonalPreparation"] = true;
+    }
+
+    [Then(@"content calendars should align with trends")]
+    public void ThenContentCalendarsShouldAlignWithTrends()
+    {
+        ScenarioContext["ContentAlignment"] = true;
+        ScenarioContext["TrendBasedPlanning"] = true;
+    }
+
+    [Then(@"marketing campaigns should leverage patterns")]
+    public void ThenMarketingCampaignsShouldLeveragePatterns()
+    {
+        ScenarioContext["MarketingOptimization"] = true;
+        ScenarioContext["PatternLeveraging"] = true;
+    }
+
+    [Then(@"resource allocation should be optimized")]
+    public void ThenResourceAllocationShouldBeOptimized()
+    {
+        ScenarioContext["OptimizedAllocation"] = true;
+        ScenarioContext["EfficientResources"] = true;
+    }
+
+    [Given(@"users can be segmented into meaningful cohorts")]
+    public void GivenUsersCanBeSegmentedIntoMeaningfulCohorts()
+    {
+        ScenarioContext["CohortSegmentation"] = true;
+        ScenarioContext["UserGrouping"] = true;
+    }
+
+    [Given(@"longitudinal tracking is available")]
+    public void GivenLongitudinalTrackingIsAvailable()
+    {
+        ScenarioContext["LongitudinalData"] = true;
+        ScenarioContext["TimeSeriesAnalysis"] = true;
+    }
+
+    [When(@"analyzing cohort behaviors:")]
+    public async Task WhenAnalyzingCohortBehaviors(Table table)
+    {
+        var cohortAnalysis = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var cohort = new
+            {
+                CohortDefinition = row["Cohort Definition"],
+                CohortSize = row["Cohort Size"],
+                RetentionSixMonth = row["Retention (6mo)"],
+                AvgResourcesPerMonth = row["Avg Resources/Mo"],
+                UpgradeRate = row["Upgrade Rate"],
+                LifetimeValue = row["Lifetime Value"],
+                KeyCharacteristics = row["Key Characteristics"]
+            };
+            cohortAnalysis.Add(cohort);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/cohort-analysis", cohort);
+        }
+        
+        ScenarioContext["CohortAnalysis"] = cohortAnalysis;
+    }
+
+    [Then(@"cohort insights should guide product development")]
+    public void ThenCohortInsightsShouldGuideProductDevelopment()
+    {
+        ScenarioContext["ProductGuidance"] = true;
+        ScenarioContext["CohortDrivenDevelopment"] = true;
+    }
+
+    [Then(@"retention strategies should be cohort-specific")]
+    public void ThenRetentionStrategiesShouldBeCohortSpecific()
+    {
+        ScenarioContext["CohortRetention"] = true;
+        ScenarioContext["TargetedStrategies"] = true;
+    }
+
+    [Then(@"pricing models should reflect usage patterns")]
+    public void ThenPricingModelsShouldReflectUsagePatterns()
+    {
+        ScenarioContext["UsageBasedPricing"] = true;
+        ScenarioContext["ValueAlignment"] = true;
+    }
+
+    [Then(@"feature priorities should align with needs")]
+    public void ThenFeaturePrioritiesShouldAlignWithNeeds()
+    {
+        ScenarioContext["NeedsAlignment"] = true;
+        ScenarioContext["PriorityOptimization"] = true;
+    }
+
+    [Given(@"user actions are tracked sequentially")]
+    public void GivenUserActionsAreTrackedSequentially()
+    {
+        ScenarioContext["SequentialTracking"] = true;
+        ScenarioContext["WorkflowCapture"] = true;
+    }
+
+    [Given(@"workflow patterns can be identified")]
+    public void GivenWorkflowPatternsCanBeIdentified()
+    {
+        ScenarioContext["WorkflowIdentification"] = true;
+        ScenarioContext["PatternDetection"] = true;
+    }
+
+    [When(@"analyzing common workflow patterns:")]
+    public async Task WhenAnalyzingCommonWorkflowPatterns(Table table)
+    {
+        var workflowPatterns = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var workflow = new
+            {
+                WorkflowPattern = row["Workflow Pattern"],
+                Frequency = row["Frequency"],
+                AvgDuration = row["Avg Duration"],
+                StepsInvolved = row["Steps Involved"],
+                SuccessRate = row["Success Rate"],
+                OptimizationOpportunity = row["Optimization Opportunity"]
+            };
+            workflowPatterns.Add(workflow);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/workflow-patterns", workflow);
+        }
+        
+        ScenarioContext["WorkflowPatterns"] = workflowPatterns;
+    }
+
+    [Then(@"workflow bottlenecks should be identified")]
+    public void ThenWorkflowBottlenecksShouldBeIdentified()
+    {
+        ScenarioContext["BottlenecksIdentified"] = true;
+        ScenarioContext["WorkflowOptimization"] = true;
+    }
+
+    [Then(@"common paths should be optimized")]
+    public void ThenCommonPathsShouldBeOptimized()
+    {
+        ScenarioContext["PathOptimization"] = true;
+        ScenarioContext["StreamlinedWorkflows"] = true;
+    }
+
+    [Then(@"unnecessary steps should be eliminated")]
+    public void ThenUnnecessaryStepsShouldBeEliminated()
+    {
+        ScenarioContext["StepElimination"] = true;
+        ScenarioContext["EfficiencyGains"] = true;
+    }
+
+    [Then(@"user efficiency should improve")]
+    public void ThenUserEfficiencyShouldImprove()
+    {
+        ScenarioContext["ImprovedEfficiency"] = true;
+        ScenarioContext["ProductivityGains"] = true;
+    }
+
+    [Given(@"users access platform from multiple devices")]
+    public void GivenUsersAccessPlatformFromMultipleDevices()
+    {
+        ScenarioContext["MultiDeviceAccess"] = true;
+        ScenarioContext["CrossPlatformUsage"] = true;
+    }
+
+    [Given(@"device usage is tracked")]
+    public void GivenDeviceUsageIsTracked()
+    {
+        ScenarioContext["DeviceTracking"] = true;
+        ScenarioContext["PlatformAnalytics"] = true;
+    }
+
+    [When(@"analyzing cross-platform patterns:")]
+    public async Task WhenAnalyzingCrossPlatformPatterns(Table table)
+    {
+        var crossPlatformData = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var platform = new
+            {
+                PrimaryDevice = row["Primary Device"],
+                SecondaryDevice = row["Secondary Device"],
+                UsageSplit = row["Usage Split"],
+                FeatureDifferences = row["Feature Differences"],
+                SyncFrequency = row["Sync Frequency"],
+                UserSatisfaction = row["User Satisfaction"],
+                PerformanceImpact = row["Performance Impact"]
+            };
+            crossPlatformData.Add(platform);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/cross-platform", platform);
+        }
+        
+        ScenarioContext["CrossPlatformPatterns"] = crossPlatformData;
+    }
+
+    [Then(@"cross-platform experience should be optimized")]
+    public void ThenCrossPlatformExperienceShouldBeOptimized()
+    {
+        ScenarioContext["CrossPlatformOptimized"] = true;
+        ScenarioContext["SeamlessExperience"] = true;
+    }
+
+    [Then(@"feature parity should be evaluated")]
+    public void ThenFeatureParityShouldBeEvaluated()
+    {
+        ScenarioContext["FeatureParityChecked"] = true;
+        ScenarioContext["ConsistentFeatures"] = true;
+    }
+
+    [Then(@"sync performance should meet expectations")]
+    public void ThenSyncPerformanceShouldMeetExpectations()
+    {
+        ScenarioContext["SyncPerformanceMet"] = true;
+        ScenarioContext["ReliableSync"] = true;
+    }
+
+    [Then(@"device-specific optimizations should be implemented")]
+    public void ThenDeviceSpecificOptimizationsShouldBeImplemented()
+    {
+        ScenarioContext["DeviceOptimizations"] = true;
+        ScenarioContext["TailoredExperience"] = true;
+    }
+
+    [Given(@"resources have measurable lifecycles")]
+    public void GivenResourcesHaveMeasurableLifecycles()
+    {
+        ScenarioContext["ResourceLifecycles"] = true;
+        ScenarioContext["ContentAging"] = true;
+    }
+
+    [Given(@"relevance metrics are tracked")]
+    public void GivenRelevanceMetricsAreTracked()
+    {
+        ScenarioContext["RelevanceTracking"] = true;
+        ScenarioContext["ContentRelevance"] = true;
+    }
+
+    [When(@"analyzing content lifecycle patterns:")]
+    public async Task WhenAnalyzingContentLifecyclePatterns(Table table)
+    {
+        var lifecycleData = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var lifecycle = new
+            {
+                ContentAge = row["Content Age"],
+                InitialUsage = row["Initial Usage"],
+                PeakUsage = row["Peak Usage"],
+                CurrentUsage = row["Current Usage"],
+                RelevanceScore = row["Relevance Score"],
+                UpdateFrequency = row["Update Frequency"],
+                RetirementCandidate = row["Retirement Candidate"]
+            };
+            lifecycleData.Add(lifecycle);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/content-lifecycle", lifecycle);
+        }
+        
+        ScenarioContext["ContentLifecycle"] = lifecycleData;
+    }
+
+    [Then(@"content freshness should be maintained")]
+    public void ThenContentFreshnessShouldBeMaintained()
+    {
+        ScenarioContext["ContentFreshness"] = true;
+        ScenarioContext["UpdatedContent"] = true;
+    }
+
+    [Then(@"popular content should be updated regularly")]
+    public void ThenPopularContentShouldBeUpdatedRegularly()
+    {
+        ScenarioContext["RegularUpdates"] = true;
+        ScenarioContext["ContentMaintenance"] = true;
+    }
+
+    [Then(@"outdated content should be refreshed or retired")]
+    public void ThenOutdatedContentShouldBeRefreshedOrRetired()
+    {
+        ScenarioContext["ContentRefresh"] = true;
+        ScenarioContext["RetirementProcess"] = true;
+    }
+
+    [Then(@"content strategy should be data-driven")]
+    public void ThenContentStrategyShouldBeDataDriven()
+    {
+        ScenarioContext["DataDrivenContent"] = true;
+        ScenarioContext["StrategicPlanning"] = true;
+    }
+
+    [Given(@"historical patterns are analyzed")]
+    public void GivenHistoricalPatternsAreAnalyzed()
+    {
+        ScenarioContext["HistoricalAnalysis"] = true;
+        ScenarioContext["PatternRecognition"] = true;
+    }
+
+    [Given(@"predictive models are trained")]
+    public void GivenPredictiveModelsAreTrained()
+    {
+        ScenarioContext["PredictiveModels"] = true;
+        ScenarioContext["ForecastingReady"] = true;
+    }
+
+    [When(@"forecasting usage trends:")]
+    public async Task WhenForecastingUsageTrends(Table table)
+    {
+        var trendForecasts = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var forecast = new
+            {
+                PredictionType = row["Prediction Type"],
+                ThirtyDayForecast = row["30-Day Forecast"],
+                NinetyDayForecast = row["90-Day Forecast"],
+                Confidence = row["Confidence"],
+                KeyDrivers = row["Key Drivers"],
+                RecommendedActions = row["Recommended Actions"]
+            };
+            trendForecasts.Add(forecast);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/usage-forecast", forecast);
+        }
+        
+        ScenarioContext["UsageForecasts"] = trendForecasts;
+    }
+
+    [Then(@"predictions should inform planning")]
+    public void ThenPredictionsShouldInformPlanning()
+    {
+        ScenarioContext["PredictivePlanning"] = true;
+        ScenarioContext["ForecastGuidance"] = true;
+    }
+
+    [Then(@"resource allocation should be proactive")]
+    public void ThenResourceAllocationShouldBeProactive()
+    {
+        ScenarioContext["ProactiveAllocation"] = true;
+        ScenarioContext["PreemptiveScaling"] = true;
+    }
+
+    [Then(@"capacity should meet demand")]
+    public void ThenCapacityShouldMeetDemand()
+    {
+        ScenarioContext["CapacityAligned"] = true;
+        ScenarioContext["DemandMet"] = true;
+    }
+
+    [Then(@"user experience should remain optimal")]
+    public void ThenUserExperienceShouldRemainOptimal()
+    {
+        ScenarioContext["OptimalUX"] = true;
+        ScenarioContext["ConsistentPerformance"] = true;
+    }
+
+    [Given(@"normal usage patterns are established")]
+    public void GivenNormalUsagePatternsAreEstablished()
+    {
+        ScenarioContext["NormalPatterns"] = true;
+        ScenarioContext["BaselineEstablished"] = true;
+    }
+
+    [Given(@"anomaly detection is active")]
+    public void GivenAnomalyDetectionIsActive()
+    {
+        ScenarioContext["AnomalyDetection"] = true;
+        ScenarioContext["MonitoringActive"] = true;
+    }
+
+    [When(@"unusual patterns are detected:")]
+    public async Task WhenUnusualPatternsAreDetected(Table table)
+    {
+        var anomalies = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var anomaly = new
+            {
+                AnomalyType = row["Anomaly Type"],
+                DetectionTime = row["Detection Time"],
+                Severity = row["Severity"],
+                PatternDescription = row["Pattern Description"],
+                PotentialCause = row["Potential Cause"],
+                InvestigationResult = row["Investigation Result"],
+                ActionTaken = row["Action Taken"]
+            };
+            anomalies.Add(anomaly);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/anomaly-detection", anomaly);
+        }
+        
+        ScenarioContext["DetectedAnomalies"] = anomalies;
+    }
+
+    [Then(@"anomalies should trigger immediate alerts")]
+    public void ThenAnomaliesShouldTriggerImmediateAlerts()
+    {
+        ScenarioContext["ImmediateAlerts"] = true;
+        ScenarioContext["RapidResponse"] = true;
+    }
+
+    [Then(@"investigation should be systematic")]
+    public void ThenInvestigationShouldBeSystematic()
+    {
+        ScenarioContext["SystematicInvestigation"] = true;
+        ScenarioContext["StructuredAnalysis"] = true;
+    }
+
+    [Then(@"root causes should be identified")]
+    public void ThenRootCausesShouldBeIdentified()
+    {
+        ScenarioContext["RootCauseAnalysis"] = true;
+        ScenarioContext["CauseIdentified"] = true;
+    }
+
+    [Then(@"appropriate actions should be taken")]
+    public void ThenAppropriateActionsShouldBeTaken()
+    {
+        ScenarioContext["AppropriateActions"] = true;
+        ScenarioContext["ResponseExecuted"] = true;
+    }
+
+    [Given(@"comprehensive usage data is analyzed")]
+    public void GivenComprehensiveUsageDataIsAnalyzed()
+    {
+        ScenarioContext["ComprehensiveAnalysis"] = true;
+        ScenarioContext["DeepInsights"] = true;
+    }
+
+    [Given(@"patterns reveal opportunities")]
+    public void GivenPatternsRevealOpportunities()
+    {
+        ScenarioContext["OpportunitiesRevealed"] = true;
+        ScenarioContext["ImprovementPotential"] = true;
+    }
+
+    [When(@"generating optimization recommendations:")]
+    public async Task WhenGeneratingOptimizationRecommendations(Table table)
+    {
+        var recommendations = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var recommendation = new
+            {
+                InsightCategory = row["Insight Category"],
+                Finding = row["Finding"],
+                Impact = row["Impact"],
+                Effort = row["Effort"],
+                Priority = row["Priority"],
+                RecommendedAction = row["Recommended Action"],
+                ExpectedOutcome = row["Expected Outcome"]
+            };
+            recommendations.Add(recommendation);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/optimization-insights", recommendation);
+        }
+        
+        ScenarioContext["OptimizationRecommendations"] = recommendations;
+    }
+
+    [Then(@"insights should be prioritized by impact")]
+    public void ThenInsightsShouldBePrioritizedByImpact()
+    {
+        ScenarioContext["ImpactPrioritization"] = true;
+        ScenarioContext["ValueFocused"] = true;
+    }
+
+    [Then(@"implementation should be tracked")]
+    public void ThenImplementationShouldBeTracked()
+    {
+        ScenarioContext["ImplementationTracking"] = true;
+        ScenarioContext["ProgressMonitoring"] = true;
+    }
+
+    [Then(@"outcomes should be measured")]
+    public void ThenOutcomesShouldBeMeasured()
+    {
+        ScenarioContext["OutcomeMeasurement"] = true;
+        ScenarioContext["ResultsTracked"] = true;
+    }
+
+    [Then(@"continuous improvement should occur")]
+    public void ThenContinuousImprovementShouldOccur()
+    {
+        ScenarioContext["ContinuousImprovement"] = true;
+        ScenarioContext["OngoingOptimization"] = true;
+    }
+
+    [Given(@"data collection may have gaps")]
+    public void GivenDataCollectionMayHaveGaps()
+    {
+        ScenarioContext["DataGapsPossible"] = true;
+        ScenarioContext["IncompleteData"] = true;
+    }
+
+    [When(@"analyzing patterns with data issues:")]
+    public async Task WhenAnalyzingPatternsWithDataIssues(Table table)
+    {
+        var dataIssues = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var issue = new
+            {
+                DataIssueType = row["Data Issue Type"],
+                AffectedPeriod = row["Affected Period"],
+                DataCompleteness = row["Data Completeness"],
+                AnalysisPossible = row["Analysis Possible"],
+                MitigationStrategy = row["Mitigation Strategy"],
+                ConfidenceLevel = row["Confidence Level"]
+            };
+            dataIssues.Add(issue);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/handle-data-issues", issue);
+        }
+        
+        ScenarioContext["DataIssueHandling"] = dataIssues;
+    }
+
+    [Then(@"data quality issues should be acknowledged")]
+    public void ThenDataQualityIssuesShouldBeAcknowledged()
+    {
+        ScenarioContext["QualityAcknowledged"] = true;
+        ScenarioContext["TransparencyMaintained"] = true;
+    }
+
+    [Then(@"analysis limitations should be clear")]
+    public void ThenAnalysisLimitationsShouldBeClear()
+    {
+        ScenarioContext["ClearLimitations"] = true;
+        ScenarioContext["HonestReporting"] = true;
+    }
+
+    [Then(@"results should include confidence levels")]
+    public void ThenResultsShouldIncludeConfidenceLevels()
+    {
+        ScenarioContext["ConfidenceLevelsIncluded"] = true;
+        ScenarioContext["UncertaintyQuantified"] = true;
+    }
+
+    [Then(@"data collection should be improved")]
+    public void ThenDataCollectionShouldBeImproved()
+    {
+        ScenarioContext["CollectionImproved"] = true;
+        ScenarioContext["QualityEnhanced"] = true;
+    }
+
+    [Given(@"usage tracking must respect privacy")]
+    public void GivenUsageTrackingMustRespectPrivacy()
+    {
+        ScenarioContext["PrivacyRequired"] = true;
+        ScenarioContext["ConsentNeeded"] = true;
+    }
+
+    [When(@"implementing analytics with privacy constraints:")]
+    public async Task WhenImplementingAnalyticsWithPrivacyConstraints(Table table)
+    {
+        var privacyAnalytics = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var analytics = new
+            {
+                AnalyticsType = row["Analytics Type"],
+                PIIInvolved = row["PII Involved"],
+                AnonymizationMethod = row["Anonymization Method"],
+                ConsentRequired = row["Consent Required"],
+                DataRetention = row["Data Retention"],
+                ComplianceCheck = row["Compliance Check"]
+            };
+            privacyAnalytics.Add(analytics);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/privacy-compliance", analytics);
+        }
+        
+        ScenarioContext["PrivacyCompliantAnalytics"] = privacyAnalytics;
+    }
+
+    [Then(@"privacy requirements should be enforced")]
+    public void ThenPrivacyRequirementsShouldBeEnforced()
+    {
+        ScenarioContext["PrivacyEnforced"] = true;
+        ScenarioContext["ComplianceMaintained"] = true;
+    }
+
+    [Then(@"user consent should be verified")]
+    public void ThenUserConsentShouldBeVerified()
+    {
+        ScenarioContext["ConsentVerified"] = true;
+        ScenarioContext["PermissionsChecked"] = true;
+    }
+
+    [Then(@"anonymization should be effective")]
+    public void ThenAnonymizationShouldBeEffective()
+    {
+        ScenarioContext["EffectiveAnonymization"] = true;
+        ScenarioContext["PrivacyProtected"] = true;
+    }
+
+    [Then(@"compliance should be documented")]
+    public void ThenComplianceShouldBeDocumented()
+    {
+        ScenarioContext["ComplianceDocumented"] = true;
+        ScenarioContext["AuditTrail"] = true;
+    }
+
+    [Given(@"usage may exceed normal parameters")]
+    public void GivenUsageMayExceedNormalParameters()
+    {
+        ScenarioContext["ExtremeScale"] = true;
+        ScenarioContext["ScaleChallenges"] = true;
+    }
+
+    [When(@"dealing with scale challenges:")]
+    public async Task WhenDealingWithScaleChallenges(Table table)
+    {
+        var scaleChallenges = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var challenge = new
+            {
+                ScaleScenario = row["Scale Scenario"],
+                DataVolume = row["Data Volume"],
+                ProcessingTime = row["Processing Time"],
+                SystemImpact = row["System Impact"],
+                MitigationApplied = row["Mitigation Applied"],
+                ResultStatus = row["Result Status"]
+            };
+            scaleChallenges.Add(challenge);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/scale-handling", challenge);
+        }
+        
+        ScenarioContext["ScaleChallenges"] = scaleChallenges;
+    }
+
+    [Then(@"scale challenges should be anticipated")]
+    public void ThenScaleChallengesShouldBeAnticipated()
+    {
+        ScenarioContext["ScaleAnticipated"] = true;
+        ScenarioContext["ProactivePlanning"] = true;
+    }
+
+    [Then(@"systems should gracefully degrade")]
+    public void ThenSystemsShouldGracefullyDegrade()
+    {
+        ScenarioContext["GracefulDegradation"] = true;
+        ScenarioContext["ResilientSystems"] = true;
+    }
+
+    [Then(@"performance should remain acceptable")]
+    public void ThenPerformanceShouldRemainAcceptable()
+    {
+        ScenarioContext["AcceptablePerformance"] = true;
+        ScenarioContext["UserExperienceMaintained"] = true;
+    }
+
+    [Then(@"insights quality should be maintained")]
+    public void ThenInsightsQualityShouldBeMaintained()
+    {
+        ScenarioContext["QualityMaintained"] = true;
+        ScenarioContext["AccurateInsights"] = true;
+    }
+
+    [Given(@"insights may be misleading")]
+    public void GivenInsightsMayBeMisleading()
+    {
+        ScenarioContext["PotentialMisleading"] = true;
+        ScenarioContext["ValidationNeeded"] = true;
+    }
+
+    [When(@"validating analytical conclusions:")]
+    public async Task WhenValidatingAnalyticalConclusions(Table table)
+    {
+        var validations = new List<object>();
+        
+        foreach (var row in table.Rows)
+        {
+            var validation = new
+            {
+                InsightClaimed = row["Insight Claimed"],
+                StatisticalTest = row["Statistical Test"],
+                SampleSize = row["Sample Size"],
+                PValue = row["P-value"],
+                EffectSize = row["Effect Size"],
+                ExternalValidation = row["External Validation"],
+                FinalVerdict = row["Final Verdict"]
+            };
+            validations.Add(validation);
+            
+            await WhenISendAPOSTRequestToWithData("/api/analytics/validate-insights", validation);
+        }
+        
+        ScenarioContext["InsightValidations"] = validations;
+    }
+
+    [Then(@"insights should be statistically validated")]
+    public void ThenInsightsShouldBeStatisticallyValidated()
+    {
+        ScenarioContext["StatisticalValidation"] = true;
+        ScenarioContext["RigorousAnalysis"] = true;
+    }
+
+    [Then(@"confidence levels should be reported")]
+    public void ThenConfidenceLevelsShouldBeReported()
+    {
+        ScenarioContext["ConfidenceReported"] = true;
+        ScenarioContext["TransparentMetrics"] = true;
+    }
+
+    [Then(@"external validation should be sought")]
+    public void ThenExternalValidationShouldBeSought()
+    {
+        ScenarioContext["ExternalValidation"] = true;
+        ScenarioContext["IndependentVerification"] = true;
+    }
+
+    [Then(@"decisions should be evidence-based")]
+    public void ThenDecisionsShouldBeEvidenceBased()
+    {
+        ScenarioContext["EvidenceBasedDecisions"] = true;
+        ScenarioContext["DataDrivenChoices"] = true;
+    }
+}

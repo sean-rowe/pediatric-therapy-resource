@@ -1,0 +1,292 @@
+# Redis deployment with encryption at rest and in transit
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: redis-config
+  namespace: uptrms-data
+data:
+  redis.conf: |
+    # Redis configuration for HIPAA compliance
+    
+    # Network and security
+    bind 0.0.0.0
+    protected-mode yes
+    port 0
+    tls-port 6379
+    timeout 300
+    tcp-keepalive 300
+    tcp-backlog 511
+    
+    # TLS/SSL configuration
+    tls-cert-file /tls/tls.crt
+    tls-key-file /tls/tls.key
+    tls-ca-cert-file /tls/ca.crt
+    tls-dh-params-file /tls/redis.dh
+    tls-protocols "TLSv1.2 TLSv1.3"
+    tls-ciphers "HIGH:!aNULL:!MD5"
+    tls-ciphersuites "TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256"
+    tls-prefer-server-ciphers yes
+    tls-session-caching no
+    tls-session-cache-size 5000
+    tls-session-cache-timeout 60
+    
+    # Authentication
+    requirepass ${REDIS_PASSWORD}
+    
+    # Persistence for data durability
+    save 900 1
+    save 300 10
+    save 60 10000
+    stop-writes-on-bgsave-error yes
+    rdbcompression yes
+    rdbchecksum yes
+    dbfilename dump.rdb
+    dir /data
+    
+    # AOF for better durability
+    appendonly yes
+    appendfilename "appendonly.aof"
+    appendfsync everysec
+    no-appendfsync-on-rewrite no
+    auto-aof-rewrite-percentage 100
+    auto-aof-rewrite-min-size 64mb
+    aof-load-truncated yes
+    aof-use-rdb-preamble yes
+    
+    # Memory management
+    maxmemory 2gb
+    maxmemory-policy allkeys-lru
+    
+    # Logging
+    loglevel notice
+    logfile /logs/redis.log
+    syslog-enabled yes
+    syslog-ident redis
+    
+    # Security hardening
+    rename-command FLUSHDB ""
+    rename-command FLUSHALL ""
+    rename-command KEYS ""
+    rename-command CONFIG "CONFIG_${REDIS_CONFIG_PASSWORD}"
+    
+    # Performance tuning
+    hz 10
+    dynamic-hz yes
+    
+    # Client output buffer limits
+    client-output-buffer-limit normal 0 0 0
+    client-output-buffer-limit replica 256mb 64mb 60
+    client-output-buffer-limit pubsub 32mb 8mb 60
+---
+# Secret for Redis passwords
+apiVersion: v1
+kind: Secret
+metadata:
+  name: redis-secret
+  namespace: uptrms-data
+type: Opaque
+stringData:
+  redis-password: "RedisP@ssw0rd!234#Secure"
+  redis-config-password: "ConfigP@ssw0rd!234#Secure"
+---
+# PersistentVolumeClaim for Redis data
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: redis-data-pvc
+  namespace: uptrms-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: standard
+---
+# PersistentVolumeClaim for Redis logs
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: redis-logs-pvc
+  namespace: uptrms-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: standard
+---
+# StatefulSet for Redis
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: redis
+  namespace: uptrms-data
+spec:
+  serviceName: redis-service
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+        security: high
+        compliance: hipaa
+    spec:
+      securityContext:
+        fsGroup: 999
+        runAsUser: 999
+        runAsNonRoot: true
+      initContainers:
+      # Generate TLS certificates
+      - name: tls-init
+        image: smallstep/step-cli:latest
+        command:
+        - sh
+        - -c
+        - |
+          step certificate create redis-server /tls/tls.crt /tls/tls.key \
+            --profile self-signed --subtle --no-password --insecure \
+            --san redis-service --san redis-service.uptrms-data.svc.cluster.local \
+            --san localhost --san 127.0.0.1
+          step certificate create redis-ca /tls/ca.crt /tls/ca.key \
+            --profile root-ca --no-password --insecure
+          openssl dhparam -out /tls/redis.dh 2048
+          chmod 600 /tls/*
+          chown 999:999 /tls/*
+        volumeMounts:
+        - name: tls-certs
+          mountPath: /tls
+        securityContext:
+          runAsUser: 0
+      containers:
+      - name: redis
+        image: redis:7.2-alpine
+        command:
+        - redis-server
+        - /usr/local/etc/redis/redis.conf
+        ports:
+        - containerPort: 6379
+          name: redis-tls
+        env:
+        - name: REDIS_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: redis-secret
+              key: redis-password
+        - name: REDIS_CONFIG_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: redis-secret
+              key: redis-config-password
+        volumeMounts:
+        - name: redis-config
+          mountPath: /usr/local/etc/redis
+        - name: redis-data
+          mountPath: /data
+        - name: redis-logs
+          mountPath: /logs
+        - name: tls-certs
+          mountPath: /tls
+          readOnly: true
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "500m"
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+        livenessProbe:
+          exec:
+            command:
+            - sh
+            - -c
+            - |
+              redis-cli --tls \
+                --cert /tls/tls.crt \
+                --key /tls/tls.key \
+                --cacert /tls/ca.crt \
+                -a $REDIS_PASSWORD ping
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+        readinessProbe:
+          exec:
+            command:
+            - sh
+            - -c
+            - |
+              redis-cli --tls \
+                --cert /tls/tls.crt \
+                --key /tls/tls.key \
+                --cacert /tls/ca.crt \
+                -a $REDIS_PASSWORD ping
+          initialDelaySeconds: 10
+          periodSeconds: 5
+          timeoutSeconds: 3
+      volumes:
+      - name: redis-config
+        configMap:
+          name: redis-config
+      - name: redis-data
+        persistentVolumeClaim:
+          claimName: redis-data-pvc
+      - name: redis-logs
+        persistentVolumeClaim:
+          claimName: redis-logs-pvc
+      - name: tls-certs
+        emptyDir: {}
+---
+# Service for Redis
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-service
+  namespace: uptrms-data
+  labels:
+    app: redis
+spec:
+  type: ClusterIP
+  selector:
+    app: redis
+  ports:
+  - port: 6379
+    targetPort: 6379
+    protocol: TCP
+    name: redis-tls
+---
+# Network Policy for Redis
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: redis-network-policy
+  namespace: uptrms-data
+spec:
+  podSelector:
+    matchLabels:
+      app: redis
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: uptrms-api
+    - podSelector:
+        matchLabels:
+          app: uptrms-api
+    ports:
+    - protocol: TCP
+      port: 6379
+  egress:
+  - to:
+    - namespaceSelector: {}
+    ports:
+    - protocol: TCP
+      port: 53  # DNS
+    - protocol: UDP
+      port: 53  # DNS

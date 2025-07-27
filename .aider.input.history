@@ -1,0 +1,3806 @@
+
+# 2025-06-18 03:05:02.362905
++y
+
+# 2025-06-18 03:05:10.492934
++n
+
+# 2025-06-18 03:05:37.121979
++look at this codebase
+
+# 2025-06-18 03:06:15.302795
++determine if the files in docker are different than what is locla
+
+# 2025-06-18 03:06:41.675594
++you do it
+
+# 2025-06-18 03:07:11.962413
++look at the file system and find them yourself. don't ask me to do any work
+
+# 2025-06-18 03:11:12.847909
++# Project Manager Review Prompt
++
++You are a senior technical project manager conducting a comprehensive project review. Your focus is on ensuring complete delivery, proper epic/feature organization, and overall project compliance with enterprise standards. This review determines project success or failure.
++
++## MANDATORY REVIEW SCOPE:
++
++### 1. **Project Completeness Assessment**
++- [ ] All PRD requirements have corresponding epics
++- [ ] All epics have complete features
++- [ ] All features have implementable stories
++- [ ] No requirements left unaddressed
++- [ ] Dependencies properly mapped
++- [ ] Risks identified and mitigated
++
++### 2. **Epic Structure Validation**
++Each epic must contain:
++- **Business Context**
++  - Strategic objective alignment
++  - Measurable KPIs defined
++  - Cost of delay calculated
++  - Stakeholder buy-in documented
++- **Scope Definition**
++  - Included features explicit
++  - Excluded items documented
++  - Technical boundaries clear
++  - Organizational impacts mapped
++- **Success Metrics**
++  - Quantifiable targets set
++  - Measurement plan defined
++  - Baseline metrics captured
++
++### 3. **Feature Completeness Review**
++Each feature must have:
++- **Capability Description**
++  - One-sentence summary
++  - User-facing value clear
++  - Technical approach defined
++- **Dependencies**
++  - Prerequisites identified
++  - Integration points mapped
++  - External dependencies noted
++- **Test Strategy**
++  - BDD approach mandated
++  - Test types specified
++  - Performance benchmarks set
++
++### 4. **Story Quality Audit**
++Verify every story has:
++- [ ] Standard user story format
++- [ ] Complete BDD scenarios (Gherkin)
++- [ ] All acceptance criteria testable
++- [ ] Technical specifications detailed
++- [ ] Test requirements explicit (100% coverage)
++- [ ] Dependencies identified
++- [ ] Definition of Done clear
++
++### 5. **Technology Stack Compliance**
++Confirm project uses:
++- [ ] BDD development approach
++- [ ] MSSQL database (NOT PostgreSQL)
++- [ ] Stored procedures for data access
++- [ ] tSQLt for database testing
++- [ ] Docker for all services
++- [ ] Kubernetes for orchestration
++- [ ] 100% test coverage requirement
++- [ ] 0 linter errors policy
++
++### 6. **Delivery Readiness Assessment**
++- [ ] All stories properly sized (1-8 points)
++- [ ] Sprint planning feasible
++- [ ] Resource allocation realistic
++- [ ] Timeline achievable
++- [ ] Budget sufficient
++- [ ] Risk mitigation in place
++
++## PROJECT METRICS TO TRACK:
++
++### Coverage Analysis:
++```
++Functional Requirements Coverage: X/Y (Z%)
++Non-Functional Requirements Coverage: X/Y (Z%)
++Integration Points Addressed: X/Y (Z%)
++User Roles Covered: X/Y (Z%)
++Risk Mitigations Defined: X/Y (Z%)
++
++MINIMUM ACCEPTABLE: 100% for all categories
++```
++
++### Story Distribution:
++```
++Total Stories: X
++- Infrastructure: X (should be 15-20%)
++- Features: X (should be 60-70%)
++- Operations: X (should be 10-15%)
++- Technical Debt: X (should be <5%)
++
++Stories by Size:
++- XS (1pt): X%
++- S (2pt): X%
++- M (3pt): X%
++- L (5pt): X%
++- XL (8pt): X% (should be 0% - split these)
++```
++
++### Quality Metrics:
++```
++Stories with BDD Scenarios: X/Y (must be 100%)
++Stories with Test Requirements: X/Y (must be 100%)
++Stories with Technical Specs: X/Y (must be 100%)
++Stories with Dependencies Mapped: X/Y (100%)
++```
++
++## REVIEW OUTPUT FORMAT:
++
++### Executive Summary:
++```markdown
++## Project Review: [Project Name]
++
++**Review Date**: [Date]
++**Reviewer**: [Name]
++**Overall Status**: 🔴 NOT READY | 🟡 NEEDS WORK | 🟢 READY
++
++### Key Findings:
++1. [Most critical finding]
++2. [Second critical finding]
++3. [Third critical finding]
++
++### Recommendation:
++[PROCEED WITH DEVELOPMENT | ADDRESS ISSUES FIRST | MAJOR REPLANNING NEEDED]
++```
++
++### Detailed Analysis:
++```markdown
++## 1. Requirements Coverage
++- Functional Requirements: X/Y covered (Z%)
++- Missing Requirements: [List]
++- Action Needed: [Specific steps]
++
++## 2. Epic/Feature Organization
++- Total Epics: X
++- Complete Epics: Y/X
++- Issues Found: [List problems]
++
++## 3. Story Quality
++- Total Stories: X
++- Review Sample: Y stories
++- Pass Rate: Z%
++- Common Issues: [List patterns]
++
++## 4. Technical Compliance
++- BDD Approach: ✅/❌
++- Correct Tech Stack: ✅/❌
++- Test Requirements: ✅/❌
++- Issues: [List violations]
++
++## 5. Delivery Risk Assessment
++- High Risks: X
++- Medium Risks: Y
++- Unmitigated Risks: [List]
++- Recommendation: [Specific actions]
++```
++
++## PROJECT-LEVEL RED FLAGS:
++
++### 1. **Incomplete Coverage**
++- Requirements without stories
++- Features without proper decomposition
++- Missing infrastructure stories
++- No operational stories
++
++### 2. **Poor Organization**
++- Stories not grouped into epics
++- Dependencies not mapped
++- No clear delivery phases
++- Missing sprint planning
++
++### 3. **Quality Issues**
++- Stories without BDD scenarios
++- Missing test requirements
++- Vague acceptance criteria
++- Technical specs incomplete
++
++### 4. **Technology Violations**
++- Wrong database platform
++- Missing Docker setup
++- No CI/CD pipeline defined
++- Incorrect test frameworks
++
++### 5. **Delivery Risks**
++- Unrealistic timelines
++- Insufficient resources
++- Unmitigated risks
++- No rollback plans
++
++## COMPREHENSIVE COVERAGE CHECKLIST:
++
++### For a Complete Project, verify:
++
++**User Management** (if applicable):
++- [ ] Registration stories
++- [ ] Authentication stories
++- [ ] Authorization stories
++- [ ] Profile management stories
++- [ ] Password reset stories
++- [ ] Session management stories
++- [ ] Audit logging stories
++
++**Data Management**:
++- [ ] Database setup stories
++- [ ] Migration stories
++- [ ] Backup/restore stories
++- [ ] Data validation stories
++- [ ] Import/export stories
++- [ ] Archival stories
++
++**Integration** (per system):
++- [ ] Connection setup stories
++- [ ] Data mapping stories
++- [ ] Sync logic stories
++- [ ] Error handling stories
++- [ ] Monitoring stories
++
++**Infrastructure**:
++- [ ] Docker setup stories
++- [ ] Kubernetes deployment stories
++- [ ] Database configuration stories
++- [ ] Caching layer stories
++- [ ] Message queue stories
++- [ ] Load balancer stories
++- [ ] SSL/TLS setup stories
++- [ ] Backup system stories
++
++**Operations**:
++- [ ] Admin dashboard stories
++- [ ] Monitoring setup stories
++- [ ] Alerting configuration stories
++- [ ] Logging system stories
++- [ ] Support tools stories
++- [ ] Analytics stories
++
++**Quality & Compliance**:
++- [ ] Security scan setup stories
++- [ ] Performance testing stories
++- [ ] Accessibility stories
++- [ ] Documentation stories
++- [ ] Training material stories
++
++## PROJECT APPROVAL CRITERIA:
++
++### Must Have 100% of:
++1. All PRD requirements mapped to stories
++2. All stories have BDD scenarios
++3. All stories have test requirements
++4. All dependencies identified
++5. All risks have mitigation plans
++6. Technology stack correctly specified
++
++### Acceptable Ranges:
++- Story estimation accuracy: ±20%
++- Resource allocation: ±10%
++- Timeline buffer: 15-20%
++- Risk contingency: 10-15%
++
++## ENFORCEMENT ACTIONS:
++
++### If Project NOT READY:
++1. **Block Development Start**
++   - No sprint planning
++   - No resource allocation
++   - No environment setup
++
++2. **Required Actions**:
++   - Complete all missing stories
++   - Add BDD scenarios to all stories
++   - Fix technology specifications
++   - Map all dependencies
++   - Define all test requirements
++
++3. **Re-review Timeline**:
++   - Major issues: 1 week
++   - Minor issues: 3 days
++   - Critical issues: Immediate
++
++### If Project NEEDS WORK:
++1. **Conditional Approval**
++   - Can start infrastructure
++   - Cannot start feature development
++   - Must fix issues in parallel
++
++2. **Weekly Check-ins**
++   - Progress on issues
++   - No new work until fixed
++   - Escalation if behind
++
++### If Project READY:
++1. **Full Approval**
++   - Sprint planning authorized
++   - Resources allocated
++   - Development begins
++   - Regular reviews scheduled
++
++## COMMON PM MISTAKES TO CATCH:
++
++1. **Underestimating Complexity**
++   - Not enough stories for complex features
++   - Missing edge cases
++   - Ignoring integration complexity
++
++2. **Skipping Infrastructure**
++   - No database setup stories
++   - Missing deployment stories
++   - No monitoring/alerting stories
++
++3. **Ignoring Operations**
++   - No admin tools
++   - Missing support features
++   - No maintenance procedures
++
++4. **Poor Risk Management**
++   - Risks identified but not mitigated
++   - No contingency plans
++   - Dependencies not managed
++
++5. **Timeline Issues**
++   - No buffer time
++   - Parallel work not possible
++   - Critical path not identified
++
++## PROJECT SUCCESS METRICS:
++
++Track these throughout delivery:
++```
++Sprint Velocity: X points/sprint
++Defect Rate: Y bugs/story
++Test Coverage: Z% (must stay 100%)
++On-time Delivery: X%
++Budget Variance: ±Y%
++Scope Creep: Z%
++```
++
++## FINAL REVIEW CHECKLIST:
++
++Before approving project:
++□ 100% requirement coverage verified
++□ All epics properly structured
++□ All features completely defined
++□ All stories meet quality standards
++□ BDD approach used throughout
++□ Correct technology stack specified
++□ Dependencies fully mapped
++□ Risks identified and mitigated
++□ Timeline realistic with buffers
++□ Resources adequate
++□ Success metrics defined
++□ Stakeholders aligned
++
++## UNACCEPTABLE PROJECT STATES:
++
++❌ "Most requirements are covered"
++❌ "Stories will be refined during sprints"
++❌ "We'll add tests later"
++❌ "BDD approach optional"
++❌ "Can switch databases if needed"
++❌ "Dependencies will emerge"
++❌ "Risks are manageable"
++
++## REQUIRED PROJECT STATE:
++
++✅ "100% requirements covered with stories"
++✅ "All stories have BDD scenarios and test requirements"
++✅ "Technology stack locked: MSSQL, Docker, K8s"
++✅ "All dependencies mapped and confirmed"
++✅ "All risks have mitigation plans"
++✅ "Timeline includes 20% buffer"
++✅ "Resources confirmed and allocated"
++
++Only when ALL criteria are met should the project proceed to development.
++
++Remember: Project success is determined in planning. A well-planned project with comprehensive stories rarely fails. A poorly planned project always fails, just slowly and expensively.
+
+# 2025-06-18 03:12:02.176971
++you didn't do the actual work
+
+# 2025-06-18 03:16:15.032830
++# Project Manager Review Prompt
++
++You are a senior technical project manager conducting a comprehensive project review. You must EXECUTE THE REVIEW, not describe what you would do. 
++
++## CRITICAL INSTRUCTION:
++DO THE WORK. DO NOT DESCRIBE THE WORK.
++
++❌ WRONG: "I would review the stories in GitHub..."
++❌ WRONG: "The project needs X stories mapped..."
++❌ WRONG: "Here's my analysis of what should be done..."
++
++✅ RIGHT: Actually open GitHub and review each story
++✅ RIGHT: Actually create missing stories
++✅ RIGHT: Actually update issues with comments
++
++If you write a report about what should be done instead of DOING IT, you have FAILED.
++
++## EXAMPLE OF FAILURE (DO NOT DO THIS):
++```
++Project Review: [Project Name]
++Review Date: [Date]
++Overall Status: 🟡 NEEDS WORK
++
++Key Findings:
++1. Incomplete Coverage: Some PRD requirements are not mapped...
++2. Poor Organization: Stories are not fully decomposed...
++
++Recommendation: ADDRESS ISSUES FIRST
++```
++↑ THIS IS WRONG. This is a report ABOUT the work, not DOING the work.
++
++## MANDATORY ACTIONS TO EXECUTE NOW:
++1. **GO TO GITHUB** - Open the actual project
++2. **REVIEW EACH EPIC/STORY** - Read them individually
++3. **ADD COMMENTS** - Post findings on each issue
++4. **CREATE MISSING ITEMS** - Don't just note they're missing
++5. **UPDATE LABELS** - Apply them in GitHub
++6. **FIX PROBLEMS** - Don't just identify them
++
++## DO NOT DO THIS (AUTOMATIC FAILURE):
++❌ Write a markdown report about the project status
++❌ Create a summary of what needs to be done
++❌ Say "I would check..." or "I would review..."
++❌ Describe findings without taking action
++❌ Write recommendations without implementing them
++❌ Create a theoretical analysis
++❌ Output a review document
++
++## DO THIS INSTEAD:
++✅ Open GitHub and work directly in it
++✅ Read actual issues and PRs
++✅ Post actual comments on issues
++✅ Create missing stories/epics
++✅ Apply labels to issues
++✅ Update issue descriptions
++✅ Link dependencies between issues
++✅ Close/reopen issues as needed
++
++## YOU HAVE FAILED IF:
++- You wrote a report instead of doing work
++- You described what should be done instead of doing it
++- You created a markdown analysis instead of updating GitHub
++- You said "I would..." instead of actually doing it
++- You provided recommendations without implementing them
++
++## MANDATORY REVIEW SCOPE:
++
++### 1. **Project Completeness Assessment** (DO THESE ACTIONS)
++- [ ] OPEN GitHub project and COUNT actual stories
++- [ ] CREATE missing epics for uncovered requirements
++- [ ] CREATE missing features under epics
++- [ ] CREATE missing stories under features
++- [ ] MAP dependencies by linking issues
++- [ ] ADD risk labels to issues needing mitigation
++
++### 2. **Epic Structure Validation** (DO THESE ACTIONS)
++For each epic:
++- [ ] OPEN the epic in GitHub
++- [ ] ADD comment if business context missing
++- [ ] UPDATE epic description with KPIs
++- [ ] CREATE linked issues for success metrics
++- [ ] TAG stakeholders who need to review
++
++### 3. **Feature Completeness Review** (DO THESE ACTIONS)
++For each feature:
++- [ ] VERIFY it has user stories
++- [ ] CREATE missing stories
++- [ ] LINK dependencies between features
++- [ ] ADD labels for missing elements
++- [ ] COMMENT with specific fixes needed
++
++### 4. **Story Quality Audit** (DO THESE ACTIONS)
++For EVERY story:
++- [ ] OPEN the story
++- [ ] CHECK for BDD scenarios - if missing, COMMENT
++- [ ] VERIFY test requirements - if missing, UPDATE story
++- [ ] CONFIRM tech specs - if wrong, FIX them
++- [ ] APPLY label `needs-work` if incomplete
++- [ ] TAG the assignee with required fixes
++
++### 5. **Technology Stack Compliance** (DO THESE ACTIONS)
++- [ ] SEARCH all stories for "PostgreSQL" - UPDATE to MSSQL
++- [ ] FIND stories missing Docker - ADD Docker requirements  
++- [ ] LOCATE missing tSQLt specs - UPDATE stories
++- [ ] CHECK coverage requirements - FIX if not 100%
++- [ ] VERIFY BDD approach - ADD label if missing
++
++### 6. **Delivery Readiness Assessment** (DO THESE ACTIONS)
++- [ ] FIND oversized stories (>8 points) - SPLIT them
++- [ ] CREATE sprint milestones if missing
++- [ ] ASSIGN stories to sprints
++- [ ] UPDATE project board columns
++- [ ] ADD blockers where found
++- [ ] CREATE risk mitigation issues
++
++## PROJECT METRICS TO TRACK:
++
++### Coverage Analysis:
++```
++Functional Requirements Coverage: X/Y (Z%)
++Non-Functional Requirements Coverage: X/Y (Z%)
++Integration Points Addressed: X/Y (Z%)
++User Roles Covered: X/Y (Z%)
++Risk Mitigations Defined: X/Y (Z%)
++
++MINIMUM ACCEPTABLE: 100% for all categories
++```
++
++### Story Distribution:
++```
++Total Stories: X
++- Infrastructure: X (should be 15-20%)
++- Features: X (should be 60-70%)
++- Operations: X (should be 10-15%)
++- Technical Debt: X (should be <5%)
++
++Stories by Size:
++- XS (1pt): X%
++- S (2pt): X%
++- M (3pt): X%
++- L (5pt): X%
++- XL (8pt): X% (should be 0% - split these)
++```
++
++### Quality Metrics:
++```
++Stories with BDD Scenarios: X/Y (must be 100%)
++Stories with Test Requirements: X/Y (must be 100%)
++Stories with Technical Specs: X/Y (must be 100%)
++Stories with Dependencies Mapped: X/Y (100%)
++```
++
++## REVIEW EXECUTION (NOT OUTPUT FORMAT):
++
++### Instead of Executive Summary, DO THIS:
++1. **Update Project Board Description** in GitHub with:
++   ```
++   Last Review: [Date]
++   Status: 🔴 NOT READY | 🟡 NEEDS WORK | 🟢 READY
++   Critical Issues: [Count]
++   Next Review: [Date]
++   ```
++
++2. **Create/Update Milestone** for issues needing fixes:
++   ```
++   Milestone: "PM Review Fixes - [Date]"
++   Due Date: [1 week from now]
++   ```
++
++3. **Apply Labels** to categorize issues:
++   - `pm-review-fail` - Critical issues
++   - `missing-bdd` - No scenarios
++   - `missing-deps` - Dependencies not mapped
++   - `wrong-tech` - Tech stack issues
++   - `incomplete` - Missing information
++
++### Instead of Detailed Analysis, DO THIS:
++1. **For Missing Requirements**:
++   - CREATE the missing epic/story
++   - Don't just note it's missing
++
++2. **For Incomplete Stories**:
++   - ADD comment with specific fixes needed
++   - TAG the story owner
++   - SET due date for fixes
++
++3. **For Tech Stack Issues**:
++   - UPDATE story description
++   - FIX the technology specification
++   - ADD comment explaining change
++
++4. **For Missing Dependencies**:
++   - LINK related issues
++   - CREATE dependency map in issue
++   - UPDATE both issues with cross-references
++
++## PROJECT-LEVEL RED FLAGS:
++
++### 1. **Incomplete Coverage**
++- Requirements without stories
++- Features without proper decomposition
++- Missing infrastructure stories
++- No operational stories
++
++### 2. **Poor Organization**
++- Stories not grouped into epics
++- Dependencies not mapped
++- No clear delivery phases
++- Missing sprint planning
++
++### 3. **Quality Issues**
++- Stories without BDD scenarios
++- Missing test requirements
++- Vague acceptance criteria
++- Technical specs incomplete
++
++### 4. **Technology Violations**
++- Wrong database platform
++- Missing Docker setup
++- No CI/CD pipeline defined
++- Incorrect test frameworks
++
++### 5. **Delivery Risks**
++- Unrealistic timelines
++- Insufficient resources
++- Unmitigated risks
++- No rollback plans
++
++## COMPREHENSIVE COVERAGE CHECKLIST:
++
++### For a Complete Project, verify:
++
++**User Management** (if applicable):
++- [ ] Registration stories
++- [ ] Authentication stories
++- [ ] Authorization stories
++- [ ] Profile management stories
++- [ ] Password reset stories
++- [ ] Session management stories
++- [ ] Audit logging stories
++
++**Data Management**:
++- [ ] Database setup stories
++- [ ] Migration stories
++- [ ] Backup/restore stories
++- [ ] Data validation stories
++- [ ] Import/export stories
++- [ ] Archival stories
++
++**Integration** (per system):
++- [ ] Connection setup stories
++- [ ] Data mapping stories
++- [ ] Sync logic stories
++- [ ] Error handling stories
++- [ ] Monitoring stories
++
++**Infrastructure**:
++- [ ] Docker setup stories
++- [ ] Kubernetes deployment stories
++- [ ] Database configuration stories
++- [ ] Caching layer stories
++- [ ] Message queue stories
++- [ ] Load balancer stories
++- [ ] SSL/TLS setup stories
++- [ ] Backup system stories
++
++**Operations**:
++- [ ] Admin dashboard stories
++- [ ] Monitoring setup stories
++- [ ] Alerting configuration stories
++- [ ] Logging system stories
++- [ ] Support tools stories
++- [ ] Analytics stories
++
++**Quality & Compliance**:
++- [ ] Security scan setup stories
++- [ ] Performance testing stories
++- [ ] Accessibility stories
++- [ ] Documentation stories
++- [ ] Training material stories
++
++## PROJECT APPROVAL CRITERIA:
++
++### Must Have 100% of:
++1. All PRD requirements mapped to stories
++2. All stories have BDD scenarios
++3. All stories have test requirements
++4. All dependencies identified
++5. All risks have mitigation plans
++6. Technology stack correctly specified
++
++### Acceptable Ranges:
++- Story estimation accuracy: ±20%
++- Resource allocation: ±10%
++- Timeline buffer: 15-20%
++- Risk contingency: 10-15%
++
++## ENFORCEMENT ACTIONS:
++
++### If Project NOT READY (DO THESE NOW):
++1. **Block Development Start**
++   - UPDATE project status to BLOCKED
++   - ADD label `not-ready` to project
++   - CREATE milestone "Fixes Required Before Start"
++
++2. **Required Actions**:
++   - CREATE all missing stories NOW
++   - ADD BDD scenarios to stories NOW
++   - FIX technology specifications NOW
++   - LINK all dependencies NOW
++   - UPDATE all test requirements NOW
++
++3. **Set Review Timeline**:
++   - CREATE calendar event for re-review
++   - TAG all stakeholders
++   - SET milestone due dates
++
++### If Project NEEDS WORK (DO THESE NOW):
++1. **Conditional Approval**
++   - ADD label `conditional-approval`
++   - CREATE "Must Fix" milestone
++   - ASSIGN issues to owners
++
++2. **Schedule Check-ins**
++   - CREATE recurring calendar events
++   - ADD review comments to issues
++   - SET escalation triggers
++
++### If Project READY (DO THESE NOW):
++1. **Full Approval**
++   - UPDATE project status to APPROVED
++   - ADD label `ready-for-development`
++   - CREATE sprint planning issues
++   - NOTIFY team of approval
++
++## WHAT SUCCESS LOOKS LIKE:
++
++When you're done, you should be able to say:
++"I have completed the project review by:
++- Reviewing 47 epics and 286 stories
++- Creating 23 missing stories
++- Updating 89 stories with BDD scenarios
++- Fixing 15 technology specifications
++- Adding 134 comments with required fixes
++- Applying 201 labels
++- Linking 67 dependencies
++- Splitting 8 oversized stories
++- Creating 3 risk mitigation plans
++
++The GitHub project now reflects the true state and everyone knows what to fix."
++
++NOT: "Here's my analysis of the project..."
++
++## COMMON PM MISTAKES TO CATCH:
++
++1. **Underestimating Complexity**
++   - Not enough stories for complex features
++   - Missing edge cases
++   - Ignoring integration complexity
++
++2. **Skipping Infrastructure**
++   - No database setup stories
++   - Missing deployment stories
++   - No monitoring/alerting stories
++
++3. **Ignoring Operations**
++   - No admin tools
++   - Missing support features
++   - No maintenance procedures
++
++4. **Poor Risk Management**
++   - Risks identified but not mitigated
++   - No contingency plans
++   - Dependencies not managed
++
++5. **Timeline Issues**
++   - No buffer time
++   - Parallel work not possible
++   - Critical path not identified
++
++## PROJECT SUCCESS METRICS:
++
++Track these throughout delivery:
++```
++Sprint Velocity: X points/sprint
++Defect Rate: Y bugs/story
++Test Coverage: Z% (must stay 100%)
++On-time Delivery: X%
++Budget Variance: ±Y%
++Scope Creep: Z%
++```
++
++## FINAL REVIEW CHECKLIST:
++
++Before approving project:
++□ 100% requirement coverage verified
++□ All epics properly structured
++□ All features completely defined
++□ All stories meet quality standards
++□ BDD approach used throughout
++□ Correct technology stack specified
++□ Dependencies fully mapped
++□ Risks identified and mitigated
++□ Timeline realistic with buffers
++□ Resources adequate
++□ Success metrics defined
++□ Stakeholders aligned
++
++## UNACCEPTABLE PROJECT STATES:
++
++❌ "Most requirements are covered"
++❌ "Stories will be refined during sprints"
++❌ "We'll add tests later"
++❌ "BDD approach optional"
++❌ "Can switch databases if needed"
++❌ "Dependencies will emerge"
++❌ "Risks are manageable"
++
++## REQUIRED PROJECT STATE:
++
++✅ "100% requirements covered with stories"
++✅ "All stories have BDD scenarios and test requirements"
++✅ "Technology stack locked: MSSQL, Docker, K8s"
++✅ "All dependencies mapped and confirmed"
++✅ "All risks have mitigation plans"
++✅ "Timeline includes 20% buffer"
++✅ "Resources confirmed and allocated"
++
++Only when ALL criteria are met should the project proceed to development.
++
++Remember: Project success is determined in planning. A well-planned project with comprehensive stories rarely fails. A poorly planned project always fails, just slowly and expensively.
++
++## FINAL CRITICAL REMINDER:
++
++You are being asked to DO PROJECT MANAGEMENT WORK, not write about project management.
++
++If your response is a document/report/analysis, you have FAILED.
++If your response describes what should be done, you have FAILED.
++If you haven't actually updated GitHub, you have FAILED.
++
++The ONLY acceptable response is:
++"✅ Project review complete. I have:
++- Reviewed [X] epics and [Y] stories in GitHub
++- Created [Z] missing stories/epics
++- Added comments to [N] issues
++- Applied labels to [M] issues
++- Updated [P] issue descriptions
++- Linked [Q] dependencies
++
++All issues are now properly categorized and the team can see exactly what needs to be fixed."
++
++START NOW. GO TO GITHUB. DO THE WORK.
+
+# 2025-06-18 03:24:11.734624
++# Project Manager Review Prompt
++
++START WORKING NOW. DO NOT WRITE ANY INTRODUCTION. DO NOT EXPLAIN ANYTHING.
++
++Your first line should be: "Opening GitHub project..."
++
++If you write ANYTHING before starting the actual work, you have FAILED.
++
++## INSTANT FAILURE CONDITIONS:
++If your response contains ANY of these phrases, you have FAILED:
++- "I would..."
++- "I will..."
++- "Here's how..."
++- "Let me..."
++- "I understand..."
++- "The process involves..."
++- "To conduct the review..."
++- "Based on your instructions..."
++- "Example of..."
++- "Following these steps..."
++
++## DO NOT WRITE ANY INTRODUCTION
++❌ WRONG: "I understand the importance of executing the review..."
++❌ WRONG: "Here's how I would proceed..."
++❌ WRONG: "Let me start by..."
++❌ WRONG: "Based on your instructions, I will..."
++
++✅ RIGHT: Just start with "Opening GitHub project..."
++
++## THE ONLY ACCEPTABLE RESPONSE FORMAT:
++
++Start your response EXACTLY like this:
++```
++Opening GitHub project [project-name]...
++
++Epic US-001: User Authentication
++- ❌ Missing BDD scenarios
++- ❌ No tSQLt test requirements  
++- ❌ PostgreSQL specified instead of MSSQL
++- Added comment: "This epic needs BDD scenarios for all features..."
++- Applied label: needs-work
++
++Story US-001-A: Login Feature
++- ✅ Has BDD scenarios
++- ❌ Missing 100% coverage requirement
++- Updated story description to require 100% coverage
++- Applied label: missing-test-requirements
++
++[Continue with actual work...]
++```
++
++## YOU ARE NOT ALLOWED TO:
++- Explain your approach
++- Describe your process
++- Give examples
++- Show sample files
++- Write about what you would do
++- Create theoretical scenarios
++- Write reports or summaries
++
++## YOU MUST:
++- Jump straight into reviewing actual items
++- Show the actual work being done
++- List specific issues/stories you're reviewing
++- Document actual changes you're making
++- Apply actual labels
++- Write actual comments
++
++## WHAT YOUR RESPONSE SHOULD LOOK LIKE:
++
++Your ENTIRE response should be a work log of actions taken:
++
++```
++Opening GitHub project [project-name]...
++
++Epic US-001: User Authentication
++- ❌ Missing BDD scenarios
++- ❌ No tSQLt test requirements  
++- ❌ PostgreSQL specified instead of MSSQL
++- Added comment: "This epic needs BDD scenarios for all features. Update DB to MSSQL with stored procedures."
++- Applied labels: needs-work, wrong-tech, missing-bdd
++
++Creating missing story: US-001-C: Password Reset Rate Limiting
++- Added to Epic US-001
++- Description: "As a security admin, I want rate limiting on password resets..."
++- Added acceptance criteria
++- Added BDD scenarios
++- Set estimate: 3 points
++
++Story US-002-A: Data Import
++- ✅ Has BDD scenarios
++- ❌ Missing Docker requirements
++- Updated description: Added "Must run in Docker container 'data-service'"
++- Applied label: needs-docker-config
++
++[Continue until all items reviewed...]
++
++Summary of actions taken:
++- Reviewed: 23 epics, 145 stories
++- Created: 12 missing stories
++- Updated: 67 story descriptions
++- Comments added: 89
++- Labels applied: 134
++```
++
++NOTHING ELSE. NO EXPLANATIONS. NO EXAMPLES. JUST THE WORK LOG.
++
++## MANDATORY REVIEW SCOPE:
++
++### 1. **Project Completeness Assessment** (DO THESE ACTIONS)
++- [ ] OPEN GitHub project and COUNT actual stories
++- [ ] CREATE missing epics for uncovered requirements
++- [ ] CREATE missing features under epics
++- [ ] CREATE missing stories under features
++- [ ] MAP dependencies by linking issues
++- [ ] ADD risk labels to issues needing mitigation
++
++### 2. **Epic Structure Validation** (DO THESE ACTIONS)
++For each epic:
++- [ ] OPEN the epic in GitHub
++- [ ] ADD comment if business context missing
++- [ ] UPDATE epic description with KPIs
++- [ ] CREATE linked issues for success metrics
++- [ ] TAG stakeholders who need to review
++
++### 3. **Feature Completeness Review** (DO THESE ACTIONS)
++For each feature:
++- [ ] VERIFY it has user stories
++- [ ] CREATE missing stories
++- [ ] LINK dependencies between features
++- [ ] ADD labels for missing elements
++- [ ] COMMENT with specific fixes needed
++
++### 4. **Story Quality Audit** (DO THESE ACTIONS)
++For EVERY story:
++- [ ] OPEN the story
++- [ ] CHECK for BDD scenarios - if missing, COMMENT
++- [ ] VERIFY test requirements - if missing, UPDATE story
++- [ ] CONFIRM tech specs - if wrong, FIX them
++- [ ] APPLY label `needs-work` if incomplete
++- [ ] TAG the assignee with required fixes
++
++### 5. **Technology Stack Compliance** (DO THESE ACTIONS)
++- [ ] SEARCH all stories for "PostgreSQL" - UPDATE to MSSQL
++- [ ] FIND stories missing Docker - ADD Docker requirements  
++- [ ] LOCATE missing tSQLt specs - UPDATE stories
++- [ ] CHECK coverage requirements - FIX if not 100%
++- [ ] VERIFY BDD approach - ADD label if missing
++
++### 6. **Delivery Readiness Assessment** (DO THESE ACTIONS)
++- [ ] FIND oversized stories (>8 points) - SPLIT them
++- [ ] CREATE sprint milestones if missing
++- [ ] ASSIGN stories to sprints
++- [ ] UPDATE project board columns
++- [ ] ADD blockers where found
++- [ ] CREATE risk mitigation issues
++
++## PROJECT METRICS TO TRACK:
++
++### Coverage Analysis:
++```
++Functional Requirements Coverage: X/Y (Z%)
++Non-Functional Requirements Coverage: X/Y (Z%)
++Integration Points Addressed: X/Y (Z%)
++User Roles Covered: X/Y (Z%)
++Risk Mitigations Defined: X/Y (Z%)
++
++MINIMUM ACCEPTABLE: 100% for all categories
++```
++
++### Story Distribution:
++```
++Total Stories: X
++- Infrastructure: X (should be 15-20%)
++- Features: X (should be 60-70%)
++- Operations: X (should be 10-15%)
++- Technical Debt: X (should be <5%)
++
++Stories by Size:
++- XS (1pt): X%
++- S (2pt): X%
++- M (3pt): X%
++- L (5pt): X%
++- XL (8pt): X% (should be 0% - split these)
++```
++
++### Quality Metrics:
++```
++Stories with BDD Scenarios: X/Y (must be 100%)
++Stories with Test Requirements: X/Y (must be 100%)
++Stories with Technical Specs: X/Y (must be 100%)
++Stories with Dependencies Mapped: X/Y (100%)
++```
++
++## REVIEW EXECUTION (NOT OUTPUT FORMAT):
++
++### Instead of Executive Summary, DO THIS:
++1. **Update Project Board Description** in GitHub with:
++   ```
++   Last Review: [Date]
++   Status: 🔴 NOT READY | 🟡 NEEDS WORK | 🟢 READY
++   Critical Issues: [Count]
++   Next Review: [Date]
++   ```
++
++2. **Create/Update Milestone** for issues needing fixes:
++   ```
++   Milestone: "PM Review Fixes - [Date]"
++   Due Date: [1 week from now]
++   ```
++
++3. **Apply Labels** to categorize issues:
++   - `pm-review-fail` - Critical issues
++   - `missing-bdd` - No scenarios
++   - `missing-deps` - Dependencies not mapped
++   - `wrong-tech` - Tech stack issues
++   - `incomplete` - Missing information
++
++### Instead of Detailed Analysis, DO THIS:
++1. **For Missing Requirements**:
++   - CREATE the missing epic/story
++   - Don't just note it's missing
++
++2. **For Incomplete Stories**:
++   - ADD comment with specific fixes needed
++   - TAG the story owner
++   - SET due date for fixes
++
++3. **For Tech Stack Issues**:
++   - UPDATE story description
++   - FIX the technology specification
++   - ADD comment explaining change
++
++4. **For Missing Dependencies**:
++   - LINK related issues
++   - CREATE dependency map in issue
++   - UPDATE both issues with cross-references
++
++## PROJECT-LEVEL RED FLAGS:
++
++### 1. **Incomplete Coverage**
++- Requirements without stories
++- Features without proper decomposition
++- Missing infrastructure stories
++- No operational stories
++
++### 2. **Poor Organization**
++- Stories not grouped into epics
++- Dependencies not mapped
++- No clear delivery phases
++- Missing sprint planning
++
++### 3. **Quality Issues**
++- Stories without BDD scenarios
++- Missing test requirements
++- Vague acceptance criteria
++- Technical specs incomplete
++
++### 4. **Technology Violations**
++- Wrong database platform
++- Missing Docker setup
++- No CI/CD pipeline defined
++- Incorrect test frameworks
++
++### 5. **Delivery Risks**
++- Unrealistic timelines
++- Insufficient resources
++- Unmitigated risks
++- No rollback plans
++
++## COMPREHENSIVE COVERAGE CHECKLIST:
++
++### For a Complete Project, verify:
++
++**User Management** (if applicable):
++- [ ] Registration stories
++- [ ] Authentication stories
++- [ ] Authorization stories
++- [ ] Profile management stories
++- [ ] Password reset stories
++- [ ] Session management stories
++- [ ] Audit logging stories
++
++**Data Management**:
++- [ ] Database setup stories
++- [ ] Migration stories
++- [ ] Backup/restore stories
++- [ ] Data validation stories
++- [ ] Import/export stories
++- [ ] Archival stories
++
++**Integration** (per system):
++- [ ] Connection setup stories
++- [ ] Data mapping stories
++- [ ] Sync logic stories
++- [ ] Error handling stories
++- [ ] Monitoring stories
++
++**Infrastructure**:
++- [ ] Docker setup stories
++- [ ] Kubernetes deployment stories
++- [ ] Database configuration stories
++- [ ] Caching layer stories
++- [ ] Message queue stories
++- [ ] Load balancer stories
++- [ ] SSL/TLS setup stories
++- [ ] Backup system stories
++
++**Operations**:
++- [ ] Admin dashboard stories
++- [ ] Monitoring setup stories
++- [ ] Alerting configuration stories
++- [ ] Logging system stories
++- [ ] Support tools stories
++- [ ] Analytics stories
++
++**Quality & Compliance**:
++- [ ] Security scan setup stories
++- [ ] Performance testing stories
++- [ ] Accessibility stories
++- [ ] Documentation stories
++- [ ] Training material stories
++
++## PROJECT APPROVAL CRITERIA:
++
++### Must Have 100% of:
++1. All PRD requirements mapped to stories
++2. All stories have BDD scenarios
++3. All stories have test requirements
++4. All dependencies identified
++5. All risks have mitigation plans
++6. Technology stack correctly specified
++
++### Acceptable Ranges:
++- Story estimation accuracy: ±20%
++- Resource allocation: ±10%
++- Timeline buffer: 15-20%
++- Risk contingency: 10-15%
++
++## ENFORCEMENT ACTIONS:
++
++### If Project NOT READY (DO THESE NOW):
++1. **Block Development Start**
++   - UPDATE project status to BLOCKED
++   - ADD label `not-ready` to project
++   - CREATE milestone "Fixes Required Before Start"
++
++2. **Required Actions**:
++   - CREATE all missing stories NOW
++   - ADD BDD scenarios to stories NOW
++   - FIX technology specifications NOW
++   - LINK all dependencies NOW
++   - UPDATE all test requirements NOW
++
++3. **Set Review Timeline**:
++   - CREATE calendar event for re-review
++   - TAG all stakeholders
++   - SET milestone due dates
++
++### If Project NEEDS WORK (DO THESE NOW):
++1. **Conditional Approval**
++   - ADD label `conditional-approval`
++   - CREATE "Must Fix" milestone
++   - ASSIGN issues to owners
++
++2. **Schedule Check-ins**
++   - CREATE recurring calendar events
++   - ADD review comments to issues
++   - SET escalation triggers
++
++### If Project READY (DO THESE NOW):
++1. **Full Approval**
++   - UPDATE project status to APPROVED
++   - ADD label `ready-for-development`
++   - CREATE sprint planning issues
++   - NOTIFY team of approval
++
++## WHAT SUCCESS LOOKS LIKE:
++
++When you're done, you should be able to say:
++"I have completed the project review by:
++- Reviewing 47 epics and 286 stories
++- Creating 23 missing stories
++- Updating 89 stories with BDD scenarios
++- Fixing 15 technology specifications
++- Adding 134 comments with required fixes
++- Applying 201 labels
++- Linking 67 dependencies
++- Splitting 8 oversized stories
++- Creating 3 risk mitigation plans
++
++The GitHub project now reflects the true state and everyone knows what to fix."
++
++NOT: "Here's my analysis of the project..."
++
++## COMMON PM MISTAKES TO CATCH:
++
++1. **Underestimating Complexity**
++   - Not enough stories for complex features
++   - Missing edge cases
++   - Ignoring integration complexity
++
++2. **Skipping Infrastructure**
++   - No database setup stories
++   - Missing deployment stories
++   - No monitoring/alerting stories
++
++3. **Ignoring Operations**
++   - No admin tools
++   - Missing support features
++   - No maintenance procedures
++
++4. **Poor Risk Management**
++   - Risks identified but not mitigated
++   - No contingency plans
++   - Dependencies not managed
++
++5. **Timeline Issues**
++   - No buffer time
++   - Parallel work not possible
++   - Critical path not identified
++
++## PROJECT SUCCESS METRICS:
++
++Track these throughout delivery:
++```
++Sprint Velocity: X points/sprint
++Defect Rate: Y bugs/story
++Test Coverage: Z% (must stay 100%)
++On-time Delivery: X%
++Budget Variance: ±Y%
++Scope Creep: Z%
++```
++
++## FINAL REVIEW CHECKLIST:
++
++Before approving project:
++□ 100% requirement coverage verified
++□ All epics properly structured
++□ All features completely defined
++□ All stories meet quality standards
++□ BDD approach used throughout
++□ Correct technology stack specified
++□ Dependencies fully mapped
++□ Risks identified and mitigated
++□ Timeline realistic with buffers
++□ Resources adequate
++□ Success metrics defined
++□ Stakeholders aligned
++
++## UNACCEPTABLE PROJECT STATES:
++
++❌ "Most requirements are covered"
++❌ "Stories will be refined during sprints"
++❌ "We'll add tests later"
++❌ "BDD approach optional"
++❌ "Can switch databases if needed"
++❌ "Dependencies will emerge"
++❌ "Risks are manageable"
++
++## REQUIRED PROJECT STATE:
++
++✅ "100% requirements covered with stories"
++✅ "All stories have BDD scenarios and test requirements"
++✅ "Technology stack locked: MSSQL, Docker, K8s"
++✅ "All dependencies mapped and confirmed"
++✅ "All risks have mitigation plans"
++✅ "Timeline includes 20% buffer"
++✅ "Resources confirmed and allocated"
++
++Only when ALL criteria are met should the project proceed to development.
++
++Remember: Project success is determined in planning. A well-planned project with comprehensive stories rarely fails. A poorly planned project always fails, just slowly and expensively.
++
++## FINAL CRITICAL REMINDER:
++
++You are being asked to DO PROJECT MANAGEMENT WORK, not write about project management.
++
++If your response is a document/report/analysis, you have FAILED.
++If your response describes what should be done, you have FAILED.
++If you haven't actually updated GitHub, you have FAILED.
++
++The ONLY acceptable response is:
++"✅ Project review complete. I have:
++- Reviewed [X] epics and [Y] stories in GitHub
++- Created [Z] missing stories/epics
++- Added comments to [N] issues
++- Applied labels to [M] issues
++- Updated [P] issue descriptions
++- Linked [Q] dependencies
++
++All issues are now properly categorized and the team can see exactly what needs to be fixed."
++
++START NOW. GO TO GITHUB. DO THE WORK.
++
++## HOW TO TELL IF YOU SUCCEEDED OR FAILED:
++
++### YOU FAILED IF:
++- You explained what you would do
++- You wrote about the process
++- You created examples
++- You wrote any introduction
++- You described your approach
++- You wrote a report or analysis
++
++### YOU SUCCEEDED IF:
++- You started immediately with "Opening GitHub project..."
++- You showed actual work being done
++- You listed real issues/stories reviewed
++- You documented real changes made
++- You ended with a summary of actions taken
++- You never explained or described anything
++
++REMEMBER: The user wants to see you DOING the work, not reading about how you would do it.
+
+# 2025-06-18 03:27:42.866175
++n
+
+# 2025-06-18 03:27:54.195683
++# Project Manager Review Prompt
++
++START WORKING NOW. DO NOT WRITE ANY INTRODUCTION. DO NOT EXPLAIN ANYTHING.
++
++Your first line should be: "Opening GitHub project..."
++
++If you write ANYTHING before starting the actual work, you have FAILED.
++
++## INSTANT FAILURE CONDITIONS:
++If your response contains ANY of these phrases, you have FAILED:
++- "I would..."
++- "I will..."
++- "Here's how..."
++- "Let me..."
++- "I understand..."
++- "The process involves..."
++- "To conduct the review..."
++- "Based on your instructions..."
++- "Example of..."
++- "Following these steps..."
++
++## DO NOT WRITE ANY INTRODUCTION
++❌ WRONG: "I understand the importance of executing the review..."
++❌ WRONG: "Here's how I would proceed..."
++❌ WRONG: "Let me start by..."
++❌ WRONG: "Based on your instructions, I will..."
++
++✅ RIGHT: Just start with "Opening GitHub project..."
++
++## THE ONLY ACCEPTABLE RESPONSE FORMAT:
++
++Start your response EXACTLY like this:
++```
++Opening GitHub project [project-name]...
++
++Epic US-001: User Authentication
++- ❌ Missing BDD scenarios
++- ❌ No tSQLt test requirements  
++- ❌ PostgreSQL specified instead of MSSQL
++- Added comment: "This epic needs BDD scenarios for all features..."
++- Applied label: needs-work
++
++Story US-001-A: Login Feature
++- ✅ Has BDD scenarios
++- ❌ Missing 100% coverage requirement
++- Updated story description to require 100% coverage
++- Applied label: missing-test-requirements
++
++[Continue with actual work...]
++```
++
++## YOU ARE NOT ALLOWED TO:
++- Explain your approach
++- Describe your process
++- Give examples
++- Show sample files
++- Write about what you would do
++- Create theoretical scenarios
++- Write reports or summaries
++
++## YOU MUST:
++- Jump straight into reviewing actual items
++- Show the actual work being done
++- List specific issues/stories you're reviewing
++- Document actual changes you're making
++- Apply actual labels
++- Write actual comments
++
++## WHAT YOUR RESPONSE SHOULD LOOK LIKE:
++
++Your ENTIRE response should be a work log of actions taken:
++
++```
++Opening GitHub project [project-name]...
++
++Epic US-001: User Authentication
++- ❌ Missing BDD scenarios
++- ❌ No tSQLt test requirements  
++- ❌ PostgreSQL specified instead of MSSQL
++- Added comment: "This epic needs BDD scenarios for all features. Update DB to MSSQL with stored procedures."
++- Applied labels: needs-work, wrong-tech, missing-bdd
++
++Creating missing story: US-001-C: Password Reset Rate Limiting
++- Added to Epic US-001
++- Description: "As a security admin, I want rate limiting on password resets..."
++- Added acceptance criteria
++- Added BDD scenarios
++- Set estimate: 3 points
++
++Story US-002-A: Data Import
++- ✅ Has BDD scenarios
++- ❌ Missing Docker requirements
++- Updated description: Added "Must run in Docker container 'data-service'"
++- Applied label: needs-docker-config
++
++[Continue until all items reviewed...]
++
++Summary of actions taken:
++- Reviewed: 23 epics, 145 stories
++- Created: 12 missing stories
++- Updated: 67 story descriptions
++- Comments added: 89
++- Labels applied: 134
++```
++
++NOTHING ELSE. NO EXPLANATIONS. NO EXAMPLES. JUST THE WORK LOG.
++
++## MANDATORY REVIEW SCOPE:
++
++### 1. **Project Completeness Assessment** (DO THESE ACTIONS)
++- [ ] OPEN GitHub project and COUNT actual stories
++- [ ] CREATE missing epics for uncovered requirements
++- [ ] CREATE missing features under epics
++- [ ] CREATE missing stories under features
++- [ ] MAP dependencies by linking issues
++- [ ] ADD risk labels to issues needing mitigation
++
++### 2. **Epic Structure Validation** (DO THESE ACTIONS)
++For each epic:
++- [ ] OPEN the epic in GitHub
++- [ ] ADD comment if business context missing
++- [ ] UPDATE epic description with KPIs
++- [ ] CREATE linked issues for success metrics
++- [ ] TAG stakeholders who need to review
++
++### 3. **Feature Completeness Review** (DO THESE ACTIONS)
++For each feature:
++- [ ] VERIFY it has user stories
++- [ ] CREATE missing stories
++- [ ] LINK dependencies between features
++- [ ] ADD labels for missing elements
++- [ ] COMMENT with specific fixes needed
++
++### 4. **Story Quality Audit** (DO THESE ACTIONS)
++For EVERY story:
++- [ ] OPEN the story
++- [ ] CHECK for BDD scenarios - if missing, COMMENT
++- [ ] VERIFY test requirements - if missing, UPDATE story
++- [ ] CONFIRM tech specs - if wrong, FIX them
++- [ ] APPLY label `needs-work` if incomplete
++- [ ] TAG the assignee with required fixes
++
++### 5. **Technology Stack Compliance** (DO THESE ACTIONS)
++- [ ] SEARCH all stories for "PostgreSQL" - UPDATE to MSSQL
++- [ ] FIND stories missing Docker - ADD Docker requirements  
++- [ ] LOCATE missing tSQLt specs - UPDATE stories
++- [ ] CHECK coverage requirements - FIX if not 100%
++- [ ] VERIFY BDD approach - ADD label if missing
++
++### 6. **Delivery Readiness Assessment** (DO THESE ACTIONS)
++- [ ] FIND oversized stories (>8 points) - SPLIT them
++- [ ] CREATE sprint milestones if missing
++- [ ] ASSIGN stories to sprints
++- [ ] UPDATE project board columns
++- [ ] ADD blockers where found
++- [ ] CREATE risk mitigation issues
++
++## PROJECT METRICS TO TRACK:
++
++### Coverage Analysis:
++```
++Functional Requirements Coverage: X/Y (Z%)
++Non-Functional Requirements Coverage: X/Y (Z%)
++Integration Points Addressed: X/Y (Z%)
++User Roles Covered: X/Y (Z%)
++Risk Mitigations Defined: X/Y (Z%)
++
++MINIMUM ACCEPTABLE: 100% for all categories
++```
++
++### Story Distribution:
++```
++Total Stories: X
++- Infrastructure: X (should be 15-20%)
++- Features: X (should be 60-70%)
++- Operations: X (should be 10-15%)
++- Technical Debt: X (should be <5%)
++
++Stories by Size:
++- XS (1pt): X%
++- S (2pt): X%
++- M (3pt): X%
++- L (5pt): X%
++- XL (8pt): X% (should be 0% - split these)
++```
++
++### Quality Metrics:
++```
++Stories with BDD Scenarios: X/Y (must be 100%)
++Stories with Test Requirements: X/Y (must be 100%)
++Stories with Technical Specs: X/Y (must be 100%)
++Stories with Dependencies Mapped: X/Y (100%)
++```
++
++## REVIEW EXECUTION (NOT OUTPUT FORMAT):
++
++### Instead of Executive Summary, DO THIS:
++1. **Update Project Board Description** in GitHub with:
++   ```
++   Last Review: [Date]
++   Status: 🔴 NOT READY | 🟡 NEEDS WORK | 🟢 READY
++   Critical Issues: [Count]
++   Next Review: [Date]
++   ```
++
++2. **Create/Update Milestone** for issues needing fixes:
++   ```
++   Milestone: "PM Review Fixes - [Date]"
++   Due Date: [1 week from now]
++   ```
++
++3. **Apply Labels** to categorize issues:
++   - `pm-review-fail` - Critical issues
++   - `missing-bdd` - No scenarios
++   - `missing-deps` - Dependencies not mapped
++   - `wrong-tech` - Tech stack issues
++   - `incomplete` - Missing information
++
++### Instead of Detailed Analysis, DO THIS:
++1. **For Missing Requirements**:
++   - CREATE the missing epic/story
++   - Don't just note it's missing
++
++2. **For Incomplete Stories**:
++   - ADD comment with specific fixes needed
++   - TAG the story owner
++   - SET due date for fixes
++
++3. **For Tech Stack Issues**:
++   - UPDATE story description
++   - FIX the technology specification
++   - ADD comment explaining change
++
++4. **For Missing Dependencies**:
++   - LINK related issues
++   - CREATE dependency map in issue
++   - UPDATE both issues with cross-references
++
++## PROJECT-LEVEL RED FLAGS:
++
++### 1. **Incomplete Coverage**
++- Requirements without stories
++- Features without proper decomposition
++- Missing infrastructure stories
++- No operational stories
++
++### 2. **Poor Organization**
++- Stories not grouped into epics
++- Dependencies not mapped
++- No clear delivery phases
++- Missing sprint planning
++
++### 3. **Quality Issues**
++- Stories without BDD scenarios
++- Missing test requirements
++- Vague acceptance criteria
++- Technical specs incomplete
++
++### 4. **Technology Violations**
++- Wrong database platform
++- Missing Docker setup
++- No CI/CD pipeline defined
++- Incorrect test frameworks
++
++### 5. **Delivery Risks**
++- Unrealistic timelines
++- Insufficient resources
++- Unmitigated risks
++- No rollback plans
++
++## COMPREHENSIVE COVERAGE CHECKLIST:
++
++### For a Complete Project, verify:
++
++**User Management** (if applicable):
++- [ ] Registration stories
++- [ ] Authentication stories
++- [ ] Authorization stories
++- [ ] Profile management stories
++- [ ] Password reset stories
++- [ ] Session management stories
++- [ ] Audit logging stories
++
++**Data Management**:
++- [ ] Database setup stories
++- [ ] Migration stories
++- [ ] Backup/restore stories
++- [ ] Data validation stories
++- [ ] Import/export stories
++- [ ] Archival stories
++
++**Integration** (per system):
++- [ ] Connection setup stories
++- [ ] Data mapping stories
++- [ ] Sync logic stories
++- [ ] Error handling stories
++- [ ] Monitoring stories
++
++**Infrastructure**:
++- [ ] Docker setup stories
++- [ ] Kubernetes deployment stories
++- [ ] Database configuration stories
++- [ ] Caching layer stories
++- [ ] Message queue stories
++- [ ] Load balancer stories
++- [ ] SSL/TLS setup stories
++- [ ] Backup system stories
++
++**Operations**:
++- [ ] Admin dashboard stories
++- [ ] Monitoring setup stories
++- [ ] Alerting configuration stories
++- [ ] Logging system stories
++- [ ] Support tools stories
++- [ ] Analytics stories
++
++**Quality & Compliance**:
++- [ ] Security scan setup stories
++- [ ] Performance testing stories
++- [ ] Accessibility stories
++- [ ] Documentation stories
++- [ ] Training material stories
++
++## PROJECT APPROVAL CRITERIA:
++
++### Must Have 100% of:
++1. All PRD requirements mapped to stories
++2. All stories have BDD scenarios
++3. All stories have test requirements
++4. All dependencies identified
++5. All risks have mitigation plans
++6. Technology stack correctly specified
++
++### Acceptable Ranges:
++- Story estimation accuracy: ±20%
++- Resource allocation: ±10%
++- Timeline buffer: 15-20%
++- Risk contingency: 10-15%
++
++## ENFORCEMENT ACTIONS:
++
++### If Project NOT READY (DO THESE NOW):
++1. **Block Development Start**
++   - UPDATE project status to BLOCKED
++   - ADD label `not-ready` to project
++   - CREATE milestone "Fixes Required Before Start"
++
++2. **Required Actions**:
++   - CREATE all missing stories NOW
++   - ADD BDD scenarios to stories NOW
++   - FIX technology specifications NOW
++   - LINK all dependencies NOW
++   - UPDATE all test requirements NOW
++
++3. **Set Review Timeline**:
++   - CREATE calendar event for re-review
++   - TAG all stakeholders
++   - SET milestone due dates
++
++### If Project NEEDS WORK (DO THESE NOW):
++1. **Conditional Approval**
++   - ADD label `conditional-approval`
++   - CREATE "Must Fix" milestone
++   - ASSIGN issues to owners
++
++2. **Schedule Check-ins**
++   - CREATE recurring calendar events
++   - ADD review comments to issues
++   - SET escalation triggers
++
++### If Project READY (DO THESE NOW):
++1. **Full Approval**
++   - UPDATE project status to APPROVED
++   - ADD label `ready-for-development`
++   - CREATE sprint planning issues
++   - NOTIFY team of approval
++
++## WHAT SUCCESS LOOKS LIKE:
++
++When you're done, you should be able to say:
++"I have completed the project review by:
++- Reviewing 47 epics and 286 stories
++- Creating 23 missing stories
++- Updating 89 stories with BDD scenarios
++- Fixing 15 technology specifications
++- Adding 134 comments with required fixes
++- Applying 201 labels
++- Linking 67 dependencies
++- Splitting 8 oversized stories
++- Creating 3 risk mitigation plans
++
++The GitHub project now reflects the true state and everyone knows what to fix."
++
++NOT: "Here's my analysis of the project..."
++
++## COMMON PM MISTAKES TO CATCH:
++
++1. **Underestimating Complexity**
++   - Not enough stories for complex features
++   - Missing edge cases
++   - Ignoring integration complexity
++
++2. **Skipping Infrastructure**
++   - No database setup stories
++   - Missing deployment stories
++   - No monitoring/alerting stories
++
++3. **Ignoring Operations**
++   - No admin tools
++   - Missing support features
++   - No maintenance procedures
++
++4. **Poor Risk Management**
++   - Risks identified but not mitigated
++   - No contingency plans
++   - Dependencies not managed
++
++5. **Timeline Issues**
++   - No buffer time
++   - Parallel work not possible
++   - Critical path not identified
++
++## PROJECT SUCCESS METRICS:
++
++Track these throughout delivery:
++```
++Sprint Velocity: X points/sprint
++Defect Rate: Y bugs/story
++Test Coverage: Z% (must stay 100%)
++On-time Delivery: X%
++Budget Variance: ±Y%
++Scope Creep: Z%
++```
++
++## FINAL REVIEW CHECKLIST:
++
++Before approving project:
++□ 100% requirement coverage verified
++□ All epics properly structured
++□ All features completely defined
++□ All stories meet quality standards
++□ BDD approach used throughout
++□ Correct technology stack specified
++□ Dependencies fully mapped
++□ Risks identified and mitigated
++□ Timeline realistic with buffers
++□ Resources adequate
++□ Success metrics defined
++□ Stakeholders aligned
++
++## UNACCEPTABLE PROJECT STATES:
++
++❌ "Most requirements are covered"
++❌ "Stories will be refined during sprints"
++❌ "We'll add tests later"
++❌ "BDD approach optional"
++❌ "Can switch databases if needed"
++❌ "Dependencies will emerge"
++❌ "Risks are manageable"
++
++## REQUIRED PROJECT STATE:
++
++✅ "100% requirements covered with stories"
++✅ "All stories have BDD scenarios and test requirements"
++✅ "Technology stack locked: MSSQL, Docker, K8s"
++✅ "All dependencies mapped and confirmed"
++✅ "All risks have mitigation plans"
++✅ "Timeline includes 20% buffer"
++✅ "Resources confirmed and allocated"
++
++Only when ALL criteria are met should the project proceed to development.
++
++Remember: Project success is determined in planning. A well-planned project with comprehensive stories rarely fails. A poorly planned project always fails, just slowly and expensively.
++
++## FINAL CRITICAL REMINDER:
++
++You are being asked to DO PROJECT MANAGEMENT WORK, not write about project management.
++
++If your response is a document/report/analysis, you have FAILED.
++If your response describes what should be done, you have FAILED.
++If you haven't actually updated GitHub, you have FAILED.
++
++The ONLY acceptable response is:
++"✅ Project review complete. I have:
++- Reviewed [X] epics and [Y] stories in GitHub
++- Created [Z] missing stories/epics
++- Added comments to [N] issues
++- Applied labels to [M] issues
++- Updated [P] issue descriptions
++- Linked [Q] dependencies
++
++All issues are now properly categorized and the team can see exactly what needs to be fixed."
++
++START NOW. GO TO GITHUB. DO THE WORK.
++
++## HOW TO TELL IF YOU SUCCEEDED OR FAILED:
++
++### YOU FAILED IF:
++- You explained what you would do
++- You wrote about the process
++- You created examples
++- You wrote any introduction
++- You described your approach
++- You wrote a report or analysis
++
++### YOU SUCCEEDED IF:
++- You started immediately with "Opening GitHub project..."
++- You showed actual work being done
++- You listed real issues/stories reviewed
++- You documented real changes made
++- You ended with a summary of actions taken
++- You never explained or described anything
++
++REMEMBER: The user wants to see you DOING the work, not reading about how you would do it.
+
+# 2025-06-18 03:32:16.701868
++n
+
+# 2025-06-18 03:37:16.219302
++# Project Manager Review Prompt
++
++START WORKING NOW. DO NOT WRITE ANY INTRODUCTION. DO NOT EXPLAIN ANYTHING.
++
++Your first line should be: "Opening GitHub project..."
++
++If you write ANYTHING before starting the actual work, you have FAILED.
++
++## INSTANT FAILURE CONDITIONS:
++If your response contains ANY of these phrases, you have FAILED:
++- "I would..."
++- "I will..."
++- "Here's how..."
++- "Let me..."
++- "I understand..."
++- "The process involves..."
++- "To conduct the review..."
++- "Based on your instructions..."
++- "Example of..."
++- "Following these steps..."
++
++## DO NOT WRITE ANY INTRODUCTION
++❌ WRONG: "I understand the importance of executing the review..."
++❌ WRONG: "Here's how I would proceed..."
++❌ WRONG: "Let me start by..."
++❌ WRONG: "Based on your instructions, I will..."
++
++✅ RIGHT: Just start with "Opening GitHub project..."
++
++## THE ONLY ACCEPTABLE RESPONSE FORMAT:
++
++Start your response EXACTLY like this:
++```
++Opening GitHub project [project-name]...
++
++Epic US-001: User Authentication
++- ❌ Missing BDD scenarios
++- ❌ No tSQLt test requirements  
++- ❌ PostgreSQL specified instead of MSSQL
++- Added comment: "This epic needs BDD scenarios for all features..."
++- Applied label: needs-work
++
++Story US-001-A: Login Feature
++- ✅ Has BDD scenarios
++- ❌ Missing 100% coverage requirement
++- Updated story description to require 100% coverage
++- Applied label: missing-test-requirements
++
++[Continue with actual work...]
++```
++
++## YOU ARE NOT ALLOWED TO:
++- Explain your approach
++- Describe your process
++- Give examples
++- Show sample files
++- Write about what you would do
++- Create theoretical scenarios
++- Write reports or summaries
++
++## YOU MUST:
++- Jump straight into reviewing actual items
++- Show the actual work being done
++- List specific issues/stories you're reviewing
++- Document actual changes you're making
++- Apply actual labels
++- Write actual comments
++
++## WHAT YOUR RESPONSE SHOULD LOOK LIKE:
++
++Your ENTIRE response should be a work log of actions taken:
++
++```
++Opening GitHub project [project-name]...
++
++Epic US-001: User Authentication
++- ❌ Missing BDD scenarios
++- ❌ No tSQLt test requirements  
++- ❌ PostgreSQL specified instead of MSSQL
++- Added comment: "This epic needs BDD scenarios for all features. Update DB to MSSQL with stored procedures."
++- Applied labels: needs-work, wrong-tech, missing-bdd
++
++Creating missing story: US-001-C: Password Reset Rate Limiting
++- Added to Epic US-001
++- Description: "As a security admin, I want rate limiting on password resets..."
++- Added acceptance criteria
++- Added BDD scenarios
++- Set estimate: 3 points
++
++Story US-002-A: Data Import
++- ✅ Has BDD scenarios
++- ❌ Missing Docker requirements
++- Updated description: Added "Must run in Docker container 'data-service'"
++- Applied label: needs-docker-config
++
++[Continue until all items reviewed...]
++
++Summary of actions taken:
++- Reviewed: 23 epics, 145 stories
++- Created: 12 missing stories
++- Updated: 67 story descriptions
++- Comments added: 89
++- Labels applied: 134
++```
++
++NOTHING ELSE. NO EXPLANATIONS. NO EXAMPLES. JUST THE WORK LOG.
++
++## MANDATORY REVIEW SCOPE:
++
++### 1. **Project Completeness Assessment** (DO THESE ACTIONS)
++- [ ] OPEN GitHub project and COUNT actual stories
++- [ ] CREATE missing epics for uncovered requirements
++- [ ] CREATE missing features under epics
++- [ ] CREATE missing stories under features
++- [ ] MAP dependencies by linking issues
++- [ ] ADD risk labels to issues needing mitigation
++
++### 2. **Epic Structure Validation** (DO THESE ACTIONS)
++For each epic:
++- [ ] OPEN the epic in GitHub
++- [ ] ADD comment if business context missing
++- [ ] UPDATE epic description with KPIs
++- [ ] CREATE linked issues for success metrics
++- [ ] TAG stakeholders who need to review
++
++### 3. **Feature Completeness Review** (DO THESE ACTIONS)
++For each feature:
++- [ ] VERIFY it has user stories
++- [ ] CREATE missing stories
++- [ ] LINK dependencies between features
++- [ ] ADD labels for missing elements
++- [ ] COMMENT with specific fixes needed
++
++### 4. **Story Quality Audit** (DO THESE ACTIONS)
++For EVERY story:
++- [ ] OPEN the story
++- [ ] CHECK for BDD scenarios - if missing, COMMENT
++- [ ] VERIFY test requirements - if missing, UPDATE story
++- [ ] CONFIRM tech specs - if wrong, FIX them
++- [ ] APPLY label `needs-work` if incomplete
++- [ ] TAG the assignee with required fixes
++
++### 5. **Technology Stack Compliance** (DO THESE ACTIONS)
++- [ ] SEARCH all stories for "PostgreSQL" - UPDATE to MSSQL
++- [ ] FIND stories missing Docker - ADD Docker requirements  
++- [ ] LOCATE missing tSQLt specs - UPDATE stories
++- [ ] CHECK coverage requirements - FIX if not 100%
++- [ ] VERIFY BDD approach - ADD label if missing
++
++### 6. **Delivery Readiness Assessment** (DO THESE ACTIONS)
++- [ ] FIND oversized stories (>8 points) - SPLIT them
++- [ ] CREATE sprint milestones if missing
++- [ ] ASSIGN stories to sprints
++- [ ] UPDATE project board columns
++- [ ] ADD blockers where found
++- [ ] CREATE risk mitigation issues
++
++## PROJECT METRICS TO TRACK:
++
++### Coverage Analysis:
++```
++Functional Requirements Coverage: X/Y (Z%)
++Non-Functional Requirements Coverage: X/Y (Z%)
++Integration Points Addressed: X/Y (Z%)
++User Roles Covered: X/Y (Z%)
++Risk Mitigations Defined: X/Y (Z%)
++
++MINIMUM ACCEPTABLE: 100% for all categories
++```
++
++### Story Distribution:
++```
++Total Stories: X
++- Infrastructure: X (should be 15-20%)
++- Features: X (should be 60-70%)
++- Operations: X (should be 10-15%)
++- Technical Debt: X (should be <5%)
++
++Stories by Size:
++- XS (1pt): X%
++- S (2pt): X%
++- M (3pt): X%
++- L (5pt): X%
++- XL (8pt): X% (should be 0% - split these)
++```
++
++### Quality Metrics:
++```
++Stories with BDD Scenarios: X/Y (must be 100%)
++Stories with Test Requirements: X/Y (must be 100%)
++Stories with Technical Specs: X/Y (must be 100%)
++Stories with Dependencies Mapped: X/Y (100%)
++```
++
++## REVIEW EXECUTION (NOT OUTPUT FORMAT):
++
++### Instead of Executive Summary, DO THIS:
++1. **Update Project Board Description** in GitHub with:
++   ```
++   Last Review: [Date]
++   Status: 🔴 NOT READY | 🟡 NEEDS WORK | 🟢 READY
++   Critical Issues: [Count]
++   Next Review: [Date]
++   ```
++
++2. **Create/Update Milestone** for issues needing fixes:
++   ```
++   Milestone: "PM Review Fixes - [Date]"
++   Due Date: [1 week from now]
++   ```
++
++3. **Apply Labels** to categorize issues:
++   - `pm-review-fail` - Critical issues
++   - `missing-bdd` - No scenarios
++   - `missing-deps` - Dependencies not mapped
++   - `wrong-tech` - Tech stack issues
++   - `incomplete` - Missing information
++
++### Instead of Detailed Analysis, DO THIS:
++1. **For Missing Requirements**:
++   - CREATE the missing epic/story
++   - Don't just note it's missing
++
++2. **For Incomplete Stories**:
++   - ADD comment with specific fixes needed
++   - TAG the story owner
++   - SET due date for fixes
++
++3. **For Tech Stack Issues**:
++   - UPDATE story description
++   - FIX the technology specification
++   - ADD comment explaining change
++
++4. **For Missing Dependencies**:
++   - LINK related issues
++   - CREATE dependency map in issue
++   - UPDATE both issues with cross-references
++
++## PROJECT-LEVEL RED FLAGS:
++
++### 1. **Incomplete Coverage**
++- Requirements without stories
++- Features without proper decomposition
++- Missing infrastructure stories
++- No operational stories
++
++### 2. **Poor Organization**
++- Stories not grouped into epics
++- Dependencies not mapped
++- No clear delivery phases
++- Missing sprint planning
++
++### 3. **Quality Issues**
++- Stories without BDD scenarios
++- Missing test requirements
++- Vague acceptance criteria
++- Technical specs incomplete
++
++### 4. **Technology Violations**
++- Wrong database platform
++- Missing Docker setup
++- No CI/CD pipeline defined
++- Incorrect test frameworks
++
++### 5. **Delivery Risks**
++- Unrealistic timelines
++- Insufficient resources
++- Unmitigated risks
++- No rollback plans
++
++## COMPREHENSIVE COVERAGE CHECKLIST:
++
++### For a Complete Project, verify:
++
++**User Management** (if applicable):
++- [ ] Registration stories
++- [ ] Authentication stories
++- [ ] Authorization stories
++- [ ] Profile management stories
++- [ ] Password reset stories
++- [ ] Session management stories
++- [ ] Audit logging stories
++
++**Data Management**:
++- [ ] Database setup stories
++- [ ] Migration stories
++- [ ] Backup/restore stories
++- [ ] Data validation stories
++- [ ] Import/export stories
++- [ ] Archival stories
++
++**Integration** (per system):
++- [ ] Connection setup stories
++- [ ] Data mapping stories
++- [ ] Sync logic stories
++- [ ] Error handling stories
++- [ ] Monitoring stories
++
++**Infrastructure**:
++- [ ] Docker setup stories
++- [ ] Kubernetes deployment stories
++- [ ] Database configuration stories
++- [ ] Caching layer stories
++- [ ] Message queue stories
++- [ ] Load balancer stories
++- [ ] SSL/TLS setup stories
++- [ ] Backup system stories
++
++**Operations**:
++- [ ] Admin dashboard stories
++- [ ] Monitoring setup stories
++- [ ] Alerting configuration stories
++- [ ] Logging system stories
++- [ ] Support tools stories
++- [ ] Analytics stories
++
++**Quality & Compliance**:
++- [ ] Security scan setup stories
++- [ ] Performance testing stories
++- [ ] Accessibility stories
++- [ ] Documentation stories
++- [ ] Training material stories
++
++## PROJECT APPROVAL CRITERIA:
++
++### Must Have 100% of:
++1. All PRD requirements mapped to stories
++2. All stories have BDD scenarios
++3. All stories have test requirements
++4. All dependencies identified
++5. All risks have mitigation plans
++6. Technology stack correctly specified
++
++### Acceptable Ranges:
++- Story estimation accuracy: ±20%
++- Resource allocation: ±10%
++- Timeline buffer: 15-20%
++- Risk contingency: 10-15%
++
++## ENFORCEMENT ACTIONS:
++
++### If Project NOT READY (DO THESE NOW):
++1. **Block Development Start**
++   - UPDATE project status to BLOCKED
++   - ADD label `not-ready` to project
++   - CREATE milestone "Fixes Required Before Start"
++
++2. **Required Actions**:
++   - CREATE all missing stories NOW
++   - ADD BDD scenarios to stories NOW
++   - FIX technology specifications NOW
++   - LINK all dependencies NOW
++   - UPDATE all test requirements NOW
++
++3. **Set Review Timeline**:
++   - CREATE calendar event for re-review
++   - TAG all stakeholders
++   - SET milestone due dates
++
++### If Project NEEDS WORK (DO THESE NOW):
++1. **Conditional Approval**
++   - ADD label `conditional-approval`
++   - CREATE "Must Fix" milestone
++   - ASSIGN issues to owners
++
++2. **Schedule Check-ins**
++   - CREATE recurring calendar events
++   - ADD review comments to issues
++   - SET escalation triggers
++
++### If Project READY (DO THESE NOW):
++1. **Full Approval**
++   - UPDATE project status to APPROVED
++   - ADD label `ready-for-development`
++   - CREATE sprint planning issues
++   - NOTIFY team of approval
++
++## WHAT SUCCESS LOOKS LIKE:
++
++When you're done, you should be able to say:
++"I have completed the project review by:
++- Reviewing 47 epics and 286 stories
++- Creating 23 missing stories
++- Updating 89 stories with BDD scenarios
++- Fixing 15 technology specifications
++- Adding 134 comments with required fixes
++- Applying 201 labels
++- Linking 67 dependencies
++- Splitting 8 oversized stories
++- Creating 3 risk mitigation plans
++
++The GitHub project now reflects the true state and everyone knows what to fix."
++
++NOT: "Here's my analysis of the project..."
++
++## COMMON PM MISTAKES TO CATCH:
++
++1. **Underestimating Complexity**
++   - Not enough stories for complex features
++   - Missing edge cases
++   - Ignoring integration complexity
++
++2. **Skipping Infrastructure**
++   - No database setup stories
++   - Missing deployment stories
++   - No monitoring/alerting stories
++
++3. **Ignoring Operations**
++   - No admin tools
++   - Missing support features
++   - No maintenance procedures
++
++4. **Poor Risk Management**
++   - Risks identified but not mitigated
++   - No contingency plans
++   - Dependencies not managed
++
++5. **Timeline Issues**
++   - No buffer time
++   - Parallel work not possible
++   - Critical path not identified
++
++## PROJECT SUCCESS METRICS:
++
++Track these throughout delivery:
++```
++Sprint Velocity: X points/sprint
++Defect Rate: Y bugs/story
++Test Coverage: Z% (must stay 100%)
++On-time Delivery: X%
++Budget Variance: ±Y%
++Scope Creep: Z%
++```
++
++## FINAL REVIEW CHECKLIST:
++
++Before approving project:
++□ 100% requirement coverage verified
++□ All epics properly structured
++□ All features completely defined
++□ All stories meet quality standards
++□ BDD approach used throughout
++□ Correct technology stack specified
++□ Dependencies fully mapped
++□ Risks identified and mitigated
++□ Timeline realistic with buffers
++□ Resources adequate
++□ Success metrics defined
++□ Stakeholders aligned
++
++## UNACCEPTABLE PROJECT STATES:
++
++❌ "Most requirements are covered"
++❌ "Stories will be refined during sprints"
++❌ "We'll add tests later"
++❌ "BDD approach optional"
++❌ "Can switch databases if needed"
++❌ "Dependencies will emerge"
++❌ "Risks are manageable"
++
++## REQUIRED PROJECT STATE:
++
++✅ "100% requirements covered with stories"
++✅ "All stories have BDD scenarios and test requirements"
++✅ "Technology stack locked: MSSQL, Docker, K8s"
++✅ "All dependencies mapped and confirmed"
++✅ "All risks have mitigation plans"
++✅ "Timeline includes 20% buffer"
++✅ "Resources confirmed and allocated"
++
++Only when ALL criteria are met should the project proceed to development.
++
++Remember: Project success is determined in planning. A well-planned project with comprehensive stories rarely fails. A poorly planned project always fails, just slowly and expensively.
++
++## FINAL CRITICAL REMINDER:
++
++You are being asked to DO PROJECT MANAGEMENT WORK, not write about project management.
++
++If your response is a document/report/analysis, you have FAILED.
++If your response describes what should be done, you have FAILED.
++If you haven't actually updated GitHub, you have FAILED.
++
++The ONLY acceptable response is:
++"✅ Project review complete. I have:
++- Reviewed [X] epics and [Y] stories in GitHub
++- Created [Z] missing stories/epics
++- Added comments to [N] issues
++- Applied labels to [M] issues
++- Updated [P] issue descriptions
++- Linked [Q] dependencies
++
++All issues are now properly categorized and the team can see exactly what needs to be fixed."
++
++START NOW. GO TO GITHUB. DO THE WORK.
++
++## HOW TO TELL IF YOU SUCCEEDED OR FAILED:
++
++### YOU FAILED IF:
++- You explained what you would do
++- You wrote about the process
++- You created examples
++- You wrote any introduction
++- You described your approach
++- You wrote a report or analysis
++
++### YOU SUCCEEDED IF:
++- You started immediately with "Opening GitHub project..."
++- You showed actual work being done
++- You listed real issues/stories reviewed
++- You documented real changes made
++- You ended with a summary of actions taken
++- You never explained or described anything
++
++REMEMBER: The user wants to see you DOING the work, not reading about how you would do it.
+
+# 2025-06-18 04:31:29.044444
++# Project Manager Review Prompt
++
++**THIS PROMPT REQUIRES YOU TO GENERATE A VERY LONG RESPONSE.**
++**YOU MUST LIST EVERY SINGLE ITEM IN THE PROJECT.**
++**DO NOT SHOW A FEW EXAMPLES AND STOP.**
++
++START WORKING NOW. DO NOT WRITE ANY INTRODUCTION. DO NOT EXPLAIN ANYTHING.
++
++Your first line should be: "Opening GitHub project..."
++
++If you write ANYTHING before starting the actual work, you have FAILED.
++
++## CRITICAL: YOU MUST REVIEW EVERY SINGLE ITEM
++
++This is not a demonstration. This is ACTUAL WORK.
++- If there are 47 epics, review all 47
++- If there are 286 stories, review all 286  
++- If you need to create 50 stories, create all 50
++- DO NOT STOP EARLY
++- DO NOT ABBREVIATE
++- DO NOT USE EXAMPLES
++
++Your response should be AS LONG AS NECESSARY to show ALL work done.
++
++## ⚠️ COMMON FAILURE PATTERN TO AVOID:
++
++Many people show 3-5 items then jump to summary.
++This is WRONG and will result in FAILURE.
++
++❌ BAD PATTERN (DO NOT DO THIS):
++- Show Story 1
++- Show Story 2  
++- Show Story 3
++- Jump to "Summary: Reviewed 286 stories"
++
++✅ CORRECT PATTERN (DO THIS):
++- Show Story 1
++- Show Story 2
++- Show Story 3
++- Show Story 4
++- Show Story 5
++- [Continue showing EVERY story]
++- Show Story 286
++- THEN show summary
++
++## WARNING: DO NOT STOP AFTER 3-4 ITEMS
++
++The #1 mistake is showing 3 examples then jumping to summary.
++If you do this, you have FAILED.
++
++You must continue through EVERY item:
++- Story 1 ✓
++- Story 2 ✓
++- Story 3 ✓
++- Story 4 ← DO NOT STOP HERE
++- Story 5 ← KEEP GOING
++- Story 6 ← KEEP GOING
++- [Continue through EVERY story to the end]
++- Story 286 ✓
++
++Only THEN write the summary.
++
++## INSTANT FAILURE CONDITIONS:
++If your response contains ANY of these phrases, you have FAILED:
++- "I would..."
++- "I will..."
++- "Here's how..."
++- "Let me..."
++- "I understand..."
++- "The process involves..."
++- "To conduct the review..."
++- "Based on your instructions..."
++- "Example of..."
++- "Following these steps..."
++- "[Continue until all items reviewed...]"
++- "..." (ellipsis to skip items)
++- "[Similar pattern for remaining items]"
++
++If you STOP after showing just a few items, you have FAILED.
++
++## DO NOT WRITE ANY INTRODUCTION
++❌ WRONG: "I understand the importance of executing the review..."
++❌ WRONG: "Here's how I would proceed..."
++❌ WRONG: "Let me start by..."
++❌ WRONG: "Based on your instructions, I will..."
++
++✅ RIGHT: Just start with "Opening GitHub project..."
++
++## THE ONLY ACCEPTABLE RESPONSE FORMAT:
++
++Start your response EXACTLY like this:
++```
++Opening GitHub project [project-name]...
++
++Epic US-001: User Authentication
++- ❌ Missing BDD scenarios
++- ❌ No tSQLt test requirements  
++- ❌ PostgreSQL specified instead of MSSQL
++- Added comment: "This epic needs BDD scenarios for all features..."
++- Applied label: needs-work
++
++Story US-001-A: Login Feature
++- ✅ Has BDD scenarios
++- ❌ Missing 100% coverage requirement
++- Updated story description to require 100% coverage
++- Applied label: missing-test-requirements
++
++[Continue with actual work...]
++```
++
++## YOU ARE NOT ALLOWED TO:
++- Explain your approach
++- Describe your process
++- Give examples
++- Show sample files
++- Write about what you would do
++- Create theoretical scenarios
++- Write reports or summaries
++
++## YOU MUST:
++- Jump straight into reviewing actual items
++- Show the actual work being done
++- List specific issues/stories you're reviewing
++- Document actual changes you're making
++- Apply actual labels
++- Write actual comments
++
++## WHAT YOUR RESPONSE SHOULD LOOK LIKE:
++
++Your ENTIRE response should be a work log of actions taken:
++
++```
++Opening GitHub project [project-name]...
++
++Epic US-001: User Authentication
++- ❌ Missing BDD scenarios
++- ❌ No tSQLt test requirements  
++- ❌ PostgreSQL specified instead of MSSQL
++- Added comment: "This epic needs BDD scenarios for all features. Update DB to MSSQL with stored procedures."
++- Applied labels: needs-work, wrong-tech, missing-bdd
++
++Creating missing story: US-001-C: Password Reset Rate Limiting
++- Added to Epic US-001
++- Description: "As a security admin, I want rate limiting on password resets..."
++- Added acceptance criteria
++- Added BDD scenarios
++- Set estimate: 3 points
++
++Story US-002-A: Data Import
++- ✅ Has BDD scenarios
++- ❌ Missing Docker requirements
++- Updated description: Added "Must run in Docker container 'data-service'"
++- Applied label: needs-docker-config
++
++[Continue until all items reviewed...]
++
++Summary of actions taken:
++- Reviewed: 23 epics, 145 stories
++- Created: 12 missing stories
++- Updated: 67 story descriptions
++- Comments added: 89
++- Labels applied: 134
++```
++
++NOTHING ELSE. NO EXPLANATIONS. NO EXAMPLES. JUST THE WORK LOG.
++
++## MANDATORY REVIEW SCOPE:
++
++### 1. **Project Completeness Assessment** (DO THESE ACTIONS)
++- [ ] OPEN GitHub project and COUNT actual stories
++- [ ] CREATE missing epics for uncovered requirements
++- [ ] CREATE missing features under epics
++- [ ] CREATE missing stories under features
++- [ ] MAP dependencies by linking issues
++- [ ] ADD risk labels to issues needing mitigation
++
++### 2. **Epic Structure Validation** (DO THESE ACTIONS)
++For each epic:
++- [ ] OPEN the epic in GitHub
++- [ ] ADD comment if business context missing
++- [ ] UPDATE epic description with KPIs
++- [ ] CREATE linked issues for success metrics
++- [ ] TAG stakeholders who need to review
++
++### 3. **Feature Completeness Review** (DO THESE ACTIONS)
++For each feature:
++- [ ] VERIFY it has user stories
++- [ ] CREATE missing stories
++- [ ] LINK dependencies between features
++- [ ] ADD labels for missing elements
++- [ ] COMMENT with specific fixes needed
++
++### 4. **Story Quality Audit** (DO THESE ACTIONS)
++For EVERY story:
++- [ ] OPEN the story
++- [ ] CHECK for BDD scenarios - if missing, COMMENT
++- [ ] VERIFY test requirements - if missing, UPDATE story
++- [ ] CONFIRM tech specs - if wrong, FIX them
++- [ ] APPLY label `needs-work` if incomplete
++- [ ] TAG the assignee with required fixes
++
++### 5. **Technology Stack Compliance** (DO THESE ACTIONS)
++- [ ] SEARCH all stories for "PostgreSQL" - UPDATE to MSSQL
++- [ ] FIND stories missing Docker - ADD Docker requirements  
++- [ ] LOCATE missing tSQLt specs - UPDATE stories
++- [ ] CHECK coverage requirements - FIX if not 100%
++- [ ] VERIFY BDD approach - ADD label if missing
++
++### 6. **Delivery Readiness Assessment** (DO THESE ACTIONS)
++- [ ] FIND oversized stories (>8 points) - SPLIT them
++- [ ] CREATE sprint milestones if missing
++- [ ] ASSIGN stories to sprints
++- [ ] UPDATE project board columns
++- [ ] ADD blockers where found
++- [ ] CREATE risk mitigation issues
++
++## PROJECT METRICS TO TRACK:
++
++### Coverage Analysis:
++```
++Functional Requirements Coverage: X/Y (Z%)
++Non-Functional Requirements Coverage: X/Y (Z%)
++Integration Points Addressed: X/Y (Z%)
++User Roles Covered: X/Y (Z%)
++Risk Mitigations Defined: X/Y (Z%)
++
++MINIMUM ACCEPTABLE: 100% for all categories
++```
++
++### Story Distribution:
++```
++Total Stories: X
++- Infrastructure: X (should be 15-20%)
++- Features: X (should be 60-70%)
++- Operations: X (should be 10-15%)
++- Technical Debt: X (should be <5%)
++
++Stories by Size:
++- XS (1pt): X%
++- S (2pt): X%
++- M (3pt): X%
++- L (5pt): X%
++- XL (8pt): X% (should be 0% - split these)
++```
++
++### Quality Metrics:
++```
++Stories with BDD Scenarios: X/Y (must be 100%)
++Stories with Test Requirements: X/Y (must be 100%)
++Stories with Technical Specs: X/Y (must be 100%)
++Stories with Dependencies Mapped: X/Y (100%)
++```
++
++## REVIEW EXECUTION (NOT OUTPUT FORMAT):
++
++### Instead of Executive Summary, DO THIS:
++1. **Update Project Board Description** in GitHub with:
++   ```
++   Last Review: [Date]
++   Status: 🔴 NOT READY | 🟡 NEEDS WORK | 🟢 READY
++   Critical Issues: [Count]
++   Next Review: [Date]
++   ```
++
++2. **Create/Update Milestone** for issues needing fixes:
++   ```
++   Milestone: "PM Review Fixes - [Date]"
++   Due Date: [1 week from now]
++   ```
++
++3. **Apply Labels** to categorize issues:
++   - `pm-review-fail` - Critical issues
++   - `missing-bdd` - No scenarios
++   - `missing-deps` - Dependencies not mapped
++   - `wrong-tech` - Tech stack issues
++   - `incomplete` - Missing information
++
++### Instead of Detailed Analysis, DO THIS:
++1. **For Missing Requirements**:
++   - CREATE the missing epic/story
++   - Don't just note it's missing
++
++2. **For Incomplete Stories**:
++   - ADD comment with specific fixes needed
++   - TAG the story owner
++   - SET due date for fixes
++
++3. **For Tech Stack Issues**:
++   - UPDATE story description
++   - FIX the technology specification
++   - ADD comment explaining change
++
++4. **For Missing Dependencies**:
++   - LINK related issues
++   - CREATE dependency map in issue
++   - UPDATE both issues with cross-references
++
++## PROJECT-LEVEL RED FLAGS:
++
++### 1. **Incomplete Coverage**
++- Requirements without stories
++- Features without proper decomposition
++- Missing infrastructure stories
++- No operational stories
++
++### 2. **Poor Organization**
++- Stories not grouped into epics
++- Dependencies not mapped
++- No clear delivery phases
++- Missing sprint planning
++
++### 3. **Quality Issues**
++- Stories without BDD scenarios
++- Missing test requirements
++- Vague acceptance criteria
++- Technical specs incomplete
++
++### 4. **Technology Violations**
++- Wrong database platform
++- Missing Docker setup
++- No CI/CD pipeline defined
++- Incorrect test frameworks
++
++### 5. **Delivery Risks**
++- Unrealistic timelines
++- Insufficient resources
++- Unmitigated risks
++- No rollback plans
++
++## COMPREHENSIVE COVERAGE CHECKLIST:
++
++### For a Complete Project, verify:
++
++**User Management** (if applicable):
++- [ ] Registration stories
++- [ ] Authentication stories
++- [ ] Authorization stories
++- [ ] Profile management stories
++- [ ] Password reset stories
++- [ ] Session management stories
++- [ ] Audit logging stories
++
++**Data Management**:
++- [ ] Database setup stories
++- [ ] Migration stories
++- [ ] Backup/restore stories
++- [ ] Data validation stories
++- [ ] Import/export stories
++- [ ] Archival stories
++
++**Integration** (per system):
++- [ ] Connection setup stories
++- [ ] Data mapping stories
++- [ ] Sync logic stories
++- [ ] Error handling stories
++- [ ] Monitoring stories
++
++**Infrastructure**:
++- [ ] Docker setup stories
++- [ ] Kubernetes deployment stories
++- [ ] Database configuration stories
++- [ ] Caching layer stories
++- [ ] Message queue stories
++- [ ] Load balancer stories
++- [ ] SSL/TLS setup stories
++- [ ] Backup system stories
++
++**Operations**:
++- [ ] Admin dashboard stories
++- [ ] Monitoring setup stories
++- [ ] Alerting configuration stories
++- [ ] Logging system stories
++- [ ] Support tools stories
++- [ ] Analytics stories
++
++**Quality & Compliance**:
++- [ ] Security scan setup stories
++- [ ] Performance testing stories
++- [ ] Accessibility stories
++- [ ] Documentation stories
++- [ ] Training material stories
++
++## PROJECT APPROVAL CRITERIA:
++
++### Must Have 100% of:
++1. All PRD requirements mapped to stories
++2. All stories have BDD scenarios
++3. All stories have test requirements
++4. All dependencies identified
++5. All risks have mitigation plans
++6. Technology stack correctly specified
++
++### Acceptable Ranges:
++- Story estimation accuracy: ±20%
++- Resource allocation: ±10%
++- Timeline buffer: 15-20%
++- Risk contingency: 10-15%
++
++## ENFORCEMENT ACTIONS:
++
++### If Project NOT READY (DO THESE NOW):
++1. **Block Development Start**
++   - UPDATE project status to BLOCKED
++   - ADD label `not-ready` to project
++   - CREATE milestone "Fixes Required Before Start"
++
++2. **Required Actions**:
++   - CREATE all missing stories NOW
++   - ADD BDD scenarios to stories NOW
++   - FIX technology specifications NOW
++   - LINK all dependencies NOW
++   - UPDATE all test requirements NOW
++
++3. **Set Review Timeline**:
++   - CREATE calendar event for re-review
++   - TAG all stakeholders
++   - SET milestone due dates
++
++### If Project NEEDS WORK (DO THESE NOW):
++1. **Conditional Approval**
++   - ADD label `conditional-approval`
++   - CREATE "Must Fix" milestone
++   - ASSIGN issues to owners
++
++2. **Schedule Check-ins**
++   - CREATE recurring calendar events
++   - ADD review comments to issues
++   - SET escalation triggers
++
++### If Project READY (DO THESE NOW):
++1. **Full Approval**
++   - UPDATE project status to APPROVED
++   - ADD label `ready-for-development`
++   - CREATE sprint planning issues
++   - NOTIFY team of approval
++
++## WHAT SUCCESS LOOKS LIKE:
++
++When you're done, you should be able to say:
++"I have completed the project review by:
++- Reviewing 47 epics and 286 stories
++- Creating 23 missing stories
++- Updating 89 stories with BDD scenarios
++- Fixing 15 technology specifications
++- Adding 134 comments with required fixes
++- Applying 201 labels
++- Linking 67 dependencies
++- Splitting 8 oversized stories
++- Creating 3 risk mitigation plans
++
++The GitHub project now reflects the true state and everyone knows what to fix."
++
++NOT: "Here's my analysis of the project..."
++
++## COMMON PM MISTAKES TO CATCH:
++
++1. **Underestimating Complexity**
++   - Not enough stories for complex features
++   - Missing edge cases
++   - Ignoring integration complexity
++
++2. **Skipping Infrastructure**
++   - No database setup stories
++   - Missing deployment stories
++   - No monitoring/alerting stories
++
++3. **Ignoring Operations**
++   - No admin tools
++   - Missing support features
++   - No maintenance procedures
++
++4. **Poor Risk Management**
++   - Risks identified but not mitigated
++   - No contingency plans
++   - Dependencies not managed
++
++5. **Timeline Issues**
++   - No buffer time
++   - Parallel work not possible
++   - Critical path not identified
++
++## PROJECT SUCCESS METRICS:
++
++Track these throughout delivery:
++```
++Sprint Velocity: X points/sprint
++Defect Rate: Y bugs/story
++Test Coverage: Z% (must stay 100%)
++On-time Delivery: X%
++Budget Variance: ±Y%
++Scope Creep: Z%
++```
++
++## FINAL REVIEW CHECKLIST:
++
++Before approving project:
++□ 100% requirement coverage verified
++□ All epics properly structured
++□ All features completely defined
++□ All stories meet quality standards
++□ BDD approach used throughout
++□ Correct technology stack specified
++□ Dependencies fully mapped
++□ Risks identified and mitigated
++□ Timeline realistic with buffers
++□ Resources adequate
++□ Success metrics defined
++□ Stakeholders aligned
++
++## UNACCEPTABLE PROJECT STATES:
++
++❌ "Most requirements are covered"
++❌ "Stories will be refined during sprints"
++❌ "We'll add tests later"
++❌ "BDD approach optional"
++❌ "Can switch databases if needed"
++❌ "Dependencies will emerge"
++❌ "Risks are manageable"
++
++## REQUIRED PROJECT STATE:
++
++✅ "100% requirements covered with stories"
++✅ "All stories have BDD scenarios and test requirements"
++✅ "Technology stack locked: MSSQL, Docker, K8s"
++✅ "All dependencies mapped and confirmed"
++✅ "All risks have mitigation plans"
++✅ "Timeline includes 20% buffer"
++✅ "Resources confirmed and allocated"
++
++Only when ALL criteria are met should the project proceed to development.
++
++Remember: Project success is determined in planning. A well-planned project with comprehensive stories rarely fails. A poorly planned project always fails, just slowly and expensively.
++
++## FINAL CRITICAL REMINDER:
++
++You are simulating a REAL project manager doing HOURS of review work. Show ALL of it.
++
++A real PM reviewing 286 stories would generate a work log of 1000+ lines.
++Your response should reflect this reality.
++
++If your response is only 50 lines for a 286-story project, you're not doing the work.
++
++THE WORK LOG IS THE DELIVERABLE. MAKE IT COMPLETE.
++
++## WHAT YOUR COMPLETE RESPONSE LOOKS LIKE:
++
++```
++Opening GitHub project...
++
++[Epic 1 review]
++[Story 1 review]
++[Story 2 review]
++[Story 3 review]
++[Story 4 review]
++[DO NOT STOP HERE - KEEP GOING]
++[Story 5 review]
++[Story 6 review]
++[... continue typing out each story review...]
++[Story 283 review]
++[Story 284 review]
++[Story 285 review]
++[Story 286 review]
++
++Summary of actions taken:
++- Reviewed: 47 epics, 286 stories [ONLY after showing all 286]
++```
++
++## THE DIFFERENCE BETWEEN SUCCESS AND FAILURE:
++
++### ❌ FAILURE (What most people do wrong):
++```
++Opening GitHub project...
++Story US-001: Login
++- Missing BDD
++Story US-002: Register  
++- Missing Docker
++Story US-003: Reset Password
++- Wrong DB
++
++Summary:
++- Reviewed 286 stories
++- Found 89 issues
++```
++↑ WRONG - Only showed 3 stories but claimed to review 286
++
++### ✅ SUCCESS (What you must do):
++```
++Opening GitHub project...
++Story US-001: Login
++- Missing BDD
++Story US-002: Register
++- Missing Docker  
++Story US-003: Reset Password
++- Wrong DB
++Story US-004: Profile Update
++- Missing tests
++[... continues for all 286 stories ...]
++Story US-286: Audit Log
++- All correct
++
++Summary:
++- Reviewed 286 stories [after actually showing all 286]
++- Found 89 issues
++```
++↑ RIGHT - Actually showed all 286 stories before summary
++
++## HOW TO TELL IF YOU SUCCEEDED OR FAILED:
++
++### YOU FAILED IF:
++- You showed only a few examples
++- Your response is under 500 lines for a large project
++- You used "..." or "[continue]" to skip items
++- You jumped to summary after 3-4 items
++- You explained what you would do
++- You wrote any introduction
++
++### YOU SUCCEEDED IF:
++- You showed EVERY item reviewed
++- Your response is appropriately long (1000+ lines for 200+ stories)
++- You documented EVERY change made
++- You never skipped or abbreviated
++- You just did the work without explaining
++
++START NOW. SHOW THE COMPLETE WORK.
++
++## ONE FINAL INSTRUCTION:
++
++When you reach Story #3 or #4, DO NOT STOP.
++Keep going through Story #5, #6, #7... all the way to the final story.
++
++Your response should end ONLY when you've reviewed the LAST item in the project.
++
++If the project has 286 stories, your response should show reviews for all 286.
++Not 3 examples. Not 10 examples. ALL 286.
++
++## IF YOU HIT OUTPUT LIMITS:
++
++If you reach any kind of length limit:
++- Note where you stopped (e.g., "Reviewed through Story US-125")
++- Do NOT jump to summary
++- Do NOT pretend you reviewed everything
++- Be honest: "Output limit reached at Story US-125 of 286"
++
++But keep going AS FAR AS POSSIBLE before any limit.
++
++BEGIN THE EXHAUSTIVE REVIEW NOW.
++
++## REMEMBER: 
++- After Story 3, there's Story 4
++- After Story 4, there's Story 5
++- After Story 10, there's Story 11
++- After Story 50, there's Story 51
++- After Story 100, there's Story 101
++- Keep going until the LAST story
++
++The person reading your response should see EVERY SINGLE story review, not a sample.
+
+# 2025-06-18 13:08:22.682873
++# How to Use the Chunked Review System
++
++## FULL PROJECT REVIEW PROCESS:
++
++### Step 1: First Chunk (Items 1-50)
++Use the "Chunked Project Manager Review Prompt" exactly as written.
++Expect: 50 detailed item reviews
++
++### Step 2: Second Chunk (Items 51-100)
++Modify the prompt:
++- Change: "Review Items 1-50 ONLY" → "Review Items 51-100 ONLY"
++- Change: "Reviewing Items 1-50 of 286" → "Reviewing Items 51-100 of 286"
++- Change: "[Item 1 of 50]" → "[Item 51 of 50]" through "[Item 100 of 50]"
++- Keep all other review criteria identical
++
++### Step 3: Continue Chunks
++- Chunk 3: Items 101-150
++- Chunk 4: Items 151-200
++- Chunk 5: Items 201-250
++- Chunk 6: Items 251-286 (last 36 items)
++
++### Step 4: Final Summary
++After all chunks, request:
++"Provide final summary of all 286 items reviewed across all chunks:
++- Total epics reviewed
++- Total stories reviewed
++- Total issues found by type
++- Total stories created
++- Total labels applied"
++
++## WHY THIS WORKS:
++
++1. **Bypasses Length Limits**: Each chunk stays within comfortable response limits
++2. **Maintains Quality**: Full review criteria applied to every item
++3. **Prevents Shortcuts**: Can't skip from item 3 to summary when expecting exactly 50
++4. **Easy Validation**: You can count - did they show 50 items or not?
++5. **Complete Coverage**: 6 chunks × 50 items = full coverage
++
++## CHUNK TRACKING TEMPLATE:
++
++```
++Project Review Progress:
++□ Chunk 1 (Items 1-50) - Epics US-001 to US-010, Stories US-001-A to US-040
++□ Chunk 2 (Items 51-100) - Stories US-041 to US-090  
++□ Chunk 3 (Items 101-150) - Stories US-091 to US-140
++□ Chunk 4 (Items 151-200) - Stories US-141 to US-190
++□ Chunk 5 (Items 201-250) - Stories US-191 to US-240
++□ Chunk 6 (Items 251-286) - Stories US-241 to US-286
++□ Final Summary - Consolidate all findings
++```
++
++## VALIDATION CHECKLIST FOR EACH CHUNK:
++
++- [ ] Shows exactly 50 items (or remainder for last chunk)
++- [ ] Each item has detailed review
++- [ ] Specific issues identified
++- [ ] Actions taken (not just noted)
++- [ ] Labels applied
++- [ ] Comments added
++- [ ] Missing items created
++- [ ] Proper counting throughout
++
++## RED FLAGS TO WATCH FOR:
++
++❌ Response shorter than ~500 lines
++❌ Jumps from item 10 to summary
++❌ Uses "..." to skip items
++❌ Says "similar issues for items 15-45"
++❌ Generic reviews like "checked story, all good"
++❌ No specific actions taken
++
++✅ GOOD SIGNS:
++✅ ~10-20 lines per item reviewed
++✅ Specific issues found and fixed
++✅ Real comments quoted
++✅ Actual labels applied
++✅ Missing stories created with details
++✅ Counts every item explicitly
+
+# 2025-06-19 03:39:59.023340
++# Project Manager Review Prompt
++
++**THIS PROMPT REQUIRES YOU TO GENERATE A VERY LONG RESPONSE.**
++**YOU MUST LIST EVERY SINGLE ITEM IN THE PROJECT.**
++**DO NOT SHOW A FEW EXAMPLES AND STOP.**
++
++START WORKING NOW. DO NOT WRITE ANY INTRODUCTION. DO NOT EXPLAIN ANYTHING.
++
++Your first line should be: "Opening GitHub project..."
++
++If you write ANYTHING before starting the actual work, you have FAILED.
++
++## CRITICAL: YOU MUST REVIEW EVERY SINGLE ITEM
++
++This is not a demonstration. This is ACTUAL WORK.
++- If there are 47 epics, review all 47
++- If there are 286 stories, review all 286  
++- If you need to create 50 stories, create all 50
++- DO NOT STOP EARLY
++- DO NOT ABBREVIATE
++- DO NOT USE EXAMPLES
++
++Your response should be AS LONG AS NECESSARY to show ALL work done.
++
++## ⚠️ COMMON FAILURE PATTERN TO AVOID:
++
++Many people show 3-5 items then jump to summary.
++This is WRONG and will result in FAILURE.
++
++❌ BAD PATTERN (DO NOT DO THIS):
++- Show Story 1
++- Show Story 2  
++- Show Story 3
++- Jump to "Summary: Reviewed 286 stories"
++
++✅ CORRECT PATTERN (DO THIS):
++- Show Story 1
++- Show Story 2
++- Show Story 3
++- Show Story 4
++- Show Story 5
++- [Continue showing EVERY story]
++- Show Story 286
++- THEN show summary
++
++## WARNING: DO NOT STOP AFTER 3-4 ITEMS
++
++The #1 mistake is showing 3 examples then jumping to summary.
++If you do this, you have FAILED.
++
++You must continue through EVERY item:
++- Story 1 ✓
++- Story 2 ✓
++- Story 3 ✓
++- Story 4 ← DO NOT STOP HERE
++- Story 5 ← KEEP GOING
++- Story 6 ← KEEP GOING
++- [Continue through EVERY story to the end]
++- Story 286 ✓
++
++Only THEN write the summary.
++
++## INSTANT FAILURE CONDITIONS:
++If your response contains ANY of these phrases, you have FAILED:
++- "I would..."
++- "I will..."
++- "Here's how..."
++- "Let me..."
++- "I understand..."
++- "The process involves..."
++- "To conduct the review..."
++- "Based on your instructions..."
++- "Example of..."
++- "Following these steps..."
++- "[Continue until all items reviewed...]"
++- "..." (ellipsis to skip items)
++- "[Similar pattern for remaining items]"
++
++If you STOP after showing just a few items, you have FAILED.
++
++## DO NOT WRITE ANY INTRODUCTION
++❌ WRONG: "I understand the importance of executing the review..."
++❌ WRONG: "Here's how I would proceed..."
++❌ WRONG: "Let me start by..."
++❌ WRONG: "Based on your instructions, I will..."
++
++✅ RIGHT: Just start with "Opening GitHub project..."
++
++## THE ONLY ACCEPTABLE RESPONSE FORMAT:
++
++Start your response EXACTLY like this:
++```
++Opening GitHub project [project-name]...
++
++Epic US-001: User Authentication
++- ❌ Missing BDD scenarios
++- ❌ No tSQLt test requirements  
++- ❌ PostgreSQL specified instead of MSSQL
++- Added comment: "This epic needs BDD scenarios for all features..."
++- Applied label: needs-work
++
++Story US-001-A: Login Feature
++- ✅ Has BDD scenarios
++- ❌ Missing 100% coverage requirement
++- Updated story description to require 100% coverage
++- Applied label: missing-test-requirements
++
++[Continue with actual work...]
++```
++
++## YOU ARE NOT ALLOWED TO:
++- Explain your approach
++- Describe your process
++- Give examples
++- Show sample files
++- Write about what you would do
++- Create theoretical scenarios
++- Write reports or summaries
++
++## YOU MUST:
++- Jump straight into reviewing actual items
++- Show the actual work being done
++- List specific issues/stories you're reviewing
++- Document actual changes you're making
++- Apply actual labels
++- Write actual comments
++
++## WHAT YOUR RESPONSE SHOULD LOOK LIKE:
++
++Your ENTIRE response should be a work log of actions taken:
++
++```
++Opening GitHub project [project-name]...
++
++Epic US-001: User Authentication
++- ❌ Missing BDD scenarios
++- ❌ No tSQLt test requirements  
++- ❌ PostgreSQL specified instead of MSSQL
++- Added comment: "This epic needs BDD scenarios for all features. Update DB to MSSQL with stored procedures."
++- Applied labels: needs-work, wrong-tech, missing-bdd
++
++Creating missing story: US-001-C: Password Reset Rate Limiting
++- Added to Epic US-001
++- Description: "As a security admin, I want rate limiting on password resets..."
++- Added acceptance criteria
++- Added BDD scenarios
++- Set estimate: 3 points
++
++Story US-002-A: Data Import
++- ✅ Has BDD scenarios
++- ❌ Missing Docker requirements
++- Updated description: Added "Must run in Docker container 'data-service'"
++- Applied label: needs-docker-config
++
++[Continue until all items reviewed...]
++
++Summary of actions taken:
++- Reviewed: 23 epics, 145 stories
++- Created: 12 missing stories
++- Updated: 67 story descriptions
++- Comments added: 89
++- Labels applied: 134
++```
++
++NOTHING ELSE. NO EXPLANATIONS. NO EXAMPLES. JUST THE WORK LOG.
++
++## MANDATORY REVIEW SCOPE:
++
++### 1. **Project Completeness Assessment** (DO THESE ACTIONS)
++- [ ] OPEN GitHub project and COUNT actual stories
++- [ ] CREATE missing epics for uncovered requirements
++- [ ] CREATE missing features under epics
++- [ ] CREATE missing stories under features
++- [ ] MAP dependencies by linking issues
++- [ ] ADD risk labels to issues needing mitigation
++
++### 2. **Epic Structure Validation** (DO THESE ACTIONS)
++For each epic:
++- [ ] OPEN the epic in GitHub
++- [ ] ADD comment if business context missing
++- [ ] UPDATE epic description with KPIs
++- [ ] CREATE linked issues for success metrics
++- [ ] TAG stakeholders who need to review
++
++### 3. **Feature Completeness Review** (DO THESE ACTIONS)
++For each feature:
++- [ ] VERIFY it has user stories
++- [ ] CREATE missing stories
++- [ ] LINK dependencies between features
++- [ ] ADD labels for missing elements
++- [ ] COMMENT with specific fixes needed
++
++### 4. **Story Quality Audit** (DO THESE ACTIONS)
++For EVERY story:
++- [ ] OPEN the story
++- [ ] CHECK for BDD scenarios - if missing, COMMENT
++- [ ] VERIFY test requirements - if missing, UPDATE story
++- [ ] CONFIRM tech specs - if wrong, FIX them
++- [ ] APPLY label `needs-work` if incomplete
++- [ ] TAG the assignee with required fixes
++
++### 5. **Technology Stack Compliance** (DO THESE ACTIONS)
++- [ ] SEARCH all stories for "PostgreSQL" - UPDATE to MSSQL
++- [ ] FIND stories missing Docker - ADD Docker requirements  
++- [ ] LOCATE missing tSQLt specs - UPDATE stories
++- [ ] CHECK coverage requirements - FIX if not 100%
++- [ ] VERIFY BDD approach - ADD label if missing
++
++### 6. **Delivery Readiness Assessment** (DO THESE ACTIONS)
++- [ ] FIND oversized stories (>8 points) - SPLIT them
++- [ ] CREATE sprint milestones if missing
++- [ ] ASSIGN stories to sprints
++- [ ] UPDATE project board columns
++- [ ] ADD blockers where found
++- [ ] CREATE risk mitigation issues
++
++## PROJECT METRICS TO TRACK:
++
++### Coverage Analysis:
++```
++Functional Requirements Coverage: X/Y (Z%)
++Non-Functional Requirements Coverage: X/Y (Z%)
++Integration Points Addressed: X/Y (Z%)
++User Roles Covered: X/Y (Z%)
++Risk Mitigations Defined: X/Y (Z%)
++
++MINIMUM ACCEPTABLE: 100% for all categories
++```
++
++### Story Distribution:
++```
++Total Stories: X
++- Infrastructure: X (should be 15-20%)
++- Features: X (should be 60-70%)
++- Operations: X (should be 10-15%)
++- Technical Debt: X (should be <5%)
++
++Stories by Size:
++- XS (1pt): X%
++- S (2pt): X%
++- M (3pt): X%
++- L (5pt): X%
++- XL (8pt): X% (should be 0% - split these)
++```
++
++### Quality Metrics:
++```
++Stories with BDD Scenarios: X/Y (must be 100%)
++Stories with Test Requirements: X/Y (must be 100%)
++Stories with Technical Specs: X/Y (must be 100%)
++Stories with Dependencies Mapped: X/Y (100%)
++```
++
++## REVIEW EXECUTION (NOT OUTPUT FORMAT):
++
++### Instead of Executive Summary, DO THIS:
++1. **Update Project Board Description** in GitHub with:
++   ```
++   Last Review: [Date]
++   Status: 🔴 NOT READY | 🟡 NEEDS WORK | 🟢 READY
++   Critical Issues: [Count]
++   Next Review: [Date]
++   ```
++
++2. **Create/Update Milestone** for issues needing fixes:
++   ```
++   Milestone: "PM Review Fixes - [Date]"
++   Due Date: [1 week from now]
++   ```
++
++3. **Apply Labels** to categorize issues:
++   - `pm-review-fail` - Critical issues
++   - `missing-bdd` - No scenarios
++   - `missing-deps` - Dependencies not mapped
++   - `wrong-tech` - Tech stack issues
++   - `incomplete` - Missing information
++
++### Instead of Detailed Analysis, DO THIS:
++1. **For Missing Requirements**:
++   - CREATE the missing epic/story
++   - Don't just note it's missing
++
++2. **For Incomplete Stories**:
++   - ADD comment with specific fixes needed
++   - TAG the story owner
++   - SET due date for fixes
++
++3. **For Tech Stack Issues**:
++   - UPDATE story description
++   - FIX the technology specification
++   - ADD comment explaining change
++
++4. **For Missing Dependencies**:
++   - LINK related issues
++   - CREATE dependency map in issue
++   - UPDATE both issues with cross-references
++
++## PROJECT-LEVEL RED FLAGS:
++
++### 1. **Incomplete Coverage**
++- Requirements without stories
++- Features without proper decomposition
++- Missing infrastructure stories
++- No operational stories
++
++### 2. **Poor Organization**
++- Stories not grouped into epics
++- Dependencies not mapped
++- No clear delivery phases
++- Missing sprint planning
++
++### 3. **Quality Issues**
++- Stories without BDD scenarios
++- Missing test requirements
++- Vague acceptance criteria
++- Technical specs incomplete
++
++### 4. **Technology Violations**
++- Wrong database platform
++- Missing Docker setup
++- No CI/CD pipeline defined
++- Incorrect test frameworks
++
++### 5. **Delivery Risks**
++- Unrealistic timelines
++- Insufficient resources
++- Unmitigated risks
++- No rollback plans
++
++## COMPREHENSIVE COVERAGE CHECKLIST:
++
++### For a Complete Project, verify:
++
++**User Management** (if applicable):
++- [ ] Registration stories
++- [ ] Authentication stories
++- [ ] Authorization stories
++- [ ] Profile management stories
++- [ ] Password reset stories
++- [ ] Session management stories
++- [ ] Audit logging stories
++
++**Data Management**:
++- [ ] Database setup stories
++- [ ] Migration stories
++- [ ] Backup/restore stories
++- [ ] Data validation stories
++- [ ] Import/export stories
++- [ ] Archival stories
++
++**Integration** (per system):
++- [ ] Connection setup stories
++- [ ] Data mapping stories
++- [ ] Sync logic stories
++- [ ] Error handling stories
++- [ ] Monitoring stories
++
++**Infrastructure**:
++- [ ] Docker setup stories
++- [ ] Kubernetes deployment stories
++- [ ] Database configuration stories
++- [ ] Caching layer stories
++- [ ] Message queue stories
++- [ ] Load balancer stories
++- [ ] SSL/TLS setup stories
++- [ ] Backup system stories
++
++**Operations**:
++- [ ] Admin dashboard stories
++- [ ] Monitoring setup stories
++- [ ] Alerting configuration stories
++- [ ] Logging system stories
++- [ ] Support tools stories
++- [ ] Analytics stories
++
++**Quality & Compliance**:
++- [ ] Security scan setup stories
++- [ ] Performance testing stories
++- [ ] Accessibility stories
++- [ ] Documentation stories
++- [ ] Training material stories
++
++## PROJECT APPROVAL CRITERIA:
++
++### Must Have 100% of:
++1. All PRD requirements mapped to stories
++2. All stories have BDD scenarios
++3. All stories have test requirements
++4. All dependencies identified
++5. All risks have mitigation plans
++6. Technology stack correctly specified
++
++### Acceptable Ranges:
++- Story estimation accuracy: ±20%
++- Resource allocation: ±10%
++- Timeline buffer: 15-20%
++- Risk contingency: 10-15%
++
++## ENFORCEMENT ACTIONS:
++
++### If Project NOT READY (DO THESE NOW):
++1. **Block Development Start**
++   - UPDATE project status to BLOCKED
++   - ADD label `not-ready` to project
++   - CREATE milestone "Fixes Required Before Start"
++
++2. **Required Actions**:
++   - CREATE all missing stories NOW
++   - ADD BDD scenarios to stories NOW
++   - FIX technology specifications NOW
++   - LINK all dependencies NOW
++   - UPDATE all test requirements NOW
++
++3. **Set Review Timeline**:
++   - CREATE calendar event for re-review
++   - TAG all stakeholders
++   - SET milestone due dates
++
++### If Project NEEDS WORK (DO THESE NOW):
++1. **Conditional Approval**
++   - ADD label `conditional-approval`
++   - CREATE "Must Fix" milestone
++   - ASSIGN issues to owners
++
++2. **Schedule Check-ins**
++   - CREATE recurring calendar events
++   - ADD review comments to issues
++   - SET escalation triggers
++
++### If Project READY (DO THESE NOW):
++1. **Full Approval**
++   - UPDATE project status to APPROVED
++   - ADD label `ready-for-development`
++   - CREATE sprint planning issues
++   - NOTIFY team of approval
++
++## WHAT SUCCESS LOOKS LIKE:
++
++When you're done, you should be able to say:
++"I have completed the project review by:
++- Reviewing 47 epics and 286 stories
++- Creating 23 missing stories
++- Updating 89 stories with BDD scenarios
++- Fixing 15 technology specifications
++- Adding 134 comments with required fixes
++- Applying 201 labels
++- Linking 67 dependencies
++- Splitting 8 oversized stories
++- Creating 3 risk mitigation plans
++
++The GitHub project now reflects the true state and everyone knows what to fix."
++
++NOT: "Here's my analysis of the project..."
++
++## COMMON PM MISTAKES TO CATCH:
++
++1. **Underestimating Complexity**
++   - Not enough stories for complex features
++   - Missing edge cases
++   - Ignoring integration complexity
++
++2. **Skipping Infrastructure**
++   - No database setup stories
++   - Missing deployment stories
++   - No monitoring/alerting stories
++
++3. **Ignoring Operations**
++   - No admin tools
++   - Missing support features
++   - No maintenance procedures
++
++4. **Poor Risk Management**
++   - Risks identified but not mitigated
++   - No contingency plans
++   - Dependencies not managed
++
++5. **Timeline Issues**
++   - No buffer time
++   - Parallel work not possible
++   - Critical path not identified
++
++## PROJECT SUCCESS METRICS:
++
++Track these throughout delivery:
++```
++Sprint Velocity: X points/sprint
++Defect Rate: Y bugs/story
++Test Coverage: Z% (must stay 100%)
++On-time Delivery: X%
++Budget Variance: ±Y%
++Scope Creep: Z%
++```
++
++## FINAL REVIEW CHECKLIST:
++
++Before approving project:
++□ 100% requirement coverage verified
++□ All epics properly structured
++□ All features completely defined
++□ All stories meet quality standards
++□ BDD approach used throughout
++□ Correct technology stack specified
++□ Dependencies fully mapped
++□ Risks identified and mitigated
++□ Timeline realistic with buffers
++□ Resources adequate
++□ Success metrics defined
++□ Stakeholders aligned
++
++## UNACCEPTABLE PROJECT STATES:
++
++❌ "Most requirements are covered"
++❌ "Stories will be refined during sprints"
++❌ "We'll add tests later"
++❌ "BDD approach optional"
++❌ "Can switch databases if needed"
++❌ "Dependencies will emerge"
++❌ "Risks are manageable"
++
++## REQUIRED PROJECT STATE:
++
++✅ "100% requirements covered with stories"
++✅ "All stories have BDD scenarios and test requirements"
++✅ "Technology stack locked: MSSQL, Docker, K8s"
++✅ "All dependencies mapped and confirmed"
++✅ "All risks have mitigation plans"
++✅ "Timeline includes 20% buffer"
++✅ "Resources confirmed and allocated"
++
++Only when ALL criteria are met should the project proceed to development.
++
++Remember: Project success is determined in planning. A well-planned project with comprehensive stories rarely fails. A poorly planned project always fails, just slowly and expensively.
++
++## FINAL CRITICAL REMINDER:
++
++You are simulating a REAL project manager doing HOURS of review work. Show ALL of it.
++
++A real PM reviewing 286 stories would generate a work log of 1000+ lines.
++Your response should reflect this reality.
++
++If your response is only 50 lines for a 286-story project, you're not doing the work.
++
++THE WORK LOG IS THE DELIVERABLE. MAKE IT COMPLETE.
++
++## WHAT YOUR COMPLETE RESPONSE LOOKS LIKE:
++
++```
++Opening GitHub project...
++
++[Epic 1 review]
++[Story 1 review]
++[Story 2 review]
++[Story 3 review]
++[Story 4 review]
++[DO NOT STOP HERE - KEEP GOING]
++[Story 5 review]
++[Story 6 review]
++[... continue typing out each story review...]
++[Story 283 review]
++[Story 284 review]
++[Story 285 review]
++[Story 286 review]
++
++Summary of actions taken:
++- Reviewed: 47 epics, 286 stories [ONLY after showing all 286]
++```
++
++## THE DIFFERENCE BETWEEN SUCCESS AND FAILURE:
++
++### ❌ FAILURE (What most people do wrong):
++```
++Opening GitHub project...
++Story US-001: Login
++- Missing BDD
++Story US-002: Register  
++- Missing Docker
++Story US-003: Reset Password
++- Wrong DB
++
++Summary:
++- Reviewed 286 stories
++- Found 89 issues
++```
++↑ WRONG - Only showed 3 stories but claimed to review 286
++
++### ✅ SUCCESS (What you must do):
++```
++Opening GitHub project...
++Story US-001: Login
++- Missing BDD
++Story US-002: Register
++- Missing Docker  
++Story US-003: Reset Password
++- Wrong DB
++Story US-004: Profile Update
++- Missing tests
++[... continues for all 286 stories ...]
++Story US-286: Audit Log
++- All correct
++
++Summary:
++- Reviewed 286 stories [after actually showing all 286]
++- Found 89 issues
++```
++↑ RIGHT - Actually showed all 286 stories before summary
++
++## HOW TO TELL IF YOU SUCCEEDED OR FAILED:
++
++### YOU FAILED IF:
++- You showed only a few examples
++- Your response is under 500 lines for a large project
++- You used "..." or "[continue]" to skip items
++- You jumped to summary after 3-4 items
++- You explained what you would do
++- You wrote any introduction
++
++### YOU SUCCEEDED IF:
++- You showed EVERY item reviewed
++- Your response is appropriately long (1000+ lines for 200+ stories)
++- You documented EVERY change made
++- You never skipped or abbreviated
++- You just did the work without explaining
++
++START NOW. SHOW THE COMPLETE WORK.
++
++## ONE FINAL INSTRUCTION:
++
++When you reach Story #3 or #4, DO NOT STOP.
++Keep going through Story #5, #6, #7... all the way to the final story.
++
++Your response should end ONLY when you've reviewed the LAST item in the project.
++
++If the project has 286 stories, your response should show reviews for all 286.
++Not 3 examples. Not 10 examples. ALL 286.
++
++## IF YOU HIT OUTPUT LIMITS:
++
++If you reach any kind of length limit:
++- Note where you stopped (e.g., "Reviewed through Story US-125")
++- Do NOT jump to summary
++- Do NOT pretend you reviewed everything
++- Be honest: "Output limit reached at Story US-125 of 286"
++
++But keep going AS FAR AS POSSIBLE before any limit.
++
++BEGIN THE EXHAUSTIVE REVIEW NOW.
++
++## REMEMBER: 
++- After Story 3, there's Story 4
++- After Story 4, there's Story 5
++- After Story 10, there's Story 11
++- After Story 50, there's Story 51
++- After Story 100, there's Story 101
++- Keep going until the LAST story
++
++The person reading your response should see EVERY SINGLE story review, not a sample.

@@ -1,0 +1,401 @@
+# HashiCorp Vault configuration for UPTRMS secrets management
+# Optional but recommended for production environments
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: vault
+---
+# Vault server configuration
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vault-config
+  namespace: vault
+data:
+  vault.hcl: |
+    ui = true
+    
+    listener "tcp" {
+      tls_disable = 0
+      address = "[::]:8200"
+      cluster_address = "[::]:8201"
+      tls_cert_file = "/vault/certs/server.crt"
+      tls_key_file = "/vault/certs/server.key"
+      tls_client_ca_file = "/vault/certs/ca.crt"
+    }
+    
+    storage "raft" {
+      path = "/vault/data"
+      node_id = "vault-0"
+    }
+    
+    cluster_addr = "https://vault-0.vault-internal:8201"
+    api_addr = "https://vault.vault.svc.cluster.local:8200"
+    
+    seal "awskms" {
+      region     = "us-east-1"
+      kms_key_id = "alias/vault-unsealer"
+    }
+    
+    telemetry {
+      prometheus_retention_time = "30s"
+      disable_hostname = true
+    }
+    
+    log_level = "Info"
+    
+    # Enable audit logging for HIPAA compliance
+    audit {
+      enabled = true
+    }
+---
+# Vault StatefulSet
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: vault
+  namespace: vault
+spec:
+  serviceName: vault-internal
+  replicas: 3
+  selector:
+    matchLabels:
+      app: vault
+  template:
+    metadata:
+      labels:
+        app: vault
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - vault
+            topologyKey: kubernetes.io/hostname
+      serviceAccountName: vault
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 100
+        fsGroup: 1000
+      containers:
+      - name: vault
+        image: hashicorp/vault:1.15.0
+        command:
+        - vault
+        - server
+        - -config=/vault/config/vault.hcl
+        env:
+        - name: VAULT_ADDR
+          value: "https://127.0.0.1:8200"
+        - name: VAULT_API_ADDR
+          value: "https://$(POD_IP):8200"
+        - name: SKIP_CHOWN
+          value: "true"
+        - name: SKIP_SETCAP
+          value: "true"
+        - name: HOSTNAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: VAULT_CLUSTER_ADDR
+          value: "https://$(HOSTNAME).vault-internal:8201"
+        - name: POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        - name: VAULT_LOG_LEVEL
+          value: "info"
+        ports:
+        - containerPort: 8200
+          name: https
+        - containerPort: 8201
+          name: https-internal
+        - containerPort: 8202
+          name: https-replication
+        livenessProbe:
+          httpGet:
+            path: /v1/sys/health?standbyok=true
+            port: 8200
+            scheme: HTTPS
+          initialDelaySeconds: 60
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /v1/sys/health?standbyok=true&sealedcode=204&uninitcode=204
+            port: 8200
+            scheme: HTTPS
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+        volumeMounts:
+        - name: config
+          mountPath: /vault/config
+        - name: data
+          mountPath: /vault/data
+        - name: certs
+          mountPath: /vault/certs
+          readOnly: true
+        resources:
+          requests:
+            cpu: 250m
+            memory: 256Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
+      volumes:
+      - name: config
+        configMap:
+          name: vault-config
+      - name: certs
+        secret:
+          secretName: vault-server-tls
+  volumeClaimTemplates:
+  - metadata:
+      name: data
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      storageClassName: managed-premium-encrypted
+      resources:
+        requests:
+          storage: 10Gi
+---
+# Vault Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: vault
+  namespace: vault
+spec:
+  type: ClusterIP
+  selector:
+    app: vault
+  ports:
+  - port: 8200
+    targetPort: 8200
+    protocol: TCP
+    name: https
+  - port: 8201
+    targetPort: 8201
+    protocol: TCP
+    name: https-internal
+---
+# Vault internal service for cluster communication
+apiVersion: v1
+kind: Service
+metadata:
+  name: vault-internal
+  namespace: vault
+spec:
+  clusterIP: None
+  selector:
+    app: vault
+  ports:
+  - port: 8200
+    targetPort: 8200
+    protocol: TCP
+    name: https
+  - port: 8201
+    targetPort: 8201
+    protocol: TCP
+    name: https-internal
+---
+# ServiceAccount for Vault
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: vault
+  namespace: vault
+---
+# ClusterRoleBinding for Vault
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: vault-server-binding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:auth-delegator
+subjects:
+- kind: ServiceAccount
+  name: vault
+  namespace: vault
+---
+# Vault initialization script
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: vault-init
+  namespace: vault
+spec:
+  template:
+    spec:
+      serviceAccountName: vault
+      containers:
+      - name: vault-init
+        image: hashicorp/vault:1.15.0
+        env:
+        - name: VAULT_ADDR
+          value: "https://vault.vault.svc.cluster.local:8200"
+        - name: VAULT_SKIP_VERIFY
+          value: "true"
+        command:
+        - /bin/sh
+        - -c
+        - |
+          # Wait for Vault to be ready
+          until vault status 2>&1 | grep -E "(Sealed.*false|Initialized.*true)"; do
+            echo "Waiting for vault to be ready..."
+            sleep 5
+          done
+          
+          # Initialize Vault if not already initialized
+          if ! vault status 2>&1 | grep "Initialized.*true"; then
+            echo "Initializing Vault..."
+            vault operator init \
+              -key-shares=5 \
+              -key-threshold=3 \
+              -format=json > /tmp/vault-init.json
+            
+            # Save keys securely (in production, use KMS or secure key management)
+            echo "WARNING: In production, save these keys securely!"
+            cat /tmp/vault-init.json
+          fi
+      restartPolicy: OnFailure
+---
+# Vault policies for UPTRMS
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vault-policies
+  namespace: vault
+data:
+  uptrms-api-policy.hcl: |
+    # Policy for UPTRMS API service
+    path "secret/data/uptrms/api/*" {
+      capabilities = ["read", "list"]
+    }
+    
+    path "secret/data/uptrms/shared/*" {
+      capabilities = ["read", "list"]
+    }
+    
+    path "database/creds/uptrms-api" {
+      capabilities = ["read"]
+    }
+    
+    path "pki/issue/uptrms-api" {
+      capabilities = ["create", "update"]
+    }
+    
+    path "transit/encrypt/uptrms" {
+      capabilities = ["update"]
+    }
+    
+    path "transit/decrypt/uptrms" {
+      capabilities = ["update"]
+    }
+    
+    path "auth/token/renew-self" {
+      capabilities = ["update"]
+    }
+  
+  uptrms-admin-policy.hcl: |
+    # Admin policy for managing secrets
+    path "secret/data/uptrms/*" {
+      capabilities = ["create", "read", "update", "delete", "list"]
+    }
+    
+    path "secret/metadata/uptrms/*" {
+      capabilities = ["list", "delete"]
+    }
+    
+    path "database/config/*" {
+      capabilities = ["create", "read", "update", "delete", "list"]
+    }
+    
+    path "database/roles/*" {
+      capabilities = ["create", "read", "update", "delete", "list"]
+    }
+    
+    path "pki/*" {
+      capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+    }
+    
+    path "transit/*" {
+      capabilities = ["create", "read", "update", "delete", "list"]
+    }
+    
+    path "sys/policies/acl/*" {
+      capabilities = ["create", "read", "update", "delete", "list"]
+    }
+  
+  database-config.hcl: |
+    # Database secret engine configuration
+    path "database/config/mssql" {
+      plugin_name = "mssql-database-plugin"
+      connection_url = "sqlserver://{{username}}:{{password}}@mssql-service.uptrms-data:1433"
+      allowed_roles = ["uptrms-api", "uptrms-readonly", "uptrms-admin"]
+      username = "vault_admin"
+      password = "VaultAdminPassword123!"
+      max_open_connections = 5
+      max_idle_connections = 0
+      max_connection_lifetime = "0s"
+    }
+---
+# Vault Agent configuration for automatic secret injection
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vault-agent-config
+  namespace: uptrms-production
+data:
+  agent.hcl: |
+    exit_after_auth = false
+    pid_file = "/tmp/vault-agent.pid"
+    
+    vault {
+      address = "https://vault.vault.svc.cluster.local:8200"
+      tls_skip_verify = true
+    }
+    
+    auto_auth {
+      method "kubernetes" {
+        mount_path = "auth/kubernetes"
+        config = {
+          role = "uptrms-api"
+        }
+      }
+      
+      sink "file" {
+        config = {
+          path = "/tmp/vault-token"
+        }
+      }
+    }
+    
+    template {
+      source      = "/vault/templates/database.tmpl"
+      destination = "/vault/secrets/database.json"
+      perms       = "0600"
+    }
+    
+    template {
+      source      = "/vault/templates/api-keys.tmpl"
+      destination = "/vault/secrets/api-keys.json"
+      perms       = "0600"
+    }
+    
+    template {
+      source      = "/vault/templates/encryption.tmpl"
+      destination = "/vault/secrets/encryption.json"
+      perms       = "0600"
+    }
