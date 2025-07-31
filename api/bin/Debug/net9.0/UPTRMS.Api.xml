@@ -104,6 +104,71 @@
             Validate content metadata quality according to platform standards
             </summary>
         </member>
+        <member name="M:UPTRMS.Api.Controllers.MarketplaceController.GetProducts(System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets marketplace products with filtering and pagination
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.MarketplaceController.GetProduct(System.Guid)">
+            <summary>
+            Gets a specific marketplace product by ID
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.MarketplaceController.PurchaseProduct(UPTRMS.Api.Controllers.PurchaseRequest)">
+            <summary>
+            Purchases a marketplace product
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.MarketplaceController.GetSellerDashboard">
+            <summary>
+            Gets seller dashboard with analytics
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.MarketplaceController.ApplyToBeSeller(UPTRMS.Api.Controllers.SellerApplicationRequest)">
+            <summary>
+            Applies to become a marketplace seller
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.UsersController.DeleteProfile(UPTRMS.Api.Controllers.DeleteProfileRequest)">
+            <summary>
+            Delete user profile (self-service)
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.UsersController.GetLicenses">
+            <summary>
+            Get user's professional licenses
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.UsersController.VerifyLicense(UPTRMS.Api.Controllers.VerifyLicenseRequest)">
+            <summary>
+            Add and verify a new license
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.UsersController.GetPreferences">
+            <summary>
+            Get user preferences
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.UsersController.UpdatePreferences(UPTRMS.Api.Controllers.UpdatePreferencesRequest)">
+            <summary>
+            Update user preferences
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.UsersController.GetNotificationSettings">
+            <summary>
+            Get notification settings
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.UsersController.UpdateNotificationSettings(UPTRMS.Api.Controllers.UpdateNotificationSettingsRequest)">
+            <summary>
+            Update notification settings
+            </summary>
+        </member>
+        <member name="M:UPTRMS.Api.Controllers.UsersController.ListUsers(System.Int32,System.Int32,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            List users with pagination (Admin only)
+            </summary>
+        </member>
         <member name="T:UPTRMS.Api.Migrations.InitialCreate">
             <inheritdoc />
         </member>
@@ -126,6 +191,30 @@
             <inheritdoc />
         </member>
         <member name="M:UPTRMS.Api.Migrations.AddAuthenticationTokenTables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:UPTRMS.Api.Migrations.AddUserProfileImageUrl">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.AddUserProfileImageUrl.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.AddUserProfileImageUrl.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.AddUserProfileImageUrl.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:UPTRMS.Api.Migrations.AddUserSoftDeleteFields">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.AddUserSoftDeleteFields.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.AddUserSoftDeleteFields.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.AddUserSoftDeleteFields.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
         <member name="T:UPTRMS.Api.Models.Domain.ParentAccess">
@@ -221,6 +310,16 @@
         <member name="T:UPTRMS.Api.Models.Domain.User">
             <summary>
             Core user entity representing therapy professionals, parents, and other system users
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Repositories.ResourceRepositoryStoredProc">
+            <summary>
+            Resource repository implementation using stored procedures
+            </summary>
+        </member>
+        <member name="T:UPTRMS.Api.Repositories.UserRepositoryStoredProc">
+            <summary>
+            User repository implementation using stored procedures
             </summary>
         </member>
     </members>

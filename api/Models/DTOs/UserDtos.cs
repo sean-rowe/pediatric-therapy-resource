@@ -29,13 +29,13 @@ public class RegisterRequest
     public List<string> Languages { get; set; } = new() { "English" };
 
     public UserRole Role { get; set; } = UserRole.Therapist;
-    
+
     // Additional fields expected by tests
     public string? ConfirmPassword { get; set; }
     public string? LicenseState { get; set; }
-    public string? LicenseType { get; set; } 
+    public string? LicenseType { get; set; }
     public string? Phone { get; set; }
-    
+
     [Required(ErrorMessage = "Terms must be accepted")]
     [Range(typeof(bool), "true", "true", ErrorMessage = "Terms must be accepted")]
     public bool AcceptedTerms { get; set; }

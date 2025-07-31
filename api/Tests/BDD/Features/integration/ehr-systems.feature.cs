@@ -141,49 +141,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 17
     testRunner.And("integration requires FHIR and HL7 support", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1336 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1299 = new TechTalk.SpecFlow.Table(new string[] {
                             "Integration Component",
                             "Protocol",
                             "Data Flow Direction",
                             "Sync Frequency",
                             "Authentication",
                             "Error Handling"});
-                table1336.AddRow(new string[] {
+                table1299.AddRow(new string[] {
                             "Patient demographics",
                             "FHIR R4",
                             "EHR → Platform",
                             "Real-time",
                             "OAuth 2.0",
                             "Retry with backoff"});
-                table1336.AddRow(new string[] {
+                table1299.AddRow(new string[] {
                             "Therapy notes",
                             "HL7 v2.7",
                             "Platform → EHR",
                             "On completion",
                             "SMART on FHIR",
                             "Queue for retry"});
-                table1336.AddRow(new string[] {
+                table1299.AddRow(new string[] {
                             "Assessment results",
                             "FHIR R4",
                             "Bidirectional",
                             "Real-time",
                             "OAuth 2.0",
                             "Validation + retry"});
-                table1336.AddRow(new string[] {
+                table1299.AddRow(new string[] {
                             "Care plans",
                             "FHIR CarePlan",
                             "Bidirectional",
                             "On change",
                             "OAuth 2.0",
                             "Conflict resolution"});
-                table1336.AddRow(new string[] {
+                table1299.AddRow(new string[] {
                             "Documents",
                             "FHIR DocumentReference",
                             "Platform → EHR",
                             "Async batch",
                             "OAuth 2.0",
                             "Chunked upload"});
-                table1336.AddRow(new string[] {
+                table1299.AddRow(new string[] {
                             "Appointments",
                             "FHIR Appointment",
                             "EHR → Platform",
@@ -191,7 +191,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Webhook + OAuth",
                             "Deduplication"});
 #line 18
-    testRunner.When("implementing Epic integration:", ((string)(null)), table1336, "When ");
+    testRunner.When("implementing Epic integration:", ((string)(null)), table1299, "When ");
 #line hidden
 #line 26
     testRunner.Then("data should sync seamlessly with Epic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -248,49 +248,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 34
     testRunner.And("integration must support Cerner\'s APIs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1337 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1300 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Type",
                             "API Method",
                             "Mapping Strategy",
                             "Validation Rules",
                             "Sync Priority",
                             "Failure Recovery"});
-                table1337.AddRow(new string[] {
+                table1300.AddRow(new string[] {
                             "Patient records",
                             "Cerner FHIR",
                             "Field-by-field mapping",
                             "Required fields check",
                             "High",
                             "Store and forward"});
-                table1337.AddRow(new string[] {
+                table1300.AddRow(new string[] {
                             "Clinical notes",
                             "Cerner API",
                             "Template conversion",
                             "Note type validation",
                             "Critical",
                             "Manual review queue"});
-                table1337.AddRow(new string[] {
+                table1300.AddRow(new string[] {
                             "Lab results",
                             "HL7 interface",
                             "Code standardization",
                             "Range validation",
                             "Medium",
                             "Alert on anomaly"});
-                table1337.AddRow(new string[] {
+                table1300.AddRow(new string[] {
                             "Medications",
                             "RxNorm mapping",
                             "Drug code translation",
                             "Interaction check",
                             "High",
                             "Pharmacist review"});
-                table1337.AddRow(new string[] {
+                table1300.AddRow(new string[] {
                             "Vital signs",
                             "Real-time feed",
                             "Unit conversion",
                             "Physiological limits",
                             "Critical",
                             "Immediate alert"});
-                table1337.AddRow(new string[] {
+                table1300.AddRow(new string[] {
                             "Therapy orders",
                             "Order entry API",
                             "Order validation",
@@ -298,7 +298,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "High",
                             "Escalation workflow"});
 #line 35
-    testRunner.When("implementing Cerner integration:", ((string)(null)), table1337, "When ");
+    testRunner.When("implementing Cerner integration:", ((string)(null)), table1300, "When ");
 #line hidden
 #line 43
     testRunner.Then("Cerner integration should be reliable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -355,49 +355,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 51
     testRunner.And("API integration must be HIPAA-compliant", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1338 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1301 = new TechTalk.SpecFlow.Table(new string[] {
                             "Integration Feature",
                             "API Endpoint",
                             "Rate Limit",
                             "Data Format",
                             "Error Handling",
                             "Monitoring"});
-                table1338.AddRow(new string[] {
+                table1301.AddRow(new string[] {
                             "Patient search",
                             "/patients",
                             "100/min",
                             "JSON",
                             "Exponential backoff",
                             "API metrics"});
-                table1338.AddRow(new string[] {
+                table1301.AddRow(new string[] {
                             "Document upload",
                             "/documents",
                             "50/min",
                             "Base64 PDF",
                             "Retry queue",
                             "Upload status"});
-                table1338.AddRow(new string[] {
+                table1301.AddRow(new string[] {
                             "Appointment sync",
                             "/appointments",
                             "200/min",
                             "JSON",
                             "Conflict detection",
                             "Sync dashboard"});
-                table1338.AddRow(new string[] {
+                table1301.AddRow(new string[] {
                             "Insurance verification",
                             "/insurance",
                             "30/min",
                             "JSON",
                             "Cache results",
                             "Verification rate"});
-                table1338.AddRow(new string[] {
+                table1301.AddRow(new string[] {
                             "Clinical summary",
                             "/ccda",
                             "20/min",
                             "XML CCDA",
                             "Schema validation",
                             "Parse errors"});
-                table1338.AddRow(new string[] {
+                table1301.AddRow(new string[] {
                             "Billing codes",
                             "/claims",
                             "50/min",
@@ -405,7 +405,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Code validation",
                             "Billing accuracy"});
 #line 52
-    testRunner.When("connecting to athenahealth:", ((string)(null)), table1338, "When ");
+    testRunner.When("connecting to athenahealth:", ((string)(null)), table1301, "When ");
 #line hidden
 #line 60
     testRunner.Then("athenahealth sync should be efficient", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -462,49 +462,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 68
     testRunner.And("integration must work across platforms", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1339 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1302 = new TechTalk.SpecFlow.Table(new string[] {
                             "Platform",
                             "Connection Type",
                             "Supported Features",
                             "Authentication",
                             "Limitations",
                             "Workarounds"});
-                table1339.AddRow(new string[] {
+                table1302.AddRow(new string[] {
                             "Sunrise",
                             "FHIR API",
                             "Full clinical data",
                             "OAuth + SAML",
                             "Rate limiting",
                             "Request batching"});
-                table1339.AddRow(new string[] {
+                table1302.AddRow(new string[] {
                             "TouchWorks",
                             "Unity API",
                             "Documents, orders",
                             "Token-based",
                             "Async only",
                             "Polling mechanism"});
-                table1339.AddRow(new string[] {
+                table1302.AddRow(new string[] {
                             "FollowMyHealth",
                             "Patient API",
                             "Patient portal data",
                             "OAuth 2.0",
                             "Read-only",
                             "One-way sync"});
-                table1339.AddRow(new string[] {
+                table1302.AddRow(new string[] {
                             "Veradigm",
                             "REST API",
                             "Practice management",
                             "API key",
                             "Limited fields",
                             "Field mapping"});
-                table1339.AddRow(new string[] {
+                table1302.AddRow(new string[] {
                             "Care Coordination",
                             "HL7 messaging",
                             "Referrals, reports",
                             "Certificate",
                             "Batch processing",
                             "Queue management"});
-                table1339.AddRow(new string[] {
+                table1302.AddRow(new string[] {
                             "Payer Platform",
                             "EDI interface",
                             "Claims, eligibility",
@@ -512,7 +512,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Daily batches",
                             "Incremental sync"});
 #line 69
-    testRunner.When("implementing Allscripts integration:", ((string)(null)), table1339, "When ");
+    testRunner.When("implementing Allscripts integration:", ((string)(null)), table1302, "When ");
 #line hidden
 #line 77
     testRunner.Then("all Allscripts platforms should be supported", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -569,49 +569,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 86
     testRunner.And("integration needs practice-specific features", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1340 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1303 = new TechTalk.SpecFlow.Table(new string[] {
                             "Specialty Type",
                             "Custom Fields",
                             "Workflow Integration",
                             "Templates",
                             "Reporting",
                             "Compliance"});
-                table1340.AddRow(new string[] {
+                table1303.AddRow(new string[] {
                             "Pediatric therapy",
                             "Growth charts, milestones",
                             "Therapy scheduling",
                             "Pediatric forms",
                             "Outcome tracking",
                             "COPPA compliance"});
-                table1340.AddRow(new string[] {
+                table1303.AddRow(new string[] {
                             "Rehabilitation",
                             "Functional assessments",
                             "Treatment plans",
                             "Rehab protocols",
                             "Progress reports",
                             "Medicare compliance"});
-                table1340.AddRow(new string[] {
+                table1303.AddRow(new string[] {
                             "Mental health",
                             "Behavioral assessments",
                             "Session notes",
                             "Therapy templates",
                             "Outcome measures",
                             "42 CFR Part 2"});
-                table1340.AddRow(new string[] {
+                table1303.AddRow(new string[] {
                             "Speech therapy",
                             "Communication profiles",
                             "Session planning",
                             "Speech templates",
                             "Progress tracking",
                             "School reporting"});
-                table1340.AddRow(new string[] {
+                table1303.AddRow(new string[] {
                             "Occupational therapy",
                             "ADL assessments",
                             "Goal tracking",
                             "OT templates",
                             "Functional reports",
                             "Insurance forms"});
-                table1340.AddRow(new string[] {
+                table1303.AddRow(new string[] {
                             "Physical therapy",
                             "Movement analysis",
                             "Exercise programs",
@@ -619,7 +619,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "ROM tracking",
                             "Workers comp"});
 #line 87
-    testRunner.When("configuring NextGen integration:", ((string)(null)), table1340, "When ");
+    testRunner.When("configuring NextGen integration:", ((string)(null)), table1303, "When ");
 #line hidden
 #line 95
     testRunner.Then("specialty workflows should be supported", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -676,49 +676,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 103
     testRunner.And("integration must be web-service based", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1341 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1304 = new TechTalk.SpecFlow.Table(new string[] {
                             "API Feature",
                             "Implementation",
                             "Security",
                             "Performance",
                             "Reliability",
                             "Scalability"});
-                table1341.AddRow(new string[] {
+                table1304.AddRow(new string[] {
                             "RESTful API",
                             "JSON over HTTPS",
                             "TLS 1.3",
                             "<200ms latency",
                             "99.9% uptime",
                             "Horizontal scaling"});
-                table1341.AddRow(new string[] {
+                table1304.AddRow(new string[] {
                             "Webhook events",
                             "Event-driven sync",
                             "HMAC signatures",
                             "Async processing",
                             "At-least-once",
                             "Queue-based"});
-                table1341.AddRow(new string[] {
+                table1304.AddRow(new string[] {
                             "Bulk operations",
                             "Batch API calls",
                             "Rate limiting",
                             "Parallel processing",
                             "Retry logic",
                             "Chunked requests"});
-                table1341.AddRow(new string[] {
+                table1304.AddRow(new string[] {
                             "Real-time sync",
                             "WebSocket connection",
                             "JWT auth",
                             "<100ms updates",
                             "Auto-reconnect",
                             "Load balanced"});
-                table1341.AddRow(new string[] {
+                table1304.AddRow(new string[] {
                             "Data export",
                             "Scheduled jobs",
                             "Encrypted transfer",
                             "Off-peak hours",
                             "Checkpointing",
                             "Incremental"});
-                table1341.AddRow(new string[] {
+                table1304.AddRow(new string[] {
                             "API versioning",
                             "Version headers",
                             "Backward compatible",
@@ -726,7 +726,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Version alerts",
                             "Smooth migration"});
 #line 104
-    testRunner.When("implementing Practice Fusion integration:", ((string)(null)), table1341, "When ");
+    testRunner.When("implementing Practice Fusion integration:", ((string)(null)), table1304, "When ");
 #line hidden
 #line 112
     testRunner.Then("cloud integration should be robust", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -783,49 +783,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 120
     testRunner.And("integration must support mental health workflows", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1342 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1305 = new TechTalk.SpecFlow.Table(new string[] {
                             "Workflow Component",
                             "Integration Method",
                             "Privacy Requirements",
                             "Clinical Features",
                             "Billing Support",
                             "Compliance"});
-                table1342.AddRow(new string[] {
+                table1305.AddRow(new string[] {
                             "Intake forms",
                             "API submission",
                             "Consent tracking",
                             "Mental health screening",
                             "Insurance verification",
                             "HIPAA + 42 CFR"});
-                table1342.AddRow(new string[] {
+                table1305.AddRow(new string[] {
                             "Treatment plans",
                             "Bidirectional sync",
                             "Access controls",
                             "Goal management",
                             "Prior authorization",
                             "State regulations"});
-                table1342.AddRow(new string[] {
+                table1305.AddRow(new string[] {
                             "Progress notes",
                             "Template sync",
                             "Encryption required",
                             "Session documentation",
                             "CPT coding",
                             "Audit trails"});
-                table1342.AddRow(new string[] {
+                table1305.AddRow(new string[] {
                             "Outcome measures",
                             "Score calculation",
                             "De-identification",
                             "Validated instruments",
                             "Value-based care",
                             "Quality reporting"});
-                table1342.AddRow(new string[] {
+                table1305.AddRow(new string[] {
                             "Medication management",
                             "e-Prescribing",
                             "DEA compliance",
                             "Drug interaction",
                             "Formulary check",
                             "EPCS certified"});
-                table1342.AddRow(new string[] {
+                table1305.AddRow(new string[] {
                             "Crisis documentation",
                             "Priority sync",
                             "Emergency access",
@@ -833,7 +833,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Crisis billing",
                             "Mandatory reporting"});
 #line 121
-    testRunner.When("connecting to Greenway:", ((string)(null)), table1342, "When ");
+    testRunner.When("connecting to Greenway:", ((string)(null)), table1305, "When ");
 #line hidden
 #line 129
     testRunner.Then("behavioral health features should work", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -890,49 +890,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 138
     testRunner.And("standardization ensures interoperability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1343 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1306 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Element",
                             "Source Formats",
                             "Target Standard",
                             "Mapping Method",
                             "Validation",
                             "Updates"});
-                table1343.AddRow(new string[] {
+                table1306.AddRow(new string[] {
                             "Diagnoses",
                             "ICD-9, ICD-10, custom",
                             "ICD-10-CM",
                             "Crosswalk tables",
                             "Code validity",
                             "Quarterly"});
-                table1343.AddRow(new string[] {
+                table1306.AddRow(new string[] {
                             "Procedures",
                             "CPT, HCPCS, custom",
                             "CPT + HCPCS",
                             "Direct mapping",
                             "Modifier check",
                             "Annual"});
-                table1343.AddRow(new string[] {
+                table1306.AddRow(new string[] {
                             "Medications",
                             "NDC, RxNorm, proprietary",
                             "RxNorm",
                             "API lookup",
                             "Drug database",
                             "Monthly"});
-                table1343.AddRow(new string[] {
+                table1306.AddRow(new string[] {
                             "Lab results",
                             "LOINC, custom codes",
                             "LOINC",
                             "Mapping service",
                             "Unit conversion",
                             "Bi-annual"});
-                table1343.AddRow(new string[] {
+                table1306.AddRow(new string[] {
                             "Clinical observations",
                             "Various",
                             "SNOMED CT",
                             "Concept mapping",
                             "Clinical review",
                             "Continuous"});
-                table1343.AddRow(new string[] {
+                table1306.AddRow(new string[] {
                             "Document types",
                             "Proprietary",
                             "LOINC doc types",
@@ -940,7 +940,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Type validation",
                             "As needed"});
 #line 139
-    testRunner.When("implementing data standardization:", ((string)(null)), table1343, "When ");
+    testRunner.When("implementing data standardization:", ((string)(null)), table1306, "When ");
 #line hidden
 #line 147
     testRunner.Then("data should be standardized consistently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -997,49 +997,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 155
     testRunner.And("interface engine ensures reliable delivery", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1344 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1307 = new TechTalk.SpecFlow.Table(new string[] {
                             "Message Type",
                             "Source System",
                             "Destination",
                             "Transformation",
                             "Error Handling",
                             "Monitoring"});
-                table1344.AddRow(new string[] {
+                table1307.AddRow(new string[] {
                             "ADT (Admit/Discharge)",
                             "Hospital EHR",
                             "Platform",
                             "Parse and map",
                             "Dead letter queue",
                             "Message counts"});
-                table1344.AddRow(new string[] {
+                table1307.AddRow(new string[] {
                             "ORM (Orders)",
                             "CPOE system",
                             "Therapy system",
                             "Translate codes",
                             "Manual review",
                             "Order tracking"});
-                table1344.AddRow(new string[] {
+                table1307.AddRow(new string[] {
                             "ORU (Results)",
                             "Lab system",
                             "Clinical app",
                             "Unit conversion",
                             "Alert on critical",
                             "Result delivery"});
-                table1344.AddRow(new string[] {
+                table1307.AddRow(new string[] {
                             "MDM (Documents)",
                             "Transcription",
                             "Document store",
                             "Format conversion",
                             "Retry logic",
                             "Document flow"});
-                table1344.AddRow(new string[] {
+                table1307.AddRow(new string[] {
                             "SIU (Scheduling)",
                             "Scheduling system",
                             "Calendar sync",
                             "Time zone handling",
                             "Conflict resolution",
                             "Appointment sync"});
-                table1344.AddRow(new string[] {
+                table1307.AddRow(new string[] {
                             "DFT (Financial)",
                             "Billing system",
                             "Claims processor",
@@ -1047,7 +1047,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Rejection handling",
                             "Billing accuracy"});
 #line 156
-    testRunner.When("configuring HL7 interface engine:", ((string)(null)), table1344, "When ");
+    testRunner.When("configuring HL7 interface engine:", ((string)(null)), table1307, "When ");
 #line hidden
 #line 164
     testRunner.Then("HL7 messages should route correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1104,49 +1104,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 173
     testRunner.And("security must exceed HIPAA requirements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1345 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1308 = new TechTalk.SpecFlow.Table(new string[] {
                             "Security Layer",
                             "Implementation",
                             "Strength",
                             "Key Management",
                             "Audit",
                             "Compliance"});
-                table1345.AddRow(new string[] {
+                table1308.AddRow(new string[] {
                             "Transport encryption",
                             "TLS 1.3",
                             "AES-256-GCM",
                             "HSM-based",
                             "All connections",
                             "FIPS 140-2"});
-                table1345.AddRow(new string[] {
+                table1308.AddRow(new string[] {
                             "Message encryption",
                             "S/MIME",
                             "RSA-4096",
                             "Key rotation",
                             "Encryption events",
                             "HIPAA compliant"});
-                table1345.AddRow(new string[] {
+                table1308.AddRow(new string[] {
                             "Authentication",
                             "OAuth 2.0 + SMART",
                             "Multi-factor",
                             "Token management",
                             "Auth attempts",
                             "NIST 800-63"});
-                table1345.AddRow(new string[] {
+                table1308.AddRow(new string[] {
                             "Authorization",
                             "RBAC + ABAC",
                             "Granular permissions",
                             "Policy engine",
                             "Access logs",
                             "Least privilege"});
-                table1345.AddRow(new string[] {
+                table1308.AddRow(new string[] {
                             "Data masking",
                             "Field-level",
                             "Configurable",
                             "Role-based",
                             "Masking events",
                             "PHI protection"});
-                table1345.AddRow(new string[] {
+                table1308.AddRow(new string[] {
                             "Audit logging",
                             "Immutable logs",
                             "Tamper-proof",
@@ -1154,7 +1154,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "All PHI access",
                             "7-year retention"});
 #line 174
-    testRunner.When("implementing security measures:", ((string)(null)), table1345, "When ");
+    testRunner.When("implementing security measures:", ((string)(null)), table1308, "When ");
 #line hidden
 #line 182
     testRunner.Then("PHI should be fully protected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1211,49 +1211,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 190
     testRunner.And("failures must not impact patient care", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1346 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1309 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failure Type",
                             "Detection Method",
                             "Fallback Strategy",
                             "Recovery Process",
                             "User Notification",
                             "Documentation"});
-                table1346.AddRow(new string[] {
+                table1309.AddRow(new string[] {
                             "Connection timeout",
                             "Socket timeout",
                             "Local queue storage",
                             "Auto-retry with backoff",
                             "Status indicator",
                             "Error logs"});
-                table1346.AddRow(new string[] {
+                table1309.AddRow(new string[] {
                             "Authentication failure",
                             "401/403 errors",
                             "Cached credentials",
                             "Token refresh",
                             "Admin alert",
                             "Auth logs"});
-                table1346.AddRow(new string[] {
+                table1309.AddRow(new string[] {
                             "Data validation error",
                             "Schema validation",
                             "Manual review queue",
                             "Data correction UI",
                             "Validation report",
                             "Error details"});
-                table1346.AddRow(new string[] {
+                table1309.AddRow(new string[] {
                             "Rate limit exceeded",
                             "429 responses",
                             "Request throttling",
                             "Adaptive rate control",
                             "Delayed sync notice",
                             "Rate metrics"});
-                table1346.AddRow(new string[] {
+                table1309.AddRow(new string[] {
                             "System maintenance",
                             "Maintenance API",
                             "Scheduled pause",
                             "Queue until available",
                             "Advance notice",
                             "Maintenance log"});
-                table1346.AddRow(new string[] {
+                table1309.AddRow(new string[] {
                             "Data conflict",
                             "Version mismatch",
                             "Conflict resolution UI",
@@ -1261,7 +1261,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "User decision required",
                             "Conflict report"});
 #line 191
-    testRunner.When("implementing error handling:", ((string)(null)), table1346, "When ");
+    testRunner.When("implementing error handling:", ((string)(null)), table1309, "When ");
 #line hidden
 #line 199
     testRunner.Then("failures should be handled gracefully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1318,49 +1318,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 208
     testRunner.And("optimization ensures system responsiveness", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1347 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1310 = new TechTalk.SpecFlow.Table(new string[] {
                             "Operation Type",
                             "Batch Size",
                             "Processing Strategy",
                             "Performance Target",
                             "Resource Usage",
                             "Monitoring"});
-                table1347.AddRow(new string[] {
+                table1310.AddRow(new string[] {
                             "Patient import",
                             "1000 records",
                             "Parallel processing",
                             "100 records/second",
                             "4 CPU, 8GB RAM",
                             "Progress tracking"});
-                table1347.AddRow(new string[] {
+                table1310.AddRow(new string[] {
                             "Document upload",
                             "100 documents",
                             "Async queue",
                             "10 documents/second",
                             "2 CPU, 4GB RAM",
                             "Upload status"});
-                table1347.AddRow(new string[] {
+                table1310.AddRow(new string[] {
                             "Result sync",
                             "5000 results",
                             "Streaming processing",
                             "500 results/second",
                             "8 CPU, 16GB RAM",
                             "Sync metrics"});
-                table1347.AddRow(new string[] {
+                table1310.AddRow(new string[] {
                             "Appointment sync",
                             "500 appointments",
                             "Incremental sync",
                             "50 appointments/second",
                             "1 CPU, 2GB RAM",
                             "Sync lag"});
-                table1347.AddRow(new string[] {
+                table1310.AddRow(new string[] {
                             "Report generation",
                             "50 reports",
                             "Priority queue",
                             "5 reports/minute",
                             "4 CPU, 8GB RAM",
                             "Queue depth"});
-                table1347.AddRow(new string[] {
+                table1310.AddRow(new string[] {
                             "Data export",
                             "10000 records",
                             "Paginated export",
@@ -1368,7 +1368,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "2 CPU, 4GB RAM",
                             "Export progress"});
 #line 209
-    testRunner.When("implementing bulk operations:", ((string)(null)), table1347, "When ");
+    testRunner.When("implementing bulk operations:", ((string)(null)), table1310, "When ");
 #line hidden
 #line 217
     testRunner.Then("bulk operations should be efficient", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1425,49 +1425,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 225
     testRunner.And("tests must cover all scenarios", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1348 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1311 = new TechTalk.SpecFlow.Table(new string[] {
                             "Test Category",
                             "Test Approach",
                             "Test Data",
                             "Validation",
                             "Automation",
                             "Frequency"});
-                table1348.AddRow(new string[] {
+                table1311.AddRow(new string[] {
                             "Connectivity",
                             "End-to-end tests",
                             "Synthetic patients",
                             "Connection success",
                             "CI/CD pipeline",
                             "Every commit"});
-                table1348.AddRow(new string[] {
+                table1311.AddRow(new string[] {
                             "Data accuracy",
                             "Field validation",
                             "Known values",
                             "Exact match",
                             "Automated suite",
                             "Daily"});
-                table1348.AddRow(new string[] {
+                table1311.AddRow(new string[] {
                             "Performance",
                             "Load testing",
                             "Bulk datasets",
                             "Response times",
                             "JMeter scripts",
                             "Weekly"});
-                table1348.AddRow(new string[] {
+                table1311.AddRow(new string[] {
                             "Error scenarios",
                             "Fault injection",
                             "Invalid data",
                             "Error handling",
                             "Chaos testing",
                             "Monthly"});
-                table1348.AddRow(new string[] {
+                table1311.AddRow(new string[] {
                             "Security",
                             "Penetration testing",
                             "Attack vectors",
                             "No vulnerabilities",
                             "Security scanner",
                             "Quarterly"});
-                table1348.AddRow(new string[] {
+                table1311.AddRow(new string[] {
                             "Compliance",
                             "Audit simulation",
                             "PHI samples",
@@ -1475,7 +1475,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Compliance tools",
                             "Semi-annual"});
 #line 226
-    testRunner.When("implementing integration tests:", ((string)(null)), table1348, "When ");
+    testRunner.When("implementing integration tests:", ((string)(null)), table1311, "When ");
 #line hidden
 #line 234
     testRunner.Then("integration should be thoroughly tested", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1532,49 +1532,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 242
     testRunner.And("version management ensures compatibility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1349 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1312 = new TechTalk.SpecFlow.Table(new string[] {
                             "EHR System",
                             "Current Version",
                             "Deprecation Notice",
                             "Migration Strategy",
                             "Compatibility Period",
                             "Fallback Plan"});
-                table1349.AddRow(new string[] {
+                table1312.AddRow(new string[] {
                             "Epic",
                             "FHIR R4",
                             "6 months",
                             "Gradual migration",
                             "12 months overlap",
                             "R3 support maintained"});
-                table1349.AddRow(new string[] {
+                table1312.AddRow(new string[] {
                             "Cerner",
                             "Millennium 2022",
                             "12 months",
                             "Feature parity first",
                             "18 months",
                             "Previous version cache"});
-                table1349.AddRow(new string[] {
+                table1312.AddRow(new string[] {
                             "Athena",
                             "v2.0",
                             "3 months",
                             "API abstraction layer",
                             "6 months",
                             "Version detection"});
-                table1349.AddRow(new string[] {
+                table1312.AddRow(new string[] {
                             "Allscripts",
                             "Unity 19",
                             "9 months",
                             "Parallel support",
                             "12 months",
                             "Multi-version routing"});
-                table1349.AddRow(new string[] {
+                table1312.AddRow(new string[] {
                             "NextGen",
                             "API v5",
                             "6 months",
                             "Client migration",
                             "9 months",
                             "Legacy endpoints"});
-                table1349.AddRow(new string[] {
+                table1312.AddRow(new string[] {
                             "Practice Fusion",
                             "REST v3",
                             "4 months",
@@ -1582,7 +1582,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "6 months",
                             "Version negotiation"});
 #line 243
-    testRunner.When("handling API versions:", ((string)(null)), table1349, "When ");
+    testRunner.When("handling API versions:", ((string)(null)), table1312, "When ");
 #line hidden
 #line 251
     testRunner.Then("version changes should be managed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1639,49 +1639,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 259
     testRunner.And("observability enables quick troubleshooting", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1350 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1313 = new TechTalk.SpecFlow.Table(new string[] {
                             "Metric Type",
                             "Collection Method",
                             "Alert Threshold",
                             "Dashboard Display",
                             "Analysis Tool",
                             "Retention"});
-                table1350.AddRow(new string[] {
+                table1313.AddRow(new string[] {
                             "API latency",
                             "Response time tracking",
                             ">500ms p95",
                             "Real-time graph",
                             "APM tool",
                             "30 days"});
-                table1350.AddRow(new string[] {
+                table1313.AddRow(new string[] {
                             "Error rate",
                             "Error counting",
                             ">1% errors",
                             "Error heatmap",
                             "Log analysis",
                             "90 days"});
-                table1350.AddRow(new string[] {
+                table1313.AddRow(new string[] {
                             "Data sync lag",
                             "Timestamp comparison",
                             ">5 minutes",
                             "Lag indicator",
                             "Sync monitor",
                             "7 days"});
-                table1350.AddRow(new string[] {
+                table1313.AddRow(new string[] {
                             "Queue depth",
                             "Queue monitoring",
                             ">1000 messages",
                             "Queue chart",
                             "Queue metrics",
                             "24 hours"});
-                table1350.AddRow(new string[] {
+                table1313.AddRow(new string[] {
                             "Success rate",
                             "Transaction tracking",
                             "<99% success",
                             "Success gauge",
                             "Transaction log",
                             "30 days"});
-                table1350.AddRow(new string[] {
+                table1313.AddRow(new string[] {
                             "System health",
                             "Health checks",
                             "Any failure",
@@ -1689,7 +1689,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Health monitor",
                             "Real-time"});
 #line 260
-    testRunner.When("implementing monitoring:", ((string)(null)), table1350, "When ");
+    testRunner.When("implementing monitoring:", ((string)(null)), table1313, "When ");
 #line hidden
 #line 268
     testRunner.Then("monitoring should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1746,49 +1746,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 276
     testRunner.And("continuity planning ensures availability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1351 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1314 = new TechTalk.SpecFlow.Table(new string[] {
                             "Disaster Scenario",
                             "Detection Time",
                             "Failover Strategy",
                             "Data Recovery",
                             "Communication Plan",
                             "Test Frequency"});
-                table1351.AddRow(new string[] {
+                table1314.AddRow(new string[] {
                             "EHR system down",
                             "<1 minute",
                             "Queue messages locally",
                             "No data loss",
                             "Status page update",
                             "Monthly"});
-                table1351.AddRow(new string[] {
+                table1314.AddRow(new string[] {
                             "Network partition",
                             "<30 seconds",
                             "Alternative routing",
                             "Store and forward",
                             "Email notification",
                             "Quarterly"});
-                table1351.AddRow(new string[] {
+                table1314.AddRow(new string[] {
                             "Data center failure",
                             "<5 minutes",
                             "Cross-region failover",
                             "Point-in-time recovery",
                             "Customer notice",
                             "Semi-annual"});
-                table1351.AddRow(new string[] {
+                table1314.AddRow(new string[] {
                             "Cyber attack",
                             "<10 minutes",
                             "Isolation mode",
                             "Clean backup restore",
                             "Security alert",
                             "Annual"});
-                table1351.AddRow(new string[] {
+                table1314.AddRow(new string[] {
                             "Natural disaster",
                             "Immediate",
                             "Full DR activation",
                             "RPO: 1 hour",
                             "Emergency contacts",
                             "Annual"});
-                table1351.AddRow(new string[] {
+                table1314.AddRow(new string[] {
                             "Pandemic disruption",
                             "N/A",
                             "Remote operations",
@@ -1796,7 +1796,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Staff communication",
                             "Tabletop only"});
 #line 277
-    testRunner.When("implementing disaster recovery:", ((string)(null)), table1351, "When ");
+    testRunner.When("implementing disaster recovery:", ((string)(null)), table1314, "When ");
 #line hidden
 #line 285
     testRunner.Then("continuity should be maintained", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1853,49 +1853,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 293
     testRunner.And("preparation ensures future compatibility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1352 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1315 = new TechTalk.SpecFlow.Table(new string[] {
                             "Standard",
                             "Timeline",
                             "Preparation Strategy",
                             "Investment Required",
                             "Expected Benefits",
                             "Risk Mitigation"});
-                table1352.AddRow(new string[] {
+                table1315.AddRow(new string[] {
                             "FHIR R5",
                             "2 years",
                             "Early adoption program",
                             "Development resources",
                             "Better data model",
                             "R4 compatibility"});
-                table1352.AddRow(new string[] {
+                table1315.AddRow(new string[] {
                             "USCDI v3",
                             "1 year",
                             "Data element mapping",
                             "Minimal changes",
                             "Regulatory compliance",
                             "Gradual adoption"});
-                table1352.AddRow(new string[] {
+                table1315.AddRow(new string[] {
                             "SMART v2",
                             "18 months",
                             "Authentication upgrade",
                             "Security review",
                             "Enhanced security",
                             "Dual support"});
-                table1352.AddRow(new string[] {
+                table1315.AddRow(new string[] {
                             "Bulk FHIR",
                             "6 months",
                             "Infrastructure prep",
                             "API development",
                             "Population health",
                             "Pilot program"});
-                table1352.AddRow(new string[] {
+                table1315.AddRow(new string[] {
                             "CDS Hooks 2.0",
                             "1 year",
                             "Decision support prep",
                             "Clinical input",
                             "Smarter alerts",
                             "Careful rollout"});
-                table1352.AddRow(new string[] {
+                table1315.AddRow(new string[] {
                             "Da Vinci",
                             "2 years",
                             "Payer integration",
@@ -1903,7 +1903,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Value-based care",
                             "Selective adoption"});
 #line 294
-    testRunner.When("planning for future standards:", ((string)(null)), table1352, "When ");
+    testRunner.When("planning for future standards:", ((string)(null)), table1315, "When ");
 #line hidden
 #line 302
     testRunner.Then("future standards should be anticipated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1960,49 +1960,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 310
     testRunner.And("analytics drive clinical improvements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1353 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1316 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Type",
                             "Data Sources",
                             "Processing Method",
                             "Output Format",
                             "Update Frequency",
                             "Privacy Method"});
-                table1353.AddRow(new string[] {
+                table1316.AddRow(new string[] {
                             "Quality measures",
                             "All EHRs",
                             "Batch aggregation",
                             "QRDA format",
                             "Monthly",
                             "De-identification"});
-                table1353.AddRow(new string[] {
+                table1316.AddRow(new string[] {
                             "Risk stratification",
                             "Clinical + claims",
                             "ML models",
                             "Risk scores",
                             "Weekly",
                             "Aggregation only"});
-                table1353.AddRow(new string[] {
+                table1316.AddRow(new string[] {
                             "Care gaps",
                             "EHR + guidelines",
                             "Rule engine",
                             "Gap reports",
                             "Daily",
                             "Role-based access"});
-                table1353.AddRow(new string[] {
+                table1316.AddRow(new string[] {
                             "Outcome tracking",
                             "Longitudinal data",
                             "Statistical analysis",
                             "Dashboards",
                             "Real-time",
                             "Cohort analysis"});
-                table1353.AddRow(new string[] {
+                table1316.AddRow(new string[] {
                             "Cost analysis",
                             "Clinical + financial",
                             "ETL pipeline",
                             "Cost reports",
                             "Monthly",
                             "Anonymization"});
-                table1353.AddRow(new string[] {
+                table1316.AddRow(new string[] {
                             "Predictive analytics",
                             "Historical data",
                             "AI/ML models",
@@ -2010,7 +2010,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Daily updates",
                             "Differential privacy"});
 #line 311
-    testRunner.When("implementing analytics integration:", ((string)(null)), table1353, "When ");
+    testRunner.When("implementing analytics integration:", ((string)(null)), table1316, "When ");
 #line hidden
 #line 319
     testRunner.Then("analytics should provide insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -2067,49 +2067,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 327
     testRunner.And("integration creates ecosystem value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1354 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1317 = new TechTalk.SpecFlow.Table(new string[] {
                             "Stakeholder Type",
                             "Integration Depth",
                             "Value Exchange",
                             "Technical Approach",
                             "Business Model",
                             "Success Metrics"});
-                table1354.AddRow(new string[] {
+                table1317.AddRow(new string[] {
                             "Hospitals",
                             "Deep clinical",
                             "Therapy outcomes",
                             "FHIR + HL7",
                             "Subscription",
                             "Patient outcomes"});
-                table1354.AddRow(new string[] {
+                table1317.AddRow(new string[] {
                             "Clinics",
                             "Workflow integration",
                             "Efficiency gains",
                             "API + webhooks",
                             "Per-provider",
                             "Time savings"});
-                table1354.AddRow(new string[] {
+                table1317.AddRow(new string[] {
                             "Payers",
                             "Claims + quality",
                             "Cost reduction",
                             "EDI + APIs",
                             "Value-based",
                             "Cost per patient"});
-                table1354.AddRow(new string[] {
+                table1317.AddRow(new string[] {
                             "Pharmacies",
                             "Medication therapy",
                             "Adherence data",
                             "e-Prescribing",
                             "Transaction fee",
                             "Medication compliance"});
-                table1354.AddRow(new string[] {
+                table1317.AddRow(new string[] {
                             "Labs",
                             "Result integration",
                             "Faster treatment",
                             "HL7 ORU",
                             "Per-result",
                             "Turnaround time"});
-                table1354.AddRow(new string[] {
+                table1317.AddRow(new string[] {
                             "Patients",
                             "Portal access",
                             "Engagement",
@@ -2117,7 +2117,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Freemium",
                             "Active users"});
 #line 328
-    testRunner.When("building ecosystem integration:", ((string)(null)), table1354, "When ");
+    testRunner.When("building ecosystem integration:", ((string)(null)), table1317, "When ");
 #line hidden
 #line 336
     testRunner.Then("ecosystem should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

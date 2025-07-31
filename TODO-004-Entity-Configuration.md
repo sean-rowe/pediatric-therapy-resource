@@ -1,0 +1,203 @@
+# TODO-004: Entity Framework Configuration
+
+These tasks configure Entity Framework relationships, indexes, and constraints.
+
+## ApplicationDbContext Updates
+
+- [ ] Open Data/ApplicationDbContext.cs file
+- [ ] Add DbSet<Resource> property named Resources
+- [ ] Add DbSet<Student> property named Students
+- [ ] Add DbSet<SellerProfile> property named SellerProfiles
+- [ ] Add DbSet<Session> property named Sessions
+- [ ] Add DbSet<Organization> property named Organizations
+- [ ] Add DbSet<Subscription> property named Subscriptions
+- [ ] Add DbSet<IEPGoal> property named IEPGoals
+- [ ] Add DbSet<ResourceCategory> property named ResourceCategories
+- [ ] Add DbSet<ResourceRating> property named ResourceRatings
+- [ ] Add DbSet<SessionResource> property named SessionResources
+- [ ] Add DbSet<GoalResource> property named GoalResources
+- [ ] Add DbSet<SessionGoal> property named SessionGoals
+- [ ] Add DbSet<OrganizationUser> property named OrganizationUsers
+- [ ] Add DbSet<MarketplaceProduct> property named MarketplaceProducts
+- [ ] Add DbSet<MarketplaceTransaction> property named MarketplaceTransactions
+- [ ] Add DbSet<ProgressData> property named ProgressData
+- [ ] Add DbSet<CommunicationLog> property named CommunicationLogs
+
+## Resource Entity Configuration
+
+- [ ] Create EntityConfigurations folder in Data folder
+- [ ] Create ResourceConfiguration.cs file in EntityConfigurations folder
+- [ ] Add using statements for Microsoft.EntityFrameworkCore
+- [ ] Add using statements for Microsoft.EntityFrameworkCore.Metadata.Builders
+- [ ] Add namespace UPTRMS.Api.Data.EntityConfigurations
+- [ ] Create class ResourceConfiguration implementing IEntityTypeConfiguration<Resource>
+- [ ] Implement Configure method
+- [ ] Call ToTable("Resources") on builder
+- [ ] Configure Id as primary key using HasKey
+- [ ] Configure Title as required with HasMaxLength(500)
+- [ ] Add index on Title using HasIndex
+- [ ] Configure Description with HasMaxLength(2000)
+- [ ] Configure ResourceType as required with HasMaxLength(50)
+- [ ] Add index on ResourceType
+- [ ] Configure SkillAreas as required
+- [ ] Configure GradeLevels as required
+- [ ] Configure FileUrl with HasMaxLength(1000)
+- [ ] Configure ThumbnailUrl with HasMaxLength(1000)
+- [ ] Configure FileType with HasMaxLength(50)
+- [ ] Configure IsActive with default value true
+- [ ] Configure CreatedAt with default value sql function GETUTCDATE()
+- [ ] Configure UpdatedAt with default value sql function GETUTCDATE()
+- [ ] Configure IsDeleted with default value false
+- [ ] Add filtered index on IsDeleted = false
+- [ ] Configure GenerationMethod with HasMaxLength(50)
+- [ ] Configure ClinicalReviewStatus with HasMaxLength(50)
+- [ ] Add index on ClinicalReviewStatus
+- [ ] Configure EvidenceLevel with range check constraint
+- [ ] Configure ViewCount with default value 0
+- [ ] Configure DownloadCount with default value 0
+- [ ] Configure TotalRatings with default value 0
+- [ ] Configure relationship with User for Creator
+- [ ] Set delete behavior to Restrict for Creator relationship
+- [ ] Configure relationship with User for Updater
+- [ ] Set delete behavior to Restrict for Updater relationship
+- [ ] Configure relationship with User for Reviewer
+- [ ] Set delete behavior to Restrict for Reviewer relationship
+- [ ] Add composite index on (ResourceType, IsActive, IsDeleted)
+- [ ] Add composite index on (CreatedBy, IsDeleted)
+- [ ] Add index on UpdatedAt for sorting
+- [ ] Add index on AverageRating for filtering
+- [ ] Add index on DownloadCount for popularity sorting
+
+## Student Entity Configuration
+
+- [ ] Create StudentConfiguration.cs file in EntityConfigurations folder
+- [ ] Add using statements for Microsoft.EntityFrameworkCore
+- [ ] Add using statements for Microsoft.EntityFrameworkCore.Metadata.Builders
+- [ ] Add namespace UPTRMS.Api.Data.EntityConfigurations
+- [ ] Create class StudentConfiguration implementing IEntityTypeConfiguration<Student>
+- [ ] Implement Configure method
+- [ ] Call ToTable("Students") on builder
+- [ ] Configure Id as primary key using HasKey
+- [ ] Configure FirstName as required with HasMaxLength(100)
+- [ ] Configure LastName as required with HasMaxLength(100)
+- [ ] Add composite index on (LastName, FirstName)
+- [ ] Configure DateOfBirth as required
+- [ ] Configure Grade with HasMaxLength(20)
+- [ ] Configure SchoolName with HasMaxLength(200)
+- [ ] Configure ParentEmail with HasMaxLength(255)
+- [ ] Configure ParentPhone with HasMaxLength(20)
+- [ ] Configure AccessCode as required with HasMaxLength(10)
+- [ ] Add unique index on AccessCode
+- [ ] Configure TherapistId as required
+- [ ] Add index on TherapistId
+- [ ] Configure DisabilityCategory with HasMaxLength(100)
+- [ ] Configure ServiceType with HasMaxLength(50)
+- [ ] Add index on ServiceType
+- [ ] Configure ServiceFrequency with HasMaxLength(100)
+- [ ] Configure IsActive with default value true
+- [ ] Configure CreatedAt with default value sql function GETUTCDATE()
+- [ ] Configure UpdatedAt with default value sql function GETUTCDATE()
+- [ ] Configure ProfileImageUrl with HasMaxLength(1000)
+- [ ] Configure PreferredLanguage with HasMaxLength(10)
+- [ ] Configure EmergencyContact with HasMaxLength(200)
+- [ ] Configure EmergencyPhone with HasMaxLength(20)
+- [ ] Configure relationship with User for Therapist
+- [ ] Set delete behavior to Restrict for Therapist relationship
+- [ ] Configure relationship with Organization
+- [ ] Set delete behavior to SetNull for Organization relationship
+- [ ] Add composite index on (TherapistId, IsActive)
+- [ ] Add composite index on (OrganizationId, IsActive)
+- [ ] Add index on CreatedAt for sorting
+
+## SellerProfile Entity Configuration
+
+- [ ] Create SellerProfileConfiguration.cs file in EntityConfigurations folder
+- [ ] Add using statements for Microsoft.EntityFrameworkCore
+- [ ] Add using statements for Microsoft.EntityFrameworkCore.Metadata.Builders
+- [ ] Add namespace UPTRMS.Api.Data.EntityConfigurations
+- [ ] Create class SellerProfileConfiguration implementing IEntityTypeConfiguration<SellerProfile>
+- [ ] Implement Configure method
+- [ ] Call ToTable("SellerProfiles") on builder
+- [ ] Configure Id as primary key using HasKey
+- [ ] Configure UserId as required
+- [ ] Add unique index on UserId
+- [ ] Configure StoreName as required with HasMaxLength(200)
+- [ ] Add index on StoreName
+- [ ] Configure StoreUrl as required with HasMaxLength(100)
+- [ ] Add unique index on StoreUrl
+- [ ] Configure Bio as required with HasMaxLength(2000)
+- [ ] Configure Specialties as required
+- [ ] Configure Rating with default value 0.0m
+- [ ] Configure Rating with precision (3,2)
+- [ ] Configure TotalSales with default value 0
+- [ ] Configure TotalRevenue with default value 0.0m
+- [ ] Configure TotalRevenue with precision (18,2)
+- [ ] Configure CommissionRate with default value 0.30m
+- [ ] Configure CommissionRate with precision (3,2)
+- [ ] Configure StripeAccountId with HasMaxLength(255)
+- [ ] Configure PayoutSchedule with HasMaxLength(50)
+- [ ] Configure BankAccountLast4 with HasMaxLength(4)
+- [ ] Configure TaxFormOnFile with default value false
+- [ ] Configure IsVerified with default value false
+- [ ] Configure VerificationNotes with HasMaxLength(1000)
+- [ ] Configure ProfileImageUrl with HasMaxLength(1000)
+- [ ] Configure BannerImageUrl with HasMaxLength(1000)
+- [ ] Configure BusinessType with HasMaxLength(50)
+- [ ] Configure BusinessName with HasMaxLength(200)
+- [ ] Configure TaxId with HasMaxLength(50)
+- [ ] Configure Address with HasMaxLength(500)
+- [ ] Configure City with HasMaxLength(100)
+- [ ] Configure State with HasMaxLength(50)
+- [ ] Configure ZipCode with HasMaxLength(20)
+- [ ] Configure Country with HasMaxLength(100)
+- [ ] Configure IsActive with default value true
+- [ ] Configure CreatedAt with default value sql function GETUTCDATE()
+- [ ] Configure UpdatedAt with default value sql function GETUTCDATE()
+- [ ] Configure relationship with User
+- [ ] Set delete behavior to Cascade for User relationship
+- [ ] Add index on IsVerified
+- [ ] Add composite index on (IsActive, IsVerified)
+- [ ] Add index on Rating for sorting
+- [ ] Add index on TotalSales for sorting
+
+## Session Entity Configuration
+
+- [ ] Create SessionConfiguration.cs file in EntityConfigurations folder
+- [ ] Add using statements for Microsoft.EntityFrameworkCore
+- [ ] Add using statements for Microsoft.EntityFrameworkCore.Metadata.Builders
+- [ ] Add namespace UPTRMS.Api.Data.EntityConfigurations
+- [ ] Create class SessionConfiguration implementing IEntityTypeConfiguration<Session>
+- [ ] Implement Configure method
+- [ ] Call ToTable("Sessions") on builder
+- [ ] Configure Id as primary key using HasKey
+- [ ] Configure TherapistId as required
+- [ ] Add index on TherapistId
+- [ ] Configure StudentId as required
+- [ ] Add index on StudentId
+- [ ] Configure ScheduledAt as required
+- [ ] Add index on ScheduledAt
+- [ ] Configure DurationMinutes as required
+- [ ] Configure SessionType as required with HasMaxLength(50)
+- [ ] Add index on SessionType
+- [ ] Configure SessionStatus as required with HasMaxLength(50)
+- [ ] Add index on SessionStatus
+- [ ] Configure Location with HasMaxLength(200)
+- [ ] Configure IsVirtual with default value false
+- [ ] Configure VirtualMeetingUrl with HasMaxLength(1000)
+- [ ] Configure IsBillable with default value true
+- [ ] Configure BillingCode with HasMaxLength(50)
+- [ ] Configure BillingUnits with precision (5,2)
+- [ ] Configure CancellationReason with HasMaxLength(500)
+- [ ] Configure NoShowReason with HasMaxLength(500)
+- [ ] Configure ParentSignatureUrl with HasMaxLength(1000)
+- [ ] Configure CreatedAt with default value sql function GETUTCDATE()
+- [ ] Configure UpdatedAt with default value sql function GETUTCDATE()
+- [ ] Configure relationship with User for Therapist
+- [ ] Set delete behavior to Restrict for Therapist relationship
+- [ ] Configure relationship with Student
+- [ ] Set delete behavior to Restrict for Student relationship
+- [ ] Add composite index on (TherapistId, ScheduledAt)
+- [ ] Add composite index on (StudentId, ScheduledAt)
+- [ ] Add composite index on (SessionStatus, ScheduledAt)
+- [ ] Add index on StartedAt
+- [ ] Add index on EndedAt

@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TechTalk.SpecFlow;
+using UPTRMS.Api.Tests.Mocks;
 
 namespace UPTRMS.Api.Tests.BDD;
 
@@ -16,23 +17,7 @@ public class TestContext
 
     private static WebApplicationFactory<Program> CreateFactory()
     {
-        return new WebApplicationFactory<Program>()
-            .WithWebHostBuilder(builder =>
-            {
-                builder.ConfigureAppConfiguration((context, config) =>
-                {
-                    config.AddJsonFile("appsettings.Test.json", optional: true);
-                    config.AddEnvironmentVariables();
-                });
-
-                builder.ConfigureServices((context, services) =>
-                {
-                    // Minimal test configuration for UPTRMS API stubs
-                    // No external services needed since all endpoints return 501 Not Implemented
-                });
-
-                builder.UseEnvironment("Test");
-            });
+        return new TestWebApplicationFactory<Program>();
     }
 
     [BeforeScenario]
@@ -40,6 +25,10 @@ public class TestContext
     {
         // Initialize scenario-specific context
         scenarioContext["TestStartTime"] = DateTime.UtcNow;
+        
+        // Clear mock state between scenarios
+        MockAuthenticationService.ClearState();
+        MockUserRepository.ClearState();
     }
 
     [AfterScenario]

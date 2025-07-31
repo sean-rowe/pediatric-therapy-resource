@@ -28,13 +28,28 @@ public class CommonStepDefinitions : BaseStepDefinitions
     [When(@"I send a GET request to ""(.*)""")]
     public async Task WhenISendAGETRequestToStep(string endpoint)
     {
+        Console.WriteLine($"Original endpoint: {endpoint}");
+        
+        // Replace test user IDs with actual GUIDs
+        if (endpoint.Contains("user-123") && _scenarioContext.ContainsKey("TargetUserId"))
+        {
+            var actualUserId = _scenarioContext.Get<string>("TargetUserId");
+            endpoint = endpoint.Replace("user-123", actualUserId);
+            Console.WriteLine($"Replaced endpoint: {endpoint}");
+        }
+        else
+        {
+            Console.WriteLine($"No replacement needed. Has TargetUserId: {_scenarioContext.ContainsKey("TargetUserId")}");
+        }
+        
         await WhenISendAGETRequestTo(endpoint);
     }
 
     [When(@"I send a POST request to ""(.*)"" with:")]
     public async Task WhenISendAPOSTRequestToWithStep(string endpoint, Table table)
     {
-        await WhenISendAPOSTRequestToWith(endpoint, table);
+        var data = TableToJson(table);
+        await WhenISendAPOSTRequestToWithData(endpoint, data);
     }
     
     [When(@"I send a POST request to ""(.*)""")]
@@ -50,7 +65,22 @@ public class CommonStepDefinitions : BaseStepDefinitions
     [When(@"I send a PUT request to ""(.*)"" with:")]
     public async Task WhenISendAPUTRequestToWithStep(string endpoint, Table table)
     {
-        await WhenISendAPUTRequestToWith(endpoint, table);
+        Console.WriteLine($"Original PUT endpoint: {endpoint}");
+        
+        // Replace test user IDs with actual GUIDs
+        if (endpoint.Contains("user-123") && _scenarioContext.ContainsKey("TargetUserId"))
+        {
+            var actualUserId = _scenarioContext.Get<string>("TargetUserId");
+            endpoint = endpoint.Replace("user-123", actualUserId);
+            Console.WriteLine($"Replaced PUT endpoint: {endpoint}");
+        }
+        else
+        {
+            Console.WriteLine($"No replacement needed. Has TargetUserId: {_scenarioContext.ContainsKey("TargetUserId")}");
+        }
+        
+        var data = TableToJson(table);
+        await WhenISendAPUTRequestToWithData(endpoint, data);
     }
 
     [When(@"I send a DELETE request to ""(.*)""")]
@@ -68,20 +98,21 @@ public class CommonStepDefinitions : BaseStepDefinitions
             throw new InvalidOperationException("No response found in ScenarioContext. Make sure the request was sent.");
         }
         
-        LastResponse = ScenarioContext.Get<HttpResponseMessage>("LastResponse");
+        SetLastResponse(ScenarioContext.Get<HttpResponseMessage>("LastResponse"));
         ThenTheResponseStatusShouldBe(statusCode);
     }
 
     [Then(@"the response should contain ""(.*)""")]
-    public async Task ThenTheResponseShouldContainStep(string expectedContent)
+    public void ThenTheResponseShouldContainStep(string expectedContent)
     {
-        await ThenTheResponseShouldContain(expectedContent);
+        ThenTheResponseShouldContain(expectedContent);
     }
 
     [Then(@"the response should contain:")]
-    public async Task ThenTheResponseShouldContainFieldsStep(Table table)
+    public void ThenTheResponseShouldContainFieldsStep(Table table)
     {
-        await ThenTheResponseShouldContainFields(table);
+        var fields = table.Rows.Select(r => r["field"]).ToArray();
+        ThenTheResponseShouldContainFields(fields);
     }
 
     [Then(@"the response should have a ""(.*)"" header with value ""(.*)""")]

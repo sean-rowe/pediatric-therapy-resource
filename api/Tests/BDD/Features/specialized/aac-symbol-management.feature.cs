@@ -142,7 +142,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 17
     testRunner.And("library integration provides comprehensive options", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2560 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2523 = new TechTalk.SpecFlow.Table(new string[] {
                             "Library Name",
                             "Symbol Count",
                             "Style Type",
@@ -150,7 +150,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Integration Method",
                             "Quality Level",
                             "Usage Context"});
-                table2560.AddRow(new string[] {
+                table2523.AddRow(new string[] {
                             "SymbolStix",
                             "15,000+ symbols",
                             "Line art, color",
@@ -158,7 +158,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "API integration",
                             "Professional",
                             "Educational/therapy"});
-                table2560.AddRow(new string[] {
+                table2523.AddRow(new string[] {
                             "PCS (Boardmaker)",
                             "45,000+ symbols",
                             "Realistic style",
@@ -166,7 +166,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Database import",
                             "Industry standard",
                             "School-based"});
-                table2560.AddRow(new string[] {
+                table2523.AddRow(new string[] {
                             "Widgit Symbols",
                             "25,000+ symbols",
                             "Simple, clear",
@@ -174,7 +174,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Direct integration",
                             "High quality",
                             "Special needs"});
-                table2560.AddRow(new string[] {
+                table2523.AddRow(new string[] {
                             "ARASAAC",
                             "20,000+ symbols",
                             "Free symbols",
@@ -182,7 +182,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Open integration",
                             "Community quality",
                             "Global use"});
-                table2560.AddRow(new string[] {
+                table2523.AddRow(new string[] {
                             "Mulberry Symbols",
                             "3,500+ symbols",
                             "Simple line art",
@@ -190,7 +190,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Free integration",
                             "Basic quality",
                             "Open source projects"});
-                table2560.AddRow(new string[] {
+                table2523.AddRow(new string[] {
                             "Blissymbols",
                             "5,000+ symbols",
                             "Semantic system",
@@ -199,7 +199,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Linguistic quality",
                             "Complex communication"});
 #line 18
-    testRunner.When("integrating symbol libraries:", ((string)(null)), table2560, "When ");
+    testRunner.When("integrating symbol libraries:", ((string)(null)), table2523, "When ");
 #line hidden
 #line 26
     testRunner.Then("libraries should be seamlessly integrated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -256,49 +256,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 34
     testRunner.And("quick symbol access is essential for communication", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2561 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2524 = new TechTalk.SpecFlow.Table(new string[] {
                             "Organization Type",
                             "Structure Method",
                             "Search Capabilities",
                             "User Benefits",
                             "Maintenance Requirements",
                             "Efficiency Gains"});
-                table2561.AddRow(new string[] {
+                table2524.AddRow(new string[] {
                             "Categorical",
                             "Semantic categories",
                             "Category browsing",
                             "Logical grouping",
                             "Monthly reorganization",
                             "40% faster access"});
-                table2561.AddRow(new string[] {
+                table2524.AddRow(new string[] {
                             "Alphabetical",
                             "Letter-based sorting",
                             "Alphabetic search",
                             "Familiar ordering",
                             "Quarterly updates",
                             "25% faster search"});
-                table2561.AddRow(new string[] {
+                table2524.AddRow(new string[] {
                             "Frequency-based",
                             "Usage statistics",
                             "Popular symbols first",
                             "Common symbols prioritized",
                             "Weekly usage analysis",
                             "50% efficiency gain"});
-                table2561.AddRow(new string[] {
+                table2524.AddRow(new string[] {
                             "Grammatical",
                             "Parts of speech",
                             "Grammar filtering",
                             "Language structure",
                             "Ongoing classification",
                             "35% better organization"});
-                table2561.AddRow(new string[] {
+                table2524.AddRow(new string[] {
                             "Personal",
                             "User preferences",
                             "Custom collections",
                             "Personalized access",
                             "Individual maintenance",
                             "60% personal efficiency"});
-                table2561.AddRow(new string[] {
+                table2524.AddRow(new string[] {
                             "Contextual",
                             "Situation-based",
                             "Context categories",
@@ -306,7 +306,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Activity-based updates",
                             "45% context relevance"});
 #line 35
-    testRunner.When("implementing organization systems:", ((string)(null)), table2561, "When ");
+    testRunner.When("implementing organization systems:", ((string)(null)), table2524, "When ");
 #line hidden
 #line 43
     testRunner.Then("organization should improve access speed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -363,49 +363,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 51
     testRunner.And("customization enhances communication relevance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2562 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2525 = new TechTalk.SpecFlow.Table(new string[] {
                             "Customization Type",
                             "Tool Features",
                             "Complexity Level",
                             "User Training",
                             "Quality Control",
                             "Output Standards"});
-                table2562.AddRow(new string[] {
+                table2525.AddRow(new string[] {
                             "Color modification",
                             "Hue, saturation, brightness",
                             "Basic",
                             "15 minutes",
                             "Automated",
                             "High contrast maintained"});
-                table2562.AddRow(new string[] {
+                table2525.AddRow(new string[] {
                             "Size adjustment",
                             "Scaling, aspect ratio",
                             "Basic",
                             "10 minutes",
                             "Automated",
                             "Clarity preserved"});
-                table2562.AddRow(new string[] {
+                table2525.AddRow(new string[] {
                             "Text addition",
                             "Labels, captions",
                             "Intermediate",
                             "30 minutes",
                             "Spell-check",
                             "Font consistency"});
-                table2562.AddRow(new string[] {
+                table2525.AddRow(new string[] {
                             "Symbol combination",
                             "Multi-symbol creation",
                             "Advanced",
                             "60 minutes",
                             "Layout validation",
                             "Professional appearance"});
-                table2562.AddRow(new string[] {
+                table2525.AddRow(new string[] {
                             "Background editing",
                             "Transparency, borders",
                             "Intermediate",
                             "45 minutes",
                             "Format validation",
                             "Visual clarity"});
-                table2562.AddRow(new string[] {
+                table2525.AddRow(new string[] {
                             "Animation creation",
                             "Simple movements",
                             "Expert",
@@ -413,7 +413,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Animation standards",
                             "Accessibility compliant"});
 #line 52
-    testRunner.When("providing customization tools:", ((string)(null)), table2562, "When ");
+    testRunner.When("providing customization tools:", ((string)(null)), table2525, "When ");
 #line hidden
 #line 60
     testRunner.Then("customization should be user-friendly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -470,49 +470,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 68
     testRunner.And("search capabilities must accommodate different user skills", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2563 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2526 = new TechTalk.SpecFlow.Table(new string[] {
                             "Search Type",
                             "Search Method",
                             "User Skill Level",
                             "Response Time",
                             "Accuracy Rate",
                             "User Experience"});
-                table2563.AddRow(new string[] {
+                table2526.AddRow(new string[] {
                             "Text search",
                             "Keyword matching",
                             "Literate users",
                             "<1 second",
                             "95% accuracy",
                             "Fast, precise"});
-                table2563.AddRow(new string[] {
+                table2526.AddRow(new string[] {
                             "Visual search",
                             "Image similarity",
                             "All users",
                             "<2 seconds",
                             "85% accuracy",
                             "Intuitive browsing"});
-                table2563.AddRow(new string[] {
+                table2526.AddRow(new string[] {
                             "Category browse",
                             "Hierarchical navigation",
                             "Beginning users",
                             "<3 seconds",
                             "90% accuracy",
                             "Structured exploration"});
-                table2563.AddRow(new string[] {
+                table2526.AddRow(new string[] {
                             "Semantic search",
                             "Meaning-based",
                             "Advanced users",
                             "<2 seconds",
                             "88% accuracy",
                             "Conceptual finding"});
-                table2563.AddRow(new string[] {
+                table2526.AddRow(new string[] {
                             "Predictive search",
                             "Auto-complete",
                             "Intermediate users",
                             "Real-time",
                             "92% accuracy",
                             "Efficient typing"});
-                table2563.AddRow(new string[] {
+                table2526.AddRow(new string[] {
                             "Voice search",
                             "Speech recognition",
                             "Speech users",
@@ -520,7 +520,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "80% accuracy",
                             "Hands-free operation"});
 #line 69
-    testRunner.When("implementing search functionality:", ((string)(null)), table2563, "When ");
+    testRunner.When("implementing search functionality:", ((string)(null)), table2526, "When ");
 #line hidden
 #line 77
     testRunner.Then("search should be fast and accurate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -577,49 +577,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 86
     testRunner.And("cultural symbols vary across communities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2564 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2527 = new TechTalk.SpecFlow.Table(new string[] {
                             "Language",
                             "Symbol Availability",
                             "Cultural Adaptation",
                             "Text Integration",
                             "Voice Support",
                             "Implementation Complexity"});
-                table2564.AddRow(new string[] {
+                table2527.AddRow(new string[] {
                             "English",
                             "45,000+ symbols",
                             "Western culture",
                             "English text",
                             "Natural TTS",
                             "Standard"});
-                table2564.AddRow(new string[] {
+                table2527.AddRow(new string[] {
                             "Spanish",
                             "35,000+ symbols",
                             "Hispanic cultures",
                             "Spanish text",
                             "Spanish TTS",
                             "Moderate"});
-                table2564.AddRow(new string[] {
+                table2527.AddRow(new string[] {
                             "Mandarin",
                             "20,000+ symbols",
                             "Chinese culture",
                             "Chinese characters",
                             "Mandarin TTS",
                             "High"});
-                table2564.AddRow(new string[] {
+                table2527.AddRow(new string[] {
                             "Arabic",
                             "15,000+ symbols",
                             "Arabic culture",
                             "Right-to-left text",
                             "Arabic TTS",
                             "High"});
-                table2564.AddRow(new string[] {
+                table2527.AddRow(new string[] {
                             "French",
                             "30,000+ symbols",
                             "French culture",
                             "French text",
                             "French TTS",
                             "Moderate"});
-                table2564.AddRow(new string[] {
+                table2527.AddRow(new string[] {
                             "ASL",
                             "5,000+ symbols",
                             "Deaf culture",
@@ -627,7 +627,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Visual only",
                             "Specialized"});
 #line 87
-    testRunner.When("supporting multilingual symbols:", ((string)(null)), table2564, "When ");
+    testRunner.When("supporting multilingual symbols:", ((string)(null)), table2527, "When ");
 #line hidden
 #line 95
     testRunner.Then("multilingual support should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -684,49 +684,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 103
     testRunner.And("sequences enable sophisticated communication", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2565 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2528 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sequence Type",
                             "Complexity Level",
                             "Creation Method",
                             "Usage Context",
                             "Training Requirements",
                             "Communication Benefits"});
-                table2565.AddRow(new string[] {
+                table2528.AddRow(new string[] {
                             "Simple phrases",
                             "2-3 symbols",
                             "Drag-and-drop",
                             "Basic communication",
                             "30 minutes",
                             "Clear messages"});
-                table2565.AddRow(new string[] {
+                table2528.AddRow(new string[] {
                             "Sentence construction",
                             "4-8 symbols",
                             "Template-based",
                             "Advanced communication",
                             "60 minutes",
                             "Complete thoughts"});
-                table2565.AddRow(new string[] {
+                table2528.AddRow(new string[] {
                             "Story sequences",
                             "10+ symbols",
                             "Narrative tools",
                             "Storytelling",
                             "90 minutes",
                             "Rich narratives"});
-                table2565.AddRow(new string[] {
+                table2528.AddRow(new string[] {
                             "Procedural sequences",
                             "Variable length",
                             "Step-by-step tools",
                             "Instructions",
                             "45 minutes",
                             "Clear procedures"});
-                table2565.AddRow(new string[] {
+                table2528.AddRow(new string[] {
                             "Conversational scripts",
                             "Context-dependent",
                             "Dialog templates",
                             "Social interaction",
                             "75 minutes",
                             "Natural conversation"});
-                table2565.AddRow(new string[] {
+                table2528.AddRow(new string[] {
                             "Emergency sequences",
                             "Critical messages",
                             "Quick-access",
@@ -734,7 +734,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "20 minutes",
                             "Rapid emergency response"});
 #line 104
-    testRunner.When("creating symbol sequences:", ((string)(null)), table2565, "When ");
+    testRunner.When("creating symbol sequences:", ((string)(null)), table2528, "When ");
 #line hidden
 #line 112
     testRunner.Then("sequences should enable complex communication", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -791,49 +791,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 120
     testRunner.And("movement aids comprehension for some users", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2566 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2529 = new TechTalk.SpecFlow.Table(new string[] {
                             "Animation Type",
                             "Purpose",
                             "Technical Requirements",
                             "User Benefits",
                             "Performance Impact",
                             "Quality Standards"});
-                table2566.AddRow(new string[] {
+                table2529.AddRow(new string[] {
                             "Action verbs",
                             "Show movement",
                             "Basic animation",
                             "Clearer actions",
                             "Minimal impact",
                             "Smooth, relevant"});
-                table2566.AddRow(new string[] {
+                table2529.AddRow(new string[] {
                             "Emotional expressions",
                             "Convey feelings",
                             "Facial animation",
                             "Better emotions",
                             "Low impact",
                             "Natural expressions"});
-                table2566.AddRow(new string[] {
+                table2529.AddRow(new string[] {
                             "Process demonstrations",
                             "Show procedures",
                             "Sequence animation",
                             "Understanding steps",
                             "Moderate impact",
                             "Clear sequences"});
-                table2566.AddRow(new string[] {
+                table2529.AddRow(new string[] {
                             "Attention-getting",
                             "Focus attention",
                             "Motion graphics",
                             "Improved attention",
                             "Low impact",
                             "Non-distracting"});
-                table2566.AddRow(new string[] {
+                table2529.AddRow(new string[] {
                             "Feedback animations",
                             "Response confirmation",
                             "Interactive feedback",
                             "User confirmation",
                             "Minimal impact",
                             "Immediate response"});
-                table2566.AddRow(new string[] {
+                table2529.AddRow(new string[] {
                             "Decorative animations",
                             "Visual appeal",
                             "Aesthetic animation",
@@ -841,7 +841,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Very low impact",
                             "Subtle, appropriate"});
 #line 121
-    testRunner.When("implementing animated symbols:", ((string)(null)), table2566, "When ");
+    testRunner.When("implementing animated symbols:", ((string)(null)), table2529, "When ");
 #line hidden
 #line 129
     testRunner.Then("animations should enhance communication", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -898,49 +898,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 137
     testRunner.And("individual preferences vary significantly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2567 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2530 = new TechTalk.SpecFlow.Table(new string[] {
                             "Personalization Type",
                             "Customization Options",
                             "User Control Level",
                             "Implementation Method",
                             "Maintenance Requirements",
                             "Communication Impact"});
-                table2567.AddRow(new string[] {
+                table2530.AddRow(new string[] {
                             "Personal photos",
                             "Family, pets, places",
                             "Full user control",
                             "Photo integration",
                             "User updates",
                             "High relevance"});
-                table2567.AddRow(new string[] {
+                table2530.AddRow(new string[] {
                             "Custom symbols",
                             "User-created symbols",
                             "Creative control",
                             "Drawing tools",
                             "User maintenance",
                             "Maximum relevance"});
-                table2567.AddRow(new string[] {
+                table2530.AddRow(new string[] {
                             "Preferred styles",
                             "Visual preferences",
                             "Style selection",
                             "Theme options",
                             "Minimal maintenance",
                             "Visual comfort"});
-                table2567.AddRow(new string[] {
+                table2530.AddRow(new string[] {
                             "Cultural symbols",
                             "Cultural representations",
                             "Cultural control",
                             "Cultural libraries",
                             "Cultural updates",
                             "Cultural relevance"});
-                table2567.AddRow(new string[] {
+                table2530.AddRow(new string[] {
                             "Activity symbols",
                             "Personal activities",
                             "Activity control",
                             "Custom categories",
                             "Activity updates",
                             "Contextual relevance"});
-                table2567.AddRow(new string[] {
+                table2530.AddRow(new string[] {
                             "Relationship symbols",
                             "Personal relationships",
                             "Relationship control",
@@ -948,7 +948,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Relationship updates",
                             "Social relevance"});
 #line 138
-    testRunner.When("implementing personalization:", ((string)(null)), table2567, "When ");
+    testRunner.When("implementing personalization:", ((string)(null)), table2530, "When ");
 #line hidden
 #line 146
     testRunner.Then("personalization should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1005,49 +1005,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 155
     testRunner.And("consistency improves recognition and learning", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2568 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2531 = new TechTalk.SpecFlow.Table(new string[] {
                             "Quality Aspect",
                             "Standard Requirements",
                             "Assessment Method",
                             "Quality Control",
                             "Improvement Process",
                             "Compliance Rate"});
-                table2568.AddRow(new string[] {
+                table2531.AddRow(new string[] {
                             "Visual clarity",
                             "High resolution, clear details",
                             "Visual inspection",
                             "Automated checks",
                             "Quality enhancement",
                             "98% compliance"});
-                table2568.AddRow(new string[] {
+                table2531.AddRow(new string[] {
                             "Consistency",
                             "Uniform style within sets",
                             "Style comparison",
                             "Style validation",
                             "Style standardization",
                             "95% compliance"});
-                table2568.AddRow(new string[] {
+                table2531.AddRow(new string[] {
                             "Accessibility",
                             "WCAG color contrast",
                             "Contrast analysis",
                             "Automated testing",
                             "Contrast adjustment",
                             "100% compliance"});
-                table2568.AddRow(new string[] {
+                table2531.AddRow(new string[] {
                             "Cultural appropriateness",
                             "Respectful representations",
                             "Cultural review",
                             "Expert validation",
                             "Cultural correction",
                             "90% compliance"});
-                table2568.AddRow(new string[] {
+                table2531.AddRow(new string[] {
                             "Age appropriateness",
                             "Suitable for target ages",
                             "Age assessment",
                             "Age validation",
                             "Age adjustment",
                             "92% compliance"});
-                table2568.AddRow(new string[] {
+                table2531.AddRow(new string[] {
                             "Semantic accuracy",
                             "Correct meaning representation",
                             "Meaning review",
@@ -1055,7 +1055,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Meaning correction",
                             "96% compliance"});
 #line 156
-    testRunner.When("maintaining quality standards:", ((string)(null)), table2568, "When ");
+    testRunner.When("maintaining quality standards:", ((string)(null)), table2531, "When ");
 #line hidden
 #line 164
     testRunner.Then("quality should be systematically maintained", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1112,49 +1112,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 172
     testRunner.And("legal compliance is required", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2569 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2532 = new TechTalk.SpecFlow.Table(new string[] {
                             "Accessibility Feature",
                             "Implementation",
                             "Target Users",
                             "Compliance Standard",
                             "Testing Method",
                             "Success Criteria"});
-                table2569.AddRow(new string[] {
+                table2532.AddRow(new string[] {
                             "High contrast",
                             "Color adjustment",
                             "Visual impairments",
                             "WCAG 2.1 AA",
                             "Automated testing",
                             "4.5:1 ratio minimum"});
-                table2569.AddRow(new string[] {
+                table2532.AddRow(new string[] {
                             "Large print options",
                             "Size scaling",
                             "Low vision",
                             "ADA compliance",
                             "Visual testing",
                             "200% scaling available"});
-                table2569.AddRow(new string[] {
+                table2532.AddRow(new string[] {
                             "Alternative text",
                             "Screen reader support",
                             "Blind users",
                             "Section 508",
                             "Screen reader testing",
                             "100% alt-text coverage"});
-                table2569.AddRow(new string[] {
+                table2532.AddRow(new string[] {
                             "Audio descriptions",
                             "Voice descriptions",
                             "Blind users",
                             "WCAG 2.1 AA",
                             "Audio testing",
                             "Clear descriptions"});
-                table2569.AddRow(new string[] {
+                table2532.AddRow(new string[] {
                             "Simple language",
                             "Clear descriptions",
                             "Cognitive disabilities",
                             "Plain language",
                             "Comprehension testing",
                             "Grade 6 reading level"});
-                table2569.AddRow(new string[] {
+                table2532.AddRow(new string[] {
                             "Motor accessibility",
                             "Easy selection",
                             "Motor impairments",
@@ -1162,7 +1162,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Motor testing",
                             "Large target areas"});
 #line 173
-    testRunner.When("ensuring accessibility compliance:", ((string)(null)), table2569, "When ");
+    testRunner.When("ensuring accessibility compliance:", ((string)(null)), table2532, "When ");
 #line hidden
 #line 181
     testRunner.Then("accessibility should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1219,49 +1219,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 189
     testRunner.And("copyright compliance is legally required", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2570 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2533 = new TechTalk.SpecFlow.Table(new string[] {
                             "License Type",
                             "Usage Rights",
                             "Restrictions",
                             "Compliance Requirements",
                             "Monitoring Methods",
                             "Risk Management"});
-                table2570.AddRow(new string[] {
+                table2533.AddRow(new string[] {
                             "Commercial license",
                             "Educational/therapeutic use",
                             "No redistribution",
                             "License tracking",
                             "Usage audits",
                             "License insurance"});
-                table2570.AddRow(new string[] {
+                table2533.AddRow(new string[] {
                             "Educational license",
                             "School use only",
                             "Non-commercial only",
                             "Institutional verification",
                             "Educational audits",
                             "Educational compliance"});
-                table2570.AddRow(new string[] {
+                table2533.AddRow(new string[] {
                             "Creative Commons",
                             "Open use with attribution",
                             "Attribution required",
                             "Attribution tracking",
                             "Attribution verification",
                             "Attribution compliance"});
-                table2570.AddRow(new string[] {
+                table2533.AddRow(new string[] {
                             "Proprietary license",
                             "Specific use terms",
                             "Custom restrictions",
                             "Contract compliance",
                             "Contract monitoring",
                             "Legal compliance"});
-                table2570.AddRow(new string[] {
+                table2533.AddRow(new string[] {
                             "Open source",
                             "Free use",
                             "Source availability",
                             "Source provision",
                             "Source tracking",
                             "Open source compliance"});
-                table2570.AddRow(new string[] {
+                table2533.AddRow(new string[] {
                             "Public domain",
                             "Unrestricted use",
                             "No restrictions",
@@ -1269,7 +1269,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "No monitoring",
                             "No risk"});
 #line 190
-    testRunner.When("managing copyright and licensing:", ((string)(null)), table2570, "When ");
+    testRunner.When("managing copyright and licensing:", ((string)(null)), table2533, "When ");
 #line hidden
 #line 198
     testRunner.Then("licensing should be properly managed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1326,49 +1326,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 207
     testRunner.And("creation tools enable personalization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2571 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2534 = new TechTalk.SpecFlow.Table(new string[] {
                             "Tool Type",
                             "Functionality",
                             "Skill Level Required",
                             "Training Duration",
                             "Output Quality",
                             "Professional Use"});
-                table2571.AddRow(new string[] {
+                table2534.AddRow(new string[] {
                             "Drawing tools",
                             "Freehand drawing",
                             "Basic artistic skills",
                             "45 minutes",
                             "Variable quality",
                             "Limited"});
-                table2571.AddRow(new string[] {
+                table2534.AddRow(new string[] {
                             "Template editor",
                             "Modify existing symbols",
                             "Minimal skills",
                             "20 minutes",
                             "Good quality",
                             "Suitable"});
-                table2571.AddRow(new string[] {
+                table2534.AddRow(new string[] {
                             "Photo editor",
                             "Photo-to-symbol conversion",
                             "Basic computer skills",
                             "30 minutes",
                             "High quality",
                             "Professional"});
-                table2571.AddRow(new string[] {
+                table2534.AddRow(new string[] {
                             "Vector editor",
                             "Professional symbol creation",
                             "Advanced skills",
                             "120 minutes",
                             "Professional quality",
                             "Full professional"});
-                table2571.AddRow(new string[] {
+                table2534.AddRow(new string[] {
                             "AI-assisted creation",
                             "AI-powered generation",
                             "Minimal skills",
                             "15 minutes",
                             "High quality",
                             "Emerging"});
-                table2571.AddRow(new string[] {
+                table2534.AddRow(new string[] {
                             "Collaborative editor",
                             "Multi-user creation",
                             "Variable skills",
@@ -1376,7 +1376,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Variable quality",
                             "Team use"});
 #line 208
-    testRunner.When("providing creation tools:", ((string)(null)), table2571, "When ");
+    testRunner.When("providing creation tools:", ((string)(null)), table2534, "When ");
 #line hidden
 #line 216
     testRunner.Then("tools should match user abilities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1433,49 +1433,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 224
     testRunner.And("batch operations save significant time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2572 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2535 = new TechTalk.SpecFlow.Table(new string[] {
                             "Batch Operation",
                             "Processing Speed",
                             "Quality Control",
                             "Error Handling",
                             "Progress Monitoring",
                             "Rollback Capability"});
-                table2572.AddRow(new string[] {
+                table2535.AddRow(new string[] {
                             "Bulk import",
                             "1000 symbols/minute",
                             "Format validation",
                             "Error reporting",
                             "Progress bar",
                             "Full rollback"});
-                table2572.AddRow(new string[] {
+                table2535.AddRow(new string[] {
                             "Bulk export",
                             "500 symbols/minute",
                             "Quality checks",
                             "Export validation",
                             "Status updates",
                             "Export reversal"});
-                table2572.AddRow(new string[] {
+                table2535.AddRow(new string[] {
                             "Batch editing",
                             "200 symbols/minute",
                             "Edit validation",
                             "Edit verification",
                             "Edit tracking",
                             "Edit reversal"});
-                table2572.AddRow(new string[] {
+                table2535.AddRow(new string[] {
                             "Mass categorization",
                             "800 symbols/minute",
                             "Category validation",
                             "Category verification",
                             "Category tracking",
                             "Category reset"});
-                table2572.AddRow(new string[] {
+                table2535.AddRow(new string[] {
                             "Bulk resizing",
                             "1500 symbols/minute",
                             "Size validation",
                             "Resize verification",
                             "Resize tracking",
                             "Size restoration"});
-                table2572.AddRow(new string[] {
+                table2535.AddRow(new string[] {
                             "Batch conversion",
                             "300 symbols/minute",
                             "Format validation",
@@ -1483,7 +1483,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Conversion tracking",
                             "Format restoration"});
 #line 225
-    testRunner.When("implementing batch processing:", ((string)(null)), table2572, "When ");
+    testRunner.When("implementing batch processing:", ((string)(null)), table2535, "When ");
 #line hidden
 #line 233
     testRunner.Then("batch processing should be efficient", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1540,49 +1540,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 241
     testRunner.And("change tracking is important for quality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2573 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2536 = new TechTalk.SpecFlow.Table(new string[] {
                             "Version Aspect",
                             "Tracking Method",
                             "Storage Requirements",
                             "Change Documentation",
                             "Rollback Capability",
                             "Collaboration Support"});
-                table2573.AddRow(new string[] {
+                table2536.AddRow(new string[] {
                             "Symbol versions",
                             "File versioning",
                             "Version history",
                             "Change logs",
                             "Previous versions",
                             "Version merging"});
-                table2573.AddRow(new string[] {
+                table2536.AddRow(new string[] {
                             "Library versions",
                             "Library snapshots",
                             "Snapshot storage",
                             "Release notes",
                             "Library rollback",
                             "Library branching"});
-                table2573.AddRow(new string[] {
+                table2536.AddRow(new string[] {
                             "User modifications",
                             "Modification tracking",
                             "Mod history",
                             "User logs",
                             "User rollback",
                             "User merging"});
-                table2573.AddRow(new string[] {
+                table2536.AddRow(new string[] {
                             "System updates",
                             "Update tracking",
                             "Update history",
                             "Update notes",
                             "System rollback",
                             "Update coordination"});
-                table2573.AddRow(new string[] {
+                table2536.AddRow(new string[] {
                             "Quality improvements",
                             "Quality tracking",
                             "Quality history",
                             "Quality logs",
                             "Quality rollback",
                             "Quality collaboration"});
-                table2573.AddRow(new string[] {
+                table2536.AddRow(new string[] {
                             "Bug fixes",
                             "Fix tracking",
                             "Fix history",
@@ -1590,7 +1590,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Fix rollback",
                             "Fix coordination"});
 #line 242
-    testRunner.When("implementing version control:", ((string)(null)), table2573, "When ");
+    testRunner.When("implementing version control:", ((string)(null)), table2536, "When ");
 #line hidden
 #line 250
     testRunner.Then("version control should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1647,49 +1647,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 259
     testRunner.And("data portability is essential", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2574 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2537 = new TechTalk.SpecFlow.Table(new string[] {
                             "Format Type",
                             "Compatibility",
                             "Data Preservation",
                             "Quality Maintenance",
                             "Processing Speed",
                             "Use Cases"});
-                table2574.AddRow(new string[] {
+                table2537.AddRow(new string[] {
                             "PNG/JPG",
                             "Universal compatibility",
                             "Visual only",
                             "High quality",
                             "Fast",
                             "General sharing"});
-                table2574.AddRow(new string[] {
+                table2537.AddRow(new string[] {
                             "SVG",
                             "Vector graphics",
                             "Scalable format",
                             "Perfect quality",
                             "Moderate",
                             "Professional use"});
-                table2574.AddRow(new string[] {
+                table2537.AddRow(new string[] {
                             "PDF",
                             "Document format",
                             "Layout preserved",
                             "High quality",
                             "Moderate",
                             "Documentation"});
-                table2574.AddRow(new string[] {
+                table2537.AddRow(new string[] {
                             "Boardmaker",
                             "PCS compatibility",
                             "Symbol data",
                             "Native quality",
                             "Slow",
                             "PCS integration"});
-                table2574.AddRow(new string[] {
+                table2537.AddRow(new string[] {
                             "SCML",
                             "Symbol format",
                             "Full metadata",
                             "Perfect quality",
                             "Moderate",
                             "Symbol exchange"});
-                table2574.AddRow(new string[] {
+                table2537.AddRow(new string[] {
                             "JSON",
                             "Data interchange",
                             "Complete data",
@@ -1697,7 +1697,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Fast",
                             "API integration"});
 #line 260
-    testRunner.When("supporting export/import:", ((string)(null)), table2574, "When ");
+    testRunner.When("supporting export/import:", ((string)(null)), table2537, "When ");
 #line hidden
 #line 268
     testRunner.Then("export should preserve quality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1754,49 +1754,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 276
     testRunner.And("API integration enables broader use", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2575 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2538 = new TechTalk.SpecFlow.Table(new string[] {
                             "API Feature",
                             "Functionality",
                             "Access Control",
                             "Rate Limiting",
                             "Documentation",
                             "Support Level"});
-                table2575.AddRow(new string[] {
+                table2538.AddRow(new string[] {
                             "Symbol search",
                             "Query symbol library",
                             "API key required",
                             "1000 calls/hour",
                             "Complete docs",
                             "Full support"});
-                table2575.AddRow(new string[] {
+                table2538.AddRow(new string[] {
                             "Symbol download",
                             "Retrieve symbols",
                             "Licensed access",
                             "500 downloads/hour",
                             "Usage examples",
                             "Full support"});
-                table2575.AddRow(new string[] {
+                table2538.AddRow(new string[] {
                             "Category listing",
                             "Browse categories",
                             "Public access",
                             "Unlimited",
                             "Basic docs",
                             "Limited support"});
-                table2575.AddRow(new string[] {
+                table2538.AddRow(new string[] {
                             "Metadata access",
                             "Symbol information",
                             "Authenticated",
                             "2000 calls/hour",
                             "Detailed docs",
                             "Full support"});
-                table2575.AddRow(new string[] {
+                table2538.AddRow(new string[] {
                             "Upload symbols",
                             "Add to library",
                             "Admin access",
                             "100 uploads/hour",
                             "Upload guide",
                             "Premium support"});
-                table2575.AddRow(new string[] {
+                table2538.AddRow(new string[] {
                             "Batch operations",
                             "Bulk processing",
                             "Premium access",
@@ -1804,7 +1804,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Advanced docs",
                             "Premium support"});
 #line 277
-    testRunner.When("providing API integration:", ((string)(null)), table2575, "When ");
+    testRunner.When("providing API integration:", ((string)(null)), table2538, "When ");
 #line hidden
 #line 285
     testRunner.Then("API should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1860,49 +1860,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 293
     testRunner.Given("symbol references may become invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2576 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2539 = new TechTalk.SpecFlow.Table(new string[] {
                             "Issue Type",
                             "Detection Method",
                             "Resolution Strategy",
                             "User Impact",
                             "Recovery Time",
                             "Prevention Measures"});
-                table2576.AddRow(new string[] {
+                table2539.AddRow(new string[] {
                             "Missing symbol file",
                             "File validation",
                             "Automatic replacement",
                             "Substitute symbol shown",
                             "<1 second",
                             "File integrity checks"});
-                table2576.AddRow(new string[] {
+                table2539.AddRow(new string[] {
                             "Broken library link",
                             "Link testing",
                             "Library restoration",
                             "Alternative library used",
                             "<5 seconds",
                             "Link monitoring"});
-                table2576.AddRow(new string[] {
+                table2539.AddRow(new string[] {
                             "Corrupted symbol",
                             "Integrity checking",
                             "Clean copy restoration",
                             "Backup symbol used",
                             "<2 seconds",
                             "Corruption detection"});
-                table2576.AddRow(new string[] {
+                table2539.AddRow(new string[] {
                             "License expiration",
                             "License monitoring",
                             "License renewal",
                             "Limited access",
                             "Manual renewal",
                             "License alerts"});
-                table2576.AddRow(new string[] {
+                table2539.AddRow(new string[] {
                             "Format incompatibility",
                             "Format checking",
                             "Format conversion",
                             "Converted symbol used",
                             "<3 seconds",
                             "Format validation"});
-                table2576.AddRow(new string[] {
+                table2539.AddRow(new string[] {
                             "Network unavailability",
                             "Connection testing",
                             "Offline mode",
@@ -1910,7 +1910,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Immediate",
                             "Offline preparation"});
 #line 294
-    testRunner.When("symbol issues occur:", ((string)(null)), table2576, "When ");
+    testRunner.When("symbol issues occur:", ((string)(null)), table2539, "When ");
 #line hidden
 #line 302
     testRunner.Then("issues should be detected quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1964,49 +1964,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 309
     testRunner.Given("symbol libraries require ongoing maintenance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2577 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2540 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table2577.AddRow(new string[] {
+                table2540.AddRow(new string[] {
                             "Library maintenance",
                             "Content updates",
                             "Automated update systems",
                             "Update infrastructure",
                             "Current content",
                             "Content sustainability"});
-                table2577.AddRow(new string[] {
+                table2540.AddRow(new string[] {
                             "Quality control",
                             "Varying quality",
                             "Standardized quality processes",
                             "Quality resources",
                             "Consistent quality",
                             "Quality sustainability"});
-                table2577.AddRow(new string[] {
+                table2540.AddRow(new string[] {
                             "Licensing compliance",
                             "Complex licenses",
                             "License management systems",
                             "Legal resources",
                             "Full compliance",
                             "Legal sustainability"});
-                table2577.AddRow(new string[] {
+                table2540.AddRow(new string[] {
                             "Technology evolution",
                             "Changing formats",
                             "Future-proof formats",
                             "Technology resources",
                             "Format compatibility",
                             "Technology sustainability"});
-                table2577.AddRow(new string[] {
+                table2540.AddRow(new string[] {
                             "User training",
                             "Training needs",
                             "Scalable training programs",
                             "Training resources",
                             "User competency",
                             "Training sustainability"});
-                table2577.AddRow(new string[] {
+                table2540.AddRow(new string[] {
                             "Cost management",
                             "Rising costs",
                             "Cost-effective solutions",
@@ -2014,7 +2014,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Affordable access",
                             "Financial sustainability"});
 #line 310
-    testRunner.When("planning sustainability:", ((string)(null)), table2577, "When ");
+    testRunner.When("planning sustainability:", ((string)(null)), table2540, "When ");
 #line hidden
 #line 318
     testRunner.Then("sustainability should be systematically planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

@@ -123,50 +123,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Auth
 #line 13
     testRunner.Given("I have a \"team\" subscription", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table518 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table481 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table518.AddRow(new string[] {
+                table481.AddRow(new string[] {
                             "name",
                             "Sunshine Therapy Center"});
-                table518.AddRow(new string[] {
+                table481.AddRow(new string[] {
                             "type",
                             "clinic"});
-                table518.AddRow(new string[] {
+                table481.AddRow(new string[] {
                             "taxId",
                             "12-3456789"});
-                table518.AddRow(new string[] {
+                table481.AddRow(new string[] {
                             "address",
                             "123 Main St, City, ST"});
-                table518.AddRow(new string[] {
+                table481.AddRow(new string[] {
                             "phone",
                             "555-100-2000"});
-                table518.AddRow(new string[] {
+                table481.AddRow(new string[] {
                             "website",
                             "www.sunshinetherapy.com"});
 #line 14
-    testRunner.When("I send a POST request to \"/api/organizations\" with:", ((string)(null)), table518, "When ");
+    testRunner.When("I send a POST request to \"/api/organizations\" with:", ((string)(null)), table481, "When ");
 #line hidden
 #line 22
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table519 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table482 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table519.AddRow(new string[] {
+                table482.AddRow(new string[] {
                             "id",
                             "string"});
-                table519.AddRow(new string[] {
+                table482.AddRow(new string[] {
                             "name",
                             "string"});
-                table519.AddRow(new string[] {
+                table482.AddRow(new string[] {
                             "slug",
                             "string"});
-                table519.AddRow(new string[] {
+                table482.AddRow(new string[] {
                             "ownerId",
                             "string"});
 #line 23
-    testRunner.And("the response should contain:", ((string)(null)), table519, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table482, "And ");
 #line hidden
 #line 29
     testRunner.And("I should be set as the organization owner", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -207,14 +207,14 @@ namespace UPTRMS.Api.Tests.BDD.Features.Auth
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table520 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table483 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table520.AddRow(new string[] {
+                table483.AddRow(new string[] {
                             "name",
                             ""});
 #line 34
-    testRunner.When("I send a POST request to \"/api/organizations\" with:", ((string)(null)), table520, "When ");
+    testRunner.When("I send a POST request to \"/api/organizations\" with:", ((string)(null)), table483, "When ");
 #line hidden
 #line 37
     testRunner.Then("the response status should be 400", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -262,32 +262,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Auth
 #line 45
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table521 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table484 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table521.AddRow(new string[] {
+                table484.AddRow(new string[] {
                             "id",
                             "string"});
-                table521.AddRow(new string[] {
+                table484.AddRow(new string[] {
                             "name",
                             "string"});
-                table521.AddRow(new string[] {
+                table484.AddRow(new string[] {
                             "type",
                             "string"});
-                table521.AddRow(new string[] {
+                table484.AddRow(new string[] {
                             "memberCount",
                             "number"});
-                table521.AddRow(new string[] {
+                table484.AddRow(new string[] {
                             "subscription",
                             "object"});
-                table521.AddRow(new string[] {
+                table484.AddRow(new string[] {
                             "settings",
                             "object"});
-                table521.AddRow(new string[] {
+                table484.AddRow(new string[] {
                             "createdAt",
                             "string"});
 #line 46
-    testRunner.And("the response should contain:", ((string)(null)), table521, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table484, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -371,17 +371,17 @@ namespace UPTRMS.Api.Tests.BDD.Features.Auth
 #line 67
     testRunner.Given("I own organization \"org-123\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table522 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table485 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table522.AddRow(new string[] {
+                table485.AddRow(new string[] {
                             "name",
                             "Sunshine Therapy Group"});
-                table522.AddRow(new string[] {
+                table485.AddRow(new string[] {
                             "website",
                             "www.sunshinetherapy.org"});
 #line 68
-    testRunner.When("I send a PUT request to \"/api/organizations/org-123\" with:", ((string)(null)), table522, "When ");
+    testRunner.When("I send a PUT request to \"/api/organizations/org-123\" with:", ((string)(null)), table485, "When ");
 #line hidden
 #line 72
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -437,44 +437,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Auth
 #line 82
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table523 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table486 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table523.AddRow(new string[] {
+                table486.AddRow(new string[] {
                             "members",
                             "array"});
-                table523.AddRow(new string[] {
+                table486.AddRow(new string[] {
                             "total",
                             "number"});
-                table523.AddRow(new string[] {
+                table486.AddRow(new string[] {
                             "page",
                             "number"});
 #line 83
-    testRunner.And("the response should contain:", ((string)(null)), table523, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table486, "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table524 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table487 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table524.AddRow(new string[] {
+                table487.AddRow(new string[] {
                             "id",
                             "string"});
-                table524.AddRow(new string[] {
+                table487.AddRow(new string[] {
                             "email",
                             "string"});
-                table524.AddRow(new string[] {
+                table487.AddRow(new string[] {
                             "name",
                             "string"});
-                table524.AddRow(new string[] {
+                table487.AddRow(new string[] {
                             "role",
                             "string"});
-                table524.AddRow(new string[] {
+                table487.AddRow(new string[] {
                             "status",
                             "string"});
-                table524.AddRow(new string[] {
+                table487.AddRow(new string[] {
                             "joinedAt",
                             "string"});
 #line 88
-    testRunner.And("each member should contain:", ((string)(null)), table524, "And ");
+    testRunner.And("each member should contain:", ((string)(null)), table487, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -512,35 +512,35 @@ namespace UPTRMS.Api.Tests.BDD.Features.Auth
 #line 100
     testRunner.Given("I am admin of organization \"org-123\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table525 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table488 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table525.AddRow(new string[] {
+                table488.AddRow(new string[] {
                             "email",
                             "newuser@clinic.com"});
-                table525.AddRow(new string[] {
+                table488.AddRow(new string[] {
                             "role",
                             "therapist"});
 #line 101
-    testRunner.When("I send a POST request to \"/api/organizations/org-123/members/invite\" with:", ((string)(null)), table525, "When ");
+    testRunner.When("I send a POST request to \"/api/organizations/org-123/members/invite\" with:", ((string)(null)), table488, "When ");
 #line hidden
 #line 105
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table526 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table489 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table526.AddRow(new string[] {
+                table489.AddRow(new string[] {
                             "inviteId",
                             "string"});
-                table526.AddRow(new string[] {
+                table489.AddRow(new string[] {
                             "status",
                             "string"});
-                table526.AddRow(new string[] {
+                table489.AddRow(new string[] {
                             "expiresAt",
                             "string"});
 #line 106
-    testRunner.And("the response should contain:", ((string)(null)), table526, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table489, "And ");
 #line hidden
 #line 111
     testRunner.And("an invitation email should be sent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -589,17 +589,17 @@ namespace UPTRMS.Api.Tests.BDD.Features.Auth
 #line 117
     testRunner.And("\"existing@clinic.com\" is already a member", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table527 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table490 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table527.AddRow(new string[] {
+                table490.AddRow(new string[] {
                             "email",
                             "existing@clinic.com"});
-                table527.AddRow(new string[] {
+                table490.AddRow(new string[] {
                             "role",
                             "therapist"});
 #line 118
-    testRunner.When("I send a POST request to \"/api/organizations/org-123/members/invite\" with:", ((string)(null)), table527, "When ");
+    testRunner.When("I send a POST request to \"/api/organizations/org-123/members/invite\" with:", ((string)(null)), table490, "When ");
 #line hidden
 #line 122
     testRunner.Then("the response status should be 400", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -747,14 +747,14 @@ namespace UPTRMS.Api.Tests.BDD.Features.Auth
 #line 147
     testRunner.And("\"user-456\" is a member with role \"therapist\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table528 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table491 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table528.AddRow(new string[] {
+                table491.AddRow(new string[] {
                             "role",
                             "admin"});
 #line 148
-    testRunner.When("I send a PUT request to \"/api/organizations/org-123/members/user-456/role\" with:", ((string)(null)), table528, "When ");
+    testRunner.When("I send a PUT request to \"/api/organizations/org-123/members/user-456/role\" with:", ((string)(null)), table491, "When ");
 #line hidden
 #line 151
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -807,32 +807,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Auth
 #line 160
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table529 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table492 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table529.AddRow(new string[] {
+                table492.AddRow(new string[] {
                             "planId",
                             "string"});
-                table529.AddRow(new string[] {
+                table492.AddRow(new string[] {
                             "seats",
                             "number"});
-                table529.AddRow(new string[] {
+                table492.AddRow(new string[] {
                             "usedSeats",
                             "number"});
-                table529.AddRow(new string[] {
+                table492.AddRow(new string[] {
                             "billingCycle",
                             "string"});
-                table529.AddRow(new string[] {
+                table492.AddRow(new string[] {
                             "nextBillingDate",
                             "string"});
-                table529.AddRow(new string[] {
+                table492.AddRow(new string[] {
                             "paymentMethod",
                             "object"});
-                table529.AddRow(new string[] {
+                table492.AddRow(new string[] {
                             "billingAddress",
                             "object"});
 #line 161
-    testRunner.And("the response should contain:", ((string)(null)), table529, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table492, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -870,23 +870,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Auth
 #line 174
     testRunner.Given("I am owner of organization \"org-123\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table530 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table493 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table530.AddRow(new string[] {
+                table493.AddRow(new string[] {
                             "billingAddress.street",
                             "456 New Ave"});
-                table530.AddRow(new string[] {
+                table493.AddRow(new string[] {
                             "billingAddress.city",
                             "New City"});
-                table530.AddRow(new string[] {
+                table493.AddRow(new string[] {
                             "billingAddress.state",
                             "NY"});
-                table530.AddRow(new string[] {
+                table493.AddRow(new string[] {
                             "billingAddress.zip",
                             "10001"});
 #line 175
-    testRunner.When("I send a PUT request to \"/api/organizations/org-123/billing\" with:", ((string)(null)), table530, "When ");
+    testRunner.When("I send a PUT request to \"/api/organizations/org-123/billing\" with:", ((string)(null)), table493, "When ");
 #line hidden
 #line 181
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

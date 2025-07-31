@@ -65,11 +65,12 @@ public class SubscriptionManagementSteps : BaseStepDefinitions
     {
         throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
     }
-    [Given(@"I am on the registration page")]
-    public void GivenIAmOnTheRegistrationPage()
-    {
-        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
-    }
+    // Commented out to avoid conflict with CommonUISteps.GivenIAmOnThePage
+    // [Given(@"I am on the registration page")]
+    // public void GivenIAmOnTheRegistrationPage()
+    // {
+    //     throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    // }
     [When(@"I enter valid registration details:")]
     public void WhenIEnterValidRegistrationDetails(Table table)
     {
@@ -95,11 +96,12 @@ public class SubscriptionManagementSteps : BaseStepDefinitions
     {
         throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
     }
-    [When(@"I click the verification link")]
-    public void WhenIClickTheVerificationLink()
-    {
-        throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
-    }
+    // Commented out to avoid conflict with CommonUISteps.WhenIClick and WhenIClickTheLink
+    // [When(@"I click the verification link")]
+    // public void WhenIClickTheVerificationLink()
+    // {
+    //     throw new NotImplementedException("Feature not yet implemented - this is expected in BDD");
+    // }
     [Then(@"my account should be activated")]
     public void ThenMyAccountShouldBeActivated()
     {

@@ -64,12 +64,13 @@ public class AdminStepDefinitions : BaseStepDefinitions
         var userId = GetFromContext<string>("SelectedUserId") ?? "test-user";
         await WhenISendAPUTRequestToWithData($"/api/admin/users/{userId}/status", statusUpdate);
     }
-    [Then(@"the user should be (active|inactive|suspended|deleted)")]
-    public void ThenTheUserShouldBe(string status)
-    {
-        LastResponse!.IsSuccessStatusCode.Should().BeTrue();
-        ScenarioContext["UserStatus"] = status;
-    }
+    // Commented out to avoid conflict with UserManagementSteps.ThenTheUserShouldBeSuspended
+    // [Then(@"the user should be (active|inactive|suspended|deleted)")]
+    // public void ThenTheUserShouldBe(string status)
+    // {
+    //     LastResponse!.IsSuccessStatusCode.Should().BeTrue();
+    //     ScenarioContext["UserStatus"] = status;
+    // }
 
     // System Configuration
     

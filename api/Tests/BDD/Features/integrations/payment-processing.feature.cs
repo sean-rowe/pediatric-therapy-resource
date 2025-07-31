@@ -140,42 +140,42 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 17
     testRunner.And("platform uses 70/30 revenue split model", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1514 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1477 = new TechTalk.SpecFlow.Table(new string[] {
                             "Transaction Type",
                             "Amount",
                             "Platform Fee",
                             "Seller Amount",
                             "Processing Time",
                             "Tax Handling"});
-                table1514.AddRow(new string[] {
+                table1477.AddRow(new string[] {
                             "Digital resource",
                             "$24.99",
                             "$7.50",
                             "$17.49",
                             "<3 seconds",
                             "Automatic"});
-                table1514.AddRow(new string[] {
+                table1477.AddRow(new string[] {
                             "Physical product",
                             "$49.99",
                             "$15.00",
                             "$34.99",
                             "<3 seconds",
                             "Location-based"});
-                table1514.AddRow(new string[] {
+                table1477.AddRow(new string[] {
                             "Bundle purchase",
                             "$99.99",
                             "$30.00",
                             "$69.99",
                             "<5 seconds",
                             "Bundle taxation"});
-                table1514.AddRow(new string[] {
+                table1477.AddRow(new string[] {
                             "Subscription fee",
                             "$19.95",
                             "N/A",
                             "N/A",
                             "<2 seconds",
                             "Subscription tax"});
-                table1514.AddRow(new string[] {
+                table1477.AddRow(new string[] {
                             "Refund processing",
                             "-$24.99",
                             "-$7.50",
@@ -183,7 +183,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
                             "<10 seconds",
                             "Tax adjustment"});
 #line 18
-    testRunner.When("marketplace payment processing is tested:", ((string)(null)), table1514, "When ");
+    testRunner.When("marketplace payment processing is tested:", ((string)(null)), table1477, "When ");
 #line hidden
 #line 25
     testRunner.Then("all payment transactions should complete successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -238,56 +238,56 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 33
     testRunner.And("billing cycles support monthly and annual options", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1515 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1478 = new TechTalk.SpecFlow.Table(new string[] {
                             "Event Type",
                             "Trigger",
                             "Expected Action",
                             "Payment Processing",
                             "Communication"});
-                table1515.AddRow(new string[] {
+                table1478.AddRow(new string[] {
                             "New subscription",
                             "User signup",
                             "Immediate charge",
                             "Stripe payment",
                             "Welcome email"});
-                table1515.AddRow(new string[] {
+                table1478.AddRow(new string[] {
                             "Renewal",
                             "Billing cycle end",
                             "Automatic charge",
                             "Saved payment",
                             "Renewal notice"});
-                table1515.AddRow(new string[] {
+                table1478.AddRow(new string[] {
                             "Upgrade",
                             "Plan change",
                             "Prorated charge",
                             "Immediate payment",
                             "Upgrade confirm"});
-                table1515.AddRow(new string[] {
+                table1478.AddRow(new string[] {
                             "Downgrade",
                             "Plan change",
                             "Credit applied",
                             "Next billing cycle",
                             "Downgrade notice"});
-                table1515.AddRow(new string[] {
+                table1478.AddRow(new string[] {
                             "Cancellation",
                             "User request",
                             "Cancel at period end",
                             "No charge",
                             "Cancellation email"});
-                table1515.AddRow(new string[] {
+                table1478.AddRow(new string[] {
                             "Failed payment",
                             "Payment decline",
                             "Retry attempts",
                             "Multiple attempts",
                             "Dunning emails"});
-                table1515.AddRow(new string[] {
+                table1478.AddRow(new string[] {
                             "Reactivation",
                             "After cancellation",
                             "New billing cycle",
                             "Fresh payment",
                             "Reactivation email"});
 #line 34
-    testRunner.When("subscription lifecycle events are tested:", ((string)(null)), table1515, "When ");
+    testRunner.When("subscription lifecycle events are tested:", ((string)(null)), table1478, "When ");
 #line hidden
 #line 43
     testRunner.Then("subscription states should be managed correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -342,44 +342,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 51
     testRunner.And("PayPal Express Checkout is enabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1516 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1479 = new TechTalk.SpecFlow.Table(new string[] {
                             "Payment Scenario",
                             "Amount",
                             "PayPal Feature",
                             "Expected Outcome",
                             "Fallback Behavior"});
-                table1516.AddRow(new string[] {
+                table1479.AddRow(new string[] {
                             "Standard purchase",
                             "$29.99",
                             "Express Checkout",
                             "Successful payment",
                             "None required"});
-                table1516.AddRow(new string[] {
+                table1479.AddRow(new string[] {
                             "International user",
                             "€25.00",
                             "Currency exchange",
                             "Auto-conversion",
                             "USD equivalent"});
-                table1516.AddRow(new string[] {
+                table1479.AddRow(new string[] {
                             "PayPal Credit",
                             "$199.99",
                             "Credit financing",
                             "Credit approval",
                             "Standard PayPal"});
-                table1516.AddRow(new string[] {
+                table1479.AddRow(new string[] {
                             "Disputed transaction",
                             "$49.99",
                             "Dispute handling",
                             "Resolution process",
                             "Manual review"});
-                table1516.AddRow(new string[] {
+                table1479.AddRow(new string[] {
                             "Refund via PayPal",
                             "-$29.99",
                             "PayPal refund",
                             "Refund processed",
                             "Manual processing"});
 #line 52
-    testRunner.When("PayPal payment scenarios are tested:", ((string)(null)), table1516, "When ");
+    testRunner.When("PayPal payment scenarios are tested:", ((string)(null)), table1479, "When ");
 #line hidden
 #line 59
     testRunner.Then("PayPal payments should integrate seamlessly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -434,50 +434,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 67
     testRunner.And("tax rates are updated automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1517 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1480 = new TechTalk.SpecFlow.Table(new string[] {
                             "Purchase Location",
                             "Product Type",
                             "Tax Rate Applied",
                             "Compliance Requirement",
                             "Special Handling"});
-                table1517.AddRow(new string[] {
+                table1480.AddRow(new string[] {
                             "California, US",
                             "Digital download",
                             "7.25%",
                             "CA digital tax law",
                             "Digital services"});
-                table1517.AddRow(new string[] {
+                table1480.AddRow(new string[] {
                             "New York, US",
                             "Physical product",
                             "8.00%",
                             "NY sales tax",
                             "Shipping address"});
-                table1517.AddRow(new string[] {
+                table1480.AddRow(new string[] {
                             "Texas, US",
                             "SaaS subscription",
                             "6.25%",
                             "TX software tax",
                             "Business use"});
-                table1517.AddRow(new string[] {
+                table1480.AddRow(new string[] {
                             "Ontario, Canada",
                             "Digital resource",
                             "13.00%",
                             "HST calculation",
                             "GST/PST split"});
-                table1517.AddRow(new string[] {
+                table1480.AddRow(new string[] {
                             "London, UK",
                             "Marketplace item",
                             "20.00%",
                             "UK VAT rules",
                             "VAT registration"});
-                table1517.AddRow(new string[] {
+                table1480.AddRow(new string[] {
                             "International",
                             "Any product",
                             "0.00%",
                             "Export exemption",
                             "Documentation"});
 #line 68
-    testRunner.When("tax calculation scenarios are tested:", ((string)(null)), table1517, "When ");
+    testRunner.When("tax calculation scenarios are tested:", ((string)(null)), table1480, "When ");
 #line hidden
 #line 76
     testRunner.Then("tax calculations should be accurate for all jurisdictions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -529,56 +529,56 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 84
     testRunner.Given("platform supports various payment methods", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1518 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1481 = new TechTalk.SpecFlow.Table(new string[] {
                             "Payment Method",
                             "Integration Type",
                             "Use Case",
                             "Processing Time",
                             "Success Rate Target"});
-                table1518.AddRow(new string[] {
+                table1481.AddRow(new string[] {
                             "Credit Cards",
                             "Stripe Elements",
                             "All transactions",
                             "<2 seconds",
                             ">99.5%"});
-                table1518.AddRow(new string[] {
+                table1481.AddRow(new string[] {
                             "Debit Cards",
                             "Stripe Elements",
                             "Immediate payment",
                             "<2 seconds",
                             ">99.0%"});
-                table1518.AddRow(new string[] {
+                table1481.AddRow(new string[] {
                             "ACH Bank Transfer",
                             "Stripe ACH",
                             "Large amounts",
                             "3-5 business days",
                             ">98.0%"});
-                table1518.AddRow(new string[] {
+                table1481.AddRow(new string[] {
                             "Apple Pay",
                             "Stripe API",
                             "Mobile purchases",
                             "<3 seconds",
                             ">99.0%"});
-                table1518.AddRow(new string[] {
+                table1481.AddRow(new string[] {
                             "Google Pay",
                             "Stripe API",
                             "Mobile purchases",
                             "<3 seconds",
                             ">99.0%"});
-                table1518.AddRow(new string[] {
+                table1481.AddRow(new string[] {
                             "PayPal",
                             "PayPal API",
                             "Alternative method",
                             "<5 seconds",
                             ">98.5%"});
-                table1518.AddRow(new string[] {
+                table1481.AddRow(new string[] {
                             "Corporate Cards",
                             "Stripe Business",
                             "Enterprise users",
                             "<2 seconds",
                             ">99.5%"});
 #line 85
-    testRunner.When("payment method scenarios are tested:", ((string)(null)), table1518, "When ");
+    testRunner.When("payment method scenarios are tested:", ((string)(null)), table1481, "When ");
 #line hidden
 #line 94
     testRunner.Then("all payment methods should be supported", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -633,50 +633,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 102
     testRunner.And("machine learning models detect suspicious activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1519 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1482 = new TechTalk.SpecFlow.Table(new string[] {
                             "Fraud Indicator",
                             "Risk Level",
                             "Action Taken",
                             "User Experience",
                             "Manual Review"});
-                table1519.AddRow(new string[] {
+                table1482.AddRow(new string[] {
                             "Velocity check",
                             "Low",
                             "Allow with logging",
                             "Normal processing",
                             "None"});
-                table1519.AddRow(new string[] {
+                table1482.AddRow(new string[] {
                             "Geographic anomaly",
                             "Medium",
                             "Additional verification",
                             "Extra auth step",
                             "Flagged"});
-                table1519.AddRow(new string[] {
+                table1482.AddRow(new string[] {
                             "Card testing",
                             "High",
                             "Block transaction",
                             "Payment declined",
                             "Immediate"});
-                table1519.AddRow(new string[] {
+                table1482.AddRow(new string[] {
                             "Stolen card",
                             "Very High",
                             "Block and report",
                             "Payment blocked",
                             "Law enforcement"});
-                table1519.AddRow(new string[] {
+                table1482.AddRow(new string[] {
                             "Chargeback pattern",
                             "Medium",
                             "Enhanced monitoring",
                             "Extra verification",
                             "Analyst review"});
-                table1519.AddRow(new string[] {
+                table1482.AddRow(new string[] {
                             "Large amount",
                             "Medium",
                             "Manual approval",
                             "Pending notification",
                             "Required"});
 #line 103
-    testRunner.When("fraud prevention scenarios are tested:", ((string)(null)), table1519, "When ");
+    testRunner.When("fraud prevention scenarios are tested:", ((string)(null)), table1482, "When ");
 #line hidden
 #line 111
     testRunner.Then("fraud detection should protect platform and users", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -728,44 +728,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 118
     testRunner.Given("chargeback management is integrated with payment processors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1520 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1483 = new TechTalk.SpecFlow.Table(new string[] {
                             "Chargeback Reason",
                             "Dispute Type",
                             "Evidence Required",
                             "Response Strategy",
                             "Success Rate Target"});
-                table1520.AddRow(new string[] {
+                table1483.AddRow(new string[] {
                             "Unrecognized charge",
                             "Service dispute",
                             "Usage logs",
                             "Provide evidence",
                             ">60%"});
-                table1520.AddRow(new string[] {
+                table1483.AddRow(new string[] {
                             "Service not provided",
                             "Quality dispute",
                             "Delivery proof",
                             "Show service",
                             ">70%"});
-                table1520.AddRow(new string[] {
+                table1483.AddRow(new string[] {
                             "Duplicate charge",
                             "Billing error",
                             "Transaction logs",
                             "Refund duplicate",
                             ">90%"});
-                table1520.AddRow(new string[] {
+                table1483.AddRow(new string[] {
                             "Fraudulent card use",
                             "Criminal fraud",
                             "Fraud evidence",
                             "Contest with proof",
                             ">80%"});
-                table1520.AddRow(new string[] {
+                table1483.AddRow(new string[] {
                             "Cancellation policy",
                             "Policy dispute",
                             "Terms of service",
                             "Policy explanation",
                             ">50%"});
 #line 119
-    testRunner.When("chargeback scenarios are tested:", ((string)(null)), table1520, "When ");
+    testRunner.When("chargeback scenarios are tested:", ((string)(null)), table1483, "When ");
 #line hidden
 #line 126
     testRunner.Then("chargebacks should be handled systematically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -817,44 +817,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 134
     testRunner.Given("enterprise billing is configured for large accounts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1521 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1484 = new TechTalk.SpecFlow.Table(new string[] {
                             "Enterprise Feature",
                             "Configuration",
                             "Processing Method",
                             "Approval Workflow",
                             "Payment Terms"});
-                table1521.AddRow(new string[] {
+                table1484.AddRow(new string[] {
                             "Net-30 invoicing",
                             "Credit terms",
                             "Manual invoicing",
                             "Finance approval",
                             "30 days"});
-                table1521.AddRow(new string[] {
+                table1484.AddRow(new string[] {
                             "Purchase orders",
                             "PO matching",
                             "PO validation",
                             "Manager approval",
                             "Per contract"});
-                table1521.AddRow(new string[] {
+                table1484.AddRow(new string[] {
                             "Multi-seat licensing",
                             "Bulk billing",
                             "Annual billing",
                             "Admin approval",
                             "Annual"});
-                table1521.AddRow(new string[] {
+                table1484.AddRow(new string[] {
                             "Volume discounts",
                             "Tiered pricing",
                             "Automatic discount",
                             "System applied",
                             "Immediate"});
-                table1521.AddRow(new string[] {
+                table1484.AddRow(new string[] {
                             "Custom contracts",
                             "Individual terms",
                             "Negotiated rates",
                             "Legal approval",
                             "Varies"});
 #line 135
-    testRunner.When("enterprise payment scenarios are tested:", ((string)(null)), table1521, "When ");
+    testRunner.When("enterprise payment scenarios are tested:", ((string)(null)), table1484, "When ");
 #line hidden
 #line 142
     testRunner.Then("enterprise billing should support complex arrangements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -906,50 +906,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 149
     testRunner.Given("international payment processing is enabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1522 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1485 = new TechTalk.SpecFlow.Table(new string[] {
                             "Country/Region",
                             "Currency",
                             "Payment Methods",
                             "Local Requirements",
                             "Tax Compliance"});
-                table1522.AddRow(new string[] {
+                table1485.AddRow(new string[] {
                             "United States",
                             "USD",
                             "Cards, ACH, PayPal",
                             "US banking rules",
                             "State sales tax"});
-                table1522.AddRow(new string[] {
+                table1485.AddRow(new string[] {
                             "European Union",
                             "EUR",
                             "Cards, SEPA, PayPal",
                             "PSD2 compliance",
                             "VAT registration"});
-                table1522.AddRow(new string[] {
+                table1485.AddRow(new string[] {
                             "United Kingdom",
                             "GBP",
                             "Cards, Faster Pay",
                             "FCA regulations",
                             "UK VAT"});
-                table1522.AddRow(new string[] {
+                table1485.AddRow(new string[] {
                             "Canada",
                             "CAD",
                             "Cards, Interac",
                             "Canadian banking",
                             "GST/PST/HST"});
-                table1522.AddRow(new string[] {
+                table1485.AddRow(new string[] {
                             "Australia",
                             "AUD",
                             "Cards, BPay",
                             "AUSTRAC compliance",
                             "GST"});
-                table1522.AddRow(new string[] {
+                table1485.AddRow(new string[] {
                             "Japan",
                             "JPY",
                             "Cards, Konbini",
                             "FSA regulations",
                             "Consumption tax"});
 #line 150
-    testRunner.When("international payment scenarios are tested:", ((string)(null)), table1522, "When ");
+    testRunner.When("international payment scenarios are tested:", ((string)(null)), table1485, "When ");
 #line hidden
 #line 158
     testRunner.Then("international payments should be processed correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1001,50 +1001,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 166
     testRunner.Given("PCI DSS Level 1 compliance is required", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1523 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1486 = new TechTalk.SpecFlow.Table(new string[] {
                             "Compliance Area",
                             "Requirement",
                             "Implementation",
                             "Validation Method",
                             "Certification"});
-                table1523.AddRow(new string[] {
+                table1486.AddRow(new string[] {
                             "Data encryption",
                             "Cardholder data",
                             "AES-256 encryption",
                             "Penetration test",
                             "Annual assessment"});
-                table1523.AddRow(new string[] {
+                table1486.AddRow(new string[] {
                             "Network security",
                             "Secure transmission",
                             "TLS 1.3 minimum",
                             "Network scan",
                             "Quarterly scan"});
-                table1523.AddRow(new string[] {
+                table1486.AddRow(new string[] {
                             "Access controls",
                             "Restricted access",
                             "Role-based access",
                             "Access review",
                             "Annual review"});
-                table1523.AddRow(new string[] {
+                table1486.AddRow(new string[] {
                             "Monitoring",
                             "Audit trails",
                             "Complete logging",
                             "Log analysis",
                             "Continuous"});
-                table1523.AddRow(new string[] {
+                table1486.AddRow(new string[] {
                             "Testing",
                             "Security testing",
                             "Regular pen tests",
                             "External testing",
                             "Annual"});
-                table1523.AddRow(new string[] {
+                table1486.AddRow(new string[] {
                             "Documentation",
                             "Security policies",
                             "Comprehensive docs",
                             "Policy review",
                             "Annual update"});
 #line 167
-    testRunner.When("PCI compliance is validated:", ((string)(null)), table1523, "When ");
+    testRunner.When("PCI compliance is validated:", ((string)(null)), table1486, "When ");
 #line hidden
 #line 175
     testRunner.Then("PCI compliance should be maintained at Level 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1096,38 +1096,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 182
     testRunner.Given("payment tokenization is implemented", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1524 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1487 = new TechTalk.SpecFlow.Table(new string[] {
                             "Token Type",
                             "Use Case",
                             "Security Level",
                             "Token Lifecycle",
                             "Access Control"});
-                table1524.AddRow(new string[] {
+                table1487.AddRow(new string[] {
                             "Single-use tokens",
                             "One-time payments",
                             "High security",
                             "Immediate expiry",
                             "Payment only"});
-                table1524.AddRow(new string[] {
+                table1487.AddRow(new string[] {
                             "Multi-use tokens",
                             "Subscriptions",
                             "Medium security",
                             "Until expired",
                             "Authorized use"});
-                table1524.AddRow(new string[] {
+                table1487.AddRow(new string[] {
                             "Network tokens",
                             "Card-on-file",
                             "Highest security",
                             "Card replacement",
                             "Automatic update"});
-                table1524.AddRow(new string[] {
+                table1487.AddRow(new string[] {
                             "Merchant tokens",
                             "Internal reference",
                             "Platform security",
                             "Indefinite",
                             "Internal only"});
 #line 183
-    testRunner.When("tokenization scenarios are tested:", ((string)(null)), table1524, "When ");
+    testRunner.When("tokenization scenarios are tested:", ((string)(null)), table1487, "When ");
 #line hidden
 #line 189
     testRunner.Then("tokenization should protect sensitive data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1179,50 +1179,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 197
     testRunner.Given("payment failures may occur for various reasons", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1525 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1488 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failure Type",
                             "Error Condition",
                             "Recovery Strategy",
                             "User Communication",
                             "Retry Logic"});
-                table1525.AddRow(new string[] {
+                table1488.AddRow(new string[] {
                             "Insufficient funds",
                             "Declined by bank",
                             "Suggest alternative",
                             "Clear error message",
                             "No automatic retry"});
-                table1525.AddRow(new string[] {
+                table1488.AddRow(new string[] {
                             "Card expired",
                             "Expired card",
                             "Request card update",
                             "Update prompt",
                             "After update"});
-                table1525.AddRow(new string[] {
+                table1488.AddRow(new string[] {
                             "Network timeout",
                             "Gateway timeout",
                             "Automatic retry",
                             "Processing message",
                             "3 retries"});
-                table1525.AddRow(new string[] {
+                table1488.AddRow(new string[] {
                             "Processor error",
                             "System unavailable",
                             "Switch processor",
                             "Try again message",
                             "Alternative route"});
-                table1525.AddRow(new string[] {
+                table1488.AddRow(new string[] {
                             "Fraud decline",
                             "Fraud detected",
                             "Manual review",
                             "Security message",
                             "After review"});
-                table1525.AddRow(new string[] {
+                table1488.AddRow(new string[] {
                             "3D Secure failure",
                             "Authentication fail",
                             "Retry with prompt",
                             "Authentication req",
                             "User initiated"});
 #line 198
-    testRunner.When("payment failure scenarios are tested:", ((string)(null)), table1525, "When ");
+    testRunner.When("payment failure scenarios are tested:", ((string)(null)), table1488, "When ");
 #line hidden
 #line 206
     testRunner.Then("payment failures should be handled gracefully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1274,44 +1274,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 213
     testRunner.Given("payment reconciliation runs daily", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1526 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1489 = new TechTalk.SpecFlow.Table(new string[] {
                             "Discrepancy Type",
                             "Cause",
                             "Detection Method",
                             "Resolution Process",
                             "Prevention"});
-                table1526.AddRow(new string[] {
+                table1489.AddRow(new string[] {
                             "Missing payment",
                             "Processing delay",
                             "Amount mismatch",
                             "Manual investigation",
                             "Extended timeout"});
-                table1526.AddRow(new string[] {
+                table1489.AddRow(new string[] {
                             "Duplicate charge",
                             "Double processing",
                             "Duplicate detection",
                             "Automatic refund",
                             "Idempotency keys"});
-                table1526.AddRow(new string[] {
+                table1489.AddRow(new string[] {
                             "Amount mismatch",
                             "Calculation error",
                             "Sum comparison",
                             "Manual correction",
                             "Validation rules"});
-                table1526.AddRow(new string[] {
+                table1489.AddRow(new string[] {
                             "Currency error",
                             "Wrong exchange rate",
                             "Rate validation",
                             "Rate correction",
                             "Real-time rates"});
-                table1526.AddRow(new string[] {
+                table1489.AddRow(new string[] {
                             "Tax discrepancy",
                             "Calculation error",
                             "Tax validation",
                             "Tax recalculation",
                             "Service update"});
 #line 214
-    testRunner.When("reconciliation scenarios are tested:", ((string)(null)), table1526, "When ");
+    testRunner.When("reconciliation scenarios are tested:", ((string)(null)), table1489, "When ");
 #line hidden
 #line 221
     testRunner.Then("discrepancies should be detected automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1363,38 +1363,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 228
     testRunner.Given("platform may experience high transaction volumes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1527 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1490 = new TechTalk.SpecFlow.Table(new string[] {
                             "Volume Scenario",
                             "Transaction Rate",
                             "Processing Target",
                             "Error Rate Target",
                             "Scaling Strategy"});
-                table1527.AddRow(new string[] {
+                table1490.AddRow(new string[] {
                             "Normal operations",
                             "100 transactions/min",
                             "<3 seconds",
                             "<0.5%",
                             "Standard capacity"});
-                table1527.AddRow(new string[] {
+                table1490.AddRow(new string[] {
                             "Peak traffic",
                             "1000 transactions/min",
                             "<5 seconds",
                             "<1.0%",
                             "Auto-scaling"});
-                table1527.AddRow(new string[] {
+                table1490.AddRow(new string[] {
                             "Sale events",
                             "2000 transactions/min",
                             "<10 seconds",
                             "<2.0%",
                             "Pre-scaling"});
-                table1527.AddRow(new string[] {
+                table1490.AddRow(new string[] {
                             "System stress",
                             "5000 transactions/min",
                             "<30 seconds",
                             "<5.0%",
                             "Load balancing"});
 #line 229
-    testRunner.When("high-volume scenarios are tested:", ((string)(null)), table1527, "When ");
+    testRunner.When("high-volume scenarios are tested:", ((string)(null)), table1490, "When ");
 #line hidden
 #line 235
     testRunner.Then("high volume should be handled without service degradation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1446,50 +1446,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 242
     testRunner.Given("refunds may be requested for various reasons", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1528 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1491 = new TechTalk.SpecFlow.Table(new string[] {
                             "Refund Scenario",
                             "Refund Type",
                             "Processing Method",
                             "Timeline Target",
                             "Complexity"});
-                table1528.AddRow(new string[] {
+                table1491.AddRow(new string[] {
                             "Standard refund",
                             "Full amount",
                             "Original payment",
                             "3-5 business days",
                             "Simple"});
-                table1528.AddRow(new string[] {
+                table1491.AddRow(new string[] {
                             "Partial refund",
                             "Portion of payment",
                             "Same method",
                             "3-5 business days",
                             "Moderate"});
-                table1528.AddRow(new string[] {
+                table1491.AddRow(new string[] {
                             "Expired card refund",
                             "Card no longer valid",
                             "Bank credit",
                             "5-10 business days",
                             "Complex"});
-                table1528.AddRow(new string[] {
+                table1491.AddRow(new string[] {
                             "PayPal refund",
                             "PayPal transaction",
                             "PayPal system",
                             "1-2 business days",
                             "Simple"});
-                table1528.AddRow(new string[] {
+                table1491.AddRow(new string[] {
                             "Chargeback refund",
                             "Forced refund",
                             "Dispute resolution",
                             "Per card network",
                             "Very complex"});
-                table1528.AddRow(new string[] {
+                table1491.AddRow(new string[] {
                             "Multi-party refund",
                             "Marketplace split",
                             "Multiple recipients",
                             "3-5 business days",
                             "Complex"});
 #line 243
-    testRunner.When("refund scenarios are tested:", ((string)(null)), table1528, "When ");
+    testRunner.When("refund scenarios are tested:", ((string)(null)), table1491, "When ");
 #line hidden
 #line 251
     testRunner.Then("refunds should be processed accurately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1541,44 +1541,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 258
     testRunner.Given("security incidents may affect payment processing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1529 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1492 = new TechTalk.SpecFlow.Table(new string[] {
                             "Incident Type",
                             "Severity Level",
                             "Response Action",
                             "Communication",
                             "Recovery Time"});
-                table1529.AddRow(new string[] {
+                table1492.AddRow(new string[] {
                             "Data breach",
                             "Critical",
                             "Immediate shutdown",
                             "All stakeholders",
                             "<1 hour"});
-                table1529.AddRow(new string[] {
+                table1492.AddRow(new string[] {
                             "Fraud attack",
                             "High",
                             "Block suspicious",
                             "Affected users",
                             "<15 minutes"});
-                table1529.AddRow(new string[] {
+                table1492.AddRow(new string[] {
                             "System compromise",
                             "Critical",
                             "Isolate systems",
                             "Security team",
                             "<30 minutes"});
-                table1529.AddRow(new string[] {
+                table1492.AddRow(new string[] {
                             "Token exposure",
                             "Medium",
                             "Revoke tokens",
                             "Token owners",
                             "<5 minutes"});
-                table1529.AddRow(new string[] {
+                table1492.AddRow(new string[] {
                             "Insider threat",
                             "High",
                             "Restrict access",
                             "Management",
                             "<10 minutes"});
 #line 259
-    testRunner.When("security incident scenarios are tested:", ((string)(null)), table1529, "When ");
+    testRunner.When("security incident scenarios are tested:", ((string)(null)), table1492, "When ");
 #line hidden
 #line 266
     testRunner.Then("security incidents should trigger immediate response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

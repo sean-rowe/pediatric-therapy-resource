@@ -97,6 +97,7 @@ public class CommonUISteps : BaseStepDefinitions
 
     #region Button/Link Actions
     
+    // Keep this as the primary click handler
     [When(@"I click (.*)")]
     public async Task WhenIClick(string buttonOrLinkText)
     {
@@ -124,11 +125,12 @@ public class CommonUISteps : BaseStepDefinitions
         await WhenIClick(buttonName);
     }
     
-    [When(@"I click the (.*) link")]
-    public async Task WhenIClickTheLink(string linkText)
-    {
-        await WhenIClick(linkText);
-    }
+    // Commented out to avoid ambiguity - WhenIClick handles all click actions
+    // [When(@"I click the (.*) link")]
+    // public async Task WhenIClickTheLink(string linkText)
+    // {
+    //     await WhenIClick(linkText);
+    // }
     
     [When(@"I submit the form")]
     public async Task WhenISubmitTheForm()
@@ -144,9 +146,9 @@ public class CommonUISteps : BaseStepDefinitions
     #region Validation Steps
 
     [Then(@"I should see (.*)")]
-    public async Task ThenIShouldSee(string text)
+    public void ThenIShouldSee(string text)
     {
-        await ThenTheResponseShouldContain(text);
+        ThenTheResponseShouldContain(text);
         ScenarioContext["VisibleText"] = text;
     }
     
@@ -177,17 +179,17 @@ public class CommonUISteps : BaseStepDefinitions
     }
     
     [Then(@"I should see error (.*)")]
-    public async Task ThenIShouldSeeError(string errorMessage)
+    public void ThenIShouldSeeError(string errorMessage)
     {
-        await ThenIShouldSee(errorMessage);
+        ThenIShouldSee(errorMessage);
         ScenarioContext["ErrorDisplayed"] = true;
         ScenarioContext["ErrorMessage"] = errorMessage;
     }
     
     [Then(@"I should see success message (.*)")]
-    public async Task ThenIShouldSeeSuccessMessage(string successMessage)
+    public void ThenIShouldSeeSuccessMessage(string successMessage)
     {
-        await ThenIShouldSee(successMessage);
+        ThenIShouldSee(successMessage);
         ScenarioContext["SuccessDisplayed"] = true;
         ScenarioContext["SuccessMessage"] = successMessage;
     }

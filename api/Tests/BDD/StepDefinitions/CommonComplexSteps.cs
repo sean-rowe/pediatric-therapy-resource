@@ -49,7 +49,7 @@ public class CommonComplexSteps : BaseStepDefinitions
         var content = new StringContent(json, Encoding.UTF8, "application/json");
         
         var response = await Client.PostAsync("/api/pecs/implement-modified", content);
-        LastResponse = response;
+        SetLastResponse(response);
         
         ScenarioContext["PECSModifications"] = modifications;
         ScenarioContext["PECSImplemented"] = true;
@@ -124,7 +124,7 @@ public class CommonComplexSteps : BaseStepDefinitions
         var content = new StringContent(json, Encoding.UTF8, "application/json");
         
         var response = await Client.PostAsync("/api/sessions/data", content);
-        LastResponse = response;
+        SetLastResponse(response);
         
         ScenarioContext["CollectedData"] = dataPoints;
     }
@@ -155,7 +155,7 @@ public class CommonComplexSteps : BaseStepDefinitions
         var content = new StringContent(json, Encoding.UTF8, "application/json");
         
         var response = await Client.PostAsync("/api/assessments/complete", content);
-        LastResponse = response;
+        SetLastResponse(response);
         
         ScenarioContext["AssessmentCompleted"] = true;
         ScenarioContext["AssessmentData"] = assessmentData;
@@ -193,7 +193,7 @@ public class CommonComplexSteps : BaseStepDefinitions
         var content = new StringContent(json, Encoding.UTF8, "application/json");
         
         var response = await Client.PostAsync("/api/interventions/create", content);
-        LastResponse = response;
+        SetLastResponse(response);
         
         ScenarioContext["InterventionPlan"] = interventions;
     }
@@ -225,7 +225,7 @@ public class CommonComplexSteps : BaseStepDefinitions
         var content = new StringContent(json, Encoding.UTF8, "application/json");
         
         var response = await Client.PostAsync("/api/workflows/configure", content);
-        LastResponse = response;
+        SetLastResponse(response);
         
         ScenarioContext["WorkflowConfigured"] = true;
         ScenarioContext["WorkflowSteps"] = workflowSteps;
@@ -262,7 +262,7 @@ public class CommonComplexSteps : BaseStepDefinitions
         var content = new StringContent(json, Encoding.UTF8, "application/json");
         
         var response = await Client.PostAsync("/api/batch/execute", content);
-        LastResponse = response;
+        SetLastResponse(response);
         
         ScenarioContext["BatchOperations"] = operations;
     }

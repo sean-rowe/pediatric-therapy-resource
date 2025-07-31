@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 17
     testRunner.And("proactive management prevents storage-related failures", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1221 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1184 = new TechTalk.SpecFlow.Table(new string[] {
                             "Storage Type",
                             "Capacity Threshold",
                             "Monitoring Frequency",
                             "Alert Levels",
                             "Management Actions",
                             "Performance Impact"});
-                table1221.AddRow(new string[] {
+                table1184.AddRow(new string[] {
                             "Primary database",
                             "80% capacity",
                             "Real-time",
                             "Warning, critical, emergency",
                             "Data archiving, cleanup",
                             "Query performance"});
-                table1221.AddRow(new string[] {
+                table1184.AddRow(new string[] {
                             "File storage",
                             "85% capacity",
                             "Hourly",
                             "Warning, critical",
                             "File compression, migration",
                             "File access speed"});
-                table1221.AddRow(new string[] {
+                table1184.AddRow(new string[] {
                             "Cache storage",
                             "90% capacity",
                             "Continuous",
                             "Warning only",
                             "Cache eviction",
                             "Cache hit rates"});
-                table1221.AddRow(new string[] {
+                table1184.AddRow(new string[] {
                             "Backup storage",
                             "75% capacity",
                             "Daily",
                             "Warning, critical",
                             "Backup rotation, cleanup",
                             "Backup reliability"});
-                table1221.AddRow(new string[] {
+                table1184.AddRow(new string[] {
                             "User storage",
                             "95% capacity",
                             "User-triggered",
                             "User warning",
                             "User cleanup guidance",
                             "User experience"});
-                table1221.AddRow(new string[] {
+                table1184.AddRow(new string[] {
                             "System logs",
                             "70% capacity",
                             "Hourly",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Log rotation, archiving",
                             "System monitoring"});
 #line 18
-    testRunner.When("monitoring storage capacity:", ((string)(null)), table1221, "When ");
+    testRunner.When("monitoring storage capacity:", ((string)(null)), table1184, "When ");
 #line hidden
 #line 26
     testRunner.Then("monitoring should be continuous and accurate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 34
     testRunner.And("space reclamation optimizes storage utilization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1222 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1185 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cleanup Category",
                             "Cleanup Rules",
                             "Execution Schedule",
                             "Safety Measures",
                             "Recovery Options",
                             "Efficiency Metrics"});
-                table1222.AddRow(new string[] {
+                table1185.AddRow(new string[] {
                             "Temporary files",
                             "Age-based cleanup",
                             "Daily at 2 AM",
                             "File type validation",
                             "7-day recovery",
                             "Space reclaimed"});
-                table1222.AddRow(new string[] {
+                table1185.AddRow(new string[] {
                             "Cache files",
                             "LRU eviction",
                             "Continuous",
                             "Cache coherence",
                             "Cache regeneration",
                             "Cache efficiency"});
-                table1222.AddRow(new string[] {
+                table1185.AddRow(new string[] {
                             "Log files",
                             "Rotation policy",
                             "Weekly",
                             "Log integrity",
                             "Log restoration",
                             "Log management"});
-                table1222.AddRow(new string[] {
+                table1185.AddRow(new string[] {
                             "Backup files",
                             "Retention policy",
                             "Monthly",
                             "Backup verification",
                             "Backup restoration",
                             "Backup optimization"});
-                table1222.AddRow(new string[] {
+                table1185.AddRow(new string[] {
                             "User uploads",
                             "Retention rules",
                             "User-defined",
                             "User confirmation",
                             "Trash recovery",
                             "Storage optimization"});
-                table1222.AddRow(new string[] {
+                table1185.AddRow(new string[] {
                             "System archives",
                             "Archive policy",
                             "Quarterly",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Archive restoration",
                             "Archive efficiency"});
 #line 35
-    testRunner.When("implementing automated cleanup:", ((string)(null)), table1222, "When ");
+    testRunner.When("implementing automated cleanup:", ((string)(null)), table1185, "When ");
 #line hidden
 #line 43
     testRunner.Then("cleanup should be safe and reliable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 51
     testRunner.And("organizational limits ensure fair resource allocation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1223 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1186 = new TechTalk.SpecFlow.Table(new string[] {
                             "Quota Type",
                             "Limit Calculation",
                             "Enforcement Method",
                             "Overage Handling",
                             "Upgrade Options",
                             "Monitoring Tools"});
-                table1223.AddRow(new string[] {
+                table1186.AddRow(new string[] {
                             "Individual user",
                             "Role-based allocation",
                             "Soft/hard limits",
                             "Graceful degradation",
                             "Quota upgrades",
                             "User dashboards"});
-                table1223.AddRow(new string[] {
+                table1186.AddRow(new string[] {
                             "Team quotas",
                             "Team size calculation",
                             "Team enforcement",
                             "Team notifications",
                             "Team upgrades",
                             "Team analytics"});
-                table1223.AddRow(new string[] {
+                table1186.AddRow(new string[] {
                             "Organization limits",
                             "Enterprise allocation",
                             "Organization enforcement",
                             "Organization alerts",
                             "Plan upgrades",
                             "Organization reporting"});
-                table1223.AddRow(new string[] {
+                table1186.AddRow(new string[] {
                             "Project quotas",
                             "Project-based limits",
                             "Project enforcement",
                             "Project warnings",
                             "Project expansion",
                             "Project tracking"});
-                table1223.AddRow(new string[] {
+                table1186.AddRow(new string[] {
                             "Content type limits",
                             "Type-specific limits",
                             "Content enforcement",
                             "Type notifications",
                             "Type adjustments",
                             "Content analytics"});
-                table1223.AddRow(new string[] {
+                table1186.AddRow(new string[] {
                             "Temporary quotas",
                             "Time-based limits",
                             "Temporary enforcement",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Extension requests",
                             "Temporary tracking"});
 #line 52
-    testRunner.When("managing storage quotas:", ((string)(null)), table1223, "When ");
+    testRunner.When("managing storage quotas:", ((string)(null)), table1186, "When ");
 #line hidden
 #line 60
     testRunner.Then("quotas should be fair and appropriate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 68
     testRunner.And("optimization improves storage efficiency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1224 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1187 = new TechTalk.SpecFlow.Table(new string[] {
                             "Optimization Type",
                             "Compression Algorithm",
                             "Efficiency Gain",
                             "Processing Overhead",
                             "Quality Impact",
                             "Compatibility"});
-                table1224.AddRow(new string[] {
+                table1187.AddRow(new string[] {
                             "Text files",
                             "GZIP compression",
                             "60-80% reduction",
                             "Low overhead",
                             "No quality loss",
                             "Universal compatibility"});
-                table1224.AddRow(new string[] {
+                table1187.AddRow(new string[] {
                             "Images",
                             "JPEG optimization",
                             "30-50% reduction",
                             "Medium overhead",
                             "Minimal quality loss",
                             "Wide compatibility"});
-                table1224.AddRow(new string[] {
+                table1187.AddRow(new string[] {
                             "Videos",
                             "H.264 compression",
                             "50-70% reduction",
                             "High overhead",
                             "Acceptable quality loss",
                             "Good compatibility"});
-                table1224.AddRow(new string[] {
+                table1187.AddRow(new string[] {
                             "Documents",
                             "PDF optimization",
                             "20-40% reduction",
                             "Low overhead",
                             "No quality loss",
                             "Document compatibility"});
-                table1224.AddRow(new string[] {
+                table1187.AddRow(new string[] {
                             "Audio files",
                             "MP3/AAC compression",
                             "40-60% reduction",
                             "Medium overhead",
                             "Good quality retention",
                             "Audio compatibility"});
-                table1224.AddRow(new string[] {
+                table1187.AddRow(new string[] {
                             "Archive files",
                             "7zip compression",
                             "70-90% reduction",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "No quality loss",
                             "Archive compatibility"});
 #line 69
-    testRunner.When("implementing storage optimization:", ((string)(null)), table1224, "When ");
+    testRunner.When("implementing storage optimization:", ((string)(null)), table1187, "When ");
 #line hidden
 #line 77
     testRunner.Then("compression should be intelligent and adaptive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 86
     testRunner.And("tiered storage optimizes cost and performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1225 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1188 = new TechTalk.SpecFlow.Table(new string[] {
                             "Storage Tier",
                             "Access Pattern",
                             "Performance Level",
                             "Cost Level",
                             "Migration Rules",
                             "Retrieval Time"});
-                table1225.AddRow(new string[] {
+                table1188.AddRow(new string[] {
                             "Hot storage",
                             "Frequent access",
                             "High performance",
                             "High cost",
                             "Recent/active data",
                             "Immediate access"});
-                table1225.AddRow(new string[] {
+                table1188.AddRow(new string[] {
                             "Warm storage",
                             "Regular access",
                             "Medium performance",
                             "Medium cost",
                             "Moderate usage data",
                             "<1 minute access"});
-                table1225.AddRow(new string[] {
+                table1188.AddRow(new string[] {
                             "Cool storage",
                             "Infrequent access",
                             "Lower performance",
                             "Lower cost",
                             "Older data",
                             "<10 minutes access"});
-                table1225.AddRow(new string[] {
+                table1188.AddRow(new string[] {
                             "Cold storage",
                             "Rare access",
                             "Minimal performance",
                             "Low cost",
                             "Historical data",
                             "<1 hour access"});
-                table1225.AddRow(new string[] {
+                table1188.AddRow(new string[] {
                             "Archive storage",
                             "Long-term retention",
                             "Archival performance",
                             "Minimal cost",
                             "Compliance data",
                             "<24 hours access"});
-                table1225.AddRow(new string[] {
+                table1188.AddRow(new string[] {
                             "Deep archive",
                             "Legal/compliance",
                             "Deep archive",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Legal requirements",
                             "<48 hours access"});
 #line 87
-    testRunner.When("implementing tiered storage:", ((string)(null)), table1225, "When ");
+    testRunner.When("implementing tiered storage:", ((string)(null)), table1188, "When ");
 #line hidden
 #line 95
     testRunner.Then("tiering should be based on access patterns", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 103
     testRunner.And("deduplication improves storage efficiency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1226 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1189 = new TechTalk.SpecFlow.Table(new string[] {
                             "Deduplication Level",
                             "Detection Method",
                             "Storage Savings",
                             "Processing Requirements",
                             "Data Integrity",
                             "Recovery Complexity"});
-                table1226.AddRow(new string[] {
+                table1189.AddRow(new string[] {
                             "File-level deduplication",
                             "Hash comparison",
                             "20-40% savings",
                             "Low processing",
                             "High integrity",
                             "Simple recovery"});
-                table1226.AddRow(new string[] {
+                table1189.AddRow(new string[] {
                             "Block-level deduplication",
                             "Block hashing",
                             "40-60% savings",
                             "Medium processing",
                             "Medium integrity",
                             "Medium recovery"});
-                table1226.AddRow(new string[] {
+                table1189.AddRow(new string[] {
                             "Content-aware deduplication",
                             "Content analysis",
                             "30-50% savings",
                             "High processing",
                             "High integrity",
                             "Complex recovery"});
-                table1226.AddRow(new string[] {
+                table1189.AddRow(new string[] {
                             "Cross-user deduplication",
                             "Global deduplication",
                             "50-70% savings",
                             "High processing",
                             "Critical integrity",
                             "Complex recovery"});
-                table1226.AddRow(new string[] {
+                table1189.AddRow(new string[] {
                             "Version deduplication",
                             "Version comparison",
                             "60-80% savings",
                             "Medium processing",
                             "Version integrity",
                             "Version recovery"});
-                table1226.AddRow(new string[] {
+                table1189.AddRow(new string[] {
                             "Intelligent deduplication",
                             "AI-powered",
                             "40-70% savings",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "AI integrity",
                             "AI-assisted recovery"});
 #line 104
-    testRunner.When("implementing deduplication:", ((string)(null)), table1226, "When ");
+    testRunner.When("implementing deduplication:", ((string)(null)), table1189, "When ");
 #line hidden
 #line 112
     testRunner.Then("deduplication should be safe and effective", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 120
     testRunner.And("capacity planning ensures adequate resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1227 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1190 = new TechTalk.SpecFlow.Table(new string[] {
                             "Prediction Aspect",
                             "Prediction Method",
                             "Prediction Horizon",
                             "Accuracy Target",
                             "Action Triggers",
                             "Preventive Measures"});
-                table1227.AddRow(new string[] {
+                table1190.AddRow(new string[] {
                             "Capacity growth",
                             "Trend analysis",
                             "90-day forecast",
                             "85% accuracy",
                             "70% capacity",
                             "Capacity expansion"});
-                table1227.AddRow(new string[] {
+                table1190.AddRow(new string[] {
                             "Usage patterns",
                             "Pattern recognition",
                             "30-day forecast",
                             "80% accuracy",
                             "Pattern changes",
                             "Usage optimization"});
-                table1227.AddRow(new string[] {
+                table1190.AddRow(new string[] {
                             "Seasonal variations",
                             "Seasonal modeling",
                             "Annual forecast",
                             "75% accuracy",
                             "Seasonal peaks",
                             "Seasonal preparation"});
-                table1227.AddRow(new string[] {
+                table1190.AddRow(new string[] {
                             "User behavior",
                             "Behavioral analysis",
                             "60-day forecast",
                             "70% accuracy",
                             "Behavior changes",
                             "User guidance"});
-                table1227.AddRow(new string[] {
+                table1190.AddRow(new string[] {
                             "Content growth",
                             "Content modeling",
                             "120-day forecast",
                             "80% accuracy",
                             "Growth acceleration",
                             "Content management"});
-                table1227.AddRow(new string[] {
+                table1190.AddRow(new string[] {
                             "Technology changes",
                             "Technology assessment",
                             "180-day forecast",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Technology shifts",
                             "Technology adaptation"});
 #line 121
-    testRunner.When("implementing predictive management:", ((string)(null)), table1227, "When ");
+    testRunner.When("implementing predictive management:", ((string)(null)), table1190, "When ");
 #line hidden
 #line 129
     testRunner.Then("predictions should be accurate and actionable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 138
     testRunner.And("clear communication enables appropriate user action", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1228 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1191 = new TechTalk.SpecFlow.Table(new string[] {
                             "Notification Type",
                             "Trigger Condition",
                             "Information Provided",
                             "User Actions",
                             "Notification Timing",
                             "Communication Channel"});
-                table1228.AddRow(new string[] {
+                table1191.AddRow(new string[] {
                             "Usage warnings",
                             "80% quota usage",
                             "Current usage, recommendations",
                             "Cleanup guidance",
                             "Real-time",
                             "In-app notification"});
-                table1228.AddRow(new string[] {
+                table1191.AddRow(new string[] {
                             "Limit approaching",
                             "90% quota usage",
                             "Usage details, cleanup options",
                             "Immediate cleanup",
                             "Real-time",
                             "Email + in-app"});
-                table1228.AddRow(new string[] {
+                table1191.AddRow(new string[] {
                             "Quota exceeded",
                             "100% quota usage",
                             "Overage details, resolution steps",
                             "Required cleanup",
                             "Immediate",
                             "Multiple channels"});
-                table1228.AddRow(new string[] {
+                table1191.AddRow(new string[] {
                             "Cleanup suggestions",
                             "Weekly review",
                             "Storage optimization tips",
                             "Optional optimization",
                             "Weekly",
                             "Email digest"});
-                table1228.AddRow(new string[] {
+                table1191.AddRow(new string[] {
                             "Upgrade recommendations",
                             "Consistent high usage",
                             "Upgrade options, benefits",
                             "Upgrade consideration",
                             "Monthly",
                             "Account notification"});
-                table1228.AddRow(new string[] {
+                table1191.AddRow(new string[] {
                             "Storage insights",
                             "Monthly analysis",
                             "Usage analytics, trends",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Monthly",
                             "Analytics dashboard"});
 #line 139
-    testRunner.When("notifying users about storage:", ((string)(null)), table1228, "When ");
+    testRunner.When("notifying users about storage:", ((string)(null)), table1191, "When ");
 #line hidden
 #line 147
     testRunner.Then("notifications should be timely and informative", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 155
     testRunner.And("insights drive optimization and planning", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1229 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1192 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Type",
                             "Data Sources",
                             "Analysis Methods",
                             "Visualization",
                             "Actionable Insights",
                             "Reporting Frequency"});
-                table1229.AddRow(new string[] {
+                table1192.AddRow(new string[] {
                             "Usage trends",
                             "Storage metrics",
                             "Trend analysis",
                             "Line charts",
                             "Usage optimization",
                             "Daily updates"});
-                table1229.AddRow(new string[] {
+                table1192.AddRow(new string[] {
                             "Space distribution",
                             "Storage allocation",
                             "Distribution analysis",
                             "Pie charts",
                             "Space reallocation",
                             "Real-time"});
-                table1229.AddRow(new string[] {
+                table1192.AddRow(new string[] {
                             "Growth patterns",
                             "Historical data",
                             "Growth modeling",
                             "Growth curves",
                             "Capacity planning",
                             "Weekly analysis"});
-                table1229.AddRow(new string[] {
+                table1192.AddRow(new string[] {
                             "Efficiency metrics",
                             "Utilization data",
                             "Efficiency calculation",
                             "Efficiency gauges",
                             "Efficiency improvement",
                             "Daily metrics"});
-                table1229.AddRow(new string[] {
+                table1192.AddRow(new string[] {
                             "Cost analysis",
                             "Storage costs",
                             "Cost modeling",
                             "Cost breakdowns",
                             "Cost optimization",
                             "Monthly analysis"});
-                table1229.AddRow(new string[] {
+                table1192.AddRow(new string[] {
                             "Performance impact",
                             "Performance metrics",
                             "Performance correlation",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Performance optimization",
                             "Continuous monitoring"});
 #line 156
-    testRunner.When("providing storage analytics:", ((string)(null)), table1229, "When ");
+    testRunner.When("providing storage analytics:", ((string)(null)), table1192, "When ");
 #line hidden
 #line 164
     testRunner.Then("analytics should be comprehensive and accurate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 172
     testRunner.And("user empowerment reduces administrative overhead", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1230 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1193 = new TechTalk.SpecFlow.Table(new string[] {
                             "Tool Type",
                             "Functionality",
                             "User Control Level",
                             "Safety Features",
                             "Guidance Provided",
                             "Effectiveness Metrics"});
-                table1230.AddRow(new string[] {
+                table1193.AddRow(new string[] {
                             "Storage dashboard",
                             "Usage visualization",
                             "View-only",
                             "Safe viewing",
                             "Usage interpretation",
                             "Dashboard engagement"});
-                table1230.AddRow(new string[] {
+                table1193.AddRow(new string[] {
                             "Cleanup wizard",
                             "Automated cleanup",
                             "Guided control",
                             "Confirmation required",
                             "Cleanup guidance",
                             "Cleanup success"});
-                table1230.AddRow(new string[] {
+                table1193.AddRow(new string[] {
                             "File manager",
                             "File organization",
                             "Full control",
                             "Trash/recovery",
                             "Organization tips",
                             "Organization improvement"});
-                table1230.AddRow(new string[] {
+                table1193.AddRow(new string[] {
                             "Quota manager",
                             "Quota monitoring",
                             "Monitoring control",
                             "Usage alerts",
                             "Quota optimization",
                             "Quota management"});
-                table1230.AddRow(new string[] {
+                table1193.AddRow(new string[] {
                             "Archive tool",
                             "Data archiving",
                             "Archive control",
                             "Archive safety",
                             "Archiving guidance",
                             "Archive utilization"});
-                table1230.AddRow(new string[] {
+                table1193.AddRow(new string[] {
                             "Optimization assistant",
                             "Storage optimization",
                             "Assisted control",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Optimization recommendations",
                             "Optimization adoption"});
 #line 173
-    testRunner.When("providing self-service tools:", ((string)(null)), table1230, "When ");
+    testRunner.When("providing self-service tools:", ((string)(null)), table1193, "When ");
 #line hidden
 #line 181
     testRunner.Then("tools should be intuitive and powerful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 190
     testRunner.And("optimization maintains performance under pressure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1231 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1194 = new TechTalk.SpecFlow.Table(new string[] {
                             "Optimization Strategy",
                             "Performance Target",
                             "Implementation Method",
                             "Resource Requirements",
                             "Effectiveness Measure",
                             "Sustainability"});
-                table1231.AddRow(new string[] {
+                table1194.AddRow(new string[] {
                             "Intelligent caching",
                             "<100ms access time",
                             "Cache optimization",
                             "Memory allocation",
                             "Cache hit rates",
                             "Cache sustainability"});
-                table1231.AddRow(new string[] {
+                table1194.AddRow(new string[] {
                             "Index optimization",
                             "<50ms query time",
                             "Index tuning",
                             "CPU resources",
                             "Query performance",
                             "Index maintenance"});
-                table1231.AddRow(new string[] {
+                table1194.AddRow(new string[] {
                             "Data partitioning",
                             "Linear scalability",
                             "Partition strategy",
                             "Partition management",
                             "Scalability metrics",
                             "Partition sustainability"});
-                table1231.AddRow(new string[] {
+                table1194.AddRow(new string[] {
                             "Compression balance",
                             "Balanced performance",
                             "Compression tuning",
                             "CPU/storage balance",
                             "Performance/space ratio",
                             "Compression sustainability"});
-                table1231.AddRow(new string[] {
+                table1194.AddRow(new string[] {
                             "Access optimization",
                             "Optimal access patterns",
                             "Access tuning",
                             "Access management",
                             "Access efficiency",
                             "Access sustainability"});
-                table1231.AddRow(new string[] {
+                table1194.AddRow(new string[] {
                             "Background processing",
                             "Minimal impact",
                             "Background optimization",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Processing efficiency",
                             "Processing sustainability"});
 #line 191
-    testRunner.When("optimizing storage performance:", ((string)(null)), table1231, "When ");
+    testRunner.When("optimizing storage performance:", ((string)(null)), table1194, "When ");
 #line hidden
 #line 199
     testRunner.Then("optimization should balance performance and capacity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 207
     testRunner.And("load balancing optimizes distributed resource utilization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1232 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1195 = new TechTalk.SpecFlow.Table(new string[] {
                             "Distribution Strategy",
                             "Load Balancing Method",
                             "Replication Level",
                             "Consistency Model",
                             "Performance Characteristics",
                             "Fault Tolerance"});
-                table1232.AddRow(new string[] {
+                table1195.AddRow(new string[] {
                             "Geographic distribution",
                             "Location-based routing",
                             "3x replication",
                             "Eventual consistency",
                             "Regional optimization",
                             "Geographic resilience"});
-                table1232.AddRow(new string[] {
+                table1195.AddRow(new string[] {
                             "Performance-based",
                             "Performance routing",
                             "2x replication",
                             "Strong consistency",
                             "Performance optimization",
                             "Performance resilience"});
-                table1232.AddRow(new string[] {
+                table1195.AddRow(new string[] {
                             "Capacity-based",
                             "Capacity routing",
                             "Variable replication",
                             "Causal consistency",
                             "Capacity optimization",
                             "Capacity resilience"});
-                table1232.AddRow(new string[] {
+                table1195.AddRow(new string[] {
                             "Cost-optimized",
                             "Cost routing",
                             "Minimal replication",
                             "Weak consistency",
                             "Cost optimization",
                             "Basic resilience"});
-                table1232.AddRow(new string[] {
+                table1195.AddRow(new string[] {
                             "Hybrid distribution",
                             "Intelligent routing",
                             "Adaptive replication",
                             "Adaptive consistency",
                             "Balanced optimization",
                             "Comprehensive resilience"});
-                table1232.AddRow(new string[] {
+                table1195.AddRow(new string[] {
                             "User-based",
                             "User affinity routing",
                             "User replication",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "User optimization",
                             "User resilience"});
 #line 208
-    testRunner.When("implementing distributed storage load balancing:", ((string)(null)), table1232, "When ");
+    testRunner.When("implementing distributed storage load balancing:", ((string)(null)), table1195, "When ");
 #line hidden
 #line 216
     testRunner.Then("distribution should optimize for requirements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 225
     testRunner.And("robust recovery mechanisms ensure business continuity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1233 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1196 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failure Type",
                             "Detection Method",
                             "Recovery Strategy",
                             "Recovery Time",
                             "Data Protection",
                             "Business Impact"});
-                table1233.AddRow(new string[] {
+                table1196.AddRow(new string[] {
                             "Disk failures",
                             "SMART monitoring",
                             "RAID recovery",
                             "<1 hour",
                             "RAID protection",
                             "Minimal impact"});
-                table1233.AddRow(new string[] {
+                table1196.AddRow(new string[] {
                             "Controller failures",
                             "Controller monitoring",
                             "Controller failover",
                             "<30 minutes",
                             "Redundant controllers",
                             "Brief disruption"});
-                table1233.AddRow(new string[] {
+                table1196.AddRow(new string[] {
                             "Network storage failures",
                             "Network monitoring",
                             "Storage failover",
                             "<15 minutes",
                             "Storage replication",
                             "Network disruption"});
-                table1233.AddRow(new string[] {
+                table1196.AddRow(new string[] {
                             "Corruption detection",
                             "Integrity monitoring",
                             "Corruption repair",
                             "<2 hours",
                             "Backup restoration",
                             "Data integrity concern"});
-                table1233.AddRow(new string[] {
+                table1196.AddRow(new string[] {
                             "Capacity exhaustion",
                             "Capacity monitoring",
                             "Emergency cleanup",
                             "<10 minutes",
                             "Data preservation",
                             "Performance impact"});
-                table1233.AddRow(new string[] {
+                table1196.AddRow(new string[] {
                             "Performance degradation",
                             "Performance monitoring",
                             "Performance recovery",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "No data loss",
                             "Performance impact"});
 #line 226
-    testRunner.When("storage failures occur:", ((string)(null)), table1233, "When ");
+    testRunner.When("storage failures occur:", ((string)(null)), table1196, "When ");
 #line hidden
 #line 234
     testRunner.Then("failures should be detected rapidly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 242
     testRunner.And("integrated systems provide comprehensive protection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1234 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1197 = new TechTalk.SpecFlow.Table(new string[] {
                             "Integration Aspect",
                             "Integration Method",
                             "Backup Trigger",
                             "Recovery Capability",
                             "Data Consistency",
                             "Recovery Testing"});
-                table1234.AddRow(new string[] {
+                table1197.AddRow(new string[] {
                             "Capacity triggers",
                             "Automatic backup",
                             "Storage thresholds",
                             "Full recovery",
                             "Backup consistency",
                             "Regular testing"});
-                table1234.AddRow(new string[] {
+                table1197.AddRow(new string[] {
                             "Failure triggers",
                             "Failure-driven backup",
                             "Storage failures",
                             "Rapid recovery",
                             "Failure consistency",
                             "Failure testing"});
-                table1234.AddRow(new string[] {
+                table1197.AddRow(new string[] {
                             "Schedule integration",
                             "Coordinated schedules",
                             "Time-based triggers",
                             "Scheduled recovery",
                             "Schedule consistency",
                             "Schedule testing"});
-                table1234.AddRow(new string[] {
+                table1197.AddRow(new string[] {
                             "Policy alignment",
                             "Unified policies",
                             "Policy triggers",
                             "Policy recovery",
                             "Policy consistency",
                             "Policy testing"});
-                table1234.AddRow(new string[] {
+                table1197.AddRow(new string[] {
                             "Performance integration",
                             "Performance-aware backup",
                             "Performance triggers",
                             "Performance recovery",
                             "Performance consistency",
                             "Performance testing"});
-                table1234.AddRow(new string[] {
+                table1197.AddRow(new string[] {
                             "Cost optimization",
                             "Cost-optimized backup",
                             "Cost triggers",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Cost consistency",
                             "Cost testing"});
 #line 243
-    testRunner.When("integrating storage and backup systems:", ((string)(null)), table1234, "When ");
+    testRunner.When("integrating storage and backup systems:", ((string)(null)), table1197, "When ");
 #line hidden
 #line 251
     testRunner.Then("integration should be seamless", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 260
     testRunner.And("compliance violations can have serious consequences", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1235 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1198 = new TechTalk.SpecFlow.Table(new string[] {
                             "Regulation Type",
                             "Storage Requirements",
                             "Retention Policies",
                             "Access Controls",
                             "Audit Requirements",
                             "Compliance Monitoring"});
-                table1235.AddRow(new string[] {
+                table1198.AddRow(new string[] {
                             "HIPAA",
                             "Encrypted storage",
                             "6-year retention",
                             "Role-based access",
                             "Complete audit trails",
                             "HIPAA monitoring"});
-                table1235.AddRow(new string[] {
+                table1198.AddRow(new string[] {
                             "FERPA",
                             "Educational privacy",
                             "Student record retention",
                             "Educational access",
                             "Educational audits",
                             "FERPA monitoring"});
-                table1235.AddRow(new string[] {
+                table1198.AddRow(new string[] {
                             "SOX",
                             "Financial controls",
                             "7-year retention",
                             "Financial access",
                             "Financial audits",
                             "SOX monitoring"});
-                table1235.AddRow(new string[] {
+                table1198.AddRow(new string[] {
                             "GDPR",
                             "Data protection",
                             "Right to deletion",
                             "Privacy controls",
                             "Privacy audits",
                             "GDPR monitoring"});
-                table1235.AddRow(new string[] {
+                table1198.AddRow(new string[] {
                             "Industry standards",
                             "Industry requirements",
                             "Industry retention",
                             "Industry access",
                             "Industry audits",
                             "Industry monitoring"});
-                table1235.AddRow(new string[] {
+                table1198.AddRow(new string[] {
                             "Internal policies",
                             "Company requirements",
                             "Company retention",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Company audits",
                             "Internal monitoring"});
 #line 261
-    testRunner.When("managing compliance requirements:", ((string)(null)), table1235, "When ");
+    testRunner.When("managing compliance requirements:", ((string)(null)), table1198, "When ");
 #line hidden
 #line 269
     testRunner.Then("compliance should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 277
     testRunner.And("lifecycle management optimizes data value over time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1236 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1199 = new TechTalk.SpecFlow.Table(new string[] {
                             "Governance Aspect",
                             "Governance Policies",
                             "Lifecycle Stages",
                             "Management Actions",
                             "Quality Assurance",
                             "Governance Monitoring"});
-                table1236.AddRow(new string[] {
+                table1199.AddRow(new string[] {
                             "Data classification",
                             "Classification policies",
                             "Active, inactive, archived",
                             "Classification actions",
                             "Classification quality",
                             "Classification monitoring"});
-                table1236.AddRow(new string[] {
+                table1199.AddRow(new string[] {
                             "Access governance",
                             "Access policies",
                             "Creation, usage, retention",
                             "Access management",
                             "Access quality",
                             "Access monitoring"});
-                table1236.AddRow(new string[] {
+                table1199.AddRow(new string[] {
                             "Quality governance",
                             "Quality policies",
                             "Collection, processing, storage",
                             "Quality management",
                             "Quality standards",
                             "Quality monitoring"});
-                table1236.AddRow(new string[] {
+                table1199.AddRow(new string[] {
                             "Privacy governance",
                             "Privacy policies",
                             "Consent, usage, deletion",
                             "Privacy management",
                             "Privacy compliance",
                             "Privacy monitoring"});
-                table1236.AddRow(new string[] {
+                table1199.AddRow(new string[] {
                             "Retention governance",
                             "Retention policies",
                             "Retention, disposal",
                             "Retention management",
                             "Retention compliance",
                             "Retention monitoring"});
-                table1236.AddRow(new string[] {
+                table1199.AddRow(new string[] {
                             "Value governance",
                             "Value policies",
                             "Value creation, optimization",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Value measurement",
                             "Value monitoring"});
 #line 278
-    testRunner.When("implementing data governance:", ((string)(null)), table1236, "When ");
+    testRunner.When("implementing data governance:", ((string)(null)), table1199, "When ");
 #line hidden
 #line 286
     testRunner.Then("governance should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1854,49 +1854,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 295
     testRunner.And("continuous improvement maintains storage efficiency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1237 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1200 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Dimension",
                             "Analysis Method",
                             "Optimization Opportunity",
                             "Implementation Strategy",
                             "Success Metrics",
                             "Continuous Improvement"});
-                table1237.AddRow(new string[] {
+                table1200.AddRow(new string[] {
                             "Usage patterns",
                             "Pattern analysis",
                             "Usage optimization",
                             "Pattern-based optimization",
                             "Usage efficiency",
                             "Pattern improvement"});
-                table1237.AddRow(new string[] {
+                table1200.AddRow(new string[] {
                             "Performance metrics",
                             "Performance analysis",
                             "Performance optimization",
                             "Performance tuning",
                             "Performance improvement",
                             "Performance enhancement"});
-                table1237.AddRow(new string[] {
+                table1200.AddRow(new string[] {
                             "Cost analysis",
                             "Cost modeling",
                             "Cost optimization",
                             "Cost reduction strategies",
                             "Cost savings",
                             "Cost improvement"});
-                table1237.AddRow(new string[] {
+                table1200.AddRow(new string[] {
                             "Capacity utilization",
                             "Utilization analysis",
                             "Capacity optimization",
                             "Capacity planning",
                             "Capacity efficiency",
                             "Capacity improvement"});
-                table1237.AddRow(new string[] {
+                table1200.AddRow(new string[] {
                             "Access patterns",
                             "Access analysis",
                             "Access optimization",
                             "Access pattern optimization",
                             "Access efficiency",
                             "Access improvement"});
-                table1237.AddRow(new string[] {
+                table1200.AddRow(new string[] {
                             "Technology assessment",
                             "Technology analysis",
                             "Technology optimization",
@@ -1904,7 +1904,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Technology benefits",
                             "Technology advancement"});
 #line 296
-    testRunner.When("analyzing storage for optimization:", ((string)(null)), table1237, "When ");
+    testRunner.When("analyzing storage for optimization:", ((string)(null)), table1200, "When ");
 #line hidden
 #line 304
     testRunner.Then("analytics should drive optimization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1958,49 +1958,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 311
     testRunner.Given("storage requirements grow continuously", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1238 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1201 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table1238.AddRow(new string[] {
+                table1201.AddRow(new string[] {
                             "Capacity growth",
                             "Exponential data growth",
                             "Scalable architecture",
                             "Infrastructure investment",
                             "Linear scaling",
                             "Growth sustainability"});
-                table1238.AddRow(new string[] {
+                table1201.AddRow(new string[] {
                             "Technology evolution",
                             "Changing storage technology",
                             "Technology roadmap",
                             "Technology resources",
                             "Technology currency",
                             "Technology sustainability"});
-                table1238.AddRow(new string[] {
+                table1201.AddRow(new string[] {
                             "Cost management",
                             "Rising storage costs",
                             "Cost optimization",
                             "Cost management resources",
                             "Cost efficiency",
                             "Cost sustainability"});
-                table1238.AddRow(new string[] {
+                table1201.AddRow(new string[] {
                             "Performance requirements",
                             "Increasing performance demands",
                             "Performance architecture",
                             "Performance resources",
                             "Performance targets",
                             "Performance sustainability"});
-                table1238.AddRow(new string[] {
+                table1201.AddRow(new string[] {
                             "Compliance evolution",
                             "Changing regulations",
                             "Adaptive compliance",
                             "Compliance resources",
                             "Compliance maintenance",
                             "Compliance sustainability"});
-                table1238.AddRow(new string[] {
+                table1201.AddRow(new string[] {
                             "Environmental impact",
                             "Storage environmental footprint",
                             "Green storage",
@@ -2008,7 +2008,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Environmental targets",
                             "Environmental sustainability"});
 #line 312
-    testRunner.When("planning storage sustainability:", ((string)(null)), table1238, "When ");
+    testRunner.When("planning storage sustainability:", ((string)(null)), table1201, "When ");
 #line hidden
 #line 320
     testRunner.Then("sustainability should be systematically planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

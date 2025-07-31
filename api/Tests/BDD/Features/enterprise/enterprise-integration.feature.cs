@@ -141,49 +141,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 17
     testRunner.And("ESB provides centralized integration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table920 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table883 = new TechTalk.SpecFlow.Table(new string[] {
                             "ESB Component",
                             "Capabilities",
                             "Integration Patterns",
                             "Scalability",
                             "Monitoring",
                             "Governance"});
-                table920.AddRow(new string[] {
+                table883.AddRow(new string[] {
                             "Message routing",
                             "Content-based routing",
                             "Publish-subscribe",
                             "Horizontal scaling",
                             "Message tracking",
                             "Routing rules"});
-                table920.AddRow(new string[] {
+                table883.AddRow(new string[] {
                             "Protocol mediation",
                             "Multi-protocol support",
                             "Adapter pattern",
                             "Protocol handlers",
                             "Protocol metrics",
                             "Standard protocols"});
-                table920.AddRow(new string[] {
+                table883.AddRow(new string[] {
                             "Data transformation",
                             "XSLT, mapping tools",
                             "Canonical data model",
                             "Transformation cache",
                             "Transform performance",
                             "Schema versioning"});
-                table920.AddRow(new string[] {
+                table883.AddRow(new string[] {
                             "Service orchestration",
                             "BPEL, workflow",
                             "Saga pattern",
                             "Distributed execution",
                             "Process monitoring",
                             "Service contracts"});
-                table920.AddRow(new string[] {
+                table883.AddRow(new string[] {
                             "Error handling",
                             "Dead letter queues",
                             "Circuit breaker",
                             "Retry mechanisms",
                             "Error analytics",
                             "Error policies"});
-                table920.AddRow(new string[] {
+                table883.AddRow(new string[] {
                             "Security mediation",
                             "Token translation",
                             "Security gateway",
@@ -191,7 +191,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Security events",
                             "Policy enforcement"});
 #line 18
-    testRunner.When("implementing ESB architecture:", ((string)(null)), table920, "When ");
+    testRunner.When("implementing ESB architecture:", ((string)(null)), table883, "When ");
 #line hidden
 #line 26
     testRunner.Then("systems should integrate seamlessly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -248,49 +248,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 34
     testRunner.And("API gateway provides abstraction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table921 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table884 = new TechTalk.SpecFlow.Table(new string[] {
                             "Gateway Feature",
                             "Implementation",
                             "Security Controls",
                             "Performance",
                             "Analytics",
                             "Management"});
-                table921.AddRow(new string[] {
+                table884.AddRow(new string[] {
                             "API routing",
                             "Path-based routing",
                             "Rate limiting",
                             "Response caching",
                             "Request metrics",
                             "Route configuration"});
-                table921.AddRow(new string[] {
+                table884.AddRow(new string[] {
                             "Load balancing",
                             "Round-robin, weighted",
                             "Health checks",
                             "Connection pooling",
                             "Latency tracking",
                             "Backend management"});
-                table921.AddRow(new string[] {
+                table884.AddRow(new string[] {
                             "Authentication",
                             "OAuth, JWT, API keys",
                             "Token validation",
                             "Token caching",
                             "Auth failures",
                             "Key management"});
-                table921.AddRow(new string[] {
+                table884.AddRow(new string[] {
                             "Request filtering",
                             "Request validation",
                             "Input sanitization",
                             "Efficient parsing",
                             "Filter performance",
                             "Filter rules"});
-                table921.AddRow(new string[] {
+                table884.AddRow(new string[] {
                             "Response aggregation",
                             "GraphQL federation",
                             "Field-level security",
                             "Parallel fetching",
                             "Query complexity",
                             "Schema stitching"});
-                table921.AddRow(new string[] {
+                table884.AddRow(new string[] {
                             "API versioning",
                             "Header/URL versioning",
                             "Version deprecation",
@@ -298,7 +298,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Version usage",
                             "Lifecycle management"});
 #line 35
-    testRunner.When("deploying API gateway:", ((string)(null)), table921, "When ");
+    testRunner.When("deploying API gateway:", ((string)(null)), table884, "When ");
 #line hidden
 #line 43
     testRunner.Then("APIs should be unified", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -355,49 +355,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 52
     testRunner.And("pipelines must be reliable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table922 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table885 = new TechTalk.SpecFlow.Table(new string[] {
                             "Pipeline Stage",
                             "Technology Stack",
                             "Processing Type",
                             "Error Handling",
                             "Monitoring",
                             "Optimization"});
-                table922.AddRow(new string[] {
+                table885.AddRow(new string[] {
                             "Data extraction",
                             "CDC, batch, streaming",
                             "Incremental loads",
                             "Checkpoint recovery",
                             "Source lag",
                             "Parallel extraction"});
-                table922.AddRow(new string[] {
+                table885.AddRow(new string[] {
                             "Data validation",
                             "Schema validation",
                             "Quality rules",
                             "Quarantine bad data",
                             "Validation metrics",
                             "Rule optimization"});
-                table922.AddRow(new string[] {
+                table885.AddRow(new string[] {
                             "Transformation",
                             "Spark, DBT",
                             "Distributed processing",
                             "Failed record handling",
                             "Transform time",
                             "Resource tuning"});
-                table922.AddRow(new string[] {
+                table885.AddRow(new string[] {
                             "Data loading",
                             "Bulk insert, merge",
                             "Upsert logic",
                             "Transaction rollback",
                             "Load performance",
                             "Partition strategy"});
-                table922.AddRow(new string[] {
+                table885.AddRow(new string[] {
                             "Orchestration",
                             "Airflow, Prefect",
                             "DAG scheduling",
                             "Retry policies",
                             "Pipeline health",
                             "Schedule optimization"});
-                table922.AddRow(new string[] {
+                table885.AddRow(new string[] {
                             "Data quality",
                             "Great Expectations",
                             "Automated testing",
@@ -405,7 +405,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Quality scores",
                             "Continuous improvement"});
 #line 53
-    testRunner.When("building data pipelines:", ((string)(null)), table922, "When ");
+    testRunner.When("building data pipelines:", ((string)(null)), table885, "When ");
 #line hidden
 #line 61
     testRunner.Then("data should flow reliably", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -462,49 +462,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 69
     testRunner.And("event streaming enables reactivity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table923 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table886 = new TechTalk.SpecFlow.Table(new string[] {
                             "Streaming Component",
                             "Platform Choice",
                             "Event Processing",
                             "Delivery Guarantees",
                             "Scalability",
                             "Monitoring"});
-                table923.AddRow(new string[] {
+                table886.AddRow(new string[] {
                             "Message broker",
                             "Kafka, Pulsar",
                             "Millions msgs/sec",
                             "Exactly-once",
                             "Partition scaling",
                             "Lag monitoring"});
-                table923.AddRow(new string[] {
+                table886.AddRow(new string[] {
                             "Stream processing",
                             "Flink, Spark Streaming",
                             "Stateful processing",
                             "Checkpointing",
                             "Auto-scaling",
                             "Processing metrics"});
-                table923.AddRow(new string[] {
+                table886.AddRow(new string[] {
                             "Event store",
                             "Event Store, Kafka",
                             "Event sourcing",
                             "Ordered delivery",
                             "Retention policies",
                             "Storage metrics"});
-                table923.AddRow(new string[] {
+                table886.AddRow(new string[] {
                             "Schema registry",
                             "Confluent, Apicurio",
                             "Schema evolution",
                             "Compatibility checks",
                             "High availability",
                             "Version tracking"});
-                table923.AddRow(new string[] {
+                table886.AddRow(new string[] {
                             "Stream analytics",
                             "KSQL, Flink SQL",
                             "Real-time queries",
                             "Result accuracy",
                             "Query parallelism",
                             "Query performance"});
-                table923.AddRow(new string[] {
+                table886.AddRow(new string[] {
                             "Event mesh",
                             "Solace, NATS",
                             "Multi-protocol",
@@ -512,7 +512,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Global distribution",
                             "Mesh health"});
 #line 70
-    testRunner.When("implementing event streaming:", ((string)(null)), table923, "When ");
+    testRunner.When("implementing event streaming:", ((string)(null)), table886, "When ");
 #line hidden
 #line 78
     testRunner.Then("events should stream in real-time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -569,49 +569,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 87
     testRunner.And("integration must be bidirectional", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table924 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table887 = new TechTalk.SpecFlow.Table(new string[] {
                             "ERP System",
                             "Integration Method",
                             "Data Synchronized",
                             "Sync Frequency",
                             "Error Handling",
                             "Business Impact"});
-                table924.AddRow(new string[] {
+                table887.AddRow(new string[] {
                             "SAP",
                             "SAP PI/PO, APIs",
                             "Finance, HR, procurement",
                             "Near real-time",
                             "Queue retry",
                             "Financial accuracy"});
-                table924.AddRow(new string[] {
+                table887.AddRow(new string[] {
                             "Oracle",
                             "Oracle Integration Cloud",
                             "Full business data",
                             "Batch + real-time",
                             "Compensation logic",
                             "Operational efficiency"});
-                table924.AddRow(new string[] {
+                table887.AddRow(new string[] {
                             "Microsoft Dynamics",
                             "Power Platform",
                             "CRM, finance, operations",
                             "Event-driven",
                             "Conflict resolution",
                             "Process automation"});
-                table924.AddRow(new string[] {
+                table887.AddRow(new string[] {
                             "Workday",
                             "Workday APIs",
                             "HR, payroll, finance",
                             "Scheduled + webhook",
                             "Validation rules",
                             "HR compliance"});
-                table924.AddRow(new string[] {
+                table887.AddRow(new string[] {
                             "NetSuite",
                             "SuiteCloud",
                             "ERP, CRM, ecommerce",
                             "Real-time sync",
                             "Error workflows",
                             "Business continuity"});
-                table924.AddRow(new string[] {
+                table887.AddRow(new string[] {
                             "Custom ERP",
                             "REST/SOAP adapters",
                             "Core business data",
@@ -619,7 +619,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Custom handlers",
                             "Flexibility"});
 #line 88
-    testRunner.When("integrating with ERP:", ((string)(null)), table924, "When ");
+    testRunner.When("integrating with ERP:", ((string)(null)), table887, "When ");
 #line hidden
 #line 96
     testRunner.Then("ERP data should sync accurately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -676,49 +676,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 104
     testRunner.And("integration improves customer experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table925 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table888 = new TechTalk.SpecFlow.Table(new string[] {
                             "CRM Platform",
                             "Integration Features",
                             "Data Flow",
                             "Customer Journey",
                             "Analytics",
                             "Automation"});
-                table925.AddRow(new string[] {
+                table888.AddRow(new string[] {
                             "Salesforce",
                             "Platform Events, APIs",
                             "Bidirectional sync",
                             "360-degree view",
                             "Einstein Analytics",
                             "Flow automation"});
-                table925.AddRow(new string[] {
+                table888.AddRow(new string[] {
                             "Microsoft Dynamics 365",
                             "Common Data Service",
                             "Unified data model",
                             "Omnichannel",
                             "Power BI",
                             "Power Automate"});
-                table925.AddRow(new string[] {
+                table888.AddRow(new string[] {
                             "HubSpot",
                             "Webhooks, APIs",
                             "Marketing + sales",
                             "Lifecycle tracking",
                             "Built-in analytics",
                             "Workflow automation"});
-                table925.AddRow(new string[] {
+                table888.AddRow(new string[] {
                             "ServiceNow",
                             "Integration Hub",
                             "Service data",
                             "Incident tracking",
                             "Performance analytics",
                             "Orchestration"});
-                table925.AddRow(new string[] {
+                table888.AddRow(new string[] {
                             "Custom CRM",
                             "REST integration",
                             "Flexible mapping",
                             "Custom journey",
                             "External analytics",
                             "API-driven"});
-                table925.AddRow(new string[] {
+                table888.AddRow(new string[] {
                             "Multi-CRM",
                             "Integration platform",
                             "Unified view",
@@ -726,7 +726,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Consolidated",
                             "Centralized"});
 #line 105
-    testRunner.When("integrating CRM systems:", ((string)(null)), table925, "When ");
+    testRunner.When("integrating CRM systems:", ((string)(null)), table888, "When ");
 #line hidden
 #line 113
     testRunner.Then("customer data should be unified", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -783,49 +783,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 122
     testRunner.And("modernization must be gradual", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table926 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table889 = new TechTalk.SpecFlow.Table(new string[] {
                             "Legacy Type",
                             "Integration Strategy",
                             "Data Access",
                             "Modernization Path",
                             "Risk Mitigation",
                             "Timeline"});
-                table926.AddRow(new string[] {
+                table889.AddRow(new string[] {
                             "Mainframe",
                             "MQ, CICS, APIs",
                             "Screen scraping, CTG",
                             "Gradual migration",
                             "Parallel run",
                             "2-3 years"});
-                table926.AddRow(new string[] {
+                table889.AddRow(new string[] {
                             "AS/400",
                             "DB2 Connect, APIs",
                             "Direct database",
                             "Replatforming",
                             "Data validation",
                             "18 months"});
-                table926.AddRow(new string[] {
+                table889.AddRow(new string[] {
                             "Legacy databases",
                             "Change data capture",
                             "Read replicas",
                             "Database migration",
                             "Sync verification",
                             "12 months"});
-                table926.AddRow(new string[] {
+                table889.AddRow(new string[] {
                             "File systems",
                             "File watchers",
                             "Batch processing",
                             "Cloud migration",
                             "Backup strategy",
                             "6 months"});
-                table926.AddRow(new string[] {
+                table889.AddRow(new string[] {
                             "Proprietary apps",
                             "Wrapper services",
                             "API facades",
                             "Containerization",
                             "Extensive testing",
                             "12-18 months"});
-                table926.AddRow(new string[] {
+                table889.AddRow(new string[] {
                             "Hardware interfaces",
                             "IoT gateways",
                             "Protocol conversion",
@@ -833,7 +833,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Redundancy",
                             "Ongoing"});
 #line 123
-    testRunner.When("integrating legacy systems:", ((string)(null)), table926, "When ");
+    testRunner.When("integrating legacy systems:", ((string)(null)), table889, "When ");
 #line hidden
 #line 131
     testRunner.Then("legacy data should be accessible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -890,49 +890,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 140
     testRunner.And("B2B integration must be standardized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table927 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table890 = new TechTalk.SpecFlow.Table(new string[] {
                             "Integration Type",
                             "Standards Used",
                             "Security Measures",
                             "Data Exchange",
                             "Monitoring",
                             "Onboarding"});
-                table927.AddRow(new string[] {
+                table890.AddRow(new string[] {
                             "EDI",
                             "X12, EDIFACT",
                             "AS2, SFTP",
                             "Purchase orders, invoices",
                             "Transaction tracking",
                             "Partner portal"});
-                table927.AddRow(new string[] {
+                table890.AddRow(new string[] {
                             "API",
                             "REST, GraphQL",
                             "OAuth, mTLS",
                             "Real-time data",
                             "API analytics",
                             "Developer portal"});
-                table927.AddRow(new string[] {
+                table890.AddRow(new string[] {
                             "File transfer",
                             "Managed file transfer",
                             "PGP encryption",
                             "Batch files",
                             "Transfer logs",
                             "Automated setup"});
-                table927.AddRow(new string[] {
+                table890.AddRow(new string[] {
                             "Web services",
                             "SOAP, REST",
                             "WS-Security",
                             "Service calls",
                             "Service monitoring",
                             "WSDL/OpenAPI"});
-                table927.AddRow(new string[] {
+                table890.AddRow(new string[] {
                             "Blockchain",
                             "Hyperledger",
                             "Consensus protocols",
                             "Shared ledger",
                             "Block validation",
                             "Network joining"});
-                table927.AddRow(new string[] {
+                table890.AddRow(new string[] {
                             "Marketplace",
                             "Platform APIs",
                             "Marketplace security",
@@ -940,7 +940,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Transaction monitoring",
                             "Seller onboarding"});
 #line 141
-    testRunner.When("implementing B2B integration:", ((string)(null)), table927, "When ");
+    testRunner.When("implementing B2B integration:", ((string)(null)), table890, "When ");
 #line hidden
 #line 149
     testRunner.Then("partner integration should be secure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -997,49 +997,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 158
     testRunner.And("integration must span environments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table928 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table891 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cloud Environment",
                             "Integration Method",
                             "Data Synchronization",
                             "Network Connectivity",
                             "Security",
                             "Management"});
-                table928.AddRow(new string[] {
+                table891.AddRow(new string[] {
                             "AWS to Azure",
                             "Cloud-native tools",
                             "Cross-cloud replication",
                             "VPN/Direct peering",
                             "IAM federation",
                             "Unified console"});
-                table928.AddRow(new string[] {
+                table891.AddRow(new string[] {
                             "On-premise to cloud",
                             "Hybrid connectors",
                             "Bi-directional sync",
                             "ExpressRoute/Direct",
                             "Consistent policies",
                             "Hybrid management"});
-                table928.AddRow(new string[] {
+                table891.AddRow(new string[] {
                             "Multi-cloud data",
                             "Data fabric",
                             "Distributed queries",
                             "Cloud interconnect",
                             "Unified security",
                             "Multi-cloud governance"});
-                table928.AddRow(new string[] {
+                table891.AddRow(new string[] {
                             "SaaS integration",
                             "iPaaS platforms",
                             "API orchestration",
                             "Internet/private",
                             "SSO + CASB",
                             "Centralized monitoring"});
-                table928.AddRow(new string[] {
+                table891.AddRow(new string[] {
                             "Edge to cloud",
                             "IoT platforms",
                             "Edge processing",
                             "5G/satellite",
                             "Edge security",
                             "Distributed management"});
-                table928.AddRow(new string[] {
+                table891.AddRow(new string[] {
                             "Cloud to cloud",
                             "Event bridge",
                             "Event routing",
@@ -1047,7 +1047,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Zero-trust",
                             "Observability platform"});
 #line 159
-    testRunner.When("implementing cloud integration:", ((string)(null)), table928, "When ");
+    testRunner.When("implementing cloud integration:", ((string)(null)), table891, "When ");
 #line hidden
 #line 167
     testRunner.Then("clouds should work together", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1104,49 +1104,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 176
     testRunner.And("MDM ensures data consistency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table929 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table892 = new TechTalk.SpecFlow.Table(new string[] {
                             "MDM Domain",
                             "Data Sources",
                             "Matching Rules",
                             "Governance Process",
                             "Quality Metrics",
                             "Distribution"});
-                table929.AddRow(new string[] {
+                table892.AddRow(new string[] {
                             "Customer master",
                             "CRM, ERP, support",
                             "Fuzzy matching",
                             "Steward approval",
                             "Match confidence",
                             "Event streaming"});
-                table929.AddRow(new string[] {
+                table892.AddRow(new string[] {
                             "Product master",
                             "PIM, ERP, catalog",
                             "SKU matching",
                             "Committee review",
                             "Completeness score",
                             "API access"});
-                table929.AddRow(new string[] {
+                table892.AddRow(new string[] {
                             "Employee master",
                             "HRIS, AD, systems",
                             "Employee ID",
                             "Automated workflow",
                             "Accuracy rate",
                             "Directory sync"});
-                table929.AddRow(new string[] {
+                table892.AddRow(new string[] {
                             "Vendor master",
                             "Procurement, finance",
                             "Tax ID matching",
                             "Compliance check",
                             "Verification status",
                             "Batch updates"});
-                table929.AddRow(new string[] {
+                table892.AddRow(new string[] {
                             "Location master",
                             "Facilities, logistics",
                             "Geocoding",
                             "Manual review",
                             "Standardization",
                             "Real-time sync"});
-                table929.AddRow(new string[] {
+                table892.AddRow(new string[] {
                             "Reference data",
                             "Various systems",
                             "Code mapping",
@@ -1154,7 +1154,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Update frequency",
                             "Cached distribution"});
 #line 177
-    testRunner.When("implementing MDM:", ((string)(null)), table929, "When ");
+    testRunner.When("implementing MDM:", ((string)(null)), table892, "When ");
 #line hidden
 #line 185
     testRunner.Then("master data should be authoritative", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1211,49 +1211,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 194
     testRunner.And("monitoring enables proactive management", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table930 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table893 = new TechTalk.SpecFlow.Table(new string[] {
                             "Monitoring Aspect",
                             "Metrics Tracked",
                             "Alert Thresholds",
                             "Visualization",
                             "Root Cause Analysis",
                             "Remediation"});
-                table930.AddRow(new string[] {
+                table893.AddRow(new string[] {
                             "Message flow",
                             "Volume, latency",
                             "SLA deviation",
                             "Flow diagrams",
                             "Message tracing",
                             "Auto-retry"});
-                table930.AddRow(new string[] {
+                table893.AddRow(new string[] {
                             "Error rates",
                             "Failed messages",
                             ">1% error rate",
                             "Error dashboards",
                             "Error categorization",
                             "Error handling"});
-                table930.AddRow(new string[] {
+                table893.AddRow(new string[] {
                             "Performance",
                             "Response time",
                             ">2 sec average",
                             "Performance graphs",
                             "Bottleneck analysis",
                             "Scaling"});
-                table930.AddRow(new string[] {
+                table893.AddRow(new string[] {
                             "Availability",
                             "Uptime percentage",
                             "<99.9% uptime",
                             "Availability matrix",
                             "Failure analysis",
                             "Failover"});
-                table930.AddRow(new string[] {
+                table893.AddRow(new string[] {
                             "Data quality",
                             "Validation failures",
                             "Quality degradation",
                             "Quality scorecards",
                             "Data profiling",
                             "Data cleansing"});
-                table930.AddRow(new string[] {
+                table893.AddRow(new string[] {
                             "Business metrics",
                             "Transaction success",
                             "Business thresholds",
@@ -1261,7 +1261,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Impact analysis",
                             "Process optimization"});
 #line 195
-    testRunner.When("monitoring integrations:", ((string)(null)), table930, "When ");
+    testRunner.When("monitoring integrations:", ((string)(null)), table893, "When ");
 #line hidden
 #line 203
     testRunner.Then("integration health should be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1318,49 +1318,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 212
     testRunner.And("platform approach scales better", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table931 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table894 = new TechTalk.SpecFlow.Table(new string[] {
                             "iPaaS Capability",
                             "Platform Features",
                             "Development Model",
                             "Deployment Options",
                             "Governance",
                             "Scaling"});
-                table931.AddRow(new string[] {
+                table894.AddRow(new string[] {
                             "Low-code integration",
                             "Visual designers",
                             "Drag-drop interface",
                             "Multi-tenant",
                             "Template library",
                             "Auto-scaling"});
-                table931.AddRow(new string[] {
+                table894.AddRow(new string[] {
                             "Pre-built connectors",
                             "500+ connectors",
                             "Configuration-based",
                             "Hybrid deployment",
                             "Connector certification",
                             "Load-based"});
-                table931.AddRow(new string[] {
+                table894.AddRow(new string[] {
                             "API management",
                             "Full lifecycle",
                             "API-first design",
                             "Edge deployment",
                             "API governance",
                             "Geographic distribution"});
-                table931.AddRow(new string[] {
+                table894.AddRow(new string[] {
                             "Data integration",
                             "ETL/ELT tools",
                             "Data flow design",
                             "Cloud-native",
                             "Data lineage",
                             "Cluster scaling"});
-                table931.AddRow(new string[] {
+                table894.AddRow(new string[] {
                             "Process automation",
                             "Workflow engine",
                             "BPMN modeling",
                             "Container-based",
                             "Process governance",
                             "Horizontal scaling"});
-                table931.AddRow(new string[] {
+                table894.AddRow(new string[] {
                             "B2B gateway",
                             "Partner management",
                             "Self-service portal",
@@ -1368,7 +1368,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Partner governance",
                             "Partner isolation"});
 #line 213
-    testRunner.When("deploying iPaaS:", ((string)(null)), table931, "When ");
+    testRunner.When("deploying iPaaS:", ((string)(null)), table894, "When ");
 #line hidden
 #line 221
     testRunner.Then("integration should be simplified", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1425,49 +1425,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 230
     testRunner.And("testing must be continuous", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table932 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table895 = new TechTalk.SpecFlow.Table(new string[] {
                             "Test Type",
                             "Testing Approach",
                             "Test Data",
                             "Automation Level",
                             "Environment",
                             "Validation"});
-                table932.AddRow(new string[] {
+                table895.AddRow(new string[] {
                             "Contract testing",
                             "Consumer-driven",
                             "Synthetic data",
                             "Fully automated",
                             "Isolated",
                             "Schema validation"});
-                table932.AddRow(new string[] {
+                table895.AddRow(new string[] {
                             "End-to-end testing",
                             "Business scenarios",
                             "Production-like",
                             "80% automated",
                             "Staging",
                             "Business rules"});
-                table932.AddRow(new string[] {
+                table895.AddRow(new string[] {
                             "Performance testing",
                             "Load simulation",
                             "Volume data",
                             "Automated execution",
                             "Performance env",
                             "SLA validation"});
-                table932.AddRow(new string[] {
+                table895.AddRow(new string[] {
                             "Chaos testing",
                             "Failure injection",
                             "Minimal data",
                             "Automated chaos",
                             "Production-like",
                             "Resilience validation"});
-                table932.AddRow(new string[] {
+                table895.AddRow(new string[] {
                             "Security testing",
                             "Penetration testing",
                             "Sanitized data",
                             "Tool-automated",
                             "Security env",
                             "Vulnerability scan"});
-                table932.AddRow(new string[] {
+                table895.AddRow(new string[] {
                             "Data quality testing",
                             "Quality rules",
                             "Sample + full",
@@ -1475,7 +1475,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "All environments",
                             "Quality metrics"});
 #line 231
-    testRunner.When("testing integrations:", ((string)(null)), table932, "When ");
+    testRunner.When("testing integrations:", ((string)(null)), table895, "When ");
 #line hidden
 #line 239
     testRunner.Then("integrations should be thoroughly tested", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1532,49 +1532,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 248
     testRunner.And("lifecycle management ensures quality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table933 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table896 = new TechTalk.SpecFlow.Table(new string[] {
                             "Lifecycle Stage",
                             "Activities",
                             "Governance Checkpoints",
                             "Tools Used",
                             "Metrics",
                             "Automation"});
-                table933.AddRow(new string[] {
+                table896.AddRow(new string[] {
                             "Design",
                             "API specification",
                             "Design review",
                             "OpenAPI tools",
                             "Design time",
                             "Spec generation"});
-                table933.AddRow(new string[] {
+                table896.AddRow(new string[] {
                             "Development",
                             "Implementation",
                             "Code review",
                             "IDE plugins",
                             "Dev velocity",
                             "CI/CD pipeline"});
-                table933.AddRow(new string[] {
+                table896.AddRow(new string[] {
                             "Testing",
                             "Comprehensive testing",
                             "Test coverage",
                             "Testing frameworks",
                             "Coverage percentage",
                             "Test automation"});
-                table933.AddRow(new string[] {
+                table896.AddRow(new string[] {
                             "Deployment",
                             "Release management",
                             "Approval gates",
                             "Deployment tools",
                             "Deployment frequency",
                             "Blue-green deploy"});
-                table933.AddRow(new string[] {
+                table896.AddRow(new string[] {
                             "Operation",
                             "Runtime management",
                             "Performance monitoring",
                             "APM tools",
                             "API performance",
                             "Auto-scaling"});
-                table933.AddRow(new string[] {
+                table896.AddRow(new string[] {
                             "Retirement",
                             "Deprecation process",
                             "Migration planning",
@@ -1582,7 +1582,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "API usage decline",
                             "Version sunset"});
 #line 249
-    testRunner.When("managing API lifecycle:", ((string)(null)), table933, "When ");
+    testRunner.When("managing API lifecycle:", ((string)(null)), table896, "When ");
 #line hidden
 #line 257
     testRunner.Then("APIs should be well-managed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1639,49 +1639,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 266
     testRunner.And("EDA improves responsiveness", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table934 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table897 = new TechTalk.SpecFlow.Table(new string[] {
                             "EDA Component",
                             "Implementation",
                             "Event Processing",
                             "Event Storage",
                             "Governance",
                             "Benefits"});
-                table934.AddRow(new string[] {
+                table897.AddRow(new string[] {
                             "Event producers",
                             "Application events",
                             "Async publishing",
                             "Event outbox",
                             "Schema registry",
                             "Decoupling"});
-                table934.AddRow(new string[] {
+                table897.AddRow(new string[] {
                             "Event router",
                             "Event mesh/broker",
                             "Topic routing",
                             "Persistent queues",
                             "Routing rules",
                             "Flexibility"});
-                table934.AddRow(new string[] {
+                table897.AddRow(new string[] {
                             "Event consumers",
                             "Microservices",
                             "Parallel processing",
                             "Event replay",
                             "Consumer groups",
                             "Scalability"});
-                table934.AddRow(new string[] {
+                table897.AddRow(new string[] {
                             "Event store",
                             "Event sourcing",
                             "CQRS pattern",
                             "Immutable log",
                             "Retention policies",
                             "Audit trail"});
-                table934.AddRow(new string[] {
+                table897.AddRow(new string[] {
                             "Event analytics",
                             "Stream processing",
                             "Real-time analytics",
                             "Time-series DB",
                             "Analytics governance",
                             "Insights"});
-                table934.AddRow(new string[] {
+                table897.AddRow(new string[] {
                             "Event schema",
                             "Schema evolution",
                             "Compatibility rules",
@@ -1689,7 +1689,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Breaking changes",
                             "Compatibility"});
 #line 267
-    testRunner.When("implementing EDA:", ((string)(null)), table934, "When ");
+    testRunner.When("implementing EDA:", ((string)(null)), table897, "When ");
 #line hidden
 #line 275
     testRunner.Then("architecture should be event-driven", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1746,49 +1746,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 284
     testRunner.And("security must be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table935 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table898 = new TechTalk.SpecFlow.Table(new string[] {
                             "Security Layer",
                             "Implementation",
                             "Threat Mitigation",
                             "Monitoring",
                             "Compliance",
                             "Incident Response"});
-                table935.AddRow(new string[] {
+                table898.AddRow(new string[] {
                             "Transport security",
                             "mTLS everywhere",
                             "MITM prevention",
                             "Certificate monitoring",
                             "TLS compliance",
                             "Cert revocation"});
-                table935.AddRow(new string[] {
+                table898.AddRow(new string[] {
                             "Message security",
                             "Message encryption",
                             "Data breach prevention",
                             "Encryption status",
                             "Encryption standards",
                             "Key rotation"});
-                table935.AddRow(new string[] {
+                table898.AddRow(new string[] {
                             "Identity propagation",
                             "Token relay",
                             "Identity spoofing",
                             "Token validation",
                             "OAuth standards",
                             "Token revocation"});
-                table935.AddRow(new string[] {
+                table898.AddRow(new string[] {
                             "API security",
                             "API gateway security",
                             "API attacks",
                             "Attack detection",
                             "OWASP API",
                             "Rate limiting"});
-                table935.AddRow(new string[] {
+                table898.AddRow(new string[] {
                             "Data masking",
                             "Sensitive data masking",
                             "Data exposure",
                             "Masking audit",
                             "Privacy regulations",
                             "Unmask audit"});
-                table935.AddRow(new string[] {
+                table898.AddRow(new string[] {
                             "Integration monitoring",
                             "Security monitoring",
                             "Threat detection",
@@ -1796,7 +1796,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Security compliance",
                             "Incident response"});
 #line 285
-    testRunner.When("securing integrations:", ((string)(null)), table935, "When ");
+    testRunner.When("securing integrations:", ((string)(null)), table898, "When ");
 #line hidden
 #line 293
     testRunner.Then("integrations should be secure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1853,49 +1853,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 302
     testRunner.And("standardization improves quality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table936 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table899 = new TechTalk.SpecFlow.Table(new string[] {
                             "Pattern Category",
                             "Specific Patterns",
                             "Use Cases",
                             "Implementation",
                             "Benefits",
                             "Considerations"});
-                table936.AddRow(new string[] {
+                table899.AddRow(new string[] {
                             "Messaging",
                             "Pub-sub, queue, topic",
                             "Event distribution",
                             "Message broker",
                             "Loose coupling",
                             "Message ordering"});
-                table936.AddRow(new string[] {
+                table899.AddRow(new string[] {
                             "Routing",
                             "Content-based, filters",
                             "Dynamic routing",
                             "ESB/gateway",
                             "Flexibility",
                             "Performance impact"});
-                table936.AddRow(new string[] {
+                table899.AddRow(new string[] {
                             "Transformation",
                             "Translator, enricher",
                             "Data mapping",
                             "XSLT/mapping tools",
                             "Interoperability",
                             "Maintenance overhead"});
-                table936.AddRow(new string[] {
+                table899.AddRow(new string[] {
                             "Endpoints",
                             "Polling, event-driven",
                             "System integration",
                             "Adapters",
                             "Standardization",
                             "Resource usage"});
-                table936.AddRow(new string[] {
+                table899.AddRow(new string[] {
                             "Reliability",
                             "Retry, circuit breaker",
                             "Fault tolerance",
                             "Framework support",
                             "Resilience",
                             "Complexity"});
-                table936.AddRow(new string[] {
+                table899.AddRow(new string[] {
                             "Orchestration",
                             "Saga, choreography",
                             "Business processes",
@@ -1903,7 +1903,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Business agility",
                             "State management"});
 #line 303
-    testRunner.When("implementing integration patterns:", ((string)(null)), table936, "When ");
+    testRunner.When("implementing integration patterns:", ((string)(null)), table899, "When ");
 #line hidden
 #line 311
     testRunner.Then("patterns should be applied consistently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1960,49 +1960,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 320
     testRunner.And("consistency is business critical", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table937 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table900 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sync Pattern",
                             "Consistency Model",
                             "Conflict Resolution",
                             "Performance Impact",
                             "Monitoring",
                             "Recovery"});
-                table937.AddRow(new string[] {
+                table900.AddRow(new string[] {
                             "Real-time sync",
                             "Strong consistency",
                             "Last-write-wins",
                             "High latency",
                             "Sync lag",
                             "Point-in-time"});
-                table937.AddRow(new string[] {
+                table900.AddRow(new string[] {
                             "Near-real-time",
                             "Eventual consistency",
                             "Merge strategies",
                             "Moderate latency",
                             "Drift detection",
                             "Reconciliation"});
-                table937.AddRow(new string[] {
+                table900.AddRow(new string[] {
                             "Batch sync",
                             "Periodic consistency",
                             "Scheduled resolution",
                             "Low impact",
                             "Batch success",
                             "Full resync"});
-                table937.AddRow(new string[] {
+                table900.AddRow(new string[] {
                             "Event-driven",
                             "Event consistency",
                             "Event ordering",
                             "Minimal impact",
                             "Event processing",
                             "Event replay"});
-                table937.AddRow(new string[] {
+                table900.AddRow(new string[] {
                             "Master-slave",
                             "Master authority",
                             "Master wins",
                             "Read scaling",
                             "Replication lag",
                             "Failover"});
-                table937.AddRow(new string[] {
+                table900.AddRow(new string[] {
                             "Multi-master",
                             "Conflict-free",
                             "CRDT/vector clocks",
@@ -2010,7 +2010,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Conflict rate",
                             "Automatic merge"});
 #line 321
-    testRunner.When("synchronizing data:", ((string)(null)), table937, "When ");
+    testRunner.When("synchronizing data:", ((string)(null)), table900, "When ");
 #line hidden
 #line 329
     testRunner.Then("data should remain consistent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -2067,49 +2067,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 338
     testRunner.And("preparation ensures readiness", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table938 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table901 = new TechTalk.SpecFlow.Table(new string[] {
                             "Technology Trend",
                             "Expected Timeline",
                             "Preparation Strategy",
                             "Pilot Projects",
                             "Skills Development",
                             "Investment"});
-                table938.AddRow(new string[] {
+                table901.AddRow(new string[] {
                             "AI-driven integration",
                             "1-2 years",
                             "ML pipeline setup",
                             "Anomaly detection",
                             "ML engineering",
                             "Moderate"});
-                table938.AddRow(new string[] {
+                table901.AddRow(new string[] {
                             "Quantum networking",
                             "5-10 years",
                             "Research tracking",
                             "Quantum-safe crypto",
                             "Quantum basics",
                             "Minimal"});
-                table938.AddRow(new string[] {
+                table901.AddRow(new string[] {
                             "Blockchain integration",
                             "2-3 years",
                             "DLT evaluation",
                             "Supply chain pilot",
                             "Blockchain dev",
                             "Low-moderate"});
-                table938.AddRow(new string[] {
+                table901.AddRow(new string[] {
                             "5G edge integration",
                             "1-2 years",
                             "Edge architecture",
                             "IoT integration",
                             "Edge computing",
                             "Moderate"});
-                table938.AddRow(new string[] {
+                table901.AddRow(new string[] {
                             "Serverless integration",
                             "Now-1 year",
                             "FaaS adoption",
                             "Event processing",
                             "Serverless patterns",
                             "Low"});
-                table938.AddRow(new string[] {
+                table901.AddRow(new string[] {
                             "Graph-based integration",
                             "2-3 years",
                             "Graph database",
@@ -2117,7 +2117,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Graph theory",
                             "Low"});
 #line 339
-    testRunner.When("planning for future integration:", ((string)(null)), table938, "When ");
+    testRunner.When("planning for future integration:", ((string)(null)), table901, "When ");
 #line hidden
 #line 347
     testRunner.Then("future technologies should be evaluated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

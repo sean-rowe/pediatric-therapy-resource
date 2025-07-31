@@ -128,43 +128,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2386 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2349 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Type",
                             "Encryption Standard",
                             "Key Rotation",
                             "Compliance Requirement"});
-                table2386.AddRow(new string[] {
+                table2349.AddRow(new string[] {
                             "Student Names",
                             "AES-256-GCM",
                             "90 days",
                             "FERPA"});
-                table2386.AddRow(new string[] {
+                table2349.AddRow(new string[] {
                             "Therapy Notes",
                             "AES-256-GCM",
                             "90 days",
                             "HIPAA"});
-                table2386.AddRow(new string[] {
+                table2349.AddRow(new string[] {
                             "Assessment Scores",
                             "AES-256-GCM",
                             "90 days",
                             "FERPA/HIPAA"});
-                table2386.AddRow(new string[] {
+                table2349.AddRow(new string[] {
                             "Payment Information",
                             "AES-256-GCM",
                             "30 days",
                             "PCI DSS"});
-                table2386.AddRow(new string[] {
+                table2349.AddRow(new string[] {
                             "Session Videos",
                             "AES-256-GCM",
                             "90 days",
                             "HIPAA"});
-                table2386.AddRow(new string[] {
+                table2349.AddRow(new string[] {
                             "IEP Documents",
                             "AES-256-GCM",
                             "90 days",
                             "FERPA"});
 #line 14
-    testRunner.Given("the following data types require encryption at rest:", ((string)(null)), table2386, "Given ");
+    testRunner.Given("the following data types require encryption at rest:", ((string)(null)), table2349, "Given ");
 #line hidden
 #line 22
     testRunner.When("I verify database encryption status", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -274,48 +274,48 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2387 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2350 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field Type",
                             "Example Value",
                             "Encryption Required"});
-                table2387.AddRow(new string[] {
+                table2350.AddRow(new string[] {
                             "First Name",
                             "Sarah",
                             "Yes"});
-                table2387.AddRow(new string[] {
+                table2350.AddRow(new string[] {
                             "Last Name",
                             "Johnson",
                             "Yes"});
-                table2387.AddRow(new string[] {
+                table2350.AddRow(new string[] {
                             "Date of Birth",
                             "2015-03-15",
                             "Yes"});
-                table2387.AddRow(new string[] {
+                table2350.AddRow(new string[] {
                             "Social Security",
                             "123-45-6789",
                             "Yes"});
-                table2387.AddRow(new string[] {
+                table2350.AddRow(new string[] {
                             "Medical Diagnosis",
                             "Autism Spectrum Disorder",
                             "Yes"});
-                table2387.AddRow(new string[] {
+                table2350.AddRow(new string[] {
                             "Parent Email",
                             "parent@email.com",
                             "Yes"});
-                table2387.AddRow(new string[] {
+                table2350.AddRow(new string[] {
                             "Therapy Notes",
                             "Patient showed progress",
                             "Yes"});
-                table2387.AddRow(new string[] {
+                table2350.AddRow(new string[] {
                             "Student ID",
                             "STU-001",
                             "No (identifier)"});
-                table2387.AddRow(new string[] {
+                table2350.AddRow(new string[] {
                             "Grade Level",
                             "3rd Grade",
                             "No (educational)"});
 #line 42
-    testRunner.Given("student record contains sensitive fields:", ((string)(null)), table2387, "Given ");
+    testRunner.Given("student record contains sensitive fields:", ((string)(null)), table2350, "Given ");
 #line hidden
 #line 53
     testRunner.When("I store student record in database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -442,28 +442,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 78
     testRunner.And("deprecated protocols (TLS 1.0, 1.1, 1.2) should be rejected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2388 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2351 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cipher Suite",
                             "Status",
                             "Security Level"});
-                table2388.AddRow(new string[] {
+                table2351.AddRow(new string[] {
                             "TLS_AES_256_GCM_SHA384",
                             "Allowed",
                             "High"});
-                table2388.AddRow(new string[] {
+                table2351.AddRow(new string[] {
                             "TLS_CHACHA20_POLY1305_SHA256",
                             "Allowed",
                             "High"});
-                table2388.AddRow(new string[] {
+                table2351.AddRow(new string[] {
                             "TLS_AES_128_GCM_SHA256",
                             "Allowed",
                             "Medium"});
-                table2388.AddRow(new string[] {
+                table2351.AddRow(new string[] {
                             "TLS_ECDHE_RSA_WITH_AES_256_CBC",
                             "Blocked",
                             "Deprecated"});
 #line 79
-    testRunner.And("cipher suites should be restricted to secure algorithms:", ((string)(null)), table2388, "And ");
+    testRunner.And("cipher suites should be restricted to secure algorithms:", ((string)(null)), table2351, "And ");
 #line hidden
 #line 85
     testRunner.And("certificate should be valid and trusted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -570,36 +570,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 103
     testRunner.Given("API request contains student personal information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2389 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2352 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value",
                             "Encryption Required"});
-                table2389.AddRow(new string[] {
+                table2352.AddRow(new string[] {
                             "firstName",
                             "Michael",
                             "Yes"});
-                table2389.AddRow(new string[] {
+                table2352.AddRow(new string[] {
                             "lastName",
                             "Thompson",
                             "Yes"});
-                table2389.AddRow(new string[] {
+                table2352.AddRow(new string[] {
                             "birthDate",
                             "2016-07-22",
                             "Yes"});
-                table2389.AddRow(new string[] {
+                table2352.AddRow(new string[] {
                             "medicalInfo",
                             "ADHD, requires breaks",
                             "Yes"});
-                table2389.AddRow(new string[] {
+                table2352.AddRow(new string[] {
                             "parentEmail",
                             "parent@example.com",
                             "Yes"});
-                table2389.AddRow(new string[] {
+                table2352.AddRow(new string[] {
                             "therapyGoals",
                             "Improve focus and attention",
                             "Yes"});
 #line 104
-    testRunner.When("I send POST request to \"/api/students\" with sensitive data:", ((string)(null)), table2389, "When ");
+    testRunner.When("I send POST request to \"/api/students\" with sensitive data:", ((string)(null)), table2352, "When ");
 #line hidden
 #line 112
     testRunner.Then("request payload should be encrypted end-to-end", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

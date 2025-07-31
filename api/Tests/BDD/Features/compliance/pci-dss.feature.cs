@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 17
     testRunner.And("CDE must be protected from untrusted networks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table761 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table724 = new TechTalk.SpecFlow.Table(new string[] {
                             "Security Control",
                             "Implementation Method",
                             "Configuration Standard",
                             "Testing Requirement",
                             "Monitoring Approach",
                             "Documentation Need"});
-                table761.AddRow(new string[] {
+                table724.AddRow(new string[] {
                             "Firewall configuration",
                             "Stateful firewalls",
                             "Deny all, allow by exception",
                             "Quarterly reviews",
                             "Real-time monitoring",
                             "Firewall ruleset docs"});
-                table761.AddRow(new string[] {
+                table724.AddRow(new string[] {
                             "DMZ implementation",
                             "Network segmentation",
                             "Three-tier architecture",
                             "Penetration testing",
                             "Traffic analysis",
                             "Network diagrams"});
-                table761.AddRow(new string[] {
+                table724.AddRow(new string[] {
                             "Intrusion detection",
                             "IDS/IPS deployment",
                             "Signature + behavioral",
                             "Daily signature updates",
                             "24/7 monitoring",
                             "Alert procedures"});
-                table761.AddRow(new string[] {
+                table724.AddRow(new string[] {
                             "Network segmentation",
                             "VLAN isolation",
                             "CDE segregation",
                             "Annual validation",
                             "Flow monitoring",
                             "Segmentation proof"});
-                table761.AddRow(new string[] {
+                table724.AddRow(new string[] {
                             "Secure configuration",
                             "Hardening standards",
                             "CIS benchmarks",
                             "Configuration scanning",
                             "Change detection",
                             "Build standards"});
-                table761.AddRow(new string[] {
+                table724.AddRow(new string[] {
                             "Anti-malware",
                             "Endpoint protection",
                             "Real-time scanning",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Infection monitoring",
                             "Incident response"});
 #line 18
-    testRunner.When("implementing network security:", ((string)(null)), table761, "When ");
+    testRunner.When("implementing network security:", ((string)(null)), table724, "When ");
 #line hidden
 #line 26
     testRunner.Then("network security should meet PCI standards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 34
     testRunner.And("encryption must meet industry standards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table762 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table725 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data State",
                             "Protection Method",
                             "Encryption Standard",
                             "Key Management",
                             "Retention Policy",
                             "Access Control"});
-                table762.AddRow(new string[] {
+                table725.AddRow(new string[] {
                             "Data at rest",
                             "Database encryption",
                             "AES-256",
                             "HSM key storage",
                             "Minimal retention",
                             "Need-to-know only"});
-                table762.AddRow(new string[] {
+                table725.AddRow(new string[] {
                             "Data in transit",
                             "TLS encryption",
                             "TLS 1.2 minimum",
                             "Certificate management",
                             "Session-based",
                             "Authenticated channels"});
-                table762.AddRow(new string[] {
+                table725.AddRow(new string[] {
                             "Data in memory",
                             "Memory encryption",
                             "Application-level",
                             "Runtime protection",
                             "Immediate clearing",
                             "Process isolation"});
-                table762.AddRow(new string[] {
+                table725.AddRow(new string[] {
                             "Backup data",
                             "Encrypted backups",
                             "Same as primary",
                             "Separate keys",
                             "Limited retention",
                             "Restricted access"});
-                table762.AddRow(new string[] {
+                table725.AddRow(new string[] {
                             "Archived data",
                             "Secure deletion",
                             "Cryptographic erasure",
                             "Key destruction",
                             "Legal minimum",
                             "Audit trail required"});
-                table762.AddRow(new string[] {
+                table725.AddRow(new string[] {
                             "Tokenized data",
                             "Token vault",
                             "Format-preserving",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Permanent tokens",
                             "Tokenization gateway"});
 #line 35
-    testRunner.When("protecting cardholder data:", ((string)(null)), table762, "When ");
+    testRunner.When("protecting cardholder data:", ((string)(null)), table725, "When ");
 #line hidden
 #line 43
     testRunner.Then("cardholder data should be encrypted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 51
     testRunner.And("systems must be protected from known vulnerabilities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table763 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table726 = new TechTalk.SpecFlow.Table(new string[] {
                             "Vulnerability Type",
                             "Detection Method",
                             "Remediation Timeline",
                             "Risk Ranking",
                             "Verification Process",
                             "Exception Handling"});
-                table763.AddRow(new string[] {
+                table726.AddRow(new string[] {
                             "Critical vulnerabilities",
                             "Automated scanning",
                             "30 days maximum",
                             "CVSS 7.0+",
                             "Rescan validation",
                             "CISO approval required"});
-                table763.AddRow(new string[] {
+                table726.AddRow(new string[] {
                             "High vulnerabilities",
                             "Quarterly scans",
                             "90 days maximum",
                             "CVSS 4.0-6.9",
                             "Patch verification",
                             "Risk acceptance process"});
-                table763.AddRow(new string[] {
+                table726.AddRow(new string[] {
                             "Configuration issues",
                             "Compliance scanning",
                             "30 days remediation",
                             "Policy-based",
                             "Configuration review",
                             "Compensating controls"});
-                table763.AddRow(new string[] {
+                table726.AddRow(new string[] {
                             "Custom code flaws",
                             "SAST/DAST scanning",
                             "Per release cycle",
                             "OWASP Top 10",
                             "Code review",
                             "Security testing"});
-                table763.AddRow(new string[] {
+                table726.AddRow(new string[] {
                             "Third-party components",
                             "Dependency scanning",
                             "Based on severity",
                             "Component risk",
                             "Update testing",
                             "Vendor coordination"});
-                table763.AddRow(new string[] {
+                table726.AddRow(new string[] {
                             "Zero-day threats",
                             "Threat intelligence",
                             "Immediate response",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Emergency patching",
                             "Incident response"});
 #line 52
-    testRunner.When("managing vulnerabilities:", ((string)(null)), table763, "When ");
+    testRunner.When("managing vulnerabilities:", ((string)(null)), table726, "When ");
 #line hidden
 #line 60
     testRunner.Then("vulnerabilities should be detected promptly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 68
     testRunner.And("least privilege principle must be enforced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table764 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table727 = new TechTalk.SpecFlow.Table(new string[] {
                             "Access Component",
                             "Control Mechanism",
                             "Assignment Process",
                             "Review Frequency",
                             "Monitoring Method",
                             "Revocation Process"});
-                table764.AddRow(new string[] {
+                table727.AddRow(new string[] {
                             "User identification",
                             "Unique user IDs",
                             "Identity verification",
                             "Not shared",
                             "Login monitoring",
                             "Immediate on termination"});
-                table764.AddRow(new string[] {
+                table727.AddRow(new string[] {
                             "Authentication",
                             "Multi-factor required",
                             "Strong passwords + MFA",
                             "90-day rotation",
                             "Failed attempt tracking",
                             "Account lockout"});
-                table764.AddRow(new string[] {
+                table727.AddRow(new string[] {
                             "Authorization",
                             "Role-based access",
                             "Business need basis",
                             "Quarterly review",
                             "Permission auditing",
                             "Automatic expiration"});
-                table764.AddRow(new string[] {
+                table727.AddRow(new string[] {
                             "Physical access",
                             "Badge + biometric",
                             "Background checks",
                             "Annual revalidation",
                             "Entry/exit logging",
                             "Badge deactivation"});
-                table764.AddRow(new string[] {
+                table727.AddRow(new string[] {
                             "Remote access",
                             "VPN + MFA",
                             "Encrypted channels",
                             "Per session",
                             "Connection monitoring",
                             "Certificate revocation"});
-                table764.AddRow(new string[] {
+                table727.AddRow(new string[] {
                             "Privileged access",
                             "PAM solution",
                             "Approval workflow",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Session recording",
                             "Time-bound access"});
 #line 69
-    testRunner.When("implementing access controls:", ((string)(null)), table764, "When ");
+    testRunner.When("implementing access controls:", ((string)(null)), table727, "When ");
 #line hidden
 #line 77
     testRunner.Then("access should be properly controlled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 86
     testRunner.And("logs must be protected and retained", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table765 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table728 = new TechTalk.SpecFlow.Table(new string[] {
                             "Log Type",
                             "Data Captured",
                             "Retention Period",
                             "Protection Method",
                             "Analysis Method",
                             "Alert Triggers"});
-                table765.AddRow(new string[] {
+                table728.AddRow(new string[] {
                             "User access logs",
                             "Login/logout, commands",
                             "1 year minimum",
                             "Encrypted, immutable",
                             "SIEM correlation",
                             "Anomalous access"});
-                table765.AddRow(new string[] {
+                table728.AddRow(new string[] {
                             "Administrator logs",
                             "All privileged actions",
                             "1 year minimum",
                             "Separate storage",
                             "Privileged analytics",
                             "Unauthorized changes"});
-                table765.AddRow(new string[] {
+                table728.AddRow(new string[] {
                             "Security events",
                             "IDS/IPS, anti-malware",
                             "1 year minimum",
                             "Centralized logging",
                             "Threat detection",
                             "Security incidents"});
-                table765.AddRow(new string[] {
+                table728.AddRow(new string[] {
                             "Application logs",
                             "Cardholder data access",
                             "1 year minimum",
                             "Secure transmission",
                             "Transaction analysis",
                             "Data breaches"});
-                table765.AddRow(new string[] {
+                table728.AddRow(new string[] {
                             "System logs",
                             "System events, changes",
                             "1 year minimum",
                             "Log integrity",
                             "Change detection",
                             "System compromise"});
-                table765.AddRow(new string[] {
+                table728.AddRow(new string[] {
                             "Physical access logs",
                             "Facility entry/exit",
                             "3 months minimum",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Access patterns",
                             "Unauthorized entry"});
 #line 87
-    testRunner.When("implementing logging:", ((string)(null)), table765, "When ");
+    testRunner.When("implementing logging:", ((string)(null)), table728, "When ");
 #line hidden
 #line 95
     testRunner.Then("logging should capture all access", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 103
     testRunner.And("testing must be performed regularly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table766 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table729 = new TechTalk.SpecFlow.Table(new string[] {
                             "Test Type",
                             "Frequency",
                             "Scope",
                             "Methodology",
                             "Success Criteria",
                             "Remediation Timeline"});
-                table766.AddRow(new string[] {
+                table729.AddRow(new string[] {
                             "External pen testing",
                             "Annual + changes",
                             "Internet-facing CDE",
                             "Black box testing",
                             "No critical findings",
                             "90 days for highs"});
-                table766.AddRow(new string[] {
+                table729.AddRow(new string[] {
                             "Internal pen testing",
                             "Annual + changes",
                             "Internal CDE",
                             "Gray box testing",
                             "Limited findings",
                             "60 days for highs"});
-                table766.AddRow(new string[] {
+                table729.AddRow(new string[] {
                             "Segmentation testing",
                             "Annual",
                             "Network boundaries",
                             "Validation testing",
                             "Effective isolation",
                             "Immediate if failed"});
-                table766.AddRow(new string[] {
+                table729.AddRow(new string[] {
                             "Vulnerability scanning",
                             "Quarterly",
                             "All systems",
                             "Authenticated scans",
                             "Clean scan required",
                             "Per severity"});
-                table766.AddRow(new string[] {
+                table729.AddRow(new string[] {
                             "WAF testing",
                             "Quarterly",
                             "Web applications",
                             "OWASP testing",
                             "WAF effectiveness",
                             "Tuning as needed"});
-                table766.AddRow(new string[] {
+                table729.AddRow(new string[] {
                             "Social engineering",
                             "Annual",
                             "Staff awareness",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "<5% failure rate",
                             "Immediate training"});
 #line 104
-    testRunner.When("conducting security testing:", ((string)(null)), table766, "When ");
+    testRunner.When("conducting security testing:", ((string)(null)), table729, "When ");
 #line hidden
 #line 112
     testRunner.Then("testing should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 120
     testRunner.And("policies must be maintained and disseminated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table767 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table730 = new TechTalk.SpecFlow.Table(new string[] {
                             "Policy Area",
                             "Key Components",
                             "Review Cycle",
                             "Distribution Method",
                             "Training Requirement",
                             "Enforcement"});
-                table767.AddRow(new string[] {
+                table730.AddRow(new string[] {
                             "Information security",
                             "Overall security program",
                             "Annual",
                             "Portal + training",
                             "Annual acknowledgment",
                             "Disciplinary process"});
-                table767.AddRow(new string[] {
+                table730.AddRow(new string[] {
                             "Acceptable use",
                             "Cardholder data handling",
                             "Annual",
                             "Employee handbook",
                             "Onboarding + annual",
                             "Monitoring + audits"});
-                table767.AddRow(new string[] {
+                table730.AddRow(new string[] {
                             "Access control",
                             "Authorization procedures",
                             "Semi-annual",
                             "System documentation",
                             "Role-specific",
                             "Access reviews"});
-                table767.AddRow(new string[] {
+                table730.AddRow(new string[] {
                             "Vendor management",
                             "Third-party requirements",
                             "Annual",
                             "Contracts + portal",
                             "Vendor orientation",
                             "Contract enforcement"});
-                table767.AddRow(new string[] {
+                table730.AddRow(new string[] {
                             "Incident response",
                             "Breach procedures",
                             "Quarterly",
                             "Response playbooks",
                             "Tabletop exercises",
                             "Drill validation"});
-                table767.AddRow(new string[] {
+                table730.AddRow(new string[] {
                             "Change management",
                             "Change control process",
                             "Annual",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Technical training",
                             "CAB approval"});
 #line 121
-    testRunner.When("managing security policies:", ((string)(null)), table767, "When ");
+    testRunner.When("managing security policies:", ((string)(null)), table730, "When ");
 #line hidden
 #line 129
     testRunner.Then("policies should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 138
     testRunner.And("processing must minimize risk exposure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table768 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table731 = new TechTalk.SpecFlow.Table(new string[] {
                             "Processing Stage",
                             "Security Measure",
                             "Data Handling",
                             "Risk Mitigation",
                             "Compliance Check",
                             "Monitoring"});
-                table768.AddRow(new string[] {
+                table731.AddRow(new string[] {
                             "Card data capture",
                             "TLS form submission",
                             "No local storage",
                             "Input validation",
                             "Field encryption",
                             "Transaction logging"});
-                table768.AddRow(new string[] {
+                table731.AddRow(new string[] {
                             "Authorization",
                             "Direct processor API",
                             "Tokenization immediate",
                             "Timeout controls",
                             "API security",
                             "Response validation"});
-                table768.AddRow(new string[] {
+                table731.AddRow(new string[] {
                             "Settlement",
                             "Batch encryption",
                             "Secure transmission",
                             "Reconciliation",
                             "Settlement audit",
                             "Batch monitoring"});
-                table768.AddRow(new string[] {
+                table731.AddRow(new string[] {
                             "Refunds/voids",
                             "Authenticated requests",
                             "Token-based only",
                             "Approval workflow",
                             "Audit trail",
                             "Refund monitoring"});
-                table768.AddRow(new string[] {
+                table731.AddRow(new string[] {
                             "Recurring billing",
                             "Secure token storage",
                             "No card storage",
                             "Customer control",
                             "Consent tracking",
                             "Billing monitoring"});
-                table768.AddRow(new string[] {
+                table731.AddRow(new string[] {
                             "3D Secure",
                             "3DS 2.0 implementation",
                             "Pass-through only",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Authentication logging",
                             "3DS analytics"});
 #line 139
-    testRunner.When("processing payments:", ((string)(null)), table768, "When ");
+    testRunner.When("processing payments:", ((string)(null)), table731, "When ");
 #line hidden
 #line 147
     testRunner.Then("payment processing should be secure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 155
     testRunner.And("vendor management ensures security", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table769 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table732 = new TechTalk.SpecFlow.Table(new string[] {
                             "Vendor Type",
                             "Compliance Requirement",
                             "Verification Method",
                             "Contract Terms",
                             "Monitoring Process",
                             "Incident Response"});
-                table769.AddRow(new string[] {
+                table732.AddRow(new string[] {
                             "Payment processor",
                             "PCI DSS Level 1",
                             "AOC validation",
                             "Liability terms",
                             "Annual review",
                             "Breach notification"});
-                table769.AddRow(new string[] {
+                table732.AddRow(new string[] {
                             "Cloud provider",
                             "PCI DSS certified",
                             "Responsibility matrix",
                             "Security addendum",
                             "Quarterly assessment",
                             "Shared response"});
-                table769.AddRow(new string[] {
+                table732.AddRow(new string[] {
                             "Software vendors",
                             "PA-DSS validated",
                             "Certification check",
                             "Update requirements",
                             "Patch monitoring",
                             "Vulnerability disclosure"});
-                table769.AddRow(new string[] {
+                table732.AddRow(new string[] {
                             "Managed services",
                             "PCI DSS compliant",
                             "Assessment review",
                             "SLA terms",
                             "Performance monitoring",
                             "Escalation procedures"});
-                table769.AddRow(new string[] {
+                table732.AddRow(new string[] {
                             "Development partners",
                             "Secure coding",
                             "Code review rights",
                             "Security standards",
                             "Release testing",
                             "Bug bounty"});
-                table769.AddRow(new string[] {
+                table732.AddRow(new string[] {
                             "Support vendors",
                             "Limited access",
                             "Access audit",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Activity monitoring",
                             "Access revocation"});
 #line 156
-    testRunner.When("managing vendors:", ((string)(null)), table769, "When ");
+    testRunner.When("managing vendors:", ((string)(null)), table732, "When ");
 #line hidden
 #line 164
     testRunner.Then("vendors should maintain compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 172
     testRunner.And("response must follow PCI requirements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table770 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table733 = new TechTalk.SpecFlow.Table(new string[] {
                             "Incident Phase",
                             "Required Actions",
                             "Timeline",
                             "Stakeholders",
                             "Documentation",
                             "Follow-up"});
-                table770.AddRow(new string[] {
+                table733.AddRow(new string[] {
                             "Detection",
                             "Immediate containment",
                             "Within 1 hour",
                             "Security team",
                             "Incident ticket",
                             "Investigation launch"});
-                table770.AddRow(new string[] {
+                table733.AddRow(new string[] {
                             "Assessment",
                             "Scope determination",
                             "Within 4 hours",
                             "Management + legal",
                             "Impact assessment",
                             "Forensics engagement"});
-                table770.AddRow(new string[] {
+                table733.AddRow(new string[] {
                             "Containment",
                             "System isolation",
                             "Within 24 hours",
                             "IT operations",
                             "Containment log",
                             "Evidence preservation"});
-                table770.AddRow(new string[] {
+                table733.AddRow(new string[] {
                             "Notification",
                             "Payment brands",
                             "Within 72 hours",
                             "Acquirer + brands",
                             "Notification records",
                             "Daily updates"});
-                table770.AddRow(new string[] {
+                table733.AddRow(new string[] {
                             "Investigation",
                             "Forensic analysis",
                             "Per incident",
                             "PFI involvement",
                             "Investigation report",
                             "Root cause analysis"});
-                table770.AddRow(new string[] {
+                table733.AddRow(new string[] {
                             "Remediation",
                             "Security improvements",
                             "90 days",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Remediation plan",
                             "Effectiveness testing"});
 #line 173
-    testRunner.When("responding to incidents:", ((string)(null)), table770, "When ");
+    testRunner.When("responding to incidents:", ((string)(null)), table733, "When ");
 #line hidden
 #line 181
     testRunner.Then("response should be immediate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 189
     testRunner.And("compensating controls must provide equivalent protection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table771 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table734 = new TechTalk.SpecFlow.Table(new string[] {
                             "Original Requirement",
                             "Technical Constraint",
                             "Compensating Control",
                             "Risk Analysis",
                             "Effectiveness Validation",
                             "Documentation"});
-                table771.AddRow(new string[] {
+                table734.AddRow(new string[] {
                             "Network segmentation",
                             "Legacy architecture",
                             "Enhanced monitoring + IPS",
                             "Risk assessment",
                             "Penetration testing",
                             "Control documentation"});
-                table771.AddRow(new string[] {
+                table734.AddRow(new string[] {
                             "Encryption at rest",
                             "Performance impact",
                             "Tokenization + access control",
                             "Data flow analysis",
                             "Security assessment",
                             "Architecture decision"});
-                table771.AddRow(new string[] {
+                table734.AddRow(new string[] {
                             "Multi-factor auth",
                             "User experience",
                             "Risk-based authentication",
                             "Authentication analysis",
                             "Fraud monitoring",
                             "User journey mapping"});
-                table771.AddRow(new string[] {
+                table734.AddRow(new string[] {
                             "Log centralization",
                             "System limitations",
                             "Distributed SIEM agents",
                             "Log coverage analysis",
                             "Correlation testing",
                             "Agent deployment"});
-                table771.AddRow(new string[] {
+                table734.AddRow(new string[] {
                             "Quarterly scanning",
                             "Resource constraints",
                             "Continuous monitoring",
                             "Coverage assessment",
                             "Detection validation",
                             "Tool comparison"});
-                table771.AddRow(new string[] {
+                table734.AddRow(new string[] {
                             "Physical security",
                             "Remote locations",
                             "Video surveillance + alarms",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Incident testing",
                             "Security procedures"});
 #line 190
-    testRunner.When("implementing compensating controls:", ((string)(null)), table771, "When ");
+    testRunner.When("implementing compensating controls:", ((string)(null)), table734, "When ");
 #line hidden
 #line 198
     testRunner.Then("compensating controls should be justified", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 207
     testRunner.And("accuracy is critical for compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table772 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table735 = new TechTalk.SpecFlow.Table(new string[] {
                             "SAQ Section",
                             "Validation Method",
                             "Evidence Required",
                             "Review Process",
                             "Sign-off Required",
                             "Submission"});
-                table772.AddRow(new string[] {
+                table735.AddRow(new string[] {
                             "Network security",
                             "Technical review",
                             "Firewall configs",
                             "Security architect",
                             "CISO approval",
                             "Annual"});
-                table772.AddRow(new string[] {
+                table735.AddRow(new string[] {
                             "Cardholder protection",
                             "Encryption audit",
                             "Crypto inventory",
                             "Security team",
                             "CTO approval",
                             "Annual"});
-                table772.AddRow(new string[] {
+                table735.AddRow(new string[] {
                             "Vulnerability management",
                             "Scan results",
                             "Clean scan reports",
                             "IT operations",
                             "IT director",
                             "Quarterly"});
-                table772.AddRow(new string[] {
+                table735.AddRow(new string[] {
                             "Access control",
                             "Access review",
                             "Permission matrix",
                             "IAM team",
                             "CISO approval",
                             "Annual"});
-                table772.AddRow(new string[] {
+                table735.AddRow(new string[] {
                             "Monitoring",
                             "Log analysis",
                             "SIEM reports",
                             "SOC team",
                             "Security manager",
                             "Annual"});
-                table772.AddRow(new string[] {
+                table735.AddRow(new string[] {
                             "Policy compliance",
                             "Policy review",
                             "Updated policies",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Executive sign-off",
                             "Annual"});
 #line 208
-    testRunner.When("completing SAQ:", ((string)(null)), table772, "When ");
+    testRunner.When("completing SAQ:", ((string)(null)), table735, "When ");
 #line hidden
 #line 216
     testRunner.Then("SAQ should accurately reflect environment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 224
     testRunner.And("maintenance ensures continued compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table773 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table736 = new TechTalk.SpecFlow.Table(new string[] {
                             "Compliance Element",
                             "Maintenance Activity",
                             "Validation Frequency",
                             "Update Triggers",
                             "Review Process",
                             "Distribution"});
-                table773.AddRow(new string[] {
+                table736.AddRow(new string[] {
                             "Compliance status",
                             "Continuous monitoring",
                             "Monthly review",
                             "Environment changes",
                             "QSA consultation",
                             "Customer portal"});
-                table773.AddRow(new string[] {
+                table736.AddRow(new string[] {
                             "Control effectiveness",
                             "Control testing",
                             "Quarterly validation",
                             "Control changes",
                             "Internal audit",
                             "Partner requests"});
-                table773.AddRow(new string[] {
+                table736.AddRow(new string[] {
                             "Scope accuracy",
                             "Scope review",
                             "Semi-annual",
                             "Business changes",
                             "Architecture review",
                             "Acquirer updates"});
-                table773.AddRow(new string[] {
+                table736.AddRow(new string[] {
                             "Service provider list",
                             "Vendor tracking",
                             "Quarterly update",
                             "Vendor changes",
                             "Vendor assessment",
                             "AOC addendum"});
-                table773.AddRow(new string[] {
+                table736.AddRow(new string[] {
                             "Remediation status",
                             "Finding tracking",
                             "Monthly progress",
                             "New vulnerabilities",
                             "Management review",
                             "Status reports"});
-                table773.AddRow(new string[] {
+                table736.AddRow(new string[] {
                             "Executive attestation",
                             "Leadership review",
                             "Annual renewal",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Board presentation",
                             "Public filing"});
 #line 225
-    testRunner.When("maintaining AOC:", ((string)(null)), table773, "When ");
+    testRunner.When("maintaining AOC:", ((string)(null)), table736, "When ");
 #line hidden
 #line 233
     testRunner.Then("AOC should remain current", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 241
     testRunner.And("monitoring ensures sustained compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table774 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table737 = new TechTalk.SpecFlow.Table(new string[] {
                             "Monitoring Area",
                             "Automated Tools",
                             "Manual Reviews",
                             "Alert Thresholds",
                             "Escalation Path",
                             "Reporting"});
-                table774.AddRow(new string[] {
+                table737.AddRow(new string[] {
                             "Configuration drift",
                             "CCMS scanning",
                             "Monthly audits",
                             "Any deviation",
                             "IT security",
                             "Drift reports"});
-                table774.AddRow(new string[] {
+                table737.AddRow(new string[] {
                             "Access creep",
                             "IAM analytics",
                             "Quarterly reviews",
                             "Privilege expansion",
                             "Identity team",
                             "Access reports"});
-                table774.AddRow(new string[] {
+                table737.AddRow(new string[] {
                             "Vulnerability emergence",
                             "Continuous scanning",
                             "Weekly reviews",
                             "CVSS >4.0",
                             "Security ops",
                             "Vulnerability dashboard"});
-                table774.AddRow(new string[] {
+                table737.AddRow(new string[] {
                             "Log integrity",
                             "SIEM monitoring",
                             "Daily checks",
                             "Missing logs",
                             "SOC team",
                             "Log reports"});
-                table774.AddRow(new string[] {
+                table737.AddRow(new string[] {
                             "Change compliance",
                             "Change tracking",
                             "CAB reviews",
                             "Unauthorized changes",
                             "Change manager",
                             "Change metrics"});
-                table774.AddRow(new string[] {
+                table737.AddRow(new string[] {
                             "Training compliance",
                             "LMS tracking",
                             "Annual verification",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "HR + managers",
                             "Training dashboard"});
 #line 242
-    testRunner.When("monitoring compliance:", ((string)(null)), table774, "When ");
+    testRunner.When("monitoring compliance:", ((string)(null)), table737, "When ");
 #line hidden
 #line 250
     testRunner.Then("monitoring should be continuous", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 258
     testRunner.And("scope reduction simplifies compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table775 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table738 = new TechTalk.SpecFlow.Table(new string[] {
                             "Reduction Strategy",
                             "Implementation Method",
                             "Scope Impact",
                             "Risk Reduction",
                             "Cost Benefit",
                             "Validation"});
-                table775.AddRow(new string[] {
+                table738.AddRow(new string[] {
                             "Network segmentation",
                             "Microsegmentation",
                             "-70% systems",
                             "High reduction",
                             "ROI in 6 months",
                             "Penetration test"});
-                table775.AddRow(new string[] {
+                table738.AddRow(new string[] {
                             "Tokenization",
                             "Full tokenization",
                             "-90% data storage",
                             "Critical reduction",
                             "ROI in 12 months",
                             "No CHD validation"});
-                table775.AddRow(new string[] {
+                table738.AddRow(new string[] {
                             "P2PE solution",
                             "Validated P2PE",
                             "-100% card entry",
                             "Maximum reduction",
                             "ROI in 18 months",
                             "Solution validation"});
-                table775.AddRow(new string[] {
+                table738.AddRow(new string[] {
                             "Cloud isolation",
                             "Dedicated cloud CDE",
                             "-80% on-premise",
                             "High reduction",
                             "Immediate ROI",
                             "Cloud assessment"});
-                table775.AddRow(new string[] {
+                table738.AddRow(new string[] {
                             "Outsourcing",
                             "Processor services",
                             "-95% processing",
                             "Critical reduction",
                             "Operational savings",
                             "Vendor compliance"});
-                table775.AddRow(new string[] {
+                table738.AddRow(new string[] {
                             "Process elimination",
                             "Digital-only",
                             "-100% physical",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Process efficiency",
                             "Channel validation"});
 #line 259
-    testRunner.When("reducing scope:", ((string)(null)), table775, "When ");
+    testRunner.When("reducing scope:", ((string)(null)), table738, "When ");
 #line hidden
 #line 267
     testRunner.Then("scope should be minimized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 275
     testRunner.And("new threats require adaptive security", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table776 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table739 = new TechTalk.SpecFlow.Table(new string[] {
                             "Threat/Trend",
                             "Security Response",
                             "Implementation Timeline",
                             "Effectiveness Measure",
                             "Compliance Impact",
                             "Future Planning"});
-                table776.AddRow(new string[] {
+                table739.AddRow(new string[] {
                             "Contactless payments",
                             "NFC security controls",
                             "90-day deployment",
                             "Fraud rate monitoring",
                             "Scope expansion",
                             "Technology roadmap"});
-                table776.AddRow(new string[] {
+                table739.AddRow(new string[] {
                             "Mobile wallets",
                             "App security standards",
                             "120-day implementation",
                             "Transaction monitoring",
                             "Mobile compliance",
                             "Platform strategy"});
-                table776.AddRow(new string[] {
+                table739.AddRow(new string[] {
                             "Cryptocurrency",
                             "Separate processing",
                             "180-day segregation",
                             "Isolation validation",
                             "Out of scope",
                             "Crypto strategy"});
-                table776.AddRow(new string[] {
+                table739.AddRow(new string[] {
                             "API economy",
                             "API security gateway",
                             "60-day deployment",
                             "API monitoring",
                             "Interface compliance",
                             "API governance"});
-                table776.AddRow(new string[] {
+                table739.AddRow(new string[] {
                             "Quantum threats",
                             "Crypto-agility plan",
                             "2-year preparation",
                             "Algorithm inventory",
                             "Future compliance",
                             "Quantum roadmap"});
-                table776.AddRow(new string[] {
+                table739.AddRow(new string[] {
                             "Supply chain attacks",
                             "Vendor hardening",
                             "Continuous improvement",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Third-party focus",
                             "Supply chain security"});
 #line 276
-    testRunner.When("addressing emerging threats:", ((string)(null)), table776, "When ");
+    testRunner.When("addressing emerging threats:", ((string)(null)), table739, "When ");
 #line hidden
 #line 284
     testRunner.Then("emerging threats should be addressed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1851,49 +1851,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 291
     testRunner.Given("PCI compliance requires ongoing investment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table777 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table740 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table777.AddRow(new string[] {
+                table740.AddRow(new string[] {
                             "Standard evolution",
                             "PCI DSS 4.0 transition",
                             "Phased implementation",
                             "Project resources",
                             "Milestone achievement",
                             "Version flexibility"});
-                table777.AddRow(new string[] {
+                table740.AddRow(new string[] {
                             "Technology change",
                             "Cloud transformation",
                             "Cloud-native security",
                             "Cloud expertise",
                             "Secure migration",
                             "Cloud compliance"});
-                table777.AddRow(new string[] {
+                table740.AddRow(new string[] {
                             "Business growth",
                             "Transaction volume",
                             "Scalable controls",
                             "Infrastructure investment",
                             "Performance maintenance",
                             "Growth readiness"});
-                table777.AddRow(new string[] {
+                table740.AddRow(new string[] {
                             "Cost optimization",
                             "Compliance overhead",
                             "Automation focus",
                             "Tool investment",
                             "Efficiency gains",
                             "Cost reduction"});
-                table777.AddRow(new string[] {
+                table740.AddRow(new string[] {
                             "Skill retention",
                             "Security expertise",
                             "Training programs",
                             "Education budget",
                             "Competency levels",
                             "Knowledge management"});
-                table777.AddRow(new string[] {
+                table740.AddRow(new string[] {
                             "Vendor ecosystem",
                             "Provider proliferation",
                             "Vendor governance",
@@ -1901,7 +1901,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Vendor compliance",
                             "Ecosystem control"});
 #line 292
-    testRunner.When("planning sustainable compliance:", ((string)(null)), table777, "When ");
+    testRunner.When("planning sustainable compliance:", ((string)(null)), table740, "When ");
 #line hidden
 #line 300
     testRunner.Then("sustainability should be planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

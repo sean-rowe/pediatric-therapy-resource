@@ -133,50 +133,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 15
     testRunner.Given("the search system handles high query volumes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1833 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1796 = new TechTalk.SpecFlow.Table(new string[] {
                             "Query Type",
                             "Query Complexity",
                             "Response Time Target",
                             "Accuracy Target",
                             "Concurrent Users"});
-                table1833.AddRow(new string[] {
+                table1796.AddRow(new string[] {
                             "Simple keyword",
                             "Low",
                             "<500ms",
                             ">95%",
                             "10,000"});
-                table1833.AddRow(new string[] {
+                table1796.AddRow(new string[] {
                             "Multi-word phrases",
                             "Medium",
                             "<750ms",
                             ">90%",
                             "5,000"});
-                table1833.AddRow(new string[] {
+                table1796.AddRow(new string[] {
                             "Advanced filters",
                             "Medium",
                             "<1 second",
                             ">92%",
                             "3,000"});
-                table1833.AddRow(new string[] {
+                table1796.AddRow(new string[] {
                             "Complex boolean",
                             "High",
                             "<1.5 seconds",
                             ">88%",
                             "1,000"});
-                table1833.AddRow(new string[] {
+                table1796.AddRow(new string[] {
                             "Fuzzy/typo correction",
                             "High",
                             "<2 seconds",
                             ">85%",
                             "2,000"});
-                table1833.AddRow(new string[] {
+                table1796.AddRow(new string[] {
                             "Multi-language searches",
                             "High",
                             "<2 seconds",
                             ">80%",
                             "500"});
 #line 16
-    testRunner.When("search performance is tested across query types:", ((string)(null)), table1833, "When ");
+    testRunner.When("search performance is tested across query types:", ((string)(null)), table1796, "When ");
 #line hidden
 #line 24
     testRunner.Then("all search queries should complete within target timeframes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -226,44 +226,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 31
     testRunner.Given("search indexes are maintained in real-time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1834 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1797 = new TechTalk.SpecFlow.Table(new string[] {
                             "Index Operation",
                             "Document Count",
                             "Processing Time Target",
                             "Index Size Impact",
                             "Search Impact"});
-                table1834.AddRow(new string[] {
+                table1797.AddRow(new string[] {
                             "New resource indexing",
                             "1,000",
                             "<30 seconds",
                             "<5% increase",
                             "No degradation"});
-                table1834.AddRow(new string[] {
+                table1797.AddRow(new string[] {
                             "Resource updates",
                             "5,000",
                             "<2 minutes",
                             "Minimal",
                             "No downtime"});
-                table1834.AddRow(new string[] {
+                table1797.AddRow(new string[] {
                             "Bulk re-indexing",
                             "100,000",
                             "<4 hours",
                             "100% rebuild",
                             "Read-only mode"});
-                table1834.AddRow(new string[] {
+                table1797.AddRow(new string[] {
                             "Index optimization",
                             "Full index",
                             "<1 hour",
                             "Performance gain",
                             "Temporary slow"});
-                table1834.AddRow(new string[] {
+                table1797.AddRow(new string[] {
                             "Incremental updates",
                             "10,000",
                             "<5 minutes",
                             "Minimal",
                             "No impact"});
 #line 32
-    testRunner.When("search indexing performance is tested:", ((string)(null)), table1834, "When ");
+    testRunner.When("search indexing performance is tested:", ((string)(null)), table1797, "When ");
 #line hidden
 #line 39
     testRunner.Then("indexing should complete within target timeframes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -313,38 +313,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 46
     testRunner.Given("relevance algorithms are optimized for therapy content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1835 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1798 = new TechTalk.SpecFlow.Table(new string[] {
                             "Search Query",
                             "Expected Top Results",
                             "Ranking Accuracy",
                             "Performance Impact"});
-                table1835.AddRow(new string[] {
+                table1798.AddRow(new string[] {
                             "\"fine motor activities\"",
                             "Fine motor skill resources",
                             ">90%",
                             "<50ms overhead"});
-                table1835.AddRow(new string[] {
+                table1798.AddRow(new string[] {
                             "\"autism social skills\"",
                             "Autism-specific social resources",
                             ">85%",
                             "<75ms overhead"});
-                table1835.AddRow(new string[] {
+                table1798.AddRow(new string[] {
                             "\"handwriting grade 2\"",
                             "2nd grade handwriting materials",
                             ">92%",
                             "<25ms overhead"});
-                table1835.AddRow(new string[] {
+                table1798.AddRow(new string[] {
                             "\"articulation /r/\"",
                             "R-sound speech therapy resources",
                             ">95%",
                             "<40ms overhead"});
-                table1835.AddRow(new string[] {
+                table1798.AddRow(new string[] {
                             "\"sensory diet\"",
                             "Sensory integration activities",
                             ">88%",
                             "<60ms overhead"});
 #line 47
-    testRunner.When("search relevance is tested with query scenarios:", ((string)(null)), table1835, "When ");
+    testRunner.When("search relevance is tested with query scenarios:", ((string)(null)), table1798, "When ");
 #line hidden
 #line 54
     testRunner.Then("search results should match expected relevance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -394,44 +394,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 61
     testRunner.Given("faceted search enables complex filtering", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1836 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1799 = new TechTalk.SpecFlow.Table(new string[] {
                             "Filter Combination",
                             "Facet Count",
                             "Filter Options",
                             "Response Time",
                             "Result Accuracy"});
-                table1836.AddRow(new string[] {
+                table1799.AddRow(new string[] {
                             "Age + Skill Area",
                             "2",
                             "50 options",
                             "<300ms",
                             ">95%"});
-                table1836.AddRow(new string[] {
+                table1799.AddRow(new string[] {
                             "Grade + Subject + Type",
                             "3",
                             "200 options",
                             "<500ms",
                             ">90%"});
-                table1836.AddRow(new string[] {
+                table1799.AddRow(new string[] {
                             "Language + Difficulty",
                             "2",
                             "75 options",
                             "<400ms",
                             ">92%"});
-                table1836.AddRow(new string[] {
+                table1799.AddRow(new string[] {
                             "All filters active",
                             "8",
                             "500+ options",
                             "<1 second",
                             ">85%"});
-                table1836.AddRow(new string[] {
+                table1799.AddRow(new string[] {
                             "Dynamic filter updates",
                             "Variable",
                             "Real-time",
                             "<200ms",
                             ">98%"});
 #line 62
-    testRunner.When("faceted search performance is tested:", ((string)(null)), table1836, "When ");
+    testRunner.When("faceted search performance is tested:", ((string)(null)), table1799, "When ");
 #line hidden
 #line 69
     testRunner.Then("faceted filtering should be responsive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -481,44 +481,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 76
     testRunner.Given("auto-complete provides real-time suggestions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1837 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1800 = new TechTalk.SpecFlow.Table(new string[] {
                             "Input Type",
                             "Character Count",
                             "Suggestion Time",
                             "Suggestion Quality",
                             "Concurrent Users"});
-                table1837.AddRow(new string[] {
+                table1800.AddRow(new string[] {
                             "Partial therapy terms",
                             "3+",
                             "<100ms",
                             ">90% relevant",
                             "5,000"});
-                table1837.AddRow(new string[] {
+                table1800.AddRow(new string[] {
                             "Misspelled words",
                             "4+",
                             "<150ms",
                             ">80% corrected",
                             "2,000"});
-                table1837.AddRow(new string[] {
+                table1800.AddRow(new string[] {
                             "Medical terminology",
                             "5+",
                             "<120ms",
                             ">95% accurate",
                             "1,000"});
-                table1837.AddRow(new string[] {
+                table1800.AddRow(new string[] {
                             "Popular searches",
                             "2+",
                             "<50ms",
                             ">98% relevant",
                             "10,000"});
-                table1837.AddRow(new string[] {
+                table1800.AddRow(new string[] {
                             "Multi-language input",
                             "3+",
                             "<200ms",
                             ">75% relevant",
                             "500"});
 #line 77
-    testRunner.When("auto-complete performance is tested:", ((string)(null)), table1837, "When ");
+    testRunner.When("auto-complete performance is tested:", ((string)(null)), table1800, "When ");
 #line hidden
 #line 84
     testRunner.Then("auto-suggestions should appear instantly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -568,44 +568,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 92
     testRunner.Given("semantic search understands therapy terminology", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1838 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1801 = new TechTalk.SpecFlow.Table(new string[] {
                             "Semantic Query Type",
                             "Processing Complexity",
                             "Response Time",
                             "Understanding Accuracy",
                             "Resource Usage"});
-                table1838.AddRow(new string[] {
+                table1801.AddRow(new string[] {
                             "Natural language",
                             "High",
                             "<1 second",
                             ">85%",
                             "<200MB RAM"});
-                table1838.AddRow(new string[] {
+                table1801.AddRow(new string[] {
                             "Concept-based search",
                             "Medium",
                             "<750ms",
                             ">90%",
                             "<150MB RAM"});
-                table1838.AddRow(new string[] {
+                table1801.AddRow(new string[] {
                             "Synonym expansion",
                             "Low",
                             "<300ms",
                             ">95%",
                             "<50MB RAM"});
-                table1838.AddRow(new string[] {
+                table1801.AddRow(new string[] {
                             "Intent recognition",
                             "High",
                             "<800ms",
                             ">80%",
                             "<250MB RAM"});
-                table1838.AddRow(new string[] {
+                table1801.AddRow(new string[] {
                             "Context understanding",
                             "Very High",
                             "<1.5 seconds",
                             ">75%",
                             "<300MB RAM"});
 #line 93
-    testRunner.When("semantic search capabilities are performance tested:", ((string)(null)), table1838, "When ");
+    testRunner.When("semantic search capabilities are performance tested:", ((string)(null)), table1801, "When ");
 #line hidden
 #line 100
     testRunner.Then("semantic understanding should be accurate and fast", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -655,44 +655,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 107
     testRunner.Given("visual search capabilities are available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1839 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1802 = new TechTalk.SpecFlow.Table(new string[] {
                             "Visual Search Type",
                             "Image Processing",
                             "Recognition Time",
                             "Accuracy Target",
                             "Concurrent Requests"});
-                table1839.AddRow(new string[] {
+                table1802.AddRow(new string[] {
                             "Image similarity",
                             "Real-time",
                             "<2 seconds",
                             ">85%",
                             "500"});
-                table1839.AddRow(new string[] {
+                table1802.AddRow(new string[] {
                             "Color-based search",
                             "Fast",
                             "<500ms",
                             ">90%",
                             "1,000"});
-                table1839.AddRow(new string[] {
+                table1802.AddRow(new string[] {
                             "Shape recognition",
                             "Medium",
                             "<1 second",
                             ">80%",
                             "200"});
-                table1839.AddRow(new string[] {
+                table1802.AddRow(new string[] {
                             "Text in images (OCR)",
                             "Complex",
                             "<3 seconds",
                             ">75%",
                             "100"});
-                table1839.AddRow(new string[] {
+                table1802.AddRow(new string[] {
                             "Activity type visual",
                             "Fast",
                             "<750ms",
                             ">88%",
                             "800"});
 #line 108
-    testRunner.When("visual search performance is tested:", ((string)(null)), table1839, "When ");
+    testRunner.When("visual search performance is tested:", ((string)(null)), table1802, "When ");
 #line hidden
 #line 115
     testRunner.Then("visual search should be responsive and accurate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -742,44 +742,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 122
     testRunner.Given("search results are personalized based on user behavior", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1840 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1803 = new TechTalk.SpecFlow.Table(new string[] {
                             "Personalization Type",
                             "Data Processing",
                             "Response Impact",
                             "Relevance Improvement",
                             "Cache Efficiency"});
-                table1840.AddRow(new string[] {
+                table1803.AddRow(new string[] {
                             "Usage history based",
                             "Real-time",
                             "<100ms overhead",
                             "+15% relevance",
                             "80% cache hits"});
-                table1840.AddRow(new string[] {
+                table1803.AddRow(new string[] {
                             "Role-based results",
                             "Pre-computed",
                             "<50ms overhead",
                             "+20% relevance",
                             "90% cache hits"});
-                table1840.AddRow(new string[] {
+                table1803.AddRow(new string[] {
                             "Specialty filtering",
                             "Dynamic",
                             "<75ms overhead",
                             "+25% relevance",
                             "70% cache hits"});
-                table1840.AddRow(new string[] {
+                table1803.AddRow(new string[] {
                             "Recent activity bias",
                             "Real-time",
                             "<80ms overhead",
                             "+10% relevance",
                             "85% cache hits"});
-                table1840.AddRow(new string[] {
+                table1803.AddRow(new string[] {
                             "Collaborative filtering",
                             "Batch",
                             "<60ms overhead",
                             "+18% relevance",
                             "75% cache hits"});
 #line 123
-    testRunner.When("personalized search performance is tested:", ((string)(null)), table1840, "When ");
+    testRunner.When("personalized search performance is tested:", ((string)(null)), table1803, "When ");
 #line hidden
 #line 130
     testRunner.Then("personalization should improve relevance without significant delay", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -829,38 +829,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 138
     testRunner.Given("search system handles peak usage patterns", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1841 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1804 = new TechTalk.SpecFlow.Table(new string[] {
                             "Load Scenario",
                             "Concurrent Users",
                             "Queries per Second",
                             "Response Time P95",
                             "Success Rate"});
-                table1841.AddRow(new string[] {
+                table1804.AddRow(new string[] {
                             "Normal business hours",
                             "5,000",
                             "500/sec",
                             "<1 second",
                             ">99%"});
-                table1841.AddRow(new string[] {
+                table1804.AddRow(new string[] {
                             "Peak usage periods",
                             "15,000",
                             "1,500/sec",
                             "<2 seconds",
                             ">97%"});
-                table1841.AddRow(new string[] {
+                table1804.AddRow(new string[] {
                             "Back-to-school surge",
                             "25,000",
                             "2,500/sec",
                             "<3 seconds",
                             ">95%"});
-                table1841.AddRow(new string[] {
+                table1804.AddRow(new string[] {
                             "System stress test",
                             "50,000",
                             "5,000/sec",
                             "<5 seconds",
                             ">90%"});
 #line 139
-    testRunner.When("concurrent search load is tested:", ((string)(null)), table1841, "When ");
+    testRunner.When("concurrent search load is tested:", ((string)(null)), table1804, "When ");
 #line hidden
 #line 145
     testRunner.Then("search system should maintain performance under load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -910,44 +910,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 152
     testRunner.Given("search indexes are distributed globally", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1842 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1805 = new TechTalk.SpecFlow.Table(new string[] {
                             "Geographic Region",
                             "Local Index",
                             "Query Latency",
                             "Cache Hit Rate",
                             "Data Freshness"});
-                table1842.AddRow(new string[] {
+                table1805.AddRow(new string[] {
                             "North America East",
                             "Available",
                             "<200ms",
                             ">95%",
                             "<5 minutes"});
-                table1842.AddRow(new string[] {
+                table1805.AddRow(new string[] {
                             "North America West",
                             "Available",
                             "<250ms",
                             ">90%",
                             "<10 minutes"});
-                table1842.AddRow(new string[] {
+                table1805.AddRow(new string[] {
                             "Europe",
                             "Available",
                             "<300ms",
                             ">85%",
                             "<15 minutes"});
-                table1842.AddRow(new string[] {
+                table1805.AddRow(new string[] {
                             "Asia Pacific",
                             "Partial",
                             "<500ms",
                             ">80%",
                             "<30 minutes"});
-                table1842.AddRow(new string[] {
+                table1805.AddRow(new string[] {
                             "South America",
                             "Replicated",
                             "<600ms",
                             ">75%",
                             "<60 minutes"});
 #line 153
-    testRunner.When("geographic search performance is tested:", ((string)(null)), table1842, "When ");
+    testRunner.When("geographic search performance is tested:", ((string)(null)), table1805, "When ");
 #line hidden
 #line 160
     testRunner.Then("search performance should meet regional requirements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -997,38 +997,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 168
     testRunner.Given("comprehensive search analytics are collected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1843 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1806 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Category",
                             "Metrics Collected",
                             "Collection Impact",
                             "Insight Quality"});
-                table1843.AddRow(new string[] {
+                table1806.AddRow(new string[] {
                             "Query performance",
                             "Response times, result counts",
                             "<5ms overhead",
                             "High"});
-                table1843.AddRow(new string[] {
+                table1806.AddRow(new string[] {
                             "User behavior",
                             "Click-through, abandonment",
                             "<2ms overhead",
                             "High"});
-                table1843.AddRow(new string[] {
+                table1806.AddRow(new string[] {
                             "Search quality",
                             "Relevance scores, satisfaction",
                             "<10ms overhead",
                             "Medium"});
-                table1843.AddRow(new string[] {
+                table1806.AddRow(new string[] {
                             "System health",
                             "Error rates, resource usage",
                             "<1ms overhead",
                             "High"});
-                table1843.AddRow(new string[] {
+                table1806.AddRow(new string[] {
                             "Business metrics",
                             "Conversion, engagement",
                             "<3ms overhead",
                             "High"});
 #line 169
-    testRunner.When("search analytics are tested:", ((string)(null)), table1843, "When ");
+    testRunner.When("search analytics are tested:", ((string)(null)), table1806, "When ");
 #line hidden
 #line 176
     testRunner.Then("analytics collection should have minimal performance impact", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1080,33 +1080,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 184
     testRunner.Given("search indexes may become corrupted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1844 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1807 = new TechTalk.SpecFlow.Table(new string[] {
                             "Corruption Type",
                             "Detection Method",
                             "Recovery Strategy",
                             "Recovery Time"});
-                table1844.AddRow(new string[] {
+                table1807.AddRow(new string[] {
                             "Partial index damage",
                             "Consistency checks",
                             "Incremental rebuild",
                             "<30 minutes"});
-                table1844.AddRow(new string[] {
+                table1807.AddRow(new string[] {
                             "Complete index loss",
                             "Health monitoring",
                             "Full rebuild from source",
                             "<4 hours"});
-                table1844.AddRow(new string[] {
+                table1807.AddRow(new string[] {
                             "Synchronization issues",
                             "Cross-region checks",
                             "Sync from healthy copy",
                             "<15 minutes"});
-                table1844.AddRow(new string[] {
+                table1807.AddRow(new string[] {
                             "Schema conflicts",
                             "Version validation",
                             "Schema migration",
                             "<1 hour"});
 #line 185
-    testRunner.When("index corruption is detected:", ((string)(null)), table1844, "When ");
+    testRunner.When("index corruption is detected:", ((string)(null)), table1807, "When ");
 #line hidden
 #line 191
     testRunner.Then("corruption should be detected quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1158,33 +1158,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 198
     testRunner.Given("search system may experience resource exhaustion", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1845 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1808 = new TechTalk.SpecFlow.Table(new string[] {
                             "Overload Type",
                             "Resource Constraint",
                             "Protection Strategy",
                             "Performance Impact"});
-                table1845.AddRow(new string[] {
+                table1808.AddRow(new string[] {
                             "CPU exhaustion",
                             "High query complexity",
                             "Query throttling",
                             "Slower complex queries"});
-                table1845.AddRow(new string[] {
+                table1808.AddRow(new string[] {
                             "Memory pressure",
                             "Large result sets",
                             "Result pagination",
                             "Limited results"});
-                table1845.AddRow(new string[] {
+                table1808.AddRow(new string[] {
                             "Disk I/O saturation",
                             "Heavy indexing",
                             "I/O prioritization",
                             "Delayed indexing"});
-                table1845.AddRow(new string[] {
+                table1808.AddRow(new string[] {
                             "Network bandwidth",
                             "Large responses",
                             "Response compression",
                             "Minimal impact"});
 #line 199
-    testRunner.When("search overload conditions occur:", ((string)(null)), table1845, "When ");
+    testRunner.When("search overload conditions occur:", ((string)(null)), table1808, "When ");
 #line hidden
 #line 205
     testRunner.Then("system should protect against resource exhaustion", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1236,38 +1236,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 212
     testRunner.Given("multi-language search introduces complexity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1846 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1809 = new TechTalk.SpecFlow.Table(new string[] {
                             "Challenge Type",
                             "Language Complexity",
                             "Performance Impact",
                             "Accuracy Impact"});
-                table1846.AddRow(new string[] {
+                table1809.AddRow(new string[] {
                             "Character encoding",
                             "High for Asian lang",
                             "<100ms overhead",
                             "No degradation"});
-                table1846.AddRow(new string[] {
+                table1809.AddRow(new string[] {
                             "Tokenization issues",
                             "Medium for agglutinative",
                             "<50ms overhead",
                             "<5% accuracy loss"});
-                table1846.AddRow(new string[] {
+                table1809.AddRow(new string[] {
                             "Synonym mapping",
                             "Variable by language",
                             "<200ms overhead",
                             "+10% relevance"});
-                table1846.AddRow(new string[] {
+                table1809.AddRow(new string[] {
                             "Cultural context",
                             "High for concepts",
                             "<150ms overhead",
                             "Variable"});
-                table1846.AddRow(new string[] {
+                table1809.AddRow(new string[] {
                             "Mixed language queries",
                             "High complexity",
                             "<300ms overhead",
                             "Reduced accuracy"});
 #line 213
-    testRunner.When("multi-language search challenges arise:", ((string)(null)), table1846, "When ");
+    testRunner.When("multi-language search challenges arise:", ((string)(null)), table1809, "When ");
 #line hidden
 #line 220
     testRunner.Then("multi-language search should handle complexity gracefully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,33 +1319,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 227
     testRunner.Given("real-time search features may fail", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1847 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1810 = new TechTalk.SpecFlow.Table(new string[] {
                             "Component Failure",
                             "Fallback Strategy",
                             "User Experience",
                             "Recovery Time"});
-                table1847.AddRow(new string[] {
+                table1810.AddRow(new string[] {
                             "Auto-complete service",
                             "Basic prefix matching",
                             "Reduced suggestions",
                             "<5 minutes"});
-                table1847.AddRow(new string[] {
+                table1810.AddRow(new string[] {
                             "Personalization engine",
                             "Generic results",
                             "Standard relevance",
                             "<15 minutes"});
-                table1847.AddRow(new string[] {
+                table1810.AddRow(new string[] {
                             "Analytics collection",
                             "Core search only",
                             "No analytics impact",
                             "<30 minutes"});
-                table1847.AddRow(new string[] {
+                table1810.AddRow(new string[] {
                             "Visual search service",
                             "Text-only search",
                             "Reduced functionality",
                             "<1 hour"});
 #line 228
-    testRunner.When("real-time search components fail:", ((string)(null)), table1847, "When ");
+    testRunner.When("real-time search components fail:", ((string)(null)), table1810, "When ");
 #line hidden
 #line 234
     testRunner.Then("fallback mechanisms should maintain core search functionality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1397,33 +1397,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 241
     testRunner.Given("search data is distributed across multiple systems", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1848 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1811 = new TechTalk.SpecFlow.Table(new string[] {
                             "Consistency Issue",
                             "Impact on Search",
                             "Resolution Strategy",
                             "Acceptable Delay"});
-                table1848.AddRow(new string[] {
+                table1811.AddRow(new string[] {
                             "Delayed content updates",
                             "Stale results",
                             "Background sync",
                             "<15 minutes"});
-                table1848.AddRow(new string[] {
+                table1811.AddRow(new string[] {
                             "Cross-region sync lag",
                             "Regional differences",
                             "Regional prioritization",
                             "<1 hour"});
-                table1848.AddRow(new string[] {
+                table1811.AddRow(new string[] {
                             "Version conflicts",
                             "Inconsistent results",
                             "Version reconciliation",
                             "<30 minutes"});
-                table1848.AddRow(new string[] {
+                table1811.AddRow(new string[] {
                             "Cache invalidation",
                             "Outdated results",
                             "Cache refresh",
                             "<5 minutes"});
 #line 242
-    testRunner.When("data consistency issues arise:", ((string)(null)), table1848, "When ");
+    testRunner.When("data consistency issues arise:", ((string)(null)), table1811, "When ");
 #line hidden
 #line 248
     testRunner.Then("search should handle data inconsistencies gracefully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

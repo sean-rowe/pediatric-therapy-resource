@@ -31,14 +31,14 @@ public class AuthController : ControllerBase
                 .Where(x => x.Value?.Errors.Count > 0)
                 .Select(x => x.Value?.Errors.First().ErrorMessage)
                 .FirstOrDefault();
-                
+
             return BadRequest(new { error = firstError ?? "Invalid request data" });
         }
-        
+
         try
         {
             (User user, string token, string refreshToken) = await _authService.RegisterAsync(request);
-            
+
             // Return response in expected format
             return Ok(new
             {
@@ -71,19 +71,19 @@ public class AuthController : ControllerBase
     {
         // Log the incoming request for debugging
         _logger.LogInformation("Login request received for email: {Email}", request?.Email ?? "null");
-        
+
         // Log the request object state
         if (request == null)
         {
             _logger.LogWarning("Login request is null");
             return BadRequest(new { error = "Invalid request data" });
         }
-        
-        _logger.LogInformation("Login request - Email: {Email}, Password length: {Length}, Has TwoFactorCode: {HasCode}", 
-            request.Email ?? "null", 
+
+        _logger.LogInformation("Login request - Email: {Email}, Password length: {Length}, Has TwoFactorCode: {HasCode}",
+            request.Email ?? "null",
             request.Password?.Length ?? 0,
             !string.IsNullOrEmpty(request.TwoFactorCode));
-        
+
         // Check model state before processing
         if (!ModelState.IsValid)
         {
@@ -100,11 +100,11 @@ public class AuthController : ControllerBase
             }
             return BadRequest(new { error = "Invalid request data" });
         }
-        
+
         try
         {
             (User user, string token, string refreshToken) = await _authService.LoginAsync(request);
-            
+
             // Return successful response with expected fields
             return Ok(new
             {
@@ -145,7 +145,7 @@ public class AuthController : ControllerBase
         try
         {
             bool success = await _authService.VerifyEmailAsync(token);
-            
+
             if (success)
             {
                 return Ok(new { success = true, message = "Email verified successfully" });
@@ -190,10 +190,10 @@ public class AuthController : ControllerBase
             {
                 return BadRequest(new { error = "Invalid authorization header" });
             }
-            
+
             string token = authHeader.Substring("Bearer ".Length).Trim();
             await _authService.LogoutAsync(token);
-            
+
             return Ok(new { message = "Logged out successfully" });
         }
         catch (Exception ex)
@@ -269,7 +269,7 @@ public class AuthController : ControllerBase
             {
                 return Unauthorized(new { error = "Invalid user authentication" });
             }
-            
+
             await _authService.ChangePasswordAsync(userId, request.CurrentPassword, request.NewPassword);
             return Ok(new { message = "Password changed successfully" });
         }
@@ -295,9 +295,9 @@ public class AuthController : ControllerBase
         try
         {
             (string token, string refreshToken) = await _authService.RefreshTokenAsync(request.RefreshToken);
-            
-            return Ok(new 
-            { 
+
+            return Ok(new
+            {
                 token = token,
                 refreshToken = refreshToken
             });
@@ -323,7 +323,7 @@ public class AuthController : ControllerBase
             new { id = "clever", name = "Clever", type = "saml", enabled = true },
             new { id = "classlink", name = "ClassLink", type = "oauth2", enabled = true }
         };
-        
+
         return Ok(providers);
     }
 }

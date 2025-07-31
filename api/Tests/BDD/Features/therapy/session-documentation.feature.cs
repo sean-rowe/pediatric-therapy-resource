@@ -83,23 +83,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 7
     testRunner.Given("I am logged in as therapist \"Sarah Johnson\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table3244 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table3207 = new TechTalk.SpecFlow.Table(new string[] {
                         "Student",
                         "Date",
                         "Time",
                         "Location"});
-            table3244.AddRow(new string[] {
+            table3207.AddRow(new string[] {
                         "Emma Wilson",
                         "2024-01-15",
                         "09:00-09:30",
                         "OT Room"});
-            table3244.AddRow(new string[] {
+            table3207.AddRow(new string[] {
                         "Liam Brown",
                         "2024-01-15",
                         "10:00-10:30",
                         "Classroom 12"});
 #line 8
-    testRunner.And("I have the following scheduled appointments:", ((string)(null)), table3244, "And ");
+    testRunner.And("I have the following scheduled appointments:", ((string)(null)), table3207, "And ");
 #line hidden
         }
         
@@ -134,27 +134,27 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 17
       testRunner.Given("I completed session with \"Emma Wilson\" on \"2024-01-15\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table3245 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3208 = new TechTalk.SpecFlow.Table(new string[] {
                             "Section",
                             "Content"});
-                table3245.AddRow(new string[] {
+                table3208.AddRow(new string[] {
                             "Subjective",
                             "Emma reported feeling \"frustrated with writing.\" Teacher noted she avoided writin" +
                                 "g tasks this week."});
-                table3245.AddRow(new string[] {
+                table3208.AddRow(new string[] {
                             "Objective",
                             "15 min handwriting practice. Formed 18/26 letters correctly (69%). Required verba" +
                                 "l cues for proper pencil grip. Completed 3 sentences with 2 rest breaks."});
-                table3245.AddRow(new string[] {
+                table3208.AddRow(new string[] {
                             "Assessment",
                             "Improvement from last session (65%). Fatigue affects letter formation. Benefits f" +
                                 "rom frequent breaks. Making steady progress toward goal."});
-                table3245.AddRow(new string[] {
+                table3208.AddRow(new string[] {
                             "Plan",
                             "Continue letter formation practice. Implement pencil grip reminder card. Teacher " +
                                 "to provide 2-min breaks during writing tasks."});
 #line 18
-      testRunner.When("I document the session with:", ((string)(null)), table3245, "When ");
+      testRunner.When("I document the session with:", ((string)(null)), table3208, "When ");
 #line hidden
 #line 24
       testRunner.Then("the documentation is saved successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -279,17 +279,17 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3246 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3209 = new TechTalk.SpecFlow.Table(new string[] {
                             "Goal Number",
                             "Goal Area"});
-                table3246.AddRow(new string[] {
+                table3209.AddRow(new string[] {
                             "OT-1",
                             "Fine Motor"});
-                table3246.AddRow(new string[] {
+                table3209.AddRow(new string[] {
                             "OT-2",
                             "Visual Motor"});
 #line 49
-      testRunner.Given("\"Emma Wilson\" has goals:", ((string)(null)), table3246, "Given ");
+      testRunner.Given("\"Emma Wilson\" has goals:", ((string)(null)), table3209, "Given ");
 #line hidden
 #line 53
       testRunner.When("I document the session", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -297,17 +297,17 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 54
       testRunner.And("I select goals addressed: \"OT-1\", \"OT-2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table3247 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3210 = new TechTalk.SpecFlow.Table(new string[] {
                             "Goal",
                             "Progress Note"});
-                table3247.AddRow(new string[] {
+                table3210.AddRow(new string[] {
                             "OT-1",
                             "Formed 18/26 letters correctly (69%)"});
-                table3247.AddRow(new string[] {
+                table3210.AddRow(new string[] {
                             "OT-2",
                             "Completed shape copying with 80% accuracy"});
 #line 55
-      testRunner.And("I add goal-specific notes:", ((string)(null)), table3247, "And ");
+      testRunner.And("I add goal-specific notes:", ((string)(null)), table3210, "And ");
 #line hidden
 #line 59
       testRunner.Then("the goals are linked to the session", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -417,20 +417,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3248 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3211 = new TechTalk.SpecFlow.Table(new string[] {
                             "Student",
                             "Attendance"});
-                table3248.AddRow(new string[] {
+                table3211.AddRow(new string[] {
                             "Emma Wilson",
                             "Present"});
-                table3248.AddRow(new string[] {
+                table3211.AddRow(new string[] {
                             "Liam Brown",
                             "Present"});
-                table3248.AddRow(new string[] {
+                table3211.AddRow(new string[] {
                             "Noah Davis",
                             "Absent"});
 #line 79
-      testRunner.Given("I have a group session with:", ((string)(null)), table3248, "Given ");
+      testRunner.Given("I have a group session with:", ((string)(null)), table3211, "Given ");
 #line hidden
 #line 84
       testRunner.When("I document the group session", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -480,23 +480,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 93
       testRunner.Then("session type is \"consultation\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3249 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3212 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Content"});
-                table3249.AddRow(new string[] {
+                table3212.AddRow(new string[] {
                             "Participants",
                             "Ms. Smith (Teacher), Sarah Johnson (OT)"});
-                table3249.AddRow(new string[] {
+                table3212.AddRow(new string[] {
                             "Topics Discussed",
                             "Classroom accommodations for handwriting"});
-                table3249.AddRow(new string[] {
+                table3212.AddRow(new string[] {
                             "Recommendations",
                             "Slant board, pencil grip, frequent breaks"});
-                table3249.AddRow(new string[] {
+                table3212.AddRow(new string[] {
                             "Follow-up Plan",
                             "Check in 2 weeks"});
 #line 94
-      testRunner.And("I document:", ((string)(null)), table3249, "And ");
+      testRunner.And("I document:", ((string)(null)), table3212, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -531,23 +531,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 104
       testRunner.When("I document the teletherapy session", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3250 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3213 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table3250.AddRow(new string[] {
+                table3213.AddRow(new string[] {
                             "Platform",
                             "Zoom"});
-                table3250.AddRow(new string[] {
+                table3213.AddRow(new string[] {
                             "Connection Quality",
                             "Good"});
-                table3250.AddRow(new string[] {
+                table3213.AddRow(new string[] {
                             "Parent Present",
                             "Yes"});
-                table3250.AddRow(new string[] {
+                table3213.AddRow(new string[] {
                             "Technical Issues",
                             "None"});
 #line 105
-      testRunner.Then("I also record:", ((string)(null)), table3250, "Then ");
+      testRunner.Then("I also record:", ((string)(null)), table3213, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -579,23 +579,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 116
       testRunner.Given("I am documenting a session", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table3251 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3214 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Content"});
-                table3251.AddRow(new string[] {
+                table3214.AddRow(new string[] {
                             "Activities",
                             "Handwriting practice, Cutting skills, Sensory break"});
-                table3251.AddRow(new string[] {
+                table3214.AddRow(new string[] {
                             "Materials Used",
                             "Therapy putty, Adapted scissors, Pencil grips"});
-                table3251.AddRow(new string[] {
+                table3214.AddRow(new string[] {
                             "Student Engagement",
                             "4/5 - Required one redirection"});
-                table3251.AddRow(new string[] {
+                table3214.AddRow(new string[] {
                             "Session Productivity",
                             "4/5 - Completed most planned activities"});
 #line 117
-      testRunner.When("I add session details:", ((string)(null)), table3251, "When ");
+      testRunner.When("I add session details:", ((string)(null)), table3214, "When ");
 #line hidden
 #line 123
       testRunner.Then("the details are saved with the session", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -852,20 +852,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 175
       testRunner.When("I document the session", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3252 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3215 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table3252.AddRow(new string[] {
+                table3215.AddRow(new string[] {
                             "CPT Code",
                             "97530"});
-                table3252.AddRow(new string[] {
+                table3215.AddRow(new string[] {
                             "Units",
                             "2"});
-                table3252.AddRow(new string[] {
+                table3215.AddRow(new string[] {
                             "Billable Time",
                             "30 minutes"});
 #line 176
-      testRunner.Then("billing information is captured:", ((string)(null)), table3252, "Then ");
+      testRunner.Then("billing information is captured:", ((string)(null)), table3215, "Then ");
 #line hidden
 #line 181
       testRunner.And("the session is marked as \"ready to bill\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -945,26 +945,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 196
       testRunner.When("I complete the session note", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3253 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3216 = new TechTalk.SpecFlow.Table(new string[] {
                             "Requirement",
                             "Status"});
-                table3253.AddRow(new string[] {
+                table3216.AddRow(new string[] {
                             "Start/End time",
                             "✓"});
-                table3253.AddRow(new string[] {
+                table3216.AddRow(new string[] {
                             "Specific goals",
                             "✓"});
-                table3253.AddRow(new string[] {
+                table3216.AddRow(new string[] {
                             "Measurable progress",
                             "✓"});
-                table3253.AddRow(new string[] {
+                table3216.AddRow(new string[] {
                             "Plan for next visit",
                             "✓"});
-                table3253.AddRow(new string[] {
+                table3216.AddRow(new string[] {
                             "Therapist signature",
                             "✓"});
 #line 197
-      testRunner.Then("the system validates:", ((string)(null)), table3253, "Then ");
+      testRunner.Then("the system validates:", ((string)(null)), table3216, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1044,24 +1044,24 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 217
       testRunner.When("I check the audit history", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3254 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3217 = new TechTalk.SpecFlow.Table(new string[] {
                             "Action",
                             "User",
                             "Timestamp"});
-                table3254.AddRow(new string[] {
+                table3217.AddRow(new string[] {
                             "Created",
                             "Sarah Johnson",
                             "2024-01-15 11:30:00"});
-                table3254.AddRow(new string[] {
+                table3217.AddRow(new string[] {
                             "Auto-saved",
                             "System",
                             "2024-01-15 11:32:30"});
-                table3254.AddRow(new string[] {
+                table3217.AddRow(new string[] {
                             "Signed",
                             "Sarah Johnson",
                             "2024-01-15 11:45:00"});
 #line 218
-      testRunner.Then("I see:", ((string)(null)), table3254, "Then ");
+      testRunner.Then("I see:", ((string)(null)), table3217, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 17
     testRunner.And("onboarding experience affects long-term retention", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table599 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table562 = new TechTalk.SpecFlow.Table(new string[] {
                             "Subscription Tier",
                             "Onboarding Flow",
                             "Required Information",
                             "Trial Options",
                             "Payment Setup",
                             "Activation Process"});
-                table599.AddRow(new string[] {
+                table562.AddRow(new string[] {
                             "Individual Basic",
                             "Simplified flow",
                             "Email, password",
                             "14-day free trial",
                             "Optional during trial",
                             "Immediate access"});
-                table599.AddRow(new string[] {
+                table562.AddRow(new string[] {
                             "Individual Pro",
                             "Standard flow",
                             "Profile completion",
                             "7-day free trial",
                             "Required at signup",
                             "Immediate access"});
-                table599.AddRow(new string[] {
+                table562.AddRow(new string[] {
                             "Small Team",
                             "Team setup flow",
                             "Team details, admin setup",
                             "14-day team trial",
                             "Team payment method",
                             "Admin approval"});
-                table599.AddRow(new string[] {
+                table562.AddRow(new string[] {
                             "Enterprise",
                             "Guided setup",
                             "Organization details",
                             "30-day pilot program",
                             "Purchase order option",
                             "Custom onboarding"});
-                table599.AddRow(new string[] {
+                table562.AddRow(new string[] {
                             "Educational",
                             "Verification flow",
                             "Institution verification",
                             "60-day academic trial",
                             "Educational pricing",
                             "Verification required"});
-                table599.AddRow(new string[] {
+                table562.AddRow(new string[] {
                             "Non-profit",
                             "Verification flow",
                             "Non-profit verification",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Discount application",
                             "Verification required"});
 #line 18
-    testRunner.When("implementing subscription creation process:", ((string)(null)), table599, "When ");
+    testRunner.When("implementing subscription creation process:", ((string)(null)), table562, "When ");
 #line hidden
 #line 26
     testRunner.Then("subscription creation should be frictionless", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 34
     testRunner.And("payment processing must be reliable and secure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table600 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table563 = new TechTalk.SpecFlow.Table(new string[] {
                             "Billing Frequency",
                             "Billing Date",
                             "Payment Methods",
                             "Discount Structure",
                             "Retry Logic",
                             "Grace Periods"});
-                table600.AddRow(new string[] {
+                table563.AddRow(new string[] {
                             "Monthly",
                             "Monthly anniversary",
                             "Credit card, PayPal",
                             "No discount",
                             "3 retry attempts",
                             "3-day grace"});
-                table600.AddRow(new string[] {
+                table563.AddRow(new string[] {
                             "Quarterly",
                             "Quarterly anniversary",
                             "All methods + ACH",
                             "5% discount",
                             "5 retry attempts",
                             "7-day grace"});
-                table600.AddRow(new string[] {
+                table563.AddRow(new string[] {
                             "Annual",
                             "Annual anniversary",
                             "All methods + wire",
                             "15% discount",
                             "7 retry attempts",
                             "14-day grace"});
-                table600.AddRow(new string[] {
+                table563.AddRow(new string[] {
                             "Multi-year",
                             "Multi-year anniversary",
                             "Enterprise methods",
                             "25% discount",
                             "10 retry attempts",
                             "30-day grace"});
-                table600.AddRow(new string[] {
+                table563.AddRow(new string[] {
                             "Custom",
                             "Negotiated schedule",
                             "Custom arrangements",
                             "Negotiated discounts",
                             "Custom retry logic",
                             "Negotiated grace"});
-                table600.AddRow(new string[] {
+                table563.AddRow(new string[] {
                             "Usage-based",
                             "Monthly usage calculation",
                             "Real-time processing",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Immediate retry",
                             "1-day grace"});
 #line 35
-    testRunner.When("managing billing cycles and payments:", ((string)(null)), table600, "When ");
+    testRunner.When("managing billing cycles and payments:", ((string)(null)), table563, "When ");
 #line hidden
 #line 43
     testRunner.Then("billing should accommodate customer preferences", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 51
     testRunner.And("plan changes affect billing and access immediately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table601 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table564 = new TechTalk.SpecFlow.Table(new string[] {
                             "Change Type",
                             "Processing Method",
                             "Billing Impact",
                             "Access Changes",
                             "Prorating Logic",
                             "Effective Date"});
-                table601.AddRow(new string[] {
+                table564.AddRow(new string[] {
                             "Upgrade",
                             "Immediate processing",
                             "Prorated billing",
                             "Immediate access expansion",
                             "Credit remaining time",
                             "Immediate"});
-                table601.AddRow(new string[] {
+                table564.AddRow(new string[] {
                             "Downgrade",
                             "End-of-cycle processing",
                             "Next cycle billing",
                             "Grandfathered access",
                             "No proration",
                             "Next billing cycle"});
-                table601.AddRow(new string[] {
+                table564.AddRow(new string[] {
                             "Plan switch",
                             "Immediate processing",
                             "Prorated adjustment",
                             "Plan-appropriate access",
                             "Calculate difference",
                             "Immediate"});
-                table601.AddRow(new string[] {
+                table564.AddRow(new string[] {
                             "Add-on purchase",
                             "Immediate processing",
                             "Prorated billing",
                             "Feature activation",
                             "Add-on proration",
                             "Immediate"});
-                table601.AddRow(new string[] {
+                table564.AddRow(new string[] {
                             "Add-on removal",
                             "End-of-cycle processing",
                             "Next cycle adjustment",
                             "End-of-cycle removal",
                             "No refund",
                             "Next billing cycle"});
-                table601.AddRow(new string[] {
+                table564.AddRow(new string[] {
                             "Quantity changes",
                             "Immediate processing",
                             "Prorated billing",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Quantity proration",
                             "Immediate"});
 #line 52
-    testRunner.When("processing subscription modifications:", ((string)(null)), table601, "When ");
+    testRunner.When("processing subscription modifications:", ((string)(null)), table564, "When ");
 #line hidden
 #line 60
     testRunner.Then("plan changes should be processed efficiently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 68
     testRunner.And("retention strategies improve customer lifetime value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table602 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table565 = new TechTalk.SpecFlow.Table(new string[] {
                             "Renewal Scenario",
                             "Automation Level",
                             "Retention Interventions",
                             "Communication Timeline",
                             "Success Metrics",
                             "Fallback Procedures"});
-                table602.AddRow(new string[] {
+                table565.AddRow(new string[] {
                             "Successful renewal",
                             "Fully automated",
                             "None required",
                             "Renewal confirmation",
                             "Renewal rate >95%",
                             "Manual processing"});
-                table602.AddRow(new string[] {
+                table565.AddRow(new string[] {
                             "Payment failure",
                             "Automated retry",
                             "Payment update prompts",
                             "3 attempts over 7 days",
                             "Recovery rate >80%",
                             "Account suspension"});
-                table602.AddRow(new string[] {
+                table565.AddRow(new string[] {
                             "Voluntary cancellation",
                             "Retention workflow",
                             "Win-back offers",
                             "30 days before expiry",
                             "Save rate >25%",
                             "Cancellation processing"});
-                table602.AddRow(new string[] {
+                table565.AddRow(new string[] {
                             "Non-usage patterns",
                             "Engagement campaign",
                             "Value demonstration",
                             "60 days of inactivity",
                             "Engagement increase >40%",
                             "Pause options"});
-                table602.AddRow(new string[] {
+                table565.AddRow(new string[] {
                             "Price sensitivity",
                             "Discount offers",
                             "Special pricing",
                             "Price increase notices",
                             "Retention rate >90%",
                             "Grandfathering"});
-                table602.AddRow(new string[] {
+                table565.AddRow(new string[] {
                             "Feature dissatisfaction",
                             "Feature education",
                             "Training and support",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Satisfaction improvement",
                             "Plan adjustments"});
 #line 69
-    testRunner.When("implementing renewal automation:", ((string)(null)), table602, "When ");
+    testRunner.When("implementing renewal automation:", ((string)(null)), table565, "When ");
 #line hidden
 #line 77
     testRunner.Then("renewals should be seamlessly automated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 86
     testRunner.And("conversion optimization maximizes trial value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table603 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table566 = new TechTalk.SpecFlow.Table(new string[] {
                             "Trial Type",
                             "Duration",
                             "Feature Access",
                             "Conversion Triggers",
                             "Success Metrics",
                             "Conversion Incentives"});
-                table603.AddRow(new string[] {
+                table566.AddRow(new string[] {
                             "Free trial",
                             "14 days",
                             "Full access",
                             "Usage milestones",
                             "Trial-to-paid >25%",
                             "Onboarding discount"});
-                table603.AddRow(new string[] {
+                table566.AddRow(new string[] {
                             "Freemium tier",
                             "Unlimited",
                             "Limited features",
                             "Feature limits reached",
                             "Freemium-to-paid >15%",
                             "Feature unlocks"});
-                table603.AddRow(new string[] {
+                table566.AddRow(new string[] {
                             "Extended trial",
                             "30 days",
                             "Full access + support",
                             "High engagement",
                             "Extended conversion >35%",
                             "Personal consultation"});
-                table603.AddRow(new string[] {
+                table566.AddRow(new string[] {
                             "Team trial",
                             "14 days",
                             "Team features",
                             "Team adoption",
                             "Team conversion >40%",
                             "Team setup assistance"});
-                table603.AddRow(new string[] {
+                table566.AddRow(new string[] {
                             "Enterprise pilot",
                             "60 days",
                             "Custom setup",
                             "Pilot success metrics",
                             "Enterprise conversion >60%",
                             "Implementation support"});
-                table603.AddRow(new string[] {
+                table566.AddRow(new string[] {
                             "Academic trial",
                             "Semester",
                             "Educational features",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Academic conversion >50%",
                             "Educational pricing"});
 #line 87
-    testRunner.When("implementing trial optimization:", ((string)(null)), table603, "When ");
+    testRunner.When("implementing trial optimization:", ((string)(null)), table566, "When ");
 #line hidden
 #line 95
     testRunner.Then("trials should demonstrate clear value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 103
     testRunner.And("metered billing enables flexible pricing models", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table604 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table567 = new TechTalk.SpecFlow.Table(new string[] {
                             "Usage Metric",
                             "Tracking Method",
                             "Billing Calculation",
                             "Overage Handling",
                             "Real-time Monitoring",
                             "Customer Visibility"});
-                table604.AddRow(new string[] {
+                table567.AddRow(new string[] {
                             "API calls",
                             "Real-time counting",
                             "Per-call pricing",
                             "Automatic billing",
                             "Live dashboards",
                             "Usage analytics"});
-                table604.AddRow(new string[] {
+                table567.AddRow(new string[] {
                             "Storage used",
                             "Daily snapshots",
                             "Tiered pricing",
                             "Automatic scaling",
                             "Storage monitoring",
                             "Storage reports"});
-                table604.AddRow(new string[] {
+                table567.AddRow(new string[] {
                             "Users active",
                             "Monthly active count",
                             "Per-user pricing",
                             "Mid-cycle additions",
                             "User tracking",
                             "User analytics"});
-                table604.AddRow(new string[] {
+                table567.AddRow(new string[] {
                             "Resources downloaded",
                             "Download tracking",
                             "Per-resource pricing",
                             "Credit system",
                             "Download monitoring",
                             "Download reports"});
-                table604.AddRow(new string[] {
+                table567.AddRow(new string[] {
                             "Features accessed",
                             "Feature usage logs",
                             "Feature-based pricing",
                             "Feature bundles",
                             "Feature analytics",
                             "Feature reports"});
-                table604.AddRow(new string[] {
+                table567.AddRow(new string[] {
                             "Support incidents",
                             "Ticket tracking",
                             "Per-incident pricing",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Support monitoring",
                             "Support analytics"});
 #line 104
-    testRunner.When("implementing usage tracking:", ((string)(null)), table604, "When ");
+    testRunner.When("implementing usage tracking:", ((string)(null)), table567, "When ");
 #line hidden
 #line 112
     testRunner.Then("usage should be accurately tracked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 120
     testRunner.And("flexibility improves customer satisfaction and retention", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table605 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table568 = new TechTalk.SpecFlow.Table(new string[] {
                             "Flexibility Option",
                             "Eligibility Criteria",
                             "Duration Limits",
                             "Billing Impact",
                             "Feature Access",
                             "Reactivation Process"});
-                table605.AddRow(new string[] {
+                table568.AddRow(new string[] {
                             "Vacation hold",
                             "Good standing customers",
                             "3 months max",
                             "Billing paused",
                             "Limited access",
                             "Automatic reactivation"});
-                table605.AddRow(new string[] {
+                table568.AddRow(new string[] {
                             "Financial hardship",
                             "Demonstrated need",
                             "6 months max",
                             "Reduced billing",
                             "Basic access",
                             "Financial verification"});
-                table605.AddRow(new string[] {
+                table568.AddRow(new string[] {
                             "Seasonal pause",
                             "Seasonal businesses",
                             "Annual pattern",
                             "Seasonal billing",
                             "Archive access",
                             "Seasonal automation"});
-                table605.AddRow(new string[] {
+                table568.AddRow(new string[] {
                             "Sabbatical leave",
                             "Academic customers",
                             "12 months max",
                             "Billing paused",
                             "Read-only access",
                             "Manual reactivation"});
-                table605.AddRow(new string[] {
+                table568.AddRow(new string[] {
                             "Medical leave",
                             "Medical documentation",
                             "Variable duration",
                             "Case-by-case",
                             "Basic access",
                             "Medical clearance"});
-                table605.AddRow(new string[] {
+                table568.AddRow(new string[] {
                             "Extended trial",
                             "High-value prospects",
                             "90 days max",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Trial features",
                             "Conversion tracking"});
 #line 121
-    testRunner.When("implementing subscription flexibility:", ((string)(null)), table605, "When ");
+    testRunner.When("implementing subscription flexibility:", ((string)(null)), table568, "When ");
 #line hidden
 #line 129
     testRunner.Then("flexibility should accommodate legitimate needs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 137
     testRunner.And("customer success drives long-term value creation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table606 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table569 = new TechTalk.SpecFlow.Table(new string[] {
                             "Account Tier",
                             "Management Level",
                             "Success Metrics",
                             "Intervention Triggers",
                             "Expansion Opportunities",
                             "Risk Mitigation"});
-                table606.AddRow(new string[] {
+                table569.AddRow(new string[] {
                             "Enterprise",
                             "Dedicated CSM",
                             "Revenue growth, usage",
                             "Declining usage",
                             "Additional seats/features",
                             "Executive engagement"});
-                table606.AddRow(new string[] {
+                table569.AddRow(new string[] {
                             "Team accounts",
                             "Shared CSM",
                             "Team adoption, retention",
                             "Low team engagement",
                             "Team plan upgrades",
                             "Team training"});
-                table606.AddRow(new string[] {
+                table569.AddRow(new string[] {
                             "Power users",
                             "Automated + human",
                             "Feature adoption",
                             "Support volume",
                             "Pro feature adoption",
                             "Feature education"});
-                table606.AddRow(new string[] {
+                table569.AddRow(new string[] {
                             "Standard users",
                             "Automated success",
                             "Retention, satisfaction",
                             "Cancellation risk",
                             "Voluntary upgrades",
                             "Retention campaigns"});
-                table606.AddRow(new string[] {
+                table569.AddRow(new string[] {
                             "Trial users",
                             "Conversion focus",
                             "Trial engagement",
                             "Low usage",
                             "Conversion incentives",
                             "Engagement campaigns"});
-                table606.AddRow(new string[] {
+                table569.AddRow(new string[] {
                             "At-risk accounts",
                             "Retention specialist",
                             "Churn prevention",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Win-back offers",
                             "Save campaigns"});
 #line 138
-    testRunner.When("implementing account management:", ((string)(null)), table606, "When ");
+    testRunner.When("implementing account management:", ((string)(null)), table569, "When ");
 #line hidden
 #line 146
     testRunner.Then("account management should be appropriately scaled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 155
     testRunner.And("retention strategies can save valuable customers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table607 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table570 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cancellation Reason",
                             "Retention Strategy",
                             "Offer Type",
                             "Success Rate Target",
                             "Follow-up Process",
                             "Win-back Timeline"});
-                table607.AddRow(new string[] {
+                table570.AddRow(new string[] {
                             "Price sensitivity",
                             "Discount offers",
                             "20-50% discount",
                             "Save rate >40%",
                             "Price satisfaction survey",
                             "3-month win-back"});
-                table607.AddRow(new string[] {
+                table570.AddRow(new string[] {
                             "Feature gaps",
                             "Feature roadmap",
                             "Beta access",
                             "Save rate >30%",
                             "Feature feedback",
                             "6-month feature update"});
-                table607.AddRow(new string[] {
+                table570.AddRow(new string[] {
                             "Low usage",
                             "Usage optimization",
                             "Training/support",
                             "Save rate >25%",
                             "Usage coaching",
                             "2-month re-engagement"});
-                table607.AddRow(new string[] {
+                table570.AddRow(new string[] {
                             "Competitive switch",
                             "Value proposition",
                             "Enhanced features",
                             "Save rate >20%",
                             "Competitive analysis",
                             "6-month value demo"});
-                table607.AddRow(new string[] {
+                table570.AddRow(new string[] {
                             "Business changes",
                             "Flexible options",
                             "Plan adjustments",
                             "Save rate >35%",
                             "Business consultation",
                             "12-month check-in"});
-                table607.AddRow(new string[] {
+                table570.AddRow(new string[] {
                             "Support issues",
                             "Support improvement",
                             "VIP support",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Support satisfaction",
                             "1-month support review"});
 #line 156
-    testRunner.When("implementing cancellation management:", ((string)(null)), table607, "When ");
+    testRunner.When("implementing cancellation management:", ((string)(null)), table570, "When ");
 #line hidden
 #line 164
     testRunner.Then("cancellation should capture feedback", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 172
     testRunner.And("proactive retention is more effective than reactive retention", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table608 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table571 = new TechTalk.SpecFlow.Table(new string[] {
                             "Risk Factor",
                             "Prediction Model",
                             "Risk Threshold",
                             "Intervention Type",
                             "Success Metrics",
                             "Model Accuracy"});
-                table608.AddRow(new string[] {
+                table571.AddRow(new string[] {
                             "Usage decline",
                             "Machine learning",
                             "70% churn probability",
                             "Usage coaching",
                             "Engagement increase >50%",
                             "85% accuracy"});
-                table608.AddRow(new string[] {
+                table571.AddRow(new string[] {
                             "Support issues",
                             "Pattern recognition",
                             "3+ unresolved issues",
                             "VIP support",
                             "Resolution improvement",
                             "80% accuracy"});
-                table608.AddRow(new string[] {
+                table571.AddRow(new string[] {
                             "Payment issues",
                             "Historical analysis",
                             "2+ failed payments",
                             "Payment assistance",
                             "Payment success >90%",
                             "90% accuracy"});
-                table608.AddRow(new string[] {
+                table571.AddRow(new string[] {
                             "Feature adoption",
                             "Behavioral analysis",
                             "<20% feature adoption",
                             "Feature training",
                             "Adoption increase >60%",
                             "82% accuracy"});
-                table608.AddRow(new string[] {
+                table571.AddRow(new string[] {
                             "Engagement drop",
                             "Activity tracking",
                             "30-day inactivity",
                             "Re-engagement campaign",
                             "Activity increase >40%",
                             "78% accuracy"});
-                table608.AddRow(new string[] {
+                table571.AddRow(new string[] {
                             "Renewal proximity",
                             "Time-based analysis",
                             "30 days to renewal",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Early renewal >35%",
                             "95% accuracy"});
 #line 173
-    testRunner.When("implementing churn prediction:", ((string)(null)), table608, "When ");
+    testRunner.When("implementing churn prediction:", ((string)(null)), table571, "When ");
 #line hidden
 #line 181
     testRunner.Then("prediction should be accurate and actionable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 189
     testRunner.And("win-back campaigns can recover lost revenue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table609 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table572 = new TechTalk.SpecFlow.Table(new string[] {
                             "Win-back Timeline",
                             "Campaign Type",
                             "Offer Strategy",
                             "Channel Strategy",
                             "Response Tracking",
                             "Success Metrics"});
-                table609.AddRow(new string[] {
+                table572.AddRow(new string[] {
                             "1 month post-cancel",
                             "Immediate win-back",
                             "Return discount",
                             "Email + phone",
                             "Open rates, responses",
                             "Win-back rate >15%"});
-                table609.AddRow(new string[] {
+                table572.AddRow(new string[] {
                             "3 months post-cancel",
                             "Feature update",
                             "New feature access",
                             "Email + retargeting",
                             "Click-through rates",
                             "Return rate >10%"});
-                table609.AddRow(new string[] {
+                table572.AddRow(new string[] {
                             "6 months post-cancel",
                             "Seasonal campaign",
                             "Limited-time offers",
                             "Multi-channel",
                             "Conversion rates",
                             "Conversion rate >8%"});
-                table609.AddRow(new string[] {
+                table572.AddRow(new string[] {
                             "12 months post-cancel",
                             "Anniversary campaign",
                             "Loyalty rewards",
                             "Personalized outreach",
                             "Engagement rates",
                             "Engagement rate >5%"});
-                table609.AddRow(new string[] {
+                table572.AddRow(new string[] {
                             "18 months post-cancel",
                             "New product",
                             "Product expansion",
                             "Content marketing",
                             "Interest indicators",
                             "Interest rate >3%"});
-                table609.AddRow(new string[] {
+                table572.AddRow(new string[] {
                             "Ongoing",
                             "Triggered campaigns",
                             "Event-based offers",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Action rates",
                             "Action rate varies"});
 #line 190
-    testRunner.When("implementing win-back campaigns:", ((string)(null)), table609, "When ");
+    testRunner.When("implementing win-back campaigns:", ((string)(null)), table572, "When ");
 #line hidden
 #line 198
     testRunner.Then("win-back should be systematic and timed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 207
     testRunner.And("business intelligence enables data-driven optimization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table610 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table573 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Category",
                             "Key Metrics",
                             "Analysis Frequency",
                             "Stakeholder Audience",
                             "Insight Generation",
                             "Action Recommendations"});
-                table610.AddRow(new string[] {
+                table573.AddRow(new string[] {
                             "Revenue analytics",
                             "MRR, ARR, revenue growth",
                             "Daily/monthly",
                             "Finance, executives",
                             "Revenue trends",
                             "Revenue optimization"});
-                table610.AddRow(new string[] {
+                table573.AddRow(new string[] {
                             "Cohort analysis",
                             "Cohort retention, LTV",
                             "Weekly/monthly",
                             "Product, marketing",
                             "Customer behavior",
                             "Retention improvement"});
-                table610.AddRow(new string[] {
+                table573.AddRow(new string[] {
                             "Churn analysis",
                             "Churn rate, reasons",
                             "Weekly",
                             "Customer success",
                             "Churn patterns",
                             "Churn reduction"});
-                table610.AddRow(new string[] {
+                table573.AddRow(new string[] {
                             "Conversion analysis",
                             "Trial conversion, funnel",
                             "Daily/weekly",
                             "Marketing, sales",
                             "Conversion optimization",
                             "Conversion improvement"});
-                table610.AddRow(new string[] {
+                table573.AddRow(new string[] {
                             "Usage analytics",
                             "Feature adoption, engagement",
                             "Real-time/daily",
                             "Product, engineering",
                             "Product insights",
                             "Product enhancement"});
-                table610.AddRow(new string[] {
+                table573.AddRow(new string[] {
                             "Customer analytics",
                             "Segmentation, satisfaction",
                             "Monthly/quarterly",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Customer insights",
                             "Experience optimization"});
 #line 208
-    testRunner.When("implementing subscription analytics:", ((string)(null)), table610, "When ");
+    testRunner.When("implementing subscription analytics:", ((string)(null)), table573, "When ");
 #line hidden
 #line 216
     testRunner.Then("analytics should provide actionable insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 224
     testRunner.And("predictive analytics provide competitive advantage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table611 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table574 = new TechTalk.SpecFlow.Table(new string[] {
                             "Prediction Type",
                             "Forecasting Model",
                             "Input Variables",
                             "Forecast Horizon",
                             "Accuracy Target",
                             "Business Application"});
-                table611.AddRow(new string[] {
+                table574.AddRow(new string[] {
                             "Revenue forecasting",
                             "Time series + ML",
                             "Historical revenue, trends",
                             "12 months",
                             "90% accuracy",
                             "Budget planning"});
-                table611.AddRow(new string[] {
+                table574.AddRow(new string[] {
                             "Churn forecasting",
                             "Survival analysis",
                             "Customer behavior",
                             "6 months",
                             "85% accuracy",
                             "Retention planning"});
-                table611.AddRow(new string[] {
+                table574.AddRow(new string[] {
                             "Growth forecasting",
                             "Growth modeling",
                             "Market factors",
                             "24 months",
                             "80% accuracy",
                             "Strategic planning"});
-                table611.AddRow(new string[] {
+                table574.AddRow(new string[] {
                             "Capacity forecasting",
                             "Usage modeling",
                             "Usage patterns",
                             "18 months",
                             "88% accuracy",
                             "Infrastructure planning"});
-                table611.AddRow(new string[] {
+                table574.AddRow(new string[] {
                             "Pricing optimization",
                             "Price elasticity",
                             "Market data",
                             "6 months",
                             "82% accuracy",
                             "Pricing strategy"});
-                table611.AddRow(new string[] {
+                table574.AddRow(new string[] {
                             "Customer LTV",
                             "Cohort modeling",
                             "Customer data",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "85% accuracy",
                             "Acquisition planning"});
 #line 225
-    testRunner.When("implementing predictive analytics:", ((string)(null)), table611, "When ");
+    testRunner.When("implementing predictive analytics:", ((string)(null)), table574, "When ");
 #line hidden
 #line 233
     testRunner.Then("predictions should be statistically sound", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 241
     testRunner.And("experimentation enables data-driven improvements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table612 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table575 = new TechTalk.SpecFlow.Table(new string[] {
                             "Optimization Area",
                             "Experiment Types",
                             "Testing Framework",
                             "Success Metrics",
                             "Implementation Process",
                             "Learning Integration"});
-                table612.AddRow(new string[] {
+                table575.AddRow(new string[] {
                             "Pricing optimization",
                             "A/B price testing",
                             "Statistical testing",
                             "Revenue per customer",
                             "Gradual rollout",
                             "Pricing model updates"});
-                table612.AddRow(new string[] {
+                table575.AddRow(new string[] {
                             "Onboarding optimization",
                             "Flow testing",
                             "Conversion testing",
                             "Trial conversion rate",
                             "Segmented testing",
                             "Onboarding improvements"});
-                table612.AddRow(new string[] {
+                table575.AddRow(new string[] {
                             "Feature bundling",
                             "Bundle testing",
                             "Revenue testing",
                             "Revenue per feature",
                             "Feature experimentation",
                             "Bundle optimization"});
-                table612.AddRow(new string[] {
+                table575.AddRow(new string[] {
                             "Retention optimization",
                             "Intervention testing",
                             "Retention testing",
                             "Churn rate reduction",
                             "Retention A/B testing",
                             "Strategy refinement"});
-                table612.AddRow(new string[] {
+                table575.AddRow(new string[] {
                             "Communication optimization",
                             "Message testing",
                             "Engagement testing",
                             "Response rates",
                             "Communication testing",
                             "Message optimization"});
-                table612.AddRow(new string[] {
+                table575.AddRow(new string[] {
                             "UX optimization",
                             "Interface testing",
                             "Usability testing",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "UX experimentation",
                             "Interface improvements"});
 #line 242
-    testRunner.When("implementing subscription optimization:", ((string)(null)), table612, "When ");
+    testRunner.When("implementing subscription optimization:", ((string)(null)), table575, "When ");
 #line hidden
 #line 250
     testRunner.Then("optimization should be systematic and continuous", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 259
     testRunner.And("automation reduces errors and improves efficiency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table613 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table576 = new TechTalk.SpecFlow.Table(new string[] {
                             "Integration Type",
                             "System Target",
                             "Data Synchronization",
                             "Automation Level",
                             "Error Handling",
                             "Compliance Requirements"});
-                table613.AddRow(new string[] {
+                table576.AddRow(new string[] {
                             "Payment processing",
                             "Stripe, PayPal",
                             "Real-time",
                             "Fully automated",
                             "Automatic retry",
                             "PCI DSS"});
-                table613.AddRow(new string[] {
+                table576.AddRow(new string[] {
                             "Accounting integration",
                             "QuickBooks, NetSuite",
                             "Daily batch",
                             "Semi-automated",
                             "Manual review",
                             "GAAP compliance"});
-                table613.AddRow(new string[] {
+                table576.AddRow(new string[] {
                             "Tax calculation",
                             "Avalara, TaxJar",
                             "Real-time",
                             "Fully automated",
                             "Tax validation",
                             "Tax compliance"});
-                table613.AddRow(new string[] {
+                table576.AddRow(new string[] {
                             "Revenue recognition",
                             "Revenue systems",
                             "Monthly",
                             "Automated + review",
                             "Recognition validation",
                             "ASC 606"});
-                table613.AddRow(new string[] {
+                table576.AddRow(new string[] {
                             "Banking integration",
                             "Bank systems",
                             "Daily",
                             "Automated reconciliation",
                             "Exception handling",
                             "Banking regulations"});
-                table613.AddRow(new string[] {
+                table576.AddRow(new string[] {
                             "Reporting integration",
                             "BI systems",
                             "Real-time",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Data validation",
                             "Reporting standards"});
 #line 260
-    testRunner.When("integrating billing systems:", ((string)(null)), table613, "When ");
+    testRunner.When("integrating billing systems:", ((string)(null)), table576, "When ");
 #line hidden
 #line 268
     testRunner.Then("integration should be reliable and secure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 276
     testRunner.And("integrated data improves customer success", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table614 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table577 = new TechTalk.SpecFlow.Table(new string[] {
                             "CRM System",
                             "Integration Depth",
                             "Customer Data",
                             "Subscription Events",
                             "Communication Sync",
                             "Analytics Integration"});
-                table614.AddRow(new string[] {
+                table577.AddRow(new string[] {
                             "Salesforce",
                             "Deep integration",
                             "Complete profiles",
                             "Real-time events",
                             "Bi-directional",
                             "Advanced analytics"});
-                table614.AddRow(new string[] {
+                table577.AddRow(new string[] {
                             "HubSpot",
                             "Standard integration",
                             "Core data",
                             "Key events",
                             "CRM-driven",
                             "Standard reports"});
-                table614.AddRow(new string[] {
+                table577.AddRow(new string[] {
                             "Microsoft Dynamics",
                             "Enterprise integration",
                             "Extended profiles",
                             "All events",
                             "Native integration",
                             "Power BI integration"});
-                table614.AddRow(new string[] {
+                table577.AddRow(new string[] {
                             "Pipedrive",
                             "Basic integration",
                             "Essential data",
                             "Major events",
                             "One-way sync",
                             "Basic reporting"});
-                table614.AddRow(new string[] {
+                table577.AddRow(new string[] {
                             "Custom CRM",
                             "API integration",
                             "Configurable",
                             "Configurable",
                             "API-driven",
                             "Custom analytics"});
-                table614.AddRow(new string[] {
+                table577.AddRow(new string[] {
                             "Zendesk",
                             "Support integration",
                             "Support-relevant",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Support workflow",
                             "Support analytics"});
 #line 277
-    testRunner.When("integrating with CRM systems:", ((string)(null)), table614, "When ");
+    testRunner.When("integrating with CRM systems:", ((string)(null)), table577, "When ");
 #line hidden
 #line 285
     testRunner.Then("integration should provide unified customer experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1851,49 +1851,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 293
     testRunner.Given("billing errors can cause service disruption and customer dissatisfaction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table615 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table578 = new TechTalk.SpecFlow.Table(new string[] {
                             "Error Type",
                             "Detection Method",
                             "Resolution Process",
                             "Timeline",
                             "Customer Impact",
                             "Prevention Measures"});
-                table615.AddRow(new string[] {
+                table578.AddRow(new string[] {
                             "Payment failures",
                             "Payment gateway responses",
                             "Retry logic + customer contact",
                             "<24 hours",
                             "Grace period maintained",
                             "Payment method validation"});
-                table615.AddRow(new string[] {
+                table578.AddRow(new string[] {
                             "Billing calculation errors",
                             "Validation checks",
                             "Manual verification + correction",
                             "<4 hours",
                             "Credit/refund applied",
                             "Calculation validation"});
-                table615.AddRow(new string[] {
+                table578.AddRow(new string[] {
                             "Integration failures",
                             "System monitoring",
                             "System restart + manual processing",
                             "<2 hours",
                             "Temporary manual processing",
                             "Integration redundancy"});
-                table615.AddRow(new string[] {
+                table578.AddRow(new string[] {
                             "Data synchronization errors",
                             "Data validation",
                             "Data reconciliation",
                             "<6 hours",
                             "Service continuity",
                             "Data validation rules"});
-                table615.AddRow(new string[] {
+                table578.AddRow(new string[] {
                             "Pricing errors",
                             "Price validation",
                             "Price correction + adjustment",
                             "<1 hour",
                             "Price correction applied",
                             "Pricing validation"});
-                table615.AddRow(new string[] {
+                table578.AddRow(new string[] {
                             "Tax calculation errors",
                             "Tax validation",
                             "Tax recalculation",
@@ -1901,7 +1901,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Tax adjustment applied",
                             "Tax service redundancy"});
 #line 294
-    testRunner.When("subscription billing errors occur:", ((string)(null)), table615, "When ");
+    testRunner.When("subscription billing errors occur:", ((string)(null)), table578, "When ");
 #line hidden
 #line 302
     testRunner.Then("errors should be detected and resolved quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1958,49 +1958,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 310
     testRunner.And("compliance failures can result in significant penalties", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table616 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table579 = new TechTalk.SpecFlow.Table(new string[] {
                             "Compliance Area",
                             "Regulatory Requirements",
                             "Implementation",
                             "Monitoring",
                             "Audit Preparation",
                             "Risk Management"});
-                table616.AddRow(new string[] {
+                table579.AddRow(new string[] {
                             "Revenue recognition",
                             "ASC 606, IFRS 15",
                             "Revenue recognition engine",
                             "Monthly validation",
                             "Annual audit",
                             "Revenue audit trails"});
-                table616.AddRow(new string[] {
+                table579.AddRow(new string[] {
                             "Tax compliance",
                             "Sales tax, VAT",
                             "Tax calculation service",
                             "Real-time validation",
                             "Tax audit",
                             "Tax documentation"});
-                table616.AddRow(new string[] {
+                table579.AddRow(new string[] {
                             "Data privacy",
                             "GDPR, CCPA",
                             "Privacy controls",
                             "Privacy monitoring",
                             "Privacy audit",
                             "Privacy impact assessments"});
-                table616.AddRow(new string[] {
+                table579.AddRow(new string[] {
                             "Payment security",
                             "PCI DSS",
                             "Secure processing",
                             "Security monitoring",
                             "Security audit",
                             "Security incident response"});
-                table616.AddRow(new string[] {
+                table579.AddRow(new string[] {
                             "Consumer protection",
                             "FTC, local laws",
                             "Clear terms, easy cancellation",
                             "Compliance monitoring",
                             "Regulatory review",
                             "Legal compliance"});
-                table616.AddRow(new string[] {
+                table579.AddRow(new string[] {
                             "International compliance",
                             "Multi-jurisdictional",
                             "Localized compliance",
@@ -2008,7 +2008,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Local audits",
                             "International legal review"});
 #line 311
-    testRunner.When("ensuring billing compliance:", ((string)(null)), table616, "When ");
+    testRunner.When("ensuring billing compliance:", ((string)(null)), table579, "When ");
 #line hidden
 #line 319
     testRunner.Then("compliance should be comprehensive and current", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -2062,49 +2062,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 326
     testRunner.Given("subscription businesses require long-term sustainability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table617 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table580 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table617.AddRow(new string[] {
+                table580.AddRow(new string[] {
                             "Customer retention",
                             "Increasing churn",
                             "Advanced retention strategies",
                             "Customer success resources",
                             "Improved retention rates",
                             "Retention sustainability"});
-                table617.AddRow(new string[] {
+                table580.AddRow(new string[] {
                             "Revenue growth",
                             "Market saturation",
                             "Expansion and optimization",
                             "Growth resources",
                             "Sustained growth",
                             "Growth sustainability"});
-                table617.AddRow(new string[] {
+                table580.AddRow(new string[] {
                             "Operational efficiency",
                             "Complex operations",
                             "Automation and optimization",
                             "Technology resources",
                             "Operational efficiency",
                             "Operational sustainability"});
-                table617.AddRow(new string[] {
+                table580.AddRow(new string[] {
                             "Technology scalability",
                             "System limitations",
                             "Scalable architecture",
                             "Infrastructure resources",
                             "Linear scaling",
                             "Technical sustainability"});
-                table617.AddRow(new string[] {
+                table580.AddRow(new string[] {
                             "Competitive advantage",
                             "Market competition",
                             "Innovation and differentiation",
                             "Innovation resources",
                             "Market leadership",
                             "Competitive sustainability"});
-                table617.AddRow(new string[] {
+                table580.AddRow(new string[] {
                             "Financial health",
                             "Margin pressure",
                             "Unit economics optimization",
@@ -2112,7 +2112,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Healthy unit economics",
                             "Financial sustainability"});
 #line 327
-    testRunner.When("planning subscription sustainability:", ((string)(null)), table617, "When ");
+    testRunner.When("planning subscription sustainability:", ((string)(null)), table580, "When ");
 #line hidden
 #line 335
     testRunner.Then("sustainability should be built into business model", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

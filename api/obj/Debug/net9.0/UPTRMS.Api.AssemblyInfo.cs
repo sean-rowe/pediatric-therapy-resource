@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UPTRMS.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aad3822d75b68e4b371267bde87f2688c4c56979")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4371377317d84aa3ad59cf49b615e32128440fb6")]
 [assembly: System.Reflection.AssemblyProductAttribute("UPTRMS.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UPTRMS.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

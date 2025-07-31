@@ -131,53 +131,53 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 14
     testRunner.Given("automated security scanning is scheduled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2408 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2371 = new TechTalk.SpecFlow.Table(new string[] {
                             "Scan Type",
                             "Target Systems",
                             "Frequency",
                             "Critical Threshold"});
-                table2408.AddRow(new string[] {
+                table2371.AddRow(new string[] {
                             "Network vulnerability",
                             "All public-facing services",
                             "Weekly",
                             "0 critical vulns"});
-                table2408.AddRow(new string[] {
+                table2371.AddRow(new string[] {
                             "Web application scan",
                             "All web interfaces",
                             "Daily",
                             "0 critical vulns"});
-                table2408.AddRow(new string[] {
+                table2371.AddRow(new string[] {
                             "Database security scan",
                             "All database instances",
                             "Weekly",
                             "0 critical vulns"});
-                table2408.AddRow(new string[] {
+                table2371.AddRow(new string[] {
                             "Container security",
                             "All Docker containers",
                             "Daily",
                             "0 critical vulns"});
-                table2408.AddRow(new string[] {
+                table2371.AddRow(new string[] {
                             "Infrastructure scan",
                             "Cloud resources",
                             "Daily",
                             "0 critical vulns"});
-                table2408.AddRow(new string[] {
+                table2371.AddRow(new string[] {
                             "API security testing",
                             "All REST/GraphQL endpoints",
                             "Daily",
                             "0 critical vulns"});
-                table2408.AddRow(new string[] {
+                table2371.AddRow(new string[] {
                             "Authentication testing",
                             "Login systems, SSO",
                             "Weekly",
                             "0 critical vulns"});
-                table2408.AddRow(new string[] {
+                table2371.AddRow(new string[] {
                             "Authorization testing",
                             "Access control mechanisms",
                             "Weekly",
                             "0 critical vulns"});
 #line 15
-    testRunner.When("comprehensive vulnerability scans are executed:", ((string)(null)), table2408, "When ");
+    testRunner.When("comprehensive vulnerability scans are executed:", ((string)(null)), table2371, "When ");
 #line hidden
 #line 25
     testRunner.Then("scan results should be automatically analyzed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -227,44 +227,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 32
     testRunner.Given("web application security testing is initiated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2409 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2372 = new TechTalk.SpecFlow.Table(new string[] {
                             "Attack Vector",
                             "Test Cases",
                             "Expected Result"});
-                table2409.AddRow(new string[] {
+                table2372.AddRow(new string[] {
                             "SQL injection",
                             "Malicious SQL in all input fields",
                             "All attempts blocked"});
-                table2409.AddRow(new string[] {
+                table2372.AddRow(new string[] {
                             "Cross-site scripting (XSS)",
                             "Script injection in forms",
                             "Scripts sanitized"});
-                table2409.AddRow(new string[] {
+                table2372.AddRow(new string[] {
                             "Cross-site request forgery",
                             "CSRF attacks on state-changing ops",
                             "CSRF tokens required"});
-                table2409.AddRow(new string[] {
+                table2372.AddRow(new string[] {
                             "Path traversal",
                             "Directory traversal attempts",
                             "Access denied"});
-                table2409.AddRow(new string[] {
+                table2372.AddRow(new string[] {
                             "File upload vulnerabilities",
                             "Malicious file upload attempts",
                             "Files rejected"});
-                table2409.AddRow(new string[] {
+                table2372.AddRow(new string[] {
                             "Session management",
                             "Session fixation, hijacking tests",
                             "Sessions secure"});
-                table2409.AddRow(new string[] {
+                table2372.AddRow(new string[] {
                             "Input validation",
                             "Boundary testing, format attacks",
                             "Validation enforced"});
-                table2409.AddRow(new string[] {
+                table2372.AddRow(new string[] {
                             "Output encoding",
                             "Data injection in responses",
                             "Encoding applied"});
 #line 33
-    testRunner.When("application security tests are performed:", ((string)(null)), table2409, "When ");
+    testRunner.When("application security tests are performed:", ((string)(null)), table2372, "When ");
 #line hidden
 #line 43
     testRunner.Then("all security controls should pass testing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -314,40 +314,40 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 50
     testRunner.Given("API security testing framework is active", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2410 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2373 = new TechTalk.SpecFlow.Table(new string[] {
                             "API Endpoint Type",
                             "Security Tests",
                             "Pass Criteria"});
-                table2410.AddRow(new string[] {
+                table2373.AddRow(new string[] {
                             "Authentication endpoints",
                             "Brute force, credential stuffing",
                             "Rate limiting active"});
-                table2410.AddRow(new string[] {
+                table2373.AddRow(new string[] {
                             "Student data APIs",
                             "Unauthorized access attempts",
                             "Access denied"});
-                table2410.AddRow(new string[] {
+                table2373.AddRow(new string[] {
                             "Payment processing APIs",
                             "PCI DSS compliance testing",
                             "Full compliance"});
-                table2410.AddRow(new string[] {
+                table2373.AddRow(new string[] {
                             "File upload APIs",
                             "Malicious file upload tests",
                             "Files blocked"});
-                table2410.AddRow(new string[] {
+                table2373.AddRow(new string[] {
                             "Admin APIs",
                             "Privilege escalation attempts",
                             "Escalation blocked"});
-                table2410.AddRow(new string[] {
+                table2373.AddRow(new string[] {
                             "Reporting APIs",
                             "Data enumeration attacks",
                             "Access controlled"});
-                table2410.AddRow(new string[] {
+                table2373.AddRow(new string[] {
                             "Integration APIs",
                             "API key exposure, token theft",
                             "Tokens secured"});
 #line 51
-    testRunner.When("API endpoints are tested for security vulnerabilities:", ((string)(null)), table2410, "When ");
+    testRunner.When("API endpoints are tested for security vulnerabilities:", ((string)(null)), table2373, "When ");
 #line hidden
 #line 60
     testRunner.Then("API security controls should be validated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -397,40 +397,40 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 67
     testRunner.Given("network penetration testing is authorized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2411 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2374 = new TechTalk.SpecFlow.Table(new string[] {
                             "Network Component",
                             "Security Tests",
                             "Expected Behavior"});
-                table2411.AddRow(new string[] {
+                table2374.AddRow(new string[] {
                             "Firewall configurations",
                             "Port scanning, rule bypass tests",
                             "Unauthorized blocked"});
-                table2411.AddRow(new string[] {
+                table2374.AddRow(new string[] {
                             "Load balancer security",
                             "SSL/TLS configuration testing",
                             "Secure protocols"});
-                table2411.AddRow(new string[] {
+                table2374.AddRow(new string[] {
                             "VPN endpoints",
                             "Authentication bypass attempts",
                             "MFA required"});
-                table2411.AddRow(new string[] {
+                table2374.AddRow(new string[] {
                             "Database connections",
                             "Direct database access attempts",
                             "Access denied"});
-                table2411.AddRow(new string[] {
+                table2374.AddRow(new string[] {
                             "Internal network segments",
                             "Lateral movement testing",
                             "Segmentation enforced"});
-                table2411.AddRow(new string[] {
+                table2374.AddRow(new string[] {
                             "DNS security",
                             "DNS poisoning, cache poisoning",
                             "DNS integrity maintained"});
-                table2411.AddRow(new string[] {
+                table2374.AddRow(new string[] {
                             "Email systems",
                             "Phishing, spoofing attempts",
                             "Email security active"});
 #line 68
-    testRunner.When("network security assessments are performed:", ((string)(null)), table2411, "When ");
+    testRunner.When("network security assessments are performed:", ((string)(null)), table2374, "When ");
 #line hidden
 #line 77
     testRunner.Then("network security posture should be validated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -480,38 +480,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 85
     testRunner.Given("certified penetration testers are engaged", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2412 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2375 = new TechTalk.SpecFlow.Table(new string[] {
                             "Testing Phase",
                             "Activities",
                             "Duration",
                             "Deliverables"});
-                table2412.AddRow(new string[] {
+                table2375.AddRow(new string[] {
                             "Reconnaissance",
                             "Information gathering, OSINT",
                             "2 days",
                             "Target intelligence"});
-                table2412.AddRow(new string[] {
+                table2375.AddRow(new string[] {
                             "Vulnerability discovery",
                             "Manual vulnerability analysis",
                             "3 days",
                             "Vulnerability list"});
-                table2412.AddRow(new string[] {
+                table2375.AddRow(new string[] {
                             "Exploitation",
                             "Proof-of-concept development",
                             "3 days",
                             "PoC demonstrations"});
-                table2412.AddRow(new string[] {
+                table2375.AddRow(new string[] {
                             "Post-exploitation",
                             "Privilege escalation, persistence",
                             "2 days",
                             "Impact assessment"});
-                table2412.AddRow(new string[] {
+                table2375.AddRow(new string[] {
                             "Reporting",
                             "Comprehensive report generation",
                             "2 days",
                             "Final report"});
 #line 86
-    testRunner.When("manual security testing is performed:", ((string)(null)), table2412, "When ");
+    testRunner.When("manual security testing is performed:", ((string)(null)), table2375, "When ");
 #line hidden
 #line 93
     testRunner.Then("testing should identify real-world attack scenarios", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -561,36 +561,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 100
     testRunner.Given("social engineering testing is approved by HR and legal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2413 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2376 = new TechTalk.SpecFlow.Table(new string[] {
                             "Attack Vector",
                             "Test Scenarios",
                             "Success Threshold"});
-                table2413.AddRow(new string[] {
+                table2376.AddRow(new string[] {
                             "Phishing emails",
                             "Targeted phishing campaigns",
                             "<5% click rate"});
-                table2413.AddRow(new string[] {
+                table2376.AddRow(new string[] {
                             "Spear phishing",
                             "Personalized attacks on executives",
                             "<2% response rate"});
-                table2413.AddRow(new string[] {
+                table2376.AddRow(new string[] {
                             "Phone-based attacks",
                             "Vishing attempts for credentials",
                             "0% credential disclosure"});
-                table2413.AddRow(new string[] {
+                table2376.AddRow(new string[] {
                             "Physical security",
                             "Tailgating, badge cloning tests",
                             "0% unauthorized access"});
-                table2413.AddRow(new string[] {
+                table2376.AddRow(new string[] {
                             "USB drop attacks",
                             "Malicious USB devices in parking",
                             "<1% execution rate"});
-                table2413.AddRow(new string[] {
+                table2376.AddRow(new string[] {
                             "Pretexting",
                             "Impersonation of IT support",
                             "0% credential disclosure"});
 #line 101
-    testRunner.When("social engineering assessments are conducted:", ((string)(null)), table2413, "When ");
+    testRunner.When("social engineering assessments are conducted:", ((string)(null)), table2376, "When ");
 #line hidden
 #line 109
     testRunner.Then("security awareness effectiveness should be measured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -640,36 +640,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 116
     testRunner.Given("mobile applications are in production", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2414 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2377 = new TechTalk.SpecFlow.Table(new string[] {
                             "Mobile Component",
                             "Security Tests",
                             "Security Requirements"});
-                table2414.AddRow(new string[] {
+                table2377.AddRow(new string[] {
                             "Mobile app authentication",
                             "Biometric bypass, PIN attacks",
                             "Secure authentication"});
-                table2414.AddRow(new string[] {
+                table2377.AddRow(new string[] {
                             "Data storage",
                             "Local data encryption testing",
                             "All data encrypted"});
-                table2414.AddRow(new string[] {
+                table2377.AddRow(new string[] {
                             "Network communications",
                             "Man-in-the-middle attacks",
                             "Certificate pinning"});
-                table2414.AddRow(new string[] {
+                table2377.AddRow(new string[] {
                             "App tampering",
                             "Binary modification attempts",
                             "Tamper detection"});
-                table2414.AddRow(new string[] {
+                table2377.AddRow(new string[] {
                             "Device jailbreak/root",
                             "Privilege escalation testing",
                             "Root detection"});
-                table2414.AddRow(new string[] {
+                table2377.AddRow(new string[] {
                             "API communications",
                             "Mobile API security testing",
                             "Secure API calls"});
 #line 117
-    testRunner.When("mobile security testing is performed:", ((string)(null)), table2414, "When ");
+    testRunner.When("mobile security testing is performed:", ((string)(null)), table2377, "When ");
 #line hidden
 #line 125
     testRunner.Then("mobile security controls should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -719,36 +719,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 133
     testRunner.Given("cloud infrastructure hosts the platform", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2415 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2378 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cloud Component",
                             "Security Tests",
                             "Configuration Standards"});
-                table2415.AddRow(new string[] {
+                table2378.AddRow(new string[] {
                             "IAM roles and policies",
                             "Privilege escalation testing",
                             "Least privilege principle"});
-                table2415.AddRow(new string[] {
+                table2378.AddRow(new string[] {
                             "S3 bucket configurations",
                             "Public access, data exposure tests",
                             "Private by default"});
-                table2415.AddRow(new string[] {
+                table2378.AddRow(new string[] {
                             "VPC security groups",
                             "Network access control testing",
                             "Restrictive rules"});
-                table2415.AddRow(new string[] {
+                table2378.AddRow(new string[] {
                             "CloudTrail logging",
                             "Audit trail completeness testing",
                             "All actions logged"});
-                table2415.AddRow(new string[] {
+                table2378.AddRow(new string[] {
                             "Encryption configurations",
                             "Data at rest and in transit tests",
                             "AES-256 encryption"});
-                table2415.AddRow(new string[] {
+                table2378.AddRow(new string[] {
                             "Container security",
                             "Kubernetes security testing",
                             "Secure by default"});
 #line 134
-    testRunner.When("cloud security assessments are performed:", ((string)(null)), table2415, "When ");
+    testRunner.When("cloud security assessments are performed:", ((string)(null)), table2378, "When ");
 #line hidden
 #line 142
     testRunner.Then("cloud security posture should meet industry standards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -798,36 +798,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 149
     testRunner.Given("platform integrates with external services", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2416 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2379 = new TechTalk.SpecFlow.Table(new string[] {
                             "Integration Type",
                             "Security Concerns",
                             "Testing Approach"});
-                table2416.AddRow(new string[] {
+                table2379.AddRow(new string[] {
                             "Payment processors",
                             "Transaction security, PCI compliance",
                             "Integration testing"});
-                table2416.AddRow(new string[] {
+                table2379.AddRow(new string[] {
                             "SSO identity providers",
                             "Authentication bypass, token theft",
                             "Identity testing"});
-                table2416.AddRow(new string[] {
+                table2379.AddRow(new string[] {
                             "Cloud storage services",
                             "Data exposure, access control",
                             "Data security testing"});
-                table2416.AddRow(new string[] {
+                table2379.AddRow(new string[] {
                             "Analytics platforms",
                             "Data leakage, privacy compliance",
                             "Privacy testing"});
-                table2416.AddRow(new string[] {
+                table2379.AddRow(new string[] {
                             "Communication services",
                             "Message interception, spoofing",
                             "Communication security"});
-                table2416.AddRow(new string[] {
+                table2379.AddRow(new string[] {
                             "EHR system integrations",
                             "HIPAA compliance, data integrity",
                             "Healthcare security"});
 #line 150
-    testRunner.When("third-party integration security is assessed:", ((string)(null)), table2416, "When ");
+    testRunner.When("third-party integration security is assessed:", ((string)(null)), table2379, "When ");
 #line hidden
 #line 158
     testRunner.Then("integration security should be validated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -877,32 +877,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 166
     testRunner.Given("platform must meet multiple compliance standards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2417 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2380 = new TechTalk.SpecFlow.Table(new string[] {
                             "Compliance Standard",
                             "Security Requirements Testing",
                             "Validation Method"});
-                table2417.AddRow(new string[] {
+                table2380.AddRow(new string[] {
                             "HIPAA Technical Safeguards",
                             "PHI protection mechanisms testing",
                             "Security controls audit"});
-                table2417.AddRow(new string[] {
+                table2380.AddRow(new string[] {
                             "FERPA security requirements",
                             "Student data protection testing",
                             "Privacy controls test"});
-                table2417.AddRow(new string[] {
+                table2380.AddRow(new string[] {
                             "PCI DSS security standards",
                             "Payment data protection testing",
                             "PCI compliance scan"});
-                table2417.AddRow(new string[] {
+                table2380.AddRow(new string[] {
                             "SOC 2 Type II controls",
                             "Operational security testing",
                             "Control effectiveness"});
-                table2417.AddRow(new string[] {
+                table2380.AddRow(new string[] {
                             "GDPR security requirements",
                             "Data protection impact assessment",
                             "Privacy by design test"});
 #line 167
-    testRunner.When("compliance security testing is performed:", ((string)(null)), table2417, "When ");
+    testRunner.When("compliance security testing is performed:", ((string)(null)), table2380, "When ");
 #line hidden
 #line 174
     testRunner.Then("all compliance requirements should be met", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -952,32 +952,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 182
     testRunner.Given("DevSecOps practices are implemented", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2418 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2381 = new TechTalk.SpecFlow.Table(new string[] {
                             "Pipeline Stage",
                             "Security Tests",
                             "Failure Actions"});
-                table2418.AddRow(new string[] {
+                table2381.AddRow(new string[] {
                             "Pre-commit hooks",
                             "Static code analysis, secret detection",
                             "Block commit"});
-                table2418.AddRow(new string[] {
+                table2381.AddRow(new string[] {
                             "Build stage",
                             "Dependency vulnerability scanning",
                             "Fail build"});
-                table2418.AddRow(new string[] {
+                table2381.AddRow(new string[] {
                             "Testing stage",
                             "Dynamic security testing (DAST)",
                             "Block deployment"});
-                table2418.AddRow(new string[] {
+                table2381.AddRow(new string[] {
                             "Staging deployment",
                             "Infrastructure security scanning",
                             "Alert security team"});
-                table2418.AddRow(new string[] {
+                table2381.AddRow(new string[] {
                             "Production deployment",
                             "Runtime security monitoring",
                             "Continuous monitoring"});
 #line 183
-    testRunner.When("code changes trigger security testing:", ((string)(null)), table2418, "When ");
+    testRunner.When("code changes trigger security testing:", ((string)(null)), table2381, "When ");
 #line hidden
 #line 190
     testRunner.Then("security testing should be automated and continuous", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1029,32 +1029,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 198
     testRunner.Given("penetration testing tools may experience failures", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2419 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2382 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failure Type",
                             "Error Condition",
                             "Handling Strategy"});
-                table2419.AddRow(new string[] {
+                table2382.AddRow(new string[] {
                             "Network connectivity loss",
                             "Cannot reach target systems",
                             "Retry with backoff"});
-                table2419.AddRow(new string[] {
+                table2382.AddRow(new string[] {
                             "Authentication failures",
                             "Cannot authenticate to test targets",
                             "Manual verification"});
-                table2419.AddRow(new string[] {
+                table2382.AddRow(new string[] {
                             "Tool crashes",
                             "Security scanner stops responding",
                             "Restart and resume"});
-                table2419.AddRow(new string[] {
+                table2382.AddRow(new string[] {
                             "False positive detection",
                             "Tools report non-existent vulns",
                             "Manual validation"});
-                table2419.AddRow(new string[] {
+                table2382.AddRow(new string[] {
                             "Resource exhaustion",
                             "High resource usage during scans",
                             "Throttle scan speed"});
 #line 199
-    testRunner.When("testing tools encounter errors:", ((string)(null)), table2419, "When ");
+    testRunner.When("testing tools encounter errors:", ((string)(null)), table2382, "When ");
 #line hidden
 #line 206
     testRunner.Then("testing should continue with alternative methods", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1106,28 +1106,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 213
     testRunner.Given("penetration testing must not disrupt operations", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2420 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2383 = new TechTalk.SpecFlow.Table(new string[] {
                             "Impact Type",
                             "Mitigation Strategy",
                             "Monitoring Required"});
-                table2420.AddRow(new string[] {
+                table2383.AddRow(new string[] {
                             "Performance degradation",
                             "Throttle testing speed",
                             "Performance metrics"});
-                table2420.AddRow(new string[] {
+                table2383.AddRow(new string[] {
                             "Service availability",
                             "Test during maintenance windows",
                             "Uptime monitoring"});
-                table2420.AddRow(new string[] {
+                table2383.AddRow(new string[] {
                             "Data integrity",
                             "Use read-only testing approaches",
                             "Data validation"});
-                table2420.AddRow(new string[] {
+                table2383.AddRow(new string[] {
                             "User experience",
                             "Avoid user-facing disruptions",
                             "User feedback"});
 #line 214
-    testRunner.When("security testing is performed on production systems:", ((string)(null)), table2420, "When ");
+    testRunner.When("security testing is performed on production systems:", ((string)(null)), table2383, "When ");
 #line hidden
 #line 220
     testRunner.Then("production systems should remain fully operational", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1179,28 +1179,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 227
     testRunner.Given("automated tools may generate false positives", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2421 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2384 = new TechTalk.SpecFlow.Table(new string[] {
                             "False Positive Type",
                             "Identification Method",
                             "Resolution Process"});
-                table2421.AddRow(new string[] {
+                table2384.AddRow(new string[] {
                             "Configuration misreporting",
                             "Manual configuration verification",
                             "Update tool configs"});
-                table2421.AddRow(new string[] {
+                table2384.AddRow(new string[] {
                             "Version false positives",
                             "Actual version verification",
                             "Improve fingerprinting"});
-                table2421.AddRow(new string[] {
+                table2384.AddRow(new string[] {
                             "Context-aware false hits",
                             "Business logic understanding",
                             "Create test exceptions"});
-                table2421.AddRow(new string[] {
+                table2384.AddRow(new string[] {
                             "Network false positives",
                             "Network topology verification",
                             "Update network maps"});
 #line 228
-    testRunner.When("vulnerability scan results are analyzed:", ((string)(null)), table2421, "When ");
+    testRunner.When("vulnerability scan results are analyzed:", ((string)(null)), table2384, "When ");
 #line hidden
 #line 234
     testRunner.Then("false positives should be quickly identified", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1252,28 +1252,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 241
     testRunner.Given("some testing methods may conflict with compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2422 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2385 = new TechTalk.SpecFlow.Table(new string[] {
                             "Regulatory Constraint",
                             "Testing Limitation",
                             "Alternative Approach"});
-                table2422.AddRow(new string[] {
+                table2385.AddRow(new string[] {
                             "HIPAA privacy rules",
                             "Cannot access real patient data",
                             "Use synthetic data"});
-                table2422.AddRow(new string[] {
+                table2385.AddRow(new string[] {
                             "Production data protection",
                             "Cannot modify production data",
                             "Use test environments"});
-                table2422.AddRow(new string[] {
+                table2385.AddRow(new string[] {
                             "Business hours restrictions",
                             "Cannot test during business hours",
                             "Schedule testing windows"});
-                table2422.AddRow(new string[] {
+                table2385.AddRow(new string[] {
                             "Audit trail requirements",
                             "All testing must be logged",
                             "Enhanced logging"});
 #line 242
-    testRunner.When("regulatory constraints limit testing approaches:", ((string)(null)), table2422, "When ");
+    testRunner.When("regulatory constraints limit testing approaches:", ((string)(null)), table2385, "When ");
 #line hidden
 #line 248
     testRunner.Then("testing should comply with all regulatory requirements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1325,28 +1325,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 255
     testRunner.Given("some systems are managed by external vendors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2423 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2386 = new TechTalk.SpecFlow.Table(new string[] {
                             "Vendor Limitation",
                             "Testing Constraint",
                             "Workaround Strategy"});
-                table2423.AddRow(new string[] {
+                table2386.AddRow(new string[] {
                             "No direct testing allowed",
                             "Cannot scan vendor infrastructure",
                             "Review certifications"});
-                table2423.AddRow(new string[] {
+                table2386.AddRow(new string[] {
                             "Limited testing windows",
                             "Restricted testing timeframes",
                             "Coordinate schedules"});
-                table2423.AddRow(new string[] {
+                table2386.AddRow(new string[] {
                             "Shared responsibility gaps",
                             "Unclear security boundaries",
                             "Document responsibilities"});
-                table2423.AddRow(new string[] {
+                table2386.AddRow(new string[] {
                             "Vendor security controls",
                             "Cannot validate vendor controls",
                             "Third-party audits"});
 #line 256
-    testRunner.When("vendor systems require security testing:", ((string)(null)), table2423, "When ");
+    testRunner.When("vendor systems require security testing:", ((string)(null)), table2386, "When ");
 #line hidden
 #line 262
     testRunner.Then("vendor security should be validated through alternative means", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

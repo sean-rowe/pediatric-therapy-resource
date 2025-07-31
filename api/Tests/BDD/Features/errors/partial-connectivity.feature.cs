@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 17
     testRunner.And("platform should adapt gracefully to bandwidth constraints", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1187 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1150 = new TechTalk.SpecFlow.Table(new string[] {
                             "Connection Speed",
                             "Bandwidth Range",
                             "Adaptation Strategy",
                             "Content Optimization",
                             "User Experience",
                             "Performance Impact"});
-                table1187.AddRow(new string[] {
+                table1150.AddRow(new string[] {
                             "Dial-up speeds",
                             "<56 Kbps",
                             "Text-only mode",
                             "Remove non-essential media",
                             "Basic functionality",
                             "Severely limited"});
-                table1187.AddRow(new string[] {
+                table1150.AddRow(new string[] {
                             "Slow broadband",
                             "56 Kbps - 512 Kbps",
                             "Compressed mode",
                             "Optimize images/videos",
                             "Reduced quality",
                             "Moderately limited"});
-                table1187.AddRow(new string[] {
+                table1150.AddRow(new string[] {
                             "Medium broadband",
                             "512 Kbps - 2 Mbps",
                             "Standard mode",
                             "Balanced optimization",
                             "Good functionality",
                             "Slightly limited"});
-                table1187.AddRow(new string[] {
+                table1150.AddRow(new string[] {
                             "Fast broadband",
                             "2-10 Mbps",
                             "Enhanced mode",
                             "High-quality content",
                             "Full functionality",
                             "Minimal limitation"});
-                table1187.AddRow(new string[] {
+                table1150.AddRow(new string[] {
                             "High-speed",
                             "10+ Mbps",
                             "Premium mode",
                             "Uncompressed content",
                             "Optimal experience",
                             "No limitation"});
-                table1187.AddRow(new string[] {
+                table1150.AddRow(new string[] {
                             "Variable speed",
                             "Fluctuating",
                             "Adaptive mode",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Responsive quality",
                             "Auto-adjusting"});
 #line 18
-    testRunner.When("detecting slow connection conditions:", ((string)(null)), table1187, "When ");
+    testRunner.When("detecting slow connection conditions:", ((string)(null)), table1150, "When ");
 #line hidden
 #line 26
     testRunner.Then("bandwidth should be detected automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 34
     testRunner.And("intermittent connectivity requires robust retry mechanisms", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1188 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1151 = new TechTalk.SpecFlow.Table(new string[] {
                             "Drop Pattern",
                             "Duration",
                             "Frequency",
                             "Detection Method",
                             "Recovery Strategy",
                             "User Communication"});
-                table1188.AddRow(new string[] {
+                table1151.AddRow(new string[] {
                             "Brief drops",
                             "1-5 seconds",
                             "Occasional",
                             "Heartbeat monitoring",
                             "Automatic retry",
                             "Connection indicator"});
-                table1188.AddRow(new string[] {
+                table1151.AddRow(new string[] {
                             "Regular drops",
                             "5-30 seconds",
                             "Frequent",
                             "Connection polling",
                             "Queue operations",
                             "Status notifications"});
-                table1188.AddRow(new string[] {
+                table1151.AddRow(new string[] {
                             "Extended drops",
                             "30+ seconds",
                             "Periodic",
                             "Timeout detection",
                             "Offline mode",
                             "Detailed explanations"});
-                table1188.AddRow(new string[] {
+                table1151.AddRow(new string[] {
                             "Random drops",
                             "Variable",
                             "Unpredictable",
                             "Real-time monitoring",
                             "Adaptive retry",
                             "Context-aware messages"});
-                table1188.AddRow(new string[] {
+                table1151.AddRow(new string[] {
                             "Pattern drops",
                             "Consistent timing",
                             "Predictable",
                             "Pattern recognition",
                             "Proactive caching",
                             "Predictive notifications"});
-                table1188.AddRow(new string[] {
+                table1151.AddRow(new string[] {
                             "Service drops",
                             "Specific services",
                             "Service-specific",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Service fallback",
                             "Service-specific alerts"});
 #line 35
-    testRunner.When("experiencing intermittent connection drops:", ((string)(null)), table1188, "When ");
+    testRunner.When("experiencing intermittent connection drops:", ((string)(null)), table1151, "When ");
 #line hidden
 #line 43
     testRunner.Then("drops should be detected quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 51
     testRunner.And("latency compensation improves perceived performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1189 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1152 = new TechTalk.SpecFlow.Table(new string[] {
                             "Latency Range",
                             "Response Time",
                             "Adaptation Method",
                             "User Interface",
                             "Timeout Handling",
                             "Optimization Strategy"});
-                table1189.AddRow(new string[] {
+                table1152.AddRow(new string[] {
                             "Low latency",
                             "<100ms",
                             "No adaptation",
                             "Standard UI",
                             "Standard timeouts",
                             "Normal operation"});
-                table1189.AddRow(new string[] {
+                table1152.AddRow(new string[] {
                             "Medium latency",
                             "100-500ms",
                             "Minor adaptation",
                             "Responsive feedback",
                             "Extended timeouts",
                             "Predictive loading"});
-                table1189.AddRow(new string[] {
+                table1152.AddRow(new string[] {
                             "High latency",
                             "500ms-2s",
                             "Major adaptation",
                             "Loading indicators",
                             "Long timeouts",
                             "Progressive enhancement"});
-                table1189.AddRow(new string[] {
+                table1152.AddRow(new string[] {
                             "Very high latency",
                             "2-10s",
                             "Significant adaptation",
                             "Progress bars",
                             "Very long timeouts",
                             "Aggressive caching"});
-                table1189.AddRow(new string[] {
+                table1152.AddRow(new string[] {
                             "Extreme latency",
                             ">10s",
                             "Offline consideration",
                             "Offline indicators",
                             "Offline timeouts",
                             "Local processing"});
-                table1189.AddRow(new string[] {
+                table1152.AddRow(new string[] {
                             "Variable latency",
                             "Fluctuating",
                             "Dynamic adaptation",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Dynamic timeouts",
                             "Latency prediction"});
 #line 52
-    testRunner.When("experiencing high latency conditions:", ((string)(null)), table1189, "When ");
+    testRunner.When("experiencing high latency conditions:", ((string)(null)), table1152, "When ");
 #line hidden
 #line 60
     testRunner.Then("latency should be measured continuously", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 68
     testRunner.And("data integrity is critical for platform operation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1190 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1153 = new TechTalk.SpecFlow.Table(new string[] {
                             "Loss Percentage",
                             "Data Impact",
                             "Detection Method",
                             "Recovery Strategy",
                             "Integrity Validation",
                             "Retry Approach"});
-                table1190.AddRow(new string[] {
+                table1153.AddRow(new string[] {
                             "0-1% loss",
                             "Minimal impact",
                             "Error rate monitoring",
                             "Automatic retry",
                             "Checksum validation",
                             "Standard retry"});
-                table1190.AddRow(new string[] {
+                table1153.AddRow(new string[] {
                             "1-5% loss",
                             "Noticeable impact",
                             "Loss rate detection",
                             "Error correction",
                             "Hash verification",
                             "Exponential backoff"});
-                table1190.AddRow(new string[] {
+                table1153.AddRow(new string[] {
                             "5-15% loss",
                             "Significant impact",
                             "Packet monitoring",
                             "Redundant transmission",
                             "Data verification",
                             "Multiple attempts"});
-                table1190.AddRow(new string[] {
+                table1153.AddRow(new string[] {
                             "15-30% loss",
                             "Major impact",
                             "Quality monitoring",
                             "Alternative routing",
                             "End-to-end validation",
                             "Aggressive retry"});
-                table1190.AddRow(new string[] {
+                table1153.AddRow(new string[] {
                             ">30% loss",
                             "Severe impact",
                             "Connection analysis",
                             "Connection reset",
                             "Full validation",
                             "Connection reestablishment"});
-                table1190.AddRow(new string[] {
+                table1153.AddRow(new string[] {
                             "Burst loss",
                             "Periodic severe loss",
                             "Pattern detection",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Burst validation",
                             "Burst-aware retry"});
 #line 69
-    testRunner.When("experiencing packet loss conditions:", ((string)(null)), table1190, "When ");
+    testRunner.When("experiencing packet loss conditions:", ((string)(null)), table1153, "When ");
 #line hidden
 #line 77
     testRunner.Then("packet loss should be detected accurately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 86
     testRunner.And("cellular optimization improves mobile user experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1191 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1154 = new TechTalk.SpecFlow.Table(new string[] {
                             "Network Type",
                             "Characteristics",
                             "Optimization Strategy",
                             "Data Management",
                             "Battery Considerations",
                             "Cost Awareness"});
-                table1191.AddRow(new string[] {
+                table1154.AddRow(new string[] {
                             "2G network",
                             "Very slow, high latency",
                             "Text-only mode",
                             "Minimal data usage",
                             "Maximum battery saving",
                             "Cost-conscious operation"});
-                table1191.AddRow(new string[] {
+                table1154.AddRow(new string[] {
                             "3G network",
                             "Moderate speed",
                             "Compressed content",
                             "Selective loading",
                             "Battery optimization",
                             "Data usage awareness"});
-                table1191.AddRow(new string[] {
+                table1154.AddRow(new string[] {
                             "4G LTE",
                             "Good speed",
                             "Standard optimization",
                             "Normal data usage",
                             "Balanced battery use",
                             "Reasonable data usage"});
-                table1191.AddRow(new string[] {
+                table1154.AddRow(new string[] {
                             "5G network",
                             "High speed",
                             "Full features",
                             "Unrestricted usage",
                             "Standard battery use",
                             "Normal operation"});
-                table1191.AddRow(new string[] {
+                table1154.AddRow(new string[] {
                             "WiFi calling",
                             "Variable quality",
                             "Adaptive quality",
                             "Quality-based usage",
                             "WiFi optimization",
                             "No cost concern"});
-                table1191.AddRow(new string[] {
+                table1154.AddRow(new string[] {
                             "Roaming network",
                             "Expensive, variable",
                             "Conservative mode",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Maximum efficiency",
                             "Cost minimization"});
 #line 87
-    testRunner.When("operating on mobile networks:", ((string)(null)), table1191, "When ");
+    testRunner.When("operating on mobile networks:", ((string)(null)), table1154, "When ");
 #line hidden
 #line 95
     testRunner.Then("mobile conditions should be detected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 103
     testRunner.And("regional optimization improves global user experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1192 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1155 = new TechTalk.SpecFlow.Table(new string[] {
                             "Geographic Factor",
                             "Connectivity Impact",
                             "Detection Method",
                             "Optimization Strategy",
                             "Service Adaptation",
                             "User Communication"});
-                table1192.AddRow(new string[] {
+                table1155.AddRow(new string[] {
                             "Rural areas",
                             "Limited infrastructure",
                             "Location detection",
                             "Conservative settings",
                             "Basic functionality",
                             "Geographic context"});
-                table1192.AddRow(new string[] {
+                table1155.AddRow(new string[] {
                             "Urban areas",
                             "Congested networks",
                             "Performance monitoring",
                             "Load balancing",
                             "Standard functionality",
                             "Congestion awareness"});
-                table1192.AddRow(new string[] {
+                table1155.AddRow(new string[] {
                             "Developing regions",
                             "Inconsistent service",
                             "Quality assessment",
                             "Resilient operation",
                             "Fault-tolerant features",
                             "Service explanation"});
-                table1192.AddRow(new string[] {
+                table1155.AddRow(new string[] {
                             "International",
                             "Distance/routing",
                             "Latency monitoring",
                             "CDN optimization",
                             "Localized content",
                             "Geographic optimization"});
-                table1192.AddRow(new string[] {
+                table1155.AddRow(new string[] {
                             "Remote locations",
                             "Satellite/limited",
                             "Connection analysis",
                             "Offline-first design",
                             "Maximum caching",
                             "Connectivity explanation"});
-                table1192.AddRow(new string[] {
+                table1155.AddRow(new string[] {
                             "Transit locations",
                             "Variable quality",
                             "Mobility detection",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Seamless handoff",
                             "Mobility awareness"});
 #line 104
-    testRunner.When("detecting geographic connectivity variations:", ((string)(null)), table1192, "When ");
+    testRunner.When("detecting geographic connectivity variations:", ((string)(null)), table1155, "When ");
 #line hidden
 #line 112
     testRunner.Then("geographic factors should be considered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 120
     testRunner.And("progressive enhancement maintains core functionality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1193 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1156 = new TechTalk.SpecFlow.Table(new string[] {
                             "Connection Quality",
                             "Available Features",
                             "Degraded Features",
                             "Disabled Features",
                             "User Notification",
                             "Alternative Options"});
-                table1193.AddRow(new string[] {
+                table1156.AddRow(new string[] {
                             "Excellent",
                             "All features",
                             "None",
                             "None",
                             "No notification",
                             "Full functionality"});
-                table1193.AddRow(new string[] {
+                table1156.AddRow(new string[] {
                             "Good",
                             "Most features",
                             "Heavy multimedia",
                             "Real-time collaboration",
                             "Quality indicator",
                             "Alternative workflows"});
-                table1193.AddRow(new string[] {
+                table1156.AddRow(new string[] {
                             "Fair",
                             "Core features",
                             "Interactive elements",
                             "Video streaming",
                             "Performance warning",
                             "Simplified interfaces"});
-                table1193.AddRow(new string[] {
+                table1156.AddRow(new string[] {
                             "Poor",
                             "Basic features",
                             "Dynamic content",
                             "File uploads",
                             "Connectivity alert",
                             "Offline alternatives"});
-                table1193.AddRow(new string[] {
+                table1156.AddRow(new string[] {
                             "Very poor",
                             "Essential only",
                             "Non-critical UI",
                             "Non-essential services",
                             "Severe warning",
                             "Minimal functionality"});
-                table1193.AddRow(new string[] {
+                table1156.AddRow(new string[] {
                             "Offline",
                             "Cached only",
                             "All network features",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Offline mode",
                             "Cached content only"});
 #line 121
-    testRunner.When("implementing progressive enhancement:", ((string)(null)), table1193, "When ");
+    testRunner.When("implementing progressive enhancement:", ((string)(null)), table1156, "When ");
 #line hidden
 #line 129
     testRunner.Then("enhancement should be systematic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 137
     testRunner.And("selective loading improves perceived performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1194 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1157 = new TechTalk.SpecFlow.Table(new string[] {
                             "Content Priority",
                             "Loading Strategy",
                             "Bandwidth Allocation",
                             "Caching Strategy",
                             "User Control",
                             "Performance Impact"});
-                table1194.AddRow(new string[] {
+                table1157.AddRow(new string[] {
                             "Critical content",
                             "Immediate loading",
                             "Priority bandwidth",
                             "Aggressive caching",
                             "No user control",
                             "Maximum performance"});
-                table1194.AddRow(new string[] {
+                table1157.AddRow(new string[] {
                             "Important content",
                             "Fast loading",
                             "High bandwidth",
                             "Standard caching",
                             "Limited control",
                             "High performance"});
-                table1194.AddRow(new string[] {
+                table1157.AddRow(new string[] {
                             "Standard content",
                             "Normal loading",
                             "Normal bandwidth",
                             "Normal caching",
                             "Some control",
                             "Normal performance"});
-                table1194.AddRow(new string[] {
+                table1157.AddRow(new string[] {
                             "Optional content",
                             "Lazy loading",
                             "Low bandwidth",
                             "Minimal caching",
                             "Full control",
                             "Minimal impact"});
-                table1194.AddRow(new string[] {
+                table1157.AddRow(new string[] {
                             "Enhancement content",
                             "On-demand loading",
                             "Spare bandwidth",
                             "Cache if available",
                             "User-initiated",
                             "No impact"});
-                table1194.AddRow(new string[] {
+                table1157.AddRow(new string[] {
                             "Background content",
                             "Background loading",
                             "Unused bandwidth",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Transparent",
                             "Background only"});
 #line 138
-    testRunner.When("implementing content prioritization:", ((string)(null)), table1194, "When ");
+    testRunner.When("implementing content prioritization:", ((string)(null)), table1157, "When ");
 #line hidden
 #line 146
     testRunner.Then("prioritization should be intelligent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 154
     testRunner.And("dynamic optimization improves user experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1195 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1158 = new TechTalk.SpecFlow.Table(new string[] {
                             "Content Type",
                             "Quality Levels",
                             "Adaptation Triggers",
                             "Quality Indicators",
                             "User Override",
                             "Bandwidth Savings"});
-                table1195.AddRow(new string[] {
+                table1158.AddRow(new string[] {
                             "Images",
                             "Multiple resolutions",
                             "Bandwidth detection",
                             "Resolution indicators",
                             "Quality selection",
                             "20-80% savings"});
-                table1195.AddRow(new string[] {
+                table1158.AddRow(new string[] {
                             "Videos",
                             "Adaptive bitrate",
                             "Buffer analysis",
                             "Quality badges",
                             "Manual override",
                             "30-90% savings"});
-                table1195.AddRow(new string[] {
+                table1158.AddRow(new string[] {
                             "Audio",
                             "Variable bitrate",
                             "Latency monitoring",
                             "Audio quality icons",
                             "Audio settings",
                             "15-70% savings"});
-                table1195.AddRow(new string[] {
+                table1158.AddRow(new string[] {
                             "Interactive content",
                             "Feature levels",
                             "Performance metrics",
                             "Feature indicators",
                             "Feature toggles",
                             "10-60% savings"});
-                table1195.AddRow(new string[] {
+                table1158.AddRow(new string[] {
                             "Documents",
                             "Compression levels",
                             "Download speed",
                             "Compression info",
                             "Download options",
                             "25-75% savings"});
-                table1195.AddRow(new string[] {
+                table1158.AddRow(new string[] {
                             "Real-time data",
                             "Update frequency",
                             "Connection stability",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Update controls",
                             "40-80% savings"});
 #line 155
-    testRunner.When("implementing adaptive quality:", ((string)(null)), table1195, "When ");
+    testRunner.When("implementing adaptive quality:", ((string)(null)), table1158, "When ");
 #line hidden
 #line 163
     testRunner.Then("quality should adapt automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 172
     testRunner.And("analytics drive connectivity improvements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1196 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1159 = new TechTalk.SpecFlow.Table(new string[] {
                             "Monitoring Aspect",
                             "Measurement Method",
                             "Analysis Frequency",
                             "Alerting Thresholds",
                             "Data Retention",
                             "Optimization Actions"});
-                table1196.AddRow(new string[] {
+                table1159.AddRow(new string[] {
                             "Bandwidth utilization",
                             "Traffic analysis",
                             "Real-time",
                             ">90% utilization",
                             "30 days",
                             "Load balancing"});
-                table1196.AddRow(new string[] {
+                table1159.AddRow(new string[] {
                             "Latency tracking",
                             "Round-trip measurement",
                             "Continuous",
                             ">1000ms latency",
                             "90 days",
                             "Route optimization"});
-                table1196.AddRow(new string[] {
+                table1159.AddRow(new string[] {
                             "Packet loss monitoring",
                             "Loss rate calculation",
                             "Per-session",
                             ">5% loss rate",
                             "60 days",
                             "Connection retry"});
-                table1196.AddRow(new string[] {
+                table1159.AddRow(new string[] {
                             "Connection stability",
                             "Drop frequency tracking",
                             "Ongoing",
                             ">10 drops/hour",
                             "30 days",
                             "Stability improvements"});
-                table1196.AddRow(new string[] {
+                table1159.AddRow(new string[] {
                             "Geographic performance",
                             "Regional metrics",
                             "Hourly",
                             "Regional thresholds",
                             "180 days",
                             "CDN optimization"});
-                table1196.AddRow(new string[] {
+                table1159.AddRow(new string[] {
                             "Quality of service",
                             "QoS measurements",
                             "Continuous",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "30 days",
                             "QoS adjustments"});
 #line 173
-    testRunner.When("implementing connection monitoring:", ((string)(null)), table1196, "When ");
+    testRunner.When("implementing connection monitoring:", ((string)(null)), table1159, "When ");
 #line hidden
 #line 181
     testRunner.Then("monitoring should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 189
     testRunner.And("behavior analysis improves adaptive strategies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1197 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1160 = new TechTalk.SpecFlow.Table(new string[] {
                             "Behavior Pattern",
                             "Connectivity Condition",
                             "User Adaptation",
                             "Success Metrics",
                             "Optimization Opportunities",
                             "Platform Improvements"});
-                table1197.AddRow(new string[] {
+                table1160.AddRow(new string[] {
                             "Feature usage",
                             "Low bandwidth",
                             "Prefer text features",
                             "Task completion rate",
                             "Prioritize text features",
                             "Enhanced text interfaces"});
-                table1197.AddRow(new string[] {
+                table1160.AddRow(new string[] {
                             "Session duration",
                             "Intermittent drops",
                             "Shorter sessions",
                             "Session success rate",
                             "Improve reconnection",
                             "Better session persistence"});
-                table1197.AddRow(new string[] {
+                table1160.AddRow(new string[] {
                             "Content consumption",
                             "High latency",
                             "Prefer cached content",
                             "Content engagement",
                             "Enhance caching",
                             "Predictive caching"});
-                table1197.AddRow(new string[] {
+                table1160.AddRow(new string[] {
                             "Interaction patterns",
                             "Mobile networks",
                             "Touch-optimized",
                             "Interaction success",
                             "Mobile-first design",
                             "Touch optimization"});
-                table1197.AddRow(new string[] {
+                table1160.AddRow(new string[] {
                             "Error recovery",
                             "Connection issues",
                             "Manual retry patterns",
                             "Recovery success rate",
                             "Auto-retry improvements",
                             "Intelligent retry logic"});
-                table1197.AddRow(new string[] {
+                table1160.AddRow(new string[] {
                             "Help-seeking",
                             "Poor connectivity",
                             "Offline help usage",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Offline documentation",
                             "Enhanced offline help"});
 #line 190
-    testRunner.When("analyzing connectivity-constrained behavior:", ((string)(null)), table1197, "When ");
+    testRunner.When("analyzing connectivity-constrained behavior:", ((string)(null)), table1160, "When ");
 #line hidden
 #line 198
     testRunner.Then("behavior should be systematically analyzed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 207
     testRunner.And("intelligent retry improves success rates while avoiding overload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1198 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1161 = new TechTalk.SpecFlow.Table(new string[] {
                             "Retry Scenario",
                             "Connection State",
                             "Retry Strategy",
                             "Backoff Algorithm",
                             "Success Criteria",
                             "Failure Threshold"});
-                table1198.AddRow(new string[] {
+                table1161.AddRow(new string[] {
                             "Slow responses",
                             "High latency",
                             "Extended timeouts",
                             "Linear backoff",
                             "Response received",
                             "5 consecutive timeouts"});
-                table1198.AddRow(new string[] {
+                table1161.AddRow(new string[] {
                             "Intermittent drops",
                             "Unstable connection",
                             "Exponential retry",
                             "Exponential backoff",
                             "Connection stable",
                             "10 retry attempts"});
-                table1198.AddRow(new string[] {
+                table1161.AddRow(new string[] {
                             "Bandwidth limited",
                             "Low bandwidth",
                             "Reduced payload",
                             "Capped exponential",
                             "Data transmitted",
                             "Bandwidth threshold"});
-                table1198.AddRow(new string[] {
+                table1161.AddRow(new string[] {
                             "Packet loss",
                             "Lossy connection",
                             "Error correction",
                             "Adaptive backoff",
                             "Data integrity verified",
                             "15% loss rate"});
-                table1198.AddRow(new string[] {
+                table1161.AddRow(new string[] {
                             "Service degradation",
                             "Partial service",
                             "Alternative endpoints",
                             "Circuit breaker",
                             "Service response",
                             "Service unavailable"});
-                table1198.AddRow(new string[] {
+                table1161.AddRow(new string[] {
                             "Geographic issues",
                             "Regional problems",
                             "Regional routing",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Regional success",
                             "Regional failure rate"});
 #line 208
-    testRunner.When("implementing intelligent retry mechanisms:", ((string)(null)), table1198, "When ");
+    testRunner.When("implementing intelligent retry mechanisms:", ((string)(null)), table1161, "When ");
 #line hidden
 #line 216
     testRunner.Then("retry logic should be context-aware", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 224
     testRunner.And("transparent communication improves user satisfaction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1199 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1162 = new TechTalk.SpecFlow.Table(new string[] {
                             "Status Type",
                             "Communication Method",
                             "Information Detail",
                             "User Actions",
                             "Update Frequency",
                             "Resolution Guidance"});
-                table1199.AddRow(new string[] {
+                table1162.AddRow(new string[] {
                             "Speed detection",
                             "Speed indicator",
                             "Current bandwidth",
                             "Quality adjustment",
                             "Real-time",
                             "Speed improvement tips"});
-                table1199.AddRow(new string[] {
+                table1162.AddRow(new string[] {
                             "Stability issues",
                             "Stability alert",
                             "Connection drops",
                             "Retry/refresh options",
                             "Per-incident",
                             "Stability troubleshooting"});
-                table1199.AddRow(new string[] {
+                table1162.AddRow(new string[] {
                             "Quality degradation",
                             "Quality warning",
                             "Reduced features",
                             "Feature alternatives",
                             "On-change",
                             "Quality optimization"});
-                table1199.AddRow(new string[] {
+                table1162.AddRow(new string[] {
                             "Optimization active",
                             "Performance notice",
                             "Active optimizations",
                             "User awareness",
                             "On-activation",
                             "Optimization explanation"});
-                table1199.AddRow(new string[] {
+                table1162.AddRow(new string[] {
                             "Limited functionality",
                             "Feature alert",
                             "Available features",
                             "Workaround options",
                             "Per-limitation",
                             "Alternative approaches"});
-                table1199.AddRow(new string[] {
+                table1162.AddRow(new string[] {
                             "Recovery progress",
                             "Progress indicator",
                             "Recovery status",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "During recovery",
                             "Recovery assistance"});
 #line 225
-    testRunner.When("communicating connectivity status:", ((string)(null)), table1199, "When ");
+    testRunner.When("communicating connectivity status:", ((string)(null)), table1162, "When ");
 #line hidden
 #line 233
     testRunner.Then("communication should be clear and helpful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 241
     testRunner.And("seamless transitions maintain user productivity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1200 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1163 = new TechTalk.SpecFlow.Table(new string[] {
                             "Transition Trigger",
                             "Current State",
                             "Target State",
                             "Data Synchronization",
                             "User Notification",
                             "Feature Availability"});
-                table1200.AddRow(new string[] {
+                table1163.AddRow(new string[] {
                             "Severe degradation",
                             "Poor connectivity",
                             "Offline mode",
                             "Queue pending changes",
                             "Offline transition alert",
                             "Cached features only"});
-                table1200.AddRow(new string[] {
+                table1163.AddRow(new string[] {
                             "Connection loss",
                             "Online mode",
                             "Full offline",
                             "Save current work",
                             "Connection lost notice",
                             "Offline functionality"});
-                table1200.AddRow(new string[] {
+                table1163.AddRow(new string[] {
                             "Connection restored",
                             "Offline mode",
                             "Online mode",
                             "Sync queued changes",
                             "Connection restored notice",
                             "Full functionality"});
-                table1200.AddRow(new string[] {
+                table1163.AddRow(new string[] {
                             "Quality improvement",
                             "Limited mode",
                             "Full online",
                             "Update cached content",
                             "Performance improvement",
                             "Enhanced features"});
-                table1200.AddRow(new string[] {
+                table1163.AddRow(new string[] {
                             "Bandwidth increase",
                             "Compressed mode",
                             "Standard mode",
                             "Load full content",
                             "Bandwidth improvement",
                             "Quality enhancement"});
-                table1200.AddRow(new string[] {
+                table1163.AddRow(new string[] {
                             "Stability return",
                             "Unstable mode",
                             "Stable mode",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Stability restored",
                             "Reliable operation"});
 #line 242
-    testRunner.When("transitioning between connectivity modes:", ((string)(null)), table1200, "When ");
+    testRunner.When("transitioning between connectivity modes:", ((string)(null)), table1163, "When ");
 #line hidden
 #line 250
     testRunner.Then("transitions should be automatic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 259
     testRunner.And("intelligent caching improves performance under constraints", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1201 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1164 = new TechTalk.SpecFlow.Table(new string[] {
                             "Caching Strategy",
                             "Connectivity Trigger",
                             "Cache Scope",
                             "Invalidation Rules",
                             "Storage Limits",
                             "Performance Gain"});
-                table1201.AddRow(new string[] {
+                table1164.AddRow(new string[] {
                             "Aggressive caching",
                             "Low bandwidth",
                             "Extended content",
                             "Delayed invalidation",
                             "Increased storage",
                             "50-80% bandwidth reduction"});
-                table1201.AddRow(new string[] {
+                table1164.AddRow(new string[] {
                             "Predictive caching",
                             "Intermittent connectivity",
                             "Anticipated content",
                             "Usage-based refresh",
                             "Predictive storage",
                             "30-60% faster access"});
-                table1201.AddRow(new string[] {
+                table1164.AddRow(new string[] {
                             "Selective caching",
                             "High latency",
                             "Critical content only",
                             "Priority-based",
                             "Core content only",
                             "40-70% response improvement"});
-                table1201.AddRow(new string[] {
+                table1164.AddRow(new string[] {
                             "Temporary caching",
                             "Connection instability",
                             "Session content",
                             "Connection-based",
                             "Session storage",
                             "20-40% stability improvement"});
-                table1201.AddRow(new string[] {
+                table1164.AddRow(new string[] {
                             "Offline caching",
                             "Poor connectivity",
                             "Essential content",
                             "Manual refresh",
                             "Maximum storage",
                             "Offline functionality"});
-                table1201.AddRow(new string[] {
+                table1164.AddRow(new string[] {
                             "Smart caching",
                             "Variable connectivity",
                             "Adaptive content",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Dynamic storage",
                             "25-50% overall improvement"});
 #line 260
-    testRunner.When("implementing connectivity-aware caching:", ((string)(null)), table1201, "When ");
+    testRunner.When("implementing connectivity-aware caching:", ((string)(null)), table1164, "When ");
 #line hidden
 #line 268
     testRunner.Then("caching should adapt to connectivity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 276
     testRunner.And("intelligent load balancing improves overall performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1202 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1165 = new TechTalk.SpecFlow.Table(new string[] {
                             "Optimization Type",
                             "Connectivity Condition",
                             "Distribution Strategy",
                             "Traffic Shaping",
                             "Quality of Service",
                             "Performance Monitoring"});
-                table1202.AddRow(new string[] {
+                table1165.AddRow(new string[] {
                             "Bandwidth sharing",
                             "Limited bandwidth",
                             "Fair sharing",
                             "Traffic throttling",
                             "Bandwidth QoS",
                             "Utilization monitoring"});
-                table1202.AddRow(new string[] {
+                table1165.AddRow(new string[] {
                             "Connection pooling",
                             "Multiple requests",
                             "Connection reuse",
                             "Request batching",
                             "Connection QoS",
                             "Connection monitoring"});
-                table1202.AddRow(new string[] {
+                table1165.AddRow(new string[] {
                             "Request prioritization",
                             "High latency",
                             "Priority queuing",
                             "Critical-first",
                             "Latency QoS",
                             "Response monitoring"});
-                table1202.AddRow(new string[] {
+                table1165.AddRow(new string[] {
                             "Geographic routing",
                             "Regional issues",
                             "Regional distribution",
                             "Geographic shaping",
                             "Regional QoS",
                             "Geographic monitoring"});
-                table1202.AddRow(new string[] {
+                table1165.AddRow(new string[] {
                             "Service distribution",
                             "Service overload",
                             "Service balancing",
                             "Service throttling",
                             "Service QoS",
                             "Service monitoring"});
-                table1202.AddRow(new string[] {
+                table1165.AddRow(new string[] {
                             "Content delivery",
                             "Content bottlenecks",
                             "CDN optimization",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Content QoS",
                             "Content monitoring"});
 #line 277
-    testRunner.When("optimizing traffic for partial connectivity:", ((string)(null)), table1202, "When ");
+    testRunner.When("optimizing traffic for partial connectivity:", ((string)(null)), table1165, "When ");
 #line hidden
 #line 285
     testRunner.Then("optimization should be connectivity-aware", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1851,49 +1851,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 293
     testRunner.Given("partial connectivity creates unique error conditions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1203 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1166 = new TechTalk.SpecFlow.Table(new string[] {
                             "Error Type",
                             "Detection Method",
                             "Resolution Process",
                             "Timeline",
                             "Impact Mitigation",
                             "Prevention Measures"});
-                table1203.AddRow(new string[] {
+                table1166.AddRow(new string[] {
                             "Timeout errors",
                             "Timeout monitoring",
                             "Timeout adjustment",
                             "<30 seconds",
                             "Extended timeouts",
                             "Adaptive timeouts"});
-                table1203.AddRow(new string[] {
+                table1166.AddRow(new string[] {
                             "Retry failures",
                             "Retry tracking",
                             "Retry optimization",
                             "<2 minutes",
                             "Alternative approaches",
                             "Intelligent retry"});
-                table1203.AddRow(new string[] {
+                table1166.AddRow(new string[] {
                             "Quality degradation",
                             "Quality monitoring",
                             "Quality restoration",
                             "<1 minute",
                             "Quality adaptation",
                             "Quality management"});
-                table1203.AddRow(new string[] {
+                table1166.AddRow(new string[] {
                             "Cache failures",
                             "Cache validation",
                             "Cache refresh",
                             "<5 minutes",
                             "Fallback content",
                             "Cache redundancy"});
-                table1203.AddRow(new string[] {
+                table1166.AddRow(new string[] {
                             "Sync conflicts",
                             "Sync monitoring",
                             "Conflict resolution",
                             "<10 minutes",
                             "Data preservation",
                             "Conflict prevention"});
-                table1203.AddRow(new string[] {
+                table1166.AddRow(new string[] {
                             "Performance issues",
                             "Performance monitoring",
                             "Performance optimization",
@@ -1901,7 +1901,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Graceful degradation",
                             "Performance tuning"});
 #line 294
-    testRunner.When("partial connectivity errors occur:", ((string)(null)), table1203, "When ");
+    testRunner.When("partial connectivity errors occur:", ((string)(null)), table1166, "When ");
 #line hidden
 #line 302
     testRunner.Then("errors should be handled gracefully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1955,49 +1955,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 309
     testRunner.Given("partial connectivity handling requires ongoing optimization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1204 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1167 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table1204.AddRow(new string[] {
+                table1167.AddRow(new string[] {
                             "Algorithm optimization",
                             "Complex adaptation logic",
                             "Continuous algorithm improvement",
                             "Algorithm research",
                             "Improved performance",
                             "Optimization sustainability"});
-                table1204.AddRow(new string[] {
+                table1167.AddRow(new string[] {
                             "User experience",
                             "Variable experience quality",
                             "Consistent UX standards",
                             "UX resources",
                             "User satisfaction",
                             "Experience sustainability"});
-                table1204.AddRow(new string[] {
+                table1167.AddRow(new string[] {
                             "Performance monitoring",
                             "Complex monitoring needs",
                             "Automated performance analysis",
                             "Monitoring resources",
                             "Performance insights",
                             "Monitoring sustainability"});
-                table1204.AddRow(new string[] {
+                table1167.AddRow(new string[] {
                             "Infrastructure scaling",
                             "Growing connectivity demands",
                             "Scalable infrastructure",
                             "Infrastructure investment",
                             "Scaling efficiency",
                             "Infrastructure sustainability"});
-                table1204.AddRow(new string[] {
+                table1167.AddRow(new string[] {
                             "Technology advancement",
                             "Evolving network technology",
                             "Technology adoption",
                             "Technology resources",
                             "Technology currency",
                             "Technology sustainability"});
-                table1204.AddRow(new string[] {
+                table1167.AddRow(new string[] {
                             "Cost optimization",
                             "Resource utilization costs",
                             "Efficiency optimization",
@@ -2005,7 +2005,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Cost effectiveness",
                             "Cost sustainability"});
 #line 310
-    testRunner.When("planning partial connectivity sustainability:", ((string)(null)), table1204, "When ");
+    testRunner.When("planning partial connectivity sustainability:", ((string)(null)), table1167, "When ");
 #line hidden
 #line 318
     testRunner.Then("sustainability should be systematically planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

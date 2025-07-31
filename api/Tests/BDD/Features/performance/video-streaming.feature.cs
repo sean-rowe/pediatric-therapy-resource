@@ -134,44 +134,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 15
     testRunner.Given("the platform supports high-volume video streaming", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1849 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1812 = new TechTalk.SpecFlow.Table(new string[] {
                             "Stream Count",
                             "Video Quality",
                             "Target Bitrate",
                             "Buffer Health",
                             "Success Rate"});
-                table1849.AddRow(new string[] {
+                table1812.AddRow(new string[] {
                             "1,000",
                             "1080p",
                             "5 Mbps",
                             ">95%",
                             ">99.5%"});
-                table1849.AddRow(new string[] {
+                table1812.AddRow(new string[] {
                             "2,500",
                             "1080p",
                             "5 Mbps",
                             ">90%",
                             ">99.0%"});
-                table1849.AddRow(new string[] {
+                table1812.AddRow(new string[] {
                             "5,000",
                             "1080p",
                             "4 Mbps",
                             ">85%",
                             ">98.5%"});
-                table1849.AddRow(new string[] {
+                table1812.AddRow(new string[] {
                             "7,500",
                             "720p",
                             "3 Mbps",
                             ">80%",
                             ">98.0%"});
-                table1849.AddRow(new string[] {
+                table1812.AddRow(new string[] {
                             "10,000",
                             "720p",
                             "2.5 Mbps",
                             ">75%",
                             ">97.5%"});
 #line 16
-    testRunner.When("concurrent video streaming load is tested:", ((string)(null)), table1849, "When ");
+    testRunner.When("concurrent video streaming load is tested:", ((string)(null)), table1812, "When ");
 #line hidden
 #line 23
     testRunner.Then("video streaming should maintain stable quality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -221,44 +221,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 30
     testRunner.Given("adaptive bitrate streaming is implemented", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1850 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1813 = new TechTalk.SpecFlow.Table(new string[] {
                             "Network Condition",
                             "Available Bandwidth",
                             "Target Quality",
                             "Adaptation Time",
                             "Buffer Impact"});
-                table1850.AddRow(new string[] {
+                table1813.AddRow(new string[] {
                             "Excellent (WiFi)",
                             "25 Mbps",
                             "1080p 60fps",
                             "N/A",
                             ">95% full"});
-                table1850.AddRow(new string[] {
+                table1813.AddRow(new string[] {
                             "Good (4G)",
                             "10 Mbps",
                             "1080p 30fps",
                             "<2 seconds",
                             ">90% full"});
-                table1850.AddRow(new string[] {
+                table1813.AddRow(new string[] {
                             "Fair (3G)",
                             "3 Mbps",
                             "720p 30fps",
                             "<3 seconds",
                             ">85% full"});
-                table1850.AddRow(new string[] {
+                table1813.AddRow(new string[] {
                             "Poor (2G)",
                             "1 Mbps",
                             "480p 15fps",
                             "<5 seconds",
                             ">70% full"});
-                table1850.AddRow(new string[] {
+                table1813.AddRow(new string[] {
                             "Unstable connection",
                             "Variable",
                             "Adaptive",
                             "<2 seconds",
                             ">60% full"});
 #line 31
-    testRunner.When("network conditions vary during streaming:", ((string)(null)), table1850, "When ");
+    testRunner.When("network conditions vary during streaming:", ((string)(null)), table1813, "When ");
 #line hidden
 #line 38
     testRunner.Then("video quality should adapt automatically to network conditions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -308,50 +308,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 45
     testRunner.Given("CDN is deployed globally for video delivery", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1851 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1814 = new TechTalk.SpecFlow.Table(new string[] {
                             "Geographic Region",
                             "Expected Latency",
                             "CDN Edge Distance",
                             "Target Quality",
                             "Local Cache Hit"});
-                table1851.AddRow(new string[] {
+                table1814.AddRow(new string[] {
                             "North America East",
                             "<50ms",
                             "<500 miles",
                             "1080p",
                             ">95%"});
-                table1851.AddRow(new string[] {
+                table1814.AddRow(new string[] {
                             "North America West",
                             "<75ms",
                             "<800 miles",
                             "1080p",
                             ">90%"});
-                table1851.AddRow(new string[] {
+                table1814.AddRow(new string[] {
                             "Europe",
                             "<100ms",
                             "<1000 miles",
                             "1080p",
                             ">85%"});
-                table1851.AddRow(new string[] {
+                table1814.AddRow(new string[] {
                             "Asia Pacific",
                             "<150ms",
                             "<2000 miles",
                             "720p",
                             ">80%"});
-                table1851.AddRow(new string[] {
+                table1814.AddRow(new string[] {
                             "South America",
                             "<200ms",
                             "<2500 miles",
                             "720p",
                             ">75%"});
-                table1851.AddRow(new string[] {
+                table1814.AddRow(new string[] {
                             "Remote locations",
                             "<300ms",
                             ">3000 miles",
                             "480p",
                             ">60%"});
 #line 46
-    testRunner.When("video streaming is tested from multiple geographic locations:", ((string)(null)), table1851, "When ");
+    testRunner.When("video streaming is tested from multiple geographic locations:", ((string)(null)), table1814, "When ");
 #line hidden
 #line 54
     testRunner.Then("CDN should deliver content from nearest edge locations", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -401,44 +401,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 61
     testRunner.Given("mobile video streaming is optimized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1852 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1815 = new TechTalk.SpecFlow.Table(new string[] {
                             "Device Category",
                             "Network Type",
                             "Video Format",
                             "Battery Impact",
                             "Data Usage"});
-                table1852.AddRow(new string[] {
+                table1815.AddRow(new string[] {
                             "High-end smartphone",
                             "5G",
                             "1080p H.265",
                             "<15%/hour",
                             "500MB/hour"});
-                table1852.AddRow(new string[] {
+                table1815.AddRow(new string[] {
                             "Mid-range smartphone",
                             "4G LTE",
                             "720p H.264",
                             "<20%/hour",
                             "300MB/hour"});
-                table1852.AddRow(new string[] {
+                table1815.AddRow(new string[] {
                             "Budget smartphone",
                             "3G",
                             "480p H.264",
                             "<25%/hour",
                             "150MB/hour"});
-                table1852.AddRow(new string[] {
+                table1815.AddRow(new string[] {
                             "Tablet (WiFi)",
                             "WiFi",
                             "1080p H.265",
                             "<10%/hour",
                             "600MB/hour"});
-                table1852.AddRow(new string[] {
+                table1815.AddRow(new string[] {
                             "Tablet (Cellular)",
                             "4G",
                             "720p H.264",
                             "<15%/hour",
                             "400MB/hour"});
 #line 62
-    testRunner.When("mobile devices stream therapy videos:", ((string)(null)), table1852, "When ");
+    testRunner.When("mobile devices stream therapy videos:", ((string)(null)), table1815, "When ");
 #line hidden
 #line 69
     testRunner.Then("mobile video should be optimized for device capabilities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -488,38 +488,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 77
     testRunner.Given("video transcoding pipeline is optimized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1853 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1816 = new TechTalk.SpecFlow.Table(new string[] {
                             "Video Input Format",
                             "File Size",
                             "Processing Time Target",
                             "Output Formats",
                             "Quality Retention"});
-                table1853.AddRow(new string[] {
+                table1816.AddRow(new string[] {
                             "4K H.264",
                             "2GB",
                             "<10 minutes",
                             "1080p, 720p, 480p",
                             ">95%"});
-                table1853.AddRow(new string[] {
+                table1816.AddRow(new string[] {
                             "1080p H.264",
                             "500MB",
                             "<3 minutes",
                             "720p, 480p, 360p",
                             ">98%"});
-                table1853.AddRow(new string[] {
+                table1816.AddRow(new string[] {
                             "720p MOV",
                             "200MB",
                             "<90 seconds",
                             "480p, 360p",
                             ">98%"});
-                table1853.AddRow(new string[] {
+                table1816.AddRow(new string[] {
                             "Raw upload formats",
                             "Variable",
                             "<2x video length",
                             "All standard",
                             ">95%"});
 #line 78
-    testRunner.When("videos are uploaded and processed:", ((string)(null)), table1853, "When ");
+    testRunner.When("videos are uploaded and processed:", ((string)(null)), table1816, "When ");
 #line hidden
 #line 84
     testRunner.Then("transcoding should complete within target timeframes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -569,38 +569,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 91
     testRunner.Given("live streaming capability is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1854 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1817 = new TechTalk.SpecFlow.Table(new string[] {
                             "Session Type",
                             "Participants",
                             "Stream Quality",
                             "Latency Target",
                             "Interaction Support"});
-                table1854.AddRow(new string[] {
+                table1817.AddRow(new string[] {
                             "Individual therapy",
                             "2",
                             "1080p",
                             "<200ms",
                             "Chat, annotations"});
-                table1854.AddRow(new string[] {
+                table1817.AddRow(new string[] {
                             "Group therapy",
                             "6",
                             "720p",
                             "<300ms",
                             "Multi-participant"});
-                table1854.AddRow(new string[] {
+                table1817.AddRow(new string[] {
                             "Training session",
                             "25",
                             "720p",
                             "<500ms",
                             "Q&A, polling"});
-                table1854.AddRow(new string[] {
+                table1817.AddRow(new string[] {
                             "Large conference",
                             "100",
                             "480p",
                             "<1000ms",
                             "View only"});
 #line 92
-    testRunner.When("real-time therapy sessions are streamed:", ((string)(null)), table1854, "When ");
+    testRunner.When("real-time therapy sessions are streamed:", ((string)(null)), table1817, "When ");
 #line hidden
 #line 98
     testRunner.Then("live streams should maintain low latency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -650,43 +650,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 105
     testRunner.Given("interactive video features are implemented", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1855 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1818 = new TechTalk.SpecFlow.Table(new string[] {
                             "Interactive Feature",
                             "Response Time Target",
                             "Concurrent Users",
                             "Accuracy Requirement"});
-                table1855.AddRow(new string[] {
+                table1818.AddRow(new string[] {
                             "Video annotations",
                             "<100ms",
                             "1,000",
                             "100% sync"});
-                table1855.AddRow(new string[] {
+                table1818.AddRow(new string[] {
                             "Progress tracking",
                             "Real-time",
                             "5,000",
                             "<1 second delay"});
-                table1855.AddRow(new string[] {
+                table1818.AddRow(new string[] {
                             "Quiz overlays",
                             "<200ms",
                             "2,000",
                             "100% accuracy"});
-                table1855.AddRow(new string[] {
+                table1818.AddRow(new string[] {
                             "Chapter navigation",
                             "<50ms",
                             "10,000",
                             "Instant response"});
-                table1855.AddRow(new string[] {
+                table1818.AddRow(new string[] {
                             "Subtitle display",
                             "Frame-accurate",
                             "All streams",
                             "Perfect sync"});
-                table1855.AddRow(new string[] {
+                table1818.AddRow(new string[] {
                             "Playback controls",
                             "<25ms",
                             "All streams",
                             "Instant response"});
 #line 106
-    testRunner.When("interactive video elements are used during streaming:", ((string)(null)), table1855, "When ");
+    testRunner.When("interactive video elements are used during streaming:", ((string)(null)), table1818, "When ");
 #line hidden
 #line 114
     testRunner.Then("interactive features should respond instantly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -736,38 +736,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 122
     testRunner.Given("video content requires secure delivery", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1856 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1819 = new TechTalk.SpecFlow.Table(new string[] {
                             "Security Level",
                             "Encryption Method",
                             "Key Rotation",
                             "Performance Impact",
                             "Access Control"});
-                table1856.AddRow(new string[] {
+                table1819.AddRow(new string[] {
                             "Basic protection",
                             "HTTPS only",
                             "N/A",
                             "<5% overhead",
                             "Login required"});
-                table1856.AddRow(new string[] {
+                table1819.AddRow(new string[] {
                             "Standard security",
                             "AES-128",
                             "Weekly",
                             "<10% overhead",
                             "Role-based"});
-                table1856.AddRow(new string[] {
+                table1819.AddRow(new string[] {
                             "High security",
                             "AES-256",
                             "Daily",
                             "<15% overhead",
                             "MFA required"});
-                table1856.AddRow(new string[] {
+                table1819.AddRow(new string[] {
                             "Maximum security",
                             "DRM protection",
                             "Per session",
                             "<25% overhead",
                             "Device-specific"});
 #line 123
-    testRunner.When("secure video streaming is tested:", ((string)(null)), table1856, "When ");
+    testRunner.When("secure video streaming is tested:", ((string)(null)), table1819, "When ");
 #line hidden
 #line 129
     testRunner.Then("video encryption should not significantly impact performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -817,44 +817,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 136
     testRunner.Given("CDN is configured for optimal video delivery", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1857 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1820 = new TechTalk.SpecFlow.Table(new string[] {
                             "Content Type",
                             "Cache Duration",
                             "Compression",
                             "Edge Deployment",
                             "Performance Gain"});
-                table1857.AddRow(new string[] {
+                table1820.AddRow(new string[] {
                             "Therapy videos",
                             "7 days",
                             "80%",
                             "Global",
                             "75% faster"});
-                table1857.AddRow(new string[] {
+                table1820.AddRow(new string[] {
                             "Training materials",
                             "30 days",
                             "85%",
                             "Regional",
                             "60% faster"});
-                table1857.AddRow(new string[] {
+                table1820.AddRow(new string[] {
                             "Live stream chunks",
                             "1 hour",
                             "70%",
                             "Local",
                             "40% faster"});
-                table1857.AddRow(new string[] {
+                table1820.AddRow(new string[] {
                             "Video thumbnails",
                             "24 hours",
                             "90%",
                             "Global",
                             "85% faster"});
-                table1857.AddRow(new string[] {
+                table1820.AddRow(new string[] {
                             "Subtitle files",
                             "7 days",
                             "95%",
                             "Global",
                             "90% faster"});
 #line 137
-    testRunner.When("CDN performance is measured across content types:", ((string)(null)), table1857, "When ");
+    testRunner.When("CDN performance is measured across content types:", ((string)(null)), table1820, "When ");
 #line hidden
 #line 144
     testRunner.Then("CDN should significantly improve delivery performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -904,38 +904,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 152
     testRunner.Given("comprehensive video analytics are implemented", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1858 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1821 = new TechTalk.SpecFlow.Table(new string[] {
                             "Metric Category",
                             "Measurements",
                             "Collection Frequency",
                             "Alert Thresholds"});
-                table1858.AddRow(new string[] {
+                table1821.AddRow(new string[] {
                             "Quality metrics",
                             "Bitrate, resolution, FPS",
                             "Real-time",
                             "<720p for >10s"});
-                table1858.AddRow(new string[] {
+                table1821.AddRow(new string[] {
                             "Performance metrics",
                             "Buffering, startup time",
                             "Real-time",
                             ">5% buffer ratio"});
-                table1858.AddRow(new string[] {
+                table1821.AddRow(new string[] {
                             "Engagement metrics",
                             "View duration, completion rate",
                             "Per session",
                             "<50% completion"});
-                table1858.AddRow(new string[] {
+                table1821.AddRow(new string[] {
                             "Error metrics",
                             "Failed streams, disconnections",
                             "Real-time",
                             ">1% failure rate"});
-                table1858.AddRow(new string[] {
+                table1821.AddRow(new string[] {
                             "Infrastructure",
                             "CDN performance, server load",
                             "Continuous",
                             ">80% utilization"});
 #line 153
-    testRunner.When("video streaming metrics are collected:", ((string)(null)), table1858, "When ");
+    testRunner.When("video streaming metrics are collected:", ((string)(null)), table1821, "When ");
 #line hidden
 #line 160
     testRunner.Then("analytics should provide real-time insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -987,38 +987,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 168
     testRunner.Given("network conditions may be unstable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1859 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1822 = new TechTalk.SpecFlow.Table(new string[] {
                             "Network Issue Type",
                             "Frequency",
                             "Duration",
                             "Expected Behavior"});
-                table1859.AddRow(new string[] {
+                table1822.AddRow(new string[] {
                             "Intermittent drops",
                             "Every 30s",
                             "2-5 seconds",
                             "Seamless reconnection"});
-                table1859.AddRow(new string[] {
+                table1822.AddRow(new string[] {
                             "Bandwidth reduction",
                             "Gradual",
                             "10+ seconds",
                             "Quality adaptation"});
-                table1859.AddRow(new string[] {
+                table1822.AddRow(new string[] {
                             "Complete loss",
                             "Rare",
                             "5-10 seconds",
                             "Pause and buffer"});
-                table1859.AddRow(new string[] {
+                table1822.AddRow(new string[] {
                             "High latency spikes",
                             "Periodic",
                             "1-3 seconds",
                             "Buffer compensation"});
-                table1859.AddRow(new string[] {
+                table1822.AddRow(new string[] {
                             "Packet loss",
                             "5-10%",
                             "Continuous",
                             "Error correction"});
 #line 169
-    testRunner.When("network issues occur during video streaming:", ((string)(null)), table1859, "When ");
+    testRunner.When("network issues occur during video streaming:", ((string)(null)), table1822, "When ");
 #line hidden
 #line 176
     testRunner.Then("video streaming should handle network instability gracefully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1070,38 +1070,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 183
     testRunner.Given("video servers may experience high load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1860 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1823 = new TechTalk.SpecFlow.Table(new string[] {
                             "Overload Scenario",
                             "Server Load",
                             "Response Strategy",
                             "User Impact"});
-                table1860.AddRow(new string[] {
+                table1823.AddRow(new string[] {
                             "Peak usage hours",
                             "90-95%",
                             "Auto-scaling activation",
                             "Minimal degradation"});
-                table1860.AddRow(new string[] {
+                table1823.AddRow(new string[] {
                             "Viral content spike",
                             "95-100%",
                             "Load balancer distribution",
                             "Slight quality reduction"});
-                table1860.AddRow(new string[] {
+                table1823.AddRow(new string[] {
                             "Server failure",
                             "N/A",
                             "Failover to backup",
                             "Brief interruption"});
-                table1860.AddRow(new string[] {
+                table1823.AddRow(new string[] {
                             "Database overload",
                             "85%",
                             "Read replica utilization",
                             "Slower metadata loading"});
-                table1860.AddRow(new string[] {
+                table1823.AddRow(new string[] {
                             "Storage saturation",
                             "95%",
                             "Archive older content",
                             "Delayed new uploads"});
 #line 184
-    testRunner.When("server capacity is exceeded:", ((string)(null)), table1860, "When ");
+    testRunner.When("server capacity is exceeded:", ((string)(null)), table1823, "When ");
 #line hidden
 #line 191
     testRunner.Then("system should scale automatically to handle increased load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1153,38 +1153,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 198
     testRunner.Given("diverse client devices may have varying codec support", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1861 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1824 = new TechTalk.SpecFlow.Table(new string[] {
                             "Compatibility Issue",
                             "Client Type",
                             "Fallback Strategy",
                             "Performance Impact"});
-                table1861.AddRow(new string[] {
+                table1824.AddRow(new string[] {
                             "H.265 unsupported",
                             "Older browsers",
                             "H.264 fallback",
                             "20% larger files"});
-                table1861.AddRow(new string[] {
+                table1824.AddRow(new string[] {
                             "VP9 unavailable",
                             "iOS devices",
                             "H.264 alternative",
                             "Standard performance"});
-                table1861.AddRow(new string[] {
+                table1824.AddRow(new string[] {
                             "4K unsupported",
                             "Low-end devices",
                             "1080p downscale",
                             "Improved performance"});
-                table1861.AddRow(new string[] {
+                table1824.AddRow(new string[] {
                             "HDR incompatible",
                             "Standard displays",
                             "SDR version",
                             "No impact"});
-                table1861.AddRow(new string[] {
+                table1824.AddRow(new string[] {
                             "Audio codec issues",
                             "Some browsers",
                             "AAC fallback",
                             "Audio quality reduction"});
 #line 199
-    testRunner.When("video compatibility issues arise:", ((string)(null)), table1861, "When ");
+    testRunner.When("video compatibility issues arise:", ((string)(null)), table1824, "When ");
 #line hidden
 #line 206
     testRunner.Then("appropriate fallback formats should be served automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1236,38 +1236,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 213
     testRunner.Given("video content is stored across distributed systems", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1862 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1825 = new TechTalk.SpecFlow.Table(new string[] {
                             "Storage Failure Type",
                             "Impact Scope",
                             "Recovery Strategy",
                             "Data Availability"});
-                table1862.AddRow(new string[] {
+                table1825.AddRow(new string[] {
                             "Primary storage down",
                             "Regional",
                             "Failover to secondary",
                             "99.9% availability"});
-                table1862.AddRow(new string[] {
+                table1825.AddRow(new string[] {
                             "CDN node failure",
                             "Local",
                             "Route to alternate nodes",
                             "Increased latency"});
-                table1862.AddRow(new string[] {
+                table1825.AddRow(new string[] {
                             "Backup system issues",
                             "Archival",
                             "Multiple backup copies",
                             "No immediate impact"});
-                table1862.AddRow(new string[] {
+                table1825.AddRow(new string[] {
                             "Database corruption",
                             "Metadata",
                             "Replica synchronization",
                             "Temporary metadata loss"});
-                table1862.AddRow(new string[] {
+                table1825.AddRow(new string[] {
                             "Network partition",
                             "Multi-region",
                             "Regional independence",
                             "Regional availability"});
 #line 214
-    testRunner.When("storage system failures occur:", ((string)(null)), table1862, "When ");
+    testRunner.When("storage system failures occur:", ((string)(null)), table1825, "When ");
 #line hidden
 #line 221
     testRunner.Then("video content should remain accessible during storage issues", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,38 +1319,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 228
     testRunner.Given("video processing may fail due to various issues", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1863 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1826 = new TechTalk.SpecFlow.Table(new string[] {
                             "Processing Error",
                             "Error Cause",
                             "Recovery Action",
                             "User Communication"});
-                table1863.AddRow(new string[] {
+                table1826.AddRow(new string[] {
                             "Corrupt source file",
                             "Upload issues",
                             "Request re-upload",
                             "Clear error message"});
-                table1863.AddRow(new string[] {
+                table1826.AddRow(new string[] {
                             "Transcoding timeout",
                             "Large files",
                             "Retry with extended time",
                             "Processing status"});
-                table1863.AddRow(new string[] {
+                table1826.AddRow(new string[] {
                             "Format unsupported",
                             "Rare codecs",
                             "Manual review process",
                             "Format requirements"});
-                table1863.AddRow(new string[] {
+                table1826.AddRow(new string[] {
                             "Storage write error",
                             "Disk full",
                             "Cleanup and retry",
                             "Temporary delay notice"});
-                table1863.AddRow(new string[] {
+                table1826.AddRow(new string[] {
                             "Processing queue full",
                             "High volume",
                             "Queue management",
                             "Processing time estimate"});
 #line 229
-    testRunner.When("video processing encounters errors:", ((string)(null)), table1863, "When ");
+    testRunner.When("video processing encounters errors:", ((string)(null)), table1826, "When ");
 #line hidden
 #line 236
     testRunner.Then("processing failures should be handled gracefully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

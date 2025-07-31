@@ -128,6 +128,30 @@
         <member name="M:UPTRMS.Api.Migrations.AddAuthenticationTokenTables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:UPTRMS.Api.Migrations.AddUserProfileImageUrl">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.AddUserProfileImageUrl.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.AddUserProfileImageUrl.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.AddUserProfileImageUrl.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:UPTRMS.Api.Migrations.AddUserSoftDeleteFields">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.AddUserSoftDeleteFields.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.AddUserSoftDeleteFields.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:UPTRMS.Api.Migrations.AddUserSoftDeleteFields.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
         <member name="T:UPTRMS.Api.Models.Domain.ParentAccess">
             <summary>
             Parent access to student information

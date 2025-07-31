@@ -1,11 +1,10 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
-using UPTRMS.Api.Data;
 using UPTRMS.Api.Models.Domain;
 using UPTRMS.Api.Models.DTOs;
+using UPTRMS.Api.Repositories;
 
 namespace UPTRMS.Api.Controllers;
 
@@ -14,12 +13,14 @@ namespace UPTRMS.Api.Controllers;
 [Authorize(Policy = "TherapistOnly")]
 public class SessionsController : ControllerBase
 {
-    private readonly ApplicationDbContext _context;
+    private readonly ISessionRepository _sessionRepository;
+    private readonly IStudentRepository _studentRepository;
     private readonly ILogger<SessionsController> _logger;
 
-    public SessionsController(ApplicationDbContext context, ILogger<SessionsController> logger)
+    public SessionsController(ISessionRepository sessionRepository, IStudentRepository studentRepository, ILogger<SessionsController> logger)
     {
-        _context = context;
+        _sessionRepository = sessionRepository;
+        _studentRepository = studentRepository;
         _logger = logger;
     }
 
@@ -31,37 +32,41 @@ public class SessionsController : ControllerBase
     {
         try
         {
-            var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
-            
-            var query = _context.Sessions
-                .Include(s => s.Student)
-                .Where(s => s.TherapistId == userId);
+            Guid userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
 
-            if (startDate.HasValue)
-                query = query.Where(s => s.SessionDate >= startDate.Value);
-            
-            if (endDate.HasValue)
-                query = query.Where(s => s.SessionDate <= endDate.Value);
-                
-            if (studentId.HasValue)
-                query = query.Where(s => s.StudentId == studentId.Value);
+            IEnumerable<Session> sessions = await _sessionRepository.GetSessionsAsync(
+                therapistId: userId,
+                studentId: studentId,
+                startDate: startDate,
+                endDate: endDate);
 
-            var sessions = await query
-                .OrderByDescending(s => s.SessionDate)
-                .Select(s => new SessionDto
+            List<SessionDto> sessionDtos = new List<SessionDto>();
+            foreach (Session session in sessions)
+            {
+                Student? student = null;
+                if (session.Student == null)
                 {
-                    SessionId = s.SessionId,
-                    StudentId = s.StudentId,
-                    StudentName = s.Student.FirstNameEncrypted + " " + s.Student.LastNameEncrypted,
-                    SessionDate = s.SessionDate,
-                    DurationMinutes = s.DurationMinutes,
-                    SessionType = s.SessionType,
-                    Status = s.Status,
-                    CreatedAt = s.CreatedAt
-                })
-                .ToListAsync();
+                    student = await _studentRepository.GetByIdAsync(session.StudentId);
+                }
+                else
+                {
+                    student = session.Student;
+                }
 
-            return Ok(sessions);
+                sessionDtos.Add(new SessionDto
+                {
+                    SessionId = session.SessionId,
+                    StudentId = session.StudentId,
+                    StudentName = student != null ? $"{student.FirstNameEncrypted} {student.LastNameEncrypted}" : "Unknown",
+                    SessionDate = session.SessionDate,
+                    DurationMinutes = session.DurationMinutes,
+                    SessionType = session.SessionType,
+                    Status = session.Status,
+                    CreatedAt = session.CreatedAt
+                });
+            }
+
+            return Ok(sessionDtos.OrderByDescending(s => s.SessionDate).ToList());
         }
         catch (Exception ex)
         {
@@ -75,44 +80,32 @@ public class SessionsController : ControllerBase
     {
         try
         {
-            var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
-            
-            var session = await _context.Sessions
-                .Include(s => s.Student)
-                .Include(s => s.Resources)
-                .Include(s => s.Goals)
-                .FirstOrDefaultAsync(s => s.SessionId == id && s.TherapistId == userId);
+            Guid userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
+
+            Session? session = await _sessionRepository.GetSessionWithDetailsAsync(id, userId);
 
             if (session == null)
             {
                 return NotFound();
             }
 
-            var dto = new SessionDetailDto
+            Student? student = session.Student ?? await _studentRepository.GetByIdAsync(session.StudentId);
+            
+            SessionDetailDto dto = new SessionDetailDto
             {
                 SessionId = session.SessionId,
                 StudentId = session.StudentId,
-                StudentName = session.Student.FirstNameEncrypted + " " + session.Student.LastNameEncrypted,
+                StudentName = student != null ? $"{student.FirstNameEncrypted} {student.LastNameEncrypted}" : "Unknown",
                 SessionDate = session.SessionDate,
                 DurationMinutes = session.DurationMinutes,
                 SessionType = session.SessionType,
                 Status = session.Status,
-                NotesEncrypted = session.NotesEncrypted,
+                NotesEncrypted = session.NotesEncrypted ?? string.Empty,
                 CreatedAt = session.CreatedAt,
-                Resources = session.Resources.Select(r => new SessionResourceDto
-                {
-                    ResourceId = r.ResourceId,
-                    Title = r.Title,
-                    ResourceType = r.ResourceType
-                }).ToList(),
-                Goals = session.Goals.Select(g => new SessionGoalDto
-                {
-                    GoalId = g.GoalId,
-                    GoalText = g.GoalText,
-                    Progress = g.Progress
-                }).ToList(),
-                DataPoints = session.DataPointsJson != null ? 
-                    System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, object>>(session.DataPointsJson) ?? new() : 
+                Resources = new List<SessionResourceDto>(), // TODO: Load from SessionResources join table
+                Goals = new List<SessionGoalDto>(), // TODO: Load session goals
+                DataPoints = session.DataPointsJson != null ?
+                    System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, object>>(session.DataPointsJson) ?? new() :
                     new()
             };
 
@@ -130,18 +123,17 @@ public class SessionsController : ControllerBase
     {
         try
         {
-            var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
-            
+            Guid userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
+
             // Verify student belongs to therapist
-            var student = await _context.Students
-                .FirstOrDefaultAsync(s => s.StudentId == request.StudentId && s.TherapistId == userId);
-                
-            if (student == null)
+            Student? student = await _studentRepository.GetByIdAsync(request.StudentId);
+            
+            if (student == null || student.TherapistId != userId)
             {
                 return BadRequest(new { message = "Student not found or not assigned to therapist" });
             }
 
-            var session = new Session
+            Session session = new Session
             {
                 TherapistId = userId,
                 StudentId = request.StudentId,
@@ -149,7 +141,9 @@ public class SessionsController : ControllerBase
                 DurationMinutes = request.DurationMinutes,
                 SessionType = request.SessionType,
                 Status = SessionStatus.Scheduled,
-                NotesEncrypted = request.Notes ?? string.Empty
+                NotesEncrypted = request.Notes ?? string.Empty,
+                Location = request.Location ?? "Clinic",
+                IsBillable = request.IsBillable ?? true
             };
 
             if (request.DataPoints != null && request.DataPoints.Any())
@@ -157,14 +151,13 @@ public class SessionsController : ControllerBase
                 session.DataPointsJson = System.Text.Json.JsonSerializer.Serialize(request.DataPoints);
             }
 
-            _context.Sessions.Add(session);
-            await _context.SaveChangesAsync();
+            session = await _sessionRepository.AddAsync(session);
 
             return CreatedAtAction(nameof(GetSession), new { id = session.SessionId }, new SessionDto
             {
                 SessionId = session.SessionId,
                 StudentId = session.StudentId,
-                StudentName = student.FirstNameEncrypted + " " + student.LastNameEncrypted,
+                StudentName = $"{student.FirstNameEncrypted} {student.LastNameEncrypted}",
                 SessionDate = session.SessionDate,
                 DurationMinutes = session.DurationMinutes,
                 SessionType = session.SessionType,
@@ -184,13 +177,11 @@ public class SessionsController : ControllerBase
     {
         try
         {
-            var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
-            
-            var session = await _context.Sessions
-                .Include(s => s.Student)
-                .FirstOrDefaultAsync(s => s.SessionId == id && s.TherapistId == userId);
+            Guid userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
 
-            if (session == null)
+            Session? session = await _sessionRepository.GetByIdAsync(id);
+
+            if (session == null || session.TherapistId != userId)
             {
                 return NotFound();
             }
@@ -209,13 +200,15 @@ public class SessionsController : ControllerBase
                 session.DataPointsJson = System.Text.Json.JsonSerializer.Serialize(request.DataPoints);
 
             session.UpdatedAt = DateTime.UtcNow;
-            await _context.SaveChangesAsync();
+            await _sessionRepository.UpdateAsync(session);
+
+            Student? student = await _studentRepository.GetByIdAsync(session.StudentId);
 
             return Ok(new SessionDto
             {
                 SessionId = session.SessionId,
                 StudentId = session.StudentId,
-                StudentName = session.Student.FirstNameEncrypted + " " + session.Student.LastNameEncrypted,
+                StudentName = student != null ? $"{student.FirstNameEncrypted} {student.LastNameEncrypted}" : "Unknown",
                 SessionDate = session.SessionDate,
                 DurationMinutes = session.DurationMinutes,
                 SessionType = session.SessionType,
@@ -235,17 +228,17 @@ public class SessionsController : ControllerBase
     {
         try
         {
-            var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
-            
-            var session = await _context.Sessions
-                .FirstOrDefaultAsync(s => s.SessionId == id && s.TherapistId == userId);
+            Guid userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
 
-            if (session == null)
+            Session? session = await _sessionRepository.GetByIdAsync(id);
+
+            if (session == null || session.TherapistId != userId)
             {
                 return NotFound();
             }
 
             session.Status = SessionStatus.Completed;
+            session.IsCompleted = true;
             session.NotesEncrypted = request.Notes;
             session.UpdatedAt = DateTime.UtcNow;
 
@@ -254,7 +247,7 @@ public class SessionsController : ControllerBase
                 session.DataPointsJson = System.Text.Json.JsonSerializer.Serialize(request.DataPoints);
             }
 
-            await _context.SaveChangesAsync();
+            await _sessionRepository.UpdateAsync(session);
 
             return Ok(new { message = "Session completed successfully" });
         }
@@ -270,12 +263,11 @@ public class SessionsController : ControllerBase
     {
         try
         {
-            var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
-            
-            var session = await _context.Sessions
-                .FirstOrDefaultAsync(s => s.SessionId == id && s.TherapistId == userId);
+            Guid userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
 
-            if (session == null)
+            Session? session = await _sessionRepository.GetByIdAsync(id);
+
+            if (session == null || session.TherapistId != userId)
             {
                 return NotFound();
             }
@@ -284,7 +276,7 @@ public class SessionsController : ControllerBase
             session.NotesEncrypted = request.Reason ?? "Session cancelled";
             session.UpdatedAt = DateTime.UtcNow;
 
-            await _context.SaveChangesAsync();
+            await _sessionRepository.UpdateAsync(session);
 
             return Ok(new { message = "Session cancelled successfully" });
         }
@@ -300,18 +292,28 @@ public class SessionsController : ControllerBase
     {
         try
         {
-            var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
-            
-            var session = await _context.Sessions
-                .FirstOrDefaultAsync(s => s.SessionId == id && s.TherapistId == userId);
+            Guid userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
 
-            if (session == null)
+            Session? session = await _sessionRepository.GetByIdAsync(id);
+
+            if (session == null || session.TherapistId != userId)
             {
                 return NotFound();
             }
 
-            // TODO: Implement session-resource relationship
-            // For now, just return success
+            // Add resource to ResourcesUsed list
+            if (session.ResourcesUsed == null)
+            {
+                session.ResourcesUsed = new List<Guid>();
+            }
+            
+            if (!session.ResourcesUsed.Contains(request.ResourceId))
+            {
+                session.ResourcesUsed.Add(request.ResourceId);
+                await _sessionRepository.UpdateAsync(session);
+            }
+
+            _logger.LogInformation("Resource {ResourceId} added to session {SessionId}", request.ResourceId, id);
             return Ok(new { message = "Resource added to session successfully" });
         }
         catch (Exception ex)
@@ -361,20 +363,24 @@ public class CreateSessionRequest
 {
     [Required]
     public Guid StudentId { get; set; }
-    
+
     [Required]
     public DateTime SessionDate { get; set; }
-    
+
     [Required]
     [Range(1, 480)]
     public int DurationMinutes { get; set; }
-    
+
     [Required]
     public SessionType SessionType { get; set; }
-    
+
     public string? Notes { get; set; }
-    
+
     public Dictionary<string, object>? DataPoints { get; set; }
+    
+    public string? Location { get; set; }
+    
+    public bool? IsBillable { get; set; }
 }
 
 public class UpdateSessionRequest

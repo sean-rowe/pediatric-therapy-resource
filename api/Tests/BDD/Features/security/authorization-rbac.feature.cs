@@ -127,36 +127,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2367 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2330 = new TechTalk.SpecFlow.Table(new string[] {
                             "Role",
                             "Permissions",
                             "Resource Access"});
-                table2367.AddRow(new string[] {
+                table2330.AddRow(new string[] {
                             "Basic Therapist",
                             "read-resources, create-sessions, manage-own-students",
                             "Own caseload only"});
-                table2367.AddRow(new string[] {
+                table2330.AddRow(new string[] {
                             "Senior Therapist",
                             "basic + create-resources, mentor-students",
                             "Own + supervised caseloads"});
-                table2367.AddRow(new string[] {
+                table2330.AddRow(new string[] {
                             "Lead Therapist",
                             "senior + approve-resources, manage-team",
                             "Department caseloads"});
-                table2367.AddRow(new string[] {
+                table2330.AddRow(new string[] {
                             "Clinical Supervisor",
                             "lead + access-all-data, generate-reports",
                             "All department data"});
-                table2367.AddRow(new string[] {
+                table2330.AddRow(new string[] {
                             "District Administrator",
                             "supervisor + manage-licenses, configure-settings",
                             "District-wide access"});
-                table2367.AddRow(new string[] {
+                table2330.AddRow(new string[] {
                             "System Administrator",
                             "all-permissions",
                             "Full system access"});
 #line 14
-    testRunner.Given("the following roles are defined in the system:", ((string)(null)), table2367, "Given ");
+    testRunner.Given("the following roles are defined in the system:", ((string)(null)), table2330, "Given ");
 #line hidden
 #line 22
     testRunner.When("I verify role permissions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -212,20 +212,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 31
     testRunner.When("I assign role \"Senior Therapist\" to the user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2368 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2331 = new TechTalk.SpecFlow.Table(new string[] {
                             "Approver Role",
                             "Required",
                             "Reason"});
-                table2368.AddRow(new string[] {
+                table2331.AddRow(new string[] {
                             "Clinical Supervisor",
                             "Yes",
                             "Validates clinical competence"});
-                table2368.AddRow(new string[] {
+                table2331.AddRow(new string[] {
                             "District Administrator",
                             "Yes",
                             "Confirms organizational need"});
 #line 32
-    testRunner.Then("assignment should require approval from:", ((string)(null)), table2368, "Then ");
+    testRunner.Then("assignment should require approval from:", ((string)(null)), table2331, "Then ");
 #line hidden
 #line 36
     testRunner.And("user should receive notification of pending assignment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -275,24 +275,24 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2369 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2332 = new TechTalk.SpecFlow.Table(new string[] {
                             "Student ID",
                             "Assigned",
                             "Access Level"});
-                table2369.AddRow(new string[] {
+                table2332.AddRow(new string[] {
                             "STU-001",
                             "Yes",
                             "Full"});
-                table2369.AddRow(new string[] {
+                table2332.AddRow(new string[] {
                             "STU-002",
                             "Yes",
                             "Full"});
-                table2369.AddRow(new string[] {
+                table2332.AddRow(new string[] {
                             "STU-003",
                             "No",
                             "None"});
 #line 44
-    testRunner.Given("I am a \"Basic Therapist\" with student caseload:", ((string)(null)), table2369, "Given ");
+    testRunner.Given("I am a \"Basic Therapist\" with student caseload:", ((string)(null)), table2332, "Given ");
 #line hidden
 #line 49
     testRunner.When("I attempt to access student \"STU-001\" data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -351,38 +351,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 59
     testRunner.Given("I am a \"Basic Therapist\" with \"Individual Pro\" subscription", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2370 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2333 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resource Type",
                             "Basic Therapist",
                             "Senior Therapist",
                             "Lead Therapist"});
-                table2370.AddRow(new string[] {
+                table2333.AddRow(new string[] {
                             "Free Resources",
                             "Read",
                             "Read",
                             "Read"});
-                table2370.AddRow(new string[] {
+                table2333.AddRow(new string[] {
                             "Premium Worksheets",
                             "Read",
                             "Read, Download",
                             "Read, Download, Share"});
-                table2370.AddRow(new string[] {
+                table2333.AddRow(new string[] {
                             "Assessment Tools",
                             "None",
                             "Read",
                             "Read, Administer"});
-                table2370.AddRow(new string[] {
+                table2333.AddRow(new string[] {
                             "AI Generation",
                             "10/month",
                             "50/month",
                             "Unlimited"});
-                table2370.AddRow(new string[] {
+                table2333.AddRow(new string[] {
                             "Marketplace Selling",
                             "None",
                             "Yes",
                             "Yes"});
 #line 60
-    testRunner.And("resource permissions are defined:", ((string)(null)), table2370, "And ");
+    testRunner.And("resource permissions are defined:", ((string)(null)), table2333, "And ");
 #line hidden
 #line 67
     testRunner.When("I attempt to download premium worksheet \"WS-001\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -435,24 +435,24 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 75
     testRunner.Given("I am a \"Clinical Supervisor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2371 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2334 = new TechTalk.SpecFlow.Table(new string[] {
                             "Condition",
                             "Access Level",
                             "Duration"});
-                table2371.AddRow(new string[] {
+                table2334.AddRow(new string[] {
                             "After hours (6PM-8AM)",
                             "Read-only",
                             "Temporary"});
-                table2371.AddRow(new string[] {
+                table2334.AddRow(new string[] {
                             "Weekends",
                             "Emergency",
                             "Limited"});
-                table2371.AddRow(new string[] {
+                table2334.AddRow(new string[] {
                             "System maintenance",
                             "Full",
                             "Override"});
 #line 76
-    testRunner.And("I have \"Emergency Access\" privileges during:", ((string)(null)), table2371, "And ");
+    testRunner.And("I have \"Emergency Access\" privileges during:", ((string)(null)), table2334, "And ");
 #line hidden
 #line 81
     testRunner.When("I access the system at 7:30 PM on Tuesday", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -508,28 +508,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2372 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2335 = new TechTalk.SpecFlow.Table(new string[] {
                             "Organization",
                             "District",
                             "Users",
                             "Data Isolation"});
-                table2372.AddRow(new string[] {
+                table2335.AddRow(new string[] {
                             "Riverside School",
                             "RUSD",
                             "25",
                             "Strict"});
-                table2372.AddRow(new string[] {
+                table2335.AddRow(new string[] {
                             "Pine Valley ISD",
                             "PVISD",
                             "18",
                             "Strict"});
-                table2372.AddRow(new string[] {
+                table2335.AddRow(new string[] {
                             "Metro Therapy",
                             "Private",
                             "12",
                             "Strict"});
 #line 91
-    testRunner.Given("multiple organizations use the platform:", ((string)(null)), table2372, "Given ");
+    testRunner.Given("multiple organizations use the platform:", ((string)(null)), table2335, "Given ");
 #line hidden
 #line 96
     testRunner.When("I am logged in as \"therapist@riverside.edu\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -588,28 +588,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 106
     testRunner.Given("I am a \"Basic Therapist\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2373 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2336 = new TechTalk.SpecFlow.Table(new string[] {
                             "Endpoint",
                             "Method",
                             "Expected Result"});
-                table2373.AddRow(new string[] {
+                table2336.AddRow(new string[] {
                             "/api/admin/users",
                             "GET",
                             "403 Forbidden"});
-                table2373.AddRow(new string[] {
+                table2336.AddRow(new string[] {
                             "/api/admin/system-settings",
                             "PUT",
                             "403 Forbidden"});
-                table2373.AddRow(new string[] {
+                table2336.AddRow(new string[] {
                             "/api/admin/audit-logs",
                             "GET",
                             "403 Forbidden"});
-                table2373.AddRow(new string[] {
+                table2336.AddRow(new string[] {
                             "/api/admin/role-management",
                             "POST",
                             "403 Forbidden"});
 #line 107
-    testRunner.When("I attempt to access admin API endpoints:", ((string)(null)), table2373, "When ");
+    testRunner.When("I attempt to access admin API endpoints:", ((string)(null)), table2336, "When ");
 #line hidden
 #line 113
     testRunner.Then("all attempts should be blocked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -725,33 +725,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 134
     testRunner.Given("I created a custom worksheet \"MY-WS-001\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2374 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2337 = new TechTalk.SpecFlow.Table(new string[] {
                             "Action",
                             "Owner",
                             "Same Department",
                             "Different Department"});
-                table2374.AddRow(new string[] {
+                table2337.AddRow(new string[] {
                             "View",
                             "Yes",
                             "With permission",
                             "No"});
-                table2374.AddRow(new string[] {
+                table2337.AddRow(new string[] {
                             "Edit",
                             "Yes",
                             "No",
                             "No"});
-                table2374.AddRow(new string[] {
+                table2337.AddRow(new string[] {
                             "Delete",
                             "Yes",
                             "No",
                             "No"});
-                table2374.AddRow(new string[] {
+                table2337.AddRow(new string[] {
                             "Share",
                             "Yes",
                             "Yes",
                             "With approval"});
 #line 135
-    testRunner.And("resource ownership rules define:", ((string)(null)), table2374, "And ");
+    testRunner.And("resource ownership rules define:", ((string)(null)), table2337, "And ");
 #line hidden
 #line 141
     testRunner.When("colleague from my department requests access", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -804,28 +804,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 150
     testRunner.Given("I am a \"Clinical Supervisor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2375 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2338 = new TechTalk.SpecFlow.Table(new string[] {
                             "Context",
                             "Permission Modifier",
                             "Justification"});
-                table2375.AddRow(new string[] {
+                table2338.AddRow(new string[] {
                             "School network",
                             "Full access",
                             "Trusted environment"});
-                table2375.AddRow(new string[] {
+                table2338.AddRow(new string[] {
                             "Home network",
                             "Limited access",
                             "Personal device risk"});
-                table2375.AddRow(new string[] {
+                table2338.AddRow(new string[] {
                             "Mobile device",
                             "Read-only",
                             "Small screen security"});
-                table2375.AddRow(new string[] {
+                table2338.AddRow(new string[] {
                             "Public WiFi",
                             "Blocked",
                             "Network security risk"});
 #line 151
-    testRunner.And("context-aware permissions are enabled:", ((string)(null)), table2375, "And ");
+    testRunner.And("context-aware permissions are enabled:", ((string)(null)), table2338, "And ");
 #line hidden
 #line 157
     testRunner.When("I login from school network on work computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -878,24 +878,24 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 165
     testRunner.Given("I am a \"Lead Therapist\" going on vacation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2376 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2339 = new TechTalk.SpecFlow.Table(new string[] {
                             "Permission Type",
                             "Delegation Period",
                             "Restrictions"});
-                table2376.AddRow(new string[] {
+                table2339.AddRow(new string[] {
                             "Student access",
                             "2 weeks",
                             "View and document only"});
-                table2376.AddRow(new string[] {
+                table2339.AddRow(new string[] {
                             "Team management",
                             "None",
                             "Cannot delegate"});
-                table2376.AddRow(new string[] {
+                table2339.AddRow(new string[] {
                             "Resource approval",
                             "1 week",
                             "Emergency only"});
 #line 166
-    testRunner.When("I delegate my permissions to \"backup.therapist@school.edu\":", ((string)(null)), table2376, "When ");
+    testRunner.When("I delegate my permissions to \"backup.therapist@school.edu\":", ((string)(null)), table2339, "When ");
 #line hidden
 #line 171
     testRunner.Then("delegation should require supervisor approval", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -954,24 +954,24 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 181
     testRunner.When("emergency access is triggered by \"crisis.coordinator@school.edu\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2377 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2340 = new TechTalk.SpecFlow.Table(new string[] {
                             "Access Type",
                             "Duration",
                             "Scope"});
-                table2377.AddRow(new string[] {
+                table2340.AddRow(new string[] {
                             "All student records",
                             "4 hours",
                             "Emergency response team"});
-                table2377.AddRow(new string[] {
+                table2340.AddRow(new string[] {
                             "Contact information",
                             "4 hours",
                             "Crisis coordinators"});
-                table2377.AddRow(new string[] {
+                table2340.AddRow(new string[] {
                             "Medical information",
                             "4 hours",
                             "Authorized personnel"});
 #line 182
-    testRunner.Then("temporary elevated permissions should be granted:", ((string)(null)), table2377, "Then ");
+    testRunner.Then("temporary elevated permissions should be granted:", ((string)(null)), table2340, "Then ");
 #line hidden
 #line 187
     testRunner.And("all emergency access should be logged", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1029,23 +1029,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 197
     testRunner.When("permission sync fails between identity provider and application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2378 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2341 = new TechTalk.SpecFlow.Table(new string[] {
                             "Response",
                             "Implementation"});
-                table2378.AddRow(new string[] {
+                table2341.AddRow(new string[] {
                             "Fail securely",
                             "Deny access rather than allow"});
-                table2378.AddRow(new string[] {
+                table2341.AddRow(new string[] {
                             "Log synchronization error",
                             "Complete error details recorded"});
-                table2378.AddRow(new string[] {
+                table2341.AddRow(new string[] {
                             "Alert administrators",
                             "Immediate notification sent"});
-                table2378.AddRow(new string[] {
+                table2341.AddRow(new string[] {
                             "Retry synchronization",
                             "Automatic retry with backoff"});
 #line 198
-    testRunner.Then("system should:", ((string)(null)), table2378, "Then ");
+    testRunner.Then("system should:", ((string)(null)), table2341, "Then ");
 #line hidden
 #line 204
     testRunner.And("user should see \"Permission verification in progress\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1094,23 +1094,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 210
     testRunner.When("role validation fails during login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2379 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2342 = new TechTalk.SpecFlow.Table(new string[] {
                             "Action",
                             "Purpose"});
-                table2379.AddRow(new string[] {
+                table2342.AddRow(new string[] {
                             "Block login",
                             "Prevent unauthorized access"});
-                table2379.AddRow(new string[] {
+                table2342.AddRow(new string[] {
                             "Alert security team",
                             "Investigate corruption source"});
-                table2379.AddRow(new string[] {
+                table2342.AddRow(new string[] {
                             "Trigger role reset",
                             "Restore from backup"});
-                table2379.AddRow(new string[] {
+                table2342.AddRow(new string[] {
                             "Require re-authentication",
                             "Validate identity"});
 #line 211
-    testRunner.Then("system should:", ((string)(null)), table2379, "Then ");
+    testRunner.Then("system should:", ((string)(null)), table2342, "Then ");
 #line hidden
 #line 217
     testRunner.And("user should receive notification of account issue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1156,20 +1156,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 222
     testRunner.Given("user \"supervisor@school.edu\" permissions are being modified", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2380 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2343 = new TechTalk.SpecFlow.Table(new string[] {
                             "Admin A Action",
                             "Admin B Action",
                             "Expected Resolution"});
-                table2380.AddRow(new string[] {
+                table2343.AddRow(new string[] {
                             "Add permission",
                             "Remove same",
                             "Last write wins with warning"});
-                table2380.AddRow(new string[] {
+                table2343.AddRow(new string[] {
                             "Change role",
                             "Change role",
                             "Conflict flagged for review"});
 #line 223
-    testRunner.When("two administrators modify permissions simultaneously:", ((string)(null)), table2380, "When ");
+    testRunner.When("two administrators modify permissions simultaneously:", ((string)(null)), table2343, "When ");
 #line hidden
 #line 227
     testRunner.Then("conflict resolution should trigger", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1218,49 +1218,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2381 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2344 = new TechTalk.SpecFlow.Table(new string[] {
                             "Level",
                             "Inherits From",
                             "Additional Permissions"});
-                table2381.AddRow(new string[] {
+                table2344.AddRow(new string[] {
                             "District",
                             "None",
                             "System administration"});
-                table2381.AddRow(new string[] {
+                table2344.AddRow(new string[] {
                             "School",
                             "District",
                             "School management"});
-                table2381.AddRow(new string[] {
+                table2344.AddRow(new string[] {
                             "Department",
                             "School",
                             "Department oversight"});
-                table2381.AddRow(new string[] {
+                table2344.AddRow(new string[] {
                             "Individual",
                             "Department",
                             "Direct service"});
 #line 234
-    testRunner.Given("organizational hierarchy has permission inheritance:", ((string)(null)), table2381, "Given ");
+    testRunner.Given("organizational hierarchy has permission inheritance:", ((string)(null)), table2344, "Given ");
 #line hidden
 #line 240
     testRunner.When("inheritance chain is broken (missing intermediate role)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2382 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2345 = new TechTalk.SpecFlow.Table(new string[] {
                             "Response",
                             "Implementation"});
-                table2382.AddRow(new string[] {
+                table2345.AddRow(new string[] {
                             "Detect broken chain",
                             "Automated inheritance validation"});
-                table2382.AddRow(new string[] {
+                table2345.AddRow(new string[] {
                             "Alert administrators",
                             "Notification of hierarchy issue"});
-                table2382.AddRow(new string[] {
+                table2345.AddRow(new string[] {
                             "Apply safe defaults",
                             "Minimal permissions until fixed"});
-                table2382.AddRow(new string[] {
+                table2345.AddRow(new string[] {
                             "Queue for repair",
                             "Automatic repair attempt"});
 #line 241
-    testRunner.Then("system should:", ((string)(null)), table2382, "Then ");
+    testRunner.Then("system should:", ((string)(null)), table2345, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1303,23 +1303,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 251
     testRunner.When("operation partially fails (30 succeed, 20 fail)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2383 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2346 = new TechTalk.SpecFlow.Table(new string[] {
                             "Action",
                             "Details"});
-                table2383.AddRow(new string[] {
+                table2346.AddRow(new string[] {
                             "Complete successful",
                             "Process all valid assignments"});
-                table2383.AddRow(new string[] {
+                table2346.AddRow(new string[] {
                             "Report failures",
                             "Detailed error for each failure"});
-                table2383.AddRow(new string[] {
+                table2346.AddRow(new string[] {
                             "Rollback option",
                             "Ability to undo successful ones"});
-                table2383.AddRow(new string[] {
+                table2346.AddRow(new string[] {
                             "Retry mechanism",
                             "Fix errors and retry failed ones"});
 #line 252
-    testRunner.Then("system should:", ((string)(null)), table2383, "Then ");
+    testRunner.Then("system should:", ((string)(null)), table2346, "Then ");
 #line hidden
 #line 258
     testRunner.And("administrator should receive detailed report", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1368,26 +1368,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 264
     testRunner.When("audit trail becomes corrupted or incomplete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2384 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2347 = new TechTalk.SpecFlow.Table(new string[] {
                             "Response",
                             "Implementation"});
-                table2384.AddRow(new string[] {
+                table2347.AddRow(new string[] {
                             "Detect corruption",
                             "Automated integrity checks"});
-                table2384.AddRow(new string[] {
+                table2347.AddRow(new string[] {
                             "Alert compliance team",
                             "Immediate notification"});
-                table2384.AddRow(new string[] {
+                table2347.AddRow(new string[] {
                             "Freeze changes",
                             "Block new permission changes"});
-                table2384.AddRow(new string[] {
+                table2347.AddRow(new string[] {
                             "Restore from backup",
                             "Use verified backup data"});
-                table2384.AddRow(new string[] {
+                table2347.AddRow(new string[] {
                             "Generate incident report",
                             "Full documentation of issue"});
 #line 265
-    testRunner.Then("system should:", ((string)(null)), table2384, "Then ");
+    testRunner.Then("system should:", ((string)(null)), table2347, "Then ");
 #line hidden
 #line 272
     testRunner.And("regulatory notification may be required", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1436,20 +1436,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 278
     testRunner.When("synchronization fails with critical external system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2385 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2348 = new TechTalk.SpecFlow.Table(new string[] {
                             "External System",
                             "Failure Response"});
-                table2385.AddRow(new string[] {
+                table2348.AddRow(new string[] {
                             "SSO Provider",
                             "Allow local authentication temporarily"});
-                table2385.AddRow(new string[] {
+                table2348.AddRow(new string[] {
                             "EHR System",
                             "Queue updates for retry"});
-                table2385.AddRow(new string[] {
+                table2348.AddRow(new string[] {
                             "LMS Platform",
                             "Disable assignment features"});
 #line 279
-    testRunner.Then("system should:", ((string)(null)), table2385, "Then ");
+    testRunner.Then("system should:", ((string)(null)), table2348, "Then ");
 #line hidden
 #line 284
     testRunner.And("all sync failures should be logged", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

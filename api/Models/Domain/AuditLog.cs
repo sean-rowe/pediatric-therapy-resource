@@ -15,7 +15,7 @@ public class AuditLog
     public string? Details { get; set; } // JSON data
     public bool Success { get; set; }
     public string? ErrorMessage { get; set; }
-    
+
     // Navigation property
     public virtual User? User { get; set; }
 }

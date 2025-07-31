@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 17
     testRunner.And("bulk licensing provides cost efficiency and management simplicity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table580 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table543 = new TechTalk.SpecFlow.Table(new string[] {
                             "Organization Size",
                             "Licensing Model",
                             "Pricing Structure",
                             "Management Features",
                             "Support Level",
                             "Compliance Requirements"});
-                table580.AddRow(new string[] {
+                table543.AddRow(new string[] {
                             "50-200 users",
                             "Tiered licensing",
                             "Volume discounts",
                             "Basic admin portal",
                             "Business support",
                             "Standard compliance"});
-                table580.AddRow(new string[] {
+                table543.AddRow(new string[] {
                             "200-1000 users",
                             "Site licensing",
                             "Site-based pricing",
                             "Advanced admin tools",
                             "Priority support",
                             "Enhanced compliance"});
-                table580.AddRow(new string[] {
+                table543.AddRow(new string[] {
                             "1000-5000 users",
                             "Enterprise licensing",
                             "Negotiated pricing",
                             "Full management suite",
                             "Dedicated support",
                             "Full compliance suite"});
-                table580.AddRow(new string[] {
+                table543.AddRow(new string[] {
                             "5000+ users",
                             "Custom licensing",
                             "Custom agreements",
                             "Enterprise features",
                             "White-glove support",
                             "Custom compliance"});
-                table580.AddRow(new string[] {
+                table543.AddRow(new string[] {
                             "Multi-location",
                             "Global licensing",
                             "Geographic pricing",
                             "Multi-site management",
                             "Regional support",
                             "Multi-jurisdiction compliance"});
-                table580.AddRow(new string[] {
+                table543.AddRow(new string[] {
                             "Consortium",
                             "Consortium licensing",
                             "Shared pricing",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Collaborative support",
                             "Consortium compliance"});
 #line 18
-    testRunner.When("implementing enterprise bulk licensing:", ((string)(null)), table580, "When ");
+    testRunner.When("implementing enterprise bulk licensing:", ((string)(null)), table543, "When ");
 #line hidden
 #line 26
     testRunner.Then("licensing should scale with organization size", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 34
     testRunner.And("identity management ensures security and compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table581 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table544 = new TechTalk.SpecFlow.Table(new string[] {
                             "Identity Provider",
                             "Integration Method",
                             "User Provisioning",
                             "Group Management",
                             "Access Controls",
                             "Security Features"});
-                table581.AddRow(new string[] {
+                table544.AddRow(new string[] {
                             "Active Directory",
                             "SAML 2.0",
                             "Automatic provisioning",
                             "AD group mapping",
                             "Role-based access",
                             "Multi-factor authentication"});
-                table581.AddRow(new string[] {
+                table544.AddRow(new string[] {
                             "Azure AD",
                             "OAuth 2.0 + SAML",
                             "Just-in-time provisioning",
                             "Azure group sync",
                             "Conditional access",
                             "Risk-based authentication"});
-                table581.AddRow(new string[] {
+                table544.AddRow(new string[] {
                             "Google Workspace",
                             "OAuth 2.0",
                             "Real-time provisioning",
                             "Google group mapping",
                             "Workspace integration",
                             "Advanced protection"});
-                table581.AddRow(new string[] {
+                table544.AddRow(new string[] {
                             "Okta",
                             "SAML 2.0",
                             "Automated provisioning",
                             "Okta group management",
                             "Okta policies",
                             "Universal MFA"});
-                table581.AddRow(new string[] {
+                table544.AddRow(new string[] {
                             "OneLogin",
                             "SAML 2.0",
                             "Dynamic provisioning",
                             "OneLogin groups",
                             "Policy enforcement",
                             "Adaptive authentication"});
-                table581.AddRow(new string[] {
+                table544.AddRow(new string[] {
                             "Custom LDAP",
                             "LDAP integration",
                             "LDAP synchronization",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Custom access rules",
                             "LDAP security"});
 #line 35
-    testRunner.When("implementing SSO integration:", ((string)(null)), table581, "When ");
+    testRunner.When("implementing SSO integration:", ((string)(null)), table544, "When ");
 #line hidden
 #line 43
     testRunner.Then("SSO should be seamlessly integrated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 51
     testRunner.And("management needs vary by organizational level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table582 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table545 = new TechTalk.SpecFlow.Table(new string[] {
                             "Hierarchy Level",
                             "Management Scope",
                             "Administrative Rights",
                             "Billing Visibility",
                             "User Management",
                             "Reporting Access"});
-                table582.AddRow(new string[] {
+                table545.AddRow(new string[] {
                             "Global admin",
                             "Entire organization",
                             "Full administrative",
                             "Complete billing access",
                             "All user management",
                             "Global reporting"});
-                table582.AddRow(new string[] {
+                table545.AddRow(new string[] {
                             "Regional admin",
                             "Regional divisions",
                             "Regional administration",
                             "Regional billing",
                             "Regional user management",
                             "Regional reporting"});
-                table582.AddRow(new string[] {
+                table545.AddRow(new string[] {
                             "Department admin",
                             "Department level",
                             "Department administration",
                             "Department billing",
                             "Department users",
                             "Department reporting"});
-                table582.AddRow(new string[] {
+                table545.AddRow(new string[] {
                             "Team lead",
                             "Team level",
                             "Limited administration",
                             "No billing access",
                             "Team member management",
                             "Team reporting"});
-                table582.AddRow(new string[] {
+                table545.AddRow(new string[] {
                             "Local admin",
                             "Site/location",
                             "Site administration",
                             "Site billing view",
                             "Local user management",
                             "Local reporting"});
-                table582.AddRow(new string[] {
+                table545.AddRow(new string[] {
                             "Super user",
                             "Extended privileges",
                             "User administration",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Limited user management",
                             "User reporting"});
 #line 52
-    testRunner.When("implementing hierarchical management:", ((string)(null)), table582, "When ");
+    testRunner.When("implementing hierarchical management:", ((string)(null)), table545, "When ");
 #line hidden
 #line 60
     testRunner.Then("hierarchy should reflect organizational structure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 68
     testRunner.And("contract management ensures compliance and optimization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table583 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table546 = new TechTalk.SpecFlow.Table(new string[] {
                             "Contract Type",
                             "Agreement Terms",
                             "Pricing Models",
                             "Service Levels",
                             "Compliance Requirements",
                             "Renewal Processes"});
-                table583.AddRow(new string[] {
+                table546.AddRow(new string[] {
                             "Standard enterprise",
                             "Standard terms",
                             "Volume pricing",
                             "Standard SLA",
                             "Standard compliance",
                             "Automatic renewal"});
-                table583.AddRow(new string[] {
+                table546.AddRow(new string[] {
                             "Custom enterprise",
                             "Negotiated terms",
                             "Custom pricing",
                             "Custom SLA",
                             "Custom compliance",
                             "Negotiated renewal"});
-                table583.AddRow(new string[] {
+                table546.AddRow(new string[] {
                             "Multi-year",
                             "Long-term commitment",
                             "Discount pricing",
                             "Enhanced SLA",
                             "Multi-year compliance",
                             "Long-term renewal"});
-                table583.AddRow(new string[] {
+                table546.AddRow(new string[] {
                             "Pilot program",
                             "Pilot terms",
                             "Pilot pricing",
                             "Pilot support",
                             "Pilot compliance",
                             "Pilot-to-full conversion"});
-                table583.AddRow(new string[] {
+                table546.AddRow(new string[] {
                             "Government",
                             "Government terms",
                             "Government pricing",
                             "Government SLA",
                             "Government compliance",
                             "Government renewal"});
-                table583.AddRow(new string[] {
+                table546.AddRow(new string[] {
                             "Non-profit",
                             "Non-profit terms",
                             "Discounted pricing",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Non-profit compliance",
                             "Non-profit renewal"});
 #line 69
-    testRunner.When("implementing contract management:", ((string)(null)), table583, "When ");
+    testRunner.When("implementing contract management:", ((string)(null)), table546, "When ");
 #line hidden
 #line 77
     testRunner.Then("contracts should be comprehensive and clear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 86
     testRunner.And("analytics drive optimization and value demonstration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table584 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table547 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Category",
                             "Metrics Provided",
                             "Analysis Level",
                             "Stakeholder Access",
                             "Insight Generation",
                             "Action Recommendations"});
-                table584.AddRow(new string[] {
+                table547.AddRow(new string[] {
                             "User adoption",
                             "Active users, feature usage",
                             "Organization/department/team",
                             "Admins, stakeholders",
                             "Adoption patterns",
                             "Training recommendations"});
-                table584.AddRow(new string[] {
+                table547.AddRow(new string[] {
                             "Resource utilization",
                             "Resource access, downloads",
                             "Category/resource level",
                             "Admins, managers",
                             "Usage efficiency",
                             "Resource optimization"});
-                table584.AddRow(new string[] {
+                table547.AddRow(new string[] {
                             "Cost optimization",
                             "Cost per user, department",
                             "Financial analysis",
                             "Finance, executives",
                             "Cost efficiency",
                             "Budget optimization"});
-                table584.AddRow(new string[] {
+                table547.AddRow(new string[] {
                             "Compliance monitoring",
                             "Policy adherence, access",
                             "Security analysis",
                             "Compliance officers",
                             "Compliance status",
                             "Risk mitigation"});
-                table584.AddRow(new string[] {
+                table547.AddRow(new string[] {
                             "Performance tracking",
                             "System usage, response times",
                             "Technical analysis",
                             "IT administrators",
                             "Performance insights",
                             "Infrastructure optimization"});
-                table584.AddRow(new string[] {
+                table547.AddRow(new string[] {
                             "ROI measurement",
                             "Value metrics, outcomes",
                             "Business analysis",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "ROI calculation",
                             "Investment justification"});
 #line 87
-    testRunner.When("implementing enterprise analytics:", ((string)(null)), table584, "When ");
+    testRunner.When("implementing enterprise analytics:", ((string)(null)), table547, "When ");
 #line hidden
 #line 95
     testRunner.Then("analytics should provide organizational insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 103
     testRunner.And("custom integrations improve organizational efficiency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table585 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table548 = new TechTalk.SpecFlow.Table(new string[] {
                             "Integration Type",
                             "Enterprise System",
                             "Integration Method",
                             "Data Flow",
                             "Security Requirements",
                             "Maintenance Needs"});
-                table585.AddRow(new string[] {
+                table548.AddRow(new string[] {
                             "ERP integration",
                             "SAP, Oracle",
                             "API connectivity",
                             "Bi-directional",
                             "Enterprise security",
                             "Quarterly updates"});
-                table585.AddRow(new string[] {
+                table548.AddRow(new string[] {
                             "LMS integration",
                             "Custom LMS",
                             "LTI compliance",
                             "Single sign-on",
                             "Educational security",
                             "Annual reviews"});
-                table585.AddRow(new string[] {
+                table548.AddRow(new string[] {
                             "HRIS integration",
                             "Workday, ADP",
                             "HR data sync",
                             "User provisioning",
                             "HR security standards",
                             "Monthly synchronization"});
-                table585.AddRow(new string[] {
+                table548.AddRow(new string[] {
                             "Financial systems",
                             "Oracle Financial",
                             "Financial data",
                             "Billing integration",
                             "Financial controls",
                             "Real-time sync"});
-                table585.AddRow(new string[] {
+                table548.AddRow(new string[] {
                             "Procurement systems",
                             "Ariba, Coupa",
                             "Procurement flow",
                             "Purchase workflow",
                             "Procurement security",
                             "Contract-based"});
-                table585.AddRow(new string[] {
+                table548.AddRow(new string[] {
                             "Custom databases",
                             "Enterprise databases",
                             "Direct connection",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Database security",
                             "Ongoing maintenance"});
 #line 104
-    testRunner.When("implementing custom integrations:", ((string)(null)), table585, "When ");
+    testRunner.When("implementing custom integrations:", ((string)(null)), table548, "When ");
 #line hidden
 #line 112
     testRunner.Then("integrations should be reliable and secure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 120
     testRunner.And("white-labeling improves organizational adoption", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table586 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table549 = new TechTalk.SpecFlow.Table(new string[] {
                             "Branding Level",
                             "Customization Options",
                             "Implementation Timeline",
                             "Cost Structure",
                             "Support Model",
                             "Update Management"});
-                table586.AddRow(new string[] {
+                table549.AddRow(new string[] {
                             "Basic branding",
                             "Logo, colors",
                             "2-week implementation",
                             "Standard pricing",
                             "Standard support",
                             "Automatic updates"});
-                table586.AddRow(new string[] {
+                table549.AddRow(new string[] {
                             "Intermediate branding",
                             "UI customization",
                             "6-week implementation",
                             "Premium pricing",
                             "Enhanced support",
                             "Managed updates"});
-                table586.AddRow(new string[] {
+                table549.AddRow(new string[] {
                             "Full white-label",
                             "Complete branding",
                             "12-week implementation",
                             "Custom pricing",
                             "Dedicated support",
                             "Custom update schedule"});
-                table586.AddRow(new string[] {
+                table549.AddRow(new string[] {
                             "Private label",
                             "Independent branding",
                             "16-week implementation",
                             "License fee + royalty",
                             "Partner support",
                             "Partner-managed updates"});
-                table586.AddRow(new string[] {
+                table549.AddRow(new string[] {
                             "Custom deployment",
                             "On-premise/private cloud",
                             "20-week implementation",
                             "Custom agreement",
                             "White-glove support",
                             "Client-managed updates"});
-                table586.AddRow(new string[] {
+                table549.AddRow(new string[] {
                             "Partner solutions",
                             "Channel partner branding",
                             "Variable timeline",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Channel support",
                             "Channel-managed"});
 #line 121
-    testRunner.When("implementing white-label solutions:", ((string)(null)), table586, "When ");
+    testRunner.When("implementing white-label solutions:", ((string)(null)), table549, "When ");
 #line hidden
 #line 129
     testRunner.Then("branding should meet enterprise requirements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 137
     testRunner.And("regulatory adherence is non-negotiable for enterprise sales", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table587 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table550 = new TechTalk.SpecFlow.Table(new string[] {
                             "Compliance Framework",
                             "Requirements",
                             "Implementation",
                             "Monitoring",
                             "Reporting",
                             "Certification"});
-                table587.AddRow(new string[] {
+                table550.AddRow(new string[] {
                             "SOC 2 Type II",
                             "Security controls",
                             "Control implementation",
                             "Continuous monitoring",
                             "Annual reporting",
                             "Third-party audit"});
-                table587.AddRow(new string[] {
+                table550.AddRow(new string[] {
                             "HIPAA compliance",
                             "Healthcare data protection",
                             "Healthcare controls",
                             "HIPAA monitoring",
                             "HIPAA reporting",
                             "HIPAA certification"});
-                table587.AddRow(new string[] {
+                table550.AddRow(new string[] {
                             "FERPA compliance",
                             "Educational privacy",
                             "Educational controls",
                             "Privacy monitoring",
                             "Privacy reporting",
                             "Educational certification"});
-                table587.AddRow(new string[] {
+                table550.AddRow(new string[] {
                             "ISO 27001",
                             "Information security",
                             "Security management",
                             "Security monitoring",
                             "Security reporting",
                             "ISO certification"});
-                table587.AddRow(new string[] {
+                table550.AddRow(new string[] {
                             "FedRAMP",
                             "Government cloud",
                             "Government controls",
                             "Government monitoring",
                             "Government reporting",
                             "FedRAMP authorization"});
-                table587.AddRow(new string[] {
+                table550.AddRow(new string[] {
                             "GDPR compliance",
                             "EU data protection",
                             "Privacy implementation",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "GDPR reporting",
                             "Privacy certification"});
 #line 138
-    testRunner.When("implementing compliance management:", ((string)(null)), table587, "When ");
+    testRunner.When("implementing compliance management:", ((string)(null)), table550, "When ");
 #line hidden
 #line 146
     testRunner.Then("compliance should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 155
     testRunner.And("invoicing must accommodate organizational procurement processes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table588 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table551 = new TechTalk.SpecFlow.Table(new string[] {
                             "Billing Complexity",
                             "Invoice Requirements",
                             "Payment Terms",
                             "Approval Processes",
                             "Tax Handling",
                             "Currency Support"});
-                table588.AddRow(new string[] {
+                table551.AddRow(new string[] {
                             "Simple enterprise",
                             "Standard invoicing",
                             "Net 30",
                             "Single approver",
                             "Standard tax",
                             "Single currency"});
-                table588.AddRow(new string[] {
+                table551.AddRow(new string[] {
                             "Complex enterprise",
                             "Custom invoicing",
                             "Net 60",
                             "Multi-level approval",
                             "Complex tax",
                             "Multi-currency"});
-                table588.AddRow(new string[] {
+                table551.AddRow(new string[] {
                             "Government billing",
                             "Government format",
                             "Government terms",
                             "Government approval",
                             "Government tax",
                             "Government currency"});
-                table588.AddRow(new string[] {
+                table551.AddRow(new string[] {
                             "International billing",
                             "Multi-country",
                             "Local terms",
                             "Regional approval",
                             "Local tax",
                             "Local currency"});
-                table588.AddRow(new string[] {
+                table551.AddRow(new string[] {
                             "Consortium billing",
                             "Shared billing",
                             "Consortium terms",
                             "Consortium approval",
                             "Shared tax",
                             "Shared currency"});
-                table588.AddRow(new string[] {
+                table551.AddRow(new string[] {
                             "Usage-based billing",
                             "Detailed usage",
                             "Variable terms",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Usage tax",
                             "Flexible currency"});
 #line 156
-    testRunner.When("implementing enterprise billing:", ((string)(null)), table588, "When ");
+    testRunner.When("implementing enterprise billing:", ((string)(null)), table551, "When ");
 #line hidden
 #line 164
     testRunner.Then("billing should accommodate complexity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 172
     testRunner.And("departmental billing enables internal cost management", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table589 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table552 = new TechTalk.SpecFlow.Table(new string[] {
                             "Allocation Method",
                             "Billing Structure",
                             "Reporting Level",
                             "Approval Workflow",
                             "Budget Management",
                             "Variance Tracking"});
-                table589.AddRow(new string[] {
+                table552.AddRow(new string[] {
                             "Equal allocation",
                             "Split equally",
                             "Department summary",
                             "Department approval",
                             "Department budgets",
                             "Budget variance"});
-                table589.AddRow(new string[] {
+                table552.AddRow(new string[] {
                             "Usage-based allocation",
                             "Usage proportional",
                             "Detailed usage",
                             "Usage validation",
                             "Usage budgets",
                             "Usage variance"});
-                table589.AddRow(new string[] {
+                table552.AddRow(new string[] {
                             "Headcount allocation",
                             "Per-user allocation",
                             "User-based",
                             "HR validation",
                             "Headcount budgets",
                             "Headcount variance"});
-                table589.AddRow(new string[] {
+                table552.AddRow(new string[] {
                             "Custom allocation",
                             "Custom rules",
                             "Custom reporting",
                             "Custom approval",
                             "Custom budgets",
                             "Custom variance"});
-                table589.AddRow(new string[] {
+                table552.AddRow(new string[] {
                             "Project allocation",
                             "Project-based",
                             "Project reporting",
                             "Project approval",
                             "Project budgets",
                             "Project variance"});
-                table589.AddRow(new string[] {
+                table552.AddRow(new string[] {
                             "Cost center allocation",
                             "Cost center rules",
                             "Cost center reporting",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Cost center budgets",
                             "Finance variance"});
 #line 173
-    testRunner.When("implementing cost allocation:", ((string)(null)), table589, "When ");
+    testRunner.When("implementing cost allocation:", ((string)(null)), table552, "When ");
 #line hidden
 #line 181
     testRunner.Then("allocation should be flexible and accurate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 189
     testRunner.And("purchase order support is essential for enterprise sales", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table590 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table553 = new TechTalk.SpecFlow.Table(new string[] {
                             "Procurement Type",
                             "PO Requirements",
                             "Integration Level",
                             "Approval Process",
                             "Invoice Matching",
                             "Payment Processing"});
-                table590.AddRow(new string[] {
+                table553.AddRow(new string[] {
                             "Standard PO",
                             "Basic PO information",
                             "Manual processing",
                             "Standard approval",
                             "Manual matching",
                             "Standard payment"});
-                table590.AddRow(new string[] {
+                table553.AddRow(new string[] {
                             "Electronic PO",
                             "EDI integration",
                             "Automated processing",
                             "Electronic approval",
                             "Automated matching",
                             "Electronic payment"});
-                table590.AddRow(new string[] {
+                table553.AddRow(new string[] {
                             "Blanket PO",
                             "Multiple releases",
                             "Release management",
                             "Release approval",
                             "Release matching",
                             "Release payment"});
-                table590.AddRow(new string[] {
+                table553.AddRow(new string[] {
                             "Contract PO",
                             "Contract reference",
                             "Contract integration",
                             "Contract approval",
                             "Contract matching",
                             "Contract payment"});
-                table590.AddRow(new string[] {
+                table553.AddRow(new string[] {
                             "Government PO",
                             "Government format",
                             "Government integration",
                             "Government approval",
                             "Government matching",
                             "Government payment"});
-                table590.AddRow(new string[] {
+                table553.AddRow(new string[] {
                             "International PO",
                             "Cross-border",
                             "International processing",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "International matching",
                             "International payment"});
 #line 190
-    testRunner.When("implementing purchase order support:", ((string)(null)), table590, "When ");
+    testRunner.When("implementing purchase order support:", ((string)(null)), table553, "When ");
 #line hidden
 #line 198
     testRunner.Then("PO processing should be efficient", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 206
     testRunner.And("financial compliance is critical for public companies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table591 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table554 = new TechTalk.SpecFlow.Table(new string[] {
                             "Revenue Type",
                             "Recognition Rules",
                             "Timing",
                             "Compliance Standards",
                             "Audit Requirements",
                             "Reporting Integration"});
-                table591.AddRow(new string[] {
+                table554.AddRow(new string[] {
                             "License revenue",
                             "Upfront recognition",
                             "Contract start",
                             "ASC 606",
                             "Annual audit",
                             "Financial systems"});
-                table591.AddRow(new string[] {
+                table554.AddRow(new string[] {
                             "Subscription revenue",
                             "Monthly recognition",
                             "Service delivery",
                             "ASC 606",
                             "Quarterly review",
                             "Revenue systems"});
-                table591.AddRow(new string[] {
+                table554.AddRow(new string[] {
                             "Professional services",
                             "Milestone recognition",
                             "Service completion",
                             "ASC 606",
                             "Project audit",
                             "Project systems"});
-                table591.AddRow(new string[] {
+                table554.AddRow(new string[] {
                             "Support revenue",
                             "Ratable recognition",
                             "Support period",
                             "ASC 606",
                             "Support audit",
                             "Support systems"});
-                table591.AddRow(new string[] {
+                table554.AddRow(new string[] {
                             "Custom development",
                             "Percentage completion",
                             "Development progress",
                             "ASC 606",
                             "Development audit",
                             "Development tracking"});
-                table591.AddRow(new string[] {
+                table554.AddRow(new string[] {
                             "Training revenue",
                             "Event recognition",
                             "Training delivery",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Training audit",
                             "Training systems"});
 #line 207
-    testRunner.When("implementing revenue recognition:", ((string)(null)), table591, "When ");
+    testRunner.When("implementing revenue recognition:", ((string)(null)), table554, "When ");
 #line hidden
 #line 215
     testRunner.Then("recognition should be compliant", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 224
     testRunner.And("dedicated services ensure customer success and retention", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table592 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table555 = new TechTalk.SpecFlow.Table(new string[] {
                             "Support Tier",
                             "Service Level",
                             "Response Time",
                             "Support Channels",
                             "Success Management",
                             "Escalation Process"});
-                table592.AddRow(new string[] {
+                table555.AddRow(new string[] {
                             "Standard enterprise",
                             "Business hours",
                             "4-hour response",
                             "Email, phone",
                             "Quarterly reviews",
                             "Standard escalation"});
-                table592.AddRow(new string[] {
+                table555.AddRow(new string[] {
                             "Premium enterprise",
                             "Extended hours",
                             "2-hour response",
                             "Multi-channel",
                             "Monthly reviews",
                             "Priority escalation"});
-                table592.AddRow(new string[] {
+                table555.AddRow(new string[] {
                             "Critical enterprise",
                             "24/7 support",
                             "1-hour response",
                             "All channels",
                             "Bi-weekly reviews",
                             "Executive escalation"});
-                table592.AddRow(new string[] {
+                table555.AddRow(new string[] {
                             "White-glove",
                             "Dedicated team",
                             "30-minute response",
                             "Dedicated channels",
                             "Weekly reviews",
                             "C-level escalation"});
-                table592.AddRow(new string[] {
+                table555.AddRow(new string[] {
                             "Strategic accounts",
                             "Account team",
                             "15-minute response",
                             "Priority channels",
                             "Continuous engagement",
                             "Strategic escalation"});
-                table592.AddRow(new string[] {
+                table555.AddRow(new string[] {
                             "Mission-critical",
                             "On-site support",
                             "Immediate response",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Real-time monitoring",
                             "Emergency escalation"});
 #line 225
-    testRunner.When("implementing enterprise support:", ((string)(null)), table592, "When ");
+    testRunner.When("implementing enterprise support:", ((string)(null)), table555, "When ");
 #line hidden
 #line 233
     testRunner.Then("support should match customer investment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 241
     testRunner.And("successful onboarding drives adoption and satisfaction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table593 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table556 = new TechTalk.SpecFlow.Table(new string[] {
                             "Implementation Type",
                             "Service Scope",
                             "Timeline",
                             "Resource Allocation",
                             "Success Metrics",
                             "Follow-up Support"});
-                table593.AddRow(new string[] {
+                table556.AddRow(new string[] {
                             "Standard implementation",
                             "Basic setup",
                             "4-week timeline",
                             "Implementation specialist",
                             "User adoption >80%",
                             "30-day follow-up"});
-                table593.AddRow(new string[] {
+                table556.AddRow(new string[] {
                             "Advanced implementation",
                             "Custom configuration",
                             "8-week timeline",
                             "Implementation team",
                             "Feature adoption >70%",
                             "60-day follow-up"});
-                table593.AddRow(new string[] {
+                table556.AddRow(new string[] {
                             "Complex implementation",
                             "Full customization",
                             "12-week timeline",
                             "Dedicated team",
                             "Integration success >90%",
                             "90-day follow-up"});
-                table593.AddRow(new string[] {
+                table556.AddRow(new string[] {
                             "Migration implementation",
                             "Data migration",
                             "16-week timeline",
                             "Migration specialists",
                             "Data integrity >99%",
                             "120-day follow-up"});
-                table593.AddRow(new string[] {
+                table556.AddRow(new string[] {
                             "Multi-site implementation",
                             "Phased rollout",
                             "20-week timeline",
                             "Program management",
                             "Site success >95%",
                             "Ongoing support"});
-                table593.AddRow(new string[] {
+                table556.AddRow(new string[] {
                             "Custom implementation",
                             "Unique requirements",
                             "Variable timeline",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Custom metrics",
                             "Custom support"});
 #line 242
-    testRunner.When("implementing enterprise onboarding:", ((string)(null)), table593, "When ");
+    testRunner.When("implementing enterprise onboarding:", ((string)(null)), table556, "When ");
 #line hidden
 #line 250
     testRunner.Then("implementation should be professionally managed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 258
     testRunner.And("training services improve customer value realization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table594 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table557 = new TechTalk.SpecFlow.Table(new string[] {
                             "Training Type",
                             "Delivery Method",
                             "Audience",
                             "Content Scope",
                             "Certification",
                             "Ongoing Support"});
-                table594.AddRow(new string[] {
+                table557.AddRow(new string[] {
                             "Administrator training",
                             "Virtual/on-site",
                             "IT administrators",
                             "System administration",
                             "Admin certification",
                             "Admin support"});
-                table594.AddRow(new string[] {
+                table557.AddRow(new string[] {
                             "End-user training",
                             "Multiple formats",
                             "All users",
                             "Feature usage",
                             "User certification",
                             "User resources"});
-                table594.AddRow(new string[] {
+                table557.AddRow(new string[] {
                             "Train-the-trainer",
                             "Instructor-led",
                             "Internal trainers",
                             "Training delivery",
                             "Trainer certification",
                             "Trainer support"});
-                table594.AddRow(new string[] {
+                table557.AddRow(new string[] {
                             "Custom training",
                             "Tailored delivery",
                             "Specific roles",
                             "Role-specific",
                             "Custom certification",
                             "Role support"});
-                table594.AddRow(new string[] {
+                table557.AddRow(new string[] {
                             "Executive briefing",
                             "Executive format",
                             "Leadership",
                             "Business value",
                             "Executive awareness",
                             "Executive materials"});
-                table594.AddRow(new string[] {
+                table557.AddRow(new string[] {
                             "Ongoing education",
                             "Continuous learning",
                             "All audiences",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Continuous learning",
                             "Learning support"});
 #line 259
-    testRunner.When("implementing training services:", ((string)(null)), table594, "When ");
+    testRunner.When("implementing training services:", ((string)(null)), table557, "When ");
 #line hidden
 #line 267
     testRunner.Then("training should be comprehensive and effective", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 276
     testRunner.And("business intelligence drives strategic decision-making", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table595 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table558 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Scope",
                             "Data Sources",
                             "Analysis Capabilities",
                             "Visualization Options",
                             "Export Capabilities",
                             "Integration Options"});
-                table595.AddRow(new string[] {
+                table558.AddRow(new string[] {
                             "Usage analytics",
                             "Platform usage",
                             "Statistical analysis",
                             "Interactive dashboards",
                             "Multiple formats",
                             "BI tool integration"});
-                table595.AddRow(new string[] {
+                table558.AddRow(new string[] {
                             "Financial analytics",
                             "Billing data",
                             "Financial modeling",
                             "Financial reports",
                             "Financial formats",
                             "ERP integration"});
-                table595.AddRow(new string[] {
+                table558.AddRow(new string[] {
                             "Performance analytics",
                             "System metrics",
                             "Performance analysis",
                             "Performance dashboards",
                             "Technical formats",
                             "Monitoring integration"});
-                table595.AddRow(new string[] {
+                table558.AddRow(new string[] {
                             "Compliance analytics",
                             "Compliance data",
                             "Risk analysis",
                             "Compliance reports",
                             "Audit formats",
                             "GRC integration"});
-                table595.AddRow(new string[] {
+                table558.AddRow(new string[] {
                             "Adoption analytics",
                             "User behavior",
                             "Behavioral analysis",
                             "Adoption dashboards",
                             "Progress formats",
                             "HR integration"});
-                table595.AddRow(new string[] {
+                table558.AddRow(new string[] {
                             "ROI analytics",
                             "Value metrics",
                             "ROI calculation",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Business formats",
                             "Financial integration"});
 #line 277
-    testRunner.When("implementing enterprise analytics:", ((string)(null)), table595, "When ");
+    testRunner.When("implementing enterprise analytics:", ((string)(null)), table558, "When ");
 #line hidden
 #line 285
     testRunner.Then("analytics should be enterprise-grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1854,49 +1854,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 293
     testRunner.And("communication tools improve stakeholder engagement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table596 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table559 = new TechTalk.SpecFlow.Table(new string[] {
                             "Report Type",
                             "Customization Level",
                             "Audience",
                             "Frequency",
                             "Delivery Method",
                             "Automation Level"});
-                table596.AddRow(new string[] {
+                table559.AddRow(new string[] {
                             "Executive dashboards",
                             "High customization",
                             "C-level",
                             "Real-time",
                             "Executive portal",
                             "Fully automated"});
-                table596.AddRow(new string[] {
+                table559.AddRow(new string[] {
                             "Operational reports",
                             "Medium customization",
                             "Operations",
                             "Daily/weekly",
                             "Email/portal",
                             "Semi-automated"});
-                table596.AddRow(new string[] {
+                table559.AddRow(new string[] {
                             "Compliance reports",
                             "Standard format",
                             "Compliance",
                             "Monthly/quarterly",
                             "Secure delivery",
                             "Automated generation"});
-                table596.AddRow(new string[] {
+                table559.AddRow(new string[] {
                             "Financial reports",
                             "Accounting format",
                             "Finance",
                             "Monthly",
                             "Financial systems",
                             "Automated delivery"});
-                table596.AddRow(new string[] {
+                table559.AddRow(new string[] {
                             "Usage reports",
                             "Detailed metrics",
                             "IT/Admin",
                             "Weekly",
                             "Admin portal",
                             "Automated refresh"});
-                table596.AddRow(new string[] {
+                table559.AddRow(new string[] {
                             "Custom analysis",
                             "Full customization",
                             "Stakeholders",
@@ -1904,7 +1904,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Custom delivery",
                             "Manual/automated"});
 #line 294
-    testRunner.When("implementing custom reporting:", ((string)(null)), table596, "When ");
+    testRunner.When("implementing custom reporting:", ((string)(null)), table559, "When ");
 #line hidden
 #line 302
     testRunner.Then("reporting should meet stakeholder needs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1958,49 +1958,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 310
     testRunner.Given("enterprise customers require maximum service reliability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table597 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table560 = new TechTalk.SpecFlow.Table(new string[] {
                             "Error Type",
                             "Detection Method",
                             "Resolution Process",
                             "Timeline",
                             "Business Impact",
                             "Prevention Measures"});
-                table597.AddRow(new string[] {
+                table560.AddRow(new string[] {
                             "SSO failures",
                             "Authentication monitoring",
                             "SSO restoration",
                             "<15 minutes",
                             "Access interruption",
                             "SSO redundancy"});
-                table597.AddRow(new string[] {
+                table560.AddRow(new string[] {
                             "Billing errors",
                             "Financial validation",
                             "Billing correction",
                             "<4 hours",
                             "Financial impact",
                             "Billing validation"});
-                table597.AddRow(new string[] {
+                table560.AddRow(new string[] {
                             "Integration failures",
                             "Integration monitoring",
                             "Integration restart",
                             "<30 minutes",
                             "Data synchronization",
                             "Integration redundancy"});
-                table597.AddRow(new string[] {
+                table560.AddRow(new string[] {
                             "Performance degradation",
                             "Performance monitoring",
                             "Resource scaling",
                             "<10 minutes",
                             "User experience",
                             "Capacity management"});
-                table597.AddRow(new string[] {
+                table560.AddRow(new string[] {
                             "Data synchronization errors",
                             "Data validation",
                             "Data reconciliation",
                             "<2 hours",
                             "Data consistency",
                             "Data validation"});
-                table597.AddRow(new string[] {
+                table560.AddRow(new string[] {
                             "Security incidents",
                             "Security monitoring",
                             "Incident response",
@@ -2008,7 +2008,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Security risk",
                             "Security hardening"});
 #line 311
-    testRunner.When("enterprise service errors occur:", ((string)(null)), table597, "When ");
+    testRunner.When("enterprise service errors occur:", ((string)(null)), table560, "When ");
 #line hidden
 #line 319
     testRunner.Then("errors should be rapidly detected and resolved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -2062,49 +2062,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
 #line 326
     testRunner.Given("enterprise customers drive significant platform growth", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table598 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table561 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table598.AddRow(new string[] {
+                table561.AddRow(new string[] {
                             "Customer success",
                             "Complex requirements",
                             "Dedicated success teams",
                             "Success resources",
                             "High retention rates",
                             "Success sustainability"});
-                table598.AddRow(new string[] {
+                table561.AddRow(new string[] {
                             "Technical scalability",
                             "Enterprise scale",
                             "Enterprise architecture",
                             "Infrastructure resources",
                             "Linear scaling",
                             "Technical sustainability"});
-                table598.AddRow(new string[] {
+                table561.AddRow(new string[] {
                             "Compliance maintenance",
                             "Evolving regulations",
                             "Adaptive compliance",
                             "Compliance resources",
                             "Maintained compliance",
                             "Compliance sustainability"});
-                table598.AddRow(new string[] {
+                table561.AddRow(new string[] {
                             "Innovation delivery",
                             "Changing needs",
                             "Continuous innovation",
                             "Innovation resources",
                             "Innovation adoption",
                             "Innovation sustainability"});
-                table598.AddRow(new string[] {
+                table561.AddRow(new string[] {
                             "Support quality",
                             "Support complexity",
                             "Tiered support model",
                             "Support resources",
                             "Support satisfaction",
                             "Support sustainability"});
-                table598.AddRow(new string[] {
+                table561.AddRow(new string[] {
                             "Financial viability",
                             "Enterprise costs",
                             "Efficient operations",
@@ -2112,7 +2112,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Billing
                             "Healthy margins",
                             "Financial sustainability"});
 #line 327
-    testRunner.When("planning enterprise sustainability:", ((string)(null)), table598, "When ");
+    testRunner.When("planning enterprise sustainability:", ((string)(null)), table561, "When ");
 #line hidden
 #line 335
     testRunner.Then("sustainability should be enterprise-focused", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

@@ -9,14 +9,14 @@ public class CategoryCreationRequest
     [Required]
     [MaxLength(100)]
     public string Name { get; set; } = string.Empty;
-    
+
     [MaxLength(500)]
     public string? Description { get; set; }
-    
+
     public Guid? ParentCategoryId { get; set; }
-    
+
     public int? DisplayOrder { get; set; }
-    
+
     public List<SubcategoryRequest>? Subcategories { get; set; }
 }
 
@@ -25,10 +25,10 @@ public class SubcategoryRequest
     [Required]
     [MaxLength(100)]
     public string Name { get; set; } = string.Empty;
-    
+
     [MaxLength(500)]
     public string? Description { get; set; }
-    
+
     public int? DisplayOrder { get; set; }
 }
 

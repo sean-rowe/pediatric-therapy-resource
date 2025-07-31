@@ -1,0 +1,278 @@
+# TODO-001: Database Entity Models
+
+These tasks must be completed before any database migrations can be created.
+
+## Resource Entity
+
+- [ ] Create Models/Domain folder if it doesn't exist
+- [ ] Create Resource.cs file in Models/Domain folder
+- [ ] Add using statements for System and System.ComponentModel.DataAnnotations
+- [ ] Add namespace UPTRMS.Api.Models.Domain to Resource.cs
+- [ ] Add public class Resource declaration
+- [ ] Add Id property with type Guid
+- [ ] Add [Key] attribute to Id property
+- [ ] Add Title property with type string
+- [ ] Add [Required] attribute to Title property
+- [ ] Add [MaxLength(500)] attribute to Title property
+- [ ] Add Description property with type string
+- [ ] Add [MaxLength(2000)] attribute to Description property
+- [ ] Add ResourceType property with type string
+- [ ] Add [Required] attribute to ResourceType property
+- [ ] Add [MaxLength(50)] attribute to ResourceType property
+- [ ] Add SkillAreas property with type string (will store JSON)
+- [ ] Add [Required] attribute to SkillAreas property
+- [ ] Add GradeLevels property with type string (will store JSON)
+- [ ] Add [Required] attribute to GradeLevels property
+- [ ] Add FileUrl property with type string
+- [ ] Add [MaxLength(1000)] attribute to FileUrl property
+- [ ] Add ThumbnailUrl property with type string
+- [ ] Add [MaxLength(1000)] attribute to ThumbnailUrl property
+- [ ] Add FileSize property with type long
+- [ ] Add FileType property with type string
+- [ ] Add [MaxLength(50)] attribute to FileType property
+- [ ] Add IsActive property with type bool
+- [ ] Add default value true to IsActive property
+- [ ] Add CreatedAt property with type DateTime
+- [ ] Add UpdatedAt property with type DateTime
+- [ ] Add CreatedBy property with type Guid (foreign key to User)
+- [ ] Add UpdatedBy property with type Guid? (nullable)
+- [ ] Add Version property with type int
+- [ ] Add IsDeleted property with type bool
+- [ ] Add default value false to IsDeleted property
+- [ ] Add DeletedAt property with type DateTime? (nullable)
+- [ ] Add DeletedBy property with type Guid? (nullable)
+- [ ] Add GenerationMethod property with type string
+- [ ] Add [MaxLength(50)] attribute to GenerationMethod property
+- [ ] Add AIGenerationMetadata property with type string (will store JSON)
+- [ ] Add ClinicalReviewStatus property with type string
+- [ ] Add [MaxLength(50)] attribute to ClinicalReviewStatus property
+- [ ] Add EvidenceLevel property with type int
+- [ ] Add range validation [Range(1, 5)] to EvidenceLevel property
+- [ ] Add LanguagesAvailable property with type string (will store JSON array)
+- [ ] Add IsInteractive property with type bool
+- [ ] Add default value false to IsInteractive property
+- [ ] Add HasAudio property with type bool
+- [ ] Add default value false to HasAudio property
+- [ ] Add Tags property with type string (will store JSON array)
+- [ ] Add ViewCount property with type int
+- [ ] Add default value 0 to ViewCount property
+- [ ] Add DownloadCount property with type int
+- [ ] Add default value 0 to DownloadCount property
+- [ ] Add AverageRating property with type decimal?
+- [ ] Add TotalRatings property with type int
+- [ ] Add default value 0 to TotalRatings property
+- [ ] Add LastReviewedAt property with type DateTime? (nullable)
+- [ ] Add ReviewedBy property with type Guid? (nullable)
+- [ ] Add navigation property Creator with type User
+- [ ] Add navigation property Updater with type User
+- [ ] Add navigation property Reviewer with type User
+- [ ] Add navigation property Categories with type ICollection<ResourceCategory>
+- [ ] Add navigation property Ratings with type ICollection<ResourceRating>
+- [ ] Add navigation property Downloads with type ICollection<ResourceDownload>
+- [ ] Add navigation property Sessions with type ICollection<SessionResource>
+- [ ] Add navigation property Goals with type ICollection<GoalResource>
+
+## Student Entity
+
+- [ ] Create Student.cs file in Models/Domain folder
+- [ ] Add using statements for System and System.ComponentModel.DataAnnotations
+- [ ] Add namespace UPTRMS.Api.Models.Domain to Student.cs
+- [ ] Add public class Student declaration
+- [ ] Add Id property with type Guid
+- [ ] Add [Key] attribute to Id property
+- [ ] Add FirstName property with type string
+- [ ] Add [Required] attribute to FirstName property
+- [ ] Add [MaxLength(100)] attribute to FirstName property
+- [ ] Add LastName property with type string
+- [ ] Add [Required] attribute to LastName property
+- [ ] Add [MaxLength(100)] attribute to LastName property
+- [ ] Add DateOfBirth property with type DateTime
+- [ ] Add [Required] attribute to DateOfBirth property
+- [ ] Add Grade property with type string
+- [ ] Add [MaxLength(20)] attribute to Grade property
+- [ ] Add SchoolName property with type string
+- [ ] Add [MaxLength(200)] attribute to SchoolName property
+- [ ] Add ParentEmail property with type string
+- [ ] Add [EmailAddress] attribute to ParentEmail property
+- [ ] Add [MaxLength(255)] attribute to ParentEmail property
+- [ ] Add ParentPhone property with type string
+- [ ] Add [Phone] attribute to ParentPhone property
+- [ ] Add [MaxLength(20)] attribute to ParentPhone property
+- [ ] Add AccessCode property with type string
+- [ ] Add [Required] attribute to AccessCode property
+- [ ] Add [MaxLength(10)] attribute to AccessCode property
+- [ ] Add unique index annotation for AccessCode
+- [ ] Add TherapistId property with type Guid (foreign key to User)
+- [ ] Add [Required] attribute to TherapistId property
+- [ ] Add OrganizationId property with type Guid? (nullable)
+- [ ] Add IEPGoals property with type string (will store JSON)
+- [ ] Add DisabilityCategory property with type string
+- [ ] Add [MaxLength(100)] attribute to DisabilityCategory property
+- [ ] Add ServiceType property with type string
+- [ ] Add [MaxLength(50)] attribute to ServiceType property
+- [ ] Add ServiceFrequency property with type string
+- [ ] Add [MaxLength(100)] attribute to ServiceFrequency property
+- [ ] Add ServiceMinutes property with type int?
+- [ ] Add Notes property with type string
+- [ ] Add IsActive property with type bool
+- [ ] Add default value true to IsActive property
+- [ ] Add CreatedAt property with type DateTime
+- [ ] Add UpdatedAt property with type DateTime
+- [ ] Add ProfileImageUrl property with type string
+- [ ] Add [MaxLength(1000)] attribute to ProfileImageUrl property
+- [ ] Add PreferredLanguage property with type string
+- [ ] Add [MaxLength(10)] attribute to PreferredLanguage property
+- [ ] Add EmergencyContact property with type string
+- [ ] Add [MaxLength(200)] attribute to EmergencyContact property
+- [ ] Add EmergencyPhone property with type string
+- [ ] Add [Phone] attribute to EmergencyPhone property
+- [ ] Add [MaxLength(20)] attribute to EmergencyPhone property
+- [ ] Add MedicalNotes property with type string
+- [ ] Add Allergies property with type string
+- [ ] Add Medications property with type string
+- [ ] Add navigation property Therapist with type User
+- [ ] Add navigation property Organization with type Organization
+- [ ] Add navigation property Sessions with type ICollection<Session>
+- [ ] Add navigation property Goals with type ICollection<IEPGoal>
+- [ ] Add navigation property ProgressData with type ICollection<ProgressData>
+- [ ] Add navigation property CommunicationLogs with type ICollection<CommunicationLog>
+
+## SellerProfile Entity
+
+- [ ] Create SellerProfile.cs file in Models/Domain folder
+- [ ] Add using statements for System and System.ComponentModel.DataAnnotations
+- [ ] Add namespace UPTRMS.Api.Models.Domain to SellerProfile.cs
+- [ ] Add public class SellerProfile declaration
+- [ ] Add Id property with type Guid
+- [ ] Add [Key] attribute to Id property
+- [ ] Add UserId property with type Guid (foreign key to User)
+- [ ] Add [Required] attribute to UserId property
+- [ ] Add unique index annotation for UserId
+- [ ] Add StoreName property with type string
+- [ ] Add [Required] attribute to StoreName property
+- [ ] Add [MaxLength(200)] attribute to StoreName property
+- [ ] Add StoreUrl property with type string
+- [ ] Add [Required] attribute to StoreUrl property
+- [ ] Add [MaxLength(100)] attribute to StoreUrl property
+- [ ] Add unique index annotation for StoreUrl
+- [ ] Add Bio property with type string
+- [ ] Add [Required] attribute to Bio property
+- [ ] Add [MaxLength(2000)] attribute to Bio property
+- [ ] Add Specialties property with type string (will store JSON array)
+- [ ] Add [Required] attribute to Specialties property
+- [ ] Add Rating property with type decimal
+- [ ] Add default value 0.0m to Rating property
+- [ ] Add [Range(0, 5)] attribute to Rating property
+- [ ] Add TotalSales property with type int
+- [ ] Add default value 0 to TotalSales property
+- [ ] Add TotalRevenue property with type decimal
+- [ ] Add default value 0.0m to TotalRevenue property
+- [ ] Add CommissionRate property with type decimal
+- [ ] Add default value 0.30m to CommissionRate property
+- [ ] Add [Range(0, 1)] attribute to CommissionRate property
+- [ ] Add StripeAccountId property with type string
+- [ ] Add [MaxLength(255)] attribute to StripeAccountId property
+- [ ] Add PayoutSchedule property with type string
+- [ ] Add [MaxLength(50)] attribute to PayoutSchedule property
+- [ ] Add BankAccountLast4 property with type string
+- [ ] Add [MaxLength(4)] attribute to BankAccountLast4 property
+- [ ] Add TaxFormOnFile property with type bool
+- [ ] Add default value false to TaxFormOnFile property
+- [ ] Add W9SubmittedAt property with type DateTime? (nullable)
+- [ ] Add IsVerified property with type bool
+- [ ] Add default value false to IsVerified property
+- [ ] Add VerifiedAt property with type DateTime? (nullable)
+- [ ] Add VerificationNotes property with type string
+- [ ] Add [MaxLength(1000)] attribute to VerificationNotes property
+- [ ] Add ProfileImageUrl property with type string
+- [ ] Add [MaxLength(1000)] attribute to ProfileImageUrl property
+- [ ] Add BannerImageUrl property with type string
+- [ ] Add [MaxLength(1000)] attribute to BannerImageUrl property
+- [ ] Add SocialLinks property with type string (will store JSON)
+- [ ] Add BusinessType property with type string
+- [ ] Add [MaxLength(50)] attribute to BusinessType property
+- [ ] Add BusinessName property with type string
+- [ ] Add [MaxLength(200)] attribute to BusinessName property
+- [ ] Add TaxId property with type string
+- [ ] Add [MaxLength(50)] attribute to TaxId property
+- [ ] Add Address property with type string
+- [ ] Add [MaxLength(500)] attribute to Address property
+- [ ] Add City property with type string
+- [ ] Add [MaxLength(100)] attribute to City property
+- [ ] Add State property with type string
+- [ ] Add [MaxLength(50)] attribute to State property
+- [ ] Add ZipCode property with type string
+- [ ] Add [MaxLength(20)] attribute to ZipCode property
+- [ ] Add Country property with type string
+- [ ] Add [MaxLength(100)] attribute to Country property
+- [ ] Add IsActive property with type bool
+- [ ] Add default value true to IsActive property
+- [ ] Add CreatedAt property with type DateTime
+- [ ] Add UpdatedAt property with type DateTime
+- [ ] Add navigation property User with type User
+- [ ] Add navigation property Products with type ICollection<MarketplaceProduct>
+- [ ] Add navigation property Transactions with type ICollection<MarketplaceTransaction>
+- [ ] Add navigation property Reviews with type ICollection<SellerReview>
+- [ ] Add navigation property Followers with type ICollection<SellerFollower>
+- [ ] Add navigation property Payouts with type ICollection<SellerPayout>
+
+## Session Entity
+
+- [ ] Create Session.cs file in Models/Domain folder
+- [ ] Add using statements for System and System.ComponentModel.DataAnnotations
+- [ ] Add namespace UPTRMS.Api.Models.Domain to Session.cs
+- [ ] Add public class Session declaration
+- [ ] Add Id property with type Guid
+- [ ] Add [Key] attribute to Id property
+- [ ] Add TherapistId property with type Guid (foreign key to User)
+- [ ] Add [Required] attribute to TherapistId property
+- [ ] Add StudentId property with type Guid (foreign key to Student)
+- [ ] Add [Required] attribute to StudentId property
+- [ ] Add ScheduledAt property with type DateTime
+- [ ] Add [Required] attribute to ScheduledAt property
+- [ ] Add StartedAt property with type DateTime? (nullable)
+- [ ] Add EndedAt property with type DateTime? (nullable)
+- [ ] Add DurationMinutes property with type int
+- [ ] Add [Required] attribute to DurationMinutes property
+- [ ] Add SessionType property with type string
+- [ ] Add [Required] attribute to SessionType property
+- [ ] Add [MaxLength(50)] attribute to SessionType property
+- [ ] Add SessionStatus property with type string
+- [ ] Add [Required] attribute to SessionStatus property
+- [ ] Add [MaxLength(50)] attribute to SessionStatus property
+- [ ] Add Location property with type string
+- [ ] Add [MaxLength(200)] attribute to Location property
+- [ ] Add IsVirtual property with type bool
+- [ ] Add default value false to IsVirtual property
+- [ ] Add VirtualMeetingUrl property with type string
+- [ ] Add [MaxLength(1000)] attribute to VirtualMeetingUrl property
+- [ ] Add Notes property with type string
+- [ ] Add DataCollected property with type string (will store JSON)
+- [ ] Add GoalsAddressed property with type string (will store JSON array of goal IDs)
+- [ ] Add ResourcesUsed property with type string (will store JSON array of resource IDs)
+- [ ] Add ProgressNotes property with type string
+- [ ] Add ObjectiveData property with type string (will store JSON)
+- [ ] Add SubjectiveData property with type string
+- [ ] Add AssessmentNotes property with type string
+- [ ] Add PlanNotes property with type string
+- [ ] Add IsBillable property with type bool
+- [ ] Add default value true to IsBillable property
+- [ ] Add BillingCode property with type string
+- [ ] Add [MaxLength(50)] attribute to BillingCode property
+- [ ] Add BillingUnits property with type decimal?
+- [ ] Add CancellationReason property with type string
+- [ ] Add [MaxLength(500)] attribute to CancellationReason property
+- [ ] Add CanceledAt property with type DateTime? (nullable)
+- [ ] Add CanceledBy property with type Guid? (nullable)
+- [ ] Add NoShowReason property with type string
+- [ ] Add [MaxLength(500)] attribute to NoShowReason property
+- [ ] Add ParentSignatureUrl property with type string
+- [ ] Add [MaxLength(1000)] attribute to ParentSignatureUrl property
+- [ ] Add SignedAt property with type DateTime? (nullable)
+- [ ] Add CreatedAt property with type DateTime
+- [ ] Add UpdatedAt property with type DateTime
+- [ ] Add navigation property Therapist with type User
+- [ ] Add navigation property Student with type Student
+- [ ] Add navigation property Resources with type ICollection<SessionResource>
+- [ ] Add navigation property Goals with type ICollection<SessionGoal>
+- [ ] Add navigation property ProgressData with type ICollection<ProgressData>

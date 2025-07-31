@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 17
     testRunner.And("each session maintains state and context", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2261 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2224 = new TechTalk.SpecFlow.Table(new string[] {
                             "Session Type",
                             "Target Concurrency",
                             "Session Duration",
                             "State Size",
                             "Persistence Strategy",
                             "Distribution Method"});
-                table2261.AddRow(new string[] {
+                table2224.AddRow(new string[] {
                             "Web sessions",
                             "5M concurrent",
                             "30 min average",
                             "10KB/session",
                             "Redis cluster",
                             "Geo-distributed"});
-                table2261.AddRow(new string[] {
+                table2224.AddRow(new string[] {
                             "Mobile sessions",
                             "10M concurrent",
                             "2 hour average",
                             "5KB/session",
                             "In-memory + backup",
                             "Regional sharding"});
-                table2261.AddRow(new string[] {
+                table2224.AddRow(new string[] {
                             "API sessions",
                             "2M concurrent",
                             "5 min average",
                             "2KB/session",
                             "JWT + cache",
                             "Stateless design"});
-                table2261.AddRow(new string[] {
+                table2224.AddRow(new string[] {
                             "WebSocket connections",
                             "1M concurrent",
                             "45 min average",
                             "20KB/session",
                             "Sticky sessions",
                             "Connection pooling"});
-                table2261.AddRow(new string[] {
+                table2224.AddRow(new string[] {
                             "Therapy sessions",
                             "500K concurrent",
                             "1 hour average",
                             "100KB/session",
                             "Distributed cache",
                             "Session affinity"});
-                table2261.AddRow(new string[] {
+                table2224.AddRow(new string[] {
                             "Background workers",
                             "100K concurrent",
                             "Variable",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Database backed",
                             "Queue-based"});
 #line 18
-    testRunner.When("managing concurrent sessions at scale:", ((string)(null)), table2261, "When ");
+    testRunner.When("managing concurrent sessions at scale:", ((string)(null)), table2224, "When ");
 #line hidden
 #line 26
     testRunner.Then("sessions should be managed efficiently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 34
     testRunner.And("WebSocket scaling presents unique challenges", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2262 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2225 = new TechTalk.SpecFlow.Table(new string[] {
                             "Component",
                             "Scaling Strategy",
                             "Connection Limit",
                             "Message Throughput",
                             "Failover Method",
                             "Load Distribution"});
-                table2262.AddRow(new string[] {
+                table2225.AddRow(new string[] {
                             "Connection gateway",
                             "Horizontal scaling",
                             "100K per instance",
                             "1M msg/sec/instance",
                             "Graceful reconnect",
                             "Round-robin + affinity"});
-                table2262.AddRow(new string[] {
+                table2225.AddRow(new string[] {
                             "Message broker",
                             "Clustered deployment",
                             "Unlimited",
                             "10M msg/sec total",
                             "Automatic failover",
                             "Publish-subscribe"});
-                table2262.AddRow(new string[] {
+                table2225.AddRow(new string[] {
                             "Session registry",
                             "Distributed hash table",
                             "10M entries",
                             "100K updates/sec",
                             "Replicated state",
                             "Consistent hashing"});
-                table2262.AddRow(new string[] {
+                table2225.AddRow(new string[] {
                             "Presence service",
                             "Regional sharding",
                             "5M users/region",
                             "500K updates/sec",
                             "Cross-region sync",
                             "Geographic routing"});
-                table2262.AddRow(new string[] {
+                table2225.AddRow(new string[] {
                             "Event bus",
                             "Kafka cluster",
                             "N/A",
                             "50M events/sec",
                             "Multi-datacenter",
                             "Partitioned topics"});
-                table2262.AddRow(new string[] {
+                table2225.AddRow(new string[] {
                             "Client libraries",
                             "Auto-reconnect",
                             "Unlimited",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Exponential backoff",
                             "Nearest endpoint"});
 #line 35
-    testRunner.When("scaling WebSocket infrastructure:", ((string)(null)), table2262, "When ");
+    testRunner.When("scaling WebSocket infrastructure:", ((string)(null)), table2225, "When ");
 #line hidden
 #line 43
     testRunner.Then("WebSocket connections should scale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 51
     testRunner.And("synchronization must handle conflicts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2263 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2226 = new TechTalk.SpecFlow.Table(new string[] {
                             "State Type",
                             "Sync Method",
                             "Consistency Model",
                             "Conflict Resolution",
                             "Sync Frequency",
                             "Partition Tolerance"});
-                table2263.AddRow(new string[] {
+                table2226.AddRow(new string[] {
                             "User preferences",
                             "Event sourcing",
                             "Eventually consistent",
                             "Last write wins",
                             "On change",
                             "Full tolerance"});
-                table2263.AddRow(new string[] {
+                table2226.AddRow(new string[] {
                             "Active documents",
                             "CRDT-based",
                             "Strong eventual",
                             "Automatic merge",
                             "Real-time",
                             "Merge on rejoin"});
-                table2263.AddRow(new string[] {
+                table2226.AddRow(new string[] {
                             "Shopping carts",
                             "Distributed cache",
                             "Read-after-write",
                             "Union of items",
                             "Every action",
                             "Session affinity"});
-                table2263.AddRow(new string[] {
+                table2226.AddRow(new string[] {
                             "Game state",
                             "State machine",
                             "Strict ordering",
                             "Server authoritative",
                             "60 Hz",
                             "Pause on partition"});
-                table2263.AddRow(new string[] {
+                table2226.AddRow(new string[] {
                             "Collaboration data",
                             "Operational transform",
                             "Causal consistency",
                             "Transform resolution",
                             "Per operation",
                             "Queue operations"});
-                table2263.AddRow(new string[] {
+                table2226.AddRow(new string[] {
                             "Analytics data",
                             "Async replication",
                             "Eventual",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Batch (5 min)",
                             "Continue locally"});
 #line 52
-    testRunner.When("implementing state synchronization:", ((string)(null)), table2263, "When ");
+    testRunner.When("implementing state synchronization:", ((string)(null)), table2226, "When ");
 #line hidden
 #line 60
     testRunner.Then("state should remain synchronized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 68
     testRunner.And("pooling must be optimized for scale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2264 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2227 = new TechTalk.SpecFlow.Table(new string[] {
                             "Pool Type",
                             "Pool Size",
                             "Connection Timeout",
                             "Idle Timeout",
                             "Validation Method",
                             "Scaling Behavior"});
-                table2264.AddRow(new string[] {
+                table2227.AddRow(new string[] {
                             "Database primary",
                             "10K connections",
                             "30 seconds",
                             "10 minutes",
                             "Query validation",
                             "Dynamic sizing"});
-                table2264.AddRow(new string[] {
+                table2227.AddRow(new string[] {
                             "Database replica",
                             "50K connections",
                             "10 seconds",
                             "5 minutes",
                             "Ping validation",
                             "Auto-scale with load"});
-                table2264.AddRow(new string[] {
+                table2227.AddRow(new string[] {
                             "Cache connections",
                             "100K connections",
                             "5 seconds",
                             "30 minutes",
                             "Heartbeat",
                             "Pre-warmed pools"});
-                table2264.AddRow(new string[] {
+                table2227.AddRow(new string[] {
                             "Message queue",
                             "20K connections",
                             "15 seconds",
                             "15 minutes",
                             "Protocol check",
                             "Burst capacity"});
-                table2264.AddRow(new string[] {
+                table2227.AddRow(new string[] {
                             "External APIs",
                             "5K connections",
                             "60 seconds",
                             "2 minutes",
                             "HTTP health check",
                             "Circuit breaker"});
-                table2264.AddRow(new string[] {
+                table2227.AddRow(new string[] {
                             "Service mesh",
                             "200K connections",
                             "3 seconds",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "TCP keepalive",
                             "Adaptive pooling"});
 #line 69
-    testRunner.When("implementing connection pooling:", ((string)(null)), table2264, "When ");
+    testRunner.When("implementing connection pooling:", ((string)(null)), table2227, "When ");
 #line hidden
 #line 77
     testRunner.Then("connection pools should be efficient", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 86
     testRunner.And("message passing enables scale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2265 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2228 = new TechTalk.SpecFlow.Table(new string[] {
                             "Actor Type",
                             "Instances",
                             "Mailbox Size",
                             "Processing Rate",
                             "Supervision Strategy",
                             "Persistence"});
-                table2265.AddRow(new string[] {
+                table2228.AddRow(new string[] {
                             "User actors",
                             "10M actors",
                             "1000 messages",
                             "100 msg/sec",
                             "One-for-one restart",
                             "Event sourced"});
-                table2265.AddRow(new string[] {
+                table2228.AddRow(new string[] {
                             "Session actors",
                             "5M actors",
                             "500 messages",
                             "200 msg/sec",
                             "Escalating restart",
                             "Snapshot + log"});
-                table2265.AddRow(new string[] {
+                table2228.AddRow(new string[] {
                             "Document actors",
                             "2M actors",
                             "2000 messages",
                             "50 msg/sec",
                             "Resume supervision",
                             "Full persistence"});
-                table2265.AddRow(new string[] {
+                table2228.AddRow(new string[] {
                             "Notification actors",
                             "1M actors",
                             "5000 messages",
                             "500 msg/sec",
                             "Temporary actors",
                             "No persistence"});
-                table2265.AddRow(new string[] {
+                table2228.AddRow(new string[] {
                             "Analytics actors",
                             "100K actors",
                             "10K messages",
                             "1000 msg/sec",
                             "Pool supervision",
                             "Checkpoint only"});
-                table2265.AddRow(new string[] {
+                table2228.AddRow(new string[] {
                             "System actors",
                             "10K actors",
                             "Unlimited",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Always restart",
                             "Durable state"});
 #line 87
-    testRunner.When("implementing actor systems:", ((string)(null)), table2265, "When ");
+    testRunner.When("implementing actor systems:", ((string)(null)), table2228, "When ");
 #line hidden
 #line 95
     testRunner.Then("actors should process concurrently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 103
     testRunner.And("limits must be fair and dynamic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2266 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2229 = new TechTalk.SpecFlow.Table(new string[] {
                             "Limit Type",
                             "Algorithm",
                             "Window Size",
                             "Burst Capacity",
                             "Sharing Strategy",
                             "Overflow Handling"});
-                table2266.AddRow(new string[] {
+                table2229.AddRow(new string[] {
                             "User API limits",
                             "Token bucket",
                             "1 minute",
                             "20% burst",
                             "Per user ID",
                             "Queue with timeout"});
-                table2266.AddRow(new string[] {
+                table2229.AddRow(new string[] {
                             "IP-based limits",
                             "Sliding window",
                             "5 minutes",
                             "10% burst",
                             "Per IP subnet",
                             "Progressive backoff"});
-                table2266.AddRow(new string[] {
+                table2229.AddRow(new string[] {
                             "Tenant limits",
                             "Leaky bucket",
                             "1 hour",
                             "50% burst",
                             "Per organization",
                             "Priority queuing"});
-                table2266.AddRow(new string[] {
+                table2229.AddRow(new string[] {
                             "Global limits",
                             "Adaptive limiting",
                             "Dynamic",
                             "Load-based",
                             "System-wide",
                             "Graceful degradation"});
-                table2266.AddRow(new string[] {
+                table2229.AddRow(new string[] {
                             "WebSocket limits",
                             "Connection quota",
                             "Per session",
                             "No burst",
                             "Per user",
                             "Reject new connections"});
-                table2266.AddRow(new string[] {
+                table2229.AddRow(new string[] {
                             "Background jobs",
                             "Fair queuing",
                             "N/A",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Queue-based",
                             "Delayed execution"});
 #line 104
-    testRunner.When("implementing rate limiting:", ((string)(null)), table2266, "When ");
+    testRunner.When("implementing rate limiting:", ((string)(null)), table2229, "When ");
 #line hidden
 #line 112
     testRunner.Then("rate limiting should be effective", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 120
     testRunner.And("conflicts must be resolved automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2267 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2230 = new TechTalk.SpecFlow.Table(new string[] {
                             "Document Type",
                             "Max Concurrent Editors",
                             "Sync Algorithm",
                             "Conflict Resolution",
                             "Performance Target",
                             "Offline Support"});
-                table2267.AddRow(new string[] {
+                table2230.AddRow(new string[] {
                             "Text documents",
                             "1000 users",
                             "Operational Transform",
                             "Automatic merge",
                             "<100ms sync",
                             "Full offline editing"});
-                table2267.AddRow(new string[] {
+                table2230.AddRow(new string[] {
                             "Spreadsheets",
                             "500 users",
                             "CRDT-based",
                             "Cell-level locking",
                             "<200ms sync",
                             "Read-only offline"});
-                table2267.AddRow(new string[] {
+                table2230.AddRow(new string[] {
                             "Whiteboards",
                             "200 users",
                             "Event streaming",
                             "Draw order",
                             "<50ms sync",
                             "Queue offline changes"});
-                table2267.AddRow(new string[] {
+                table2230.AddRow(new string[] {
                             "Code files",
                             "100 users",
                             "Git-like merge",
                             "Three-way merge",
                             "<150ms sync",
                             "Branch offline"});
-                table2267.AddRow(new string[] {
+                table2230.AddRow(new string[] {
                             "Presentations",
                             "50 users",
                             "Master-slave",
                             "Presenter control",
                             "<100ms sync",
                             "Cache offline"});
-                table2267.AddRow(new string[] {
+                table2230.AddRow(new string[] {
                             "Forms",
                             "2000 users",
                             "Field-level sync",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "<200ms sync",
                             "Offline submission"});
 #line 121
-    testRunner.When("scaling collaborative editing:", ((string)(null)), table2267, "When ");
+    testRunner.When("scaling collaborative editing:", ((string)(null)), table2230, "When ");
 #line hidden
 #line 129
     testRunner.Then("collaboration should scale smoothly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 137
     testRunner.And("quality must adapt to conditions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2268 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2231 = new TechTalk.SpecFlow.Table(new string[] {
                             "Stream Type",
                             "Concurrent Viewers",
                             "Bitrate Options",
                             "CDN Strategy",
                             "Failover Method",
                             "Quality Control"});
-                table2268.AddRow(new string[] {
+                table2231.AddRow(new string[] {
                             "Live therapy sessions",
                             "10K per stream",
                             "360p to 1080p",
                             "Multi-CDN",
                             "Seamless switch",
                             "Adaptive bitrate"});
-                table2268.AddRow(new string[] {
+                table2231.AddRow(new string[] {
                             "Educational videos",
                             "1M total",
                             "240p to 4K",
                             "Global CDN",
                             "Pre-cached failover",
                             "Buffer management"});
-                table2268.AddRow(new string[] {
+                table2231.AddRow(new string[] {
                             "Webinars",
                             "50K per event",
                             "480p to 1080p",
                             "Regional CDN",
                             "Secondary streams",
                             "Dynamic quality"});
-                table2268.AddRow(new string[] {
+                table2231.AddRow(new string[] {
                             "Audio streams",
                             "500K concurrent",
                             "64kbps to 320kbps",
                             "Edge caching",
                             "Multiple sources",
                             "Codec selection"});
-                table2268.AddRow(new string[] {
+                table2231.AddRow(new string[] {
                             "Screen sharing",
                             "5K per session",
                             "Dynamic quality",
                             "P2P + CDN",
                             "Relay servers",
                             "Frame dropping"});
-                table2268.AddRow(new string[] {
+                table2231.AddRow(new string[] {
                             "AR/VR streams",
                             "1K per session",
                             "High bitrate",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Local rendering",
                             "Predictive streaming"});
 #line 138
-    testRunner.When("scaling media delivery:", ((string)(null)), table2268, "When ");
+    testRunner.When("scaling media delivery:", ((string)(null)), table2231, "When ");
 #line hidden
 #line 146
     testRunner.Then("streaming should handle scale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 155
     testRunner.And("recovery must be fast", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2269 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2232 = new TechTalk.SpecFlow.Table(new string[] {
                             "Persistence Layer",
                             "Write Throughput",
                             "Recovery Time",
                             "Durability Guarantee",
                             "Replication Factor",
                             "Consistency Model"});
-                table2269.AddRow(new string[] {
+                table2232.AddRow(new string[] {
                             "Memory + disk",
                             "1M writes/sec",
                             "<1 second",
                             "99.999%",
                             "3x replication",
                             "Read-after-write"});
-                table2269.AddRow(new string[] {
+                table2232.AddRow(new string[] {
                             "Distributed cache",
                             "5M writes/sec",
                             "<500ms",
                             "99.99%",
                             "2x replication",
                             "Eventually consistent"});
-                table2269.AddRow(new string[] {
+                table2232.AddRow(new string[] {
                             "Session database",
                             "500K writes/sec",
                             "<5 seconds",
                             "99.9999%",
                             "Multi-region",
                             "Strong consistency"});
-                table2269.AddRow(new string[] {
+                table2232.AddRow(new string[] {
                             "Event store",
                             "2M writes/sec",
                             "<2 seconds",
                             "100% (event sourced)",
                             "3x + archive",
                             "Event ordering"});
-                table2269.AddRow(new string[] {
+                table2232.AddRow(new string[] {
                             "Hybrid storage",
                             "10M writes/sec",
                             "<100ms hot data",
                             "Tiered durability",
                             "Variable",
                             "Mixed consistency"});
-                table2269.AddRow(new string[] {
+                table2232.AddRow(new string[] {
                             "Edge persistence",
                             "100K writes/sec",
                             "<10 seconds",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Local + central",
                             "Eventual sync"});
 #line 156
-    testRunner.When("implementing session persistence:", ((string)(null)), table2269, "When ");
+    testRunner.When("implementing session persistence:", ((string)(null)), table2232, "When ");
 #line hidden
 #line 164
     testRunner.Then("sessions should persist reliably", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 172
     testRunner.And("jobs must be processed reliably", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2270 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2233 = new TechTalk.SpecFlow.Table(new string[] {
                             "Queue Type",
                             "Throughput",
                             "Concurrent Workers",
                             "Message Size",
                             "Retention",
                             "Delivery Guarantee"});
-                table2270.AddRow(new string[] {
+                table2233.AddRow(new string[] {
                             "Priority queue",
                             "100K jobs/sec",
                             "10K workers",
                             "<1MB",
                             "24 hours",
                             "At least once"});
-                table2270.AddRow(new string[] {
+                table2233.AddRow(new string[] {
                             "Batch queue",
                             "1M jobs/sec",
                             "50K workers",
                             "<10KB",
                             "7 days",
                             "Exactly once"});
-                table2270.AddRow(new string[] {
+                table2233.AddRow(new string[] {
                             "Real-time queue",
                             "500K jobs/sec",
                             "20K workers",
                             "<100KB",
                             "1 hour",
                             "At most once"});
-                table2270.AddRow(new string[] {
+                table2233.AddRow(new string[] {
                             "Delayed queue",
                             "50K jobs/sec",
                             "5K workers",
                             "<1MB",
                             "30 days",
                             "At least once"});
-                table2270.AddRow(new string[] {
+                table2233.AddRow(new string[] {
                             "Dead letter queue",
                             "10K jobs/sec",
                             "1K workers",
                             "Any size",
                             "90 days",
                             "Best effort"});
-                table2270.AddRow(new string[] {
+                table2233.AddRow(new string[] {
                             "Event queue",
                             "2M events/sec",
                             "100K workers",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "1 hour",
                             "At least once"});
 #line 173
-    testRunner.When("scaling job queues:", ((string)(null)), table2270, "When ");
+    testRunner.When("scaling job queues:", ((string)(null)), table2233, "When ");
 #line hidden
 #line 181
     testRunner.Then("queues should handle volume", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 190
     testRunner.And("optimization must work at scale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2271 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2234 = new TechTalk.SpecFlow.Table(new string[] {
                             "Operation Type",
                             "Current Latency",
                             "Target Latency",
                             "Optimization Method",
                             "Concurrency Impact",
                             "Success Rate"});
-                table2271.AddRow(new string[] {
+                table2234.AddRow(new string[] {
                             "API requests",
                             "200ms p99",
                             "50ms p99",
                             "Edge caching",
                             "None",
                             "99.9%"});
-                table2271.AddRow(new string[] {
+                table2234.AddRow(new string[] {
                             "Database queries",
                             "100ms p95",
                             "10ms p95",
                             "Query optimization",
                             "Slight improvement",
                             "99.99%"});
-                table2271.AddRow(new string[] {
+                table2234.AddRow(new string[] {
                             "Cache lookups",
                             "5ms p99",
                             "1ms p99",
                             "Local caching layer",
                             "Better with scale",
                             "99.999%"});
-                table2271.AddRow(new string[] {
+                table2234.AddRow(new string[] {
                             "Message delivery",
                             "50ms p95",
                             "10ms p95",
                             "Regional brokers",
                             "Linear scaling",
                             "99.95%"});
-                table2271.AddRow(new string[] {
+                table2234.AddRow(new string[] {
                             "Session creation",
                             "500ms",
                             "100ms",
                             "Pre-warmed pools",
                             "Constant time",
                             "99.9%"});
-                table2271.AddRow(new string[] {
+                table2234.AddRow(new string[] {
                             "File uploads",
                             "2s/MB",
                             "500ms/MB",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Better with concurrency",
                             "99%"});
 #line 191
-    testRunner.When("optimizing for latency:", ((string)(null)), table2271, "When ");
+    testRunner.When("optimizing for latency:", ((string)(null)), table2234, "When ");
 #line hidden
 #line 199
     testRunner.Then("latency should meet targets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 207
     testRunner.And("isolation must work at scale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2272 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2235 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resource Type",
                             "Isolation Method",
                             "Allocation Strategy",
                             "Burst Capacity",
                             "Monitoring",
                             "Enforcement"});
-                table2272.AddRow(new string[] {
+                table2235.AddRow(new string[] {
                             "CPU quota",
                             "Cgroups/containers",
                             "Guaranteed minimum",
                             "2x burst allowed",
                             "Per-tenant metrics",
                             "Hard limits"});
-                table2272.AddRow(new string[] {
+                table2235.AddRow(new string[] {
                             "Memory allocation",
                             "Memory cgroups",
                             "Reserved pools",
                             "1.5x burst",
                             "Memory pressure",
                             "OOM killer settings"});
-                table2272.AddRow(new string[] {
+                table2235.AddRow(new string[] {
                             "Network bandwidth",
                             "Traffic shaping",
                             "Fair queuing",
                             "3x burst",
                             "Bandwidth usage",
                             "TC/eBPF rules"});
-                table2272.AddRow(new string[] {
+                table2235.AddRow(new string[] {
                             "Storage IOPS",
                             "Block I/O control",
                             "Proportional share",
                             "Limited burst",
                             "IOPS tracking",
                             "Throttling"});
-                table2272.AddRow(new string[] {
+                table2235.AddRow(new string[] {
                             "Database connections",
                             "Connection pools",
                             "Per-tenant pools",
                             "Shared overflow",
                             "Pool utilization",
                             "Connection limits"});
-                table2272.AddRow(new string[] {
+                table2235.AddRow(new string[] {
                             "API rate limits",
                             "Token buckets",
                             "Tiered limits",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Request rates",
                             "HTTP 429 responses"});
 #line 208
-    testRunner.When("implementing resource isolation:", ((string)(null)), table2272, "When ");
+    testRunner.When("implementing resource isolation:", ((string)(null)), table2235, "When ");
 #line hidden
 #line 216
     testRunner.Then("resources should be isolated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 224
     testRunner.And("degradation must be controlled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2273 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2236 = new TechTalk.SpecFlow.Table(new string[] {
                             "Overload Trigger",
                             "Detection Method",
                             "Degradation Strategy",
                             "Recovery Trigger",
                             "User Impact",
                             "Communication"});
-                table2273.AddRow(new string[] {
+                table2236.AddRow(new string[] {
                             "CPU > 90%",
                             "System metrics",
                             "Disable features",
                             "CPU < 70%",
                             "Reduced functionality",
                             "Status banner"});
-                table2273.AddRow(new string[] {
+                table2236.AddRow(new string[] {
                             "Memory > 85%",
                             "Memory monitoring",
                             "Evict caches",
                             "Memory < 60%",
                             "Slower responses",
                             "Performance notice"});
-                table2273.AddRow(new string[] {
+                table2236.AddRow(new string[] {
                             "Queue depth > 10K",
                             "Queue monitoring",
                             "Reject low priority",
                             "Queue < 5K",
                             "Delayed processing",
                             "Queue position"});
-                table2273.AddRow(new string[] {
+                table2236.AddRow(new string[] {
                             "Error rate > 5%",
                             "Error tracking",
                             "Circuit breakers",
                             "Error rate < 1%",
                             "Partial failures",
                             "Error messages"});
-                table2273.AddRow(new string[] {
+                table2236.AddRow(new string[] {
                             "Latency > 1s p95",
                             "Response timing",
                             "Timeout reduction",
                             "Latency < 500ms",
                             "Faster timeouts",
                             "Loading indicators"});
-                table2273.AddRow(new string[] {
+                table2236.AddRow(new string[] {
                             "Connections > 95%",
                             "Connection tracking",
                             "Connection limits",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Connection refused",
                             "Retry guidance"});
 #line 225
-    testRunner.When("implementing overload handling:", ((string)(null)), table2273, "When ");
+    testRunner.When("implementing overload handling:", ((string)(null)), table2236, "When ");
 #line hidden
 #line 233
     testRunner.Then("overload should be detected quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 241
     testRunner.And("patterns reveal scaling needs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2274 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2237 = new TechTalk.SpecFlow.Table(new string[] {
                             "Metric Category",
                             "Collection Method",
                             "Aggregation Level",
                             "Analysis Type",
                             "Alert Threshold",
                             "Action Trigger"});
-                table2274.AddRow(new string[] {
+                table2237.AddRow(new string[] {
                             "Session count",
                             "Real-time counter",
                             "Global + regional",
                             "Trend analysis",
                             ">90% capacity",
                             "Auto-scaling"});
-                table2274.AddRow(new string[] {
+                table2237.AddRow(new string[] {
                             "Session duration",
                             "Timer metrics",
                             "Per session type",
                             "Distribution analysis",
                             ">2x average",
                             "Investigation"});
-                table2274.AddRow(new string[] {
+                table2237.AddRow(new string[] {
                             "Resource usage",
                             "Sampling",
                             "Per tenant",
                             "Cost allocation",
                             ">budget",
                             "Notification"});
-                table2274.AddRow(new string[] {
+                table2237.AddRow(new string[] {
                             "Error rates",
                             "Error tracking",
                             "Per endpoint",
                             "Root cause analysis",
                             ">1% errors",
                             "Incident response"});
-                table2274.AddRow(new string[] {
+                table2237.AddRow(new string[] {
                             "Geographic distribution",
                             "GeoIP tracking",
                             "Per region",
                             "Capacity planning",
                             "Imbalanced load",
                             "Traffic routing"});
-                table2274.AddRow(new string[] {
+                table2237.AddRow(new string[] {
                             "Concurrent operations",
                             "Transaction tracking",
                             "Per operation type",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Queue buildup",
                             "Optimization"});
 #line 242
-    testRunner.When("monitoring concurrent sessions:", ((string)(null)), table2274, "When ");
+    testRunner.When("monitoring concurrent sessions:", ((string)(null)), table2237, "When ");
 #line hidden
 #line 250
     testRunner.Then("monitoring should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 258
     testRunner.And("simulation must be scalable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2275 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2238 = new TechTalk.SpecFlow.Table(new string[] {
                             "Test Scenario",
                             "Simulated Users",
                             "Behavior Pattern",
                             "Resource Requirement",
                             "Duration",
                             "Success Criteria"});
-                table2275.AddRow(new string[] {
+                table2238.AddRow(new string[] {
                             "Peak hour load",
                             "5M concurrent",
                             "Realistic actions",
                             "1000 load generators",
                             "4 hours",
                             "<100ms p95 latency"});
-                table2275.AddRow(new string[] {
+                table2238.AddRow(new string[] {
                             "Spike test",
                             "0 to 10M in 5 min",
                             "Login surge",
                             "2000 generators",
                             "30 minutes",
                             "No errors"});
-                table2275.AddRow(new string[] {
+                table2238.AddRow(new string[] {
                             "Endurance test",
                             "2M sustained",
                             "Normal usage",
                             "500 generators",
                             "48 hours",
                             "Stable performance"});
-                table2275.AddRow(new string[] {
+                table2238.AddRow(new string[] {
                             "Stress test",
                             "20M attempted",
                             "Overload",
                             "5000 generators",
                             "1 hour",
                             "Graceful degradation"});
-                table2275.AddRow(new string[] {
+                table2238.AddRow(new string[] {
                             "Geographic test",
                             "1M per region",
                             "Regional patterns",
                             "Distributed generators",
                             "24 hours",
                             "Regional SLAs met"});
-                table2275.AddRow(new string[] {
+                table2238.AddRow(new string[] {
                             "Feature test",
                             "500K focused",
                             "Feature-specific",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "2 hours",
                             "Feature performance"});
 #line 259
-    testRunner.When("implementing load testing:", ((string)(null)), table2275, "When ");
+    testRunner.When("implementing load testing:", ((string)(null)), table2238, "When ");
 #line hidden
 #line 267
     testRunner.Then("load testing should be realistic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 275
     testRunner.And("coordination must scale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2276 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2239 = new TechTalk.SpecFlow.Table(new string[] {
                             "Orchestration Pattern",
                             "Concurrent Calls",
                             "Coordination Method",
                             "Failure Handling",
                             "Performance Target",
                             "Resource Usage"});
-                table2276.AddRow(new string[] {
+                table2239.AddRow(new string[] {
                             "Scatter-gather",
                             "100 services",
                             "Parallel execution",
                             "Partial success OK",
                             "<200ms total",
                             "Bounded thread pool"});
-                table2276.AddRow(new string[] {
+                table2239.AddRow(new string[] {
                             "Sequential chain",
                             "10 services",
                             "Pipeline pattern",
                             "Compensating transactions",
                             "<500ms total",
                             "Minimal overhead"});
-                table2276.AddRow(new string[] {
+                table2239.AddRow(new string[] {
                             "Conditional flow",
                             "50 branches",
                             "Decision tree",
                             "Default paths",
                             "<300ms average",
                             "CPU efficient"});
-                table2276.AddRow(new string[] {
+                table2239.AddRow(new string[] {
                             "Fan-out/fan-in",
                             "1000 workers",
                             "Work distribution",
                             "Timeout + retry",
                             "<1s completion",
                             "Queue-based"});
-                table2276.AddRow(new string[] {
+                table2239.AddRow(new string[] {
                             "Saga pattern",
                             "20 steps",
                             "State machine",
                             "Compensation logic",
                             "<2s transaction",
                             "Persistent state"});
-                table2276.AddRow(new string[] {
+                table2239.AddRow(new string[] {
                             "Event choreography",
                             "Unlimited",
                             "Event-driven",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Async completion",
                             "Event bus"});
 #line 276
-    testRunner.When("implementing API orchestration:", ((string)(null)), table2276, "When ");
+    testRunner.When("implementing API orchestration:", ((string)(null)), table2239, "When ");
 #line hidden
 #line 284
     testRunner.Then("orchestration should scale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1854,49 +1854,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 292
     testRunner.And("strategies must prevent stampedes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2277 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2240 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cache Pattern",
                             "Use Case",
                             "Stampede Prevention",
                             "TTL Strategy",
                             "Invalidation Method",
                             "Hit Rate Target"});
-                table2277.AddRow(new string[] {
+                table2240.AddRow(new string[] {
                             "Read-through",
                             "Hot data",
                             "Probabilistic refresh",
                             "Variable TTL",
                             "Event-based",
                             ">95%"});
-                table2277.AddRow(new string[] {
+                table2240.AddRow(new string[] {
                             "Write-through",
                             "Session data",
                             "Write coalescing",
                             "Fixed TTL",
                             "Immediate",
                             ">90%"});
-                table2277.AddRow(new string[] {
+                table2240.AddRow(new string[] {
                             "Write-behind",
                             "Analytics",
                             "Batch writes",
                             "No expiry",
                             "Periodic flush",
                             ">80%"});
-                table2277.AddRow(new string[] {
+                table2240.AddRow(new string[] {
                             "Refresh-ahead",
                             "Predictable access",
                             "Background refresh",
                             "Preemptive",
                             "Scheduled",
                             ">98%"});
-                table2277.AddRow(new string[] {
+                table2240.AddRow(new string[] {
                             "Circuit breaker",
                             "External APIs",
                             "Request collapsing",
                             "Failure-based",
                             "Manual reset",
                             "N/A"});
-                table2277.AddRow(new string[] {
+                table2240.AddRow(new string[] {
                             "Multi-tier",
                             "Mixed patterns",
                             "Tier coordination",
@@ -1904,7 +1904,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Hierarchical",
                             ">93% overall"});
 #line 293
-    testRunner.When("implementing caching strategies:", ((string)(null)), table2277, "When ");
+    testRunner.When("implementing caching strategies:", ((string)(null)), table2240, "When ");
 #line hidden
 #line 301
     testRunner.Then("caching should improve performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1961,49 +1961,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 309
     testRunner.And("locks must work at scale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2278 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2241 = new TechTalk.SpecFlow.Table(new string[] {
                             "Lock Type",
                             "Scope",
                             "Acquisition Time",
                             "Hold Duration",
                             "Deadlock Prevention",
                             "Failure Behavior"});
-                table2278.AddRow(new string[] {
+                table2241.AddRow(new string[] {
                             "Optimistic locks",
                             "Row-level",
                             "Instant",
                             "Transaction duration",
                             "Version checking",
                             "Retry with backoff"});
-                table2278.AddRow(new string[] {
+                table2241.AddRow(new string[] {
                             "Pessimistic locks",
                             "Resource-level",
                             "<100ms",
                             "Timeout-based",
                             "Timeout + ordering",
                             "Release and retry"});
-                table2278.AddRow(new string[] {
+                table2241.AddRow(new string[] {
                             "Distributed mutex",
                             "Global",
                             "<50ms",
                             "Application-defined",
                             "Lease expiration",
                             "Auto-release"});
-                table2278.AddRow(new string[] {
+                table2241.AddRow(new string[] {
                             "Read-write locks",
                             "Data structures",
                             "<10ms",
                             "Operation duration",
                             "Reader preference",
                             "Writer starvation prevention"});
-                table2278.AddRow(new string[] {
+                table2241.AddRow(new string[] {
                             "Hierarchical locks",
                             "Tree structures",
                             "<200ms",
                             "Variable",
                             "Lock ordering",
                             "Partial lock release"});
-                table2278.AddRow(new string[] {
+                table2241.AddRow(new string[] {
                             "Intent locks",
                             "Table-level",
                             "<20ms",
@@ -2011,7 +2011,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Compatibility matrix",
                             "Escalation prevention"});
 #line 310
-    testRunner.When("implementing distributed locking:", ((string)(null)), table2278, "When ");
+    testRunner.When("implementing distributed locking:", ((string)(null)), table2241, "When ");
 #line hidden
 #line 318
     testRunner.Then("locks should be acquired quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -2068,49 +2068,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 326
     testRunner.And("architecture must be adaptable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2279 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2242 = new TechTalk.SpecFlow.Table(new string[] {
                             "Future Technology",
                             "Preparation Strategy",
                             "Current Benefit",
                             "Migration Path",
                             "Investment Level",
                             "Timeline"});
-                table2279.AddRow(new string[] {
+                table2242.AddRow(new string[] {
                             "Quantum computing",
                             "Quantum-safe algorithms",
                             "Security improvement",
                             "Gradual algorithm update",
                             "Research phase",
                             "5-10 years"});
-                table2279.AddRow(new string[] {
+                table2242.AddRow(new string[] {
                             "Neuromorphic chips",
                             "Event-driven architecture",
                             "Better async handling",
                             "Spike-based processing",
                             "Experimental",
                             "10-15 years"});
-                table2279.AddRow(new string[] {
+                table2242.AddRow(new string[] {
                             "Optical computing",
                             "Photonic-ready protocols",
                             "Lower latency prep",
                             "Hybrid architectures",
                             "Early research",
                             "15-20 years"});
-                table2279.AddRow(new string[] {
+                table2242.AddRow(new string[] {
                             "DNA storage",
                             "Massive archive systems",
                             "Better archive design",
                             "Hierarchical storage",
                             "Concept only",
                             "20+ years"});
-                table2279.AddRow(new string[] {
+                table2242.AddRow(new string[] {
                             "6G networks",
                             "Ultra-low latency design",
                             "Current optimization",
                             "Protocol evolution",
                             "Standards tracking",
                             "5-8 years"});
-                table2279.AddRow(new string[] {
+                table2242.AddRow(new string[] {
                             "Brain interfaces",
                             "Thought-speed response",
                             "UX improvements",
@@ -2118,7 +2118,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Far future",
                             "20+ years"});
 #line 327
-    testRunner.When("preparing for future concurrency:", ((string)(null)), table2279, "When ");
+    testRunner.When("preparing for future concurrency:", ((string)(null)), table2242, "When ");
 #line hidden
 #line 335
     testRunner.Then("architecture should be flexible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

@@ -137,48 +137,48 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 16
     testRunner.And("my SimplePractice credentials are validated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1455 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1418 = new TechTalk.SpecFlow.Table(new string[] {
                             "Integration Step",
                             "Expected Action",
                             "Data Synchronized",
                             "Response Time Target"});
-                table1455.AddRow(new string[] {
+                table1418.AddRow(new string[] {
                             "Initial authentication",
                             "OAuth 2.0 flow completion",
                             "User profile data",
                             "<10 seconds"});
-                table1455.AddRow(new string[] {
+                table1418.AddRow(new string[] {
                             "Patient roster sync",
                             "Import active patients",
                             "Patient demographics",
                             "<30 seconds"});
-                table1455.AddRow(new string[] {
+                table1418.AddRow(new string[] {
                             "Appointment retrieval",
                             "Sync scheduled sessions",
                             "Session schedule",
                             "<15 seconds"});
-                table1455.AddRow(new string[] {
+                table1418.AddRow(new string[] {
                             "Session documentation",
                             "Create therapy notes",
                             "Session details",
                             "<5 seconds"});
-                table1455.AddRow(new string[] {
+                table1418.AddRow(new string[] {
                             "Progress data upload",
                             "Sync assessment results",
                             "Progress measurements",
                             "<10 seconds"});
-                table1455.AddRow(new string[] {
+                table1418.AddRow(new string[] {
                             "Billing code assignment",
                             "Attach CPT codes",
                             "Treatment codes",
                             "<3 seconds"});
-                table1455.AddRow(new string[] {
+                table1418.AddRow(new string[] {
                             "Insurance verification",
                             "Check coverage status",
                             "Insurance details",
                             "<20 seconds"});
 #line 17
-    testRunner.When("I perform complete EHR integration workflow:", ((string)(null)), table1455, "When ");
+    testRunner.When("I perform complete EHR integration workflow:", ((string)(null)), table1418, "When ");
 #line hidden
 #line 26
     testRunner.Then("all integration steps should complete successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -233,43 +233,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 34
     testRunner.And("WebPT API credentials are configured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1456 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1419 = new TechTalk.SpecFlow.Table(new string[] {
                             "Task Type",
                             "WebPT Feature",
                             "UPTRMS Feature",
                             "Sync Direction"});
-                table1456.AddRow(new string[] {
+                table1419.AddRow(new string[] {
                             "Patient intake",
                             "WebPT patient records",
                             "Student profiles",
                             "Bidirectional"});
-                table1456.AddRow(new string[] {
+                table1419.AddRow(new string[] {
                             "Treatment plans",
                             "WebPT care plans",
                             "Therapy goals",
                             "EHR to UPTRMS"});
-                table1456.AddRow(new string[] {
+                table1419.AddRow(new string[] {
                             "Exercise prescriptions",
                             "WebPT home programs",
                             "Home exercise resources",
                             "UPTRMS to EHR"});
-                table1456.AddRow(new string[] {
+                table1419.AddRow(new string[] {
                             "Outcome measurements",
                             "WebPT outcome tools",
                             "Assessment results",
                             "Bidirectional"});
-                table1456.AddRow(new string[] {
+                table1419.AddRow(new string[] {
                             "Progress notes",
                             "WebPT documentation",
                             "Session notes",
                             "UPTRMS to EHR"});
-                table1456.AddRow(new string[] {
+                table1419.AddRow(new string[] {
                             "Billing documentation",
                             "WebPT billing",
                             "Session billing data",
                             "UPTRMS to EHR"});
 #line 35
-    testRunner.When("I perform WebPT integration tasks:", ((string)(null)), table1456, "When ");
+    testRunner.When("I perform WebPT integration tasks:", ((string)(null)), table1419, "When ");
 #line hidden
 #line 43
     testRunner.Then("WebPT integration should maintain data consistency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -324,43 +324,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 51
     testRunner.And("TheraNest API access is properly configured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1457 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1420 = new TechTalk.SpecFlow.Table(new string[] {
                             "Workflow Component",
                             "TheraNest Function",
                             "Integration Point",
                             "Data Validation"});
-                table1457.AddRow(new string[] {
+                table1420.AddRow(new string[] {
                             "Client management",
                             "Client demographics",
                             "Student/client sync",
                             "HIPAA compliant"});
-                table1457.AddRow(new string[] {
+                table1420.AddRow(new string[] {
                             "Appointment scheduling",
                             "Calendar integration",
                             "Session scheduling",
                             "Real-time sync"});
-                table1457.AddRow(new string[] {
+                table1420.AddRow(new string[] {
                             "Treatment planning",
                             "Care plan creation",
                             "Therapy goal setting",
                             "Clinical validation"});
-                table1457.AddRow(new string[] {
+                table1420.AddRow(new string[] {
                             "Progress monitoring",
                             "Outcome tracking",
                             "Assessment integration",
                             "Data accuracy"});
-                table1457.AddRow(new string[] {
+                table1420.AddRow(new string[] {
                             "Clinical documentation",
                             "Therapy note templates",
                             "Session documentation",
                             "Completeness check"});
-                table1457.AddRow(new string[] {
+                table1420.AddRow(new string[] {
                             "Prescription management",
                             "Medication tracking",
                             "Not applicable",
                             "N/A"});
 #line 52
-    testRunner.When("I integrate with TheraNest workflows:", ((string)(null)), table1457, "When ");
+    testRunner.When("I integrate with TheraNest workflows:", ((string)(null)), table1420, "When ");
 #line hidden
 #line 60
     testRunner.Then("TheraNest client data should sync accurately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -410,62 +410,62 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 67
     testRunner.Given("multiple EHR systems have different data structures", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1458 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1421 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Category",
                             "UPTRMS Field",
                             "SimplePractice Field",
                             "WebPT Field",
                             "TheraNest Field"});
-                table1458.AddRow(new string[] {
+                table1421.AddRow(new string[] {
                             "Patient identification",
                             "student_id",
                             "client_id",
                             "patient_id",
                             "client_id"});
-                table1458.AddRow(new string[] {
+                table1421.AddRow(new string[] {
                             "Demographics",
                             "first_name, last_name",
                             "first_name, last_name",
                             "first_name, last_name",
                             "fname, lname"});
-                table1458.AddRow(new string[] {
+                table1421.AddRow(new string[] {
                             "Contact information",
                             "email, phone",
                             "email, phone",
                             "email, phone",
                             "email, phone"});
-                table1458.AddRow(new string[] {
+                table1421.AddRow(new string[] {
                             "Insurance details",
                             "insurance_provider",
                             "insurance_primary",
                             "insurance_primary",
                             "insurance_info"});
-                table1458.AddRow(new string[] {
+                table1421.AddRow(new string[] {
                             "Diagnosis codes",
                             "primary_diagnosis",
                             "diagnosis_codes",
                             "icd10_codes",
                             "dsm5_codes"});
-                table1458.AddRow(new string[] {
+                table1421.AddRow(new string[] {
                             "Treatment goals",
                             "therapy_goals",
                             "treatment_plan",
                             "plan_of_care",
                             "treatment_goals"});
-                table1458.AddRow(new string[] {
+                table1421.AddRow(new string[] {
                             "Session notes",
                             "session_documentation",
                             "appointment_notes",
                             "daily_notes",
                             "progress_notes"});
-                table1458.AddRow(new string[] {
+                table1421.AddRow(new string[] {
                             "Billing codes",
                             "cpt_codes",
                             "procedure_codes",
                             "cpt_codes",
                             "billing_codes"});
 #line 68
-    testRunner.When("data mapping is tested across EHR systems:", ((string)(null)), table1458, "When ");
+    testRunner.When("data mapping is tested across EHR systems:", ((string)(null)), table1421, "When ");
 #line hidden
 #line 78
     testRunner.Then("data mapping should be accurate and complete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -517,43 +517,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 86
     testRunner.Given("EHR systems require secure authentication", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1459 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1422 = new TechTalk.SpecFlow.Table(new string[] {
                             "Authentication Scenario",
                             "Expected Behavior",
                             "Security Validation",
                             "Token Management"});
-                table1459.AddRow(new string[] {
+                table1422.AddRow(new string[] {
                             "Initial OAuth flow",
                             "Redirect to EHR login",
                             "SSL/TLS verification",
                             "Access token issued"});
-                table1459.AddRow(new string[] {
+                table1422.AddRow(new string[] {
                             "Token refresh",
                             "Automatic token renewal",
                             "Scope validation",
                             "Refresh token used"});
-                table1459.AddRow(new string[] {
+                table1422.AddRow(new string[] {
                             "Session timeout",
                             "Graceful re-authentication",
                             "User consent required",
                             "New token requested"});
-                table1459.AddRow(new string[] {
+                table1422.AddRow(new string[] {
                             "Invalid credentials",
                             "Clear error messaging",
                             "Brute force protection",
                             "No token issued"});
-                table1459.AddRow(new string[] {
+                table1422.AddRow(new string[] {
                             "Scope limitations",
                             "Feature availability check",
                             "Minimum scope required",
                             "Limited access"});
-                table1459.AddRow(new string[] {
+                table1422.AddRow(new string[] {
                             "Token revocation",
                             "Immediate access removal",
                             "Audit trail created",
                             "All tokens invalidated"});
 #line 87
-    testRunner.When("EHR authentication is tested:", ((string)(null)), table1459, "When ");
+    testRunner.When("EHR authentication is tested:", ((string)(null)), table1422, "When ");
 #line hidden
 #line 95
     testRunner.Then("authentication should be secure and robust", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -603,43 +603,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 102
     testRunner.Given("EHR integrations may encounter various error conditions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1460 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1423 = new TechTalk.SpecFlow.Table(new string[] {
                             "Error Type",
                             "Error Condition",
                             "Expected Handling",
                             "User Experience"});
-                table1460.AddRow(new string[] {
+                table1423.AddRow(new string[] {
                             "Network connectivity",
                             "EHR server unreachable",
                             "Retry with backoff",
                             "Progress indicator"});
-                table1460.AddRow(new string[] {
+                table1423.AddRow(new string[] {
                             "Authentication failure",
                             "Invalid or expired tokens",
                             "Re-authentication flow",
                             "Clear error message"});
-                table1460.AddRow(new string[] {
+                table1423.AddRow(new string[] {
                             "API rate limiting",
                             "Too many requests",
                             "Queue and throttle",
                             "Delay notification"});
-                table1460.AddRow(new string[] {
+                table1423.AddRow(new string[] {
                             "Data validation error",
                             "Invalid data format",
                             "Error highlighting",
                             "Field-level feedback"});
-                table1460.AddRow(new string[] {
+                table1423.AddRow(new string[] {
                             "Insufficient permissions",
                             "Missing API scopes",
                             "Permission request",
                             "Feature unavailable"});
-                table1460.AddRow(new string[] {
+                table1423.AddRow(new string[] {
                             "EHR system maintenance",
                             "Planned downtime",
                             "Graceful degradation",
                             "Maintenance notice"});
 #line 103
-    testRunner.When("EHR error scenarios are tested:", ((string)(null)), table1460, "When ");
+    testRunner.When("EHR error scenarios are tested:", ((string)(null)), table1423, "When ");
 #line hidden
 #line 111
     testRunner.Then("error handling should be comprehensive and user-friendly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -689,43 +689,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 119
     testRunner.Given("real-time sync improves workflow efficiency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1461 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1424 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sync Trigger",
                             "Data Type",
                             "Sync Latency Target",
                             "Conflict Resolution"});
-                table1461.AddRow(new string[] {
+                table1424.AddRow(new string[] {
                             "New appointment",
                             "Session scheduling",
                             "<30 seconds",
                             "EHR takes precedence"});
-                table1461.AddRow(new string[] {
+                table1424.AddRow(new string[] {
                             "Updated patient info",
                             "Demographics",
                             "<60 seconds",
                             "Most recent wins"});
-                table1461.AddRow(new string[] {
+                table1424.AddRow(new string[] {
                             "Completed session",
                             "Session documentation",
                             "<2 minutes",
                             "Manual review"});
-                table1461.AddRow(new string[] {
+                table1424.AddRow(new string[] {
                             "New assessment",
                             "Progress measurements",
                             "<5 minutes",
                             "Merge strategies"});
-                table1461.AddRow(new string[] {
+                table1424.AddRow(new string[] {
                             "Insurance change",
                             "Coverage information",
                             "<10 minutes",
                             "EHR authoritative"});
-                table1461.AddRow(new string[] {
+                table1424.AddRow(new string[] {
                             "Goal modification",
                             "Treatment objectives",
                             "<3 minutes",
                             "Therapist approval"});
 #line 120
-    testRunner.When("real-time synchronization is tested:", ((string)(null)), table1461, "When ");
+    testRunner.When("real-time synchronization is tested:", ((string)(null)), table1424, "When ");
 #line hidden
 #line 128
     testRunner.Then("real-time sync should maintain data consistency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -775,38 +775,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 135
     testRunner.Given("practices may need to perform bulk data operations", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1462 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1425 = new TechTalk.SpecFlow.Table(new string[] {
                             "Bulk Operation",
                             "Data Volume",
                             "Processing Time Target",
                             "Error Handling"});
-                table1462.AddRow(new string[] {
+                table1425.AddRow(new string[] {
                             "Initial patient import",
                             "1000 patient records",
                             "<30 minutes",
                             "Detailed error log"});
-                table1462.AddRow(new string[] {
+                table1425.AddRow(new string[] {
                             "Historical session sync",
                             "5000 session notes",
                             "<60 minutes",
                             "Partial success OK"});
-                table1462.AddRow(new string[] {
+                table1425.AddRow(new string[] {
                             "Assessment data upload",
                             "2000 assessments",
                             "<20 minutes",
                             "Resume capability"});
-                table1462.AddRow(new string[] {
+                table1425.AddRow(new string[] {
                             "Insurance batch update",
                             "500 patient policies",
                             "<10 minutes",
                             "Transaction rollback"});
-                table1462.AddRow(new string[] {
+                table1425.AddRow(new string[] {
                             "Goal template sync",
                             "100 goal templates",
                             "<5 minutes",
                             "Conflict resolution"});
 #line 136
-    testRunner.When("bulk EHR operations are tested:", ((string)(null)), table1462, "When ");
+    testRunner.When("bulk EHR operations are tested:", ((string)(null)), table1425, "When ");
 #line hidden
 #line 143
     testRunner.Then("bulk operations should complete within time targets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -856,43 +856,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 150
     testRunner.Given("EHR integration must maintain HIPAA compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1463 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1426 = new TechTalk.SpecFlow.Table(new string[] {
                             "Compliance Aspect",
                             "Validation Method",
                             "Expected Outcome",
                             "Documentation"});
-                table1463.AddRow(new string[] {
+                table1426.AddRow(new string[] {
                             "Data encryption",
                             "In-transit validation",
                             "TLS 1.3 minimum",
                             "Encryption logs"});
-                table1463.AddRow(new string[] {
+                table1426.AddRow(new string[] {
                             "Access controls",
                             "Permission verification",
                             "Role-based access",
                             "Access audit trail"});
-                table1463.AddRow(new string[] {
+                table1426.AddRow(new string[] {
                             "Audit logging",
                             "Complete activity log",
                             "All actions tracked",
                             "Compliance reports"});
-                table1463.AddRow(new string[] {
+                table1426.AddRow(new string[] {
                             "Data minimization",
                             "Field-level controls",
                             "Only necessary data",
                             "Data mapping docs"});
-                table1463.AddRow(new string[] {
+                table1426.AddRow(new string[] {
                             "Consent management",
                             "User authorization",
                             "Explicit consent",
                             "Consent records"});
-                table1463.AddRow(new string[] {
+                table1426.AddRow(new string[] {
                             "Breach notification",
                             "Incident detection",
                             "Immediate alerts",
                             "Incident reports"});
 #line 151
-    testRunner.When("HIPAA compliance is validated:", ((string)(null)), table1463, "When ");
+    testRunner.When("HIPAA compliance is validated:", ((string)(null)), table1426, "When ");
 #line hidden
 #line 159
     testRunner.Then("HIPAA compliance should be maintained throughout", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -942,33 +942,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 167
     testRunner.Given("EHR integrations must perform well under clinical load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1464 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1427 = new TechTalk.SpecFlow.Table(new string[] {
                             "Load Scenario",
                             "Concurrent Users",
                             "Transaction Volume",
                             "Performance Target"});
-                table1464.AddRow(new string[] {
+                table1427.AddRow(new string[] {
                             "Normal clinic hours",
                             "50 therapists",
                             "500 API calls/hour",
                             "<3 second response"});
-                table1464.AddRow(new string[] {
+                table1427.AddRow(new string[] {
                             "Peak documentation",
                             "100 therapists",
                             "1000 API calls/hour",
                             "<5 second response"});
-                table1464.AddRow(new string[] {
+                table1427.AddRow(new string[] {
                             "End-of-day rush",
                             "75 therapists",
                             "1500 API calls/hour",
                             "<10 second response"});
-                table1464.AddRow(new string[] {
+                table1427.AddRow(new string[] {
                             "Bulk sync operations",
                             "10 admin users",
                             "10000 API calls/hour",
                             "<30 second batches"});
 #line 168
-    testRunner.When("EHR performance is tested under load:", ((string)(null)), table1464, "When ");
+    testRunner.When("EHR performance is tested under load:", ((string)(null)), table1427, "When ");
 #line hidden
 #line 174
     testRunner.Then("EHR performance should meet clinical workflow needs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1018,38 +1018,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 181
     testRunner.Given("EHR integrations must be highly reliable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1465 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1428 = new TechTalk.SpecFlow.Table(new string[] {
                             "Reliability Scenario",
                             "Failure Condition",
                             "Failover Strategy",
                             "Recovery Time"});
-                table1465.AddRow(new string[] {
+                table1428.AddRow(new string[] {
                             "Primary EHR unavailable",
                             "API endpoint down",
                             "Offline mode",
                             "<2 minutes detection"});
-                table1465.AddRow(new string[] {
+                table1428.AddRow(new string[] {
                             "Network intermittency",
                             "Unstable connection",
                             "Retry with backoff",
                             "<30 seconds recovery"});
-                table1465.AddRow(new string[] {
+                table1428.AddRow(new string[] {
                             "Data corruption",
                             "Invalid response data",
                             "Validation and reject",
                             "<10 seconds detection"});
-                table1465.AddRow(new string[] {
+                table1428.AddRow(new string[] {
                             "Rate limit exceeded",
                             "API throttling active",
                             "Queue and delay",
                             "<1 minute resolution"});
-                table1465.AddRow(new string[] {
+                table1428.AddRow(new string[] {
                             "Authentication expired",
                             "Token no longer valid",
                             "Silent re-auth",
                             "<20 seconds renewal"});
 #line 182
-    testRunner.When("EHR reliability is tested:", ((string)(null)), table1465, "When ");
+    testRunner.When("EHR reliability is tested:", ((string)(null)), table1428, "When ");
 #line hidden
 #line 189
     testRunner.Then("EHR integration should be resilient to failures", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1101,43 +1101,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 197
     testRunner.Given("EHR APIs may experience failures or degradation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1466 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1429 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failure Type",
                             "API Response",
                             "System Behavior",
                             "User Communication"});
-                table1466.AddRow(new string[] {
+                table1429.AddRow(new string[] {
                             "500 Internal Error",
                             "Server error response",
                             "Retry 3 times",
                             "\"Service temporarily unavailable\""});
-                table1466.AddRow(new string[] {
+                table1429.AddRow(new string[] {
                             "503 Service Unavailable",
                             "Maintenance mode",
                             "Queue for later",
                             "\"EHR undergoing maintenance\""});
-                table1466.AddRow(new string[] {
+                table1429.AddRow(new string[] {
                             "429 Rate Limited",
                             "Too many requests",
                             "Exponential backoff",
                             "\"Please wait, processing...\""});
-                table1466.AddRow(new string[] {
+                table1429.AddRow(new string[] {
                             "401 Unauthorized",
                             "Authentication failed",
                             "Re-authentication",
                             "\"Please re-authenticate\""});
-                table1466.AddRow(new string[] {
+                table1429.AddRow(new string[] {
                             "404 Not Found",
                             "Endpoint missing",
                             "Graceful degradation",
                             "\"Feature currently unavailable\""});
-                table1466.AddRow(new string[] {
+                table1429.AddRow(new string[] {
                             "Timeout (30+ seconds)",
                             "No response",
                             "Cancel and retry",
                             "\"Request timed out, retrying\""});
 #line 198
-    testRunner.When("EHR API failure scenarios are tested:", ((string)(null)), table1466, "When ");
+    testRunner.When("EHR API failure scenarios are tested:", ((string)(null)), table1429, "When ");
 #line hidden
 #line 206
     testRunner.Then("API failures should be handled gracefully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1189,43 +1189,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 213
     testRunner.Given("data conflicts may arise during synchronization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1467 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1430 = new TechTalk.SpecFlow.Table(new string[] {
                             "Conflict Type",
                             "Conflict Details",
                             "Resolution Strategy",
                             "User Involvement"});
-                table1467.AddRow(new string[] {
+                table1430.AddRow(new string[] {
                             "Concurrent updates",
                             "Same record modified",
                             "Timestamp comparison",
                             "Notification only"});
-                table1467.AddRow(new string[] {
+                table1430.AddRow(new string[] {
                             "Schema differences",
                             "Field type mismatch",
                             "Data transformation",
                             "Automatic handling"});
-                table1467.AddRow(new string[] {
+                table1430.AddRow(new string[] {
                             "Missing required fields",
                             "EHR requires more data",
                             "Prompt for input",
                             "User provides data"});
-                table1467.AddRow(new string[] {
+                table1430.AddRow(new string[] {
                             "Duplicate records",
                             "Same patient exists",
                             "Merge with confirmation",
                             "User confirms merge"});
-                table1467.AddRow(new string[] {
+                table1430.AddRow(new string[] {
                             "Business rule conflicts",
                             "EHR validation fails",
                             "Show validation error",
                             "User corrects data"});
-                table1467.AddRow(new string[] {
+                table1430.AddRow(new string[] {
                             "Version conflicts",
                             "Record versions differ",
                             "Three-way merge",
                             "User chooses version"});
 #line 214
-    testRunner.When("data conflict scenarios are tested:", ((string)(null)), table1467, "When ");
+    testRunner.When("data conflict scenarios are tested:", ((string)(null)), table1430, "When ");
 #line hidden
 #line 222
     testRunner.Then("data conflicts should be resolved systematically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1277,43 +1277,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 229
     testRunner.Given("different EHR systems have varying capabilities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1468 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1431 = new TechTalk.SpecFlow.Table(new string[] {
                             "Incompatibility Type",
                             "Limitation",
                             "Workaround Strategy",
                             "Feature Impact"});
-                table1468.AddRow(new string[] {
+                table1431.AddRow(new string[] {
                             "API version mismatch",
                             "Older API version",
                             "Use compatible subset",
                             "Reduced functionality"});
-                table1468.AddRow(new string[] {
+                table1431.AddRow(new string[] {
                             "Field mapping gaps",
                             "EHR missing fields",
                             "Store in custom fields",
                             "Data may not sync"});
-                table1468.AddRow(new string[] {
+                table1431.AddRow(new string[] {
                             "Feature not supported",
                             "EHR lacks capability",
                             "Graceful degradation",
                             "Feature disabled"});
-                table1468.AddRow(new string[] {
+                table1431.AddRow(new string[] {
                             "Data format differences",
                             "Different standards",
                             "Format transformation",
                             "Potential data loss"});
-                table1468.AddRow(new string[] {
+                table1431.AddRow(new string[] {
                             "Workflow misalignment",
                             "Different processes",
                             "Adapt to EHR workflow",
                             "Modified user flow"});
-                table1468.AddRow(new string[] {
+                table1431.AddRow(new string[] {
                             "Scale limitations",
                             "EHR API rate limits",
                             "Batch operations",
                             "Slower sync"});
 #line 230
-    testRunner.When("system incompatibility scenarios are tested:", ((string)(null)), table1468, "When ");
+    testRunner.When("system incompatibility scenarios are tested:", ((string)(null)), table1431, "When ");
 #line hidden
 #line 238
     testRunner.Then("incompatibilities should be detected early", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1365,43 +1365,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 245
     testRunner.Given("network connectivity may be unreliable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1469 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1432 = new TechTalk.SpecFlow.Table(new string[] {
                             "Connectivity Issue",
                             "Duration",
                             "System Response",
                             "Data Protection"});
-                table1469.AddRow(new string[] {
+                table1432.AddRow(new string[] {
                             "Complete network loss",
                             "5+ minutes",
                             "Offline mode",
                             "Local data cached"});
-                table1469.AddRow(new string[] {
+                table1432.AddRow(new string[] {
                             "Intermittent drops",
                             "30 seconds intervals",
                             "Retry with persistence",
                             "Transaction queued"});
-                table1469.AddRow(new string[] {
+                table1432.AddRow(new string[] {
                             "Slow connection",
                             "High latency",
                             "Timeout adjustment",
                             "Progress indicators"});
-                table1469.AddRow(new string[] {
+                table1432.AddRow(new string[] {
                             "Bandwidth limitations",
                             "Reduced throughput",
                             "Compression/batching",
                             "Optimized transfers"});
-                table1469.AddRow(new string[] {
+                table1432.AddRow(new string[] {
                             "DNS resolution failure",
                             "Cannot reach EHR",
                             "Alternative endpoints",
                             "Failover to backup"});
-                table1469.AddRow(new string[] {
+                table1432.AddRow(new string[] {
                             "SSL certificate issues",
                             "Security warnings",
                             "Certificate validation",
                             "Secure connections"});
 #line 246
-    testRunner.When("connectivity issue scenarios are tested:", ((string)(null)), table1469, "When ");
+    testRunner.When("connectivity issue scenarios are tested:", ((string)(null)), table1432, "When ");
 #line hidden
 #line 254
     testRunner.Then("connectivity issues should be handled transparently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

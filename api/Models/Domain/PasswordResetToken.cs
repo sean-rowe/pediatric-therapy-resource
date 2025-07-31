@@ -11,7 +11,7 @@ public class PasswordResetToken
     public DateTime CreatedAt { get; set; }
     public bool IsUsed { get; set; }
     public string? IpAddress { get; set; }
-    
+
     // Navigation property
     public virtual User User { get; set; } = null!;
 }

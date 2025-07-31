@@ -142,7 +142,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 17
     testRunner.And("storage must scale to petabytes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2280 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2243 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Type",
                             "Current Volume",
                             "Growth Rate",
@@ -150,7 +150,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Retention Policy",
                             "Access Pattern",
                             "Scaling Strategy"});
-                table2280.AddRow(new string[] {
+                table2243.AddRow(new string[] {
                             "User-generated content",
                             "500TB",
                             "50TB/month",
@@ -158,7 +158,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Indefinite",
                             "Frequent read/write",
                             "Auto-scaling volumes"});
-                table2280.AddRow(new string[] {
+                table2243.AddRow(new string[] {
                             "Therapy session videos",
                             "1PB",
                             "100TB/month",
@@ -166,7 +166,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "2 years active",
                             "Write once, read many",
                             "Object storage"});
-                table2280.AddRow(new string[] {
+                table2243.AddRow(new string[] {
                             "Analytics data",
                             "2PB",
                             "200TB/month",
@@ -174,7 +174,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "5 years",
                             "Batch processing",
                             "Data lake"});
-                table2280.AddRow(new string[] {
+                table2243.AddRow(new string[] {
                             "Backup data",
                             "3PB",
                             "300TB/month",
@@ -182,7 +182,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "7 years",
                             "Rare access",
                             "Glacier storage"});
-                table2280.AddRow(new string[] {
+                table2243.AddRow(new string[] {
                             "System logs",
                             "100TB",
                             "20TB/month",
@@ -190,7 +190,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "90 days total",
                             "Time-series queries",
                             "Rotating partitions"});
-                table2280.AddRow(new string[] {
+                table2243.AddRow(new string[] {
                             "ML training data",
                             "500TB",
                             "100TB/month",
@@ -199,7 +199,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Intensive I/O",
                             "NVMe arrays"});
 #line 18
-    testRunner.When("implementing storage scaling:", ((string)(null)), table2280, "When ");
+    testRunner.When("implementing storage scaling:", ((string)(null)), table2243, "When ");
 #line hidden
 #line 26
     testRunner.Then("storage should scale seamlessly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -256,49 +256,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 34
     testRunner.And("queries must remain performant", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2281 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2244 = new TechTalk.SpecFlow.Table(new string[] {
                             "Table",
                             "Partition Strategy",
                             "Shard Key",
                             "Partition Size",
                             "Rebalancing Method",
                             "Query Optimization"});
-                table2281.AddRow(new string[] {
+                table2244.AddRow(new string[] {
                             "user_sessions",
                             "Time-based daily",
                             "session_date",
                             "10GB/partition",
                             "Automated nightly",
                             "Partition pruning"});
-                table2281.AddRow(new string[] {
+                table2244.AddRow(new string[] {
                             "therapy_activities",
                             "Hash sharding",
                             "user_id",
                             "50M records/shard",
                             "Dynamic rebalancing",
                             "Shard-aware routing"});
-                table2281.AddRow(new string[] {
+                table2244.AddRow(new string[] {
                             "educational_content",
                             "Range partitioning",
                             "content_id",
                             "100GB/partition",
                             "Manual quarterly",
                             "Metadata caching"});
-                table2281.AddRow(new string[] {
+                table2244.AddRow(new string[] {
                             "analytics_events",
                             "Composite (time+hash)",
                             "timestamp+event_type",
                             "5GB/partition",
                             "Rolling window",
                             "Parallel queries"});
-                table2281.AddRow(new string[] {
+                table2244.AddRow(new string[] {
                             "payment_transactions",
                             "Geographic sharding",
                             "region_code",
                             "Regional isolation",
                             "No rebalancing",
                             "Local queries only"});
-                table2281.AddRow(new string[] {
+                table2244.AddRow(new string[] {
                             "audit_logs",
                             "Time-series chunks",
                             "timestamp",
@@ -306,7 +306,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Auto-rotation",
                             "Time-range queries"});
 #line 35
-    testRunner.When("implementing partitioning strategies:", ((string)(null)), table2281, "When ");
+    testRunner.When("implementing partitioning strategies:", ((string)(null)), table2244, "When ");
 #line hidden
 #line 43
     testRunner.Then("partitioning should improve performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -363,49 +363,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 51
     testRunner.And("processing must be real-time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2282 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2245 = new TechTalk.SpecFlow.Table(new string[] {
                             "Stream Type",
                             "Ingestion Rate",
                             "Processing Framework",
                             "Parallelism",
                             "Checkpointing",
                             "Output Destination"});
-                table2282.AddRow(new string[] {
+                table2245.AddRow(new string[] {
                             "User interactions",
                             "1M events/sec",
                             "Apache Kafka + Flink",
                             "100 partitions",
                             "Every 30 seconds",
                             "Real-time analytics"});
-                table2282.AddRow(new string[] {
+                table2245.AddRow(new string[] {
                             "IoT sensor data",
                             "500K events/sec",
                             "Kinesis + Lambda",
                             "Auto-scaling",
                             "Per batch",
                             "Time-series DB"});
-                table2282.AddRow(new string[] {
+                table2245.AddRow(new string[] {
                             "Video analytics",
                             "100K frames/sec",
                             "Kafka + Spark Streaming",
                             "50 executors",
                             "Every minute",
                             "ML pipeline"});
-                table2282.AddRow(new string[] {
+                table2245.AddRow(new string[] {
                             "Application logs",
                             "2M logs/sec",
                             "Fluentd + Elasticsearch",
                             "20 data nodes",
                             "Continuous",
                             "Log analytics"});
-                table2282.AddRow(new string[] {
+                table2245.AddRow(new string[] {
                             "Payment events",
                             "50K txn/sec",
                             "Kafka + KSQL",
                             "Exactly-once",
                             "Per transaction",
                             "Transaction DB"});
-                table2282.AddRow(new string[] {
+                table2245.AddRow(new string[] {
                             "Behavioral tracking",
                             "300K events/sec",
                             "Pulsar + Flink",
@@ -413,7 +413,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Stateful checkpoint",
                             "User profiles"});
 #line 52
-    testRunner.When("implementing stream processing:", ((string)(null)), table2282, "When ");
+    testRunner.When("implementing stream processing:", ((string)(null)), table2245, "When ");
 #line hidden
 #line 60
     testRunner.Then("streams should be processed in real-time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -470,49 +470,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 68
     testRunner.And("data lake must support diverse workloads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2283 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2246 = new TechTalk.SpecFlow.Table(new string[] {
                             "Layer",
                             "Technology Stack",
                             "Data Format",
                             "Compression",
                             "Partitioning",
                             "Access Control"});
-                table2283.AddRow(new string[] {
+                table2246.AddRow(new string[] {
                             "Raw data landing",
                             "S3 + Glue",
                             "Original formats",
                             "None",
                             "Date-based folders",
                             "Bucket policies"});
-                table2283.AddRow(new string[] {
+                table2246.AddRow(new string[] {
                             "Bronze layer",
                             "Delta Lake",
                             "Parquet",
                             "Snappy",
                             "Year/month/day",
                             "Table ACLs"});
-                table2283.AddRow(new string[] {
+                table2246.AddRow(new string[] {
                             "Silver layer",
                             "Cleaned Delta",
                             "Parquet",
                             "ZSTD",
                             "Business keys",
                             "Column security"});
-                table2283.AddRow(new string[] {
+                table2246.AddRow(new string[] {
                             "Gold layer",
                             "Aggregated data",
                             "Parquet/ORC",
                             "ZSTD",
                             "Use-case specific",
                             "Row-level security"});
-                table2283.AddRow(new string[] {
+                table2246.AddRow(new string[] {
                             "ML feature store",
                             "Feature tables",
                             "Parquet",
                             "LZ4",
                             "Feature versions",
                             "Feature access"});
-                table2283.AddRow(new string[] {
+                table2246.AddRow(new string[] {
                             "Archive layer",
                             "Glacier",
                             "Original + Parquet",
@@ -520,7 +520,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Year-based",
                             "Vault lock"});
 #line 69
-    testRunner.When("implementing data lake architecture:", ((string)(null)), table2283, "When ");
+    testRunner.When("implementing data lake architecture:", ((string)(null)), table2246, "When ");
 #line hidden
 #line 77
     testRunner.Then("data lake should scale infinitely", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -577,49 +577,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 86
     testRunner.And("processing must complete within SLAs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2284 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2247 = new TechTalk.SpecFlow.Table(new string[] {
                             "Job Type",
                             "Data Volume",
                             "SLA Window",
                             "Compute Framework",
                             "Resource Allocation",
                             "Optimization Strategy"});
-                table2284.AddRow(new string[] {
+                table2247.AddRow(new string[] {
                             "Daily aggregations",
                             "10TB",
                             "4 hours",
                             "Spark on EMR",
                             "100 r5.4xlarge",
                             "Adaptive query execution"});
-                table2284.AddRow(new string[] {
+                table2247.AddRow(new string[] {
                             "ML model training",
                             "500GB",
                             "2 hours",
                             "Distributed TensorFlow",
                             "50 GPU nodes",
                             "Data parallelism"});
-                table2284.AddRow(new string[] {
+                table2247.AddRow(new string[] {
                             "ETL pipelines",
                             "50TB",
                             "6 hours",
                             "Apache Beam",
                             "200 workers",
                             "Incremental processing"});
-                table2284.AddRow(new string[] {
+                table2247.AddRow(new string[] {
                             "Report generation",
                             "1TB",
                             "1 hour",
                             "Presto clusters",
                             "50 nodes",
                             "Materialized views"});
-                table2284.AddRow(new string[] {
+                table2247.AddRow(new string[] {
                             "Data validation",
                             "100TB",
                             "8 hours",
                             "Spark + Deequ",
                             "150 nodes",
                             "Sampling strategies"});
-                table2284.AddRow(new string[] {
+                table2247.AddRow(new string[] {
                             "Backup compression",
                             "500TB",
                             "12 hours",
@@ -627,7 +627,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "100 workers",
                             "Incremental backups"});
 #line 87
-    testRunner.When("implementing batch processing:", ((string)(null)), table2284, "When ");
+    testRunner.When("implementing batch processing:", ((string)(null)), table2247, "When ");
 #line hidden
 #line 95
     testRunner.Then("batch jobs should complete on time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -684,49 +684,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 103
     testRunner.And("cache must scale with data volume", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2285 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2248 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cache Layer",
                             "Technology",
                             "Capacity",
                             "Eviction Policy",
                             "Replication",
                             "Consistency Model"});
-                table2285.AddRow(new string[] {
+                table2248.AddRow(new string[] {
                             "Session cache",
                             "Redis Cluster",
                             "10TB RAM",
                             "LRU",
                             "3x replication",
                             "Strong consistency"});
-                table2285.AddRow(new string[] {
+                table2248.AddRow(new string[] {
                             "API cache",
                             "Hazelcast",
                             "5TB RAM",
                             "TTL-based",
                             "2x replication",
                             "Eventually consistent"});
-                table2285.AddRow(new string[] {
+                table2248.AddRow(new string[] {
                             "Query cache",
                             "Apache Ignite",
                             "20TB RAM",
                             "LFU",
                             "Partitioned",
                             "Read-through cache"});
-                table2285.AddRow(new string[] {
+                table2248.AddRow(new string[] {
                             "CDN cache",
                             "CloudFront",
                             "Unlimited",
                             "TTL + invalidation",
                             "Global edges",
                             "Eventually consistent"});
-                table2285.AddRow(new string[] {
+                table2248.AddRow(new string[] {
                             "Database cache",
                             "ProxySQL",
                             "2TB RAM",
                             "Adaptive",
                             "Active-standby",
                             "Strong consistency"});
-                table2285.AddRow(new string[] {
+                table2248.AddRow(new string[] {
                             "Object cache",
                             "Memcached",
                             "8TB RAM",
@@ -734,7 +734,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Consistent hashing",
                             "Best effort"});
 #line 104
-    testRunner.When("implementing caching layers:", ((string)(null)), table2285, "When ");
+    testRunner.When("implementing caching layers:", ((string)(null)), table2248, "When ");
 #line hidden
 #line 112
     testRunner.Then("cache hit rates should exceed 90%", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -791,49 +791,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 120
     testRunner.And("queries must return in milliseconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2286 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2249 = new TechTalk.SpecFlow.Table(new string[] {
                             "Index Type",
                             "Document Count",
                             "Index Size",
                             "Shard Strategy",
                             "Replica Count",
                             "Query Performance"});
-                table2286.AddRow(new string[] {
+                table2249.AddRow(new string[] {
                             "User profiles",
                             "100M docs",
                             "500GB",
                             "50 shards",
                             "2 replicas",
                             "<100ms p99"});
-                table2286.AddRow(new string[] {
+                table2249.AddRow(new string[] {
                             "Educational content",
                             "1B docs",
                             "5TB",
                             "200 shards",
                             "1 replica",
                             "<200ms p99"});
-                table2286.AddRow(new string[] {
+                table2249.AddRow(new string[] {
                             "Session activities",
                             "10B docs",
                             "50TB",
                             "Time-based indices",
                             "1 replica",
                             "<500ms p99"});
-                table2286.AddRow(new string[] {
+                table2249.AddRow(new string[] {
                             "Audit logs",
                             "100B docs",
                             "200TB",
                             "Daily indices",
                             "0 replicas",
                             "<1s p99"});
-                table2286.AddRow(new string[] {
+                table2249.AddRow(new string[] {
                             "Full-text search",
                             "500M docs",
                             "2TB",
                             "100 shards",
                             "2 replicas",
                             "<150ms p99"});
-                table2286.AddRow(new string[] {
+                table2249.AddRow(new string[] {
                             "Analytics data",
                             "1T docs",
                             "1PB",
@@ -841,7 +841,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "0 replicas",
                             "<5s p99"});
 #line 121
-    testRunner.When("scaling search infrastructure:", ((string)(null)), table2286, "When ");
+    testRunner.When("scaling search infrastructure:", ((string)(null)), table2249, "When ");
 #line hidden
 #line 129
     testRunner.Then("search should handle scale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -898,49 +898,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 137
     testRunner.And("time-series queries must be efficient", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2287 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2250 = new TechTalk.SpecFlow.Table(new string[] {
                             "Metric Type",
                             "Points/Second",
                             "Retention",
                             "Downsampling",
                             "Query Patterns",
                             "Storage Backend"});
-                table2287.AddRow(new string[] {
+                table2250.AddRow(new string[] {
                             "Application metrics",
                             "1M/sec",
                             "30 days raw",
                             "5m, 1h, 1d",
                             "Last 24h frequent",
                             "Prometheus + Thanos"});
-                table2287.AddRow(new string[] {
+                table2250.AddRow(new string[] {
                             "Infrastructure metrics",
                             "2M/sec",
                             "7 days raw",
                             "1m, 5m, 1h",
                             "Alerting queries",
                             "VictoriaMetrics"});
-                table2287.AddRow(new string[] {
+                table2250.AddRow(new string[] {
                             "User analytics",
                             "500K/sec",
                             "90 days raw",
                             "1h, 1d, 1w",
                             "Aggregations",
                             "ClickHouse"});
-                table2287.AddRow(new string[] {
+                table2250.AddRow(new string[] {
                             "IoT telemetry",
                             "5M/sec",
                             "24 hours raw",
                             "5m, 30m, 6h",
                             "Recent data only",
                             "InfluxDB cluster"});
-                table2287.AddRow(new string[] {
+                table2250.AddRow(new string[] {
                             "Business metrics",
                             "100K/sec",
                             "5 years",
                             "1d, 1w, 1M",
                             "Historical trends",
                             "TimescaleDB"});
-                table2287.AddRow(new string[] {
+                table2250.AddRow(new string[] {
                             "Performance traces",
                             "200K/sec",
                             "7 days",
@@ -948,7 +948,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Trace lookups",
                             "Jaeger + Cassandra"});
 #line 138
-    testRunner.When("implementing time-series storage:", ((string)(null)), table2287, "When ");
+    testRunner.When("implementing time-series storage:", ((string)(null)), table2250, "When ");
 #line hidden
 #line 146
     testRunner.Then("ingestion should handle volume", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1005,49 +1005,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 155
     testRunner.And("storage costs must be optimized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2288 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2251 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Age",
                             "Storage Tier",
                             "Access Frequency",
                             "Transition Trigger",
                             "Cost/TB/Month",
                             "Retrieval Time"});
-                table2288.AddRow(new string[] {
+                table2251.AddRow(new string[] {
                             "0-7 days",
                             "NVMe SSD",
                             "Continuous",
                             "Immediate",
                             "$100",
                             "Instant"});
-                table2288.AddRow(new string[] {
+                table2251.AddRow(new string[] {
                             "7-30 days",
                             "SSD",
                             "Hourly",
                             "Age-based",
                             "$50",
                             "Instant"});
-                table2288.AddRow(new string[] {
+                table2251.AddRow(new string[] {
                             "30-90 days",
                             "HDD",
                             "Daily",
                             "Access pattern",
                             "$20",
                             "Seconds"});
-                table2288.AddRow(new string[] {
+                table2251.AddRow(new string[] {
                             "90-365 days",
                             "Object storage",
                             "Weekly",
                             "Last access",
                             "$10",
                             "Minutes"});
-                table2288.AddRow(new string[] {
+                table2251.AddRow(new string[] {
                             "1-2 years",
                             "Infrequent access",
                             "Monthly",
                             "Policy-based",
                             "$5",
                             "Hours"});
-                table2288.AddRow(new string[] {
+                table2251.AddRow(new string[] {
                             "2+ years",
                             "Deep archive",
                             "Yearly",
@@ -1055,7 +1055,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "$1",
                             "Days"});
 #line 156
-    testRunner.When("implementing lifecycle automation:", ((string)(null)), table2288, "When ");
+    testRunner.When("implementing lifecycle automation:", ((string)(null)), table2251, "When ");
 #line hidden
 #line 164
     testRunner.Then("data should move automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1112,49 +1112,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 172
     testRunner.And("compression reduces costs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2289 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2252 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Type",
                             "Dedup Method",
                             "Compression Algorithm",
                             "Space Savings",
                             "Performance Impact",
                             "Inline/Post-process"});
-                table2289.AddRow(new string[] {
+                table2252.AddRow(new string[] {
                             "Backup data",
                             "Block-level dedup",
                             "ZSTD",
                             "90% reduction",
                             "10% CPU overhead",
                             "Post-process"});
-                table2289.AddRow(new string[] {
+                table2252.AddRow(new string[] {
                             "Media files",
                             "Content fingerprinting",
                             "H.265 for video",
                             "50% reduction",
                             "Transcoding time",
                             "Post-process"});
-                table2289.AddRow(new string[] {
+                table2252.AddRow(new string[] {
                             "Documents",
                             "File-level dedup",
                             "GZIP",
                             "70% reduction",
                             "Minimal",
                             "Inline"});
-                table2289.AddRow(new string[] {
+                table2252.AddRow(new string[] {
                             "Log files",
                             "Pattern deduplication",
                             "LZ4",
                             "85% reduction",
                             "5% overhead",
                             "Inline"});
-                table2289.AddRow(new string[] {
+                table2252.AddRow(new string[] {
                             "Database backups",
                             "Incremental dedup",
                             "ZLIB",
                             "95% reduction",
                             "20% overhead",
                             "Post-process"});
-                table2289.AddRow(new string[] {
+                table2252.AddRow(new string[] {
                             "User uploads",
                             "Hash-based dedup",
                             "Format-specific",
@@ -1162,7 +1162,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Hash computation",
                             "Inline"});
 #line 173
-    testRunner.When("implementing deduplication:", ((string)(null)), table2289, "When ");
+    testRunner.When("implementing deduplication:", ((string)(null)), table2252, "When ");
 #line hidden
 #line 181
     testRunner.Then("deduplication should save space", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1219,49 +1219,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 189
     testRunner.And("recovery must meet RTOs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2290 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2253 = new TechTalk.SpecFlow.Table(new string[] {
                             "Backup Type",
                             "Data Volume",
                             "Backup Window",
                             "RTO Target",
                             "RPO Target",
                             "Backup Strategy"});
-                table2290.AddRow(new string[] {
+                table2253.AddRow(new string[] {
                             "Database snapshots",
                             "100TB",
                             "4 hours",
                             "1 hour",
                             "15 minutes",
                             "Incremental snapshots"});
-                table2290.AddRow(new string[] {
+                table2253.AddRow(new string[] {
                             "File system backup",
                             "1PB",
                             "8 hours",
                             "4 hours",
                             "1 hour",
                             "Changed block tracking"});
-                table2290.AddRow(new string[] {
+                table2253.AddRow(new string[] {
                             "Application state",
                             "50TB",
                             "2 hours",
                             "30 minutes",
                             "5 minutes",
                             "Continuous replication"});
-                table2290.AddRow(new string[] {
+                table2253.AddRow(new string[] {
                             "Object storage",
                             "5PB",
                             "Continuous",
                             "8 hours",
                             "1 hour",
                             "Cross-region sync"});
-                table2290.AddRow(new string[] {
+                table2253.AddRow(new string[] {
                             "Compliance archives",
                             "10PB",
                             "Weekly",
                             "24 hours",
                             "1 week",
                             "Immutable backups"});
-                table2290.AddRow(new string[] {
+                table2253.AddRow(new string[] {
                             "Disaster recovery",
                             "Full dataset",
                             "Continuous",
@@ -1269,7 +1269,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "1 hour",
                             "Multi-site replication"});
 #line 190
-    testRunner.When("implementing scaled backup:", ((string)(null)), table2290, "When ");
+    testRunner.When("implementing scaled backup:", ((string)(null)), table2253, "When ");
 #line hidden
 #line 198
     testRunner.Then("backups should complete on time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1326,49 +1326,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 207
     testRunner.And("response times must be predictable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2291 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2254 = new TechTalk.SpecFlow.Table(new string[] {
                             "Query Type",
                             "Dataset Size",
                             "Current Time",
                             "Target Time",
                             "Optimization Method",
                             "Index Strategy"});
-                table2291.AddRow(new string[] {
+                table2254.AddRow(new string[] {
                             "User lookup",
                             "100M records",
                             "500ms",
                             "10ms",
                             "Covering index",
                             "Composite key"});
-                table2291.AddRow(new string[] {
+                table2254.AddRow(new string[] {
                             "Analytics aggregation",
                             "1B records",
                             "30s",
                             "2s",
                             "Materialized views",
                             "Pre-aggregation"});
-                table2291.AddRow(new string[] {
+                table2254.AddRow(new string[] {
                             "Full-text search",
                             "10B documents",
                             "5s",
                             "200ms",
                             "Inverted index",
                             "Distributed search"});
-                table2291.AddRow(new string[] {
+                table2254.AddRow(new string[] {
                             "Time-range query",
                             "100B events",
                             "60s",
                             "5s",
                             "Partition pruning",
                             "Time partitions"});
-                table2291.AddRow(new string[] {
+                table2254.AddRow(new string[] {
                             "Join operations",
                             "1B x 1B",
                             "5min",
                             "30s",
                             "Broadcast join",
                             "Denormalization"});
-                table2291.AddRow(new string[] {
+                table2254.AddRow(new string[] {
                             "Graph traversal",
                             "10B edges",
                             "10s",
@@ -1376,7 +1376,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Graph database",
                             "Edge indices"});
 #line 208
-    testRunner.When("optimizing query performance:", ((string)(null)), table2291, "When ");
+    testRunner.When("optimizing query performance:", ((string)(null)), table2254, "When ");
 #line hidden
 #line 216
     testRunner.Then("queries should meet targets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1433,49 +1433,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 224
     testRunner.And("metadata must be managed effectively", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2292 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2255 = new TechTalk.SpecFlow.Table(new string[] {
                             "Governance Aspect",
                             "Implementation",
                             "Scale Challenge",
                             "Solution Approach",
                             "Automation Level",
                             "Compliance Check"});
-                table2292.AddRow(new string[] {
+                table2255.AddRow(new string[] {
                             "Data cataloging",
                             "Apache Atlas",
                             "Millions of datasets",
                             "Auto-discovery",
                             "90% automated",
                             "Weekly audit"});
-                table2292.AddRow(new string[] {
+                table2255.AddRow(new string[] {
                             "Lineage tracking",
                             "DataHub",
                             "Complex pipelines",
                             "DAG analysis",
                             "Fully automated",
                             "Real-time"});
-                table2292.AddRow(new string[] {
+                table2255.AddRow(new string[] {
                             "Quality monitoring",
                             "Great Expectations",
                             "Billions of records",
                             "Statistical sampling",
                             "Automated alerts",
                             "Continuous"});
-                table2292.AddRow(new string[] {
+                table2255.AddRow(new string[] {
                             "Access control",
                             "Ranger + Privacera",
                             "Granular permissions",
                             "Policy inheritance",
                             "Policy as code",
                             "Every access"});
-                table2292.AddRow(new string[] {
+                table2255.AddRow(new string[] {
                             "Data classification",
                             "ML-based scanning",
                             "Petabytes to scan",
                             "Incremental scanning",
                             "95% automated",
                             "Daily scan"});
-                table2292.AddRow(new string[] {
+                table2255.AddRow(new string[] {
                             "Retention enforcement",
                             "Policy engine",
                             "Selective deletion",
@@ -1483,7 +1483,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Fully automated",
                             "Monthly verify"});
 #line 225
-    testRunner.When("implementing governance:", ((string)(null)), table2292, "When ");
+    testRunner.When("implementing governance:", ((string)(null)), table2255, "When ");
 #line hidden
 #line 233
     testRunner.Then("governance should scale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1540,49 +1540,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 241
     testRunner.And("isolation must be maintained", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2293 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2256 = new TechTalk.SpecFlow.Table(new string[] {
                             "Tenant Type",
                             "Data Volume",
                             "Isolation Method",
                             "Performance Guarantee",
                             "Backup Strategy",
                             "Cost Model"});
-                table2293.AddRow(new string[] {
+                table2256.AddRow(new string[] {
                             "Enterprise",
                             "10-100TB each",
                             "Dedicated schemas",
                             "Reserved IOPS",
                             "Separate backups",
                             "Dedicated billing"});
-                table2293.AddRow(new string[] {
+                table2256.AddRow(new string[] {
                             "Standard",
                             "1-10TB each",
                             "Shared tables + RLS",
                             "Fair-share IOPS",
                             "Pooled backups",
                             "Usage-based"});
-                table2293.AddRow(new string[] {
+                table2256.AddRow(new string[] {
                             "Free tier",
                             "<1GB each",
                             "Shared infrastructure",
                             "Best effort",
                             "Weekly backups",
                             "Subsidized"});
-                table2293.AddRow(new string[] {
+                table2256.AddRow(new string[] {
                             "Educational",
                             "5-50TB each",
                             "Logical separation",
                             "Guaranteed minimums",
                             "Daily backups",
                             "Discounted"});
-                table2293.AddRow(new string[] {
+                table2256.AddRow(new string[] {
                             "Healthcare",
                             "20-200TB each",
                             "Physical isolation",
                             "Dedicated resources",
                             "Continuous backup",
                             "Premium pricing"});
-                table2293.AddRow(new string[] {
+                table2256.AddRow(new string[] {
                             "Trial",
                             "<100MB each",
                             "Fully shared",
@@ -1590,7 +1590,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "No backup",
                             "Free"});
 #line 242
-    testRunner.When("implementing multi-tenant scaling:", ((string)(null)), table2293, "When ");
+    testRunner.When("implementing multi-tenant scaling:", ((string)(null)), table2256, "When ");
 #line hidden
 #line 250
     testRunner.Then("tenant isolation should be maintained", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1647,49 +1647,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 258
     testRunner.And("data processing can be distributed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2294 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2257 = new TechTalk.SpecFlow.Table(new string[] {
                             "Edge Location",
                             "Processing Capability",
                             "Data Retention",
                             "Sync Strategy",
                             "Aggregation Level",
                             "Failover Mode"});
-                table2294.AddRow(new string[] {
+                table2257.AddRow(new string[] {
                             "Regional hubs",
                             "Full analytics",
                             "30 days",
                             "Bi-directional",
                             "Hourly rollups",
                             "Store and forward"});
-                table2294.AddRow(new string[] {
+                table2257.AddRow(new string[] {
                             "City PoPs",
                             "Filtering + cache",
                             "7 days",
                             "Upload only",
                             "Real-time summary",
                             "Queue locally"});
-                table2294.AddRow(new string[] {
+                table2257.AddRow(new string[] {
                             "School sites",
                             "Basic processing",
                             "24 hours",
                             "Batch upload",
                             "Session aggregates",
                             "Local operation"});
-                table2294.AddRow(new string[] {
+                table2257.AddRow(new string[] {
                             "Mobile units",
                             "Data collection",
                             "Until sync",
                             "Opportunistic",
                             "Event batching",
                             "Offline capable"});
-                table2294.AddRow(new string[] {
+                table2257.AddRow(new string[] {
                             "IoT gateways",
                             "Stream processing",
                             "Buffer only",
                             "Continuous",
                             "Pre-aggregated",
                             "Buffer overflow"});
-                table2294.AddRow(new string[] {
+                table2257.AddRow(new string[] {
                             "CDN edges",
                             "Static + compute",
                             "Cache duration",
@@ -1697,7 +1697,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "No aggregation",
                             "Origin fallback"});
 #line 259
-    testRunner.When("implementing edge data processing:", ((string)(null)), table2294, "When ");
+    testRunner.When("implementing edge data processing:", ((string)(null)), table2257, "When ");
 #line hidden
 #line 267
     testRunner.Then("edge processing should reduce load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1754,49 +1754,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 275
     testRunner.And("scale makes compliance challenging", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2295 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2258 = new TechTalk.SpecFlow.Table(new string[] {
                             "Compliance Requirement",
                             "Data Scope",
                             "Implementation Challenge",
                             "Scalable Solution",
                             "Verification Method",
                             "Audit Frequency"});
-                table2295.AddRow(new string[] {
+                table2258.AddRow(new string[] {
                             "GDPR right to delete",
                             "10B records",
                             "Finding all instances",
                             "Indexed PII mapping",
                             "Deletion certificates",
                             "Per request"});
-                table2295.AddRow(new string[] {
+                table2258.AddRow(new string[] {
                             "HIPAA encryption",
                             "All healthcare data",
                             "Performance overhead",
                             "Hardware acceleration",
                             "Encryption audit",
                             "Quarterly"});
-                table2295.AddRow(new string[] {
+                table2258.AddRow(new string[] {
                             "Data residency",
                             "Multi-region data",
                             "Cross-border prevention",
                             "Geo-fencing",
                             "Flow monitoring",
                             "Real-time"});
-                table2295.AddRow(new string[] {
+                table2258.AddRow(new string[] {
                             "Audit logging",
                             "Every access",
                             "Storage volume",
                             "Compressed cold storage",
                             "Log integrity",
                             "Monthly"});
-                table2295.AddRow(new string[] {
+                table2258.AddRow(new string[] {
                             "Data anonymization",
                             "Analytics datasets",
                             "Re-identification risk",
                             "K-anonymity at scale",
                             "Privacy metrics",
                             "Per dataset"});
-                table2295.AddRow(new string[] {
+                table2258.AddRow(new string[] {
                             "Retention policies",
                             "Time-based deletion",
                             "Selective deletion",
@@ -1804,7 +1804,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Retention audit",
                             "Weekly"});
 #line 276
-    testRunner.When("implementing compliance at scale:", ((string)(null)), table2295, "When ");
+    testRunner.When("implementing compliance at scale:", ((string)(null)), table2258, "When ");
 #line hidden
 #line 284
     testRunner.Then("compliance should be maintained", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1861,49 +1861,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 292
     testRunner.And("optimization is critical at scale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2296 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2259 = new TechTalk.SpecFlow.Table(new string[] {
                             "Optimization Strategy",
                             "Applicable Data",
                             "Cost Saving",
                             "Implementation Effort",
                             "Performance Impact",
                             "ROI Timeline"});
-                table2296.AddRow(new string[] {
+                table2259.AddRow(new string[] {
                             "Cold data archival",
                             ">90 days old",
                             "80% reduction",
                             "Automated policies",
                             "Retrieval latency",
                             "3 months"});
-                table2296.AddRow(new string[] {
+                table2259.AddRow(new string[] {
                             "Deduplication",
                             "Redundant content",
                             "60% reduction",
                             "Background process",
                             "5% CPU overhead",
                             "6 months"});
-                table2296.AddRow(new string[] {
+                table2259.AddRow(new string[] {
                             "Compression",
                             "All text data",
                             "70% reduction",
                             "Inline compression",
                             "10% CPU overhead",
                             "Immediate"});
-                table2296.AddRow(new string[] {
+                table2259.AddRow(new string[] {
                             "Spot storage",
                             "Non-critical",
                             "50% reduction",
                             "Fault tolerance",
                             "Potential eviction",
                             "1 month"});
-                table2296.AddRow(new string[] {
+                table2259.AddRow(new string[] {
                             "Reserved capacity",
                             "Predictable growth",
                             "40% reduction",
                             "Capacity planning",
                             "None",
                             "12 months"});
-                table2296.AddRow(new string[] {
+                table2259.AddRow(new string[] {
                             "Tiered storage",
                             "By access pattern",
                             "65% reduction",
@@ -1911,7 +1911,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Variable latency",
                             "2 months"});
 #line 293
-    testRunner.When("optimizing storage costs:", ((string)(null)), table2296, "When ");
+    testRunner.When("optimizing storage costs:", ((string)(null)), table2259, "When ");
 #line hidden
 #line 301
     testRunner.Then("costs should be reduced significantly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1968,49 +1968,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 309
     testRunner.And("processing must be distributed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2297 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2260 = new TechTalk.SpecFlow.Table(new string[] {
                             "ML Workload",
                             "Dataset Size",
                             "Training Time",
                             "Infrastructure",
                             "Parallelization",
                             "Model Storage"});
-                table2297.AddRow(new string[] {
+                table2260.AddRow(new string[] {
                             "Deep learning",
                             "10TB images",
                             "7 days",
                             "100 GPUs",
                             "Data parallel",
                             "Model registry"});
-                table2297.AddRow(new string[] {
+                table2260.AddRow(new string[] {
                             "NLP training",
                             "1TB text",
                             "3 days",
                             "50 GPUs",
                             "Model parallel",
                             "Version control"});
-                table2297.AddRow(new string[] {
+                table2260.AddRow(new string[] {
                             "Recommendation",
                             "100TB interactions",
                             "1 day",
                             "200 CPUs",
                             "Parameter server",
                             "A/B variants"});
-                table2297.AddRow(new string[] {
+                table2260.AddRow(new string[] {
                             "Anomaly detection",
                             "5TB time-series",
                             "12 hours",
                             "100 CPUs",
                             "Mini-batch",
                             "Online updates"});
-                table2297.AddRow(new string[] {
+                table2260.AddRow(new string[] {
                             "Computer vision",
                             "50TB video",
                             "14 days",
                             "200 GPUs",
                             "Pipeline parallel",
                             "Checkpoint storage"});
-                table2297.AddRow(new string[] {
+                table2260.AddRow(new string[] {
                             "Feature engineering",
                             "1PB raw data",
                             "6 hours",
@@ -2018,7 +2018,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Spark ML",
                             "Feature store"});
 #line 310
-    testRunner.When("scaling ML workloads:", ((string)(null)), table2297, "When ");
+    testRunner.When("scaling ML workloads:", ((string)(null)), table2260, "When ");
 #line hidden
 #line 318
     testRunner.Then("ML should scale effectively", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -2075,49 +2075,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 326
     testRunner.And("architecture must be future-proof", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2298 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2261 = new TechTalk.SpecFlow.Table(new string[] {
                             "Growth Projection",
                             "Timeline",
                             "Technology Requirements",
                             "Architecture Changes",
                             "Investment Needed",
                             "Key Challenges"});
-                table2298.AddRow(new string[] {
+                table2261.AddRow(new string[] {
                             "100PB total",
                             "2 years",
                             "Current tech sufficient",
                             "Minor optimizations",
                             "$5M/year",
                             "Cost management"});
-                table2298.AddRow(new string[] {
+                table2261.AddRow(new string[] {
                             "1EB total",
                             "5 years",
                             "New storage systems",
                             "Hierarchical storage",
                             "$20M/year",
                             "Query performance"});
-                table2298.AddRow(new string[] {
+                table2261.AddRow(new string[] {
                             "10EB total",
                             "10 years",
                             "Quantum storage",
                             "Fundamental redesign",
                             "$100M/year",
                             "Physics limits"});
-                table2298.AddRow(new string[] {
+                table2261.AddRow(new string[] {
                             "Real-time 10EB",
                             "10 years",
                             "New architectures",
                             "Edge-heavy design",
                             "$200M/year",
                             "Network capacity"});
-                table2298.AddRow(new string[] {
+                table2261.AddRow(new string[] {
                             "100EB archive",
                             "15 years",
                             "DNA storage",
                             "Hybrid approach",
                             "$500M/year",
                             "Retrieval speed"});
-                table2298.AddRow(new string[] {
+                table2261.AddRow(new string[] {
                             "Exascale active",
                             "20 years",
                             "Unknown tech",
@@ -2125,7 +2125,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "$1B/year",
                             "Everything"});
 #line 327
-    testRunner.When("preparing for exascale:", ((string)(null)), table2298, "When ");
+    testRunner.When("preparing for exascale:", ((string)(null)), table2261, "When ");
 #line hidden
 #line 335
     testRunner.Then("architecture should be scalable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

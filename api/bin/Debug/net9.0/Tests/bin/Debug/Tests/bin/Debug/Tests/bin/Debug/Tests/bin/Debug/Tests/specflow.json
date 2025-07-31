@@ -1,0 +1,11 @@
+{
+  "bindingCulture": {
+    "language": "en"
+  },
+  "generator": {
+    "allowDebugGeneratedFiles": false
+  },
+  "runtime": {
+    "missingOrPendingStepsOutcome": "Ignore"
+  }
+}

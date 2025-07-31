@@ -130,43 +130,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 14
     testRunner.Given("automated security monitoring is active", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2390 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2353 = new TechTalk.SpecFlow.Table(new string[] {
                             "Incident Type",
                             "Indicators",
                             "Severity",
                             "Auto-Response"});
-                table2390.AddRow(new string[] {
+                table2353.AddRow(new string[] {
                             "Brute force attack",
                             "50+ failed logins in 5 minutes",
                             "High",
                             "Block source IP"});
-                table2390.AddRow(new string[] {
+                table2353.AddRow(new string[] {
                             "Data exfiltration",
                             "Unusual bulk download patterns",
                             "Critical",
                             "Block user account"});
-                table2390.AddRow(new string[] {
+                table2353.AddRow(new string[] {
                             "Privilege escalation",
                             "Multiple admin endpoint attempts",
                             "High",
                             "Lock account"});
-                table2390.AddRow(new string[] {
+                table2353.AddRow(new string[] {
                             "Malware detection",
                             "Suspicious file upload signatures",
                             "Critical",
                             "Quarantine file"});
-                table2390.AddRow(new string[] {
+                table2353.AddRow(new string[] {
                             "SQL injection",
                             "Malicious query patterns",
                             "Critical",
                             "Block request"});
-                table2390.AddRow(new string[] {
+                table2353.AddRow(new string[] {
                             "Cross-site scripting",
                             "Script injection in form fields",
                             "Medium",
                             "Filter request"});
 #line 15
-    testRunner.When("potential security incidents are detected:", ((string)(null)), table2390, "When ");
+    testRunner.When("potential security incidents are detected:", ((string)(null)), table2353, "When ");
 #line hidden
 #line 23
     testRunner.Then("incidents should be automatically classified by severity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -216,38 +216,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 30
     testRunner.Given("user behavior baselines are established", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2391 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2354 = new TechTalk.SpecFlow.Table(new string[] {
                             "User Activity",
                             "Normal Pattern",
                             "Suspicious Pattern",
                             "Risk Score"});
-                table2391.AddRow(new string[] {
+                table2354.AddRow(new string[] {
                             "Login time",
                             "8 AM - 5 PM weekdays",
                             "3 AM weekend login",
                             "7/10"});
-                table2391.AddRow(new string[] {
+                table2354.AddRow(new string[] {
                             "Resource access",
                             "10-15 resources/session",
                             "200+ resources/hour",
                             "9/10"});
-                table2391.AddRow(new string[] {
+                table2354.AddRow(new string[] {
                             "Geographic location",
                             "Same city daily",
                             "Different country",
                             "8/10"});
-                table2391.AddRow(new string[] {
+                table2354.AddRow(new string[] {
                             "Device characteristics",
                             "Known devices",
                             "New unregistered device",
                             "6/10"});
-                table2391.AddRow(new string[] {
+                table2354.AddRow(new string[] {
                             "API usage patterns",
                             "Standard CRUD ops",
                             "Database enumeration",
                             "9/10"});
 #line 31
-    testRunner.When("suspicious user activities occur:", ((string)(null)), table2391, "When ");
+    testRunner.When("suspicious user activities occur:", ((string)(null)), table2354, "When ");
 #line hidden
 #line 38
     testRunner.Then("risk scores should be calculated automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -300,32 +300,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 46
     testRunner.And("data loss prevention systems are deployed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2392 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2355 = new TechTalk.SpecFlow.Table(new string[] {
                             "Indicator Type",
                             "Specific Behavior",
                             "Risk Level"});
-                table2392.AddRow(new string[] {
+                table2355.AddRow(new string[] {
                             "After-hours data access",
                             "Accessing patient records at 2 AM",
                             "High"});
-                table2392.AddRow(new string[] {
+                table2355.AddRow(new string[] {
                             "Excessive data downloads",
                             "Downloading 1000+ student files",
                             "Critical"});
-                table2392.AddRow(new string[] {
+                table2355.AddRow(new string[] {
                             "Unauthorized access",
                             "Accessing files outside department",
                             "Medium"});
-                table2392.AddRow(new string[] {
+                table2355.AddRow(new string[] {
                             "Policy violations",
                             "Emailing PHI to personal account",
                             "Critical"});
-                table2392.AddRow(new string[] {
+                table2355.AddRow(new string[] {
                             "System misuse",
                             "Installing unauthorized software",
                             "Medium"});
 #line 47
-    testRunner.When("insider threat indicators are detected:", ((string)(null)), table2392, "When ");
+    testRunner.When("insider threat indicators are detected:", ((string)(null)), table2355, "When ");
 #line hidden
 #line 54
     testRunner.Then("immediate containment should be triggered for critical risks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -383,43 +383,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 64
     testRunner.When("incident response workflow is triggered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2393 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2356 = new TechTalk.SpecFlow.Table(new string[] {
                             "Phase",
                             "Actions",
                             "Timeline",
                             "Responsible Team"});
-                table2393.AddRow(new string[] {
+                table2356.AddRow(new string[] {
                             "Detection",
                             "Automated monitoring identifies breach",
                             "Real-time",
                             "Security Tools"});
-                table2393.AddRow(new string[] {
+                table2356.AddRow(new string[] {
                             "Analysis",
                             "SOC team confirms and classifies incident",
                             "15 min",
                             "SOC Team"});
-                table2393.AddRow(new string[] {
+                table2356.AddRow(new string[] {
                             "Containment",
                             "Isolate affected systems, revoke access",
                             "30 min",
                             "Security Team"});
-                table2393.AddRow(new string[] {
+                table2356.AddRow(new string[] {
                             "Eradication",
                             "Remove threat, patch vulnerabilities",
                             "2 hours",
                             "Security/IT"});
-                table2393.AddRow(new string[] {
+                table2356.AddRow(new string[] {
                             "Recovery",
                             "Restore services, validate security",
                             "4 hours",
                             "Operations"});
-                table2393.AddRow(new string[] {
+                table2356.AddRow(new string[] {
                             "Lessons",
                             "Document findings, update procedures",
                             "1 week",
                             "All Teams"});
 #line 65
-    testRunner.Then("response should follow structured phases:", ((string)(null)), table2393, "Then ");
+    testRunner.Then("response should follow structured phases:", ((string)(null)), table2356, "Then ");
 #line hidden
 #line 73
     testRunner.And("each phase should have specific deliverables and sign-offs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -463,33 +463,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 78
     testRunner.Given("security incident requires external notifications", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2394 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2357 = new TechTalk.SpecFlow.Table(new string[] {
                             "Incident Type",
                             "Affected Data",
                             "Notification Required",
                             "Timeline"});
-                table2394.AddRow(new string[] {
+                table2357.AddRow(new string[] {
                             "Student data breach",
                             "500+ student records",
                             "Parents, school district, state agency",
                             "72 hours"});
-                table2394.AddRow(new string[] {
+                table2357.AddRow(new string[] {
                             "Payment card breach",
                             "Credit card numbers",
                             "Card brands, payment processor, PCI",
                             "24 hours"});
-                table2394.AddRow(new string[] {
+                table2357.AddRow(new string[] {
                             "Medical data breach",
                             "Therapy notes",
                             "Patients, OCR, state health department",
                             "60 days"});
-                table2394.AddRow(new string[] {
+                table2357.AddRow(new string[] {
                             "System compromise",
                             "Infrastructure only",
                             "Insurance, legal counsel",
                             "48 hours"});
 #line 79
-    testRunner.When("incident type determines notification requirements:", ((string)(null)), table2394, "When ");
+    testRunner.When("incident type determines notification requirements:", ((string)(null)), table2357, "When ");
 #line hidden
 #line 85
     testRunner.Then("appropriate notifications should be automatically queued", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -542,36 +542,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 93
     testRunner.When("evidence preservation is initiated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2395 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2358 = new TechTalk.SpecFlow.Table(new string[] {
                             "Evidence Type",
                             "Preservation Method",
                             "Retention Period"});
-                table2395.AddRow(new string[] {
+                table2358.AddRow(new string[] {
                             "System logs",
                             "Immutable backup to secure store",
                             "7 years"});
-                table2395.AddRow(new string[] {
+                table2358.AddRow(new string[] {
                             "Network traffic",
                             "Packet capture analysis",
                             "3 years"});
-                table2395.AddRow(new string[] {
+                table2358.AddRow(new string[] {
                             "Disk images",
                             "Bit-by-bit forensic copies",
                             "7 years"});
-                table2395.AddRow(new string[] {
+                table2358.AddRow(new string[] {
                             "Memory dumps",
                             "RAM capture and analysis",
                             "1 year"});
-                table2395.AddRow(new string[] {
+                table2358.AddRow(new string[] {
                             "Application logs",
                             "Secure export and verification",
                             "7 years"});
-                table2395.AddRow(new string[] {
+                table2358.AddRow(new string[] {
                             "User activity logs",
                             "Complete audit trail export",
                             "7 years"});
 #line 94
-    testRunner.Then("forensic procedures should include:", ((string)(null)), table2395, "Then ");
+    testRunner.Then("forensic procedures should include:", ((string)(null)), table2358, "Then ");
 #line hidden
 #line 102
     testRunner.And("chain of custody should be maintained", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -621,43 +621,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 110
     testRunner.When("incident communication plan is activated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2396 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2359 = new TechTalk.SpecFlow.Table(new string[] {
                             "Stakeholder Group",
                             "Communication Method",
                             "Update Frequency",
                             "Information Level"});
-                table2396.AddRow(new string[] {
+                table2359.AddRow(new string[] {
                             "Executive leadership",
                             "Secure video conference",
                             "Every 2 hours",
                             "Strategic summary"});
-                table2396.AddRow(new string[] {
+                table2359.AddRow(new string[] {
                             "Technical response team",
                             "Dedicated chat channel",
                             "Real-time",
                             "Detailed technical"});
-                table2396.AddRow(new string[] {
+                table2359.AddRow(new string[] {
                             "Legal counsel",
                             "Encrypted email",
                             "Every 4 hours",
                             "Legal implications"});
-                table2396.AddRow(new string[] {
+                table2359.AddRow(new string[] {
                             "Public relations",
                             "Secure phone calls",
                             "As needed",
                             "External messaging"});
-                table2396.AddRow(new string[] {
+                table2359.AddRow(new string[] {
                             "Customers/users",
                             "Platform notifications",
                             "Every 6 hours",
                             "Impact and status"});
-                table2396.AddRow(new string[] {
+                table2359.AddRow(new string[] {
                             "Regulatory bodies",
                             "Formal documentation",
                             "As required",
                             "Compliance details"});
 #line 111
-    testRunner.Then("communication should be coordinated across:", ((string)(null)), table2396, "Then ");
+    testRunner.Then("communication should be coordinated across:", ((string)(null)), table2359, "Then ");
 #line hidden
 #line 119
     testRunner.And("all communications should be logged and archived", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -707,32 +707,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 126
     testRunner.When("crisis management procedures are activated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2397 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2360 = new TechTalk.SpecFlow.Table(new string[] {
                             "Response Element",
                             "Implementation",
                             "Timeline"});
-                table2397.AddRow(new string[] {
+                table2360.AddRow(new string[] {
                             "Service status page",
                             "Public updates every 30 minutes",
                             "Immediate"});
-                table2397.AddRow(new string[] {
+                table2360.AddRow(new string[] {
                             "Customer communications",
                             "Email to all active users",
                             "1 hour"});
-                table2397.AddRow(new string[] {
+                table2360.AddRow(new string[] {
                             "Media response",
                             "Prepared statements ready",
                             "2 hours"});
-                table2397.AddRow(new string[] {
+                table2360.AddRow(new string[] {
                             "Regulatory notifications",
                             "Filed with appropriate agencies",
                             "24 hours"});
-                table2397.AddRow(new string[] {
+                table2360.AddRow(new string[] {
                             "Backup service activation",
                             "Failover to disaster recovery site",
                             "4 hours"});
 #line 127
-    testRunner.Then("crisis response should include:", ((string)(null)), table2397, "Then ");
+    testRunner.Then("crisis response should include:", ((string)(null)), table2360, "Then ");
 #line hidden
 #line 134
     testRunner.And("crisis team should meet every 2 hours", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -779,32 +779,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 141
     testRunner.When("business continuity plan is activated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2398 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2361 = new TechTalk.SpecFlow.Table(new string[] {
                             "Service Component",
                             "Backup Solution",
                             "Recovery Time"});
-                table2398.AddRow(new string[] {
+                table2361.AddRow(new string[] {
                             "User authentication",
                             "Secondary identity provider",
                             "30 minutes"});
-                table2398.AddRow(new string[] {
+                table2361.AddRow(new string[] {
                             "Database access",
                             "Read-only replica promotion",
                             "15 minutes"});
-                table2398.AddRow(new string[] {
+                table2361.AddRow(new string[] {
                             "File storage",
                             "Geographic redundancy failover",
                             "45 minutes"});
-                table2398.AddRow(new string[] {
+                table2361.AddRow(new string[] {
                             "API services",
                             "Load balancer rerouting",
                             "10 minutes"});
-                table2398.AddRow(new string[] {
+                table2361.AddRow(new string[] {
                             "Video streaming",
                             "CDN failover",
                             "20 minutes"});
 #line 142
-    testRunner.Then("continuity measures should include:", ((string)(null)), table2398, "Then ");
+    testRunner.Then("continuity measures should include:", ((string)(null)), table2361, "Then ");
 #line hidden
 #line 149
     testRunner.And("critical business functions should be restored within 1 hour", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -857,36 +857,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 157
     testRunner.When("data recovery procedures are initiated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2399 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2362 = new TechTalk.SpecFlow.Table(new string[] {
                             "Recovery Step",
                             "Procedure",
                             "Validation Required"});
-                table2399.AddRow(new string[] {
+                table2362.AddRow(new string[] {
                             "Impact assessment",
                             "Identify corrupted data scope",
                             "Yes"});
-                table2399.AddRow(new string[] {
+                table2362.AddRow(new string[] {
                             "Backup verification",
                             "Test backup integrity and completeness",
                             "Yes"});
-                table2399.AddRow(new string[] {
+                table2362.AddRow(new string[] {
                             "Point-in-time selection",
                             "Choose recovery point minimizing loss",
                             "Yes"});
-                table2399.AddRow(new string[] {
+                table2362.AddRow(new string[] {
                             "Recovery execution",
                             "Restore data with encryption intact",
                             "Yes"});
-                table2399.AddRow(new string[] {
+                table2362.AddRow(new string[] {
                             "Integrity validation",
                             "Verify all restored data accuracy",
                             "Yes"});
-                table2399.AddRow(new string[] {
+                table2362.AddRow(new string[] {
                             "User notification",
                             "Inform affected users of recovery",
                             "Yes"});
 #line 158
-    testRunner.Then("recovery process should follow:", ((string)(null)), table2399, "Then ");
+    testRunner.Then("recovery process should follow:", ((string)(null)), table2362, "Then ");
 #line hidden
 #line 166
     testRunner.And("recovery should be completed within RTO (4 hours)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -933,32 +933,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 173
     testRunner.When("post-incident review is conducted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2400 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2363 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analysis Area",
                             "Focus Points",
                             "Deliverables"});
-                table2400.AddRow(new string[] {
+                table2363.AddRow(new string[] {
                             "Root cause analysis",
                             "How incident occurred and spread",
                             "Technical report"});
-                table2400.AddRow(new string[] {
+                table2363.AddRow(new string[] {
                             "Response effectiveness",
                             "Timeline, decisions, communication",
                             "Process review"});
-                table2400.AddRow(new string[] {
+                table2363.AddRow(new string[] {
                             "Impact assessment",
                             "Business, technical, customer impact",
                             "Impact summary"});
-                table2400.AddRow(new string[] {
+                table2363.AddRow(new string[] {
                             "Control failures",
                             "Which security controls failed",
                             "Gap analysis"});
-                table2400.AddRow(new string[] {
+                table2363.AddRow(new string[] {
                             "Improvement opportunities",
                             "Process, technology, training needs",
                             "Action plan"});
 #line 174
-    testRunner.Then("analysis should cover:", ((string)(null)), table2400, "Then ");
+    testRunner.Then("analysis should cover:", ((string)(null)), table2363, "Then ");
 #line hidden
 #line 181
     testRunner.And("findings should be presented to executive leadership", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1008,36 +1008,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 188
     testRunner.When("incident metrics are analyzed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2401 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2364 = new TechTalk.SpecFlow.Table(new string[] {
                             "Metric Category",
                             "Specific Measures",
                             "Target Values"});
-                table2401.AddRow(new string[] {
+                table2364.AddRow(new string[] {
                             "Detection speed",
                             "Time from occurrence to detection",
                             "< 5 minutes"});
-                table2401.AddRow(new string[] {
+                table2364.AddRow(new string[] {
                             "Response time",
                             "Time from detection to containment",
                             "< 30 minutes"});
-                table2401.AddRow(new string[] {
+                table2364.AddRow(new string[] {
                             "Recovery time",
                             "Time from containment to restoration",
                             "< 4 hours"});
-                table2401.AddRow(new string[] {
+                table2364.AddRow(new string[] {
                             "Notification accuracy",
                             "Timeliness of required notifications",
                             "100% on time"});
-                table2401.AddRow(new string[] {
+                table2364.AddRow(new string[] {
                             "False positive rate",
                             "Incorrectly classified incidents",
                             "< 5%"});
-                table2401.AddRow(new string[] {
+                table2364.AddRow(new string[] {
                             "Customer impact",
                             "Users affected, service downtime",
                             "Minimize always"});
 #line 189
-    testRunner.Then("key performance indicators should include:", ((string)(null)), table2401, "Then ");
+    testRunner.Then("key performance indicators should include:", ((string)(null)), table2364, "Then ");
 #line hidden
 #line 197
     testRunner.And("metrics should be tracked monthly and reported quarterly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1086,28 +1086,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 204
     testRunner.When("incident response system reaches capacity limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2402 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2365 = new TechTalk.SpecFlow.Table(new string[] {
                             "Overload Scenario",
                             "System Response",
                             "Fallback Procedure"});
-                table2402.AddRow(new string[] {
+                table2365.AddRow(new string[] {
                             "Alert queue overflow",
                             "Prioritize by severity, batch alerts",
                             "Manual triage"});
-                table2402.AddRow(new string[] {
+                table2365.AddRow(new string[] {
                             "Investigation backlog",
                             "Auto-escalate high severity items",
                             "Additional staff"});
-                table2402.AddRow(new string[] {
+                table2365.AddRow(new string[] {
                             "Communication delays",
                             "Use backup notification channels",
                             "Phone trees"});
-                table2402.AddRow(new string[] {
+                table2365.AddRow(new string[] {
                             "Forensic storage full",
                             "Compress older evidence, add capacity",
                             "External storage"});
 #line 205
-    testRunner.Then("system should handle overload gracefully:", ((string)(null)), table2402, "Then ");
+    testRunner.Then("system should handle overload gracefully:", ((string)(null)), table2365, "Then ");
 #line hidden
 #line 211
     testRunner.And("incident prioritization should ensure critical incidents get resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1156,33 +1156,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 217
     testRunner.When("backup communication procedures are activated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2403 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2366 = new TechTalk.SpecFlow.Table(new string[] {
                             "Communication Type",
                             "Primary Method",
                             "Backup Method",
                             "Fallback Method"});
-                table2403.AddRow(new string[] {
+                table2366.AddRow(new string[] {
                             "Team coordination",
                             "Slack/Teams",
                             "Conference bridge",
                             "Cell phone calls"});
-                table2403.AddRow(new string[] {
+                table2366.AddRow(new string[] {
                             "Executive updates",
                             "Email",
                             "Secure messaging app",
                             "In-person meeting"});
-                table2403.AddRow(new string[] {
+                table2366.AddRow(new string[] {
                             "Customer notification",
                             "Platform alerts",
                             "Email system",
                             "Social media"});
-                table2403.AddRow(new string[] {
+                table2366.AddRow(new string[] {
                             "Regulatory reporting",
                             "Electronic filing",
                             "Fax submission",
                             "Hand delivery"});
 #line 218
-    testRunner.Then("alternative communication should include:", ((string)(null)), table2403, "Then ");
+    testRunner.Then("alternative communication should include:", ((string)(null)), table2366, "Then ");
 #line hidden
 #line 224
     testRunner.And("communication redundancy should be tested monthly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1231,28 +1231,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 230
     testRunner.When("evidence integrity is compromised", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2404 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2367 = new TechTalk.SpecFlow.Table(new string[] {
                             "Recovery Action",
                             "Implementation",
                             "Success Criteria"});
-                table2404.AddRow(new string[] {
+                table2367.AddRow(new string[] {
                             "Integrity verification",
                             "Cryptographic hash validation",
                             "Hash match confirm"});
-                table2404.AddRow(new string[] {
+                table2367.AddRow(new string[] {
                             "Backup recovery",
                             "Restore from redundant storage",
                             "Complete restore"});
-                table2404.AddRow(new string[] {
+                table2367.AddRow(new string[] {
                             "Alternative sources",
                             "Collect from related systems",
                             "Partial recovery"});
-                table2404.AddRow(new string[] {
+                table2367.AddRow(new string[] {
                             "Chain of custody repair",
                             "Document gaps and impacts",
                             "Legal viability"});
 #line 231
-    testRunner.Then("evidence recovery procedures should include:", ((string)(null)), table2404, "Then ");
+    testRunner.Then("evidence recovery procedures should include:", ((string)(null)), table2367, "Then ");
 #line hidden
 #line 237
     testRunner.And("legal counsel should be consulted on evidence viability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1301,28 +1301,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 243
     testRunner.When("false positives impact response efficiency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2405 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2368 = new TechTalk.SpecFlow.Table(new string[] {
                             "Handling Procedure",
                             "Implementation",
                             "Outcome"});
-                table2405.AddRow(new string[] {
+                table2368.AddRow(new string[] {
                             "Rapid triage process",
                             "5-minute initial assessment",
                             "Quick dismissal"});
-                table2405.AddRow(new string[] {
+                table2368.AddRow(new string[] {
                             "Pattern recognition",
                             "Machine learning improvement",
                             "Reduced future FPs"});
-                table2405.AddRow(new string[] {
+                table2368.AddRow(new string[] {
                             "Threshold adjustment",
                             "Tune alerting sensitivity",
                             "Better signal/noise"});
-                table2405.AddRow(new string[] {
+                table2368.AddRow(new string[] {
                             "Analyst feedback",
                             "Mark false positives for learning",
                             "System improvement"});
 #line 244
-    testRunner.Then("false positive handling should include:", ((string)(null)), table2405, "Then ");
+    testRunner.Then("false positive handling should include:", ((string)(null)), table2368, "Then ");
 #line hidden
 #line 250
     testRunner.And("false positive rate should be tracked and minimized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1371,28 +1371,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 256
     testRunner.When("standard response capacity is exceeded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2406 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2369 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resource Type",
                             "Scaling Method",
                             "Activation Time"});
-                table2406.AddRow(new string[] {
+                table2369.AddRow(new string[] {
                             "Incident analysts",
                             "On-call escalation, contractor staff",
                             "2 hours"});
-                table2406.AddRow(new string[] {
+                table2369.AddRow(new string[] {
                             "Forensic capacity",
                             "Cloud processing, external labs",
                             "4 hours"});
-                table2406.AddRow(new string[] {
+                table2369.AddRow(new string[] {
                             "Communication support",
                             "PR firm, legal counsel",
                             "1 hour"});
-                table2406.AddRow(new string[] {
+                table2369.AddRow(new string[] {
                             "Technical infrastructure",
                             "Auto-scaling, emergency capacity",
                             "30 minutes"});
 #line 257
-    testRunner.Then("resource scaling should include:", ((string)(null)), table2406, "Then ");
+    testRunner.Then("resource scaling should include:", ((string)(null)), table2369, "Then ");
 #line hidden
 #line 263
     testRunner.And("resource needs should be continuously assessed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1441,28 +1441,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 269
     testRunner.When("compliance violations occur during incident response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2407 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2370 = new TechTalk.SpecFlow.Table(new string[] {
                             "Violation Type",
                             "Remediation Action",
                             "Timeline"});
-                table2407.AddRow(new string[] {
+                table2370.AddRow(new string[] {
                             "Late notification",
                             "Immediate filing with explanation",
                             "Within 24 hours"});
-                table2407.AddRow(new string[] {
+                table2370.AddRow(new string[] {
                             "Incomplete information",
                             "Supplemental report with full details",
                             "Within 48 hours"});
-                table2407.AddRow(new string[] {
+                table2370.AddRow(new string[] {
                             "Wrong agency contacted",
                             "Correct notification to proper agency",
                             "Within 24 hours"});
-                table2407.AddRow(new string[] {
+                table2370.AddRow(new string[] {
                             "Missing documentation",
                             "Complete documentation package",
                             "Within 72 hours"});
 #line 270
-    testRunner.Then("remediation should include:", ((string)(null)), table2407, "Then ");
+    testRunner.Then("remediation should include:", ((string)(null)), table2370, "Then ");
 #line hidden
 #line 276
     testRunner.And("legal counsel should review all remediation actions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

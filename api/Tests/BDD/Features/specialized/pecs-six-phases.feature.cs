@@ -140,7 +140,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 17
     testRunner.And("reinforcer assessment has been completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2865 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2828 = new TechTalk.SpecFlow.Table(new string[] {
                             "Student ID",
                             "Preferred Items",
                             "Exchange Success",
@@ -148,7 +148,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Sessions",
                             "Independence %",
                             "Notes"});
-                table2865.AddRow(new string[] {
+                table2828.AddRow(new string[] {
                             "S001",
                             "Goldfish, iPad",
                             "15/20",
@@ -156,7 +156,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "5",
                             "25%",
                             "Requires hand-over-hand"});
-                table2865.AddRow(new string[] {
+                table2828.AddRow(new string[] {
                             "S002",
                             "Bubbles, Music",
                             "18/20",
@@ -164,7 +164,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "8",
                             "45%",
                             "Fading prompts successfully"});
-                table2865.AddRow(new string[] {
+                table2828.AddRow(new string[] {
                             "S003",
                             "Toy car, Snacks",
                             "20/20",
@@ -172,7 +172,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "12",
                             "85%",
                             "Ready for Phase 2"});
-                table2865.AddRow(new string[] {
+                table2828.AddRow(new string[] {
                             "S004",
                             "Playdough, Books",
                             "12/20",
@@ -180,7 +180,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "3",
                             "15%",
                             "Still learning exchange"});
-                table2865.AddRow(new string[] {
+                table2828.AddRow(new string[] {
                             "S005",
                             "Blocks, Juice",
                             "16/20",
@@ -188,7 +188,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "6",
                             "55%",
                             "Inconsistent initiation"});
-                table2865.AddRow(new string[] {
+                table2828.AddRow(new string[] {
                             "S006",
                             "Puzzle, Crackers",
                             "19/20",
@@ -197,7 +197,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "75%",
                             "Nearly independent"});
 #line 18
-    testRunner.When("implementing Phase 1 training:", ((string)(null)), table2865, "When ");
+    testRunner.When("implementing Phase 1 training:", ((string)(null)), table2828, "When ");
 #line hidden
 #line 26
     testRunner.Then("Phase 1 criteria should be tracked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -252,7 +252,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 34
     testRunner.And("Phase 2 materials are prepared", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2866 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2829 = new TechTalk.SpecFlow.Table(new string[] {
                             "Skill Component",
                             "Starting Distance",
                             "Current Distance",
@@ -260,7 +260,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Persistence Trials",
                             "Success Rate",
                             "Next Goal"});
-                table2866.AddRow(new string[] {
+                table2829.AddRow(new string[] {
                             "Travel to book",
                             "1 foot",
                             "5 feet",
@@ -268,7 +268,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "8/10",
                             "80%",
                             "Increase to 10 feet"});
-                table2866.AddRow(new string[] {
+                table2829.AddRow(new string[] {
                             "Travel to partner",
                             "2 feet",
                             "8 feet",
@@ -276,7 +276,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "9/10",
                             "90%",
                             "Add obstacles"});
-                table2866.AddRow(new string[] {
+                table2829.AddRow(new string[] {
                             "Remove picture",
                             "With help",
                             "Independent",
@@ -284,7 +284,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "10/10",
                             "100%",
                             "Maintain skill"});
-                table2866.AddRow(new string[] {
+                table2829.AddRow(new string[] {
                             "Navigate barriers",
                             "None",
                             "1 barrier",
@@ -292,7 +292,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "6/10",
                             "60%",
                             "Multiple barriers"});
-                table2866.AddRow(new string[] {
+                table2829.AddRow(new string[] {
                             "Multiple partners",
                             "1 partner",
                             "3 partners",
@@ -300,7 +300,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "7/10",
                             "70%",
                             "Generalize further"});
-                table2866.AddRow(new string[] {
+                table2829.AddRow(new string[] {
                             "Different settings",
                             "Therapy room",
                             "3 locations",
@@ -309,7 +309,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "80%",
                             "Natural environments"});
 #line 35
-    testRunner.When("training Phase 2 skills:", ((string)(null)), table2866, "When ");
+    testRunner.When("training Phase 2 skills:", ((string)(null)), table2829, "When ");
 #line hidden
 #line 43
     testRunner.Then("distance achievements should be recorded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -364,7 +364,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 51
     testRunner.And("discrimination training begins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2867 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2830 = new TechTalk.SpecFlow.Table(new string[] {
                             "Trial Type",
                             "Preferred Item",
                             "Distractor Item",
@@ -372,7 +372,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Error Correction",
                             "Correspondence",
                             "Mastery Status"});
-                table2867.AddRow(new string[] {
+                table2830.AddRow(new string[] {
                             "Highly preferred vs neutral",
                             "Cookie",
                             "Sock",
@@ -380,7 +380,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "N/A",
                             "100%",
                             "Mastered"});
-                table2867.AddRow(new string[] {
+                table2830.AddRow(new string[] {
                             "Preferred vs non",
                             "Juice",
                             "Vegetable",
@@ -388,7 +388,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "1 trial",
                             "100%",
                             "Mastered"});
-                table2867.AddRow(new string[] {
+                table2830.AddRow(new string[] {
                             "Two preferred",
                             "iPad",
                             "Bubbles",
@@ -396,7 +396,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "2 trials",
                             "90%",
                             "Emerging"});
-                table2867.AddRow(new string[] {
+                table2830.AddRow(new string[] {
                             "Similar items",
                             "Crackers",
                             "Chips",
@@ -404,7 +404,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "3 trials",
                             "85%",
                             "Practice needed"});
-                table2867.AddRow(new string[] {
+                table2830.AddRow(new string[] {
                             "Neutral items",
                             "Book",
                             "Paper",
@@ -412,7 +412,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "4 trials",
                             "80%",
                             "More practice"});
-                table2867.AddRow(new string[] {
+                table2830.AddRow(new string[] {
                             "Abstract concepts",
                             "Play",
                             "Work",
@@ -421,51 +421,51 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "70%",
                             "Challenging"});
 #line 52
-    testRunner.When("implementing Phase 3A (simple discrimination):", ((string)(null)), table2867, "When ");
+    testRunner.When("implementing Phase 3A (simple discrimination):", ((string)(null)), table2830, "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2868 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2831 = new TechTalk.SpecFlow.Table(new string[] {
                             "Array Size",
                             "Picture Categories",
                             "Scanning Pattern",
                             "Accurate Selection",
                             "Organization",
                             "Independence"});
-                table2868.AddRow(new string[] {
+                table2831.AddRow(new string[] {
                             "3 pictures",
                             "Food items",
                             "Left to right",
                             "85%",
                             "By category",
                             "90%"});
-                table2868.AddRow(new string[] {
+                table2831.AddRow(new string[] {
                             "5 pictures",
                             "Mixed categories",
                             "Systematic",
                             "80%",
                             "By preference",
                             "85%"});
-                table2868.AddRow(new string[] {
+                table2831.AddRow(new string[] {
                             "8 pictures",
                             "All categories",
                             "Efficient",
                             "75%",
                             "Categorical",
                             "80%"});
-                table2868.AddRow(new string[] {
+                table2831.AddRow(new string[] {
                             "12 pictures",
                             "Comprehensive",
                             "Quick scan",
                             "70%",
                             "Alphabetical",
                             "75%"});
-                table2868.AddRow(new string[] {
+                table2831.AddRow(new string[] {
                             "20 pictures",
                             "Full vocabulary",
                             "Organized",
                             "65%",
                             "Frequency-based",
                             "70%"});
-                table2868.AddRow(new string[] {
+                table2831.AddRow(new string[] {
                             "Book format",
                             "Multiple pages",
                             "Page turning",
@@ -473,7 +473,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Topic-based",
                             "65%"});
 #line 60
-    testRunner.When("progressing to Phase 3B (multiple pictures):", ((string)(null)), table2868, "When ");
+    testRunner.When("progressing to Phase 3B (multiple pictures):", ((string)(null)), table2831, "When ");
 #line hidden
 #line 68
     testRunner.Then("discrimination accuracy should improve", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -528,49 +528,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 76
     testRunner.And("sentence strip is introduced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2869 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2832 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sentence Component",
                             "Teaching Step",
                             "Student Performance",
                             "Prompt Level",
                             "Generalization",
                             "Mastery"});
-                table2869.AddRow(new string[] {
+                table2832.AddRow(new string[] {
                             "\"I want\" card",
                             "Introduction",
                             "Places correctly",
                             "Model",
                             "3 settings",
                             "85%"});
-                table2869.AddRow(new string[] {
+                table2832.AddRow(new string[] {
                             "Picture placement",
                             "After \"I want\"",
                             "Sequences properly",
                             "Gestural",
                             "5 partners",
                             "90%"});
-                table2869.AddRow(new string[] {
+                table2832.AddRow(new string[] {
                             "Strip exchange",
                             "Complete sentence",
                             "Delivers strip",
                             "Verbal reminder",
                             "Multiple items",
                             "80%"});
-                table2869.AddRow(new string[] {
+                table2832.AddRow(new string[] {
                             "Point and read",
                             "Therapist models",
                             "Points to each",
                             "Physical guide",
                             "Self-corrects",
                             "75%"});
-                table2869.AddRow(new string[] {
+                table2832.AddRow(new string[] {
                             "Rebuild sentence",
                             "After exchange",
                             "Replaces cards",
                             "Independent",
                             "Maintains book",
                             "95%"});
-                table2869.AddRow(new string[] {
+                table2832.AddRow(new string[] {
                             "Multiple requests",
                             "Various items",
                             "Builds new sentences",
@@ -578,7 +578,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Throughout day",
                             "85%"});
 #line 77
-    testRunner.When("teaching Phase 4 sentence building:", ((string)(null)), table2869, "When ");
+    testRunner.When("teaching Phase 4 sentence building:", ((string)(null)), table2832, "When ");
 #line hidden
 #line 85
     testRunner.Then("sentence structure should become automatic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -633,49 +633,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 93
     testRunner.And("responsive communication is targeted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2870 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2833 = new TechTalk.SpecFlow.Table(new string[] {
                             "Question Format",
                             "Response Time",
                             "Accuracy",
                             "Spontaneous Request",
                             "Adult Wait Time",
                             "Progress"});
-                table2870.AddRow(new string[] {
+                table2833.AddRow(new string[] {
                             "Direct question",
                             "3 seconds",
                             "90%",
                             "Before question 40%",
                             "5 seconds",
                             "Excellent"});
-                table2870.AddRow(new string[] {
+                table2833.AddRow(new string[] {
                             "Indirect prompt",
                             "5 seconds",
                             "85%",
                             "Before prompt 35%",
                             "8 seconds",
                             "Very good"});
-                table2870.AddRow(new string[] {
+                table2833.AddRow(new string[] {
                             "Expectant look only",
                             "8 seconds",
                             "75%",
                             "Initiated 30%",
                             "10 seconds",
                             "Good"});
-                table2870.AddRow(new string[] {
+                table2833.AddRow(new string[] {
                             "Natural opportunity",
                             "10 seconds",
                             "70%",
                             "Initiated 45%",
                             "15 seconds",
                             "Improving"});
-                table2870.AddRow(new string[] {
+                table2833.AddRow(new string[] {
                             "No prompt given",
                             "Variable",
                             "N/A",
                             "Initiated 60%",
                             "Natural pause",
                             "Target met"});
-                table2870.AddRow(new string[] {
+                table2833.AddRow(new string[] {
                             "Across environments",
                             "5 seconds avg",
                             "80%",
@@ -683,7 +683,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Appropriate",
                             "Generalized"});
 #line 94
-    testRunner.When("teaching response to \"What do you want?\":", ((string)(null)), table2870, "When ");
+    testRunner.When("teaching response to \"What do you want?\":", ((string)(null)), table2833, "When ");
 #line hidden
 #line 102
     testRunner.Then("responsive requesting should develop", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -738,49 +738,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 110
     testRunner.And("commenting function is introduced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2871 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2834 = new TechTalk.SpecFlow.Table(new string[] {
                             "Communication Function",
                             "Carrier Phrase",
                             "Attributes Added",
                             "Context Used",
                             "Accuracy",
                             "Spontaneous Use"});
-                table2871.AddRow(new string[] {
+                table2834.AddRow(new string[] {
                             "Commenting",
                             "\"I see\"",
                             "Colors, sizes",
                             "Natural observation",
                             "75%",
                             "20%"});
-                table2871.AddRow(new string[] {
+                table2834.AddRow(new string[] {
                             "Describing",
                             "\"I have\"",
                             "Adjectives",
                             "Show and tell",
                             "80%",
                             "25%"});
-                table2871.AddRow(new string[] {
+                table2834.AddRow(new string[] {
                             "Answering questions",
                             "\"It is\"",
                             "Properties",
                             "Direct questions",
                             "85%",
                             "15%"});
-                table2871.AddRow(new string[] {
+                table2834.AddRow(new string[] {
                             "Social comments",
                             "\"I like\"",
                             "Preferences",
                             "Social situations",
                             "70%",
                             "30%"});
-                table2871.AddRow(new string[] {
+                table2834.AddRow(new string[] {
                             "Negation",
                             "\"I don\'t want\"",
                             "Rejection",
                             "Non-preferred items",
                             "90%",
                             "40%"});
-                table2871.AddRow(new string[] {
+                table2834.AddRow(new string[] {
                             "Multiple attributes",
                             "Various",
                             "Size+color+item",
@@ -788,7 +788,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "65%",
                             "10%"});
 #line 111
-    testRunner.When("teaching Phase 6 expansions:", ((string)(null)), table2871, "When ");
+    testRunner.When("teaching Phase 6 expansions:", ((string)(null)), table2834, "When ");
 #line hidden
 #line 119
     testRunner.Then("commenting skills should emerge", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -843,7 +843,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 128
     testRunner.And("data drives phase decisions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2872 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2835 = new TechTalk.SpecFlow.Table(new string[] {
                             "Student ID",
                             "Current Phase",
                             "Days in Phase",
@@ -851,7 +851,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Vocabulary Size",
                             "Spontaneous %",
                             "Next Decision Point"});
-                table2872.AddRow(new string[] {
+                table2835.AddRow(new string[] {
                             "S001",
                             "Phase 1",
                             "10",
@@ -859,7 +859,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "1",
                             "5%",
                             "Increase trials"});
-                table2872.AddRow(new string[] {
+                table2835.AddRow(new string[] {
                             "S002",
                             "Phase 2",
                             "15",
@@ -867,7 +867,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "1",
                             "10%",
                             "Begin Phase 3"});
-                table2872.AddRow(new string[] {
+                table2835.AddRow(new string[] {
                             "S003",
                             "Phase 3B",
                             "25",
@@ -875,7 +875,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "15",
                             "25%",
                             "Ready for Phase 4"});
-                table2872.AddRow(new string[] {
+                table2835.AddRow(new string[] {
                             "S004",
                             "Phase 4",
                             "30",
@@ -883,7 +883,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "25",
                             "40%",
                             "Solidify sentences"});
-                table2872.AddRow(new string[] {
+                table2835.AddRow(new string[] {
                             "S005",
                             "Phase 5",
                             "20",
@@ -891,7 +891,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "40",
                             "60%",
                             "Introduce Phase 6"});
-                table2872.AddRow(new string[] {
+                table2835.AddRow(new string[] {
                             "S006",
                             "Phase 6",
                             "45",
@@ -900,7 +900,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "70%",
                             "Expand attributes"});
 #line 129
-    testRunner.When("monitoring PECS progress:", ((string)(null)), table2872, "When ");
+    testRunner.When("monitoring PECS progress:", ((string)(null)), table2835, "When ");
 #line hidden
 #line 137
     testRunner.Then("progress should be data-driven", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -955,49 +955,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 145
     testRunner.And("generalization is critical for success", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2873 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2836 = new TechTalk.SpecFlow.Table(new string[] {
                             "Setting",
                             "Communication Partners",
                             "Materials Available",
                             "Opportunities/Day",
                             "Success Rate",
                             "Support Needed"});
-                table2873.AddRow(new string[] {
+                table2836.AddRow(new string[] {
                             "Classroom",
                             "Teacher, Aide, Peers",
                             "Full book",
                             "50+",
                             "85%",
                             "Minimal prompts"});
-                table2873.AddRow(new string[] {
+                table2836.AddRow(new string[] {
                             "Cafeteria",
                             "Staff, Peers",
                             "Mini book",
                             "10",
                             "75%",
                             "Environmental setup"});
-                table2873.AddRow(new string[] {
+                table2836.AddRow(new string[] {
                             "Home",
                             "Parents, Siblings",
                             "Home book",
                             "100+",
                             "90%",
                             "Parent training"});
-                table2873.AddRow(new string[] {
+                table2836.AddRow(new string[] {
                             "Community",
                             "Various adults",
                             "Travel book",
                             "20",
                             "65%",
                             "Pre-planning"});
-                table2873.AddRow(new string[] {
+                table2836.AddRow(new string[] {
                             "Playground",
                             "Peers, Supervisors",
                             "Core board backup",
                             "30",
                             "70%",
                             "Peer training"});
-                table2873.AddRow(new string[] {
+                table2836.AddRow(new string[] {
                             "Specials",
                             "Art, Music, PE staff",
                             "Portable strips",
@@ -1005,7 +1005,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "60%",
                             "Staff orientation"});
 #line 146
-    testRunner.When("planning generalization:", ((string)(null)), table2873, "When ");
+    testRunner.When("planning generalization:", ((string)(null)), table2836, "When ");
 #line hidden
 #line 154
     testRunner.Then("generalization data should be collected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1057,50 +1057,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 161
     testRunner.Given("PECS implementation may face obstacles", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2874 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2837 = new TechTalk.SpecFlow.Table(new string[] {
                             "Challenge Type",
                             "Specific Issue",
                             "Intervention Strategy",
                             "Outcome Measure",
                             "Success Indicator"});
-                table2874.AddRow(new string[] {
+                table2837.AddRow(new string[] {
                             "Low motivation",
                             "Limited interests",
                             "Expand reinforcer menu",
                             "Exchanges increase",
                             "50% improvement"});
-                table2874.AddRow(new string[] {
+                table2837.AddRow(new string[] {
                             "Physical limitations",
                             "Motor difficulties",
                             "Adapt picture size/velcro",
                             "Independent use",
                             "Accommodation works"});
-                table2874.AddRow(new string[] {
+                table2837.AddRow(new string[] {
                             "Behavior interfering",
                             "Grabbing items",
                             "Teach waiting, use timer",
                             "Appropriate requests",
                             "80% reduction"});
-                table2874.AddRow(new string[] {
+                table2837.AddRow(new string[] {
                             "Picture confusion",
                             "Similar images",
                             "Enhance distinctiveness",
                             "Discrimination accuracy",
                             "90% correct"});
-                table2874.AddRow(new string[] {
+                table2837.AddRow(new string[] {
                             "Book management",
                             "Loses pictures",
                             "Organization system",
                             "Book intact",
                             "Materials maintained"});
-                table2874.AddRow(new string[] {
+                table2837.AddRow(new string[] {
                             "Prompt dependency",
                             "Waits for cues",
                             "Fade prompts systematically",
                             "Spontaneous use",
                             "40% initiations"});
 #line 162
-    testRunner.When("encountering challenges:", ((string)(null)), table2874, "When ");
+    testRunner.When("encountering challenges:", ((string)(null)), table2837, "When ");
 #line hidden
 #line 170
     testRunner.Then("solutions should be individualized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1155,50 +1155,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 179
     testRunner.And("fidelity ensures effectiveness", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2875 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2838 = new TechTalk.SpecFlow.Table(new string[] {
                             "Fidelity Component",
                             "Target Standard",
                             "Current Performance",
                             "Action Needed",
                             "Review Schedule"});
-                table2875.AddRow(new string[] {
+                table2838.AddRow(new string[] {
                             "Two-person prompting",
                             "100% in Phase 1",
                             "95%",
                             "Refresher training",
                             "Weekly"});
-                table2875.AddRow(new string[] {
+                table2838.AddRow(new string[] {
                             "Error correction",
                             "4-step procedure",
                             "Consistent 90%",
                             "Video review",
                             "Bi-weekly"});
-                table2875.AddRow(new string[] {
+                table2838.AddRow(new string[] {
                             "Reinforcer delivery",
                             "Immediate (<3 sec)",
                             "98% compliance",
                             "Maintain standard",
                             "Monthly"});
-                table2875.AddRow(new string[] {
+                table2838.AddRow(new string[] {
                             "Communication temptations",
                             "Natural throughout day",
                             "75% opportunities",
                             "Increase setups",
                             "Daily planning"});
-                table2875.AddRow(new string[] {
+                table2838.AddRow(new string[] {
                             "Data collection",
                             "Every exchange",
                             "85% recorded",
                             "Simplify system",
                             "Daily"});
-                table2875.AddRow(new string[] {
+                table2838.AddRow(new string[] {
                             "Phase criteria",
                             "80% over 3 days",
                             "Properly applied",
                             "Continue monitoring",
                             "Per phase"});
 #line 180
-    testRunner.When("monitoring implementation quality:", ((string)(null)), table2875, "When ");
+    testRunner.When("monitoring implementation quality:", ((string)(null)), table2838, "When ");
 #line hidden
 #line 188
     testRunner.Then("fidelity checks should be regular", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1250,50 +1250,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 196
     testRunner.Given("some students have additional challenges", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2876 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2839 = new TechTalk.SpecFlow.Table(new string[] {
                             "Special Need",
                             "PECS Adaptation",
                             "Additional Support",
                             "Success Measure",
                             "Outcome"});
-                table2876.AddRow(new string[] {
+                table2839.AddRow(new string[] {
                             "Visual impairment",
                             "Tactile symbols",
                             "Object schedule",
                             "Touch discrimination",
                             "Functional system"});
-                table2876.AddRow(new string[] {
+                table2839.AddRow(new string[] {
                             "Hearing + ASD",
                             "Visual emphasis only",
                             "Clear sight lines",
                             "Exchange success",
                             "Effective"});
-                table2876.AddRow(new string[] {
+                table2839.AddRow(new string[] {
                             "Physical disability",
                             "Switch for exchange",
                             "Scanning option",
                             "Independent request",
                             "Accessible"});
-                table2876.AddRow(new string[] {
+                table2839.AddRow(new string[] {
                             "Cognitive delay",
                             "Simplified phases",
                             "Smaller steps",
                             "Gradual progress",
                             "Achievable"});
-                table2876.AddRow(new string[] {
+                table2839.AddRow(new string[] {
                             "Dual language",
                             "Bilingual cards",
                             "Cultural symbols",
                             "Both languages used",
                             "Inclusive"});
-                table2876.AddRow(new string[] {
+                table2839.AddRow(new string[] {
                             "Medical complexity",
                             "Bedside setup",
                             "Portable system",
                             "Maintains skills",
                             "Continuous"});
 #line 197
-    testRunner.When("implementing PECS with modifications:", ((string)(null)), table2876, "When ");
+    testRunner.When("implementing PECS with modifications:", ((string)(null)), table2839, "When ");
 #line hidden
 #line 205
     testRunner.Then("adaptations should maintain PECS principles", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1345,50 +1345,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 212
     testRunner.Given("students may lose previously mastered skills", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2877 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2840 = new TechTalk.SpecFlow.Table(new string[] {
                             "Regression Type",
                             "Possible Cause",
                             "Intervention",
                             "Recovery Time",
                             "Prevention Plan"});
-                table2877.AddRow(new string[] {
+                table2840.AddRow(new string[] {
                             "Phase drop-back",
                             "Extended break",
                             "Intensive practice",
                             "1-2 weeks",
                             "Maintenance plan"});
-                table2877.AddRow(new string[] {
+                table2840.AddRow(new string[] {
                             "Discrimination errors",
                             "New pictures added",
                             "Systematic review",
                             "3-5 days",
                             "Gradual expansion"});
-                table2877.AddRow(new string[] {
+                table2840.AddRow(new string[] {
                             "Reduced spontaneity",
                             "Over-prompting",
                             "Fade prompts again",
                             "1 week",
                             "Monitor independence"});
-                table2877.AddRow(new string[] {
+                table2840.AddRow(new string[] {
                             "Exchange breakdown",
                             "Environmental change",
                             "Re-establish routine",
                             "2-3 days",
                             "Transition planning"});
-                table2877.AddRow(new string[] {
+                table2840.AddRow(new string[] {
                             "Motivation loss",
                             "Reinforcer satiation",
                             "New assessment",
                             "Immediate",
                             "Regular updates"});
-                table2877.AddRow(new string[] {
+                table2840.AddRow(new string[] {
                             "Partner dependence",
                             "Limited generalization",
                             "Expand partners",
                             "2 weeks",
                             "Systematic plan"});
 #line 213
-    testRunner.When("regression occurs:", ((string)(null)), table2877, "When ");
+    testRunner.When("regression occurs:", ((string)(null)), table2840, "When ");
 #line hidden
 #line 221
     testRunner.Then("regression should be addressed quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1440,50 +1440,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 228
     testRunner.Given("students may use multiple communication modes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2878 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2841 = new TechTalk.SpecFlow.Table(new string[] {
                             "Other System",
                             "Integration Strategy",
                             "Coordination Plan",
                             "Expected Benefit",
                             "Monitoring Plan"});
-                table2878.AddRow(new string[] {
+                table2841.AddRow(new string[] {
                             "Speech attempts",
                             "Honor all attempts",
                             "PECS + verbal model",
                             "Total communication",
                             "Track both modes"});
-                table2878.AddRow(new string[] {
+                table2841.AddRow(new string[] {
                             "Sign language",
                             "Teach alongside PECS",
                             "Sign + picture",
                             "Multimodal options",
                             "Use assessment"});
-                table2878.AddRow(new string[] {
+                table2841.AddRow(new string[] {
                             "AAC device",
                             "PECS as bridge",
                             "Transition plan",
                             "High-tech readiness",
                             "Gradual shift"});
-                table2878.AddRow(new string[] {
+                table2841.AddRow(new string[] {
                             "Written words",
                             "Add text to pictures",
                             "Literacy development",
                             "Reading preparation",
                             "Academic tracking"});
-                table2878.AddRow(new string[] {
+                table2841.AddRow(new string[] {
                             "Gesture/pointing",
                             "Shape to PECS",
                             "Systematic transfer",
                             "Clear communication",
                             "Fade gestures"});
-                table2878.AddRow(new string[] {
+                table2841.AddRow(new string[] {
                             "PODD books",
                             "Combine strategies",
                             "Best of both",
                             "Comprehensive system",
                             "Team decision"});
 #line 229
-    testRunner.When("coordinating PECS with other systems:", ((string)(null)), table2878, "When ");
+    testRunner.When("coordinating PECS with other systems:", ((string)(null)), table2841, "When ");
 #line hidden
 #line 237
     testRunner.Then("multiple modes should be coordinated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

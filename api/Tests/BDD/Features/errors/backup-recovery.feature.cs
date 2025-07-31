@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 17
     testRunner.And("comprehensive backup strategies ensure complete data protection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1029 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table992 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Type",
                             "Backup Method",
                             "Backup Frequency",
                             "Retention Period",
                             "Recovery Priority",
                             "Compliance Requirements"});
-                table1029.AddRow(new string[] {
+                table992.AddRow(new string[] {
                             "Critical clinical data",
                             "Real-time replication",
                             "Continuous",
                             "7 years",
                             "Emergency",
                             "HIPAA compliant"});
-                table1029.AddRow(new string[] {
+                table992.AddRow(new string[] {
                             "User content",
                             "Incremental backup",
                             "Hourly",
                             "90 days",
                             "High",
                             "FERPA compliant"});
-                table1029.AddRow(new string[] {
+                table992.AddRow(new string[] {
                             "System configurations",
                             "Full backup",
                             "Daily",
                             "1 year",
                             "Medium",
                             "SOX compliant"});
-                table1029.AddRow(new string[] {
+                table992.AddRow(new string[] {
                             "Application databases",
                             "Transaction log backup",
                             "15 minutes",
                             "2 years",
                             "High",
                             "ACID compliant"});
-                table1029.AddRow(new string[] {
+                table992.AddRow(new string[] {
                             "File storage",
                             "Differential backup",
                             "Daily",
                             "6 months",
                             "Medium",
                             "Standard compliant"});
-                table1029.AddRow(new string[] {
+                table992.AddRow(new string[] {
                             "Archive data",
                             "Cold storage backup",
                             "Weekly",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Low",
                             "Legal compliant"});
 #line 18
-    testRunner.When("implementing backup strategies:", ((string)(null)), table1029, "When ");
+    testRunner.When("implementing backup strategies:", ((string)(null)), table992, "When ");
 #line hidden
 #line 26
     testRunner.Then("backup methods should match data criticality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 34
     testRunner.And("proper scheduling minimizes performance impact", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1030 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table993 = new TechTalk.SpecFlow.Table(new string[] {
                             "Backup Operation",
                             "Automation Level",
                             "Schedule Optimization",
                             "Resource Management",
                             "Monitoring Integration",
                             "Failure Handling"});
-                table1030.AddRow(new string[] {
+                table993.AddRow(new string[] {
                             "Full system backup",
                             "Fully automated",
                             "Off-peak scheduling",
                             "Resource throttling",
                             "Real-time monitoring",
                             "Automatic retry"});
-                table1030.AddRow(new string[] {
+                table993.AddRow(new string[] {
                             "Incremental backups",
                             "Automated with validation",
                             "Continuous scheduling",
                             "Dynamic allocation",
                             "Performance monitoring",
                             "Error escalation"});
-                table1030.AddRow(new string[] {
+                table993.AddRow(new string[] {
                             "Transaction backups",
                             "Real-time automation",
                             "Priority scheduling",
                             "Dedicated resources",
                             "Transaction monitoring",
                             "Immediate failover"});
-                table1030.AddRow(new string[] {
+                table993.AddRow(new string[] {
                             "User data backup",
                             "User-triggered + automated",
                             "User-preference scheduling",
                             "User quota management",
                             "User monitoring",
                             "User notification"});
-                table1030.AddRow(new string[] {
+                table993.AddRow(new string[] {
                             "Configuration backup",
                             "Change-triggered automation",
                             "Change-based scheduling",
                             "Minimal resources",
                             "Change monitoring",
                             "Configuration validation"});
-                table1030.AddRow(new string[] {
+                table993.AddRow(new string[] {
                             "Archive backup",
                             "Policy-driven automation",
                             "Compliance scheduling",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Compliance monitoring",
                             "Compliance escalation"});
 #line 35
-    testRunner.When("implementing automated backup operations:", ((string)(null)), table1030, "When ");
+    testRunner.When("implementing automated backup operations:", ((string)(null)), table993, "When ");
 #line hidden
 #line 43
     testRunner.Then("automation should be reliable and comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 51
     testRunner.And("integrity verification prevents corrupted backups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1031 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table994 = new TechTalk.SpecFlow.Table(new string[] {
                             "Validation Type",
                             "Validation Method",
                             "Validation Frequency",
                             "Error Detection",
                             "Correction Process",
                             "Quality Assurance"});
-                table1031.AddRow(new string[] {
+                table994.AddRow(new string[] {
                             "Checksum validation",
                             "Hash verification",
                             "Every backup",
                             "Checksum mismatches",
                             "Backup regeneration",
                             "Hash integrity"});
-                table1031.AddRow(new string[] {
+                table994.AddRow(new string[] {
                             "Restoration testing",
                             "Test restoration",
                             "Weekly",
                             "Restoration failures",
                             "Backup investigation",
                             "Restoration success"});
-                table1031.AddRow(new string[] {
+                table994.AddRow(new string[] {
                             "Data consistency",
                             "Consistency checks",
                             "Daily",
                             "Consistency violations",
                             "Data reconciliation",
                             "Data integrity"});
-                table1031.AddRow(new string[] {
+                table994.AddRow(new string[] {
                             "Backup completeness",
                             "Completeness verification",
                             "Every backup",
                             "Missing data",
                             "Backup retry",
                             "Complete coverage"});
-                table1031.AddRow(new string[] {
+                table994.AddRow(new string[] {
                             "Format validation",
                             "Format verification",
                             "Every backup",
                             "Format corruption",
                             "Format correction",
                             "Format integrity"});
-                table1031.AddRow(new string[] {
+                table994.AddRow(new string[] {
                             "Compliance validation",
                             "Compliance checking",
                             "Monthly",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Compliance correction",
                             "Compliance adherence"});
 #line 52
-    testRunner.When("validating backup integrity:", ((string)(null)), table1031, "When ");
+    testRunner.When("validating backup integrity:", ((string)(null)), table994, "When ");
 #line hidden
 #line 60
     testRunner.Then("validation should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 68
     testRunner.And("storage optimization maximizes backup efficiency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1032 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table995 = new TechTalk.SpecFlow.Table(new string[] {
                             "Storage Tier",
                             "Access Requirements",
                             "Cost Structure",
                             "Performance Level",
                             "Retention Policy",
                             "Migration Rules"});
-                table1032.AddRow(new string[] {
+                table995.AddRow(new string[] {
                             "Hot backup storage",
                             "Immediate access",
                             "High cost",
                             "High performance",
                             "30 days",
                             "Recent backups"});
-                table1032.AddRow(new string[] {
+                table995.AddRow(new string[] {
                             "Warm backup storage",
                             "<1 hour access",
                             "Medium cost",
                             "Medium performance",
                             "90 days",
                             "Regular backups"});
-                table1032.AddRow(new string[] {
+                table995.AddRow(new string[] {
                             "Cool backup storage",
                             "<24 hour access",
                             "Low cost",
                             "Lower performance",
                             "1 year",
                             "Older backups"});
-                table1032.AddRow(new string[] {
+                table995.AddRow(new string[] {
                             "Cold archive storage",
                             "<48 hour access",
                             "Very low cost",
                             "Archive performance",
                             "7 years",
                             "Compliance backups"});
-                table1032.AddRow(new string[] {
+                table995.AddRow(new string[] {
                             "Deep archive storage",
                             "<72 hour access",
                             "Minimal cost",
                             "Deep archive",
                             "10+ years",
                             "Legal retention"});
-                table1032.AddRow(new string[] {
+                table995.AddRow(new string[] {
                             "Geographic storage",
                             "Variable access",
                             "Distance-based cost",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Policy-based",
                             "Disaster recovery"});
 #line 69
-    testRunner.When("implementing tiered backup storage:", ((string)(null)), table1032, "When ");
+    testRunner.When("implementing tiered backup storage:", ((string)(null)), table995, "When ");
 #line hidden
 #line 77
     testRunner.Then("tiering should optimize cost and access", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 86
     testRunner.And("granular restoration minimizes recovery scope and time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1033 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table996 = new TechTalk.SpecFlow.Table(new string[] {
                             "Recovery Granularity",
                             "Time Precision",
                             "Recovery Method",
                             "Data Consistency",
                             "Recovery Speed",
                             "Complexity Level"});
-                table1033.AddRow(new string[] {
+                table996.AddRow(new string[] {
                             "Transaction-level",
                             "Exact timestamp",
                             "Transaction replay",
                             "ACID compliance",
                             "Fast recovery",
                             "Low complexity"});
-                table1033.AddRow(new string[] {
+                table996.AddRow(new string[] {
                             "Minute-level",
                             "1-minute intervals",
                             "Log-based recovery",
                             "Minute consistency",
                             "Medium recovery",
                             "Medium complexity"});
-                table1033.AddRow(new string[] {
+                table996.AddRow(new string[] {
                             "Hour-level",
                             "Hourly snapshots",
                             "Snapshot restoration",
                             "Hour consistency",
                             "Slow recovery",
                             "Low complexity"});
-                table1033.AddRow(new string[] {
+                table996.AddRow(new string[] {
                             "Daily-level",
                             "Daily backups",
                             "Backup restoration",
                             "Daily consistency",
                             "Variable recovery",
                             "Low complexity"});
-                table1033.AddRow(new string[] {
+                table996.AddRow(new string[] {
                             "User-defined",
                             "Custom points",
                             "Custom recovery",
                             "Custom consistency",
                             "Variable recovery",
                             "High complexity"});
-                table1033.AddRow(new string[] {
+                table996.AddRow(new string[] {
                             "Event-driven",
                             "Event markers",
                             "Event restoration",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Event-based recovery",
                             "Medium complexity"});
 #line 87
-    testRunner.When("implementing point-in-time recovery:", ((string)(null)), table1033, "When ");
+    testRunner.When("implementing point-in-time recovery:", ((string)(null)), table996, "When ");
 #line hidden
 #line 95
     testRunner.Then("precision should meet recovery requirements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 103
     testRunner.And("migration support provides business continuity during upgrades", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1034 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table997 = new TechTalk.SpecFlow.Table(new string[] {
                             "Migration Scenario",
                             "Source Platform",
                             "Target Platform",
                             "Migration Method",
                             "Data Transformation",
                             "Compatibility Assurance"});
-                table1034.AddRow(new string[] {
+                table997.AddRow(new string[] {
                             "Database migration",
                             "MySQL",
                             "PostgreSQL",
                             "Schema conversion",
                             "Data type mapping",
                             "Compatibility testing"});
-                table1034.AddRow(new string[] {
+                table997.AddRow(new string[] {
                             "Cloud migration",
                             "On-premise",
                             "AWS",
                             "Cloud sync",
                             "Format adaptation",
                             "Cloud validation"});
-                table1034.AddRow(new string[] {
+                table997.AddRow(new string[] {
                             "Version upgrade",
                             "Old version",
                             "New version",
                             "Version migration",
                             "Version compatibility",
                             "Upgrade testing"});
-                table1034.AddRow(new string[] {
+                table997.AddRow(new string[] {
                             "Architecture change",
                             "Monolithic",
                             "Microservices",
                             "Service decomposition",
                             "Data distribution",
                             "Architecture validation"});
-                table1034.AddRow(new string[] {
+                table997.AddRow(new string[] {
                             "Geographic relocation",
                             "US datacenter",
                             "EU datacenter",
                             "Geographic transfer",
                             "Compliance adaptation",
                             "Geographic testing"});
-                table1034.AddRow(new string[] {
+                table997.AddRow(new string[] {
                             "Vendor change",
                             "Vendor A",
                             "Vendor B",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Vendor compatibility",
                             "Vendor validation"});
 #line 104
-    testRunner.When("implementing cross-platform recovery:", ((string)(null)), table1034, "When ");
+    testRunner.When("implementing cross-platform recovery:", ((string)(null)), table997, "When ");
 #line hidden
 #line 112
     testRunner.Then("migration should preserve data integrity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 120
     testRunner.And("partial restoration enables targeted recovery operations", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1035 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table998 = new TechTalk.SpecFlow.Table(new string[] {
                             "Selection Criteria",
                             "Recovery Scope",
                             "Selection Method",
                             "Dependencies",
                             "Validation Process",
                             "Success Criteria"});
-                table1035.AddRow(new string[] {
+                table998.AddRow(new string[] {
                             "User-specific",
                             "Individual user data",
                             "User identification",
                             "User dependencies",
                             "User validation",
                             "User data integrity"});
-                table1035.AddRow(new string[] {
+                table998.AddRow(new string[] {
                             "Time-range",
                             "Specific time period",
                             "Time filtering",
                             "Temporal dependencies",
                             "Time validation",
                             "Temporal consistency"});
-                table1035.AddRow(new string[] {
+                table998.AddRow(new string[] {
                             "Component-specific",
                             "System components",
                             "Component isolation",
                             "Component dependencies",
                             "Component validation",
                             "Component functionality"});
-                table1035.AddRow(new string[] {
+                table998.AddRow(new string[] {
                             "Criticality-based",
                             "Critical data only",
                             "Criticality rating",
                             "Critical dependencies",
                             "Critical validation",
                             "Critical operations"});
-                table1035.AddRow(new string[] {
+                table998.AddRow(new string[] {
                             "Geographic",
                             "Location-specific",
                             "Geographic filtering",
                             "Geographic dependencies",
                             "Geographic validation",
                             "Geographic consistency"});
-                table1035.AddRow(new string[] {
+                table998.AddRow(new string[] {
                             "Custom criteria",
                             "Custom selection",
                             "Custom logic",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Custom validation",
                             "Custom success"});
 #line 121
-    testRunner.When("implementing selective recovery:", ((string)(null)), table1035, "When ");
+    testRunner.When("implementing selective recovery:", ((string)(null)), table998, "When ");
 #line hidden
 #line 129
     testRunner.Then("selection should be precise and comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 138
     testRunner.And("business continuity depends on effective disaster recovery", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1036 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table999 = new TechTalk.SpecFlow.Table(new string[] {
                             "Disaster Type",
                             "Impact Assessment",
                             "Recovery Strategy",
                             "Recovery Time Objective",
                             "Recovery Point Objective",
                             "Business Impact"});
-                table1036.AddRow(new string[] {
+                table999.AddRow(new string[] {
                             "Natural disasters",
                             "Geographic impact",
                             "Geographic failover",
                             "<4 hours",
                             "<1 hour data loss",
                             "Regional disruption"});
-                table1036.AddRow(new string[] {
+                table999.AddRow(new string[] {
                             "Cyber attacks",
                             "Security compromise",
                             "Security isolation",
                             "<2 hours",
                             "<30 minutes data loss",
                             "Security incident"});
-                table1036.AddRow(new string[] {
+                table999.AddRow(new string[] {
                             "Hardware failures",
                             "System unavailability",
                             "Hardware replacement",
                             "<1 hour",
                             "<15 minutes data loss",
                             "System downtime"});
-                table1036.AddRow(new string[] {
+                table999.AddRow(new string[] {
                             "Human errors",
                             "Data corruption",
                             "Error correction",
                             "<30 minutes",
                             "<5 minutes data loss",
                             "Operational impact"});
-                table1036.AddRow(new string[] {
+                table999.AddRow(new string[] {
                             "Network outages",
                             "Connectivity loss",
                             "Network rerouting",
                             "<15 minutes",
                             "Real-time",
                             "Communication disruption"});
-                table1036.AddRow(new string[] {
+                table999.AddRow(new string[] {
                             "Software failures",
                             "Application crashes",
                             "Software recovery",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "<1 minute data loss",
                             "Application downtime"});
 #line 139
-    testRunner.When("planning disaster recovery:", ((string)(null)), table1036, "When ");
+    testRunner.When("planning disaster recovery:", ((string)(null)), table999, "When ");
 #line hidden
 #line 147
     testRunner.Then("planning should cover all major disaster types", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 155
     testRunner.And("automated recovery minimizes human intervention requirements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1037 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1000 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failover Type",
                             "Trigger Conditions",
                             "Failover Speed",
                             "Data Synchronization",
                             "Service Continuity",
                             "Fallback Procedures"});
-                table1037.AddRow(new string[] {
+                table1000.AddRow(new string[] {
                             "Hot standby",
                             "Primary failure",
                             "<30 seconds",
                             "Real-time sync",
                             "Seamless continuity",
                             "Automatic fallback"});
-                table1037.AddRow(new string[] {
+                table1000.AddRow(new string[] {
                             "Warm standby",
                             "Extended outage",
                             "<5 minutes",
                             "Near real-time sync",
                             "Brief interruption",
                             "Manual fallback"});
-                table1037.AddRow(new string[] {
+                table1000.AddRow(new string[] {
                             "Cold standby",
                             "Disaster scenario",
                             "<30 minutes",
                             "Backup restoration",
                             "Service interruption",
                             "Recovery procedures"});
-                table1037.AddRow(new string[] {
+                table1000.AddRow(new string[] {
                             "Geographic failover",
                             "Regional disaster",
                             "<15 minutes",
                             "Geographic replication",
                             "Geographic continuity",
                             "Geographic fallback"});
-                table1037.AddRow(new string[] {
+                table1000.AddRow(new string[] {
                             "Load balancer failover",
                             "Server failure",
                             "<10 seconds",
                             "Session replication",
                             "Session continuity",
                             "Load balancing"});
-                table1037.AddRow(new string[] {
+                table1000.AddRow(new string[] {
                             "Database failover",
                             "Database failure",
                             "<1 minute",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Transaction continuity",
                             "Database recovery"});
 #line 156
-    testRunner.When("implementing automatic failover:", ((string)(null)), table1037, "When ");
+    testRunner.When("implementing automatic failover:", ((string)(null)), table1000, "When ");
 #line hidden
 #line 164
     testRunner.Then("failover should be rapid and reliable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 172
     testRunner.And("regular testing ensures recovery procedures work", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1038 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1001 = new TechTalk.SpecFlow.Table(new string[] {
                             "Test Type",
                             "Test Scope",
                             "Test Frequency",
                             "Test Environment",
                             "Success Criteria",
                             "Documentation"});
-                table1038.AddRow(new string[] {
+                table1001.AddRow(new string[] {
                             "Full disaster recovery",
                             "Complete system",
                             "Quarterly",
                             "Production-like",
                             "Full restoration",
                             "Test reports"});
-                table1038.AddRow(new string[] {
+                table1001.AddRow(new string[] {
                             "Partial recovery",
                             "Component testing",
                             "Monthly",
                             "Test environment",
                             "Component restoration",
                             "Component reports"});
-                table1038.AddRow(new string[] {
+                table1001.AddRow(new string[] {
                             "Point-in-time recovery",
                             "Time-specific testing",
                             "Weekly",
                             "Test database",
                             "Time accuracy",
                             "Time reports"});
-                table1038.AddRow(new string[] {
+                table1001.AddRow(new string[] {
                             "Performance testing",
                             "Recovery speed",
                             "Bi-weekly",
                             "Performance environment",
                             "Speed targets",
                             "Performance reports"});
-                table1038.AddRow(new string[] {
+                table1001.AddRow(new string[] {
                             "Failover testing",
                             "Automatic failover",
                             "Weekly",
                             "Failover environment",
                             "Failover success",
                             "Failover reports"});
-                table1038.AddRow(new string[] {
+                table1001.AddRow(new string[] {
                             "User acceptance testing",
                             "User scenarios",
                             "Monthly",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "User satisfaction",
                             "User reports"});
 #line 173
-    testRunner.When("conducting recovery testing:", ((string)(null)), table1038, "When ");
+    testRunner.When("conducting recovery testing:", ((string)(null)), table1001, "When ");
 #line hidden
 #line 181
     testRunner.Then("testing should be comprehensive and regular", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 190
     testRunner.And("operational oversight prevents backup failures", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1039 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1002 = new TechTalk.SpecFlow.Table(new string[] {
                             "Monitoring Aspect",
                             "Monitoring Method",
                             "Alert Thresholds",
                             "Escalation Procedures",
                             "Response Requirements",
                             "Performance Metrics"});
-                table1039.AddRow(new string[] {
+                table1002.AddRow(new string[] {
                             "Backup completion",
                             "Job monitoring",
                             "Failed backups",
                             "Immediate escalation",
                             "<15 minutes response",
                             "Completion rates"});
-                table1039.AddRow(new string[] {
+                table1002.AddRow(new string[] {
                             "Backup performance",
                             "Performance tracking",
                             "Slow backups",
                             "Performance alerts",
                             "<30 minutes response",
                             "Performance trends"});
-                table1039.AddRow(new string[] {
+                table1002.AddRow(new string[] {
                             "Storage utilization",
                             "Capacity monitoring",
                             "Storage limits",
                             "Capacity alerts",
                             "<1 hour response",
                             "Utilization metrics"});
-                table1039.AddRow(new string[] {
+                table1002.AddRow(new string[] {
                             "Data integrity",
                             "Integrity checking",
                             "Integrity failures",
                             "Critical escalation",
                             "<5 minutes response",
                             "Integrity rates"});
-                table1039.AddRow(new string[] {
+                table1002.AddRow(new string[] {
                             "Recovery readiness",
                             "Readiness testing",
                             "Readiness failures",
                             "Recovery alerts",
                             "<2 hours response",
                             "Readiness metrics"});
-                table1039.AddRow(new string[] {
+                table1002.AddRow(new string[] {
                             "Compliance status",
                             "Compliance monitoring",
                             "Compliance violations",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "<4 hours response",
                             "Compliance metrics"});
 #line 191
-    testRunner.When("monitoring backup operations:", ((string)(null)), table1039, "When ");
+    testRunner.When("monitoring backup operations:", ((string)(null)), table1002, "When ");
 #line hidden
 #line 199
     testRunner.Then("monitoring should be continuous and comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 207
     testRunner.And("notification systems ensure appropriate personnel are informed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1040 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1003 = new TechTalk.SpecFlow.Table(new string[] {
                             "Alert Type",
                             "Severity Level",
                             "Notification Method",
                             "Response Time",
                             "Escalation Path",
                             "Resolution Tracking"});
-                table1040.AddRow(new string[] {
+                table1003.AddRow(new string[] {
                             "Backup failures",
                             "Critical",
                             "Multiple channels",
                             "Immediate",
                             "Operations → Management",
                             "Failure tracking"});
-                table1040.AddRow(new string[] {
+                table1003.AddRow(new string[] {
                             "Storage issues",
                             "High",
                             "Email + SMS",
                             "<30 minutes",
                             "Storage team → IT director",
                             "Storage tracking"});
-                table1040.AddRow(new string[] {
+                table1003.AddRow(new string[] {
                             "Performance degradation",
                             "Medium",
                             "Email",
                             "<1 hour",
                             "Performance team",
                             "Performance tracking"});
-                table1040.AddRow(new string[] {
+                table1003.AddRow(new string[] {
                             "Compliance violations",
                             "High",
                             "Secure notification",
                             "<2 hours",
                             "Compliance team → Legal",
                             "Compliance tracking"});
-                table1040.AddRow(new string[] {
+                table1003.AddRow(new string[] {
                             "Recovery failures",
                             "Critical",
                             "Emergency notification",
                             "Immediate",
                             "Recovery team → CTO",
                             "Recovery tracking"});
-                table1040.AddRow(new string[] {
+                table1003.AddRow(new string[] {
                             "Test failures",
                             "Medium",
                             "Email notification",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Test team → QA manager",
                             "Test tracking"});
 #line 208
-    testRunner.When("managing backup alerts:", ((string)(null)), table1040, "When ");
+    testRunner.When("managing backup alerts:", ((string)(null)), table1003, "When ");
 #line hidden
 #line 216
     testRunner.Then("alerts should be appropriately prioritized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 224
     testRunner.And("insights drive continuous improvement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1041 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1004 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Dimension",
                             "Analysis Method",
                             "Optimization Opportunity",
                             "Implementation Strategy",
                             "Success Metrics",
                             "Continuous Improvement"});
-                table1041.AddRow(new string[] {
+                table1004.AddRow(new string[] {
                             "Backup speed",
                             "Speed analysis",
                             "Speed optimization",
                             "Infrastructure upgrade",
                             "Faster backups",
                             "Speed improvement"});
-                table1041.AddRow(new string[] {
+                table1004.AddRow(new string[] {
                             "Storage efficiency",
                             "Efficiency analysis",
                             "Compression optimization",
                             "Compression tuning",
                             "Storage savings",
                             "Efficiency improvement"});
-                table1041.AddRow(new string[] {
+                table1004.AddRow(new string[] {
                             "Recovery time",
                             "Time analysis",
                             "Recovery optimization",
                             "Process improvement",
                             "Faster recovery",
                             "Time improvement"});
-                table1041.AddRow(new string[] {
+                table1004.AddRow(new string[] {
                             "Resource utilization",
                             "Utilization analysis",
                             "Resource optimization",
                             "Resource reallocation",
                             "Better utilization",
                             "Resource improvement"});
-                table1041.AddRow(new string[] {
+                table1004.AddRow(new string[] {
                             "Cost analysis",
                             "Cost modeling",
                             "Cost optimization",
                             "Cost reduction",
                             "Lower costs",
                             "Cost improvement"});
-                table1041.AddRow(new string[] {
+                table1004.AddRow(new string[] {
                             "Reliability metrics",
                             "Reliability analysis",
                             "Reliability improvement",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Higher reliability",
                             "Reliability improvement"});
 #line 225
-    testRunner.When("analyzing backup performance:", ((string)(null)), table1041, "When ");
+    testRunner.When("analyzing backup performance:", ((string)(null)), table1004, "When ");
 #line hidden
 #line 233
     testRunner.Then("analytics should drive optimization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 242
     testRunner.And("compliance violations can have serious consequences", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1042 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1005 = new TechTalk.SpecFlow.Table(new string[] {
                             "Regulation Type",
                             "Backup Requirements",
                             "Retention Policies",
                             "Recovery Standards",
                             "Audit Requirements",
                             "Compliance Monitoring"});
-                table1042.AddRow(new string[] {
+                table1005.AddRow(new string[] {
                             "HIPAA",
                             "Encrypted backups",
                             "6-year retention",
                             "<4 hour recovery",
                             "Complete audit trails",
                             "HIPAA monitoring"});
-                table1042.AddRow(new string[] {
+                table1005.AddRow(new string[] {
                             "FERPA",
                             "Educational privacy",
                             "Student record retention",
                             "Educational recovery",
                             "Educational audits",
                             "FERPA monitoring"});
-                table1042.AddRow(new string[] {
+                table1005.AddRow(new string[] {
                             "SOX",
                             "Financial controls",
                             "7-year retention",
                             "Financial recovery",
                             "Financial audits",
                             "SOX monitoring"});
-                table1042.AddRow(new string[] {
+                table1005.AddRow(new string[] {
                             "GDPR",
                             "Data protection",
                             "Right to deletion",
                             "Privacy recovery",
                             "Privacy audits",
                             "GDPR monitoring"});
-                table1042.AddRow(new string[] {
+                table1005.AddRow(new string[] {
                             "Industry standards",
                             "Industry requirements",
                             "Industry retention",
                             "Industry recovery",
                             "Industry audits",
                             "Industry monitoring"});
-                table1042.AddRow(new string[] {
+                table1005.AddRow(new string[] {
                             "Internal policies",
                             "Company requirements",
                             "Company retention",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Company audits",
                             "Internal monitoring"});
 #line 243
-    testRunner.When("managing compliance requirements:", ((string)(null)), table1042, "When ");
+    testRunner.When("managing compliance requirements:", ((string)(null)), table1005, "When ");
 #line hidden
 #line 251
     testRunner.Then("compliance should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 259
     testRunner.And("lifecycle management optimizes backup value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1043 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1006 = new TechTalk.SpecFlow.Table(new string[] {
                             "Governance Aspect",
                             "Governance Policies",
                             "Lifecycle Stages",
                             "Management Actions",
                             "Quality Assurance",
                             "Governance Monitoring"});
-                table1043.AddRow(new string[] {
+                table1006.AddRow(new string[] {
                             "Backup classification",
                             "Classification policies",
                             "Active, archived, disposed",
                             "Classification management",
                             "Classification quality",
                             "Classification monitoring"});
-                table1043.AddRow(new string[] {
+                table1006.AddRow(new string[] {
                             "Access governance",
                             "Access policies",
                             "Creation, access, deletion",
                             "Access management",
                             "Access quality",
                             "Access monitoring"});
-                table1043.AddRow(new string[] {
+                table1006.AddRow(new string[] {
                             "Quality governance",
                             "Quality policies",
                             "Backup, validation, recovery",
                             "Quality management",
                             "Quality standards",
                             "Quality monitoring"});
-                table1043.AddRow(new string[] {
+                table1006.AddRow(new string[] {
                             "Retention governance",
                             "Retention policies",
                             "Retention, disposal",
                             "Retention management",
                             "Retention compliance",
                             "Retention monitoring"});
-                table1043.AddRow(new string[] {
+                table1006.AddRow(new string[] {
                             "Security governance",
                             "Security policies",
                             "Protection, encryption",
                             "Security management",
                             "Security standards",
                             "Security monitoring"});
-                table1043.AddRow(new string[] {
+                table1006.AddRow(new string[] {
                             "Cost governance",
                             "Cost policies",
                             "Cost optimization",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Cost efficiency",
                             "Cost monitoring"});
 #line 260
-    testRunner.When("implementing backup governance:", ((string)(null)), table1043, "When ");
+    testRunner.When("implementing backup governance:", ((string)(null)), table1006, "When ");
 #line hidden
 #line 268
     testRunner.Then("governance should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 277
     testRunner.And("user empowerment reduces administrative overhead", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1044 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1007 = new TechTalk.SpecFlow.Table(new string[] {
                             "Self-Service Feature",
                             "User Control Level",
                             "Safety Features",
                             "Guidance Provided",
                             "Success Metrics",
                             "User Training"});
-                table1044.AddRow(new string[] {
+                table1007.AddRow(new string[] {
                             "Personal backup",
                             "Full user control",
                             "Confirmation dialogs",
                             "Backup guidance",
                             "Backup adoption",
                             "Basic training"});
-                table1044.AddRow(new string[] {
+                table1007.AddRow(new string[] {
                             "Restore requests",
                             "Guided user control",
                             "Administrative approval",
                             "Restore guidance",
                             "Restore success",
                             "Restore training"});
-                table1044.AddRow(new string[] {
+                table1007.AddRow(new string[] {
                             "Backup scheduling",
                             "User preference control",
                             "Schedule validation",
                             "Schedule guidance",
                             "Schedule effectiveness",
                             "Schedule training"});
-                table1044.AddRow(new string[] {
+                table1007.AddRow(new string[] {
                             "Backup monitoring",
                             "View-only access",
                             "Safe monitoring",
                             "Monitoring guidance",
                             "Monitoring engagement",
                             "Monitoring training"});
-                table1044.AddRow(new string[] {
+                table1007.AddRow(new string[] {
                             "Recovery testing",
                             "Supervised control",
                             "Test environment",
                             "Testing guidance",
                             "Test participation",
                             "Testing training"});
-                table1044.AddRow(new string[] {
+                table1007.AddRow(new string[] {
                             "Backup settings",
                             "Configuration control",
                             "Setting validation",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Setting optimization",
                             "Configuration training"});
 #line 278
-    testRunner.When("providing backup self-service:", ((string)(null)), table1044, "When ");
+    testRunner.When("providing backup self-service:", ((string)(null)), table1007, "When ");
 #line hidden
 #line 286
     testRunner.Then("self-service should be intuitive and safe", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1854,49 +1854,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 294
     testRunner.And("awareness programs promote good backup practices", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1045 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1008 = new TechTalk.SpecFlow.Table(new string[] {
                             "Education Type",
                             "Content Scope",
                             "Delivery Method",
                             "Target Audience",
                             "Duration",
                             "Effectiveness Metrics"});
-                table1045.AddRow(new string[] {
+                table1008.AddRow(new string[] {
                             "Backup basics",
                             "Fundamental concepts",
                             "Online tutorial",
                             "All users",
                             "30 minutes",
                             "Knowledge assessment"});
-                table1045.AddRow(new string[] {
+                table1008.AddRow(new string[] {
                             "Recovery procedures",
                             "Recovery processes",
                             "Hands-on training",
                             "Regular users",
                             "1 hour",
                             "Procedure competency"});
-                table1045.AddRow(new string[] {
+                table1008.AddRow(new string[] {
                             "Best practices",
                             "Optimal practices",
                             "Workshop",
                             "Power users",
                             "2 hours",
                             "Practice adoption"});
-                table1045.AddRow(new string[] {
+                table1008.AddRow(new string[] {
                             "Emergency procedures",
                             "Crisis response",
                             "Emergency training",
                             "All users",
                             "45 minutes",
                             "Emergency readiness"});
-                table1045.AddRow(new string[] {
+                table1008.AddRow(new string[] {
                             "Compliance training",
                             "Compliance requirements",
                             "Compliance workshop",
                             "Compliance users",
                             "90 minutes",
                             "Compliance competency"});
-                table1045.AddRow(new string[] {
+                table1008.AddRow(new string[] {
                             "Advanced features",
                             "Advanced capabilities",
                             "Advanced training",
@@ -1904,7 +1904,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "3 hours",
                             "Advanced skills"});
 #line 295
-    testRunner.When("providing backup education:", ((string)(null)), table1045, "When ");
+    testRunner.When("providing backup education:", ((string)(null)), table1008, "When ");
 #line hidden
 #line 303
     testRunner.Then("education should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1958,49 +1958,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 311
     testRunner.Given("backup systems may encounter various errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1046 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1009 = new TechTalk.SpecFlow.Table(new string[] {
                             "Error Type",
                             "Detection Method",
                             "Resolution Process",
                             "Timeline",
                             "System Impact",
                             "Prevention Measures"});
-                table1046.AddRow(new string[] {
+                table1009.AddRow(new string[] {
                             "Backup failures",
                             "Backup monitoring",
                             "Backup retry",
                             "<1 hour",
                             "Data protection risk",
                             "Backup redundancy"});
-                table1046.AddRow(new string[] {
+                table1009.AddRow(new string[] {
                             "Storage errors",
                             "Storage monitoring",
                             "Storage repair",
                             "<2 hours",
                             "Storage disruption",
                             "Storage redundancy"});
-                table1046.AddRow(new string[] {
+                table1009.AddRow(new string[] {
                             "Network issues",
                             "Network monitoring",
                             "Network restoration",
                             "<30 minutes",
                             "Network disruption",
                             "Network redundancy"});
-                table1046.AddRow(new string[] {
+                table1009.AddRow(new string[] {
                             "Corruption detection",
                             "Integrity monitoring",
                             "Corruption repair",
                             "<4 hours",
                             "Data integrity risk",
                             "Integrity validation"});
-                table1046.AddRow(new string[] {
+                table1009.AddRow(new string[] {
                             "Recovery failures",
                             "Recovery monitoring",
                             "Recovery troubleshooting",
                             "<6 hours",
                             "Recovery unavailability",
                             "Recovery testing"});
-                table1046.AddRow(new string[] {
+                table1009.AddRow(new string[] {
                             "Performance issues",
                             "Performance monitoring",
                             "Performance optimization",
@@ -2008,7 +2008,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Performance degradation",
                             "Performance tuning"});
 #line 312
-    testRunner.When("backup and recovery errors occur:", ((string)(null)), table1046, "When ");
+    testRunner.When("backup and recovery errors occur:", ((string)(null)), table1009, "When ");
 #line hidden
 #line 320
     testRunner.Then("errors should be detected and resolved quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -2062,49 +2062,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 327
     testRunner.Given("backup and recovery require long-term sustainability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1047 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1010 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table1047.AddRow(new string[] {
+                table1010.AddRow(new string[] {
                             "Data growth",
                             "Exponential backup growth",
                             "Scalable backup architecture",
                             "Infrastructure scaling",
                             "Linear scaling",
                             "Growth sustainability"});
-                table1047.AddRow(new string[] {
+                table1010.AddRow(new string[] {
                             "Technology evolution",
                             "Changing backup technology",
                             "Technology roadmap",
                             "Technology investment",
                             "Technology currency",
                             "Technology sustainability"});
-                table1047.AddRow(new string[] {
+                table1010.AddRow(new string[] {
                             "Cost management",
                             "Rising backup costs",
                             "Cost optimization",
                             "Cost management",
                             "Cost efficiency",
                             "Cost sustainability"});
-                table1047.AddRow(new string[] {
+                table1010.AddRow(new string[] {
                             "Compliance evolution",
                             "Changing regulations",
                             "Adaptive compliance",
                             "Compliance resources",
                             "Compliance maintenance",
                             "Compliance sustainability"});
-                table1047.AddRow(new string[] {
+                table1010.AddRow(new string[] {
                             "Skills development",
                             "Technical expertise",
                             "Training programs",
                             "Training investment",
                             "Skill advancement",
                             "Skills sustainability"});
-                table1047.AddRow(new string[] {
+                table1010.AddRow(new string[] {
                             "Process improvement",
                             "Operational efficiency",
                             "Process optimization",
@@ -2112,7 +2112,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Process efficiency",
                             "Process sustainability"});
 #line 328
-    testRunner.When("planning backup sustainability:", ((string)(null)), table1047, "When ");
+    testRunner.When("planning backup sustainability:", ((string)(null)), table1010, "When ");
 #line hidden
 #line 336
     testRunner.Then("sustainability should be systematically planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

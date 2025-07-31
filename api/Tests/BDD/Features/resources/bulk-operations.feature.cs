@@ -284,20 +284,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 43
     testRunner.Given("I have selected 30 resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2015 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1978 = new TechTalk.SpecFlow.Table(new string[] {
                             "folderName",
                             "resourceCount"});
-                table2015.AddRow(new string[] {
+                table1978.AddRow(new string[] {
                             "Fine Motor Skills",
                             "15"});
-                table2015.AddRow(new string[] {
+                table1978.AddRow(new string[] {
                             "Gross Motor Skills",
                             "20"});
-                table2015.AddRow(new string[] {
+                table1978.AddRow(new string[] {
                             "Speech Activities",
                             "10"});
 #line 44
-    testRunner.And("I have existing folders:", ((string)(null)), table2015, "And ");
+    testRunner.And("I have existing folders:", ((string)(null)), table1978, "And ");
 #line hidden
 #line 49
     testRunner.When("I choose \"Move to Folder\" bulk action", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -357,23 +357,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 60
     testRunner.When("I choose \"Bulk Edit Metadata\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2016 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1979 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2016.AddRow(new string[] {
+                table1979.AddRow(new string[] {
                             "gradeLevel",
                             "K-2"});
-                table2016.AddRow(new string[] {
+                table1979.AddRow(new string[] {
                             "therapyType",
                             "OT"});
-                table2016.AddRow(new string[] {
+                table1979.AddRow(new string[] {
                             "evidenceLevel",
                             "4"});
-                table2016.AddRow(new string[] {
+                table1979.AddRow(new string[] {
                             "lastReviewed",
                             "current_date"});
 #line 61
-    testRunner.And("I update:", ((string)(null)), table2016, "And ");
+    testRunner.And("I update:", ((string)(null)), table1979, "And ");
 #line hidden
 #line 67
     testRunner.Then("all selected resources should be updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -473,20 +473,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2017 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1980 = new TechTalk.SpecFlow.Table(new string[] {
                             "filter",
                             "value"});
-                table2017.AddRow(new string[] {
+                table1980.AddRow(new string[] {
                             "skillArea",
                             "Fine Motor"});
-                table2017.AddRow(new string[] {
+                table1980.AddRow(new string[] {
                             "gradeLevel",
                             "Pre-K"});
-                table2017.AddRow(new string[] {
+                table1980.AddRow(new string[] {
                             "format",
                             "Printable PDF"});
 #line 85
-    testRunner.Given("I have filtered resources by:", ((string)(null)), table2017, "Given ");
+    testRunner.Given("I have filtered resources by:", ((string)(null)), table1980, "Given ");
 #line hidden
 #line 90
     testRunner.And("the search returns 75 resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -494,23 +494,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 91
     testRunner.When("I click \"Export List\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2018 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1981 = new TechTalk.SpecFlow.Table(new string[] {
                             "format",
                             "description"});
-                table2018.AddRow(new string[] {
+                table1981.AddRow(new string[] {
                             "CSV",
                             "Spreadsheet compatible"});
-                table2018.AddRow(new string[] {
+                table1981.AddRow(new string[] {
                             "PDF",
                             "Formatted resource catalog"});
-                table2018.AddRow(new string[] {
+                table1981.AddRow(new string[] {
                             "JSON",
                             "For API integration"});
-                table2018.AddRow(new string[] {
+                table1981.AddRow(new string[] {
                             "HTML",
                             "Web page with links"});
 #line 92
-    testRunner.Then("I should see export format options:", ((string)(null)), table2018, "Then ");
+    testRunner.Then("I should see export format options:", ((string)(null)), table1981, "Then ");
 #line hidden
 #line 98
     testRunner.When("I select \"CSV\" format", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -619,29 +619,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 118
     testRunner.When("I click \"Bulk Print\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2019 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1982 = new TechTalk.SpecFlow.Table(new string[] {
                             "option",
                             "choices"});
-                table2019.AddRow(new string[] {
+                table1982.AddRow(new string[] {
                             "copies",
                             "1-30"});
-                table2019.AddRow(new string[] {
+                table1982.AddRow(new string[] {
                             "paperSize",
                             "Letter, Legal, A4"});
-                table2019.AddRow(new string[] {
+                table1982.AddRow(new string[] {
                             "color",
                             "Color, Grayscale, B&W"});
-                table2019.AddRow(new string[] {
+                table1982.AddRow(new string[] {
                             "duplex",
                             "Single-sided, Double-sided"});
-                table2019.AddRow(new string[] {
+                table1982.AddRow(new string[] {
                             "collate",
                             "Yes, No"});
-                table2019.AddRow(new string[] {
+                table1982.AddRow(new string[] {
                             "studentsPerCopy",
                             "1-10"});
 #line 119
-    testRunner.Then("I should see print options:", ((string)(null)), table2019, "Then ");
+    testRunner.Then("I should see print options:", ((string)(null)), table1982, "Then ");
 #line hidden
 #line 127
     testRunner.When("I configure print settings", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -704,23 +704,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 139
     testRunner.Then("I should see all 30 recommendations", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2020 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1983 = new TechTalk.SpecFlow.Table(new string[] {
                             "rating",
                             "count"});
-                table2020.AddRow(new string[] {
+                table1983.AddRow(new string[] {
                             "Very Helpful",
                             "12"});
-                table2020.AddRow(new string[] {
+                table1983.AddRow(new string[] {
                             "Helpful",
                             "5"});
-                table2020.AddRow(new string[] {
+                table1983.AddRow(new string[] {
                             "Not Helpful",
                             "3"});
-                table2020.AddRow(new string[] {
+                table1983.AddRow(new string[] {
                             "Not Used",
                             "10"});
 #line 140
-    testRunner.And("I can bulk rate them:", ((string)(null)), table2020, "And ");
+    testRunner.And("I can bulk rate them:", ((string)(null)), table1983, "And ");
 #line hidden
 #line 146
     testRunner.When("I submit bulk feedback", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -780,24 +780,24 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 157
     testRunner.Then("I should see current permissions matrix", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2021 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1984 = new TechTalk.SpecFlow.Table(new string[] {
                             "user",
                             "oldPermission",
                             "newPermission"});
-                table2021.AddRow(new string[] {
+                table1984.AddRow(new string[] {
                             "john.doe@clinic.com",
                             "View",
                             "Edit"});
-                table2021.AddRow(new string[] {
+                table1984.AddRow(new string[] {
                             "jane.smith@clinic.com",
                             "None",
                             "View"});
-                table2021.AddRow(new string[] {
+                table1984.AddRow(new string[] {
                             "team.lead@clinic.com",
                             "Edit",
                             "Admin"});
 #line 158
-    testRunner.When("I update permissions:", ((string)(null)), table2021, "When ");
+    testRunner.When("I update permissions:", ((string)(null)), table1984, "When ");
 #line hidden
 #line 163
     testRunner.Then("permissions should update for selected resources only", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -906,23 +906,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 183
     testRunner.Given("I have selected 100 resources for download", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2022 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1985 = new TechTalk.SpecFlow.Table(new string[] {
                             "resourceId",
                             "issue"});
-                table2022.AddRow(new string[] {
+                table1985.AddRow(new string[] {
                             "RES-045",
                             "File not found"});
-                table2022.AddRow(new string[] {
+                table1985.AddRow(new string[] {
                             "RES-067",
                             "Corrupted file"});
-                table2022.AddRow(new string[] {
+                table1985.AddRow(new string[] {
                             "RES-089",
                             "Access denied"});
-                table2022.AddRow(new string[] {
+                table1985.AddRow(new string[] {
                             "RES-102",
                             "File too large (>100MB)"});
 #line 184
-    testRunner.And("some resources have issues:", ((string)(null)), table2022, "And ");
+    testRunner.And("some resources have issues:", ((string)(null)), table1985, "And ");
 #line hidden
 #line 190
     testRunner.When("I initiate bulk download", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -985,26 +985,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 202
     testRunner.Then("selection should complete within 2 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2023 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1986 = new TechTalk.SpecFlow.Table(new string[] {
                             "operation",
                             "maxTime"});
-                table2023.AddRow(new string[] {
+                table1986.AddRow(new string[] {
                             "Add Favorites",
                             "5 sec"});
-                table2023.AddRow(new string[] {
+                table1986.AddRow(new string[] {
                             "Create Folder",
                             "3 sec"});
-                table2023.AddRow(new string[] {
+                table1986.AddRow(new string[] {
                             "Update Metadata",
                             "10 sec"});
-                table2023.AddRow(new string[] {
+                table1986.AddRow(new string[] {
                             "Generate ZIP",
                             "30 sec"});
-                table2023.AddRow(new string[] {
+                table1986.AddRow(new string[] {
                             "Delete Items",
                             "5 sec"});
 #line 203
-    testRunner.When("I perform bulk operations:", ((string)(null)), table2023, "When ");
+    testRunner.When("I perform bulk operations:", ((string)(null)), table1986, "When ");
 #line hidden
 #line 210
     testRunner.Then("each operation should complete within specified time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

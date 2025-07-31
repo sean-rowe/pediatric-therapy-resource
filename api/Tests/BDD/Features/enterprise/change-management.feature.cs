@@ -141,49 +141,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 17
     testRunner.And("framework ensures systematic change", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table884 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table847 = new TechTalk.SpecFlow.Table(new string[] {
                             "Governance Layer",
                             "Structure",
                             "Responsibilities",
                             "Decision Rights",
                             "Meeting Cadence",
                             "Success Metrics"});
-                table884.AddRow(new string[] {
+                table847.AddRow(new string[] {
                             "Executive steering",
                             "C-suite committee",
                             "Strategic direction",
                             "Investment approval",
                             "Monthly",
                             "ROI achievement"});
-                table884.AddRow(new string[] {
+                table847.AddRow(new string[] {
                             "Transformation office",
                             "PMO + change team",
                             "Program management",
                             "Scope changes",
                             "Weekly",
                             "Milestone delivery"});
-                table884.AddRow(new string[] {
+                table847.AddRow(new string[] {
                             "Business sponsors",
                             "Department heads",
                             "Business alignment",
                             "Requirement approval",
                             "Bi-weekly",
                             "Adoption rates"});
-                table884.AddRow(new string[] {
+                table847.AddRow(new string[] {
                             "Technical board",
                             "Architecture team",
                             "Technical decisions",
                             "Technology selection",
                             "Weekly",
                             "Technical KPIs"});
-                table884.AddRow(new string[] {
+                table847.AddRow(new string[] {
                             "Change champions",
                             "Cross-functional",
                             "Culture change",
                             "Process changes",
                             "Weekly",
                             "Engagement scores"});
-                table884.AddRow(new string[] {
+                table847.AddRow(new string[] {
                             "User advisory",
                             "Representative users",
                             "User experience",
@@ -191,7 +191,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Monthly",
                             "Satisfaction metrics"});
 #line 18
-    testRunner.When("establishing governance framework:", ((string)(null)), table884, "When ");
+    testRunner.When("establishing governance framework:", ((string)(null)), table847, "When ");
 #line hidden
 #line 26
     testRunner.Then("governance should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -248,49 +248,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 34
     testRunner.And("assessment identifies gaps", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table885 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table848 = new TechTalk.SpecFlow.Table(new string[] {
                             "Assessment Area",
                             "Current State",
                             "Target State",
                             "Gap Analysis",
                             "Risk Level",
                             "Mitigation Plan"});
-                table885.AddRow(new string[] {
+                table848.AddRow(new string[] {
                             "Leadership alignment",
                             "Partial support",
                             "Full commitment",
                             "Executive coaching needed",
                             "High",
                             "Leadership workshop"});
-                table885.AddRow(new string[] {
+                table848.AddRow(new string[] {
                             "Culture",
                             "Risk-averse",
                             "Innovation-embracing",
                             "Culture shift required",
                             "High",
                             "Culture program"});
-                table885.AddRow(new string[] {
+                table848.AddRow(new string[] {
                             "Skills",
                             "Traditional",
                             "Digital-first",
                             "Significant upskilling",
                             "Medium",
                             "Training academy"});
-                table885.AddRow(new string[] {
+                table848.AddRow(new string[] {
                             "Technology",
                             "Legacy systems",
                             "Modern platform",
                             "Complete overhaul",
                             "High",
                             "Phased migration"});
-                table885.AddRow(new string[] {
+                table848.AddRow(new string[] {
                             "Processes",
                             "Manual, siloed",
                             "Automated, integrated",
                             "Process redesign",
                             "Medium",
                             "Process mapping"});
-                table885.AddRow(new string[] {
+                table848.AddRow(new string[] {
                             "Data",
                             "Fragmented",
                             "Unified, trusted",
@@ -298,7 +298,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "High",
                             "Data strategy"});
 #line 35
-    testRunner.When("assessing change readiness:", ((string)(null)), table885, "When ");
+    testRunner.When("assessing change readiness:", ((string)(null)), table848, "When ");
 #line hidden
 #line 43
     testRunner.Then("readiness gaps should be identified", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -355,49 +355,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 52
     testRunner.And("messages must reach all stakeholders", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table886 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table849 = new TechTalk.SpecFlow.Table(new string[] {
                             "Stakeholder Group",
                             "Communication Channels",
                             "Message Focus",
                             "Frequency",
                             "Feedback Method",
                             "Engagement Metric"});
-                table886.AddRow(new string[] {
+                table849.AddRow(new string[] {
                             "Executives",
                             "Board presentations",
                             "Business value, ROI",
                             "Monthly",
                             "Direct dialogue",
                             "Sponsorship level"});
-                table886.AddRow(new string[] {
+                table849.AddRow(new string[] {
                             "Middle management",
                             "Town halls, workshops",
                             "Role changes, benefits",
                             "Bi-weekly",
                             "Surveys, Q&A",
                             "Participation rate"});
-                table886.AddRow(new string[] {
+                table849.AddRow(new string[] {
                             "End users",
                             "Email, intranet, training",
                             "What\'s changing, why",
                             "Weekly",
                             "User forums",
                             "Open rates, feedback"});
-                table886.AddRow(new string[] {
+                table849.AddRow(new string[] {
                             "IT teams",
                             "Technical briefings",
                             "Architecture, timelines",
                             "Weekly",
                             "Slack, standups",
                             "Technical readiness"});
-                table886.AddRow(new string[] {
+                table849.AddRow(new string[] {
                             "Customers",
                             "Website, direct comm",
                             "Service improvements",
                             "As needed",
                             "Support channels",
                             "Satisfaction scores"});
-                table886.AddRow(new string[] {
+                table849.AddRow(new string[] {
                             "Partners",
                             "Partner portals",
                             "Integration changes",
@@ -405,7 +405,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Partner meetings",
                             "Partner engagement"});
 #line 53
-    testRunner.When("implementing communication strategy:", ((string)(null)), table886, "When ");
+    testRunner.When("implementing communication strategy:", ((string)(null)), table849, "When ");
 #line hidden
 #line 61
     testRunner.Then("communication should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -462,49 +462,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 69
     testRunner.And("training must be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table887 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table850 = new TechTalk.SpecFlow.Table(new string[] {
                             "Capability Area",
                             "Training Approach",
                             "Delivery Method",
                             "Duration",
                             "Assessment",
                             "Certification"});
-                table887.AddRow(new string[] {
+                table850.AddRow(new string[] {
                             "Digital literacy",
                             "Foundation program",
                             "Blended learning",
                             "40 hours",
                             "Skills test",
                             "Digital badge"});
-                table887.AddRow(new string[] {
+                table850.AddRow(new string[] {
                             "Platform mastery",
                             "Role-based paths",
                             "Hands-on labs",
                             "80 hours",
                             "Practical exam",
                             "Platform certified"});
-                table887.AddRow(new string[] {
+                table850.AddRow(new string[] {
                             "Data analytics",
                             "Self-service training",
                             "Online + mentoring",
                             "60 hours",
                             "Project-based",
                             "Analytics certified"});
-                table887.AddRow(new string[] {
+                table850.AddRow(new string[] {
                             "Agile methods",
                             "Team workshops",
                             "Experiential",
                             "40 hours",
                             "Team assessment",
                             "Agile practitioner"});
-                table887.AddRow(new string[] {
+                table850.AddRow(new string[] {
                             "Security awareness",
                             "Mandatory training",
                             "Micro-learning",
                             "20 hours",
                             "Phishing tests",
                             "Security aware"});
-                table887.AddRow(new string[] {
+                table850.AddRow(new string[] {
                             "Leadership",
                             "Executive coaching",
                             "1:1 + group",
@@ -512,7 +512,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "360 feedback",
                             "Leadership ready"});
 #line 70
-    testRunner.When("implementing capability building:", ((string)(null)), table887, "When ");
+    testRunner.When("implementing capability building:", ((string)(null)), table850, "When ");
 #line hidden
 #line 78
     testRunner.Then("capabilities should be built systematically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -569,49 +569,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 87
     testRunner.And("engagement drives adoption", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table888 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table851 = new TechTalk.SpecFlow.Table(new string[] {
                             "Adoption Phase",
                             "Engagement Tactics",
                             "Success Metrics",
                             "Interventions",
                             "Incentives",
                             "Timeline"});
-                table888.AddRow(new string[] {
+                table851.AddRow(new string[] {
                             "Awareness",
                             "Launch campaign",
                             "Awareness rate >90%",
                             "Targeted outreach",
                             "Early access",
                             "Month 1"});
-                table888.AddRow(new string[] {
+                table851.AddRow(new string[] {
                             "Interest",
                             "Demos, showcases",
                             "Demo attendance >70%",
                             "Success stories",
                             "Innovation time",
                             "Month 2"});
-                table888.AddRow(new string[] {
+                table851.AddRow(new string[] {
                             "Trial",
                             "Pilot programs",
                             "Pilot participation >50%",
                             "Hand-holding",
                             "Recognition",
                             "Months 2-3"});
-                table888.AddRow(new string[] {
+                table851.AddRow(new string[] {
                             "Adoption",
                             "Phased rollout",
                             "Active usage >60%",
                             "Support intensification",
                             "Gamification",
                             "Months 3-6"});
-                table888.AddRow(new string[] {
+                table851.AddRow(new string[] {
                             "Advocacy",
                             "Champion program",
                             "Advocacy rate >30%",
                             "Community building",
                             "Ambassador status",
                             "Months 6-12"});
-                table888.AddRow(new string[] {
+                table851.AddRow(new string[] {
                             "Optimization",
                             "Continuous improvement",
                             "Feature requests",
@@ -619,7 +619,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Co-creation",
                             "Ongoing"});
 #line 88
-    testRunner.When("managing user adoption:", ((string)(null)), table888, "When ");
+    testRunner.When("managing user adoption:", ((string)(null)), table851, "When ");
 #line hidden
 #line 96
     testRunner.Then("adoption should follow curve", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -676,49 +676,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 104
     testRunner.And("proactive management prevents failure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table889 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table852 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resistance Type",
                             "Root Causes",
                             "Identification Method",
                             "Response Strategy",
                             "Success Measure",
                             "Timeline"});
-                table889.AddRow(new string[] {
+                table852.AddRow(new string[] {
                             "Fear of job loss",
                             "Automation anxiety",
                             "Surveys, 1:1s",
                             "Reskilling programs",
                             "Anxiety reduction",
                             "Immediate"});
-                table889.AddRow(new string[] {
+                table852.AddRow(new string[] {
                             "Loss of power",
                             "Role changes",
                             "Stakeholder analysis",
                             "New opportunities",
                             "Engagement level",
                             "3 months"});
-                table889.AddRow(new string[] {
+                table852.AddRow(new string[] {
                             "Technical anxiety",
                             "Skill gaps",
                             "Competency assessment",
                             "Graduated training",
                             "Skill improvement",
                             "6 months"});
-                table889.AddRow(new string[] {
+                table852.AddRow(new string[] {
                             "Process attachment",
                             "Comfort with status quo",
                             "Process mapping",
                             "Involvement in design",
                             "Participation rate",
                             "Ongoing"});
-                table889.AddRow(new string[] {
+                table852.AddRow(new string[] {
                             "Cultural misalignment",
                             "Values conflict",
                             "Culture assessment",
                             "Culture evolution",
                             "Culture scores",
                             "12 months"});
-                table889.AddRow(new string[] {
+                table852.AddRow(new string[] {
                             "Change fatigue",
                             "Too many changes",
                             "Pulse surveys",
@@ -726,7 +726,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Energy levels",
                             "Continuous"});
 #line 105
-    testRunner.When("addressing resistance:", ((string)(null)), table889, "When ");
+    testRunner.When("addressing resistance:", ((string)(null)), table852, "When ");
 #line hidden
 #line 113
     testRunner.Then("resistance should be understood", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -783,49 +783,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 122
     testRunner.And("mindset shift is fundamental", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table890 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table853 = new TechTalk.SpecFlow.Table(new string[] {
                             "Culture Element",
                             "Current State",
                             "Desired State",
                             "Change Approach",
                             "Reinforcement",
                             "Measurement"});
-                table890.AddRow(new string[] {
+                table853.AddRow(new string[] {
                             "Innovation",
                             "Risk-averse",
                             "Fail-fast learning",
                             "Innovation labs",
                             "Celebration of learning",
                             "Innovation index"});
-                table890.AddRow(new string[] {
+                table853.AddRow(new string[] {
                             "Collaboration",
                             "Siloed teams",
                             "Cross-functional",
                             "Collaborative tools",
                             "Team incentives",
                             "Collaboration score"});
-                table890.AddRow(new string[] {
+                table853.AddRow(new string[] {
                             "Data-driven",
                             "Intuition-based",
                             "Evidence-based",
                             "Analytics training",
                             "Data-first decisions",
                             "Decision tracking"});
-                table890.AddRow(new string[] {
+                table853.AddRow(new string[] {
                             "Customer focus",
                             "Internal focus",
                             "Customer obsessed",
                             "Customer immersion",
                             "Customer metrics",
                             "NPS improvement"});
-                table890.AddRow(new string[] {
+                table853.AddRow(new string[] {
                             "Agility",
                             "Waterfall",
                             "Agile/adaptive",
                             "Agile transformation",
                             "Sprint success",
                             "Velocity metrics"});
-                table890.AddRow(new string[] {
+                table853.AddRow(new string[] {
                             "Digital skills",
                             "Basic users",
                             "Power users",
@@ -833,7 +833,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Skill recognition",
                             "Skill assessments"});
 #line 123
-    testRunner.When("building digital culture:", ((string)(null)), table890, "When ");
+    testRunner.When("building digital culture:", ((string)(null)), table853, "When ");
 #line hidden
 #line 131
     testRunner.Then("culture should evolve", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -890,49 +890,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 140
     testRunner.And("digital enables new workflows", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table891 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table854 = new TechTalk.SpecFlow.Table(new string[] {
                             "Process Area",
                             "As-Is State",
                             "To-Be Vision",
                             "Digital Enablers",
                             "Expected Benefits",
                             "Change Impact"});
-                table891.AddRow(new string[] {
+                table854.AddRow(new string[] {
                             "Customer onboarding",
                             "Manual, 5 days",
                             "Automated, 1 hour",
                             "AI verification",
                             "95% faster",
                             "High"});
-                table891.AddRow(new string[] {
+                table854.AddRow(new string[] {
                             "Service delivery",
                             "In-person only",
                             "Hybrid digital",
                             "Platform features",
                             "3x capacity",
                             "High"});
-                table891.AddRow(new string[] {
+                table854.AddRow(new string[] {
                             "Billing/payments",
                             "Paper invoices",
                             "Digital payments",
                             "Payment platform",
                             "80% cost reduction",
                             "Medium"});
-                table891.AddRow(new string[] {
+                table854.AddRow(new string[] {
                             "Reporting",
                             "Manual compilation",
                             "Real-time dashboards",
                             "Analytics platform",
                             "Instant insights",
                             "Medium"});
-                table891.AddRow(new string[] {
+                table854.AddRow(new string[] {
                             "Compliance",
                             "Checklist-based",
                             "Automated monitoring",
                             "Compliance engine",
                             "99% accuracy",
                             "Low"});
-                table891.AddRow(new string[] {
+                table854.AddRow(new string[] {
                             "Support",
                             "Phone/email",
                             "Omnichannel AI",
@@ -940,7 +940,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "60% deflection",
                             "High"});
 #line 141
-    testRunner.When("transforming processes:", ((string)(null)), table891, "When ");
+    testRunner.When("transforming processes:", ((string)(null)), table854, "When ");
 #line hidden
 #line 149
     testRunner.Then("processes should be digital-first", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -997,49 +997,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 158
     testRunner.And("digital requires new organizing principles", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table892 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table855 = new TechTalk.SpecFlow.Table(new string[] {
                             "Design Element",
                             "Traditional Structure",
                             "Digital Structure",
                             "Transition Approach",
                             "Timeline",
                             "Success Metrics"});
-                table892.AddRow(new string[] {
+                table855.AddRow(new string[] {
                             "Hierarchy",
                             "Deep, functional",
                             "Flat, cross-functional",
                             "Gradual flattening",
                             "18 months",
                             "Decision speed"});
-                table892.AddRow(new string[] {
+                table855.AddRow(new string[] {
                             "Teams",
                             "Department-based",
                             "Product/mission teams",
                             "Team reformation",
                             "12 months",
                             "Team effectiveness"});
-                table892.AddRow(new string[] {
+                table855.AddRow(new string[] {
                             "Roles",
                             "Specialized",
                             "T-shaped skills",
                             "Role expansion",
                             "24 months",
                             "Skill versatility"});
-                table892.AddRow(new string[] {
+                table855.AddRow(new string[] {
                             "Decision making",
                             "Top-down",
                             "Distributed",
                             "Empowerment program",
                             "12 months",
                             "Decision quality"});
-                table892.AddRow(new string[] {
+                table855.AddRow(new string[] {
                             "Information flow",
                             "Vertical",
                             "Network-based",
                             "Digital workplace",
                             "6 months",
                             "Information velocity"});
-                table892.AddRow(new string[] {
+                table855.AddRow(new string[] {
                             "Performance",
                             "Individual",
                             "Team + individual",
@@ -1047,7 +1047,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "12 months",
                             "Performance improvement"});
 #line 159
-    testRunner.When("evolving organization:", ((string)(null)), table892, "When ");
+    testRunner.When("evolving organization:", ((string)(null)), table855, "When ");
 #line hidden
 #line 167
     testRunner.Then("structure should enable agility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1104,49 +1104,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 176
     testRunner.And("realization requires management", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table893 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table856 = new TechTalk.SpecFlow.Table(new string[] {
                             "Benefit Category",
                             "Target Value",
                             "Baseline",
                             "Measurement Method",
                             "Realization Timeline",
                             "Owner"});
-                table893.AddRow(new string[] {
+                table856.AddRow(new string[] {
                             "Cost reduction",
                             "30% opex reduction",
                             "Current costs",
                             "Financial analysis",
                             "24 months",
                             "CFO"});
-                table893.AddRow(new string[] {
+                table856.AddRow(new string[] {
                             "Revenue growth",
                             "25% new revenue",
                             "Current revenue",
                             "Revenue tracking",
                             "18 months",
                             "CRO"});
-                table893.AddRow(new string[] {
+                table856.AddRow(new string[] {
                             "Efficiency gain",
                             "50% productivity",
                             "Current metrics",
                             "Time studies",
                             "12 months",
                             "COO"});
-                table893.AddRow(new string[] {
+                table856.AddRow(new string[] {
                             "Quality improvement",
                             "40% error reduction",
                             "Error rates",
                             "Quality metrics",
                             "12 months",
                             "Quality head"});
-                table893.AddRow(new string[] {
+                table856.AddRow(new string[] {
                             "Customer satisfaction",
                             "+20 NPS points",
                             "Current NPS",
                             "Surveys",
                             "18 months",
                             "CCO"});
-                table893.AddRow(new string[] {
+                table856.AddRow(new string[] {
                             "Employee engagement",
                             "+30% engagement",
                             "Current scores",
@@ -1154,7 +1154,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "24 months",
                             "CHRO"});
 #line 177
-    testRunner.When("managing benefits realization:", ((string)(null)), table893, "When ");
+    testRunner.When("managing benefits realization:", ((string)(null)), table856, "When ");
 #line hidden
 #line 185
     testRunner.Then("benefits should be tracked rigorously", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1211,49 +1211,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 194
     testRunner.And("risk management prevents failure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table894 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table857 = new TechTalk.SpecFlow.Table(new string[] {
                             "Risk Category",
                             "Specific Risks",
                             "Probability",
                             "Impact",
                             "Mitigation Strategy",
                             "Contingency Plan"});
-                table894.AddRow(new string[] {
+                table857.AddRow(new string[] {
                             "Technical",
                             "Integration failures",
                             "Medium",
                             "High",
                             "Phased approach",
                             "Rollback procedures"});
-                table894.AddRow(new string[] {
+                table857.AddRow(new string[] {
                             "Organizational",
                             "Change resistance",
                             "High",
                             "High",
                             "Change management",
                             "Intensified support"});
-                table894.AddRow(new string[] {
+                table857.AddRow(new string[] {
                             "Financial",
                             "Budget overrun",
                             "Medium",
                             "Medium",
                             "Staged investment",
                             "Scope adjustment"});
-                table894.AddRow(new string[] {
+                table857.AddRow(new string[] {
                             "Timeline",
                             "Schedule delays",
                             "High",
                             "Medium",
                             "Buffer planning",
                             "Fast-track options"});
-                table894.AddRow(new string[] {
+                table857.AddRow(new string[] {
                             "Adoption",
                             "Low usage",
                             "Medium",
                             "High",
                             "Adoption program",
                             "Enhanced training"});
-                table894.AddRow(new string[] {
+                table857.AddRow(new string[] {
                             "Vendor",
                             "Vendor failure",
                             "Low",
@@ -1261,7 +1261,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Multi-vendor",
                             "Vendor replacement"});
 #line 195
-    testRunner.When("managing transformation risks:", ((string)(null)), table894, "When ");
+    testRunner.When("managing transformation risks:", ((string)(null)), table857, "When ");
 #line hidden
 #line 203
     testRunner.Then("risks should be identified early", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1318,49 +1318,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 212
     testRunner.And("continuous improvement sustains gains", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table895 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table858 = new TechTalk.SpecFlow.Table(new string[] {
                             "Improvement Area",
                             "Mechanism",
                             "Frequency",
                             "Participation",
                             "Decision Process",
                             "Implementation"});
-                table895.AddRow(new string[] {
+                table858.AddRow(new string[] {
                             "Process optimization",
                             "Kaizen events",
                             "Monthly",
                             "All teams",
                             "Data-driven",
                             "Rapid cycles"});
-                table895.AddRow(new string[] {
+                table858.AddRow(new string[] {
                             "Technology enhancement",
                             "Innovation sprints",
                             "Quarterly",
                             "Tech + business",
                             "ROI-based",
                             "Agile delivery"});
-                table895.AddRow(new string[] {
+                table858.AddRow(new string[] {
                             "Skill development",
                             "Learning paths",
                             "Continuous",
                             "All employees",
                             "Skill gaps",
                             "Micro-learning"});
-                table895.AddRow(new string[] {
+                table858.AddRow(new string[] {
                             "Customer experience",
                             "Feedback loops",
                             "Real-time",
                             "Customer-facing",
                             "Customer-driven",
                             "Quick wins"});
-                table895.AddRow(new string[] {
+                table858.AddRow(new string[] {
                             "Cost optimization",
                             "Efficiency reviews",
                             "Quarterly",
                             "Finance + ops",
                             "Value analysis",
                             "Automation"});
-                table895.AddRow(new string[] {
+                table858.AddRow(new string[] {
                             "Quality improvement",
                             "Quality circles",
                             "Bi-weekly",
@@ -1368,7 +1368,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Root cause",
                             "Systematic"});
 #line 213
-    testRunner.When("building continuous improvement:", ((string)(null)), table895, "When ");
+    testRunner.When("building continuous improvement:", ((string)(null)), table858, "When ");
 #line hidden
 #line 221
     testRunner.Then("improvement should be continuous", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1425,49 +1425,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 230
     testRunner.And("alignment is critical for success", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table896 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table859 = new TechTalk.SpecFlow.Table(new string[] {
                             "Stakeholder Type",
                             "Key Interests",
                             "Engagement Level",
                             "Communication Needs",
                             "Influence Strategy",
                             "Success Metrics"});
-                table896.AddRow(new string[] {
+                table859.AddRow(new string[] {
                             "Board members",
                             "ROI, risk",
                             "Inform monthly",
                             "Executive summaries",
                             "Business case",
                             "Board support"});
-                table896.AddRow(new string[] {
+                table859.AddRow(new string[] {
                             "Employees",
                             "Job security, growth",
                             "Engage daily",
                             "Transparent updates",
                             "Involvement",
                             "Engagement scores"});
-                table896.AddRow(new string[] {
+                table859.AddRow(new string[] {
                             "Customers",
                             "Better service",
                             "Inform regularly",
                             "Service improvements",
                             "Value delivery",
                             "Satisfaction"});
-                table896.AddRow(new string[] {
+                table859.AddRow(new string[] {
                             "Unions",
                             "Worker protection",
                             "Consult frequently",
                             "Formal dialogue",
                             "Partnership",
                             "Agreement"});
-                table896.AddRow(new string[] {
+                table859.AddRow(new string[] {
                             "Regulators",
                             "Compliance",
                             "Inform proactively",
                             "Compliance reports",
                             "Transparency",
                             "Approval"});
-                table896.AddRow(new string[] {
+                table859.AddRow(new string[] {
                             "Technology partners",
                             "Integration success",
                             "Collaborate closely",
@@ -1475,7 +1475,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Co-creation",
                             "Integration success"});
 #line 231
-    testRunner.When("managing stakeholders:", ((string)(null)), table896, "When ");
+    testRunner.When("managing stakeholders:", ((string)(null)), table859, "When ");
 #line hidden
 #line 239
     testRunner.Then("stakeholders should be aligned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1532,49 +1532,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 248
     testRunner.And("digital leadership differs from traditional", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table897 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table860 = new TechTalk.SpecFlow.Table(new string[] {
                             "Leadership Capability",
                             "Development Method",
                             "Key Behaviors",
                             "Assessment",
                             "Support Structure",
                             "Timeline"});
-                table897.AddRow(new string[] {
+                table860.AddRow(new string[] {
                             "Digital vision",
                             "Executive education",
                             "Future-thinking",
                             "Vision clarity",
                             "Peer mentoring",
                             "6 months"});
-                table897.AddRow(new string[] {
+                table860.AddRow(new string[] {
                             "Change leadership",
                             "Change certification",
                             "Role modeling",
                             "360 feedback",
                             "Coaching",
                             "12 months"});
-                table897.AddRow(new string[] {
+                table860.AddRow(new string[] {
                             "Data literacy",
                             "Analytics training",
                             "Data-driven decisions",
                             "Decision audit",
                             "Data teams",
                             "6 months"});
-                table897.AddRow(new string[] {
+                table860.AddRow(new string[] {
                             "Innovation mindset",
                             "Innovation labs",
                             "Experimentation",
                             "Innovation metrics",
                             "Innovation time",
                             "Ongoing"});
-                table897.AddRow(new string[] {
+                table860.AddRow(new string[] {
                             "Collaborative leadership",
                             "Team workshops",
                             "Cross-functional",
                             "Team effectiveness",
                             "Facilitation",
                             "9 months"});
-                table897.AddRow(new string[] {
+                table860.AddRow(new string[] {
                             "Digital communication",
                             "Digital channels",
                             "Multi-channel engagement",
@@ -1582,7 +1582,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Comms support",
                             "3 months"});
 #line 249
-    testRunner.When("developing digital leaders:", ((string)(null)), table897, "When ");
+    testRunner.When("developing digital leaders:", ((string)(null)), table860, "When ");
 #line hidden
 #line 257
     testRunner.Then("leaders should be digitally capable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1639,49 +1639,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 266
     testRunner.And("metrics drive accountability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table898 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table861 = new TechTalk.SpecFlow.Table(new string[] {
                             "Metric Category",
                             "Specific KPIs",
                             "Data Source",
                             "Target",
                             "Review Frequency",
                             "Action Triggers"});
-                table898.AddRow(new string[] {
+                table861.AddRow(new string[] {
                             "Adoption",
                             "Active users, feature usage",
                             "Platform analytics",
                             "80% active",
                             "Weekly",
                             "<60% intervention"});
-                table898.AddRow(new string[] {
+                table861.AddRow(new string[] {
                             "Financial",
                             "Cost savings, revenue growth",
                             "Financial systems",
                             "Per business case",
                             "Monthly",
                             "Variance >10%"});
-                table898.AddRow(new string[] {
+                table861.AddRow(new string[] {
                             "Operational",
                             "Process efficiency, quality",
                             "Operations data",
                             "50% improvement",
                             "Weekly",
                             "Degradation"});
-                table898.AddRow(new string[] {
+                table861.AddRow(new string[] {
                             "Customer",
                             "NPS, satisfaction, retention",
                             "Customer data",
                             "+20 points",
                             "Monthly",
                             "Decline"});
-                table898.AddRow(new string[] {
+                table861.AddRow(new string[] {
                             "Employee",
                             "Engagement, capability, retention",
                             "HR systems",
                             "80% engaged",
                             "Quarterly",
                             "<70% action"});
-                table898.AddRow(new string[] {
+                table861.AddRow(new string[] {
                             "Technical",
                             "System performance, availability",
                             "Monitoring",
@@ -1689,7 +1689,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Real-time",
                             "SLA breach"});
 #line 267
-    testRunner.When("measuring transformation:", ((string)(null)), table898, "When ");
+    testRunner.When("measuring transformation:", ((string)(null)), table861, "When ");
 #line hidden
 #line 275
     testRunner.Then("progress should be measurable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1746,49 +1746,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 284
     testRunner.And("sustainability requires planning", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table899 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table862 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Approach",
                             "Reinforcement",
                             "Monitoring",
                             "Risk Mitigation",
                             "Long-term Plan"});
-                table899.AddRow(new string[] {
+                table862.AddRow(new string[] {
                             "Culture embedding",
                             "Values integration",
                             "Recognition systems",
                             "Culture surveys",
                             "Culture champions",
                             "Culture evolution"});
-                table899.AddRow(new string[] {
+                table862.AddRow(new string[] {
                             "Skill maintenance",
                             "Continuous learning",
                             "Skill requirements",
                             "Skill assessments",
                             "Refresher training",
                             "Career paths"});
-                table899.AddRow(new string[] {
+                table862.AddRow(new string[] {
                             "Process discipline",
                             "Process governance",
                             "Audit program",
                             "Process metrics",
                             "Process improvement",
                             "Automation"});
-                table899.AddRow(new string[] {
+                table862.AddRow(new string[] {
                             "Technology currency",
                             "Tech refresh cycles",
                             "Update schedules",
                             "Tech debt tracking",
                             "Modernization fund",
                             "Architecture evolution"});
-                table899.AddRow(new string[] {
+                table862.AddRow(new string[] {
                             "Benefits tracking",
                             "Value management",
                             "Success stories",
                             "Benefit realization",
                             "Benefit protection",
                             "Value expansion"});
-                table899.AddRow(new string[] {
+                table862.AddRow(new string[] {
                             "Innovation pipeline",
                             "Innovation program",
                             "Innovation metrics",
@@ -1796,7 +1796,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Innovation investment",
                             "Future readiness"});
 #line 285
-    testRunner.When("ensuring sustainability:", ((string)(null)), table899, "When ");
+    testRunner.When("ensuring sustainability:", ((string)(null)), table862, "When ");
 #line hidden
 #line 293
     testRunner.Then("transformation gains should be sustained", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1853,49 +1853,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 302
     testRunner.And("knowledge management enables learning", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table900 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table863 = new TechTalk.SpecFlow.Table(new string[] {
                             "Learning Category",
                             "Capture Method",
                             "Analysis Process",
                             "Knowledge Sharing",
                             "Application",
                             "Impact"});
-                table900.AddRow(new string[] {
+                table863.AddRow(new string[] {
                             "Success factors",
                             "Success stories",
                             "Pattern analysis",
                             "Best practice library",
                             "Replication",
                             "Accelerated success"});
-                table900.AddRow(new string[] {
+                table863.AddRow(new string[] {
                             "Failure points",
                             "Post-mortems",
                             "Root cause analysis",
                             "Failure database",
                             "Prevention",
                             "Risk reduction"});
-                table900.AddRow(new string[] {
+                table863.AddRow(new string[] {
                             "Resistance patterns",
                             "Resistance tracking",
                             "Behavioral analysis",
                             "Change playbook",
                             "Proactive management",
                             "Smoother change"});
-                table900.AddRow(new string[] {
+                table863.AddRow(new string[] {
                             "Technical lessons",
                             "Technical reviews",
                             "Architecture decisions",
                             "Tech knowledge base",
                             "Better decisions",
                             "Quality improvement"});
-                table900.AddRow(new string[] {
+                table863.AddRow(new string[] {
                             "Process insights",
                             "Process mining",
                             "Optimization opportunities",
                             "Process repository",
                             "Process improvement",
                             "Efficiency gains"});
-                table900.AddRow(new string[] {
+                table863.AddRow(new string[] {
                             "Leadership lessons",
                             "Leadership reflections",
                             "Leadership development",
@@ -1903,7 +1903,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Better leadership",
                             "Transformation success"});
 #line 303
-    testRunner.When("managing lessons learned:", ((string)(null)), table900, "When ");
+    testRunner.When("managing lessons learned:", ((string)(null)), table863, "When ");
 #line hidden
 #line 311
     testRunner.Then("lessons should be captured systematically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1960,49 +1960,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 320
     testRunner.And("readiness ensures survival", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table901 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table864 = new TechTalk.SpecFlow.Table(new string[] {
                             "Future Capability",
                             "Building Blocks",
                             "Investment Required",
                             "Timeline",
                             "Expected Challenges",
                             "Success Factors"});
-                table901.AddRow(new string[] {
+                table864.AddRow(new string[] {
                             "AI transformation",
                             "AI literacy, data platform",
                             "High",
                             "2-3 years",
                             "Ethical concerns",
                             "Trust building"});
-                table901.AddRow(new string[] {
+                table864.AddRow(new string[] {
                             "Quantum readiness",
                             "Quantum education",
                             "Low initially",
                             "5-10 years",
                             "Technical complexity",
                             "Early preparation"});
-                table901.AddRow(new string[] {
+                table864.AddRow(new string[] {
                             "Sustainability transformation",
                             "Green initiatives",
                             "Medium",
                             "1-2 years",
                             "Cost concerns",
                             "Value alignment"});
-                table901.AddRow(new string[] {
+                table864.AddRow(new string[] {
                             "Metaverse integration",
                             "VR/AR capabilities",
                             "Medium",
                             "3-5 years",
                             "User adoption",
                             "Use case clarity"});
-                table901.AddRow(new string[] {
+                table864.AddRow(new string[] {
                             "Autonomous operations",
                             "Automation platform",
                             "High",
                             "2-4 years",
                             "Job displacement",
                             "Reskilling programs"});
-                table901.AddRow(new string[] {
+                table864.AddRow(new string[] {
                             "Biotechnology integration",
                             "Partnership strategy",
                             "Variable",
@@ -2010,7 +2010,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Regulatory hurdles",
                             "Strategic patience"});
 #line 321
-    testRunner.When("preparing for future transformation:", ((string)(null)), table901, "When ");
+    testRunner.When("preparing for future transformation:", ((string)(null)), table864, "When ");
 #line hidden
 #line 329
     testRunner.Then("organization should be transformation-ready", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

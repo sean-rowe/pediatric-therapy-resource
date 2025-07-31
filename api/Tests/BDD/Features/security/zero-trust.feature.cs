@@ -131,50 +131,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 14
     testRunner.Given("zero trust principles are enforced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2424 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2387 = new TechTalk.SpecFlow.Table(new string[] {
                             "Access Context",
                             "User Type",
                             "Location",
                             "Device Type",
                             "Verification Required"});
-                table2424.AddRow(new string[] {
+                table2387.AddRow(new string[] {
                             "Internal network",
                             "Employee",
                             "Office",
                             "Company laptop",
                             "Full verification"});
-                table2424.AddRow(new string[] {
+                table2387.AddRow(new string[] {
                             "External network",
                             "Employee",
                             "Home office",
                             "Personal device",
                             "Enhanced verification"});
-                table2424.AddRow(new string[] {
+                table2387.AddRow(new string[] {
                             "VPN connection",
                             "Contractor",
                             "Remote location",
                             "Managed device",
                             "Multi-factor auth"});
-                table2424.AddRow(new string[] {
+                table2387.AddRow(new string[] {
                             "Mobile application",
                             "Therapist",
                             "Client site",
                             "Mobile phone",
                             "Biometric + PIN"});
-                table2424.AddRow(new string[] {
+                table2387.AddRow(new string[] {
                             "API access",
                             "Service account",
                             "Cloud provider",
                             "Server",
                             "Certificate + token"});
-                table2424.AddRow(new string[] {
+                table2387.AddRow(new string[] {
                             "Administrative access",
                             "System admin",
                             "Anywhere",
                             "Any device",
                             "Privileged access control"});
 #line 15
-    testRunner.When("access requests are made from various contexts:", ((string)(null)), table2424, "When ");
+    testRunner.When("access requests are made from various contexts:", ((string)(null)), table2387, "When ");
 #line hidden
 #line 23
     testRunner.Then("every access attempt should be verified independently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -224,43 +224,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 30
     testRunner.Given("least privilege access is implemented", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2425 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2388 = new TechTalk.SpecFlow.Table(new string[] {
                             "User Role",
                             "Requested Resource",
                             "Default Access",
                             "Additional Access Conditions"});
-                table2425.AddRow(new string[] {
+                table2388.AddRow(new string[] {
                             "Basic Therapist",
                             "Own student records",
                             "Read/Write",
                             "None"});
-                table2425.AddRow(new string[] {
+                table2388.AddRow(new string[] {
                             "Basic Therapist",
                             "Other student records",
                             "None",
                             "Explicit delegation only"});
-                table2425.AddRow(new string[] {
+                table2388.AddRow(new string[] {
                             "Senior Therapist",
                             "Department resources",
                             "Read",
                             "Write access on request"});
-                table2425.AddRow(new string[] {
+                table2388.AddRow(new string[] {
                             "Clinical Supervisor",
                             "All department data",
                             "Read",
                             "Write with justification"});
-                table2425.AddRow(new string[] {
+                table2388.AddRow(new string[] {
                             "System Administrator",
                             "System configurations",
                             "None",
                             "Time-limited, approved access"});
-                table2425.AddRow(new string[] {
+                table2388.AddRow(new string[] {
                             "Guest User",
                             "Public resources",
                             "Read-only",
                             "No expansion possible"});
 #line 31
-    testRunner.When("users request access to resources:", ((string)(null)), table2425, "When ");
+    testRunner.When("users request access to resources:", ((string)(null)), table2388, "When ");
 #line hidden
 #line 39
     testRunner.Then("access should be limited to minimum required permissions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -310,43 +310,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 46
     testRunner.Given("network microsegmentation is deployed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2426 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2389 = new TechTalk.SpecFlow.Table(new string[] {
                             "Source Component",
                             "Destination Component",
                             "Traffic Type",
                             "Policy Enforcement"});
-                table2426.AddRow(new string[] {
+                table2389.AddRow(new string[] {
                             "Web frontend",
                             "Application API",
                             "HTTPS",
                             "Allow with inspection"});
-                table2426.AddRow(new string[] {
+                table2389.AddRow(new string[] {
                             "Application API",
                             "Database cluster",
                             "TLS",
                             "Allow specific queries"});
-                table2426.AddRow(new string[] {
+                table2389.AddRow(new string[] {
                             "User devices",
                             "File storage",
                             "HTTPS",
                             "Authenticated users only"});
-                table2426.AddRow(new string[] {
+                table2389.AddRow(new string[] {
                             "External integrations",
                             "Internal APIs",
                             "HTTPS",
                             "Whitelist with rate limiting"});
-                table2426.AddRow(new string[] {
+                table2389.AddRow(new string[] {
                             "Admin tools",
                             "System infrastructure",
                             "SSH/HTTPS",
                             "Privileged access only"});
-                table2426.AddRow(new string[] {
+                table2389.AddRow(new string[] {
                             "Monitoring systems",
                             "All components",
                             "Various",
                             "Read-only access"});
 #line 47
-    testRunner.When("network traffic flows between system components:", ((string)(null)), table2426, "When ");
+    testRunner.When("network traffic flows between system components:", ((string)(null)), table2389, "When ");
 #line hidden
 #line 55
     testRunner.Then("network traffic should be filtered and inspected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -396,36 +396,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 62
     testRunner.Given("device verification is mandatory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2427 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2390 = new TechTalk.SpecFlow.Table(new string[] {
                             "Device Type",
                             "Verification Requirements",
                             "Security Controls"});
-                table2427.AddRow(new string[] {
+                table2390.AddRow(new string[] {
                             "Company-managed laptop",
                             "Certificate-based auth",
                             "Endpoint detection, encryption"});
-                table2427.AddRow(new string[] {
+                table2390.AddRow(new string[] {
                             "Personal mobile phone",
                             "Mobile device management",
                             "App wrapping, remote wipe"});
-                table2427.AddRow(new string[] {
+                table2390.AddRow(new string[] {
                             "Bring-your-own-device",
                             "Enhanced security validation",
                             "Isolated access, limited permissions"});
-                table2427.AddRow(new string[] {
+                table2390.AddRow(new string[] {
                             "IoT/smart devices",
                             "Device identity certificates",
                             "Network isolation, monitoring"});
-                table2427.AddRow(new string[] {
+                table2390.AddRow(new string[] {
                             "Legacy systems",
                             "Compensating controls",
                             "Additional network security"});
-                table2427.AddRow(new string[] {
+                table2390.AddRow(new string[] {
                             "Unknown devices",
                             "Full security assessment",
                             "Quarantine until verified"});
 #line 63
-    testRunner.When("devices attempt to access system resources:", ((string)(null)), table2427, "When ");
+    testRunner.When("devices attempt to access system resources:", ((string)(null)), table2390, "When ");
 #line hidden
 #line 71
     testRunner.Then("device identity should be cryptographically verified", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -475,36 +475,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 78
     testRunner.Given("continuous monitoring is active across all access points", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2428 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2391 = new TechTalk.SpecFlow.Table(new string[] {
                             "Monitoring Dimension",
                             "Metrics Tracked",
                             "Risk Indicators"});
-                table2428.AddRow(new string[] {
+                table2391.AddRow(new string[] {
                             "User behavior",
                             "Login patterns, access patterns",
                             "Unusual times, locations"});
-                table2428.AddRow(new string[] {
+                table2391.AddRow(new string[] {
                             "Device characteristics",
                             "Hardware fingerprints, OS version",
                             "Jailbroken, compromised"});
-                table2428.AddRow(new string[] {
+                table2391.AddRow(new string[] {
                             "Network traffic",
                             "Data flows, communication patterns",
                             "Unusual destinations, volumes"});
-                table2428.AddRow(new string[] {
+                table2391.AddRow(new string[] {
                             "Application usage",
                             "Feature usage, data access",
                             "Bulk downloads, admin functions"});
-                table2428.AddRow(new string[] {
+                table2391.AddRow(new string[] {
                             "Geographic patterns",
                             "IP geolocation, travel patterns",
                             "Impossible travel, VPN usage"});
-                table2428.AddRow(new string[] {
+                table2391.AddRow(new string[] {
                             "Threat intelligence",
                             "IOCs, malware signatures",
                             "Known bad actors, patterns"});
 #line 79
-    testRunner.When("user and system activities are monitored:", ((string)(null)), table2428, "When ");
+    testRunner.When("user and system activities are monitored:", ((string)(null)), table2391, "When ");
 #line hidden
 #line 87
     testRunner.Then("risk scores should be calculated in real-time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -554,32 +554,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 94
     testRunner.Given("strong identity verification is required", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2429 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2392 = new TechTalk.SpecFlow.Table(new string[] {
                             "Identity Verification Level",
                             "Requirements",
                             "Use Cases"});
-                table2429.AddRow(new string[] {
+                table2392.AddRow(new string[] {
                             "Basic identity",
                             "Username/password + MFA",
                             "Standard user access"});
-                table2429.AddRow(new string[] {
+                table2392.AddRow(new string[] {
                             "Enhanced identity",
                             "Biometric + device verification",
                             "Sensitive data access"});
-                table2429.AddRow(new string[] {
+                table2392.AddRow(new string[] {
                             "Privileged identity",
                             "Hardware token + admin approval",
                             "Administrative functions"});
-                table2429.AddRow(new string[] {
+                table2392.AddRow(new string[] {
                             "Service identity",
                             "Certificate-based authentication",
                             "API and system access"});
-                table2429.AddRow(new string[] {
+                table2392.AddRow(new string[] {
                             "Federated identity",
                             "Trusted identity provider",
                             "SSO from partner organizations"});
 #line 95
-    testRunner.When("identity verification is performed:", ((string)(null)), table2429, "When ");
+    testRunner.When("identity verification is performed:", ((string)(null)), table2392, "When ");
 #line hidden
 #line 102
     testRunner.Then("identity should be verified at multiple levels", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -629,36 +629,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 110
     testRunner.Given("application-level zero trust is implemented", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2430 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2393 = new TechTalk.SpecFlow.Table(new string[] {
                             "Application Component",
                             "Zero Trust Implementation",
                             "Security Validation"});
-                table2430.AddRow(new string[] {
+                table2393.AddRow(new string[] {
                             "API gateway",
                             "Request validation, rate limiting",
                             "Authentication, authorization"});
-                table2430.AddRow(new string[] {
+                table2393.AddRow(new string[] {
                             "Microservices",
                             "Service-to-service authentication",
                             "Mutual TLS, service mesh"});
-                table2430.AddRow(new string[] {
+                table2393.AddRow(new string[] {
                             "Database access",
                             "Connection encryption, audit",
                             "Query validation, monitoring"});
-                table2430.AddRow(new string[] {
+                table2393.AddRow(new string[] {
                             "File storage",
                             "Encryption, access logging",
                             "Content scanning, DLP"});
-                table2430.AddRow(new string[] {
+                table2393.AddRow(new string[] {
                             "Session management",
                             "Continuous validation",
                             "Session anomaly detection"});
-                table2430.AddRow(new string[] {
+                table2393.AddRow(new string[] {
                             "Data processing",
                             "Runtime security monitoring",
                             "Behavior analysis"});
 #line 111
-    testRunner.When("applications process user requests:", ((string)(null)), table2430, "When ");
+    testRunner.When("applications process user requests:", ((string)(null)), table2393, "When ");
 #line hidden
 #line 119
     testRunner.Then("every application interaction should be secured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -708,36 +708,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 126
     testRunner.Given("data-centric security is implemented", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2431 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2394 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Classification",
                             "Protection Requirements",
                             "Access Controls"});
-                table2431.AddRow(new string[] {
+                table2394.AddRow(new string[] {
                             "Public information",
                             "Integrity protection",
                             "Public read access"});
-                table2431.AddRow(new string[] {
+                table2394.AddRow(new string[] {
                             "Internal documents",
                             "Encryption, access logging",
                             "Employee access only"});
-                table2431.AddRow(new string[] {
+                table2394.AddRow(new string[] {
                             "Personal data (PII)",
                             "Encryption, anonymization",
                             "Need-to-know basis"});
-                table2431.AddRow(new string[] {
+                table2394.AddRow(new string[] {
                             "Health information (PHI)",
                             "Strong encryption, audit trails",
                             "Healthcare professionals only"});
-                table2431.AddRow(new string[] {
+                table2394.AddRow(new string[] {
                             "Financial data",
                             "PCI DSS compliance",
                             "Authorized processors only"});
-                table2431.AddRow(new string[] {
+                table2394.AddRow(new string[] {
                             "System credentials",
                             "Hardware security modules",
                             "Automated systems only"});
 #line 127
-    testRunner.When("data is accessed or processed:", ((string)(null)), table2431, "When ");
+    testRunner.When("data is accessed or processed:", ((string)(null)), table2394, "When ");
 #line hidden
 #line 135
     testRunner.Then("data should be classified and protected accordingly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -787,36 +787,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 142
     testRunner.Given("workload security follows zero trust model", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2432 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2395 = new TechTalk.SpecFlow.Table(new string[] {
                             "Workload Type",
                             "Security Implementation",
                             "Isolation Requirements"});
-                table2432.AddRow(new string[] {
+                table2395.AddRow(new string[] {
                             "Web applications",
                             "Container security, runtime protection",
                             "Network isolation"});
-                table2432.AddRow(new string[] {
+                table2395.AddRow(new string[] {
                             "Database systems",
                             "Encryption, access control",
                             "Data isolation"});
-                table2432.AddRow(new string[] {
+                table2395.AddRow(new string[] {
                             "Background services",
                             "Least privilege execution",
                             "Process isolation"});
-                table2432.AddRow(new string[] {
+                table2395.AddRow(new string[] {
                             "ML/AI processing",
                             "Secure enclaves, data privacy",
                             "Compute isolation"});
-                table2432.AddRow(new string[] {
+                table2395.AddRow(new string[] {
                             "Batch processing",
                             "Secure execution environments",
                             "Resource isolation"});
-                table2432.AddRow(new string[] {
+                table2395.AddRow(new string[] {
                             "Third-party integrations",
                             "Sandboxed execution",
                             "Complete isolation"});
 #line 143
-    testRunner.When("workloads execute in the environment:", ((string)(null)), table2432, "When ");
+    testRunner.When("workloads execute in the environment:", ((string)(null)), table2395, "When ");
 #line hidden
 #line 151
     testRunner.Then("workloads should operate with minimal privileges", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -866,36 +866,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 159
     testRunner.Given("remote access follows zero trust architecture", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2433 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2396 = new TechTalk.SpecFlow.Table(new string[] {
                             "Remote Access Scenario",
                             "Security Requirements",
                             "Verification Steps"});
-                table2433.AddRow(new string[] {
+                table2396.AddRow(new string[] {
                             "Home office access",
                             "Secure VPN, device verification",
                             "MFA + device cert"});
-                table2433.AddRow(new string[] {
+                table2396.AddRow(new string[] {
                             "Public WiFi access",
                             "Enhanced security validation",
                             "Continuous auth + behavior monitoring"});
-                table2433.AddRow(new string[] {
+                table2396.AddRow(new string[] {
                             "International travel",
                             "Geographic risk assessment",
                             "Additional verification required"});
-                table2433.AddRow(new string[] {
+                table2396.AddRow(new string[] {
                             "Shared device access",
                             "Restricted permissions",
                             "Session-based access only"});
-                table2433.AddRow(new string[] {
+                table2396.AddRow(new string[] {
                             "Emergency access",
                             "Temporary elevated privileges",
                             "Manager approval + logging"});
-                table2433.AddRow(new string[] {
+                table2396.AddRow(new string[] {
                             "Contractor access",
                             "Limited scope, time-bounded",
                             "Sponsor approval + monitoring"});
 #line 160
-    testRunner.When("remote users access the platform:", ((string)(null)), table2433, "When ");
+    testRunner.When("remote users access the platform:", ((string)(null)), table2396, "When ");
 #line hidden
 #line 168
     testRunner.Then("remote access should never be implicitly trusted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -945,36 +945,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 175
     testRunner.Given("cloud infrastructure follows zero trust principles", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2434 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2397 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cloud Component",
                             "Zero Trust Implementation",
                             "Security Controls"});
-                table2434.AddRow(new string[] {
+                table2397.AddRow(new string[] {
                             "Virtual machines",
                             "Instance identity, encryption",
                             "Identity-based access"});
-                table2434.AddRow(new string[] {
+                table2397.AddRow(new string[] {
                             "Container clusters",
                             "Pod security, service mesh",
                             "Workload identity"});
-                table2434.AddRow(new string[] {
+                table2397.AddRow(new string[] {
                             "Serverless functions",
                             "Function-level authentication",
                             "Execution isolation"});
-                table2434.AddRow(new string[] {
+                table2397.AddRow(new string[] {
                             "Cloud storage",
                             "Encryption, access policies",
                             "Identity-based permissions"});
-                table2434.AddRow(new string[] {
+                table2397.AddRow(new string[] {
                             "Cloud databases",
                             "Connection encryption, auditing",
                             "Database identity"});
-                table2434.AddRow(new string[] {
+                table2397.AddRow(new string[] {
                             "Cloud APIs",
                             "API authentication, rate limiting",
                             "Token-based access"});
 #line 176
-    testRunner.When("cloud resources are accessed or managed:", ((string)(null)), table2434, "When ");
+    testRunner.When("cloud resources are accessed or managed:", ((string)(null)), table2397, "When ");
 #line hidden
 #line 184
     testRunner.Then("cloud resources should not trust network location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1026,28 +1026,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 192
     testRunner.Given("identity services may experience outages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2435 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2398 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failure Type",
                             "Fallback Strategy",
                             "Security Posture"});
-                table2435.AddRow(new string[] {
+                table2398.AddRow(new string[] {
                             "Primary IdP unavailable",
                             "Secondary identity provider",
                             "Maintain strong authentication"});
-                table2435.AddRow(new string[] {
+                table2398.AddRow(new string[] {
                             "MFA service outage",
                             "Alternative authentication factors",
                             "No relaxation of requirements"});
-                table2435.AddRow(new string[] {
+                table2398.AddRow(new string[] {
                             "Certificate authority down",
                             "Cached certificate validation",
                             "Limited time validation"});
-                table2435.AddRow(new string[] {
+                table2398.AddRow(new string[] {
                             "Network connectivity loss",
                             "Local identity cache",
                             "Reduced session duration"});
 #line 193
-    testRunner.When("identity verification services fail:", ((string)(null)), table2435, "When ");
+    testRunner.When("identity verification services fail:", ((string)(null)), table2398, "When ");
 #line hidden
 #line 199
     testRunner.Then("system should fail securely", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1099,28 +1099,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 206
     testRunner.Given("multiple security policies may conflict", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2436 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2399 = new TechTalk.SpecFlow.Table(new string[] {
                             "Conflict Type",
                             "Resolution Strategy",
                             "Priority Order"});
-                table2436.AddRow(new string[] {
+                table2399.AddRow(new string[] {
                             "Access vs. security",
                             "Security takes precedence",
                             "Security first"});
-                table2436.AddRow(new string[] {
+                table2399.AddRow(new string[] {
                             "Performance vs. verification",
                             "Security over performance",
                             "Never compromise security"});
-                table2436.AddRow(new string[] {
+                table2399.AddRow(new string[] {
                             "Usability vs. controls",
                             "Secure usability design",
                             "Security-first UX"});
-                table2436.AddRow(new string[] {
+                table2399.AddRow(new string[] {
                             "Legacy vs. zero trust",
                             "Compensating controls",
                             "Gradual migration"});
 #line 207
-    testRunner.When("policy conflicts arise:", ((string)(null)), table2436, "When ");
+    testRunner.When("policy conflicts arise:", ((string)(null)), table2399, "When ");
 #line hidden
 #line 213
     testRunner.Then("security policies should be prioritized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1172,28 +1172,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 220
     testRunner.Given("network microsegmentation policies are enforced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2437 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2400 = new TechTalk.SpecFlow.Table(new string[] {
                             "Bypass Attempt Type",
                             "Detection Method",
                             "Response Action"});
-                table2437.AddRow(new string[] {
+                table2400.AddRow(new string[] {
                             "Protocol tunneling",
                             "Deep packet inspection",
                             "Block tunnel, alert SOC"});
-                table2437.AddRow(new string[] {
+                table2400.AddRow(new string[] {
                             "Network policy violation",
                             "Real-time traffic analysis",
                             "Immediate connection termination"});
-                table2437.AddRow(new string[] {
+                table2400.AddRow(new string[] {
                             "Lateral movement",
                             "Behavior analysis",
                             "Isolate source system"});
-                table2437.AddRow(new string[] {
+                table2400.AddRow(new string[] {
                             "Privilege escalation",
                             "Access pattern monitoring",
                             "Revoke elevated permissions"});
 #line 221
-    testRunner.When("attempts are made to bypass network controls:", ((string)(null)), table2437, "When ");
+    testRunner.When("attempts are made to bypass network controls:", ((string)(null)), table2400, "When ");
 #line hidden
 #line 227
     testRunner.Then("bypass attempts should be immediately detected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1245,28 +1245,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 234
     testRunner.Given("continuous monitoring should have complete coverage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2438 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2401 = new TechTalk.SpecFlow.Table(new string[] {
                             "Gap Type",
                             "Impact Assessment",
                             "Mitigation Strategy"});
-                table2438.AddRow(new string[] {
+                table2401.AddRow(new string[] {
                             "Network blind spots",
                             "Unmonitored traffic flows",
                             "Deploy additional sensors"});
-                table2438.AddRow(new string[] {
+                table2401.AddRow(new string[] {
                             "Application monitoring gaps",
                             "Unlogged user activities",
                             "Enhance application logging"});
-                table2438.AddRow(new string[] {
+                table2401.AddRow(new string[] {
                             "Device visibility gaps",
                             "Unknown devices on network",
                             "Improve device discovery"});
-                table2438.AddRow(new string[] {
+                table2401.AddRow(new string[] {
                             "Identity monitoring gaps",
                             "Untracked identity usage",
                             "Enhance identity correlation"});
 #line 235
-    testRunner.When("monitoring gaps are detected:", ((string)(null)), table2438, "When ");
+    testRunner.When("monitoring gaps are detected:", ((string)(null)), table2401, "When ");
 #line hidden
 #line 241
     testRunner.Then("monitoring gaps should be immediately addressed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1318,28 +1318,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 248
     testRunner.Given("zero trust implementation may impact performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2439 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2402 = new TechTalk.SpecFlow.Table(new string[] {
                             "Performance Issue",
                             "Security Response",
                             "Acceptable Trade-offs"});
-                table2439.AddRow(new string[] {
+                table2402.AddRow(new string[] {
                             "Network latency increase",
                             "Maintain encryption, reduce timeouts",
                             "Slightly slower response"});
-                table2439.AddRow(new string[] {
+                table2402.AddRow(new string[] {
                             "Authentication delays",
                             "Keep authentication requirements",
                             "Longer login times"});
-                table2439.AddRow(new string[] {
+                table2402.AddRow(new string[] {
                             "Monitoring overhead",
                             "Continue security monitoring",
                             "Some performance impact"});
-                table2439.AddRow(new string[] {
+                table2402.AddRow(new string[] {
                             "Policy enforcement lag",
                             "Maintain security policies",
                             "Delayed but secure access"});
 #line 249
-    testRunner.When("system performance degrades:", ((string)(null)), table2439, "When ");
+    testRunner.When("system performance degrades:", ((string)(null)), table2402, "When ");
 #line hidden
 #line 255
     testRunner.Then("security should not be compromised for performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1391,28 +1391,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 262
     testRunner.Given("some legacy systems cannot be immediately upgraded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2440 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2403 = new TechTalk.SpecFlow.Table(new string[] {
                             "Legacy System Type",
                             "Limitation",
                             "Compensating Controls"});
-                table2440.AddRow(new string[] {
+                table2403.AddRow(new string[] {
                             "Old authentication systems",
                             "No modern auth protocols",
                             "Network isolation, monitoring"});
-                table2440.AddRow(new string[] {
+                table2403.AddRow(new string[] {
                             "Legacy applications",
                             "No encryption support",
                             "TLS termination, proxy"});
-                table2440.AddRow(new string[] {
+                table2403.AddRow(new string[] {
                             "Embedded systems",
                             "Limited security features",
                             "Network segmentation"});
-                table2440.AddRow(new string[] {
+                table2403.AddRow(new string[] {
                             "Third-party systems",
                             "Cannot modify security",
                             "Enhanced perimeter security"});
 #line 263
-    testRunner.When("integrating legacy systems with zero trust architecture:", ((string)(null)), table2440, "When ");
+    testRunner.When("integrating legacy systems with zero trust architecture:", ((string)(null)), table2403, "When ");
 #line hidden
 #line 269
     testRunner.Then("compensating controls should maintain security posture", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

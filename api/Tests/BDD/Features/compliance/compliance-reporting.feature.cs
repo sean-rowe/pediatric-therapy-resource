@@ -84,23 +84,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 7
     testRunner.Given("I am logged in as administrator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table664 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table627 = new TechTalk.SpecFlow.Table(new string[] {
                         "Framework",
                         "Requirement"});
-            table664.AddRow(new string[] {
+            table627.AddRow(new string[] {
                         "HIPAA",
                         "Protected health information security"});
-            table664.AddRow(new string[] {
+            table627.AddRow(new string[] {
                         "FERPA",
                         "Educational records privacy"});
-            table664.AddRow(new string[] {
+            table627.AddRow(new string[] {
                         "Medicaid",
                         "Documentation and billing compliance"});
-            table664.AddRow(new string[] {
+            table627.AddRow(new string[] {
                         "State",
                         "Therapy licensure and supervision rules"});
 #line 8
-    testRunner.And("the following compliance frameworks apply:", ((string)(null)), table664, "And ");
+    testRunner.And("the following compliance frameworks apply:", ((string)(null)), table627, "And ");
 #line hidden
         }
         
@@ -138,41 +138,41 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 20
       testRunner.When("I view compliance dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table665 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table628 = new TechTalk.SpecFlow.Table(new string[] {
                             "Metric",
                             "Count",
                             "Status"});
-                table665.AddRow(new string[] {
+                table628.AddRow(new string[] {
                             "Sessions documented <24hr",
                             "145",
                             "Compliant"});
-                table665.AddRow(new string[] {
+                table628.AddRow(new string[] {
                             "Sessions documented 24-48hr",
                             "23",
                             "Compliant"});
-                table665.AddRow(new string[] {
+                table628.AddRow(new string[] {
                             "Sessions pending >48hr",
                             "3",
                             "Alert"});
-                table665.AddRow(new string[] {
+                table628.AddRow(new string[] {
                             "Sessions missing documentation",
                             "0",
                             "Good"});
 #line 21
-      testRunner.Then("I see:", ((string)(null)), table665, "Then ");
+      testRunner.Then("I see:", ((string)(null)), table628, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table666 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table629 = new TechTalk.SpecFlow.Table(new string[] {
                             "Therapist",
                             "Student",
                             "Session Date",
                             "Hours Overdue"});
-                table666.AddRow(new string[] {
+                table629.AddRow(new string[] {
                             "Sarah Johnson",
                             "Emma Wilson",
                             "2024-01-13",
                             "12"});
 #line 27
-      testRunner.And("non-compliant items show:", ((string)(null)), table666, "And ");
+      testRunner.And("non-compliant items show:", ((string)(null)), table629, "And ");
 #line hidden
 #line 30
       testRunner.And("automated reminders were sent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -210,32 +210,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 35
       testRunner.When("I check signature compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table667 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table630 = new TechTalk.SpecFlow.Table(new string[] {
                             "Therapist",
                             "Documents",
                             "Signed",
                             "Pending",
                             "Due Date"});
-                table667.AddRow(new string[] {
+                table630.AddRow(new string[] {
                             "Sarah Johnson",
                             "47",
                             "45",
                             "2",
                             "2024-01-31"});
-                table667.AddRow(new string[] {
+                table630.AddRow(new string[] {
                             "Michael Chen",
                             "52",
                             "52",
                             "0",
                             "Compliant"});
-                table667.AddRow(new string[] {
+                table630.AddRow(new string[] {
                             "Amy Lee (CF)",
                             "38",
                             "38",
                             "0",
                             "Compliant"});
 #line 36
-      testRunner.Then("report shows:", ((string)(null)), table667, "Then ");
+      testRunner.Then("report shows:", ((string)(null)), table630, "Then ");
 #line hidden
 #line 41
       testRunner.And("pending items are flagged for supervisor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -273,43 +273,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 46
       testRunner.When("I run credential audit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table668 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table631 = new TechTalk.SpecFlow.Table(new string[] {
                             "Therapist",
                             "License",
                             "Expiration",
                             "Status"});
-                table668.AddRow(new string[] {
+                table631.AddRow(new string[] {
                             "Sarah Johnson",
                             "OT-12345",
                             "2024-12-31",
                             "Active"});
-                table668.AddRow(new string[] {
+                table631.AddRow(new string[] {
                             "Michael Chen",
                             "PT-67890",
                             "2024-03-15",
                             "Expiring Soon"});
-                table668.AddRow(new string[] {
+                table631.AddRow(new string[] {
                             "Amy Lee",
                             "SLP-54321",
                             "2024-08-30",
                             "Active"});
 #line 47
-      testRunner.Then("system reports:", ((string)(null)), table668, "Then ");
+      testRunner.Then("system reports:", ((string)(null)), table631, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table669 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table632 = new TechTalk.SpecFlow.Table(new string[] {
                             "Days Before",
                             "Action"});
-                table669.AddRow(new string[] {
+                table632.AddRow(new string[] {
                             "90",
                             "Email reminder to therapist"});
-                table669.AddRow(new string[] {
+                table632.AddRow(new string[] {
                             "60",
                             "Email reminder + supervisor"});
-                table669.AddRow(new string[] {
+                table632.AddRow(new string[] {
                             "30",
                             "Daily reminders + practice admin"});
 #line 52
-      testRunner.And("expiring credentials trigger:", ((string)(null)), table669, "And ");
+      testRunner.And("expiring credentials trigger:", ((string)(null)), table632, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -344,53 +344,53 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 63
       testRunner.When("I generate audit report for \"January 2024\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table670 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table633 = new TechTalk.SpecFlow.Table(new string[] {
                             "Event Type",
                             "Count",
                             "Details Available"});
-                table670.AddRow(new string[] {
+                table633.AddRow(new string[] {
                             "Record Access",
                             "1,247",
                             "User, time, reason"});
-                table670.AddRow(new string[] {
+                table633.AddRow(new string[] {
                             "Record Modification",
                             "823",
                             "User, time, changes"});
-                table670.AddRow(new string[] {
+                table633.AddRow(new string[] {
                             "Failed Access",
                             "12",
                             "User, time, attempt type"});
-                table670.AddRow(new string[] {
+                table633.AddRow(new string[] {
                             "Data Export",
                             "45",
                             "User, time, scope"});
-                table670.AddRow(new string[] {
+                table633.AddRow(new string[] {
                             "Permission Changes",
                             "8",
                             "Admin, time, details"});
 #line 64
-      testRunner.Then("report includes:", ((string)(null)), table670, "Then ");
+      testRunner.Then("report includes:", ((string)(null)), table633, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table671 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table634 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Example"});
-                table671.AddRow(new string[] {
+                table634.AddRow(new string[] {
                             "Timestamp",
                             "2024-01-15 09:23:45 EST"});
-                table671.AddRow(new string[] {
+                table634.AddRow(new string[] {
                             "User",
                             "sjohnson@therapy.com"});
-                table671.AddRow(new string[] {
+                table634.AddRow(new string[] {
                             "Action",
                             "Viewed student record"});
-                table671.AddRow(new string[] {
+                table634.AddRow(new string[] {
                             "Resource",
                             "Student: Emma Wilson"});
-                table671.AddRow(new string[] {
+                table634.AddRow(new string[] {
                             "IP Address",
                             "192.168.1.100"});
 #line 71
-      testRunner.And("each entry shows:", ((string)(null)), table671, "And ");
+      testRunner.And("each entry shows:", ((string)(null)), table634, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -425,36 +425,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 82
       testRunner.When("I access breach response workflow", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table672 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table635 = new TechTalk.SpecFlow.Table(new string[] {
                             "Step",
                             "Action",
                             "Deadline"});
-                table672.AddRow(new string[] {
+                table635.AddRow(new string[] {
                             "1",
                             "Contain the breach",
                             "Immediate"});
-                table672.AddRow(new string[] {
+                table635.AddRow(new string[] {
                             "2",
                             "Assess scope and impact",
                             "Within 24 hours"});
-                table672.AddRow(new string[] {
+                table635.AddRow(new string[] {
                             "3",
                             "Document all findings",
                             "Within 48 hours"});
-                table672.AddRow(new string[] {
+                table635.AddRow(new string[] {
                             "4",
                             "Notify affected individuals",
                             "Within 60 days"});
-                table672.AddRow(new string[] {
+                table635.AddRow(new string[] {
                             "5",
                             "Report to HHS if required",
                             "Within 60 days"});
-                table672.AddRow(new string[] {
+                table635.AddRow(new string[] {
                             "6",
                             "Implement preventive measures",
                             "Ongoing"});
 #line 83
-      testRunner.Then("system guides through:", ((string)(null)), table672, "Then ");
+      testRunner.Then("system guides through:", ((string)(null)), table635, "Then ");
 #line hidden
 #line 91
       testRunner.And("all actions are logged", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -492,32 +492,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 98
       testRunner.When("I run compliance check for \"Q4 2023\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table673 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table636 = new TechTalk.SpecFlow.Table(new string[] {
                             "Check",
                             "Result",
                             "Issues Found"});
-                table673.AddRow(new string[] {
+                table636.AddRow(new string[] {
                             "Prior authorization",
                             "98% Pass",
                             "3 missing"});
-                table673.AddRow(new string[] {
+                table636.AddRow(new string[] {
                             "Timely filing",
                             "100% Pass",
                             "0"});
-                table673.AddRow(new string[] {
+                table636.AddRow(new string[] {
                             "Documentation completeness",
                             "96% Pass",
                             "8 incomplete"});
-                table673.AddRow(new string[] {
+                table636.AddRow(new string[] {
                             "Service delivery verification",
                             "99% Pass",
                             "2 errors"});
-                table673.AddRow(new string[] {
+                table636.AddRow(new string[] {
                             "Therapist credentials",
                             "100% Pass",
                             "0"});
 #line 99
-      testRunner.Then("validation includes:", ((string)(null)), table673, "Then ");
+      testRunner.Then("validation includes:", ((string)(null)), table636, "Then ");
 #line hidden
 #line 106
       testRunner.And("issues detail shows corrective actions needed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -555,26 +555,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 111
       testRunner.When("I generate cost report for \"2023\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table674 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table637 = new TechTalk.SpecFlow.Table(new string[] {
                             "Section",
                             "Data Points"});
-                table674.AddRow(new string[] {
+                table637.AddRow(new string[] {
                             "Direct Service Costs",
                             "Therapist time, benefits"});
-                table674.AddRow(new string[] {
+                table637.AddRow(new string[] {
                             "Indirect Costs",
                             "Administration, facilities"});
-                table674.AddRow(new string[] {
+                table637.AddRow(new string[] {
                             "Student Service Hours",
                             "By category and location"});
-                table674.AddRow(new string[] {
+                table637.AddRow(new string[] {
                             "Reimbursement Received",
                             "By payer and service type"});
-                table674.AddRow(new string[] {
+                table637.AddRow(new string[] {
                             "Compliance Metrics",
                             "Documentation, authorization"});
 #line 112
-      testRunner.Then("report includes:", ((string)(null)), table674, "Then ");
+      testRunner.Then("report includes:", ((string)(null)), table637, "Then ");
 #line hidden
 #line 119
       testRunner.And("calculations follow state methodology", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -612,29 +612,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 126
       testRunner.When("I generate \"Q4 2023\" state report", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table675 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table638 = new TechTalk.SpecFlow.Table(new string[] {
                             "Metric",
                             "Value"});
-                table675.AddRow(new string[] {
+                table638.AddRow(new string[] {
                             "Total Students Served",
                             "324"});
-                table675.AddRow(new string[] {
+                table638.AddRow(new string[] {
                             "Total Service Hours",
                             "4,836"});
-                table675.AddRow(new string[] {
+                table638.AddRow(new string[] {
                             "Services by Type",
                             "OT: 45%, PT: 30%, SLP: 25%"});
-                table675.AddRow(new string[] {
+                table638.AddRow(new string[] {
                             "Outcomes Achieved",
                             "78% met goals"});
-                table675.AddRow(new string[] {
+                table638.AddRow(new string[] {
                             "Therapist FTE",
                             "12.5"});
-                table675.AddRow(new string[] {
+                table638.AddRow(new string[] {
                             "Geographic Distribution",
                             "By county/district"});
 #line 127
-      testRunner.Then("report contains:", ((string)(null)), table675, "Then ");
+      testRunner.Then("report contains:", ((string)(null)), table638, "Then ");
 #line hidden
 #line 135
       testRunner.And("format matches state specifications", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -675,26 +675,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 141
       testRunner.When("I compile annual outcomes for \"2023\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table676 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table639 = new TechTalk.SpecFlow.Table(new string[] {
                             "Outcome Category",
                             "Metrics"});
-                table676.AddRow(new string[] {
+                table639.AddRow(new string[] {
                             "Goal Achievement",
                             "78% of goals met or exceeded"});
-                table676.AddRow(new string[] {
+                table639.AddRow(new string[] {
                             "Parent Satisfaction",
                             "4.6/5 average rating"});
-                table676.AddRow(new string[] {
+                table639.AddRow(new string[] {
                             "School Integration",
                             "92% regular classroom time"});
-                table676.AddRow(new string[] {
+                table639.AddRow(new string[] {
                             "Service Efficiency",
                             "15% reduction in service need"});
-                table676.AddRow(new string[] {
+                table639.AddRow(new string[] {
                             "Early Intervention",
                             "65% prevented escalation"});
 #line 142
-      testRunner.Then("report includes:", ((string)(null)), table676, "Then ");
+      testRunner.Then("report includes:", ((string)(null)), table639, "Then ");
 #line hidden
 #line 149
     testRunner.And("supporting documentation is attached", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -732,32 +732,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 156
       testRunner.When("I audit FERPA compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table677 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table640 = new TechTalk.SpecFlow.Table(new string[] {
                             "Requirement",
                             "Status",
                             "Details"});
-                table677.AddRow(new string[] {
+                table640.AddRow(new string[] {
                             "Parent access rights",
                             "Compliant",
                             "All requests fulfilled"});
-                table677.AddRow(new string[] {
+                table640.AddRow(new string[] {
                             "Consent for disclosure",
                             "Compliant",
                             "100% documented"});
-                table677.AddRow(new string[] {
+                table640.AddRow(new string[] {
                             "Directory info opt-outs",
                             "Applied",
                             "12 students opted out"});
-                table677.AddRow(new string[] {
+                table640.AddRow(new string[] {
                             "Third party access",
                             "Logged",
                             "All access authenticated"});
-                table677.AddRow(new string[] {
+                table640.AddRow(new string[] {
                             "Annual notification",
                             "Sent",
                             "2023-08-15"});
 #line 157
-      testRunner.Then("system verifies:", ((string)(null)), table677, "Then ");
+      testRunner.Then("system verifies:", ((string)(null)), table640, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -792,33 +792,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 168
       testRunner.When("I run retention audit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table678 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table641 = new TechTalk.SpecFlow.Table(new string[] {
                             "Record Type",
                             "Retention Period",
                             "Due for Deletion",
                             "Action Required"});
-                table678.AddRow(new string[] {
+                table641.AddRow(new string[] {
                             "Session Notes",
                             "7 years",
                             "127 records",
                             "Review and approve"});
-                table678.AddRow(new string[] {
+                table641.AddRow(new string[] {
                             "Evaluations",
                             "7 years",
                             "43 records",
                             "Review and approve"});
-                table678.AddRow(new string[] {
+                table641.AddRow(new string[] {
                             "Billing Records",
                             "10 years",
                             "0 records",
                             "None"});
-                table678.AddRow(new string[] {
+                table641.AddRow(new string[] {
                             "Audit Logs",
                             "6 years",
                             "10,847 records",
                             "Auto-delete scheduled"});
 #line 169
-      testRunner.Then("system reports:", ((string)(null)), table678, "Then ");
+      testRunner.Then("system reports:", ((string)(null)), table641, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -853,48 +853,48 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 181
       testRunner.When("I check training compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table679 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table642 = new TechTalk.SpecFlow.Table(new string[] {
                             "Training Module",
                             "Required By",
                             "Completed",
                             "Overdue"});
-                table679.AddRow(new string[] {
+                table642.AddRow(new string[] {
                             "HIPAA Privacy",
                             "All Staff",
                             "42/45",
                             "3"});
-                table679.AddRow(new string[] {
+                table642.AddRow(new string[] {
                             "Mandated Reporting",
                             "Therapists",
                             "15/15",
                             "0"});
-                table679.AddRow(new string[] {
+                table642.AddRow(new string[] {
                             "Documentation Standards",
                             "Therapists",
                             "14/15",
                             "1"});
-                table679.AddRow(new string[] {
+                table642.AddRow(new string[] {
                             "Billing Compliance",
                             "Admin",
                             "5/5",
                             "0"});
 #line 182
-      testRunner.Then("dashboard shows:", ((string)(null)), table679, "Then ");
+      testRunner.Then("dashboard shows:", ((string)(null)), table642, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table680 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table643 = new TechTalk.SpecFlow.Table(new string[] {
                             "Days Overdue",
                             "Action"});
-                table680.AddRow(new string[] {
+                table643.AddRow(new string[] {
                             "1-7",
                             "Email reminder"});
-                table680.AddRow(new string[] {
+                table643.AddRow(new string[] {
                             "8-14",
                             "Email + supervisor notice"});
-                table680.AddRow(new string[] {
+                table643.AddRow(new string[] {
                             "15+",
                             "Access restrictions apply"});
 #line 188
-      testRunner.And("overdue training triggers:", ((string)(null)), table680, "And ");
+      testRunner.And("overdue training triggers:", ((string)(null)), table643, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -929,32 +929,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 197
       testRunner.When("I view CE compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table681 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table644 = new TechTalk.SpecFlow.Table(new string[] {
                             "Therapist",
                             "Required",
                             "Completed",
                             "Deadline",
                             "Status"});
-                table681.AddRow(new string[] {
+                table644.AddRow(new string[] {
                             "Sarah Johnson",
                             "24 hours",
                             "18 hours",
                             "2024-12-31",
                             "On Track"});
-                table681.AddRow(new string[] {
+                table644.AddRow(new string[] {
                             "Michael Chen",
                             "24 hours",
                             "24 hours",
                             "2024-12-31",
                             "Complete"});
-                table681.AddRow(new string[] {
+                table644.AddRow(new string[] {
                             "Amy Lee",
                             "36 hours",
                             "30 hours",
                             "2024-06-30",
                             "At Risk"});
 #line 198
-      testRunner.Then("report shows:", ((string)(null)), table681, "Then ");
+      testRunner.Then("report shows:", ((string)(null)), table644, "Then ");
 #line hidden
 #line 203
       testRunner.And("CE certificates are on file", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -992,36 +992,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 210
       testRunner.When("I generate audit preparation package", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table682 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table645 = new TechTalk.SpecFlow.Table(new string[] {
                             "Document Set",
                             "Status",
                             "Items"});
-                table682.AddRow(new string[] {
+                table645.AddRow(new string[] {
                             "Service Documentation",
                             "Complete",
                             "1,247"});
-                table682.AddRow(new string[] {
+                table645.AddRow(new string[] {
                             "Billing Records",
                             "Complete",
                             "1,198"});
-                table682.AddRow(new string[] {
+                table645.AddRow(new string[] {
                             "Authorization Records",
                             "Complete",
                             "324"});
-                table682.AddRow(new string[] {
+                table645.AddRow(new string[] {
                             "Therapist Credentials",
                             "Current",
                             "15"});
-                table682.AddRow(new string[] {
+                table645.AddRow(new string[] {
                             "Policy/Procedures",
                             "Updated 2024",
                             "23"});
-                table682.AddRow(new string[] {
+                table645.AddRow(new string[] {
                             "Training Records",
                             "Complete",
                             "45"});
 #line 211
-      testRunner.Then("package includes:", ((string)(null)), table682, "Then ");
+      testRunner.Then("package includes:", ((string)(null)), table645, "Then ");
 #line hidden
 #line 219
       testRunner.And("all documents are organized by audit requirements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1059,28 +1059,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 224
       testRunner.When("I create corrective action plan", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table683 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table646 = new TechTalk.SpecFlow.Table(new string[] {
                             "Finding",
                             "Root Cause",
                             "Corrective Action",
                             "Due Date"});
-                table683.AddRow(new string[] {
+                table646.AddRow(new string[] {
                             "Late documentation",
                             "Staff shortage",
                             "Hire additional staff",
                             "2024-03-01"});
-                table683.AddRow(new string[] {
+                table646.AddRow(new string[] {
                             "Missing authorizations",
                             "Process gap",
                             "Automated checks",
                             "2024-02-15"});
-                table683.AddRow(new string[] {
+                table646.AddRow(new string[] {
                             "Training gaps",
                             "Scheduling",
                             "Mandatory sessions",
                             "2024-02-01"});
 #line 225
-      testRunner.Then("plan includes:", ((string)(null)), table683, "Then ");
+      testRunner.Then("plan includes:", ((string)(null)), table646, "Then ");
 #line hidden
 #line 230
       testRunner.And("progress tracking is enabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

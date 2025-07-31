@@ -141,49 +141,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 17
     testRunner.And("each region has specific requirements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2299 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2262 = new TechTalk.SpecFlow.Table(new string[] {
                             "Region",
                             "Primary Services",
                             "Data Residency",
                             "Latency Target",
                             "Availability Target",
                             "Compliance Requirements"});
-                table2299.AddRow(new string[] {
+                table2262.AddRow(new string[] {
                             "US-East (Virginia)",
                             "API, Database master",
                             "HIPAA-compliant data",
                             "<50ms regional",
                             "99.99%",
                             "HIPAA, COPPA, CCPA"});
-                table2299.AddRow(new string[] {
+                table2262.AddRow(new string[] {
                             "US-West (Oregon)",
                             "API, Database replica",
                             "Disaster recovery",
                             "<50ms regional",
                             "99.95%",
                             "HIPAA, COPPA, CCPA"});
-                table2299.AddRow(new string[] {
+                table2262.AddRow(new string[] {
                             "EU-West (Ireland)",
                             "API, Database master",
                             "GDPR-compliant data",
                             "<50ms regional",
                             "99.99%",
                             "GDPR, UK GDPR"});
-                table2299.AddRow(new string[] {
+                table2262.AddRow(new string[] {
                             "EU-Central (Frankfurt)",
                             "API, Database replica",
                             "German data residency",
                             "<50ms regional",
                             "99.95%",
                             "GDPR, BDSG"});
-                table2299.AddRow(new string[] {
+                table2262.AddRow(new string[] {
                             "APAC (Singapore)",
                             "API, Database master",
                             "APAC data residency",
                             "<100ms regional",
                             "99.9%",
                             "PDPA, PIPEDA"});
-                table2299.AddRow(new string[] {
+                table2262.AddRow(new string[] {
                             "APAC (Sydney)",
                             "API, Database replica",
                             "Australian data",
@@ -191,7 +191,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "99.9%",
                             "Australian Privacy Act"});
 #line 18
-    testRunner.When("implementing multi-region deployment:", ((string)(null)), table2299, "When ");
+    testRunner.When("implementing multi-region deployment:", ((string)(null)), table2262, "When ");
 #line hidden
 #line 26
     testRunner.Then("services should be deployed successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -248,49 +248,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 34
     testRunner.And("consistency requirements vary by data type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2300 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2263 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Type",
                             "Consistency Model",
                             "Replication Method",
                             "Conflict Resolution",
                             "Lag Tolerance",
                             "Failover RPO"});
-                table2300.AddRow(new string[] {
+                table2263.AddRow(new string[] {
                             "User profiles",
                             "Eventually consistent",
                             "Async multi-master",
                             "Last write wins",
                             "<5 seconds",
                             "1 minute"});
-                table2300.AddRow(new string[] {
+                table2263.AddRow(new string[] {
                             "Therapy sessions",
                             "Strong consistency",
                             "Sync replication",
                             "Primary region wins",
                             "0 seconds",
                             "0 seconds"});
-                table2300.AddRow(new string[] {
+                table2263.AddRow(new string[] {
                             "Educational content",
                             "Read-after-write",
                             "Async with cache",
                             "Version control",
                             "<30 seconds",
                             "5 minutes"});
-                table2300.AddRow(new string[] {
+                table2263.AddRow(new string[] {
                             "Analytics data",
                             "Eventual consistency",
                             "Batch replication",
                             "Merge aggregates",
                             "<5 minutes",
                             "1 hour"});
-                table2300.AddRow(new string[] {
+                table2263.AddRow(new string[] {
                             "Payment data",
                             "Strong consistency",
                             "Sync with 2PC",
                             "No conflicts",
                             "0 seconds",
                             "0 seconds"});
-                table2300.AddRow(new string[] {
+                table2263.AddRow(new string[] {
                             "Media files",
                             "Eventually consistent",
                             "CDN replication",
@@ -298,7 +298,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "<2 minutes",
                             "15 minutes"});
 #line 35
-    testRunner.When("configuring replication strategies:", ((string)(null)), table2300, "When ");
+    testRunner.When("configuring replication strategies:", ((string)(null)), table2263, "When ");
 #line hidden
 #line 43
     testRunner.Then("replication should maintain consistency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -355,49 +355,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 51
     testRunner.And("PoPs must be strategically located", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2301 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2264 = new TechTalk.SpecFlow.Table(new string[] {
                             "PoP Location",
                             "Coverage Area",
                             "Services Deployed",
                             "Cache Size",
                             "Compute Capacity",
                             "Peering Arrangements"});
-                table2301.AddRow(new string[] {
+                table2264.AddRow(new string[] {
                             "New York",
                             "US Northeast",
                             "CDN, API cache, Auth",
                             "10TB",
                             "100 vCPUs",
                             "Major ISPs"});
-                table2301.AddRow(new string[] {
+                table2264.AddRow(new string[] {
                             "Los Angeles",
                             "US West Coast",
                             "CDN, API cache",
                             "8TB",
                             "80 vCPUs",
                             "Regional ISPs"});
-                table2301.AddRow(new string[] {
+                table2264.AddRow(new string[] {
                             "London",
                             "UK/Ireland",
                             "CDN, API cache, GDPR",
                             "8TB",
                             "80 vCPUs",
                             "EU exchanges"});
-                table2301.AddRow(new string[] {
+                table2264.AddRow(new string[] {
                             "Frankfurt",
                             "Central Europe",
                             "CDN, API cache, GDPR",
                             "10TB",
                             "100 vCPUs",
                             "DE-CIX"});
-                table2301.AddRow(new string[] {
+                table2264.AddRow(new string[] {
                             "Singapore",
                             "Southeast Asia",
                             "CDN, API cache",
                             "6TB",
                             "60 vCPUs",
                             "APAC networks"});
-                table2301.AddRow(new string[] {
+                table2264.AddRow(new string[] {
                             "Tokyo",
                             "Japan/Korea",
                             "CDN, API cache",
@@ -405,7 +405,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "80 vCPUs",
                             "Regional peers"});
 #line 52
-    testRunner.When("deploying edge infrastructure:", ((string)(null)), table2301, "When ");
+    testRunner.When("deploying edge infrastructure:", ((string)(null)), table2264, "When ");
 #line hidden
 #line 60
     testRunner.Then("PoPs should serve regional traffic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -462,49 +462,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 68
     testRunner.And("routing must consider multiple factors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2302 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2265 = new TechTalk.SpecFlow.Table(new string[] {
                             "Routing Factor",
                             "Weight",
                             "Measurement Method",
                             "Update Frequency",
                             "Override Capability",
                             "Fallback Strategy"});
-                table2302.AddRow(new string[] {
+                table2265.AddRow(new string[] {
                             "Geographic proximity",
                             "40%",
                             "GeoIP database",
                             "Real-time",
                             "Manual override",
                             "Nearest region"});
-                table2302.AddRow(new string[] {
+                table2265.AddRow(new string[] {
                             "Endpoint health",
                             "30%",
                             "Health checks",
                             "10-second intervals",
                             "Auto-exclude unhealthy",
                             "Next nearest healthy"});
-                table2302.AddRow(new string[] {
+                table2265.AddRow(new string[] {
                             "Current load",
                             "20%",
                             "Real-time metrics",
                             "30-second intervals",
                             "Load threshold",
                             "Load balancing"});
-                table2302.AddRow(new string[] {
+                table2265.AddRow(new string[] {
                             "Network performance",
                             "10%",
                             "BGP anycast",
                             "Continuous",
                             "ISP preference",
                             "Default route"});
-                table2302.AddRow(new string[] {
+                table2265.AddRow(new string[] {
                             "Cost optimization",
                             "Variable",
                             "Transfer pricing",
                             "Hourly",
                             "Budget limits",
                             "Cheapest path"});
-                table2302.AddRow(new string[] {
+                table2265.AddRow(new string[] {
                             "Compliance requirements",
                             "Override",
                             "Data residency rules",
@@ -512,7 +512,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Mandatory",
                             "Compliant region only"});
 #line 69
-    testRunner.When("implementing intelligent routing:", ((string)(null)), table2302, "When ");
+    testRunner.When("implementing intelligent routing:", ((string)(null)), table2265, "When ");
 #line hidden
 #line 77
     testRunner.Then("routing should be optimal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -569,49 +569,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 86
     testRunner.And("regions must scale independently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2303 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2266 = new TechTalk.SpecFlow.Table(new string[] {
                             "Region",
                             "Scaling Authority",
                             "Resource Limits",
                             "Budget Allocation",
                             "Decision Criteria",
                             "Coordination Required"});
-                table2303.AddRow(new string[] {
+                table2266.AddRow(new string[] {
                             "US-East",
                             "Full autonomy",
                             "1000 instances max",
                             "$50k/month",
                             "Local metrics",
                             "Major changes only"});
-                table2303.AddRow(new string[] {
+                table2266.AddRow(new string[] {
                             "US-West",
                             "Full autonomy",
                             "500 instances max",
                             "$25k/month",
                             "Local metrics",
                             "Major changes only"});
-                table2303.AddRow(new string[] {
+                table2266.AddRow(new string[] {
                             "EU-West",
                             "Full autonomy",
                             "750 instances max",
                             "$40k/month",
                             "Local + GDPR",
                             "Data residency"});
-                table2303.AddRow(new string[] {
+                table2266.AddRow(new string[] {
                             "EU-Central",
                             "Limited autonomy",
                             "250 instances max",
                             "$15k/month",
                             "Parent region",
                             "All changes"});
-                table2303.AddRow(new string[] {
+                table2266.AddRow(new string[] {
                             "APAC",
                             "Full autonomy",
                             "400 instances max",
                             "$30k/month",
                             "Local metrics",
                             "Major changes only"});
-                table2303.AddRow(new string[] {
+                table2266.AddRow(new string[] {
                             "Edge PoPs",
                             "Centralized",
                             "50 instances each",
@@ -619,7 +619,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Global metrics",
                             "All changes"});
 #line 87
-    testRunner.When("implementing regional autonomy:", ((string)(null)), table2303, "When ");
+    testRunner.When("implementing regional autonomy:", ((string)(null)), table2266, "When ");
 #line hidden
 #line 95
     testRunner.Then("regions should scale independently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -676,49 +676,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 103
     testRunner.And("failover must be rapid and automatic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2304 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2267 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failure Scenario",
                             "Detection Time",
                             "Failover Time",
                             "Data Loss (RPO)",
                             "Recovery Time (RTO)",
                             "Failback Strategy"});
-                table2304.AddRow(new string[] {
+                table2267.AddRow(new string[] {
                             "Region unavailable",
                             "<30 seconds",
                             "<2 minutes",
                             "<1 minute",
                             "<5 minutes",
                             "Automated when healthy"});
-                table2304.AddRow(new string[] {
+                table2267.AddRow(new string[] {
                             "Network partition",
                             "<1 minute",
                             "<3 minutes",
                             "0 (split-brain handling)",
                             "<10 minutes",
                             "Manual validation"});
-                table2304.AddRow(new string[] {
+                table2267.AddRow(new string[] {
                             "Data center loss",
                             "<30 seconds",
                             "<2 minutes",
                             "<5 minutes",
                             "<15 minutes",
                             "Rebuild required"});
-                table2304.AddRow(new string[] {
+                table2267.AddRow(new string[] {
                             "Partial failure",
                             "<2 minutes",
                             "<5 minutes",
                             "0 (degraded mode)",
                             "<30 minutes",
                             "Gradual recovery"});
-                table2304.AddRow(new string[] {
+                table2267.AddRow(new string[] {
                             "Compliance violation",
                             "Immediate",
                             "Immediate",
                             "0 (reroute only)",
                             "0 (reroute)",
                             "When compliant"});
-                table2304.AddRow(new string[] {
+                table2267.AddRow(new string[] {
                             "Cascading failure",
                             "<1 minute",
                             "Progressive",
@@ -726,7 +726,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "<1 hour",
                             "Staged recovery"});
 #line 104
-    testRunner.When("implementing disaster recovery:", ((string)(null)), table2304, "When ");
+    testRunner.When("implementing disaster recovery:", ((string)(null)), table2267, "When ");
 #line hidden
 #line 112
     testRunner.Then("failover should be automatic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -783,49 +783,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 120
     testRunner.And("data must remain within legal boundaries", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2305 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2268 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Classification",
                             "Allowed Regions",
                             "Prohibited Regions",
                             "Encryption Requirements",
                             "Access Controls",
                             "Audit Requirements"});
-                table2305.AddRow(new string[] {
+                table2268.AddRow(new string[] {
                             "EU personal data",
                             "EU only",
                             "Non-EU regions",
                             "In transit + at rest",
                             "EU staff only",
                             "GDPR audit trail"});
-                table2305.AddRow(new string[] {
+                table2268.AddRow(new string[] {
                             "US healthcare data",
                             "US only",
                             "Non-US regions",
                             "HIPAA-compliant",
                             "US-based access",
                             "HIPAA audit"});
-                table2305.AddRow(new string[] {
+                table2268.AddRow(new string[] {
                             "Canadian personal data",
                             "Canada preferred",
                             "Adequate protection only",
                             "Strong encryption",
                             "Notice required",
                             "PIPEDA compliance"});
-                table2305.AddRow(new string[] {
+                table2268.AddRow(new string[] {
                             "Financial data",
                             "Licensed regions",
                             "Unlicensed regions",
                             "PCI DSS standards",
                             "Need-to-know",
                             "PCI audit"});
-                table2305.AddRow(new string[] {
+                table2268.AddRow(new string[] {
                             "Children\'s data",
                             "Origin country",
                             "Cross-border restricted",
                             "Enhanced protection",
                             "Parental consent",
                             "COPPA/similar"});
-                table2305.AddRow(new string[] {
+                table2268.AddRow(new string[] {
                             "Biometric data",
                             "Origin only",
                             "No cross-border",
@@ -833,7 +833,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Minimal access",
                             "Special audit"});
 #line 121
-    testRunner.When("enforcing data sovereignty:", ((string)(null)), table2305, "When ");
+    testRunner.When("enforcing data sovereignty:", ((string)(null)), table2268, "When ");
 #line hidden
 #line 129
     testRunner.Then("data sovereignty should be enforced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -890,49 +890,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 137
     testRunner.And("cache coherence must be maintained", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2306 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2269 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cache Layer",
                             "Regional Strategy",
                             "Invalidation Method",
                             "Coherence Protocol",
                             "Hit Rate Target",
                             "Update Propagation"});
-                table2306.AddRow(new string[] {
+                table2269.AddRow(new string[] {
                             "CDN static content",
                             "Regional PoPs",
                             "Event-based purge",
                             "Eventually consistent",
                             ">95%",
                             "<30 seconds global"});
-                table2306.AddRow(new string[] {
+                table2269.AddRow(new string[] {
                             "API response cache",
                             "Per-region Redis",
                             "TTL + invalidation",
                             "Write-through",
                             ">80%",
                             "Immediate regional"});
-                table2306.AddRow(new string[] {
+                table2269.AddRow(new string[] {
                             "Database query cache",
                             "Regional clusters",
                             "Smart invalidation",
                             "Read-through",
                             ">70%",
                             "Lazy propagation"});
-                table2306.AddRow(new string[] {
+                table2269.AddRow(new string[] {
                             "Session cache",
                             "Regional sticky",
                             "Session-based TTL",
                             "Local only",
                             ">99%",
                             "No propagation"});
-                table2306.AddRow(new string[] {
+                table2269.AddRow(new string[] {
                             "Search index cache",
                             "Regional shards",
                             "Incremental updates",
                             "Eventually consistent",
                             ">85%",
                             "Batch updates"});
-                table2306.AddRow(new string[] {
+                table2269.AddRow(new string[] {
                             "Media cache",
                             "Edge locations",
                             "LRU eviction",
@@ -940,7 +940,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             ">90%",
                             "On-demand"});
 #line 138
-    testRunner.When("implementing regional caching:", ((string)(null)), table2306, "When ");
+    testRunner.When("implementing regional caching:", ((string)(null)), table2269, "When ");
 #line hidden
 #line 146
     testRunner.Then("caching should improve performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -997,49 +997,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 155
     testRunner.And("operations must hand off between regions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2307 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2270 = new TechTalk.SpecFlow.Table(new string[] {
                             "Time Zone",
                             "Primary Region",
                             "Support Hours",
                             "Handoff Window",
                             "Escalation Path",
                             "Documentation Language"});
-                table2307.AddRow(new string[] {
+                table2270.AddRow(new string[] {
                             "UTC-8 to UTC-5",
                             "US-West",
                             "06:00-14:00 PST",
                             "30 min overlap",
                             "US-East secondary",
                             "English"});
-                table2307.AddRow(new string[] {
+                table2270.AddRow(new string[] {
                             "UTC-5 to UTC+0",
                             "US-East",
                             "09:00-17:00 EST",
                             "1 hour overlap",
                             "EU-West secondary",
                             "English"});
-                table2307.AddRow(new string[] {
+                table2270.AddRow(new string[] {
                             "UTC+0 to UTC+3",
                             "EU-West",
                             "08:00-16:00 GMT",
                             "1 hour overlap",
                             "EU-Central secondary",
                             "English, German"});
-                table2307.AddRow(new string[] {
+                table2270.AddRow(new string[] {
                             "UTC+3 to UTC+8",
                             "EU-Central",
                             "09:00-17:00 CET",
                             "30 min overlap",
                             "APAC secondary",
                             "English, German"});
-                table2307.AddRow(new string[] {
+                table2270.AddRow(new string[] {
                             "UTC+8 to UTC+12",
                             "APAC",
                             "09:00-17:00 SGT",
                             "1 hour overlap",
                             "US-West secondary",
                             "English, Mandarin"});
-                table2307.AddRow(new string[] {
+                table2270.AddRow(new string[] {
                             "UTC+12 to UTC-8",
                             "APAC-Sydney",
                             "09:00-17:00 AEDT",
@@ -1047,7 +1047,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "US-West primary",
                             "English"});
 #line 156
-    testRunner.When("implementing follow-the-sun:", ((string)(null)), table2307, "When ");
+    testRunner.When("implementing follow-the-sun:", ((string)(null)), table2270, "When ");
 #line hidden
 #line 164
     testRunner.Then("support should be continuous", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1104,49 +1104,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 172
     testRunner.And("localization goes beyond translation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2308 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2271 = new TechTalk.SpecFlow.Table(new string[] {
                             "Region",
                             "Specific Features",
                             "Localization Needs",
                             "Payment Methods",
                             "Content Adaptations",
                             "Regulatory Features"});
-                table2308.AddRow(new string[] {
+                table2271.AddRow(new string[] {
                             "United States",
                             "Insurance billing",
                             "Imperial units",
                             "Credit cards, ACH",
                             "US curriculum aligned",
                             "HIPAA workflows"});
-                table2308.AddRow(new string[] {
+                table2271.AddRow(new string[] {
                             "European Union",
                             "GDPR tools",
                             "Metric units, 24hr",
                             "SEPA, country cards",
                             "EU curriculum",
                             "GDPR dashboards"});
-                table2308.AddRow(new string[] {
+                table2271.AddRow(new string[] {
                             "United Kingdom",
                             "NHS integration",
                             "UK spellings",
                             "UK bank transfers",
                             "UK curriculum",
                             "UK GDPR tools"});
-                table2308.AddRow(new string[] {
+                table2271.AddRow(new string[] {
                             "Canada",
                             "Provincial health",
                             "Bilingual (FR/EN)",
                             "Interac, Canadian $",
                             "Provincial curricula",
                             "PIPEDA tools"});
-                table2308.AddRow(new string[] {
+                table2271.AddRow(new string[] {
                             "Australia",
                             "NDIS integration",
                             "AU spellings",
                             "BPAY, AU cards",
                             "Australian curriculum",
                             "APPs compliance"});
-                table2308.AddRow(new string[] {
+                table2271.AddRow(new string[] {
                             "Singapore",
                             "MOE integration",
                             "Multi-language",
@@ -1154,7 +1154,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Singapore curriculum",
                             "PDPA compliance"});
 #line 173
-    testRunner.When("implementing regional features:", ((string)(null)), table2308, "When ");
+    testRunner.When("implementing regional features:", ((string)(null)), table2271, "When ");
 #line hidden
 #line 181
     testRunner.Then("regional features should be available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1211,49 +1211,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 189
     testRunner.And("peering agreements reduce latency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2309 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2272 = new TechTalk.SpecFlow.Table(new string[] {
                             "Peering Location",
                             "Peering Type",
                             "Major Networks",
                             "Expected Benefit",
                             "Cost Model",
                             "Traffic Commitment"});
-                table2309.AddRow(new string[] {
+                table2272.AddRow(new string[] {
                             "Equinix New York",
                             "Public + Private",
                             "AWS, Google, Azure",
                             "-10ms latency",
                             "Settlement-free",
                             "10Gbps minimum"});
-                table2309.AddRow(new string[] {
+                table2272.AddRow(new string[] {
                             "DE-CIX Frankfurt",
                             "Public peering",
                             "1000+ networks",
                             "EU connectivity",
                             "Port-based",
                             "10Gbps port"});
-                table2309.AddRow(new string[] {
+                table2272.AddRow(new string[] {
                             "AMS-IX Amsterdam",
                             "Public + Private",
                             "EU networks",
                             "Redundancy",
                             "Port + traffic",
                             "10Gbps minimum"});
-                table2309.AddRow(new string[] {
+                table2272.AddRow(new string[] {
                             "LINX London",
                             "Public peering",
                             "UK ISPs",
                             "UK performance",
                             "Membership + port",
                             "1Gbps minimum"});
-                table2309.AddRow(new string[] {
+                table2272.AddRow(new string[] {
                             "Singapore IX",
                             "Public peering",
                             "APAC networks",
                             "Regional reach",
                             "Port-based",
                             "10Gbps port"});
-                table2309.AddRow(new string[] {
+                table2272.AddRow(new string[] {
                             "Any2 Los Angeles",
                             "Private peering",
                             "Content networks",
@@ -1261,7 +1261,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Cross-connect",
                             "Direct connect"});
 #line 190
-    testRunner.When("implementing peering strategy:", ((string)(null)), table2309, "When ");
+    testRunner.When("implementing peering strategy:", ((string)(null)), table2272, "When ");
 #line hidden
 #line 198
     testRunner.Then("peering should improve performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1318,49 +1318,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 206
     testRunner.And("capacity must be planned regionally", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2310 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2273 = new TechTalk.SpecFlow.Table(new string[] {
                             "Region",
                             "Current Capacity",
                             "Growth Rate",
                             "1-Year Projection",
                             "Expansion Strategy",
                             "Investment Timeline"});
-                table2310.AddRow(new string[] {
+                table2273.AddRow(new string[] {
                             "US-East",
                             "100 servers",
                             "20% quarterly",
                             "250 servers",
                             "Gradual expansion",
                             "Quarterly"});
-                table2310.AddRow(new string[] {
+                table2273.AddRow(new string[] {
                             "US-West",
                             "50 servers",
                             "15% quarterly",
                             "110 servers",
                             "Burst capacity",
                             "Semi-annual"});
-                table2310.AddRow(new string[] {
+                table2273.AddRow(new string[] {
                             "EU-West",
                             "75 servers",
                             "25% quarterly",
                             "200 servers",
                             "New data center",
                             "Q2 investment"});
-                table2310.AddRow(new string[] {
+                table2273.AddRow(new string[] {
                             "EU-Central",
                             "25 servers",
                             "10% quarterly",
                             "40 servers",
                             "Leverage EU-West",
                             "Annual"});
-                table2310.AddRow(new string[] {
+                table2273.AddRow(new string[] {
                             "APAC",
                             "40 servers",
                             "30% quarterly",
                             "130 servers",
                             "Aggressive expansion",
                             "Quarterly"});
-                table2310.AddRow(new string[] {
+                table2273.AddRow(new string[] {
                             "Edge PoPs",
                             "20 locations",
                             "50% annually",
@@ -1368,7 +1368,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "New markets",
                             "Continuous"});
 #line 207
-    testRunner.When("planning regional capacity:", ((string)(null)), table2310, "When ");
+    testRunner.When("planning regional capacity:", ((string)(null)), table2273, "When ");
 #line hidden
 #line 215
     testRunner.Then("capacity planning should be regional", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1425,49 +1425,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 223
     testRunner.And("optimization must consider regional differences", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2311 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2274 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cost Factor",
                             "US-East",
                             "US-West",
                             "EU-West",
                             "APAC",
                             "Optimization Strategy"});
-                table2311.AddRow(new string[] {
+                table2274.AddRow(new string[] {
                             "Compute (per hour)",
                             "$0.10",
                             "$0.11",
                             "$0.13",
                             "$0.15",
                             "Workload placement"});
-                table2311.AddRow(new string[] {
+                table2274.AddRow(new string[] {
                             "Storage (per GB)",
                             "$0.023",
                             "$0.025",
                             "$0.024",
                             "$0.028",
                             "Data tiering"});
-                table2311.AddRow(new string[] {
+                table2274.AddRow(new string[] {
                             "Bandwidth (per GB)",
                             "$0.09",
                             "$0.09",
                             "$0.09",
                             "$0.12",
                             "Regional caching"});
-                table2311.AddRow(new string[] {
+                table2274.AddRow(new string[] {
                             "Reserved discounts",
                             "40%",
                             "35%",
                             "30%",
                             "25%",
                             "Commitment optimization"});
-                table2311.AddRow(new string[] {
+                table2274.AddRow(new string[] {
                             "Spot availability",
                             "High",
                             "Medium",
                             "Medium",
                             "Low",
                             "Spot usage strategy"});
-                table2311.AddRow(new string[] {
+                table2274.AddRow(new string[] {
                             "Support costs",
                             "Base",
                             "+5%",
@@ -1475,7 +1475,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "+30%",
                             "Centralized support"});
 #line 224
-    testRunner.When("optimizing regional costs:", ((string)(null)), table2311, "When ");
+    testRunner.When("optimizing regional costs:", ((string)(null)), table2274, "When ");
 #line hidden
 #line 232
     testRunner.Then("costs should be optimized regionally", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1532,49 +1532,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 240
     testRunner.And("observability must span all regions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2312 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2275 = new TechTalk.SpecFlow.Table(new string[] {
                             "Monitoring Aspect",
                             "Collection Method",
                             "Aggregation Strategy",
                             "Retention Policy",
                             "Alerting Scope",
                             "Dashboard Views"});
-                table2312.AddRow(new string[] {
+                table2275.AddRow(new string[] {
                             "Performance metrics",
                             "Regional collectors",
                             "Global aggregation",
                             "30 days detailed",
                             "Regional + global",
                             "Regional + global"});
-                table2312.AddRow(new string[] {
+                table2275.AddRow(new string[] {
                             "Error tracking",
                             "Centralized logging",
                             "Regional filtering",
                             "90 days indexed",
                             "Severity-based",
                             "Error heatmaps"});
-                table2312.AddRow(new string[] {
+                table2275.AddRow(new string[] {
                             "User experience",
                             "RUM in each region",
                             "Geographic analysis",
                             "60 days",
                             "SLA-based",
                             "Geographic UX"});
-                table2312.AddRow(new string[] {
+                table2275.AddRow(new string[] {
                             "Security events",
                             "Regional SIEMs",
                             "Global correlation",
                             "1 year",
                             "Threat-based",
                             "Security posture"});
-                table2312.AddRow(new string[] {
+                table2275.AddRow(new string[] {
                             "Compliance audit",
                             "Regional audit logs",
                             "Compliance reports",
                             "7 years",
                             "Violation-based",
                             "Compliance status"});
-                table2312.AddRow(new string[] {
+                table2275.AddRow(new string[] {
                             "Cost tracking",
                             "Billing APIs",
                             "Cost allocation",
@@ -1582,7 +1582,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Budget alerts",
                             "Regional costs"});
 #line 241
-    testRunner.When("implementing global monitoring:", ((string)(null)), table2312, "When ");
+    testRunner.When("implementing global monitoring:", ((string)(null)), table2275, "When ");
 #line hidden
 #line 249
     testRunner.Then("monitoring should provide global visibility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1639,49 +1639,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 257
     testRunner.And("service mesh must work globally", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2313 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2276 = new TechTalk.SpecFlow.Table(new string[] {
                             "Mesh Component",
                             "Deployment Strategy",
                             "Cross-Region Setup",
                             "Latency Handling",
                             "Failure Handling",
                             "Security"});
-                table2313.AddRow(new string[] {
+                table2276.AddRow(new string[] {
                             "Control plane",
                             "Multi-region HA",
                             "Federated control",
                             "Async replication",
                             "Regional failover",
                             "mTLS everywhere"});
-                table2313.AddRow(new string[] {
+                table2276.AddRow(new string[] {
                             "Data plane",
                             "Per-region proxies",
                             "Cross-region gateways",
                             "Circuit breakers",
                             "Local fallbacks",
                             "Zero-trust"});
-                table2313.AddRow(new string[] {
+                table2276.AddRow(new string[] {
                             "Service discovery",
                             "Global registry",
                             "Regional caches",
                             "TTL optimization",
                             "Stale data handling",
                             "Authenticated"});
-                table2313.AddRow(new string[] {
+                table2276.AddRow(new string[] {
                             "Load balancing",
                             "Locality-aware",
                             "Regional preference",
                             "Latency-based",
                             "Health-based",
                             "Encrypted"});
-                table2313.AddRow(new string[] {
+                table2276.AddRow(new string[] {
                             "Observability",
                             "Distributed tracing",
                             "Trace aggregation",
                             "Sampling strategy",
                             "Trace correlation",
                             "Secure export"});
-                table2313.AddRow(new string[] {
+                table2276.AddRow(new string[] {
                             "Policy enforcement",
                             "Global policies",
                             "Regional overrides",
@@ -1689,7 +1689,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Default policies",
                             "Policy sync"});
 #line 258
-    testRunner.When("implementing multi-region mesh:", ((string)(null)), table2313, "When ");
+    testRunner.When("implementing multi-region mesh:", ((string)(null)), table2276, "When ");
 #line hidden
 #line 266
     testRunner.Then("service mesh should span regions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1746,49 +1746,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 274
     testRunner.And("optimization requires regional insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2314 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2277 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analysis Type",
                             "Data Sources",
                             "Key Insights",
                             "Optimization Actions",
                             "Success Metrics",
                             "Review Cycle"});
-                table2314.AddRow(new string[] {
+                table2277.AddRow(new string[] {
                             "Usage patterns",
                             "Regional analytics",
                             "Peak hours, features",
                             "Capacity planning",
                             "Utilization rate",
                             "Weekly"});
-                table2314.AddRow(new string[] {
+                table2277.AddRow(new string[] {
                             "Performance data",
                             "APM tools",
                             "Latency patterns",
                             "Infrastructure tuning",
                             "P95 latency",
                             "Daily"});
-                table2314.AddRow(new string[] {
+                table2277.AddRow(new string[] {
                             "User behavior",
                             "Product analytics",
                             "Feature adoption",
                             "Regional features",
                             "Engagement rate",
                             "Monthly"});
-                table2314.AddRow(new string[] {
+                table2277.AddRow(new string[] {
                             "Error analysis",
                             "Error tracking",
                             "Regional issues",
                             "Targeted fixes",
                             "Error rate",
                             "Daily"});
-                table2314.AddRow(new string[] {
+                table2277.AddRow(new string[] {
                             "Cost analysis",
                             "Billing data",
                             "Cost per user",
                             "Cost optimization",
                             "Unit economics",
                             "Monthly"});
-                table2314.AddRow(new string[] {
+                table2277.AddRow(new string[] {
                             "Growth trends",
                             "Business metrics",
                             "Regional growth",
@@ -1796,7 +1796,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Growth rate",
                             "Quarterly"});
 #line 275
-    testRunner.When("analyzing regional patterns:", ((string)(null)), table2314, "When ");
+    testRunner.When("analyzing regional patterns:", ((string)(null)), table2277, "When ");
 #line hidden
 #line 283
     testRunner.Then("analysis should reveal patterns", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1853,49 +1853,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 291
     testRunner.And("innovation enables new deployments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2315 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2278 = new TechTalk.SpecFlow.Table(new string[] {
                             "Market",
                             "Constraints",
                             "Innovation Approach",
                             "Deployment Model",
                             "Success Criteria",
                             "Investment Level"});
-                table2315.AddRow(new string[] {
+                table2278.AddRow(new string[] {
                             "Rural US",
                             "Limited bandwidth",
                             "Offline-first apps",
                             "Edge caching",
                             "Adoption rate",
                             "Low initial"});
-                table2315.AddRow(new string[] {
+                table2278.AddRow(new string[] {
                             "India",
                             "Cost sensitivity",
                             "Lite versions",
                             "Local partners",
                             "User growth",
                             "Moderate"});
-                table2315.AddRow(new string[] {
+                table2278.AddRow(new string[] {
                             "Brazil",
                             "Infrastructure gaps",
                             "Progressive web apps",
                             "CDN-heavy",
                             "Engagement",
                             "Low-moderate"});
-                table2315.AddRow(new string[] {
+                table2278.AddRow(new string[] {
                             "Indonesia",
                             "Mobile-only users",
                             "Mobile optimization",
                             "Carrier partnerships",
                             "Mobile usage",
                             "Low initial"});
-                table2315.AddRow(new string[] {
+                table2278.AddRow(new string[] {
                             "Nigeria",
                             "Power reliability",
                             "Low-power design",
                             "Resilient arch",
                             "Uptime",
                             "Moderate"});
-                table2315.AddRow(new string[] {
+                table2278.AddRow(new string[] {
                             "Eastern Europe",
                             "Legacy systems",
                             "API integration",
@@ -1903,7 +1903,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Integration success",
                             "Moderate"});
 #line 292
-    testRunner.When("expanding to new markets:", ((string)(null)), table2315, "When ");
+    testRunner.When("expanding to new markets:", ((string)(null)), table2278, "When ");
 #line hidden
 #line 300
     testRunner.Then("emerging markets should be served", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1960,49 +1960,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 308
     testRunner.And("migrations must not disrupt service", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2316 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2279 = new TechTalk.SpecFlow.Table(new string[] {
                             "Migration Type",
                             "Migration Reason",
                             "Strategy",
                             "Downtime Window",
                             "Rollback Plan",
                             "Success Validation"});
-                table2316.AddRow(new string[] {
+                table2279.AddRow(new string[] {
                             "User migration",
                             "Relocation",
                             "Account transfer",
                             "Zero downtime",
                             "Instant rollback",
                             "Data integrity"});
-                table2316.AddRow(new string[] {
+                table2279.AddRow(new string[] {
                             "Service migration",
                             "Cost optimization",
                             "Blue-green deployment",
                             "Read-only mode",
                             "DNS switch",
                             "Performance parity"});
-                table2316.AddRow(new string[] {
+                table2279.AddRow(new string[] {
                             "Data migration",
                             "Compliance change",
                             "Incremental sync",
                             "Maintenance window",
                             "Dual writes",
                             "Consistency check"});
-                table2316.AddRow(new string[] {
+                table2279.AddRow(new string[] {
                             "Traffic migration",
                             "Performance improvement",
                             "Gradual shift",
                             "Zero downtime",
                             "Percentage-based",
                             "Latency improvement"});
-                table2316.AddRow(new string[] {
+                table2279.AddRow(new string[] {
                             "Disaster recovery",
                             "Region failure",
                             "Forced migration",
                             "Emergency mode",
                             "N/A",
                             "Service restoration"});
-                table2316.AddRow(new string[] {
+                table2279.AddRow(new string[] {
                             "Consolidation",
                             "Efficiency",
                             "Phased migration",
@@ -2010,7 +2010,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Staged rollback",
                             "Cost reduction"});
 #line 309
-    testRunner.When("migrating between regions:", ((string)(null)), table2316, "When ");
+    testRunner.When("migrating between regions:", ((string)(null)), table2279, "When ");
 #line hidden
 #line 317
     testRunner.Then("migrations should be smooth", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -2067,49 +2067,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 325
     testRunner.And("future locations may include space", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2317 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2280 = new TechTalk.SpecFlow.Table(new string[] {
                             "Expansion Type",
                             "Timeframe",
                             "Technology Requirements",
                             "Regulatory Prep",
                             "Infrastructure Needs",
                             "Innovation Areas"});
-                table2317.AddRow(new string[] {
+                table2280.AddRow(new string[] {
                             "Undersea cables",
                             "2-3 years",
                             "Marine equipment",
                             "Maritime law",
                             "Cable landing sites",
                             "Subsea tech"});
-                table2317.AddRow(new string[] {
+                table2280.AddRow(new string[] {
                             "Arctic regions",
                             "3-5 years",
                             "Cold-resistant tech",
                             "International treaties",
                             "Satellite backup",
                             "Extreme conditions"});
-                table2317.AddRow(new string[] {
+                table2280.AddRow(new string[] {
                             "International space",
                             "5-10 years",
                             "Satellite integration",
                             "Space law",
                             "Ground stations",
                             "Low-latency satellite"});
-                table2317.AddRow(new string[] {
+                table2280.AddRow(new string[] {
                             "Mobile platforms",
                             "1-2 years",
                             "Maritime connectivity",
                             "Jurisdiction complexity",
                             "Portable infrastructure",
                             "Dynamic routing"});
-                table2317.AddRow(new string[] {
+                table2280.AddRow(new string[] {
                             "Airborne networks",
                             "2-4 years",
                             "Aviation integration",
                             "Aviation regulations",
                             "Air-ground links",
                             "Aerial platforms"});
-                table2317.AddRow(new string[] {
+                table2280.AddRow(new string[] {
                             "Quantum networks",
                             "5-15 years",
                             "Quantum-safe crypto",
@@ -2117,7 +2117,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Quantum infrastructure",
                             "Quantum protocols"});
 #line 326
-    testRunner.When("planning future expansion:", ((string)(null)), table2317, "When ");
+    testRunner.When("planning future expansion:", ((string)(null)), table2280, "When ");
 #line hidden
 #line 334
     testRunner.Then("expansion plans should be flexible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -2174,49 +2174,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 342
     testRunner.And("sustainability is a priority", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2318 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2281 = new TechTalk.SpecFlow.Table(new string[] {
                             "Region",
                             "Energy Source",
                             "Carbon Intensity",
                             "Workload Priority",
                             "Scheduling Strategy",
                             "Offset Options"});
-                table2318.AddRow(new string[] {
+                table2281.AddRow(new string[] {
                             "US-West (Oregon)",
                             "80% renewable",
                             "Low",
                             "Batch processing",
                             "Prefer for background",
                             "Minimal needed"});
-                table2318.AddRow(new string[] {
+                table2281.AddRow(new string[] {
                             "US-East (Virginia)",
                             "30% renewable",
                             "Medium",
                             "Real-time only",
                             "Minimize usage",
                             "Purchase offsets"});
-                table2318.AddRow(new string[] {
+                table2281.AddRow(new string[] {
                             "EU-Nordic",
                             "100% renewable",
                             "Very low",
                             "All workloads",
                             "Primary preference",
                             "None needed"});
-                table2318.AddRow(new string[] {
+                table2281.AddRow(new string[] {
                             "EU-West (Ireland)",
                             "60% renewable",
                             "Low-medium",
                             "Balanced usage",
                             "Time-shift possible",
                             "Some offsets"});
-                table2318.AddRow(new string[] {
+                table2281.AddRow(new string[] {
                             "APAC (Singapore)",
                             "20% renewable",
                             "High",
                             "User-facing only",
                             "Essential only",
                             "Maximum offsets"});
-                table2318.AddRow(new string[] {
+                table2281.AddRow(new string[] {
                             "Edge locations",
                             "Grid mix",
                             "Variable",
@@ -2224,7 +2224,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Minimize compute",
                             "Per-location"});
 #line 343
-    testRunner.When("implementing carbon-aware distribution:", ((string)(null)), table2318, "When ");
+    testRunner.When("implementing carbon-aware distribution:", ((string)(null)), table2281, "When ");
 #line hidden
 #line 351
     testRunner.Then("workloads should follow carbon intensity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -2278,49 +2278,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 358
     testRunner.Given("long-term vision requires global thinking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2319 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2282 = new TechTalk.SpecFlow.Table(new string[] {
                             "Architecture Element",
                             "Current State",
                             "5-Year Vision",
                             "Key Milestones",
                             "Investment Required",
                             "Success Indicators"});
-                table2319.AddRow(new string[] {
+                table2282.AddRow(new string[] {
                             "Region count",
                             "6 regions",
                             "20+ regions",
                             "+3 regions/year",
                             "$50M total",
                             "Global coverage"});
-                table2319.AddRow(new string[] {
+                table2282.AddRow(new string[] {
                             "Edge locations",
                             "20 PoPs",
                             "200+ PoPs",
                             "Major cities covered",
                             "$20M total",
                             "<50ms anywhere"});
-                table2319.AddRow(new string[] {
+                table2282.AddRow(new string[] {
                             "Submarine cables",
                             "Leased capacity",
                             "Owned capacity",
                             "Consortium participation",
                             "$100M investment",
                             "Network control"});
-                table2319.AddRow(new string[] {
+                table2282.AddRow(new string[] {
                             "Satellite backup",
                             "None",
                             "LEO constellation",
                             "Partnership first",
                             "$10M initial",
                             "Remote coverage"});
-                table2319.AddRow(new string[] {
+                table2282.AddRow(new string[] {
                             "Data sovereignty",
                             "Manual compliance",
                             "Automated compliance",
                             "Policy engine",
                             "$5M development",
                             "Zero violations"});
-                table2319.AddRow(new string[] {
+                table2282.AddRow(new string[] {
                             "Global team",
                             "3 regions",
                             "Follow-the-sun",
@@ -2328,7 +2328,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "$30M/year",
                             "24/7 coverage"});
 #line 359
-    testRunner.When("evolving toward global architecture:", ((string)(null)), table2319, "When ");
+    testRunner.When("evolving toward global architecture:", ((string)(null)), table2282, "When ");
 #line hidden
 #line 367
     testRunner.Then("vision should guide decisions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

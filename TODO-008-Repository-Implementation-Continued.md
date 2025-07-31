@@ -1,0 +1,281 @@
+# TODO-008: Repository Implementation (Continued)
+
+These tasks continue implementing repositories for remaining entities.
+
+## ISessionRepository Interface
+
+- [ ] Create ISessionRepository.cs in Interfaces folder
+- [ ] Add using statements for Models.Domain
+- [ ] Add namespace UPTRMS.Api.Interfaces
+- [ ] Create interface ISessionRepository
+- [ ] Inherit from IRepository<Session>
+- [ ] Add method Task<Session> GetByIdWithDetailsAsync(Guid id)
+- [ ] Add method Task<IEnumerable<Session>> GetByTherapistAsync(Guid therapistId, DateTime? startDate, DateTime? endDate)
+- [ ] Add method Task<IEnumerable<Session>> GetByStudentAsync(Guid studentId, DateTime? startDate, DateTime? endDate)
+- [ ] Add method Task<IEnumerable<Session>> GetUpcomingAsync(Guid therapistId, int days)
+- [ ] Add method Task<IEnumerable<Session>> GetByDateRangeAsync(DateTime startDate, DateTime endDate)
+- [ ] Add method Task<IEnumerable<Session>> GetByStatusAsync(string status)
+- [ ] Add method Task<bool> HasConflictAsync(Guid therapistId, DateTime scheduledAt, int durationMinutes, Guid? excludeSessionId)
+- [ ] Add method Task<IEnumerable<Session>> GetBillableSessionsAsync(DateTime startDate, DateTime endDate)
+- [ ] Add method Task<SessionStatistics> GetStatisticsAsync(Guid therapistId, DateTime startDate, DateTime endDate)
+- [ ] Add method Task<IEnumerable<Session>> GetCancelledSessionsAsync(DateTime startDate, DateTime endDate)
+- [ ] Add method Task<IEnumerable<Session>> GetNoShowSessionsAsync(DateTime startDate, DateTime endDate)
+- [ ] Add method Task<IEnumerable<Session>> GetSessionsNeedingSignatureAsync()
+- [ ] Add method Task<bool> UpdateSessionStatusAsync(Guid sessionId, string newStatus)
+- [ ] Add method Task<bool> RecordAttendanceAsync(Guid sessionId, bool attended, string? reason)
+
+## SessionRepository Implementation
+
+- [ ] Create SessionRepository.cs in Repositories folder
+- [ ] Add using statements for all required namespaces
+- [ ] Add namespace UPTRMS.Api.Repositories
+- [ ] Create class SessionRepository
+- [ ] Inherit from BaseRepository<Session>
+- [ ] Implement ISessionRepository
+- [ ] Add constructor accepting ApplicationDbContext
+- [ ] Call base constructor with context
+- [ ] Create SessionStatistics class inside repository
+- [ ] Add TotalSessions property to SessionStatistics
+- [ ] Add CompletedSessions property to SessionStatistics
+- [ ] Add CancelledSessions property to SessionStatistics
+- [ ] Add NoShowSessions property to SessionStatistics
+- [ ] Add TotalMinutes property to SessionStatistics
+- [ ] Add UniqueStudents property to SessionStatistics
+- [ ] Implement GetByIdWithDetailsAsync method
+- [ ] Use Include for Therapist navigation property
+- [ ] Use Include for Student navigation property
+- [ ] Use Include for Resources.ThenInclude Resource
+- [ ] Use Include for Goals.ThenInclude Goal
+- [ ] Add null check and return null if not found
+- [ ] Implement GetByTherapistAsync method
+- [ ] Filter by TherapistId equals parameter
+- [ ] Add date range filtering if dates provided
+- [ ] Order by ScheduledAt descending
+- [ ] Return as list
+- [ ] Implement GetByStudentAsync method
+- [ ] Filter by StudentId equals parameter
+- [ ] Add date range filtering if dates provided
+- [ ] Order by ScheduledAt descending
+- [ ] Return as list
+- [ ] Implement GetUpcomingAsync method
+- [ ] Filter by TherapistId equals parameter
+- [ ] Filter by ScheduledAt greater than DateTime.UtcNow
+- [ ] Filter by ScheduledAt less than DateTime.UtcNow.AddDays(days)
+- [ ] Filter by SessionStatus equals "Scheduled"
+- [ ] Order by ScheduledAt ascending
+- [ ] Return as list
+- [ ] Implement GetByDateRangeAsync method
+- [ ] Filter by ScheduledAt between dates
+- [ ] Include Therapist and Student
+- [ ] Order by ScheduledAt ascending
+- [ ] Return as list
+- [ ] Implement GetByStatusAsync method
+- [ ] Filter by SessionStatus equals parameter
+- [ ] Include Therapist and Student
+- [ ] Order by ScheduledAt descending
+- [ ] Return as list
+- [ ] Implement HasConflictAsync method
+- [ ] Filter by TherapistId equals parameter
+- [ ] Filter by SessionStatus not "Cancelled"
+- [ ] Calculate session end time
+- [ ] Check for time overlap
+- [ ] Exclude specified session if provided
+- [ ] Return any conflicts exist
+- [ ] Implement GetBillableSessionsAsync method
+- [ ] Filter by date range
+- [ ] Filter by IsBillable equals true
+- [ ] Filter by SessionStatus equals "Completed"
+- [ ] Include Student and Therapist
+- [ ] Order by ScheduledAt
+- [ ] Return as list
+- [ ] Implement GetStatisticsAsync method
+- [ ] Create new SessionStatistics instance
+- [ ] Query sessions by therapist and date range
+- [ ] Count total sessions
+- [ ] Count by each status type
+- [ ] Sum total duration minutes
+- [ ] Count distinct students
+- [ ] Return statistics object
+- [ ] Implement GetCancelledSessionsAsync method
+- [ ] Filter by date range
+- [ ] Filter by SessionStatus equals "Cancelled"
+- [ ] Include cancellation details
+- [ ] Order by CanceledAt descending
+- [ ] Return as list
+- [ ] Implement GetNoShowSessionsAsync method
+- [ ] Filter by date range
+- [ ] Filter by SessionStatus equals "NoShow"
+- [ ] Include Student and reason
+- [ ] Order by ScheduledAt descending
+- [ ] Return as list
+- [ ] Implement GetSessionsNeedingSignatureAsync method
+- [ ] Filter by SessionStatus equals "Completed"
+- [ ] Filter by ParentSignatureUrl is null
+- [ ] Filter by within last 30 days
+- [ ] Include Student with parent contact
+- [ ] Order by EndedAt descending
+- [ ] Return as list
+- [ ] Implement UpdateSessionStatusAsync method
+- [ ] Find session by id
+- [ ] Return false if not found
+- [ ] Update SessionStatus property
+- [ ] Update UpdatedAt to current time
+- [ ] Call SaveChangesAsync
+- [ ] Return true
+- [ ] Implement RecordAttendanceAsync method
+- [ ] Find session by id
+- [ ] Return false if not found
+- [ ] Set status based on attended parameter
+- [ ] Set reason if not attended
+- [ ] Update EndedAt to current time
+- [ ] Call SaveChangesAsync
+- [ ] Return true
+
+## IMarketplaceRepository Interface
+
+- [ ] Create IMarketplaceRepository.cs in Interfaces folder
+- [ ] Add using statements for Models.Domain
+- [ ] Add namespace UPTRMS.Api.Interfaces
+- [ ] Create interface IMarketplaceRepository
+- [ ] Add method Task<MarketplaceProduct> GetProductByIdAsync(Guid id)
+- [ ] Add method Task<IEnumerable<MarketplaceProduct>> GetProductsBySellerAsync(Guid sellerId)
+- [ ] Add method Task<IEnumerable<MarketplaceProduct>> SearchProductsAsync(string searchTerm, decimal? maxPrice)
+- [ ] Add method Task<IEnumerable<MarketplaceProduct>> GetBestSellersAsync(int count)
+- [ ] Add method Task<IEnumerable<MarketplaceProduct>> GetNewArrivalsAsync(int count)
+- [ ] Add method Task<IEnumerable<MarketplaceProduct>> GetOnSaleAsync()
+- [ ] Add method Task<IEnumerable<MarketplaceProduct>> GetByTagAsync(string tag)
+- [ ] Add method Task<IEnumerable<MarketplaceProduct>> GetFeaturedAsync()
+- [ ] Add method Task<MarketplaceTransaction> CreateTransactionAsync(MarketplaceTransaction transaction)
+- [ ] Add method Task<IEnumerable<MarketplaceTransaction>> GetTransactionsByBuyerAsync(Guid buyerId)
+- [ ] Add method Task<IEnumerable<MarketplaceTransaction>> GetTransactionsBySellerAsync(Guid sellerId, DateTime? startDate)
+- [ ] Add method Task<decimal> GetSellerRevenueAsync(Guid sellerId, DateTime startDate, DateTime endDate)
+- [ ] Add method Task<bool> IncrementProductSalesAsync(Guid productId, decimal amount)
+- [ ] Add method Task<SellerProfile> GetSellerProfileAsync(Guid userId)
+- [ ] Add method Task<SellerProfile> CreateSellerProfileAsync(SellerProfile profile)
+- [ ] Add method Task<bool> UpdateSellerRatingAsync(Guid sellerId)
+- [ ] Add method Task<IEnumerable<SellerProfile>> GetTopSellersAsync(int count)
+- [ ] Add method Task<bool> RecordProductViewAsync(Guid productId, Guid? userId)
+
+## MarketplaceRepository Implementation
+
+- [ ] Create MarketplaceRepository.cs in Repositories folder
+- [ ] Add using statements for all required namespaces
+- [ ] Add namespace UPTRMS.Api.Repositories
+- [ ] Create class MarketplaceRepository
+- [ ] Inherit from BaseRepository<MarketplaceProduct>
+- [ ] Implement IMarketplaceRepository
+- [ ] Add private readonly ApplicationDbContext _context field
+- [ ] Add constructor accepting ApplicationDbContext
+- [ ] Store context in field
+- [ ] Call base constructor with context
+- [ ] Implement GetProductByIdAsync method
+- [ ] Query MarketplaceProducts by id
+- [ ] Include Seller.User for seller info
+- [ ] Include Resource for resource details
+- [ ] Include Reviews for ratings
+- [ ] Return FirstOrDefaultAsync result
+- [ ] Implement GetProductsBySellerAsync method
+- [ ] Filter by SellerId equals parameter
+- [ ] Filter by IsActive equals true
+- [ ] Order by UpdatedAt descending
+- [ ] Return as list
+- [ ] Implement SearchProductsAsync method
+- [ ] Use EF.Functions.Like for pattern matching
+- [ ] Search in Title with wildcards
+- [ ] Search in Description with wildcards
+- [ ] Search in Tags JSON with wildcards
+- [ ] Add price filter if provided
+- [ ] Filter by IsActive equals true
+- [ ] Order by relevance and price
+- [ ] Return top 100 results
+- [ ] Implement GetBestSellersAsync method
+- [ ] Filter by IsActive equals true
+- [ ] Order by TotalSales descending
+- [ ] Then order by AverageRating descending
+- [ ] Take specified count
+- [ ] Include seller info
+- [ ] Return as list
+- [ ] Implement GetNewArrivalsAsync method
+- [ ] Filter by IsActive equals true
+- [ ] Filter by PublishedAt within last 30 days
+- [ ] Order by PublishedAt descending
+- [ ] Take specified count
+- [ ] Return as list
+- [ ] Implement GetOnSaleAsync method
+- [ ] Filter by IsActive equals true
+- [ ] Filter by IsOnSale equals true
+- [ ] Filter by SaleEndsAt greater than now
+- [ ] Order by discount percentage descending
+- [ ] Return as list
+- [ ] Implement GetByTagAsync method
+- [ ] Filter by Tags contains parameter
+- [ ] Use EF.Functions.Like on Tags JSON
+- [ ] Filter by IsActive equals true
+- [ ] Order by AverageRating descending
+- [ ] Return as list
+- [ ] Implement GetFeaturedAsync method
+- [ ] Filter by IsActive equals true
+- [ ] Filter by IsFeatured equals true
+- [ ] Order by UpdatedAt descending
+- [ ] Take top 20
+- [ ] Return as list
+- [ ] Implement CreateTransactionAsync method
+- [ ] Add transaction to context
+- [ ] Call SaveChangesAsync
+- [ ] Return created transaction
+- [ ] Implement GetTransactionsByBuyerAsync method
+- [ ] Query MarketplaceTransactions
+- [ ] Filter by BuyerId equals parameter
+- [ ] Include Product and Seller info
+- [ ] Order by CreatedAt descending
+- [ ] Return as list
+- [ ] Implement GetTransactionsBySellerAsync method
+- [ ] Query MarketplaceTransactions
+- [ ] Filter by SellerId equals parameter
+- [ ] Add date filter if provided
+- [ ] Include Product and Buyer info
+- [ ] Order by CreatedAt descending
+- [ ] Return as list
+- [ ] Implement GetSellerRevenueAsync method
+- [ ] Query MarketplaceTransactions
+- [ ] Filter by SellerId equals parameter
+- [ ] Filter by date range
+- [ ] Filter by PaymentStatus equals "Completed"
+- [ ] Sum SellerEarnings
+- [ ] Return total or 0
+- [ ] Implement IncrementProductSalesAsync method
+- [ ] Find product by id
+- [ ] Return false if not found
+- [ ] Increment TotalSales by 1
+- [ ] Add amount to TotalRevenue
+- [ ] Update UpdatedAt
+- [ ] Call SaveChangesAsync
+- [ ] Return true
+- [ ] Implement GetSellerProfileAsync method
+- [ ] Query SellerProfiles
+- [ ] Filter by UserId equals parameter
+- [ ] Include User info
+- [ ] Return FirstOrDefaultAsync result
+- [ ] Implement CreateSellerProfileAsync method
+- [ ] Add profile to context
+- [ ] Call SaveChangesAsync
+- [ ] Return created profile
+- [ ] Implement UpdateSellerRatingAsync method
+- [ ] Find seller profile by id
+- [ ] Return false if not found
+- [ ] Query all product ratings for seller
+- [ ] Calculate average rating
+- [ ] Update seller Rating property
+- [ ] Call SaveChangesAsync
+- [ ] Return true
+- [ ] Implement GetTopSellersAsync method
+- [ ] Query SellerProfiles
+- [ ] Filter by IsActive equals true
+- [ ] Filter by IsVerified equals true
+- [ ] Order by TotalRevenue descending
+- [ ] Take specified count
+- [ ] Include User info
+- [ ] Return as list
+- [ ] Implement RecordProductViewAsync method
+- [ ] Add TODO comment for view tracking
+- [ ] Return Task.FromResult(true)

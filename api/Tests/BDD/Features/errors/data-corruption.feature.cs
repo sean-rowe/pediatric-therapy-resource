@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 17
     testRunner.And("early detection prevents widespread data integrity issues", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1083 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1046 = new TechTalk.SpecFlow.Table(new string[] {
                             "Corruption Type",
                             "Detection Method",
                             "Detection Speed",
                             "Severity Level",
                             "Alert Mechanism",
                             "Recovery Priority"});
-                table1083.AddRow(new string[] {
+                table1046.AddRow(new string[] {
                             "File system corruption",
                             "Checksum validation",
                             "Real-time",
                             "Critical",
                             "Immediate alert",
                             "Emergency recovery"});
-                table1083.AddRow(new string[] {
+                table1046.AddRow(new string[] {
                             "Database corruption",
                             "Integrity constraints",
                             "Transaction-based",
                             "High",
                             "System alert",
                             "High priority"});
-                table1083.AddRow(new string[] {
+                table1046.AddRow(new string[] {
                             "Memory corruption",
                             "Memory validation",
                             "Continuous",
                             "Medium",
                             "Performance alert",
                             "Medium priority"});
-                table1083.AddRow(new string[] {
+                table1046.AddRow(new string[] {
                             "Network corruption",
                             "Transmission validation",
                             "Packet-level",
                             "Medium",
                             "Network alert",
                             "Network recovery"});
-                table1083.AddRow(new string[] {
+                table1046.AddRow(new string[] {
                             "Application corruption",
                             "Logic validation",
                             "Process-based",
                             "High",
                             "Application alert",
                             "Application recovery"});
-                table1083.AddRow(new string[] {
+                table1046.AddRow(new string[] {
                             "User data corruption",
                             "Content validation",
                             "Content-based",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "User alert",
                             "User-priority recovery"});
 #line 18
-    testRunner.When("detecting data corruption:", ((string)(null)), table1083, "When ");
+    testRunner.When("detecting data corruption:", ((string)(null)), table1046, "When ");
 #line hidden
 #line 26
     testRunner.Then("detection should be accurate and timely", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 34
     testRunner.And("integrity checking ensures data consistency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1084 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1047 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Category",
                             "Checksum Algorithm",
                             "Validation Frequency",
                             "Storage Method",
                             "Performance Impact",
                             "Corruption Sensitivity"});
-                table1084.AddRow(new string[] {
+                table1047.AddRow(new string[] {
                             "Critical clinical data",
                             "SHA-256",
                             "Every access",
                             "Separate metadata",
                             "<5% overhead",
                             "100% detection"});
-                table1084.AddRow(new string[] {
+                table1047.AddRow(new string[] {
                             "User content",
                             "MD5",
                             "Daily validation",
                             "Embedded metadata",
                             "<2% overhead",
                             "99.9% detection"});
-                table1084.AddRow(new string[] {
+                table1047.AddRow(new string[] {
                             "System files",
                             "CRC32",
                             "Hourly validation",
                             "File headers",
                             "<1% overhead",
                             "99% detection"});
-                table1084.AddRow(new string[] {
+                table1047.AddRow(new string[] {
                             "Backup data",
                             "SHA-512",
                             "Backup creation",
                             "Backup manifest",
                             "Backup-time only",
                             "100% detection"});
-                table1084.AddRow(new string[] {
+                table1047.AddRow(new string[] {
                             "Cached data",
                             "CRC16",
                             "Cache access",
                             "Cache metadata",
                             "<0.5% overhead",
                             "95% detection"});
-                table1084.AddRow(new string[] {
+                table1047.AddRow(new string[] {
                             "Temporary data",
                             "Simple hash",
                             "Variable",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Minimal overhead",
                             "90% detection"});
 #line 35
-    testRunner.When("implementing checksum validation:", ((string)(null)), table1084, "When ");
+    testRunner.When("implementing checksum validation:", ((string)(null)), table1047, "When ");
 #line hidden
 #line 43
     testRunner.Then("checksums should be appropriate for data criticality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 51
     testRunner.And("pattern monitoring reveals corruption trends", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1085 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1048 = new TechTalk.SpecFlow.Table(new string[] {
                             "Monitoring Aspect",
                             "Baseline Establishment",
                             "Anomaly Threshold",
                             "Detection Algorithm",
                             "Response Time",
                             "False Positive Rate"});
-                table1085.AddRow(new string[] {
+                table1048.AddRow(new string[] {
                             "Data access patterns",
                             "30-day historical",
                             "3 standard deviations",
                             "Statistical analysis",
                             "<5 minutes",
                             "<5%"});
-                table1085.AddRow(new string[] {
+                table1048.AddRow(new string[] {
                             "File size variations",
                             "Expected size ranges",
                             "Size delta limits",
                             "Size comparison",
                             "<2 minutes",
                             "<3%"});
-                table1085.AddRow(new string[] {
+                table1048.AddRow(new string[] {
                             "Content structure",
                             "Schema conformance",
                             "Structure violations",
                             "Schema validation",
                             "<1 minute",
                             "<2%"});
-                table1085.AddRow(new string[] {
+                table1048.AddRow(new string[] {
                             "User behavior",
                             "Behavioral baselines",
                             "Behavior anomalies",
                             "Behavior analysis",
                             "<10 minutes",
                             "<8%"});
-                table1085.AddRow(new string[] {
+                table1048.AddRow(new string[] {
                             "System performance",
                             "Performance baselines",
                             "Performance degradation",
                             "Performance analysis",
                             "<3 minutes",
                             "<5%"});
-                table1085.AddRow(new string[] {
+                table1048.AddRow(new string[] {
                             "Error rate patterns",
                             "Error baselines",
                             "Error spikes",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "<1 minute",
                             "<2%"});
 #line 52
-    testRunner.When("implementing anomaly detection:", ((string)(null)), table1085, "When ");
+    testRunner.When("implementing anomaly detection:", ((string)(null)), table1048, "When ");
 #line hidden
 #line 60
     testRunner.Then("baselines should be accurately established", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 68
     testRunner.And("file system integrity is fundamental to data safety", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1086 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1049 = new TechTalk.SpecFlow.Table(new string[] {
                             "Storage Type",
                             "Verification Method",
                             "Verification Schedule",
                             "Error Detection",
                             "Repair Capability",
                             "Monitoring Tools"});
-                table1086.AddRow(new string[] {
+                table1049.AddRow(new string[] {
                             "Primary database",
                             "Database integrity check",
                             "Daily",
                             "Constraint violations",
                             "Automatic repair",
                             "DB monitoring"});
-                table1086.AddRow(new string[] {
+                table1049.AddRow(new string[] {
                             "File storage",
                             "File system check",
                             "Weekly",
                             "File corruption",
                             "Manual repair",
                             "Storage monitoring"});
-                table1086.AddRow(new string[] {
+                table1049.AddRow(new string[] {
                             "Backup storage",
                             "Backup verification",
                             "Post-backup",
                             "Backup corruption",
                             "Restore verification",
                             "Backup monitoring"});
-                table1086.AddRow(new string[] {
+                table1049.AddRow(new string[] {
                             "Cache storage",
                             "Cache validation",
                             "Hourly",
                             "Cache corruption",
                             "Cache refresh",
                             "Cache monitoring"});
-                table1086.AddRow(new string[] {
+                table1049.AddRow(new string[] {
                             "Archive storage",
                             "Archive integrity",
                             "Monthly",
                             "Archive corruption",
                             "Archive restoration",
                             "Archive monitoring"});
-                table1086.AddRow(new string[] {
+                table1049.AddRow(new string[] {
                             "Distributed storage",
                             "Distributed check",
                             "Continuous",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Replication repair",
                             "Cluster monitoring"});
 #line 69
-    testRunner.When("verifying storage integrity:", ((string)(null)), table1086, "When ");
+    testRunner.When("verifying storage integrity:", ((string)(null)), table1049, "When ");
 #line hidden
 #line 77
     testRunner.Then("verification should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 86
     testRunner.And("forensic analysis provides detailed corruption insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1087 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1050 = new TechTalk.SpecFlow.Table(new string[] {
                             "Investigation Type",
                             "Analysis Scope",
                             "Investigation Tools",
                             "Timeline Reconstruction",
                             "Evidence Preservation",
                             "Report Generation"});
-                table1087.AddRow(new string[] {
+                table1050.AddRow(new string[] {
                             "Hardware corruption",
                             "Hardware systems",
                             "Hardware diagnostics",
                             "Hardware timeline",
                             "Hardware logs",
                             "Hardware report"});
-                table1087.AddRow(new string[] {
+                table1050.AddRow(new string[] {
                             "Software corruption",
                             "Software components",
                             "Software analysis",
                             "Software timeline",
                             "Software logs",
                             "Software report"});
-                table1087.AddRow(new string[] {
+                table1050.AddRow(new string[] {
                             "Network corruption",
                             "Network transmission",
                             "Network analysis",
                             "Network timeline",
                             "Network logs",
                             "Network report"});
-                table1087.AddRow(new string[] {
+                table1050.AddRow(new string[] {
                             "User-induced corruption",
                             "User actions",
                             "User behavior analysis",
                             "User timeline",
                             "User logs",
                             "User report"});
-                table1087.AddRow(new string[] {
+                table1050.AddRow(new string[] {
                             "Malicious corruption",
                             "Security incidents",
                             "Security forensics",
                             "Attack timeline",
                             "Security logs",
                             "Security report"});
-                table1087.AddRow(new string[] {
+                table1050.AddRow(new string[] {
                             "Environmental corruption",
                             "Environmental factors",
                             "Environmental analysis",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Environmental logs",
                             "Environmental report"});
 #line 87
-    testRunner.When("conducting corruption forensics:", ((string)(null)), table1087, "When ");
+    testRunner.When("conducting corruption forensics:", ((string)(null)), table1050, "When ");
 #line hidden
 #line 95
     testRunner.Then("analysis should be thorough", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 103
     testRunner.And("impact assessment guides recovery priorities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1088 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1051 = new TechTalk.SpecFlow.Table(new string[] {
                             "Impact Dimension",
                             "Assessment Method",
                             "Scope Analysis",
                             "Risk Evaluation",
                             "Propagation Tracking",
                             "Containment Strategy"});
-                table1088.AddRow(new string[] {
+                table1051.AddRow(new string[] {
                             "Data relationships",
                             "Relationship mapping",
                             "Related data analysis",
                             "Relationship risk",
                             "Relationship tracking",
                             "Relationship isolation"});
-                table1088.AddRow(new string[] {
+                table1051.AddRow(new string[] {
                             "User impact",
                             "User analysis",
                             "Affected user count",
                             "User risk",
                             "User tracking",
                             "User notification"});
-                table1088.AddRow(new string[] {
+                table1051.AddRow(new string[] {
                             "System functionality",
                             "Functionality testing",
                             "Function analysis",
                             "Functional risk",
                             "Function tracking",
                             "Function isolation"});
-                table1088.AddRow(new string[] {
+                table1051.AddRow(new string[] {
                             "Business operations",
                             "Business impact analysis",
                             "Operational analysis",
                             "Business risk",
                             "Operation tracking",
                             "Business continuity"});
-                table1088.AddRow(new string[] {
+                table1051.AddRow(new string[] {
                             "Compliance implications",
                             "Compliance assessment",
                             "Regulatory analysis",
                             "Compliance risk",
                             "Compliance tracking",
                             "Compliance management"});
-                table1088.AddRow(new string[] {
+                table1051.AddRow(new string[] {
                             "Recovery complexity",
                             "Recovery analysis",
                             "Recovery scope",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Recovery tracking",
                             "Recovery planning"});
 #line 104
-    testRunner.When("assessing corruption impact:", ((string)(null)), table1088, "When ");
+    testRunner.When("assessing corruption impact:", ((string)(null)), table1051, "When ");
 #line hidden
 #line 112
     testRunner.Then("assessment should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 120
     testRunner.And("severity assessment guides resource allocation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1089 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1052 = new TechTalk.SpecFlow.Table(new string[] {
                             "Classification Category",
                             "Corruption Characteristics",
                             "Severity Indicators",
                             "Recovery Complexity",
                             "Business Impact",
                             "Response Urgency"});
-                table1089.AddRow(new string[] {
+                table1052.AddRow(new string[] {
                             "Critical system corruption",
                             "System functionality affected",
                             "System unavailable",
                             "Complex recovery",
                             "High business impact",
                             "Emergency response"});
-                table1089.AddRow(new string[] {
+                table1052.AddRow(new string[] {
                             "Clinical data corruption",
                             "Patient data compromised",
                             "Clinical safety risk",
                             "Clinical recovery",
                             "Patient safety impact",
                             "Immediate response"});
-                table1089.AddRow(new string[] {
+                table1052.AddRow(new string[] {
                             "User data corruption",
                             "User content affected",
                             "User productivity loss",
                             "User-focused recovery",
                             "User impact",
                             "Urgent response"});
-                table1089.AddRow(new string[] {
+                table1052.AddRow(new string[] {
                             "Performance corruption",
                             "System performance degraded",
                             "Performance metrics",
                             "Performance recovery",
                             "Productivity impact",
                             "Priority response"});
-                table1089.AddRow(new string[] {
+                table1052.AddRow(new string[] {
                             "Cosmetic corruption",
                             "Display issues only",
                             "Visual problems",
                             "Simple recovery",
                             "Minimal impact",
                             "Standard response"});
-                table1089.AddRow(new string[] {
+                table1052.AddRow(new string[] {
                             "Historical corruption",
                             "Old data affected",
                             "Historical inconsistency",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Limited impact",
                             "Scheduled response"});
 #line 121
-    testRunner.When("classifying corruption:", ((string)(null)), table1089, "When ");
+    testRunner.When("classifying corruption:", ((string)(null)), table1052, "When ");
 #line hidden
 #line 129
     testRunner.Then("classification should be accurate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 138
     testRunner.And("restoration must be rapid and complete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1090 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1053 = new TechTalk.SpecFlow.Table(new string[] {
                             "Backup Type",
                             "Recovery Speed",
                             "Data Currency",
                             "Recovery Scope",
                             "Recovery Verification",
                             "Recovery Testing"});
-                table1090.AddRow(new string[] {
+                table1053.AddRow(new string[] {
                             "Real-time replicas",
                             "<5 minutes",
                             "Current",
                             "Full system",
                             "Automatic verification",
                             "Continuous testing"});
-                table1090.AddRow(new string[] {
+                table1053.AddRow(new string[] {
                             "Hourly snapshots",
                             "<30 minutes",
                             "1-hour old",
                             "System state",
                             "Snapshot verification",
                             "Daily testing"});
-                table1090.AddRow(new string[] {
+                table1053.AddRow(new string[] {
                             "Daily backups",
                             "<2 hours",
                             "24-hour old",
                             "Full backup",
                             "Backup verification",
                             "Weekly testing"});
-                table1090.AddRow(new string[] {
+                table1053.AddRow(new string[] {
                             "Weekly archives",
                             "<24 hours",
                             "Week old",
                             "Archive state",
                             "Archive verification",
                             "Monthly testing"});
-                table1090.AddRow(new string[] {
+                table1053.AddRow(new string[] {
                             "Monthly archives",
                             "<72 hours",
                             "Month old",
                             "Historical state",
                             "Historical verification",
                             "Quarterly testing"});
-                table1090.AddRow(new string[] {
+                table1053.AddRow(new string[] {
                             "Emergency backups",
                             "<10 minutes",
                             "Recent",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Emergency verification",
                             "Emergency testing"});
 #line 139
-    testRunner.When("implementing backup recovery:", ((string)(null)), table1090, "When ");
+    testRunner.When("implementing backup recovery:", ((string)(null)), table1053, "When ");
 #line hidden
 #line 147
     testRunner.Then("recovery should be rapid for critical data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 155
     testRunner.And("precise recovery minimizes data loss", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1091 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1054 = new TechTalk.SpecFlow.Table(new string[] {
                             "Recovery Granularity",
                             "Time Precision",
                             "Recovery Method",
                             "Data Consistency",
                             "Recovery Validation",
                             "Recovery Limitations"});
-                table1091.AddRow(new string[] {
+                table1054.AddRow(new string[] {
                             "Transaction-level",
                             "Exact transaction",
                             "Transaction logs",
                             "ACID compliance",
                             "Transaction verification",
                             "Transaction dependency"});
-                table1091.AddRow(new string[] {
+                table1054.AddRow(new string[] {
                             "Minute-level",
                             "1-minute precision",
                             "Log replay",
                             "Minute consistency",
                             "Minute verification",
                             "Minute granularity"});
-                table1091.AddRow(new string[] {
+                table1054.AddRow(new string[] {
                             "Hour-level",
                             "1-hour precision",
                             "Snapshot restore",
                             "Hour consistency",
                             "Hour verification",
                             "Hour granularity"});
-                table1091.AddRow(new string[] {
+                table1054.AddRow(new string[] {
                             "Day-level",
                             "1-day precision",
                             "Backup restore",
                             "Day consistency",
                             "Day verification",
                             "Day granularity"});
-                table1091.AddRow(new string[] {
+                table1054.AddRow(new string[] {
                             "Event-driven",
                             "Event precision",
                             "Event sourcing",
                             "Event consistency",
                             "Event verification",
                             "Event complexity"});
-                table1091.AddRow(new string[] {
+                table1054.AddRow(new string[] {
                             "User-defined",
                             "Custom precision",
                             "Custom recovery",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Custom verification",
                             "Custom limitations"});
 #line 156
-    testRunner.When("implementing point-in-time recovery:", ((string)(null)), table1091, "When ");
+    testRunner.When("implementing point-in-time recovery:", ((string)(null)), table1054, "When ");
 #line hidden
 #line 164
     testRunner.Then("precision should match recovery requirements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 172
     testRunner.And("selective recovery reduces recovery time and impact", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1092 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1055 = new TechTalk.SpecFlow.Table(new string[] {
                             "Selection Criteria",
                             "Recovery Scope",
                             "Selection Method",
                             "Recovery Efficiency",
                             "Data Dependencies",
                             "Verification Scope"});
-                table1092.AddRow(new string[] {
+                table1055.AddRow(new string[] {
                             "User-specific",
                             "Individual user data",
                             "User selection",
                             "High efficiency",
                             "User dependencies",
                             "User verification"});
-                table1092.AddRow(new string[] {
+                table1055.AddRow(new string[] {
                             "Time-range",
                             "Specific time period",
                             "Time selection",
                             "Medium efficiency",
                             "Time dependencies",
                             "Time verification"});
-                table1092.AddRow(new string[] {
+                table1055.AddRow(new string[] {
                             "Content-type",
                             "Specific data types",
                             "Type selection",
                             "High efficiency",
                             "Type dependencies",
                             "Type verification"});
-                table1092.AddRow(new string[] {
+                table1055.AddRow(new string[] {
                             "Criticality-based",
                             "Critical data only",
                             "Priority selection",
                             "Very high efficiency",
                             "Critical dependencies",
                             "Critical verification"});
-                table1092.AddRow(new string[] {
+                table1055.AddRow(new string[] {
                             "Component-specific",
                             "System components",
                             "Component selection",
                             "Medium efficiency",
                             "Component dependencies",
                             "Component verification"});
-                table1092.AddRow(new string[] {
+                table1055.AddRow(new string[] {
                             "Custom criteria",
                             "Custom selection",
                             "Custom logic",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Custom dependencies",
                             "Custom verification"});
 #line 173
-    testRunner.When("implementing selective recovery:", ((string)(null)), table1092, "When ");
+    testRunner.When("implementing selective recovery:", ((string)(null)), table1055, "When ");
 #line hidden
 #line 181
     testRunner.Then("selection should be precise", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 190
     testRunner.And("proactive measures reduce corruption risk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1093 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1056 = new TechTalk.SpecFlow.Table(new string[] {
                             "Prevention Strategy",
                             "Implementation Method",
                             "Protection Scope",
                             "Effectiveness Rate",
                             "Performance Impact",
                             "Maintenance Requirements"});
-                table1093.AddRow(new string[] {
+                table1056.AddRow(new string[] {
                             "Input validation",
                             "Validation rules",
                             "Data entry",
                             "95% prevention",
                             "<3% overhead",
                             "Rule maintenance"});
-                table1093.AddRow(new string[] {
+                table1056.AddRow(new string[] {
                             "Transaction integrity",
                             "ACID transactions",
                             "Database operations",
                             "98% prevention",
                             "<5% overhead",
                             "Transaction management"});
-                table1093.AddRow(new string[] {
+                table1056.AddRow(new string[] {
                             "Error-correcting codes",
                             "ECC implementation",
                             "Memory/storage",
                             "99% prevention",
                             "<2% overhead",
                             "ECC monitoring"});
-                table1093.AddRow(new string[] {
+                table1056.AddRow(new string[] {
                             "Redundancy systems",
                             "Data replication",
                             "Critical systems",
                             "97% prevention",
                             "<10% overhead",
                             "Redundancy management"});
-                table1093.AddRow(new string[] {
+                table1056.AddRow(new string[] {
                             "Access controls",
                             "Permission systems",
                             "Data access",
                             "90% prevention",
                             "<1% overhead",
                             "Access management"});
-                table1093.AddRow(new string[] {
+                table1056.AddRow(new string[] {
                             "Monitoring systems",
                             "Real-time monitoring",
                             "System health",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "<4% overhead",
                             "Monitoring maintenance"});
 #line 191
-    testRunner.When("implementing corruption prevention:", ((string)(null)), table1093, "When ");
+    testRunner.When("implementing corruption prevention:", ((string)(null)), table1056, "When ");
 #line hidden
 #line 199
     testRunner.Then("prevention should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 207
     testRunner.And("quality assurance maintains data standards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1094 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1057 = new TechTalk.SpecFlow.Table(new string[] {
                             "Validation Type",
                             "Validation Rules",
                             "Validation Frequency",
                             "Error Handling",
                             "Quality Metrics",
                             "Remediation Process"});
-                table1094.AddRow(new string[] {
+                table1057.AddRow(new string[] {
                             "Schema validation",
                             "Schema rules",
                             "Every write",
                             "Reject invalid",
                             "Schema compliance",
                             "Schema correction"});
-                table1094.AddRow(new string[] {
+                table1057.AddRow(new string[] {
                             "Business rule validation",
                             "Business rules",
                             "Transaction time",
                             "Rule enforcement",
                             "Rule compliance",
                             "Rule correction"});
-                table1094.AddRow(new string[] {
+                table1057.AddRow(new string[] {
                             "Referential integrity",
                             "Integrity constraints",
                             "Constraint check",
                             "Constraint enforcement",
                             "Integrity metrics",
                             "Integrity repair"});
-                table1094.AddRow(new string[] {
+                table1057.AddRow(new string[] {
                             "Content validation",
                             "Content rules",
                             "Content access",
                             "Content warning",
                             "Content quality",
                             "Content review"});
-                table1094.AddRow(new string[] {
+                table1057.AddRow(new string[] {
                             "Clinical validation",
                             "Clinical standards",
                             "Clinical review",
                             "Clinical hold",
                             "Clinical metrics",
                             "Clinical correction"});
-                table1094.AddRow(new string[] {
+                table1057.AddRow(new string[] {
                             "Security validation",
                             "Security rules",
                             "Security check",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Security metrics",
                             "Security remediation"});
 #line 208
-    testRunner.When("implementing continuous validation:", ((string)(null)), table1094, "When ");
+    testRunner.When("implementing continuous validation:", ((string)(null)), table1057, "When ");
 #line hidden
 #line 216
     testRunner.Then("validation should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 224
     testRunner.And("change protection prevents unauthorized modifications", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1095 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1058 = new TechTalk.SpecFlow.Table(new string[] {
                             "Version Strategy",
                             "Change Tracking",
                             "Protection Level",
                             "Recovery Capability",
                             "Storage Efficiency",
                             "Access Control"});
-                table1095.AddRow(new string[] {
+                table1058.AddRow(new string[] {
                             "Full versioning",
                             "Complete change history",
                             "Maximum protection",
                             "Full recovery",
                             "Low efficiency",
                             "Version access"});
-                table1095.AddRow(new string[] {
+                table1058.AddRow(new string[] {
                             "Incremental versioning",
                             "Change deltas",
                             "High protection",
                             "Change recovery",
                             "High efficiency",
                             "Delta access"});
-                table1095.AddRow(new string[] {
+                table1058.AddRow(new string[] {
                             "Snapshot versioning",
                             "Periodic snapshots",
                             "Medium protection",
                             "Snapshot recovery",
                             "Medium efficiency",
                             "Snapshot access"});
-                table1095.AddRow(new string[] {
+                table1058.AddRow(new string[] {
                             "Critical-only versioning",
                             "Critical changes",
                             "Focused protection",
                             "Critical recovery",
                             "Very high efficiency",
                             "Critical access"});
-                table1095.AddRow(new string[] {
+                table1058.AddRow(new string[] {
                             "Hybrid versioning",
                             "Mixed strategy",
                             "Balanced protection",
                             "Flexible recovery",
                             "Balanced efficiency",
                             "Flexible access"});
-                table1095.AddRow(new string[] {
+                table1058.AddRow(new string[] {
                             "Real-time versioning",
                             "Continuous tracking",
                             "Continuous protection",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Variable efficiency",
                             "Real-time access"});
 #line 225
-    testRunner.When("implementing protective version control:", ((string)(null)), table1095, "When ");
+    testRunner.When("implementing protective version control:", ((string)(null)), table1058, "When ");
 #line hidden
 #line 233
     testRunner.Then("versioning should match protection requirements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 242
     testRunner.And("transparency builds trust and enables appropriate action", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1096 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1059 = new TechTalk.SpecFlow.Table(new string[] {
                             "Notification Type",
                             "Information Detail",
                             "Urgency Level",
                             "User Actions",
                             "Recovery Status",
                             "Communication Channel"});
-                table1096.AddRow(new string[] {
+                table1059.AddRow(new string[] {
                             "Critical corruption",
                             "Full impact details",
                             "Emergency",
                             "Immediate action",
                             "Recovery progress",
                             "Multiple channels"});
-                table1096.AddRow(new string[] {
+                table1059.AddRow(new string[] {
                             "Data loss notification",
                             "Specific data affected",
                             "High",
                             "User verification",
                             "Recovery options",
                             "Direct notification"});
-                table1096.AddRow(new string[] {
+                table1059.AddRow(new string[] {
                             "Performance impact",
                             "Performance effects",
                             "Medium",
                             "Performance awareness",
                             "Performance recovery",
                             "System notification"});
-                table1096.AddRow(new string[] {
+                table1059.AddRow(new string[] {
                             "Recovery progress",
                             "Recovery status",
                             "Variable",
                             "User patience",
                             "Progress updates",
                             "Progress notification"});
-                table1096.AddRow(new string[] {
+                table1059.AddRow(new string[] {
                             "Resolution confirmation",
                             "Resolution details",
                             "Low",
                             "Normal operations",
                             "Completion status",
                             "Confirmation notification"});
-                table1096.AddRow(new string[] {
+                table1059.AddRow(new string[] {
                             "Prevention guidance",
                             "Prevention education",
                             "Educational",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Prevention status",
                             "Educational notification"});
 #line 243
-    testRunner.When("notifying users about corruption:", ((string)(null)), table1096, "When ");
+    testRunner.When("notifying users about corruption:", ((string)(null)), table1059, "When ");
 #line hidden
 #line 251
     testRunner.Then("notifications should be timely and accurate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 259
     testRunner.And("assistance improves recovery success and user confidence", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1097 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1060 = new TechTalk.SpecFlow.Table(new string[] {
                             "Guidance Type",
                             "Assistance Level",
                             "User Involvement",
                             "Information Provided",
                             "Support Availability",
                             "Success Metrics"});
-                table1097.AddRow(new string[] {
+                table1060.AddRow(new string[] {
                             "Automated recovery",
                             "Minimal assistance",
                             "User awareness",
                             "Progress information",
                             "System support",
                             "Recovery success"});
-                table1097.AddRow(new string[] {
+                table1060.AddRow(new string[] {
                             "Guided recovery",
                             "Moderate assistance",
                             "User participation",
                             "Step instructions",
                             "Help desk support",
                             "User success"});
-                table1097.AddRow(new string[] {
+                table1060.AddRow(new string[] {
                             "Manual recovery",
                             "High assistance",
                             "User execution",
                             "Detailed procedures",
                             "Expert support",
                             "Procedure success"});
-                table1097.AddRow(new string[] {
+                table1060.AddRow(new string[] {
                             "Expert recovery",
                             "Expert assistance",
                             "User coordination",
                             "Expert communication",
                             "Expert availability",
                             "Expert success"});
-                table1097.AddRow(new string[] {
+                table1060.AddRow(new string[] {
                             "Emergency recovery",
                             "Emergency assistance",
                             "Critical coordination",
                             "Emergency information",
                             "Emergency response",
                             "Emergency success"});
-                table1097.AddRow(new string[] {
+                table1060.AddRow(new string[] {
                             "Educational recovery",
                             "Learning assistance",
                             "Learning participation",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Learning support",
                             "Learning success"});
 #line 260
-    testRunner.When("providing recovery guidance:", ((string)(null)), table1097, "When ");
+    testRunner.When("providing recovery guidance:", ((string)(null)), table1060, "When ");
 #line hidden
 #line 268
     testRunner.Then("guidance should match user needs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 277
     testRunner.And("trend analysis enables proactive improvements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1098 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1061 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Dimension",
                             "Analysis Method",
                             "Pattern Recognition",
                             "Trend Identification",
                             "Improvement Opportunities",
                             "Action Implementation"});
-                table1098.AddRow(new string[] {
+                table1061.AddRow(new string[] {
                             "Corruption frequency",
                             "Frequency analysis",
                             "Frequency patterns",
                             "Frequency trends",
                             "Frequency reduction",
                             "Process improvement"});
-                table1098.AddRow(new string[] {
+                table1061.AddRow(new string[] {
                             "Corruption sources",
                             "Source analysis",
                             "Source patterns",
                             "Source trends",
                             "Source elimination",
                             "Source mitigation"});
-                table1098.AddRow(new string[] {
+                table1061.AddRow(new string[] {
                             "Recovery effectiveness",
                             "Recovery analysis",
                             "Recovery patterns",
                             "Recovery trends",
                             "Recovery improvement",
                             "Recovery optimization"});
-                table1098.AddRow(new string[] {
+                table1061.AddRow(new string[] {
                             "User impact",
                             "Impact analysis",
                             "Impact patterns",
                             "Impact trends",
                             "Impact reduction",
                             "Impact mitigation"});
-                table1098.AddRow(new string[] {
+                table1061.AddRow(new string[] {
                             "System performance",
                             "Performance analysis",
                             "Performance patterns",
                             "Performance trends",
                             "Performance improvement",
                             "Performance optimization"});
-                table1098.AddRow(new string[] {
+                table1061.AddRow(new string[] {
                             "Cost analysis",
                             "Cost analysis",
                             "Cost patterns",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Cost reduction",
                             "Cost optimization"});
 #line 278
-    testRunner.When("analyzing corruption patterns:", ((string)(null)), table1098, "When ");
+    testRunner.When("analyzing corruption patterns:", ((string)(null)), table1061, "When ");
 #line hidden
 #line 286
     testRunner.Then("analytics should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1854,49 +1854,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 294
     testRunner.And("indicators guide system optimization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1099 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1062 = new TechTalk.SpecFlow.Table(new string[] {
                             "Metric Category",
                             "Key Indicators",
                             "Measurement Method",
                             "Target Values",
                             "Alert Thresholds",
                             "Improvement Actions"});
-                table1099.AddRow(new string[] {
+                table1062.AddRow(new string[] {
                             "Detection metrics",
                             "Detection rate, false positives",
                             "Detection monitoring",
                             ">99% detection, <5% false positives",
                             "Detection threshold",
                             "Detection improvement"});
-                table1099.AddRow(new string[] {
+                table1062.AddRow(new string[] {
                             "Recovery metrics",
                             "Recovery time, success rate",
                             "Recovery monitoring",
                             "<1 hour, >99% success",
                             "Recovery threshold",
                             "Recovery optimization"});
-                table1099.AddRow(new string[] {
+                table1062.AddRow(new string[] {
                             "Prevention metrics",
                             "Prevention rate, coverage",
                             "Prevention monitoring",
                             ">95% prevention, >98% coverage",
                             "Prevention threshold",
                             "Prevention enhancement"});
-                table1099.AddRow(new string[] {
+                table1062.AddRow(new string[] {
                             "Quality metrics",
                             "Data accuracy, consistency",
                             "Quality monitoring",
                             ">99.9% accuracy, >99% consistency",
                             "Quality threshold",
                             "Quality improvement"});
-                table1099.AddRow(new string[] {
+                table1062.AddRow(new string[] {
                             "Performance metrics",
                             "System performance, efficiency",
                             "Performance monitoring",
                             "<5% impact, >90% efficiency",
                             "Performance threshold",
                             "Performance tuning"});
-                table1099.AddRow(new string[] {
+                table1062.AddRow(new string[] {
                             "Cost metrics",
                             "Recovery cost, prevention cost",
                             "Cost monitoring",
@@ -1904,7 +1904,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Cost threshold",
                             "Cost optimization"});
 #line 295
-    testRunner.When("monitoring corruption metrics:", ((string)(null)), table1099, "When ");
+    testRunner.When("monitoring corruption metrics:", ((string)(null)), table1062, "When ");
 #line hidden
 #line 303
     testRunner.Then("metrics should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1958,49 +1958,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 311
     testRunner.Given("recovery processes may themselves encounter errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1100 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1063 = new TechTalk.SpecFlow.Table(new string[] {
                             "Error Type",
                             "Detection Method",
                             "Resolution Process",
                             "Timeline",
                             "System Impact",
                             "Prevention Measures"});
-                table1100.AddRow(new string[] {
+                table1063.AddRow(new string[] {
                             "Backup corruption",
                             "Backup validation",
                             "Alternative backup",
                             "<30 minutes",
                             "Backup unavailability",
                             "Backup verification"});
-                table1100.AddRow(new string[] {
+                table1063.AddRow(new string[] {
                             "Recovery failure",
                             "Recovery monitoring",
                             "Recovery retry",
                             "<1 hour",
                             "Recovery delay",
                             "Recovery testing"});
-                table1100.AddRow(new string[] {
+                table1063.AddRow(new string[] {
                             "Validation errors",
                             "Validation monitoring",
                             "Validation review",
                             "<15 minutes",
                             "Validation concern",
                             "Validation improvement"});
-                table1100.AddRow(new string[] {
+                table1063.AddRow(new string[] {
                             "Storage failures",
                             "Storage monitoring",
                             "Storage repair",
                             "<2 hours",
                             "Storage unavailability",
                             "Storage redundancy"});
-                table1100.AddRow(new string[] {
+                table1063.AddRow(new string[] {
                             "Network issues",
                             "Network monitoring",
                             "Network restoration",
                             "<10 minutes",
                             "Network disruption",
                             "Network redundancy"});
-                table1100.AddRow(new string[] {
+                table1063.AddRow(new string[] {
                             "System overload",
                             "Performance monitoring",
                             "Load balancing",
@@ -2008,7 +2008,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Performance degradation",
                             "Capacity planning"});
 #line 312
-    testRunner.When("data corruption recovery errors occur:", ((string)(null)), table1100, "When ");
+    testRunner.When("data corruption recovery errors occur:", ((string)(null)), table1063, "When ");
 #line hidden
 #line 320
     testRunner.Then("errors should be detected and resolved quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -2062,49 +2062,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 327
     testRunner.Given("corruption management requires ongoing optimization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1101 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1064 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table1101.AddRow(new string[] {
+                table1064.AddRow(new string[] {
                             "Detection advancement",
                             "Evolving corruption patterns",
                             "Advanced detection algorithms",
                             "Detection research",
                             "Detection improvement",
                             "Detection sustainability"});
-                table1101.AddRow(new string[] {
+                table1064.AddRow(new string[] {
                             "Recovery optimization",
                             "Complex recovery scenarios",
                             "Recovery automation",
                             "Recovery resources",
                             "Recovery efficiency",
                             "Recovery sustainability"});
-                table1101.AddRow(new string[] {
+                table1064.AddRow(new string[] {
                             "Prevention enhancement",
                             "Prevention effectiveness",
                             "Proactive prevention",
                             "Prevention resources",
                             "Prevention success",
                             "Prevention sustainability"});
-                table1101.AddRow(new string[] {
+                table1064.AddRow(new string[] {
                             "Technology evolution",
                             "Changing technology landscape",
                             "Technology adaptation",
                             "Technology resources",
                             "Technology currency",
                             "Technology sustainability"});
-                table1101.AddRow(new string[] {
+                table1064.AddRow(new string[] {
                             "Skills development",
                             "Technical expertise",
                             "Training programs",
                             "Training resources",
                             "Skill advancement",
                             "Skills sustainability"});
-                table1101.AddRow(new string[] {
+                table1064.AddRow(new string[] {
                             "Quality assurance",
                             "Quality standards",
                             "Quality systems",
@@ -2112,7 +2112,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Quality maintenance",
                             "Quality sustainability"});
 #line 328
-    testRunner.When("planning corruption management sustainability:", ((string)(null)), table1101, "When ");
+    testRunner.When("planning corruption management sustainability:", ((string)(null)), table1064, "When ");
 #line hidden
 #line 336
     testRunner.Then("sustainability should be systematically planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

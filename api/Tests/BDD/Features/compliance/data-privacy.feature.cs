@@ -125,29 +125,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table701 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table664 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table701.AddRow(new string[] {
+                table664.AddRow(new string[] {
                             "userId",
                             "user-123"});
-                table701.AddRow(new string[] {
+                table664.AddRow(new string[] {
                             "consentType",
                             "data-processing"});
-                table701.AddRow(new string[] {
+                table664.AddRow(new string[] {
                             "consentGiven",
                             "true"});
-                table701.AddRow(new string[] {
+                table664.AddRow(new string[] {
                             "ipAddress",
                             "192.168.1.1"});
-                table701.AddRow(new string[] {
+                table664.AddRow(new string[] {
                             "timestamp",
                             "2024-01-22T10:00:00Z"});
-                table701.AddRow(new string[] {
+                table664.AddRow(new string[] {
                             "version",
                             "2.1"});
 #line 14
-    testRunner.When("I send a POST request to \"/api/privacy/consent\" with:", ((string)(null)), table701, "When ");
+    testRunner.When("I send a POST request to \"/api/privacy/consent\" with:", ((string)(null)), table664, "When ");
 #line hidden
 #line 22
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -200,26 +200,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 31
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table702 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table665 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table702.AddRow(new string[] {
+                table665.AddRow(new string[] {
                             "personalData",
                             "object"});
-                table702.AddRow(new string[] {
+                table665.AddRow(new string[] {
                             "activityHistory",
                             "array"});
-                table702.AddRow(new string[] {
+                table665.AddRow(new string[] {
                             "consentRecords",
                             "array"});
-                table702.AddRow(new string[] {
+                table665.AddRow(new string[] {
                             "dataSharing",
                             "array"});
-                table702.AddRow(new string[] {
+                table665.AddRow(new string[] {
                             "exportUrl",
                             "string"});
 #line 32
-    testRunner.And("the response should contain:", ((string)(null)), table702, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table665, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -257,20 +257,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 43
     testRunner.Given("user \"user-123\" requests data deletion", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table703 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table666 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table703.AddRow(new string[] {
+                table666.AddRow(new string[] {
                             "confirmDeletion",
                             "true"});
-                table703.AddRow(new string[] {
+                table666.AddRow(new string[] {
                             "retentionExempt",
                             "[\"legal-requirement\"]"});
-                table703.AddRow(new string[] {
+                table666.AddRow(new string[] {
                             "reason",
                             "user-request"});
 #line 44
-    testRunner.When("I send a DELETE request to \"/api/privacy/user/user-123/data\" with:", ((string)(null)), table703, "When ");
+    testRunner.When("I send a DELETE request to \"/api/privacy/user/user-123/data\" with:", ((string)(null)), table666, "When ");
 #line hidden
 #line 49
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -323,23 +323,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 58
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table704 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table667 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table704.AddRow(new string[] {
+                table667.AddRow(new string[] {
                             "events",
                             "array"});
-                table704.AddRow(new string[] {
+                table667.AddRow(new string[] {
                             "users",
                             "array"});
-                table704.AddRow(new string[] {
+                table667.AddRow(new string[] {
                             "actions",
                             "array"});
-                table704.AddRow(new string[] {
+                table667.AddRow(new string[] {
                             "timestamps",
                             "array"});
 #line 59
-    testRunner.And("the response should contain:", ((string)(null)), table704, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table667, "And ");
 #line hidden
 #line 65
     testRunner.And("all data access should be logged", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -377,26 +377,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table705 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table668 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table705.AddRow(new string[] {
+                table668.AddRow(new string[] {
                             "incidentType",
                             "unauthorized-access"});
-                table705.AddRow(new string[] {
+                table668.AddRow(new string[] {
                             "affectedRecords",
                             "150"});
-                table705.AddRow(new string[] {
+                table668.AddRow(new string[] {
                             "discoveryDate",
                             "2024-01-22T09:00:00Z"});
-                table705.AddRow(new string[] {
+                table668.AddRow(new string[] {
                             "dataTypes",
                             "[\"names\", \"dob\", \"diagnosis\"]"});
-                table705.AddRow(new string[] {
+                table668.AddRow(new string[] {
                             "containmentSteps",
                             "[\"passwords-reset\", \"access-revoked\"]"});
 #line 70
-    testRunner.When("I send a POST request to \"/api/compliance/breach-notification\" with:", ((string)(null)), table705, "When ");
+    testRunner.When("I send a POST request to \"/api/compliance/breach-notification\" with:", ((string)(null)), table668, "When ");
 #line hidden
 #line 77
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -449,26 +449,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 86
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table706 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table669 = new TechTalk.SpecFlow.Table(new string[] {
                             "section",
                             "status"});
-                table706.AddRow(new string[] {
+                table669.AddRow(new string[] {
                             "access-controls",
                             "compliant"});
-                table706.AddRow(new string[] {
+                table669.AddRow(new string[] {
                             "encryption",
                             "compliant"});
-                table706.AddRow(new string[] {
+                table669.AddRow(new string[] {
                             "audit-logs",
                             "compliant"});
-                table706.AddRow(new string[] {
+                table669.AddRow(new string[] {
                             "workforce-training",
                             "95%"});
-                table706.AddRow(new string[] {
+                table669.AddRow(new string[] {
                             "risk-assessments",
                             "current"});
 #line 87
-    testRunner.And("admin report should include:", ((string)(null)), table706, "And ");
+    testRunner.And("admin report should include:", ((string)(null)), table669, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -503,26 +503,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table707 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table670 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table707.AddRow(new string[] {
+                table670.AddRow(new string[] {
                             "userId",
                             "user-123"});
-                table707.AddRow(new string[] {
+                table670.AddRow(new string[] {
                             "trainingType",
                             "hipaa-privacy"});
-                table707.AddRow(new string[] {
+                table670.AddRow(new string[] {
                             "score",
                             "95"});
-                table707.AddRow(new string[] {
+                table670.AddRow(new string[] {
                             "completedAt",
                             "2024-01-22T14:00:00Z"});
-                table707.AddRow(new string[] {
+                table670.AddRow(new string[] {
                             "certificate",
                             "cert-url"});
 #line 98
-    testRunner.When("I send a POST request to \"/api/compliance/training/complete\" with:", ((string)(null)), table707, "When ");
+    testRunner.When("I send a POST request to \"/api/compliance/training/complete\" with:", ((string)(null)), table670, "When ");
 #line hidden
 #line 105
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -572,28 +572,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 113
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table708 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table671 = new TechTalk.SpecFlow.Table(new string[] {
                             "dataType",
                             "retentionPeriod",
                             "legalBasis"});
-                table708.AddRow(new string[] {
+                table671.AddRow(new string[] {
                             "student-records",
                             "7-years",
                             "FERPA"});
-                table708.AddRow(new string[] {
+                table671.AddRow(new string[] {
                             "therapy-notes",
                             "7-years",
                             "HIPAA"});
-                table708.AddRow(new string[] {
+                table671.AddRow(new string[] {
                             "billing-records",
                             "10-years",
                             "IRS"});
-                table708.AddRow(new string[] {
+                table671.AddRow(new string[] {
                             "audit-logs",
                             "indefinite",
                             "compliance"});
 #line 114
-    testRunner.And("the response should contain:", ((string)(null)), table708, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table671, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -628,20 +628,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table709 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table672 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table709.AddRow(new string[] {
+                table672.AddRow(new string[] {
                             "reviewType",
                             "quarterly"});
-                table709.AddRow(new string[] {
+                table672.AddRow(new string[] {
                             "departments",
                             "[\"therapy\", \"billing\"]"});
-                table709.AddRow(new string[] {
+                table672.AddRow(new string[] {
                             "checkType",
                             "least-privilege"});
 #line 124
-    testRunner.When("I send a POST request to \"/api/compliance/access-review\" with:", ((string)(null)), table709, "When ");
+    testRunner.When("I send a POST request to \"/api/compliance/access-review\" with:", ((string)(null)), table672, "When ");
 #line hidden
 #line 129
     testRunner.Then("the response status should be 202", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

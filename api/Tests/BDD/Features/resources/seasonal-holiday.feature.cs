@@ -131,23 +131,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 15
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2209 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2172 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2209.AddRow(new string[] {
+                table2172.AddRow(new string[] {
                             "season",
                             "fall"});
-                table2209.AddRow(new string[] {
+                table2172.AddRow(new string[] {
                             "featuredThemes",
                             "[\"halloween\", \"harvest\", \"thanksgiving\"]"});
-                table2209.AddRow(new string[] {
+                table2172.AddRow(new string[] {
                             "resources",
                             "array"});
-                table2209.AddRow(new string[] {
+                table2172.AddRow(new string[] {
                             "autoRotated",
                             "true"});
 #line 16
-    testRunner.And("the response should contain:", ((string)(null)), table2209, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table2172, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -189,29 +189,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 27
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2210 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2173 = new TechTalk.SpecFlow.Table(new string[] {
                             "culture",
                             "holidays"});
-                table2210.AddRow(new string[] {
+                table2173.AddRow(new string[] {
                             "christian",
                             "Christmas, Easter"});
-                table2210.AddRow(new string[] {
+                table2173.AddRow(new string[] {
                             "jewish",
                             "Hanukkah, Passover"});
-                table2210.AddRow(new string[] {
+                table2173.AddRow(new string[] {
                             "islamic",
                             "Eid al-Fitr, Eid al-Adha"});
-                table2210.AddRow(new string[] {
+                table2173.AddRow(new string[] {
                             "hindu",
                             "Diwali, Holi"});
-                table2210.AddRow(new string[] {
+                table2173.AddRow(new string[] {
                             "secular",
                             "New Year, Valentine\'s Day"});
-                table2210.AddRow(new string[] {
+                table2173.AddRow(new string[] {
                             "cultural",
                             "Lunar New Year, Cinco de Mayo"});
 #line 28
-    testRunner.And("calendar should include:", ((string)(null)), table2210, "And ");
+    testRunner.And("calendar should include:", ((string)(null)), table2173, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -246,26 +246,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2211 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2174 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2211.AddRow(new string[] {
+                table2174.AddRow(new string[] {
                             "autoRotate",
                             "true"});
-                table2211.AddRow(new string[] {
+                table2174.AddRow(new string[] {
                             "includedHolidays",
                             "[\"secular\", \"cultural\"]"});
-                table2211.AddRow(new string[] {
+                table2174.AddRow(new string[] {
                             "excludedThemes",
                             "[\"scary\", \"religious\"]"});
-                table2211.AddRow(new string[] {
+                table2174.AddRow(new string[] {
                             "ageAppropriate",
                             "3-8"});
-                table2211.AddRow(new string[] {
+                table2174.AddRow(new string[] {
                             "notificationDays",
                             "7"});
 #line 40
-    testRunner.When("I send a POST request to \"/api/resources/seasonal/preferences\" with:", ((string)(null)), table2211, "When ");
+    testRunner.When("I send a POST request to \"/api/resources/seasonal/preferences\" with:", ((string)(null)), table2174, "When ");
 #line hidden
 #line 47
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -315,23 +315,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 55
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2212 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2175 = new TechTalk.SpecFlow.Table(new string[] {
                             "type",
                             "examples"});
-                table2212.AddRow(new string[] {
+                table2175.AddRow(new string[] {
                             "crafts",
                             "Snowflake cutting practice"});
-                table2212.AddRow(new string[] {
+                table2175.AddRow(new string[] {
                             "worksheets",
                             "Winter clothing sequences"});
-                table2212.AddRow(new string[] {
+                table2175.AddRow(new string[] {
                             "games",
                             "Snowman building dice game"});
-                table2212.AddRow(new string[] {
+                table2175.AddRow(new string[] {
                             "sensory",
                             "Fake snow sensory bins"});
 #line 56
-    testRunner.And("resources should include:", ((string)(null)), table2212, "And ");
+    testRunner.And("resources should include:", ((string)(null)), table2175, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -366,23 +366,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2213 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2176 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2213.AddRow(new string[] {
+                table2176.AddRow(new string[] {
                             "themeName",
                             "\"Spring Garden\""});
-                table2213.AddRow(new string[] {
+                table2176.AddRow(new string[] {
                             "elements",
                             "[\"flowers\", \"bugs\", \"rain\"]"});
-                table2213.AddRow(new string[] {
+                table2176.AddRow(new string[] {
                             "skills",
                             "[\"counting\", \"colors\", \"vocabulary\"]"});
-                table2213.AddRow(new string[] {
+                table2176.AddRow(new string[] {
                             "ageRange",
                             "4-6"});
 #line 66
-    testRunner.When("I send a POST request to \"/api/resources/seasonal/custom-theme\" with:", ((string)(null)), table2213, "When ");
+    testRunner.When("I send a POST request to \"/api/resources/seasonal/custom-theme\" with:", ((string)(null)), table2176, "When ");
 #line hidden
 #line 72
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -432,23 +432,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 80
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2214 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2177 = new TechTalk.SpecFlow.Table(new string[] {
                             "category",
                             "examples"});
-                table2214.AddRow(new string[] {
+                table2177.AddRow(new string[] {
                             "gratitude",
                             "Thankful tree craft"});
-                table2214.AddRow(new string[] {
+                table2177.AddRow(new string[] {
                             "sequencing",
                             "Turkey sandwich making"});
-                table2214.AddRow(new string[] {
+                table2177.AddRow(new string[] {
                             "social",
                             "Family traditions discussion"});
-                table2214.AddRow(new string[] {
+                table2177.AddRow(new string[] {
                             "motor",
                             "Leaf pile jumping cards"});
 #line 81
-    testRunner.And("activities should include:", ((string)(null)), table2214, "And ");
+    testRunner.And("activities should include:", ((string)(null)), table2177, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -483,38 +483,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2215 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2178 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2215.AddRow(new string[] {
+                table2178.AddRow(new string[] {
                             "season",
                             "winter"});
-                table2215.AddRow(new string[] {
+                table2178.AddRow(new string[] {
                             "style",
                             "animated"});
-                table2215.AddRow(new string[] {
+                table2178.AddRow(new string[] {
                             "interactive",
                             "true"});
 #line 91
-    testRunner.When("I send a POST request to \"/api/resources/seasonal/backgrounds\" with:", ((string)(null)), table2215, "When ");
+    testRunner.When("I send a POST request to \"/api/resources/seasonal/backgrounds\" with:", ((string)(null)), table2178, "When ");
 #line hidden
 #line 96
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2216 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2179 = new TechTalk.SpecFlow.Table(new string[] {
                             "type",
                             "features"});
-                table2216.AddRow(new string[] {
+                table2179.AddRow(new string[] {
                             "snow scene",
                             "Falling snow animation"});
-                table2216.AddRow(new string[] {
+                table2179.AddRow(new string[] {
                             "fireplace",
                             "Crackling fire sounds"});
-                table2216.AddRow(new string[] {
+                table2179.AddRow(new string[] {
                             "ice palace",
                             "Interactive elements"});
 #line 97
-    testRunner.And("backgrounds should include:", ((string)(null)), table2216, "And ");
+    testRunner.And("backgrounds should include:", ((string)(null)), table2179, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -555,23 +555,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 107
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2217 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2180 = new TechTalk.SpecFlow.Table(new string[] {
                             "day",
                             "activity"});
-                table2217.AddRow(new string[] {
+                table2180.AddRow(new string[] {
                             "1",
                             "Fine motor ornament craft"});
-                table2217.AddRow(new string[] {
+                table2180.AddRow(new string[] {
                             "2",
                             "Holiday vocabulary bingo"});
-                table2217.AddRow(new string[] {
+                table2180.AddRow(new string[] {
                             "3",
                             "Gift wrapping practice"});
-                table2217.AddRow(new string[] {
+                table2180.AddRow(new string[] {
                             "24",
                             "Special celebration activity"});
 #line 108
-    testRunner.And("calendar should include:", ((string)(null)), table2217, "And ");
+    testRunner.And("calendar should include:", ((string)(null)), table2180, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -606,23 +606,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2218 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2181 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2218.AddRow(new string[] {
+                table2181.AddRow(new string[] {
                             "rotationType",
                             "automatic"});
-                table2218.AddRow(new string[] {
+                table2181.AddRow(new string[] {
                             "leadTime",
                             "2-weeks"});
-                table2218.AddRow(new string[] {
+                table2181.AddRow(new string[] {
                             "transitionDays",
                             "3"});
-                table2218.AddRow(new string[] {
+                table2181.AddRow(new string[] {
                             "notify",
                             "true"});
 #line 118
-    testRunner.When("I send a POST request to \"/api/resources/seasonal/schedule\" with:", ((string)(null)), table2218, "When ");
+    testRunner.When("I send a POST request to \"/api/resources/seasonal/schedule\" with:", ((string)(null)), table2181, "When ");
 #line hidden
 #line 124
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -672,23 +672,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 132
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2219 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2182 = new TechTalk.SpecFlow.Table(new string[] {
                             "type",
                             "theme"});
-                table2219.AddRow(new string[] {
+                table2182.AddRow(new string[] {
                             "stickers",
                             "Autumn leaves, pumpkins"});
-                table2219.AddRow(new string[] {
+                table2182.AddRow(new string[] {
                             "certificates",
                             "Harvest themed"});
-                table2219.AddRow(new string[] {
+                table2182.AddRow(new string[] {
                             "tokens",
                             "Acorn collection"});
-                table2219.AddRow(new string[] {
+                table2182.AddRow(new string[] {
                             "charts",
                             "Apple tree progress"});
 #line 133
-    testRunner.And("rewards should include:", ((string)(null)), table2219, "And ");
+    testRunner.And("rewards should include:", ((string)(null)), table2182, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

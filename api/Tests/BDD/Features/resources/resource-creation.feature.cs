@@ -125,35 +125,35 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2109 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2072 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2109.AddRow(new string[] {
+                table2072.AddRow(new string[] {
                             "title",
                             "Fine Motor Tracing Worksheets"});
-                table2109.AddRow(new string[] {
+                table2072.AddRow(new string[] {
                             "description",
                             "Age-appropriate tracing activities"});
-                table2109.AddRow(new string[] {
+                table2072.AddRow(new string[] {
                             "skillAreas",
                             "[\"fine-motor\", \"pre-writing\"]"});
-                table2109.AddRow(new string[] {
+                table2072.AddRow(new string[] {
                             "gradeLevels",
                             "[\"prek\", \"kindergarten\"]"});
-                table2109.AddRow(new string[] {
+                table2072.AddRow(new string[] {
                             "resourceType",
                             "worksheet"});
-                table2109.AddRow(new string[] {
+                table2072.AddRow(new string[] {
                             "format",
                             "pdf"});
-                table2109.AddRow(new string[] {
+                table2072.AddRow(new string[] {
                             "language",
                             "en"});
-                table2109.AddRow(new string[] {
+                table2072.AddRow(new string[] {
                             "tags",
                             "[\"tracing\", \"pencil-grip\"]"});
 #line 14
-    testRunner.When("I send a POST request to \"/api/resources\" with:", ((string)(null)), table2109, "When ");
+    testRunner.When("I send a POST request to \"/api/resources\" with:", ((string)(null)), table2072, "When ");
 #line hidden
 #line 24
     testRunner.And("I attach file \"tracing-worksheets.pdf\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -161,20 +161,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 25
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2110 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2073 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table2110.AddRow(new string[] {
+                table2073.AddRow(new string[] {
                             "resourceId",
                             "string"});
-                table2110.AddRow(new string[] {
+                table2073.AddRow(new string[] {
                             "status",
                             "string"});
-                table2110.AddRow(new string[] {
+                table2073.AddRow(new string[] {
                             "uploadUrl",
                             "string"});
 #line 26
-    testRunner.And("the response should contain:", ((string)(null)), table2110, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table2073, "And ");
 #line hidden
 #line 31
     testRunner.And("the resource should be created in draft status", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -214,14 +214,14 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2111 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2074 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2111.AddRow(new string[] {
+                table2074.AddRow(new string[] {
                             "title",
                             ""});
 #line 35
-    testRunner.When("I send a POST request to \"/api/resources\" with:", ((string)(null)), table2111, "When ");
+    testRunner.When("I send a POST request to \"/api/resources\" with:", ((string)(null)), table2074, "When ");
 #line hidden
 #line 38
     testRunner.Then("the response status should be 400", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -268,35 +268,35 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 45
     testRunner.When("I send a POST request to \"/api/resources/res-123/upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2112 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2075 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2112.AddRow(new string[] {
+                table2075.AddRow(new string[] {
                             "contentType",
                             "application/pdf"});
-                table2112.AddRow(new string[] {
+                table2075.AddRow(new string[] {
                             "fileSize",
                             "2048000"});
 #line 46
-    testRunner.And("I attach file \"worksheet.pdf\" with:", ((string)(null)), table2112, "And ");
+    testRunner.And("I attach file \"worksheet.pdf\" with:", ((string)(null)), table2075, "And ");
 #line hidden
 #line 50
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2113 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2076 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table2113.AddRow(new string[] {
+                table2076.AddRow(new string[] {
                             "uploadId",
                             "string"});
-                table2113.AddRow(new string[] {
+                table2076.AddRow(new string[] {
                             "status",
                             "string"});
-                table2113.AddRow(new string[] {
+                table2076.AddRow(new string[] {
                             "processingId",
                             "string"});
 #line 51
-    testRunner.And("the response should contain:", ((string)(null)), table2113, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table2076, "And ");
 #line hidden
 #line 56
     testRunner.And("file processing should begin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -387,20 +387,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 69
     testRunner.Given("I own resource \"res-123\" in draft status", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2114 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2077 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2114.AddRow(new string[] {
+                table2077.AddRow(new string[] {
                             "title",
                             "Updated Fine Motor Worksheets"});
-                table2114.AddRow(new string[] {
+                table2077.AddRow(new string[] {
                             "description",
                             "Now includes cutting practice"});
-                table2114.AddRow(new string[] {
+                table2077.AddRow(new string[] {
                             "tags",
                             "[\"tracing\", \"cutting\", \"scissors\"]"});
 #line 70
-    testRunner.When("I send a PUT request to \"/api/resources/res-123\" with:", ((string)(null)), table2114, "When ");
+    testRunner.When("I send a PUT request to \"/api/resources/res-123\" with:", ((string)(null)), table2077, "When ");
 #line hidden
 #line 75
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -497,32 +497,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 90
     testRunner.Given("I have uploaded resource \"res-123\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2115 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2078 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2115.AddRow(new string[] {
+                table2078.AddRow(new string[] {
                             "pages",
                             "[1,2,3]"});
-                table2115.AddRow(new string[] {
+                table2078.AddRow(new string[] {
                             "quality",
                             "high"});
 #line 91
-    testRunner.When("I send a POST request to \"/api/resources/res-123/preview\" with:", ((string)(null)), table2115, "When ");
+    testRunner.When("I send a POST request to \"/api/resources/res-123/preview\" with:", ((string)(null)), table2078, "When ");
 #line hidden
 #line 95
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2116 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2079 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table2116.AddRow(new string[] {
+                table2079.AddRow(new string[] {
                             "previewUrls",
                             "array"});
-                table2116.AddRow(new string[] {
+                table2079.AddRow(new string[] {
                             "thumbnailUrl",
                             "string"});
 #line 96
-    testRunner.And("the response should contain:", ((string)(null)), table2116, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table2079, "And ");
 #line hidden
 #line 100
     testRunner.And("preview images should be generated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -566,23 +566,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 106
     testRunner.And("the resource has passed quality checks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2117 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2080 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2117.AddRow(new string[] {
+                table2080.AddRow(new string[] {
                             "visibility",
                             "public"});
-                table2117.AddRow(new string[] {
+                table2080.AddRow(new string[] {
                             "licensing",
                             "single-classroom"});
-                table2117.AddRow(new string[] {
+                table2080.AddRow(new string[] {
                             "allowDownload",
                             "true"});
-                table2117.AddRow(new string[] {
+                table2080.AddRow(new string[] {
                             "requireApproval",
                             "false"});
 #line 107
-    testRunner.When("I send a POST request to \"/api/resources/res-123/publish\" with:", ((string)(null)), table2117, "When ");
+    testRunner.When("I send a POST request to \"/api/resources/res-123/publish\" with:", ((string)(null)), table2080, "When ");
 #line hidden
 #line 113
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -774,29 +774,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2118 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2081 = new TechTalk.SpecFlow.Table(new string[] {
                             "resources",
                             "array of 5 resource objects"});
 #line 145
-    testRunner.When("I send a POST request to \"/api/resources/batch\" with:", ((string)(null)), table2118, "When ");
+    testRunner.When("I send a POST request to \"/api/resources/batch\" with:", ((string)(null)), table2081, "When ");
 #line hidden
 #line 147
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2119 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2082 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table2119.AddRow(new string[] {
+                table2082.AddRow(new string[] {
                             "created",
                             "array"});
-                table2119.AddRow(new string[] {
+                table2082.AddRow(new string[] {
                             "failed",
                             "array"});
-                table2119.AddRow(new string[] {
+                table2082.AddRow(new string[] {
                             "batchId",
                             "string"});
 #line 148
-    testRunner.And("the response should contain:", ((string)(null)), table2119, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table2082, "And ");
 #line hidden
 #line 153
     testRunner.And("batch processing should begin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -837,32 +837,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 158
     testRunner.Given("I own resource \"res-123\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2120 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2083 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2120.AddRow(new string[] {
+                table2083.AddRow(new string[] {
                             "title",
                             "Copy of Original Resource"});
-                table2120.AddRow(new string[] {
+                table2083.AddRow(new string[] {
                             "copyFiles",
                             "true"});
 #line 159
-    testRunner.When("I send a POST request to \"/api/resources/res-123/duplicate\" with:", ((string)(null)), table2120, "When ");
+    testRunner.When("I send a POST request to \"/api/resources/res-123/duplicate\" with:", ((string)(null)), table2083, "When ");
 #line hidden
 #line 163
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2121 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2084 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table2121.AddRow(new string[] {
+                table2084.AddRow(new string[] {
                             "newResourceId",
                             "string"});
-                table2121.AddRow(new string[] {
+                table2084.AddRow(new string[] {
                             "status",
                             "string"});
 #line 164
-    testRunner.And("the response should contain:", ((string)(null)), table2121, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table2084, "And ");
 #line hidden
 #line 168
     testRunner.And("all files should be copied", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -903,35 +903,35 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 173
     testRunner.Given("I own PDF resource \"res-123\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2122 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2085 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2122.AddRow(new string[] {
+                table2085.AddRow(new string[] {
                             "toFormat",
                             "interactive"});
-                table2122.AddRow(new string[] {
+                table2085.AddRow(new string[] {
                             "options",
                             "{\"editable\": true}"});
 #line 174
-    testRunner.When("I send a POST request to \"/api/resources/res-123/convert\" with:", ((string)(null)), table2122, "When ");
+    testRunner.When("I send a POST request to \"/api/resources/res-123/convert\" with:", ((string)(null)), table2085, "When ");
 #line hidden
 #line 178
     testRunner.Then("the response status should be 202", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2123 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2086 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table2123.AddRow(new string[] {
+                table2086.AddRow(new string[] {
                             "jobId",
                             "string"});
-                table2123.AddRow(new string[] {
+                table2086.AddRow(new string[] {
                             "status",
                             "string"});
-                table2123.AddRow(new string[] {
+                table2086.AddRow(new string[] {
                             "estimatedTime",
                             "number"});
 #line 179
-    testRunner.And("the response should contain:", ((string)(null)), table2123, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table2086, "And ");
 #line hidden
 #line 184
     testRunner.And("conversion job should be queued", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -978,26 +978,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 191
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2124 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2087 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table2124.AddRow(new string[] {
+                table2087.AddRow(new string[] {
                             "spellCheck",
                             "object"});
-                table2124.AddRow(new string[] {
+                table2087.AddRow(new string[] {
                             "readabilityScore",
                             "number"});
-                table2124.AddRow(new string[] {
+                table2087.AddRow(new string[] {
                             "accessibility",
                             "object"});
-                table2124.AddRow(new string[] {
+                table2087.AddRow(new string[] {
                             "clinicalAccuracy",
                             "object"});
-                table2124.AddRow(new string[] {
+                table2087.AddRow(new string[] {
                             "suggestions",
                             "array"});
 #line 192
-    testRunner.And("the response should contain:", ((string)(null)), table2124, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table2087, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1032,38 +1032,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2125 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2088 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2125.AddRow(new string[] {
+                table2088.AddRow(new string[] {
                             "source",
                             "google-drive"});
-                table2125.AddRow(new string[] {
+                table2088.AddRow(new string[] {
                             "folderId",
                             "1234567890"});
-                table2125.AddRow(new string[] {
+                table2088.AddRow(new string[] {
                             "mapping",
                             "{\"title\": \"name\", \"tags\": \"labels\"}"});
 #line 203
-    testRunner.When("I send a POST request to \"/api/resources/import\" with:", ((string)(null)), table2125, "When ");
+    testRunner.When("I send a POST request to \"/api/resources/import\" with:", ((string)(null)), table2088, "When ");
 #line hidden
 #line 208
     testRunner.Then("the response status should be 202", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2126 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2089 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table2126.AddRow(new string[] {
+                table2089.AddRow(new string[] {
                             "importId",
                             "string"});
-                table2126.AddRow(new string[] {
+                table2089.AddRow(new string[] {
                             "status",
                             "string"});
-                table2126.AddRow(new string[] {
+                table2089.AddRow(new string[] {
                             "itemCount",
                             "number"});
 #line 209
-    testRunner.And("the response should contain:", ((string)(null)), table2126, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table2089, "And ");
 #line hidden
 #line 214
     testRunner.And("import job should be initiated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1104,20 +1104,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 219
     testRunner.Given("I own resource \"res-123\" in English", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2127 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2090 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2127.AddRow(new string[] {
+                table2090.AddRow(new string[] {
                             "language",
                             "es"});
-                table2127.AddRow(new string[] {
+                table2090.AddRow(new string[] {
                             "title",
                             "Hojas de Trazado de Motricidad Fina"});
-                table2127.AddRow(new string[] {
+                table2090.AddRow(new string[] {
                             "description",
                             "Actividades de trazado apropiadas para la edad"});
 #line 220
-    testRunner.When("I send a POST request to \"/api/resources/res-123/translations\" with:", ((string)(null)), table2127, "When ");
+    testRunner.When("I send a POST request to \"/api/resources/res-123/translations\" with:", ((string)(null)), table2090, "When ");
 #line hidden
 #line 225
     testRunner.And("I attach file \"trazado-es.pdf\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1167,20 +1167,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 233
     testRunner.Given("resource \"res-123\" exists for typical development", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2128 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2091 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2128.AddRow(new string[] {
+                table2091.AddRow(new string[] {
                             "adaptationType",
                             "autism-friendly"});
-                table2128.AddRow(new string[] {
+                table2091.AddRow(new string[] {
                             "modifications",
                             "[\"visual-supports\", \"simplified-language\"]"});
-                table2128.AddRow(new string[] {
+                table2091.AddRow(new string[] {
                             "notes",
                             "Added visual schedule and reduced text"});
 #line 234
-    testRunner.When("I send a POST request to \"/api/resources/res-123/clinical-adaptation\" with:", ((string)(null)), table2128, "When ");
+    testRunner.When("I send a POST request to \"/api/resources/res-123/clinical-adaptation\" with:", ((string)(null)), table2091, "When ");
 #line hidden
 #line 239
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1227,17 +1227,17 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 246
     testRunner.Given("I own resource \"res-123\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2129 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2092 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2129.AddRow(new string[] {
+                table2092.AddRow(new string[] {
                             "reason",
                             "Outdated clinical guidelines"});
-                table2129.AddRow(new string[] {
+                table2092.AddRow(new string[] {
                             "replacementId",
                             "res-789"});
 #line 247
-    testRunner.When("I send a POST request to \"/api/resources/res-123/archive\" with:", ((string)(null)), table2129, "When ");
+    testRunner.When("I send a POST request to \"/api/resources/res-123/archive\" with:", ((string)(null)), table2092, "When ");
 #line hidden
 #line 251
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

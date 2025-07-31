@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using UPTRMS.Api.Data;
 using UPTRMS.Api.Models.Domain;
-using UPTRMS.Api.Controllers;
+using UPTRMS.Api.Models.DTOs;
 
 namespace UPTRMS.Api.Repositories;
 
@@ -28,7 +28,7 @@ public class ResourceRepository : Repository<Resource>, IResourceRepository
         if (!string.IsNullOrWhiteSpace(searchTerm))
         {
             var loweredSearch = searchTerm.ToLower();
-            query = query.Where(r => 
+            query = query.Where(r =>
                 r.Title.ToLower().Contains(loweredSearch) ||
                 (r.Description != null && r.Description.ToLower().Contains(loweredSearch)));
         }
@@ -206,12 +206,12 @@ public class ResourceRepository : Repository<Resource>, IResourceRepository
     public async Task<ReviewStatisticsDto> GetReviewStatisticsAsync()
     {
         var dbContext = _context as ApplicationDbContext;
-        
+
         // Calculate review statistics based on resources and assignments
         var pendingCount = await _dbSet.CountAsync(r => r.ClinicalReviewStatus == ClinicalReviewStatus.Pending);
         var totalReviewed = await _dbSet.CountAsync(r => r.ClinicalReviewStatus != ClinicalReviewStatus.Pending);
         var approvedCount = await _dbSet.CountAsync(r => r.ClinicalReviewStatus == ClinicalReviewStatus.Approved);
-        
+
         var approvalRate = totalReviewed > 0 ? (double)approvedCount / totalReviewed * 100 : 0;
 
         // Calculate average review time from evaluations if available
@@ -219,8 +219,8 @@ public class ResourceRepository : Repository<Resource>, IResourceRepository
         if (dbContext != null)
         {
             var completedReviews = await dbContext.ReviewEvaluations
-                .Join(dbContext.ReviewAssignments, 
-                    eval => eval.ResourceId, 
+                .Join(dbContext.ReviewAssignments,
+                    eval => eval.ResourceId,
                     assign => assign.ResourceId,
                     (eval, assign) => new { eval.ReviewedAt, assign.AssignedAt })
                 .ToListAsync();
@@ -237,16 +237,24 @@ public class ResourceRepository : Repository<Resource>, IResourceRepository
         if (dbContext != null)
         {
             reviewerWorkload = await dbContext.ReviewAssignments
-                .Where(ra => ra.Status == ReviewAssignmentStatus.Assigned || ra.Status == ReviewAssignmentStatus.InProgress)
+                .Where(ra => ra.Status == ReviewAssignmentStatus.Pending || ra.Status == ReviewAssignmentStatus.InProgress)
                 .GroupBy(ra => ra.ReviewerId)
                 .ToDictionaryAsync(g => g.Key.ToString(), g => g.Count());
         }
 
         return new ReviewStatisticsDto
         {
-            ResourcesInQueue = pendingCount,
-            AverageReviewTimeHours = averageReviewHours,
-            ApprovalRate = approvalRate,
+            Overall = new OverallStatistics
+            {
+                PendingReviews = pendingCount,
+                AvgReviewTimeHours = averageReviewHours
+            },
+            Approval = new ApprovalStatistics
+            {
+                // These would need to be calculated from actual data
+                ApprovedCount = (int)(pendingCount * (approvalRate / 100)),
+                RejectedCount = (int)(pendingCount * ((100 - approvalRate) / 100))
+            },
             ReviewerWorkload = reviewerWorkload
         };
     }

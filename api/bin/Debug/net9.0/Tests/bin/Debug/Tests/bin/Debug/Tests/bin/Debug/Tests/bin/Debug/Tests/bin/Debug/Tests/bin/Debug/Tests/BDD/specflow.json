@@ -1,0 +1,14 @@
+{
+  "bindingCulture": {
+    "language": "en-US"
+  },
+  "runtime": {
+    "missingOrPendingStepsOutcome": "Error",
+    "stopAtFirstError": false
+  },
+  "stepAssemblies": [
+    {
+      "assembly": "TherapyDocs.Api.Tests"
+    }
+  ]
+}

@@ -134,50 +134,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 15
     testRunner.Given("therapy professionals need to work without internet connectivity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1817 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1780 = new TechTalk.SpecFlow.Table(new string[] {
                             "Workflow Type",
                             "Offline Duration",
                             "Data Volume",
                             "Sync Time Target",
                             "Conflict Rate"});
-                table1817.AddRow(new string[] {
+                table1780.AddRow(new string[] {
                             "Session documentation",
                             "8 hours",
                             "50 sessions",
                             "<2 minutes",
                             "<1%"});
-                table1817.AddRow(new string[] {
+                table1780.AddRow(new string[] {
                             "Student assessments",
                             "4 hours",
                             "20 assessments",
                             "<90 seconds",
                             "<0.5%"});
-                table1817.AddRow(new string[] {
+                table1780.AddRow(new string[] {
                             "Resource browsing",
                             "12 hours",
                             "200 resources",
                             "<30 seconds",
                             "N/A"});
-                table1817.AddRow(new string[] {
+                table1780.AddRow(new string[] {
                             "Progress tracking",
                             "24 hours",
                             "100 data points",
                             "<60 seconds",
                             "<2%"});
-                table1817.AddRow(new string[] {
+                table1780.AddRow(new string[] {
                             "Therapy planning",
                             "6 hours",
                             "30 plans",
                             "<45 seconds",
                             "<0.2%"});
-                table1817.AddRow(new string[] {
+                table1780.AddRow(new string[] {
                             "Parent communication",
                             "48 hours",
                             "50 messages",
                             "<15 seconds",
                             "<0.1%"});
 #line 16
-    testRunner.When("offline functionality is tested across workflow types:", ((string)(null)), table1817, "When ");
+    testRunner.When("offline functionality is tested across workflow types:", ((string)(null)), table1780, "When ");
 #line hidden
 #line 24
     testRunner.Then("offline workflows should function identically to online", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -227,50 +227,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 31
     testRunner.Given("offline storage must handle substantial therapy data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1818 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1781 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Type",
                             "Storage Target",
                             "Compression Ratio",
                             "Access Speed",
                             "Cleanup Strategy"});
-                table1818.AddRow(new string[] {
+                table1781.AddRow(new string[] {
                             "Therapy resources",
                             "2GB",
                             "60% reduction",
                             "<100ms",
                             "LRU eviction"});
-                table1818.AddRow(new string[] {
+                table1781.AddRow(new string[] {
                             "Session recordings",
                             "1GB",
                             "80% reduction",
                             "<200ms",
                             "Auto-archive"});
-                table1818.AddRow(new string[] {
+                table1781.AddRow(new string[] {
                             "Student photos",
                             "500MB",
                             "70% reduction",
                             "<50ms",
                             "Manual manage"});
-                table1818.AddRow(new string[] {
+                table1781.AddRow(new string[] {
                             "Assessment data",
                             "200MB",
                             "40% reduction",
                             "<25ms",
                             "Never delete"});
-                table1818.AddRow(new string[] {
+                table1781.AddRow(new string[] {
                             "Cached API responses",
                             "300MB",
                             "50% reduction",
                             "<10ms",
                             "TTL-based"});
-                table1818.AddRow(new string[] {
+                table1781.AddRow(new string[] {
                             "User preferences",
                             "10MB",
                             "30% reduction",
                             "<5ms",
                             "Version-based"});
 #line 32
-    testRunner.When("offline storage performance is tested:", ((string)(null)), table1818, "When ");
+    testRunner.When("offline storage performance is tested:", ((string)(null)), table1781, "When ");
 #line hidden
 #line 40
     testRunner.Then("offline storage should be efficient and fast", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -320,50 +320,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 47
     testRunner.Given("incremental sync minimizes data transfer and time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1819 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1782 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sync Scenario",
                             "Changed Data",
                             "Sync Time Target",
                             "Bandwidth Usage",
                             "Success Rate"});
-                table1819.AddRow(new string[] {
+                table1782.AddRow(new string[] {
                             "Small updates",
                             "<10 records",
                             "<5 seconds",
                             "<1MB",
                             ">99.5%"});
-                table1819.AddRow(new string[] {
+                table1782.AddRow(new string[] {
                             "Medium updates",
                             "10-100 records",
                             "<30 seconds",
                             "<10MB",
                             ">99.0%"});
-                table1819.AddRow(new string[] {
+                table1782.AddRow(new string[] {
                             "Large updates",
                             "100-1000 records",
                             "<2 minutes",
                             "<50MB",
                             ">98.5%"});
-                table1819.AddRow(new string[] {
+                table1782.AddRow(new string[] {
                             "Media sync",
                             "5-20 files",
                             "<5 minutes",
                             "<200MB",
                             ">98.0%"});
-                table1819.AddRow(new string[] {
+                table1782.AddRow(new string[] {
                             "Full resync",
                             "All data",
                             "<10 minutes",
                             "<500MB",
                             ">97.0%"});
-                table1819.AddRow(new string[] {
+                table1782.AddRow(new string[] {
                             "Emergency sync",
                             "Critical only",
                             "<10 seconds",
                             "<5MB",
                             ">99.8%"});
 #line 48
-    testRunner.When("incremental synchronization is tested:", ((string)(null)), table1819, "When ");
+    testRunner.When("incremental synchronization is tested:", ((string)(null)), table1782, "When ");
 #line hidden
 #line 56
     testRunner.Then("incremental sync should minimize transfer time and data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -413,50 +413,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 63
     testRunner.Given("simultaneous editing may create conflicts requiring resolution", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1820 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1783 = new TechTalk.SpecFlow.Table(new string[] {
                             "Conflict Type",
                             "Resolution Strategy",
                             "Resolution Time",
                             "Accuracy Target",
                             "User Intervention"});
-                table1820.AddRow(new string[] {
+                table1783.AddRow(new string[] {
                             "Concurrent edits",
                             "Last-write-wins",
                             "<2 seconds",
                             ">95%",
                             "Notification only"});
-                table1820.AddRow(new string[] {
+                table1783.AddRow(new string[] {
                             "Schema conflicts",
                             "Migration rules",
                             "<10 seconds",
                             ">99%",
                             "Automatic"});
-                table1820.AddRow(new string[] {
+                table1783.AddRow(new string[] {
                             "Timestamp issues",
                             "Server authority",
                             "<1 second",
                             ">99.5%",
                             "None required"});
-                table1820.AddRow(new string[] {
+                table1783.AddRow(new string[] {
                             "Data integrity",
                             "Validation rules",
                             "<5 seconds",
                             ">99.8%",
                             "Error reporting"});
-                table1820.AddRow(new string[] {
+                table1783.AddRow(new string[] {
                             "Version conflicts",
                             "Three-way merge",
                             "<15 seconds",
                             ">90%",
                             "User choice"});
-                table1820.AddRow(new string[] {
+                table1783.AddRow(new string[] {
                             "Duplicate records",
                             "Deduplication",
                             "<3 seconds",
                             ">98%",
                             "Merge options"});
 #line 64
-    testRunner.When("conflict resolution is tested across scenario types:", ((string)(null)), table1820, "When ");
+    testRunner.When("conflict resolution is tested across scenario types:", ((string)(null)), table1783, "When ");
 #line hidden
 #line 72
     testRunner.Then("conflicts should be resolved quickly and accurately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -506,50 +506,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 79
     testRunner.Given("network connectivity changes frequently in mobile environments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1821 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1784 = new TechTalk.SpecFlow.Table(new string[] {
                             "Transition Scenario",
                             "Detection Time",
                             "Mode Switch Time",
                             "Data Preservation",
                             "User Experience"});
-                table1821.AddRow(new string[] {
+                table1784.AddRow(new string[] {
                             "Online to offline",
                             "<2 seconds",
                             "<1 second",
                             "100%",
                             "Seamless"});
-                table1821.AddRow(new string[] {
+                table1784.AddRow(new string[] {
                             "Offline to online",
                             "<3 seconds",
                             "<2 seconds",
                             "100%",
                             "Auto-sync start"});
-                table1821.AddRow(new string[] {
+                table1784.AddRow(new string[] {
                             "Intermittent drops",
                             "<1 second",
                             "<500ms",
                             "100%",
                             "Queue operations"});
-                table1821.AddRow(new string[] {
+                table1784.AddRow(new string[] {
                             "Slow connection",
                             "<5 seconds",
                             "<3 seconds",
                             "100%",
                             "Adaptive mode"});
-                table1821.AddRow(new string[] {
+                table1784.AddRow(new string[] {
                             "WiFi to cellular",
                             "<4 seconds",
                             "<2 seconds",
                             "100%",
                             "Transparent"});
-                table1821.AddRow(new string[] {
+                table1784.AddRow(new string[] {
                             "Connection restored",
                             "<1 second",
                             "<500ms",
                             "100%",
                             "Immediate sync"});
 #line 80
-    testRunner.When("network transition performance is tested:", ((string)(null)), table1821, "When ");
+    testRunner.When("network transition performance is tested:", ((string)(null)), table1784, "When ");
 #line hidden
 #line 88
     testRunner.Then("network transitions should be detected quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -599,44 +599,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 96
     testRunner.Given("users should control what data syncs in different contexts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1822 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1785 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sync Priority Level",
                             "Data Types",
                             "Sync Order",
                             "Time Allocation",
                             "Bandwidth Usage"});
-                table1822.AddRow(new string[] {
+                table1785.AddRow(new string[] {
                             "Critical (immediate)",
                             "Active sessions, alerts",
                             "1st",
                             "30% of time",
                             "20% of bandwidth"});
-                table1822.AddRow(new string[] {
+                table1785.AddRow(new string[] {
                             "High (urgent)",
                             "Recent changes, messages",
                             "2nd",
                             "40% of time",
                             "40% of bandwidth"});
-                table1822.AddRow(new string[] {
+                table1785.AddRow(new string[] {
                             "Medium (important)",
                             "Resources, assessments",
                             "3rd",
                             "20% of time",
                             "30% of bandwidth"});
-                table1822.AddRow(new string[] {
+                table1785.AddRow(new string[] {
                             "Low (background)",
                             "Archives, analytics",
                             "4th",
                             "10% of time",
                             "10% of bandwidth"});
-                table1822.AddRow(new string[] {
+                table1785.AddRow(new string[] {
                             "On-demand only",
                             "Large media, backups",
                             "Manual",
                             "User-triggered",
                             "User-controlled"});
 #line 97
-    testRunner.When("selective sync performance is tested:", ((string)(null)), table1822, "When ");
+    testRunner.When("selective sync performance is tested:", ((string)(null)), table1785, "When ");
 #line hidden
 #line 104
     testRunner.Then("sync prioritization should optimize for user needs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -686,50 +686,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 111
     testRunner.Given("therapy resources include large media files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1823 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1786 = new TechTalk.SpecFlow.Table(new string[] {
                             "File Type",
                             "Size Range",
                             "Sync Strategy",
                             "Progress Tracking",
                             "Resumability"});
-                table1823.AddRow(new string[] {
+                table1786.AddRow(new string[] {
                             "Therapy videos",
                             "50-500MB",
                             "Chunked upload",
                             "Real-time",
                             "Full resume"});
-                table1823.AddRow(new string[] {
+                table1786.AddRow(new string[] {
                             "Assessment recordings",
                             "10-100MB",
                             "Background sync",
                             "Progress bar",
                             "Auto-resume"});
-                table1823.AddRow(new string[] {
+                table1786.AddRow(new string[] {
                             "Resource bundles",
                             "20-200MB",
                             "Delta sync",
                             "Percentage",
                             "Chunk-level"});
-                table1823.AddRow(new string[] {
+                table1786.AddRow(new string[] {
                             "Student portfolios",
                             "5-50MB",
                             "Compressed sync",
                             "File count",
                             "File-level"});
-                table1823.AddRow(new string[] {
+                table1786.AddRow(new string[] {
                             "Backup archives",
                             "100MB-1GB",
                             "Scheduled sync",
                             "ETA display",
                             "Full resume"});
-                table1823.AddRow(new string[] {
+                table1786.AddRow(new string[] {
                             "Media libraries",
                             "500MB-2GB",
                             "Selective sync",
                             "Detailed status",
                             "Intelligent"});
 #line 112
-    testRunner.When("large file sync performance is tested:", ((string)(null)), table1823, "When ");
+    testRunner.When("large file sync performance is tested:", ((string)(null)), table1786, "When ");
 #line hidden
 #line 120
     testRunner.Then("large files should sync efficiently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -779,44 +779,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 127
     testRunner.Given("therapy professionals use multiple devices", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1824 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1787 = new TechTalk.SpecFlow.Table(new string[] {
                             "Device Combination",
                             "Sync Complexity",
                             "Conflict Potential",
                             "Resolution Time",
                             "Consistency"});
-                table1824.AddRow(new string[] {
+                table1787.AddRow(new string[] {
                             "Phone + Tablet",
                             "Medium",
                             "Low",
                             "<30 seconds",
                             "Eventually"});
-                table1824.AddRow(new string[] {
+                table1787.AddRow(new string[] {
                             "Laptop + Phone",
                             "High",
                             "Medium",
                             "<60 seconds",
                             "Strong"});
-                table1824.AddRow(new string[] {
+                table1787.AddRow(new string[] {
                             "Multiple tablets",
                             "High",
                             "High",
                             "<90 seconds",
                             "Eventually"});
-                table1824.AddRow(new string[] {
+                table1787.AddRow(new string[] {
                             "Shared workstation",
                             "Very High",
                             "Very High",
                             "<2 minutes",
                             "Transactional"});
-                table1824.AddRow(new string[] {
+                table1787.AddRow(new string[] {
                             "Team collaboration",
                             "Complex",
                             "Managed",
                             "<5 minutes",
                             "Coordinated"});
 #line 128
-    testRunner.When("multi-device sync performance is tested:", ((string)(null)), table1824, "When ");
+    testRunner.When("multi-device sync performance is tested:", ((string)(null)), table1787, "When ");
 #line hidden
 #line 135
     testRunner.Then("multi-device sync should maintain consistency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -866,44 +866,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 142
     testRunner.Given("offline functionality should preserve battery life", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1825 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1788 = new TechTalk.SpecFlow.Table(new string[] {
                             "Offline Activity",
                             "Battery Target",
                             "CPU Usage",
                             "Background Tasks",
                             "Power Saving"});
-                table1825.AddRow(new string[] {
+                table1788.AddRow(new string[] {
                             "Reading resources",
                             "<5%/hour",
                             "<10%",
                             "Minimal",
                             "Aggressive"});
-                table1825.AddRow(new string[] {
+                table1788.AddRow(new string[] {
                             "Data entry",
                             "<8%/hour",
                             "<15%",
                             "Sync queue only",
                             "Standard"});
-                table1825.AddRow(new string[] {
+                table1788.AddRow(new string[] {
                             "Media playback",
                             "<12%/hour",
                             "<25%",
                             "Essential only",
                             "Balanced"});
-                table1825.AddRow(new string[] {
+                table1788.AddRow(new string[] {
                             "Assessment tools",
                             "<6%/hour",
                             "<12%",
                             "Progress save",
                             "Adaptive"});
-                table1825.AddRow(new string[] {
+                table1788.AddRow(new string[] {
                             "Idle offline",
                             "<1%/hour",
                             "<3%",
                             "Maintenance",
                             "Maximum saving"});
 #line 143
-    testRunner.When("battery optimization is tested during offline usage:", ((string)(null)), table1825, "When ");
+    testRunner.When("battery optimization is tested during offline usage:", ((string)(null)), table1788, "When ");
 #line hidden
 #line 150
     testRunner.Then("offline battery usage should be optimized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -953,38 +953,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 158
     testRunner.Given("sync must work reliably even with poor connectivity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1826 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1789 = new TechTalk.SpecFlow.Table(new string[] {
                             "Network Condition",
                             "Adaptation Strategy",
                             "Sync Success Rate",
                             "Retry Strategy"});
-                table1826.AddRow(new string[] {
+                table1789.AddRow(new string[] {
                             "High latency (>1s)",
                             "Larger chunks, timeouts",
                             ">90%",
                             "Exponential backoff"});
-                table1826.AddRow(new string[] {
+                table1789.AddRow(new string[] {
                             "Low bandwidth",
                             "Compression, prioritization",
                             ">85%",
                             "Adaptive retry"});
-                table1826.AddRow(new string[] {
+                table1789.AddRow(new string[] {
                             "Packet loss (5-15%)",
                             "Error correction, retries",
                             ">80%",
                             "Aggressive retry"});
-                table1826.AddRow(new string[] {
+                table1789.AddRow(new string[] {
                             "Intermittent drops",
                             "Queue and retry",
                             ">95%",
                             "Smart retry"});
-                table1826.AddRow(new string[] {
+                table1789.AddRow(new string[] {
                             "Metered connection",
                             "Data-aware sync",
                             ">90%",
                             "User-controlled"});
 #line 159
-    testRunner.When("sync performance is tested under adverse conditions:", ((string)(null)), table1826, "When ");
+    testRunner.When("sync performance is tested under adverse conditions:", ((string)(null)), table1789, "When ");
 #line hidden
 #line 166
     testRunner.Then("sync should adapt to network conditions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1034,44 +1034,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 173
     testRunner.Given("multiple therapists may sync simultaneously", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1827 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1790 = new TechTalk.SpecFlow.Table(new string[] {
                             "Concurrent Users",
                             "Server Load",
                             "Individual Sync Time",
                             "Overall Throughput",
                             "Fairness"});
-                table1827.AddRow(new string[] {
+                table1790.AddRow(new string[] {
                             "10 users",
                             "Light",
                             "<30 seconds",
                             "10 syncs/minute",
                             "Equal priority"});
-                table1827.AddRow(new string[] {
+                table1790.AddRow(new string[] {
                             "50 users",
                             "Moderate",
                             "<60 seconds",
                             "40 syncs/minute",
                             "Queue-based"});
-                table1827.AddRow(new string[] {
+                table1790.AddRow(new string[] {
                             "100 users",
                             "Heavy",
                             "<2 minutes",
                             "60 syncs/minute",
                             "Priority-based"});
-                table1827.AddRow(new string[] {
+                table1790.AddRow(new string[] {
                             "500 users",
                             "Peak",
                             "<5 minutes",
                             "150 syncs/minute",
                             "Load balancing"});
-                table1827.AddRow(new string[] {
+                table1790.AddRow(new string[] {
                             "1000+ users",
                             "Stress",
                             "<10 minutes",
                             "200 syncs/minute",
                             "Rate limiting"});
 #line 174
-    testRunner.When("concurrent sync performance is tested:", ((string)(null)), table1827, "When ");
+    testRunner.When("concurrent sync performance is tested:", ((string)(null)), table1790, "When ");
 #line hidden
 #line 181
     testRunner.Then("concurrent sync should scale efficiently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1123,33 +1123,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 189
     testRunner.Given("mobile devices have limited storage capacity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1828 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1791 = new TechTalk.SpecFlow.Table(new string[] {
                             "Storage Situation",
                             "Available Space",
                             "Response Strategy",
                             "Data Priority"});
-                table1828.AddRow(new string[] {
+                table1791.AddRow(new string[] {
                             "Nearly full (90%)",
                             "100MB",
                             "Cleanup old cache",
                             "Keep recent data"});
-                table1828.AddRow(new string[] {
+                table1791.AddRow(new string[] {
                             "Critical (95%)",
                             "50MB",
                             "Archive older data",
                             "Essential data only"});
-                table1828.AddRow(new string[] {
+                table1791.AddRow(new string[] {
                             "Emergency (98%)",
                             "20MB",
                             "Aggressive cleanup",
                             "Critical data only"});
-                table1828.AddRow(new string[] {
+                table1791.AddRow(new string[] {
                             "Full (99%+)",
                             "<10MB",
                             "Block new data",
                             "Preserve existing"});
 #line 190
-    testRunner.When("storage exhaustion scenarios are tested:", ((string)(null)), table1828, "When ");
+    testRunner.When("storage exhaustion scenarios are tested:", ((string)(null)), table1791, "When ");
 #line hidden
 #line 196
     testRunner.Then("storage management should prevent data loss", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1201,38 +1201,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 203
     testRunner.Given("sync operations may fail for various reasons", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1829 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1792 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failure Type",
                             "Failure Rate",
                             "Recovery Strategy",
                             "Data Protection"});
-                table1829.AddRow(new string[] {
+                table1792.AddRow(new string[] {
                             "Network timeout",
                             "5-10%",
                             "Automatic retry",
                             "Queue for retry"});
-                table1829.AddRow(new string[] {
+                table1792.AddRow(new string[] {
                             "Server errors",
                             "2-5%",
                             "Exponential backoff",
                             "Preserve locally"});
-                table1829.AddRow(new string[] {
+                table1792.AddRow(new string[] {
                             "Authentication",
                             "1-2%",
                             "Re-authenticate",
                             "Secure queue"});
-                table1829.AddRow(new string[] {
+                table1792.AddRow(new string[] {
                             "Data corruption",
                             "<0.1%",
                             "Request fresh copy",
                             "Backup validation"});
-                table1829.AddRow(new string[] {
+                table1792.AddRow(new string[] {
                             "Version conflicts",
                             "1-3%",
                             "Conflict resolution",
                             "Merge strategies"});
 #line 204
-    testRunner.When("sync failure scenarios are tested:", ((string)(null)), table1829, "When ");
+    testRunner.When("sync failure scenarios are tested:", ((string)(null)), table1792, "When ");
 #line hidden
 #line 211
     testRunner.Then("sync failures should be handled gracefully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1284,38 +1284,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 218
     testRunner.Given("offline data may become corrupted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1830 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1793 = new TechTalk.SpecFlow.Table(new string[] {
                             "Corruption Type",
                             "Detection Method",
                             "Recovery Strategy",
                             "Recovery Time"});
-                table1830.AddRow(new string[] {
+                table1793.AddRow(new string[] {
                             "File corruption",
                             "Checksum validation",
                             "Download fresh copy",
                             "<2 minutes"});
-                table1830.AddRow(new string[] {
+                table1793.AddRow(new string[] {
                             "Database corruption",
                             "Integrity checks",
                             "Rebuild from sync",
                             "<10 minutes"});
-                table1830.AddRow(new string[] {
+                table1793.AddRow(new string[] {
                             "Index corruption",
                             "Query failures",
                             "Rebuild indexes",
                             "<5 minutes"});
-                table1830.AddRow(new string[] {
+                table1793.AddRow(new string[] {
                             "Partial writes",
                             "Transaction logs",
                             "Rollback and retry",
                             "<1 minute"});
-                table1830.AddRow(new string[] {
+                table1793.AddRow(new string[] {
                             "Storage errors",
                             "System monitoring",
                             "Migrate to safe area",
                             "<30 seconds"});
 #line 219
-    testRunner.When("data corruption scenarios are tested:", ((string)(null)), table1830, "When ");
+    testRunner.When("data corruption scenarios are tested:", ((string)(null)), table1793, "When ");
 #line hidden
 #line 226
     testRunner.Then("corruption should be detected quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1367,38 +1367,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 233
     testRunner.Given("multiple editing sessions may create complex conflicts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1831 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1794 = new TechTalk.SpecFlow.Table(new string[] {
                             "Conflict Complexity",
                             "Conflict Details",
                             "Resolution Method",
                             "User Involvement"});
-                table1831.AddRow(new string[] {
+                table1794.AddRow(new string[] {
                             "Simple field change",
                             "Single field modified",
                             "Automatic merge",
                             "None required"});
-                table1831.AddRow(new string[] {
+                table1794.AddRow(new string[] {
                             "Multiple fields",
                             "Several fields changed",
                             "Field-level merge",
                             "Optional review"});
-                table1831.AddRow(new string[] {
+                table1794.AddRow(new string[] {
                             "Structural changes",
                             "Schema or format changes",
                             "Migration required",
                             "Automatic with log"});
-                table1831.AddRow(new string[] {
+                table1794.AddRow(new string[] {
                             "Deletion conflicts",
                             "Delete vs modify conflict",
                             "User choice",
                             "Required decision"});
-                table1831.AddRow(new string[] {
+                table1794.AddRow(new string[] {
                             "Circular references",
                             "Complex relationship loops",
                             "Analysis required",
                             "Expert resolution"});
 #line 234
-    testRunner.When("complex conflict scenarios are tested:", ((string)(null)), table1831, "When ");
+    testRunner.When("complex conflict scenarios are tested:", ((string)(null)), table1794, "When ");
 #line hidden
 #line 241
     testRunner.Then("conflicts should be categorized by complexity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1450,38 +1450,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 248
     testRunner.Given("sync operations may be interrupted unexpectedly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1832 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1795 = new TechTalk.SpecFlow.Table(new string[] {
                             "Interruption Cause",
                             "Interruption Point",
                             "Recovery Strategy",
                             "Data Consistency"});
-                table1832.AddRow(new string[] {
+                table1795.AddRow(new string[] {
                             "App termination",
                             "Mid-transfer",
                             "Resume from checkpoint",
                             "Maintain"});
-                table1832.AddRow(new string[] {
+                table1795.AddRow(new string[] {
                             "Device shutdown",
                             "During upload",
                             "Queue for restart",
                             "Preserve"});
-                table1832.AddRow(new string[] {
+                table1795.AddRow(new string[] {
                             "Network loss",
                             "Partial sync",
                             "Resume delta sync",
                             "Validate"});
-                table1832.AddRow(new string[] {
+                table1795.AddRow(new string[] {
                             "Low battery",
                             "Background sync",
                             "Defer to charge",
                             "Safe state"});
-                table1832.AddRow(new string[] {
+                table1795.AddRow(new string[] {
                             "Storage full",
                             "Cache write",
                             "Clear space first",
                             "Rollback"});
 #line 249
-    testRunner.When("sync interruption scenarios are tested:", ((string)(null)), table1832, "When ");
+    testRunner.When("sync interruption scenarios are tested:", ((string)(null)), table1795, "When ");
 #line hidden
 #line 256
     testRunner.Then("sync interruptions should be detected immediately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

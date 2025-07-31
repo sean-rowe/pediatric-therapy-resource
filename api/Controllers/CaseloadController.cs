@@ -1,10 +1,9 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
-using UPTRMS.Api.Data;
 using UPTRMS.Api.Models.Domain;
 using UPTRMS.Api.Models.DTOs;
+using UPTRMS.Api.Repositories;
 
 namespace UPTRMS.Api.Controllers;
 
@@ -13,12 +12,14 @@ namespace UPTRMS.Api.Controllers;
 [Authorize(Policy = "TherapistOnly")]
 public class CaseloadController : ControllerBase
 {
-    private readonly ApplicationDbContext _context;
+    private readonly IStudentRepository _studentRepository;
+    private readonly ISessionRepository _sessionRepository;
     private readonly ILogger<CaseloadController> _logger;
 
-    public CaseloadController(ApplicationDbContext context, ILogger<CaseloadController> logger)
+    public CaseloadController(IStudentRepository studentRepository, ISessionRepository sessionRepository, ILogger<CaseloadController> logger)
     {
-        _context = context;
+        _studentRepository = studentRepository;
+        _sessionRepository = sessionRepository;
         _logger = logger;
     }
 
@@ -28,30 +29,28 @@ public class CaseloadController : ControllerBase
         try
         {
             var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
-            
-            var activeStudents = await _context.Students
-                .Where(s => s.TherapistId == userId && s.Status == StudentStatus.Active)
-                .CountAsync();
 
-            var scheduledSessions = await _context.Sessions
-                .Where(s => s.TherapistId == userId && 
-                       s.Status == SessionStatus.Scheduled &&
-                       s.SessionDate >= DateTime.UtcNow.Date)
-                .CountAsync();
+            var students = await _studentRepository.GetByTherapistAsync(userId);
+            var activeStudents = students.Count(s => s.Status == StudentStatus.Active);
+
+            var sessions = await _sessionRepository.GetSessionsAsync(
+                therapistId: userId,
+                startDate: DateTime.UtcNow.Date);
+            var scheduledSessions = sessions.Count(s => s.Status == SessionStatus.Scheduled);
 
             var weekStart = DateTime.UtcNow.Date.AddDays(-(int)DateTime.UtcNow.DayOfWeek);
             var weekEnd = weekStart.AddDays(7);
 
-            var completedThisWeek = await _context.Sessions
-                .Where(s => s.TherapistId == userId && 
-                       s.Status == SessionStatus.Completed &&
-                       s.SessionDate >= weekStart &&
-                       s.SessionDate < weekEnd)
-                .CountAsync();
+            var weekSessions = await _sessionRepository.GetSessionsAsync(
+                therapistId: userId,
+                startDate: weekStart,
+                endDate: weekEnd);
+            var completedThisWeek = weekSessions.Count(s => s.Status == SessionStatus.Completed);
 
-            var goalsProgress = await _context.Set<StudentGoal>()
-                .Where(g => g.Student.TherapistId == userId && g.Status == GoalStatus.Active)
-                .AverageAsync(g => (double?)g.Progress) ?? 0;
+            var goals = await _studentRepository.GetStudentGoalsAsync(
+                therapistId: userId,
+                status: GoalStatus.Active);
+            var goalsProgress = goals.Any() ? goals.Average(g => (double)g.Progress) : 0;
 
             var overview = new CaseloadOverviewDto
             {
@@ -79,50 +78,69 @@ public class CaseloadController : ControllerBase
         try
         {
             var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
-            
-            var query = _context.Students
-                .Include(s => s.Goals)
-                .Include(s => s.Sessions)
-                .Where(s => s.TherapistId == userId);
 
+            var allStudents = await _studentRepository.GetByTherapistAsync(userId);
+            
+            // Apply filters
+            IEnumerable<Student> filteredStudents = allStudents;
+            
             if (status.HasValue)
-                query = query.Where(s => s.Status == status.Value);
+                filteredStudents = filteredStudents.Where(s => s.Status == status.Value);
 
             if (!string.IsNullOrEmpty(search))
             {
                 var searchLower = search.ToLower();
-                query = query.Where(s => 
+                filteredStudents = filteredStudents.Where(s =>
                     s.FirstNameEncrypted.ToLower().Contains(searchLower) ||
                     s.LastNameEncrypted.ToLower().Contains(searchLower));
             }
 
-            var students = await query
-                .Select(s => new CaseloadStudentDto
+            var students = new List<CaseloadStudentDto>();
+            
+            foreach (var student in filteredStudents)
+            {
+                // Get sessions for this student
+                var studentSessions = await _sessionRepository.GetSessionsAsync(
+                    therapistId: userId,
+                    studentId: student.StudentId);
+                    
+                // Get goals for this student
+                var studentGoals = await _studentRepository.GetStudentGoalsAsync(
+                    studentId: student.StudentId,
+                    therapistId: userId);
+                
+                var completedSessions = studentSessions
+                    .Where(sess => sess.Status == SessionStatus.Completed)
+                    .OrderByDescending(sess => sess.SessionDate);
+                    
+                var scheduledSessions = studentSessions
+                    .Where(sess => sess.Status == SessionStatus.Scheduled && sess.SessionDate >= DateTime.UtcNow)
+                    .OrderBy(sess => sess.SessionDate);
+                    
+                var activeGoals = studentGoals.Where(g => g.Status == GoalStatus.Active).ToList();
+                
+                var dto = new CaseloadStudentDto
                 {
-                    StudentId = s.StudentId,
-                    FirstName = s.FirstNameEncrypted,
-                    LastName = s.LastNameEncrypted,
-                    GradeLevel = s.GradeLevel,
-                    Status = s.Status,
-                    LastSessionDate = s.Sessions
-                        .Where(sess => sess.Status == SessionStatus.Completed)
-                        .OrderByDescending(sess => sess.SessionDate)
-                        .Select(sess => (DateTime?)sess.SessionDate)
-                        .FirstOrDefault(),
-                    NextSessionDate = s.Sessions
-                        .Where(sess => sess.Status == SessionStatus.Scheduled && sess.SessionDate >= DateTime.UtcNow)
-                        .OrderBy(sess => sess.SessionDate)
-                        .Select(sess => (DateTime?)sess.SessionDate)
-                        .FirstOrDefault(),
-                    ActiveGoalsCount = s.Goals.Count(g => g.Status == GoalStatus.Active),
-                    AverageGoalProgress = s.Goals
-                        .Where(g => g.Status == GoalStatus.Active)
-                        .Average(g => (decimal?)g.Progress) ?? 0,
-                    HasAlerts = false // TODO: Implement alert logic
-                })
+                    StudentId = student.StudentId,
+                    FirstName = student.FirstNameEncrypted,
+                    LastName = student.LastNameEncrypted,
+                    GradeLevel = student.GradeLevel,
+                    Status = student.Status,
+                    LastSessionDate = completedSessions.Select(s => (DateTime?)s.SessionDate).FirstOrDefault(),
+                    NextSessionDate = scheduledSessions.Select(s => (DateTime?)s.SessionDate).FirstOrDefault(),
+                    ActiveGoalsCount = activeGoals.Count,
+                    AverageGoalProgress = activeGoals.Any() ? activeGoals.Average(g => g.Progress) : 0,
+                    HasAlerts = studentGoals.Any(g => g.TargetDate < DateTime.UtcNow && g.Progress < 100) ||
+                               !studentSessions.Any(sess => sess.SessionDate > DateTime.UtcNow.AddDays(-14) && sess.Status == SessionStatus.Completed)
+                };
+                
+                students.Add(dto);
+            }
+            
+            students = students
                 .OrderBy(s => s.LastName)
                 .ThenBy(s => s.FirstName)
-                .ToListAsync();
+                .ToList();
 
             return Ok(students);
         }
@@ -141,30 +159,35 @@ public class CaseloadController : ControllerBase
         try
         {
             var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
-            
+
             var start = startDate ?? DateTime.UtcNow.Date;
             var end = endDate ?? start.AddDays(7);
 
-            var sessions = await _context.Sessions
-                .Include(s => s.Student)
-                .Where(s => s.TherapistId == userId &&
-                       s.SessionDate >= start &&
-                       s.SessionDate < end)
-                .OrderBy(s => s.SessionDate)
-                .Select(s => new ScheduleItemDto
+            var sessions = await _sessionRepository.GetSessionsAsync(
+                therapistId: userId,
+                startDate: start,
+                endDate: end);
+                
+            var scheduleItems = new List<ScheduleItemDto>();
+            
+            foreach (var session in sessions.OrderBy(s => s.SessionDate))
+            {
+                var student = await _studentRepository.GetByIdAsync(session.StudentId);
+                
+                scheduleItems.Add(new ScheduleItemDto
                 {
-                    SessionId = s.SessionId,
-                    StudentId = s.StudentId,
-                    StudentName = s.Student.FirstNameEncrypted + " " + s.Student.LastNameEncrypted,
-                    SessionDate = s.SessionDate,
-                    DurationMinutes = s.DurationMinutes,
-                    SessionType = s.SessionType,
-                    Status = s.Status,
-                    Location = s.SessionType == SessionType.Teletherapy ? "Virtual" : "In-Person"
-                })
-                .ToListAsync();
+                    SessionId = session.SessionId,
+                    StudentId = session.StudentId,
+                    StudentName = student != null ? $"{student.FirstNameEncrypted} {student.LastNameEncrypted}" : "Unknown",
+                    SessionDate = session.SessionDate,
+                    DurationMinutes = session.DurationMinutes,
+                    SessionType = session.SessionType,
+                    Status = session.Status,
+                    Location = session.SessionType == SessionType.Teletherapy ? "Virtual" : "In-Person"
+                });
+            }
 
-            return Ok(sessions);
+            return Ok(scheduleItems);
         }
         catch (Exception ex)
         {
@@ -181,15 +204,15 @@ public class CaseloadController : ControllerBase
         try
         {
             var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
-            
+
             var start = startDate ?? DateTime.UtcNow.Date.AddDays(-30);
             var end = endDate ?? DateTime.UtcNow.Date.AddDays(1);
 
-            var sessions = await _context.Sessions
-                .Where(s => s.TherapistId == userId &&
-                       s.SessionDate >= start &&
-                       s.SessionDate < end)
-                .ToListAsync();
+            var sessionsEnum = await _sessionRepository.GetSessionsAsync(
+                therapistId: userId,
+                startDate: start,
+                endDate: end);
+            var sessions = sessionsEnum.ToList();
 
             var totalSessions = sessions.Count;
             var completedSessions = sessions.Count(s => s.Status == SessionStatus.Completed);
@@ -228,17 +251,28 @@ public class CaseloadController : ControllerBase
         try
         {
             var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
-            
+
             var alerts = new List<CaseloadAlertDto>();
 
             // Check for students without recent sessions
             var twoWeeksAgo = DateTime.UtcNow.Date.AddDays(-14);
-            var studentsWithoutRecentSessions = await _context.Students
-                .Where(s => s.TherapistId == userId && 
-                       s.Status == StudentStatus.Active &&
-                       !s.Sessions.Any(sess => sess.SessionDate > twoWeeksAgo && sess.Status == SessionStatus.Completed))
-                .Select(s => new { s.StudentId, StudentName = s.FirstNameEncrypted + " " + s.LastNameEncrypted })
-                .ToListAsync();
+            var activeStudents = await _studentRepository.GetByTherapistAsync(userId);
+            activeStudents = activeStudents.Where(s => s.Status == StudentStatus.Active).ToList();
+            
+            var studentsWithoutRecentSessions = new List<dynamic>();
+            
+            foreach (var student in activeStudents)
+            {
+                var recentSessions = await _sessionRepository.GetSessionsAsync(
+                    therapistId: userId,
+                    studentId: student.StudentId,
+                    startDate: twoWeeksAgo);
+                    
+                if (!recentSessions.Any(sess => sess.Status == SessionStatus.Completed))
+                {
+                    studentsWithoutRecentSessions.Add(new { StudentId = student.StudentId, StudentName = $"{student.FirstNameEncrypted} {student.LastNameEncrypted}" });
+                }
+            }
 
             foreach (var student in studentsWithoutRecentSessions)
             {
@@ -255,22 +289,28 @@ public class CaseloadController : ControllerBase
 
             // Check for goals nearing target date
             var thirtyDaysFromNow = DateTime.UtcNow.Date.AddDays(30);
-            var goalsNearingDeadline = await _context.Set<StudentGoal>()
-                .Include(g => g.Student)
-                .Where(g => g.Student.TherapistId == userId &&
-                       g.Status == GoalStatus.Active &&
-                       g.TargetDate.HasValue &&
-                       g.TargetDate.Value <= thirtyDaysFromNow &&
-                       g.Progress < 80)
-                .Select(g => new { 
-                    g.GoalId, 
-                    g.StudentId, 
-                    StudentName = g.Student.FirstNameEncrypted + " " + g.Student.LastNameEncrypted,
-                    g.GoalText,
-                    g.TargetDate,
-                    g.Progress
-                })
-                .ToListAsync();
+            var activeGoals = await _studentRepository.GetStudentGoalsAsync(
+                therapistId: userId,
+                status: GoalStatus.Active);
+                
+            var goalsNearingDeadline = new List<dynamic>();
+            
+            foreach (var goal in activeGoals.Where(g => g.TargetDate <= thirtyDaysFromNow && g.Progress < 80))
+            {
+                var student = await _studentRepository.GetByIdAsync(goal.StudentId);
+                if (student != null)
+                {
+                    goalsNearingDeadline.Add(new
+                    {
+                        GoalId = goal.GoalId,
+                        StudentId = goal.StudentId,
+                        StudentName = $"{student.FirstNameEncrypted} {student.LastNameEncrypted}",
+                        GoalText = goal.GoalText,
+                        TargetDate = goal.TargetDate,
+                        Progress = goal.Progress
+                    });
+                }
+            }
 
             foreach (var goal in goalsNearingDeadline)
             {
@@ -298,11 +338,24 @@ public class CaseloadController : ControllerBase
     {
         // Simplified version - in real implementation would be more comprehensive
         var twoWeeksAgo = DateTime.UtcNow.Date.AddDays(-14);
-        return await _context.Students
-            .Where(s => s.TherapistId == therapistId && 
-                   s.Status == StudentStatus.Active &&
-                   !s.Sessions.Any(sess => sess.SessionDate > twoWeeksAgo && sess.Status == SessionStatus.Completed))
-            .CountAsync();
+        var activeStudents = await _studentRepository.GetByTherapistAsync(therapistId);
+        activeStudents = activeStudents.Where(s => s.Status == StudentStatus.Active).ToList();
+        
+        int count = 0;
+        foreach (var student in activeStudents)
+        {
+            var recentSessions = await _sessionRepository.GetSessionsAsync(
+                therapistId: therapistId,
+                studentId: student.StudentId,
+                startDate: twoWeeksAgo);
+                
+            if (!recentSessions.Any(sess => sess.Status == SessionStatus.Completed))
+            {
+                count++;
+            }
+        }
+        
+        return count;
     }
 }
 

@@ -10,15 +10,31 @@ public class UserRepository : Repository<User>, IUserRepository
     {
     }
 
+    public override async Task<User?> GetByIdAsync(Guid id)
+    {
+        return await _dbSet
+            .Where(u => !u.IsDeleted)
+            .FirstOrDefaultAsync(u => u.UserId == id);
+    }
+
+    public override async Task<IEnumerable<User>> GetAllAsync()
+    {
+        return await _dbSet
+            .Where(u => !u.IsDeleted)
+            .ToListAsync();
+    }
+
     public async Task<User?> GetByEmailAsync(string email)
     {
         return await _dbSet
+            .Where(u => !u.IsDeleted)
             .FirstOrDefaultAsync(u => u.Email == email);
     }
 
     public async Task<User?> GetByIdWithOrganizationAsync(Guid userId)
     {
         return await _dbSet
+            .Where(u => !u.IsDeleted)
             .Include(u => u.Organization)
             .FirstOrDefaultAsync(u => u.UserId == userId);
     }
@@ -26,7 +42,7 @@ public class UserRepository : Repository<User>, IUserRepository
     public async Task<IEnumerable<User>> GetByOrganizationAsync(Guid organizationId)
     {
         return await _dbSet
-            .Where(u => u.OrganizationId == organizationId)
+            .Where(u => !u.IsDeleted && u.OrganizationId == organizationId)
             .OrderBy(u => u.LastName)
             .ThenBy(u => u.FirstName)
             .ToListAsync();
@@ -34,8 +50,8 @@ public class UserRepository : Repository<User>, IUserRepository
 
     public async Task<IEnumerable<User>> GetSellersAsync(bool approvedOnly = true)
     {
-        var query = _dbSet.AsQueryable();
-        
+        var query = _dbSet.Where(u => !u.IsDeleted);
+
         if (approvedOnly)
         {
             query = query.Where(u => u.IsSellerApproved);
@@ -53,8 +69,8 @@ public class UserRepository : Repository<User>, IUserRepository
 
     public async Task<bool> IsEmailUniqueAsync(string email, Guid? excludeUserId = null)
     {
-        var query = _dbSet.Where(u => u.Email == email);
-        
+        var query = _dbSet.Where(u => !u.IsDeleted && u.Email == email);
+
         if (excludeUserId.HasValue)
         {
             query = query.Where(u => u.UserId != excludeUserId.Value);
@@ -66,13 +82,13 @@ public class UserRepository : Repository<User>, IUserRepository
     public async Task<IEnumerable<User>> SearchUsersAsync(string searchTerm, int skip = 0, int take = 20)
     {
         var loweredSearch = searchTerm.ToLower();
-        
+
         return await _dbSet
-            .Where(u => 
+            .Where(u => !u.IsDeleted && (
                 u.Email.ToLower().Contains(loweredSearch) ||
                 u.FirstName.ToLower().Contains(loweredSearch) ||
                 u.LastName.ToLower().Contains(loweredSearch) ||
-                (u.LicenseNumber != null && u.LicenseNumber.ToLower().Contains(loweredSearch)))
+                (u.LicenseNumber != null && u.LicenseNumber.ToLower().Contains(loweredSearch))))
             .OrderBy(u => u.LastName)
             .ThenBy(u => u.FirstName)
             .Skip(skip)

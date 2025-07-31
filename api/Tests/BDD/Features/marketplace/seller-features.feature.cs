@@ -126,26 +126,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 14
     testRunner.Given("I want to sell my therapy resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1700 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1663 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table1700.AddRow(new string[] {
+                table1663.AddRow(new string[] {
                             "Professional License",
                             "SLP-54321"});
-                table1700.AddRow(new string[] {
+                table1663.AddRow(new string[] {
                             "Years of Experience",
                             "8"});
-                table1700.AddRow(new string[] {
+                table1663.AddRow(new string[] {
                             "Specialty Areas",
                             "Autism, Apraxia"});
-                table1700.AddRow(new string[] {
+                table1663.AddRow(new string[] {
                             "Sample Work",
                             "3 resource files uploaded"});
-                table1700.AddRow(new string[] {
+                table1663.AddRow(new string[] {
                             "Tax Information",
                             "W-9 completed"});
 #line 15
-    testRunner.When("I apply to become a seller with:", ((string)(null)), table1700, "When ");
+    testRunner.When("I apply to become a seller with:", ((string)(null)), table1663, "When ");
 #line hidden
 #line 22
     testRunner.Then("my application should be reviewed within 48 hours", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -187,29 +187,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 28
     testRunner.Given("I am an approved seller", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1701 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1664 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table1701.AddRow(new string[] {
+                table1664.AddRow(new string[] {
                             "Title",
                             "Sensory Diet Visual Cards - School Edition"});
-                table1701.AddRow(new string[] {
+                table1664.AddRow(new string[] {
                             "Category",
                             "Sensory Integration"});
-                table1701.AddRow(new string[] {
+                table1664.AddRow(new string[] {
                             "Age Range",
                             "5-12 years"});
-                table1701.AddRow(new string[] {
+                table1664.AddRow(new string[] {
                             "Price",
                             "$12.99"});
-                table1701.AddRow(new string[] {
+                table1664.AddRow(new string[] {
                             "License Type",
                             "Single classroom use"});
-                table1701.AddRow(new string[] {
+                table1664.AddRow(new string[] {
                             "Preview Images",
                             "5 sample cards uploaded"});
 #line 29
-    testRunner.When("I create a new product listing:", ((string)(null)), table1701, "When ");
+    testRunner.When("I create a new product listing:", ((string)(null)), table1664, "When ");
 #line hidden
 #line 37
     testRunner.And("the resource passes clinical review", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -254,26 +254,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 44
     testRunner.Given("I am an approved seller with products", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1702 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1665 = new TechTalk.SpecFlow.Table(new string[] {
                             "Feature",
                             "Configuration"});
-                table1702.AddRow(new string[] {
+                table1665.AddRow(new string[] {
                             "Store Name",
                             "Sarah\'s Speech Resources"});
-                table1702.AddRow(new string[] {
+                table1665.AddRow(new string[] {
                             "Banner Image",
                             "custom-banner.jpg"});
-                table1702.AddRow(new string[] {
+                table1665.AddRow(new string[] {
                             "Bio",
                             "10 years helping children communicate"});
-                table1702.AddRow(new string[] {
+                table1665.AddRow(new string[] {
                             "Categories",
                             "Articulation, Language, Social Skills"});
-                table1702.AddRow(new string[] {
+                table1665.AddRow(new string[] {
                             "Featured Items",
                             "Top 5 bestsellers"});
 #line 45
-    testRunner.When("I customize my storefront:", ((string)(null)), table1702, "When ");
+    testRunner.When("I customize my storefront:", ((string)(null)), table1665, "When ");
 #line hidden
 #line 52
     testRunner.Then("my storefront should display at \"/store/sarahs-speech\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -321,36 +321,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 60
     testRunner.When("I access my seller dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1703 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1666 = new TechTalk.SpecFlow.Table(new string[] {
                             "Metric",
                             "Time Period",
                             "Data"});
-                table1703.AddRow(new string[] {
+                table1666.AddRow(new string[] {
                             "Total Sales",
                             "This month",
                             "$1,247.50"});
-                table1703.AddRow(new string[] {
+                table1666.AddRow(new string[] {
                             "Units Sold",
                             "This month",
                             "96"});
-                table1703.AddRow(new string[] {
+                table1666.AddRow(new string[] {
                             "Conversion Rate",
                             "This month",
                             "3.2%"});
-                table1703.AddRow(new string[] {
+                table1666.AddRow(new string[] {
                             "Most Popular Product",
                             "All time",
                             "\"AAC First Words\""});
-                table1703.AddRow(new string[] {
+                table1666.AddRow(new string[] {
                             "Customer Geography",
                             "This month",
                             "US(72%), CA(15%), UK(13%)"});
-                table1703.AddRow(new string[] {
+                table1666.AddRow(new string[] {
                             "Average Rating",
                             "All time",
                             "4.7/5 (127 reviews)"});
 #line 61
-    testRunner.Then("I should see analytics including:", ((string)(null)), table1703, "Then ");
+    testRunner.Then("I should see analytics including:", ((string)(null)), table1666, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -386,20 +386,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 73
     testRunner.Given("I have multiple related products", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1704 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1667 = new TechTalk.SpecFlow.Table(new string[] {
                             "Bundle Name",
                             "Comprehensive Articulation Set"});
-                table1704.AddRow(new string[] {
+                table1667.AddRow(new string[] {
                             "Products Included",
                             "R cards, S cards, L cards"});
-                table1704.AddRow(new string[] {
+                table1667.AddRow(new string[] {
                             "Bundle Price",
                             "$29.99 (reg $38.97)"});
-                table1704.AddRow(new string[] {
+                table1667.AddRow(new string[] {
                             "Savings",
                             "23%"});
 #line 74
-    testRunner.When("I create a bundle:", ((string)(null)), table1704, "When ");
+    testRunner.When("I create a bundle:", ((string)(null)), table1667, "When ");
 #line hidden
 #line 79
     testRunner.Then("the bundle should appear as a single purchase option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -441,26 +441,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 85
     testRunner.Given("I want to boost sales for Back-to-School", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1705 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1668 = new TechTalk.SpecFlow.Table(new string[] {
                             "Promotion Type",
                             "Percentage Discount"});
-                table1705.AddRow(new string[] {
+                table1668.AddRow(new string[] {
                             "Discount Amount",
                             "25%"});
-                table1705.AddRow(new string[] {
+                table1668.AddRow(new string[] {
                             "Start Date",
                             "August 15"});
-                table1705.AddRow(new string[] {
+                table1668.AddRow(new string[] {
                             "End Date",
                             "September 15"});
-                table1705.AddRow(new string[] {
+                table1668.AddRow(new string[] {
                             "Applicable Items",
                             "All products"});
-                table1705.AddRow(new string[] {
+                table1668.AddRow(new string[] {
                             "Promo Code",
                             "BACKTOSCHOOL25"});
 #line 86
-    testRunner.When("I create a promotion:", ((string)(null)), table1705, "When ");
+    testRunner.When("I create a promotion:", ((string)(null)), table1668, "When ");
 #line hidden
 #line 93
     testRunner.Then("the sale should activate automatically on the start date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -502,14 +502,14 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 99
     testRunner.Given("a customer asked about \"AAC Board Customization\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1706 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1669 = new TechTalk.SpecFlow.Table(new string[] {
                             "Question",
                             "Can I add my student\'s favorite items?"});
-                table1706.AddRow(new string[] {
+                table1669.AddRow(new string[] {
                             "Answer",
                             "Yes! The template includes blank spaces for photos"});
 #line 100
-    testRunner.When("I respond to the question:", ((string)(null)), table1706, "When ");
+    testRunner.When("I respond to the question:", ((string)(null)), table1669, "When ");
 #line hidden
 #line 103
     testRunner.Then("my response should appear on the product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -554,20 +554,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 110
     testRunner.When("customers follow my store", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1707 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1670 = new TechTalk.SpecFlow.Table(new string[] {
                             "Event Type",
                             "Notification"});
-                table1707.AddRow(new string[] {
+                table1670.AddRow(new string[] {
                             "New Product",
                             "\"Sarah posted Sensory Break Cards\""});
-                table1707.AddRow(new string[] {
+                table1670.AddRow(new string[] {
                             "Sale Started",
                             "\"25% off at Sarah\'s Speech\""});
-                table1707.AddRow(new string[] {
+                table1670.AddRow(new string[] {
                             "Bundle Released",
                             "\"New Articulation Bundle\""});
 #line 111
-    testRunner.Then("they should receive notifications for:", ((string)(null)), table1707, "Then ");
+    testRunner.Then("they should receive notifications for:", ((string)(null)), table1670, "Then ");
 #line hidden
 #line 116
     testRunner.And("I should see my follower count on my dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -609,23 +609,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 122
     testRunner.When("I view my earnings dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1708 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1671 = new TechTalk.SpecFlow.Table(new string[] {
                             "Metric",
                             "Amount"});
-                table1708.AddRow(new string[] {
+                table1671.AddRow(new string[] {
                             "Current Balance",
                             "$847.23"});
-                table1708.AddRow(new string[] {
+                table1671.AddRow(new string[] {
                             "Pending Clearance",
                             "$125.50"});
-                table1708.AddRow(new string[] {
+                table1671.AddRow(new string[] {
                             "This Month Total",
                             "$972.73"});
-                table1708.AddRow(new string[] {
+                table1671.AddRow(new string[] {
                             "Next Payout Date",
                             "15th"});
 #line 123
-    testRunner.Then("I should see:", ((string)(null)), table1708, "Then ");
+    testRunner.Then("I should see:", ((string)(null)), table1671, "Then ");
 #line hidden
 #line 129
     testRunner.When("I request early payout", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -670,23 +670,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 136
     testRunner.When("I view my seller ratings", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1709 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1672 = new TechTalk.SpecFlow.Table(new string[] {
                             "Rating Category",
                             "Score"});
-                table1709.AddRow(new string[] {
+                table1672.AddRow(new string[] {
                             "Product Quality",
                             "4.8/5"});
-                table1709.AddRow(new string[] {
+                table1672.AddRow(new string[] {
                             "Accurate Description",
                             "4.9/5"});
-                table1709.AddRow(new string[] {
+                table1672.AddRow(new string[] {
                             "Customer Service",
                             "4.7/5"});
-                table1709.AddRow(new string[] {
+                table1672.AddRow(new string[] {
                             "Overall Rating",
                             "4.8/5"});
 #line 137
-    testRunner.Then("I should see:", ((string)(null)), table1709, "Then ");
+    testRunner.Then("I should see:", ((string)(null)), table1672, "Then ");
 #line hidden
 #line 143
     testRunner.And("ratings should affect my search ranking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -728,17 +728,17 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 149
     testRunner.Given("I want to expand my reach", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1710 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1673 = new TechTalk.SpecFlow.Table(new string[] {
                             "Platform",
                             "Etsy"});
-                table1710.AddRow(new string[] {
+                table1673.AddRow(new string[] {
                             "Store Name",
                             "SarahsSpeechResources"});
-                table1710.AddRow(new string[] {
+                table1673.AddRow(new string[] {
                             "Sync Option",
                             "Inventory and pricing"});
 #line 150
-    testRunner.When("I connect external marketplace:", ((string)(null)), table1710, "When ");
+    testRunner.When("I connect external marketplace:", ((string)(null)), table1673, "When ");
 #line hidden
 #line 154
     testRunner.Then("products should sync bidirectionally", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -789,20 +789,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 163
     testRunner.Then("my application should be rejected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1711 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1674 = new TechTalk.SpecFlow.Table(new string[] {
                             "Issue Type",
                             "Resolution Required"});
-                table1711.AddRow(new string[] {
+                table1674.AddRow(new string[] {
                             "License not found",
                             "Provide valid license number"});
-                table1711.AddRow(new string[] {
+                table1674.AddRow(new string[] {
                             "License expired",
                             "Renew license and resubmit"});
-                table1711.AddRow(new string[] {
+                table1674.AddRow(new string[] {
                             "Different specialty",
                             "Update specialty or provide proof"});
 #line 164
-    testRunner.And("I should receive detailed feedback:", ((string)(null)), table1711, "And ");
+    testRunner.And("I should receive detailed feedback:", ((string)(null)), table1674, "And ");
 #line hidden
 #line 169
     testRunner.And("I should be able to reapply after corrections", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -847,20 +847,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 175
     testRunner.Then("my resource should be immediately removed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1712 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1675 = new TechTalk.SpecFlow.Table(new string[] {
                             "Action Required",
                             "Consequence"});
-                table1712.AddRow(new string[] {
+                table1675.AddRow(new string[] {
                             "Remove content",
                             "Immediate de-listing"});
-                table1712.AddRow(new string[] {
+                table1675.AddRow(new string[] {
                             "Provide attribution",
                             "24-hour compliance window"});
-                table1712.AddRow(new string[] {
+                table1675.AddRow(new string[] {
                             "Prove ownership",
                             "Submit documentation"});
 #line 176
-    testRunner.And("I should receive copyright violation notice:", ((string)(null)), table1712, "And ");
+    testRunner.And("I should receive copyright violation notice:", ((string)(null)), table1675, "And ");
 #line hidden
 #line 181
     testRunner.And("repeated violations should result in seller suspension", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -902,23 +902,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 186
     testRunner.When("payment processing fails after delivery", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1713 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1676 = new TechTalk.SpecFlow.Table(new string[] {
                             "Action",
                             "Timing"});
-                table1713.AddRow(new string[] {
+                table1676.AddRow(new string[] {
                             "Notify seller",
                             "Immediate email alert"});
-                table1713.AddRow(new string[] {
+                table1676.AddRow(new string[] {
                             "Hold earnings",
                             "Until payment resolved"});
-                table1713.AddRow(new string[] {
+                table1676.AddRow(new string[] {
                             "Track failed payment",
                             "For pattern analysis"});
-                table1713.AddRow(new string[] {
+                table1676.AddRow(new string[] {
                             "Retry processing",
                             "3 attempts over 48 hours"});
 #line 187
-    testRunner.Then("the system should:", ((string)(null)), table1713, "Then ");
+    testRunner.Then("the system should:", ((string)(null)), table1676, "Then ");
 #line hidden
 #line 193
     testRunner.And("if payment cannot be recovered, seller earnings should be adjusted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -960,23 +960,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 198
     testRunner.When("report threshold is reached (3+ similar complaints)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1714 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1677 = new TechTalk.SpecFlow.Table(new string[] {
                             "Review Process",
                             "Outcome Options"});
-                table1714.AddRow(new string[] {
+                table1677.AddRow(new string[] {
                             "Clinical expert review",
                             "Content passes/fails review"});
-                table1714.AddRow(new string[] {
+                table1677.AddRow(new string[] {
                             "Seller notification",
                             "Improvement suggestions provided"});
-                table1714.AddRow(new string[] {
+                table1677.AddRow(new string[] {
                             "Temporary delisting",
                             "Until issues resolved"});
-                table1714.AddRow(new string[] {
+                table1677.AddRow(new string[] {
                             "Refund processing",
                             "If content deemed inadequate"});
 #line 199
-    testRunner.Then("content review should be triggered:", ((string)(null)), table1714, "Then ");
+    testRunner.Then("content review should be triggered:", ((string)(null)), table1677, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1012,35 +1012,35 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 208
     testRunner.Given("I attempt to manipulate my store ratings", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1715 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1678 = new TechTalk.SpecFlow.Table(new string[] {
                             "Fraud Type",
                             "Detection Method"});
-                table1715.AddRow(new string[] {
+                table1678.AddRow(new string[] {
                             "Fake reviews",
                             "IP analysis, account patterns"});
-                table1715.AddRow(new string[] {
+                table1678.AddRow(new string[] {
                             "Review manipulation",
                             "Unusual rating spikes"});
-                table1715.AddRow(new string[] {
+                table1678.AddRow(new string[] {
                             "Keyword stuffing",
                             "Content analysis algorithms"});
 #line 209
-    testRunner.When("fraudulent activity is detected:", ((string)(null)), table1715, "When ");
+    testRunner.When("fraudulent activity is detected:", ((string)(null)), table1678, "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1716 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1679 = new TechTalk.SpecFlow.Table(new string[] {
                             "Violation Level",
                             "Consequence"});
-                table1716.AddRow(new string[] {
+                table1679.AddRow(new string[] {
                             "First offense",
                             "Warning and content correction"});
-                table1716.AddRow(new string[] {
+                table1679.AddRow(new string[] {
                             "Second offense",
                             "30-day selling suspension"});
-                table1716.AddRow(new string[] {
+                table1679.AddRow(new string[] {
                             "Repeated violations",
                             "Permanent seller ban"});
 #line 214
-    testRunner.Then("enforcement action should occur:", ((string)(null)), table1716, "Then ");
+    testRunner.Then("enforcement action should occur:", ((string)(null)), table1679, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1079,23 +1079,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 223
     testRunner.When("inventory sync fails between platforms", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1717 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1680 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failure Response",
                             "Implementation"});
-                table1717.AddRow(new string[] {
+                table1680.AddRow(new string[] {
                             "Detect discrepancy",
                             "Real-time inventory monitoring"});
-                table1717.AddRow(new string[] {
+                table1680.AddRow(new string[] {
                             "Alert seller",
                             "Immediate notification"});
-                table1717.AddRow(new string[] {
+                table1680.AddRow(new string[] {
                             "Queue retry attempts",
                             "Exponential backoff strategy"});
-                table1717.AddRow(new string[] {
+                table1680.AddRow(new string[] {
                             "Manual intervention",
                             "If auto-retry fails"});
 #line 224
-    testRunner.Then("the system should:", ((string)(null)), table1717, "Then ");
+    testRunner.Then("the system should:", ((string)(null)), table1680, "Then ");
 #line hidden
 #line 230
     testRunner.And("customers should see accurate availability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1137,20 +1137,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 235
     testRunner.When("individual product prices change after bundle creation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1718 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1681 = new TechTalk.SpecFlow.Table(new string[] {
                             "Price Change Type",
                             "Bundle Response"});
-                table1718.AddRow(new string[] {
+                table1681.AddRow(new string[] {
                             "Individual price increase",
                             "Maintain bundle discount %"});
-                table1718.AddRow(new string[] {
+                table1681.AddRow(new string[] {
                             "Individual price decrease",
                             "Notify seller of margin impact"});
-                table1718.AddRow(new string[] {
+                table1681.AddRow(new string[] {
                             "Massive price changes",
                             "Flag for manual review"});
 #line 236
-    testRunner.Then("the system should:", ((string)(null)), table1718, "Then ");
+    testRunner.Then("the system should:", ((string)(null)), table1681, "Then ");
 #line hidden
 #line 241
     testRunner.And("bundle profitability alerts should trigger at <10% margin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1189,20 +1189,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 245
     testRunner.Given("I have multiple promotions active", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1719 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1682 = new TechTalk.SpecFlow.Table(new string[] {
                             "Conflict Type",
                             "System Resolution"});
-                table1719.AddRow(new string[] {
+                table1682.AddRow(new string[] {
                             "Overlapping discounts",
                             "Apply highest discount only"});
-                table1719.AddRow(new string[] {
+                table1682.AddRow(new string[] {
                             "Expired promo still active",
                             "Auto-disable expired promotions"});
-                table1719.AddRow(new string[] {
+                table1682.AddRow(new string[] {
                             "Negative final price",
                             "Block sale, alert seller"});
 #line 246
-    testRunner.When("promotion conflicts occur:", ((string)(null)), table1719, "When ");
+    testRunner.When("promotion conflicts occur:", ((string)(null)), table1682, "When ");
 #line hidden
 #line 251
     testRunner.Then("customers should see clear, valid pricing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1247,26 +1247,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 257
     testRunner.When("dispute escalation is required", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1720 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1683 = new TechTalk.SpecFlow.Table(new string[] {
                             "Step",
                             "Responsibility"});
-                table1720.AddRow(new string[] {
+                table1683.AddRow(new string[] {
                             "Initial review",
                             "Automated policy check"});
-                table1720.AddRow(new string[] {
+                table1683.AddRow(new string[] {
                             "Seller notification",
                             "48-hour response window"});
-                table1720.AddRow(new string[] {
+                table1683.AddRow(new string[] {
                             "Evidence collection",
                             "Both parties submit materials"});
-                table1720.AddRow(new string[] {
+                table1683.AddRow(new string[] {
                             "Platform mediation",
                             "Neutral review team decision"});
-                table1720.AddRow(new string[] {
+                table1683.AddRow(new string[] {
                             "Final resolution",
                             "Binding outcome"});
 #line 258
-    testRunner.Then("dispute resolution process:", ((string)(null)), table1720, "Then ");
+    testRunner.Then("dispute resolution process:", ((string)(null)), table1683, "Then ");
 #line hidden
 #line 265
     testRunner.And("seller should maintain dispute resolution rating", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1308,23 +1308,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 270
     testRunner.When("tax reporting requirements change", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1721 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1684 = new TechTalk.SpecFlow.Table(new string[] {
                             "Compliance Action",
                             "Implementation"});
-                table1721.AddRow(new string[] {
+                table1684.AddRow(new string[] {
                             "Monitor sales thresholds",
                             "Track by jurisdiction"});
-                table1721.AddRow(new string[] {
+                table1684.AddRow(new string[] {
                             "Generate tax forms",
                             "Automatic 1099 preparation"});
-                table1721.AddRow(new string[] {
+                table1684.AddRow(new string[] {
                             "Handle rate changes",
                             "Apply correct rates by location"});
-                table1721.AddRow(new string[] {
+                table1684.AddRow(new string[] {
                             "Archive records",
                             "7-year retention policy"});
 #line 271
-    testRunner.Then("the system should:", ((string)(null)), table1721, "Then ");
+    testRunner.Then("the system should:", ((string)(null)), table1684, "Then ");
 #line hidden
 #line 277
     testRunner.And("sellers should receive compliance notifications", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1366,26 +1366,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 282
     testRunner.When("resource file is corrupted or missing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1722 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1685 = new TechTalk.SpecFlow.Table(new string[] {
                             "Recovery Step",
                             "Action"});
-                table1722.AddRow(new string[] {
+                table1685.AddRow(new string[] {
                             "Detect file issue",
                             "Automated integrity check"});
-                table1722.AddRow(new string[] {
+                table1685.AddRow(new string[] {
                             "Attempt file recovery",
                             "From backup systems"});
-                table1722.AddRow(new string[] {
+                table1685.AddRow(new string[] {
                             "Notify affected parties",
                             "Customer and seller alerts"});
-                table1722.AddRow(new string[] {
+                table1685.AddRow(new string[] {
                             "Provide alternatives",
                             "Similar resources or full refund"});
-                table1722.AddRow(new string[] {
+                table1685.AddRow(new string[] {
                             "Update file systems",
                             "Prevent future corruption"});
 #line 283
-    testRunner.Then("recovery process should:", ((string)(null)), table1722, "Then ");
+    testRunner.Then("recovery process should:", ((string)(null)), table1685, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1424,26 +1424,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 294
     testRunner.When("my seller account is suspended for policy violation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1723 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1686 = new TechTalk.SpecFlow.Table(new string[] {
                             "Immediate Action",
                             "Implementation"});
-                table1723.AddRow(new string[] {
+                table1686.AddRow(new string[] {
                             "Stop new sales",
                             "Hide all products immediately"});
-                table1723.AddRow(new string[] {
+                table1686.AddRow(new string[] {
                             "Process pending orders",
                             "Complete in-progress transactions"});
-                table1723.AddRow(new string[] {
+                table1686.AddRow(new string[] {
                             "Hold earnings",
                             "Pending investigation"});
-                table1723.AddRow(new string[] {
+                table1686.AddRow(new string[] {
                             "Notify customers",
                             "For any affected purchases"});
-                table1723.AddRow(new string[] {
+                table1686.AddRow(new string[] {
                             "Provide appeal process",
                             "Clear guidelines and timeline"});
 #line 295
-    testRunner.Then("the system should:", ((string)(null)), table1723, "Then ");
+    testRunner.Then("the system should:", ((string)(null)), table1686, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1482,23 +1482,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 306
     testRunner.When("marketplace experiences downtime", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1724 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1687 = new TechTalk.SpecFlow.Table(new string[] {
                             "Outage Response",
                             "Compensation"});
-                table1724.AddRow(new string[] {
+                table1687.AddRow(new string[] {
                             "Extend promotion time",
                             "Additional hours equal to downtime"});
-                table1724.AddRow(new string[] {
+                table1687.AddRow(new string[] {
                             "Notify affected sellers",
                             "Real-time status updates"});
-                table1724.AddRow(new string[] {
+                table1687.AddRow(new string[] {
                             "Process delayed orders",
                             "Immediate processing when restored"});
-                table1724.AddRow(new string[] {
+                table1687.AddRow(new string[] {
                             "Provide service credits",
                             "For significant lost sales"});
 #line 307
-    testRunner.Then("continuity measures:", ((string)(null)), table1724, "Then ");
+    testRunner.Then("continuity measures:", ((string)(null)), table1687, "Then ");
 #line hidden
 #line 313
     testRunner.And("sellers should receive outage impact reports", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

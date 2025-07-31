@@ -10,7 +10,7 @@ public class ResourceFavorite
     public DateTime CreatedAt { get; set; }
     public string? FolderName { get; set; }
     public string? Notes { get; set; }
-    
+
     // Navigation properties
     public virtual Resource Resource { get; set; } = null!;
     public virtual User User { get; set; } = null!;

@@ -77,11 +77,11 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
     options.AddPolicy("SellerOnly", policy => policy.RequireClaim("is_seller", "true"));
     options.AddPolicy("OrganizationAdmin", policy => policy.RequireRole("OrganizationAdmin", "Admin"));
-    
+
     // Add subscription-based policies
-    options.AddPolicy("ProSubscription", policy => 
+    options.AddPolicy("ProSubscription", policy =>
         policy.RequireClaim("subscription_tier", "Pro", "SmallGroup", "LargeGroup", "Enterprise"));
-    options.AddPolicy("GroupSubscription", policy => 
+    options.AddPolicy("GroupSubscription", policy =>
         policy.RequireClaim("subscription_tier", "SmallGroup", "LargeGroup", "Enterprise"));
 });
 
@@ -95,8 +95,27 @@ builder.Services.AddScoped<IAuditService, AuditService>();
 
 // Register repositories
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IResourceRepository, ResourceRepository>();
+
+// Check configuration to determine which repository implementation to use
+bool useStoredProcedures = builder.Configuration.GetValue<bool>("UseStoredProcedures", true);
+
+if (useStoredProcedures)
+{
+    // Use stored procedure implementations
+    builder.Services.AddScoped<IUserRepository, UserRepositoryStoredProc>();
+    builder.Services.AddScoped<IResourceRepository, ResourceRepositoryStoredProc>();
+    builder.Services.AddScoped<IStudentRepository, StudentRepositoryStoredProc>();
+    builder.Services.AddScoped<ISessionRepository, SessionRepositoryStoredProc>();
+    builder.Services.AddScoped<IMarketplaceRepository, MarketplaceRepositoryStoredProc>();
+}
+else
+{
+    // Use Entity Framework implementations (for backward compatibility)
+    builder.Services.AddScoped<IUserRepository, UserRepository>();
+    builder.Services.AddScoped<IResourceRepository, ResourceRepository>();
+    // Note: Student, Session, and Marketplace repositories don't have EF implementations yet
+    throw new NotSupportedException("Entity Framework implementations for Student, Session, and Marketplace repositories are not available. Set UseStoredProcedures to true.");
+}
 
 // Register HttpContextAccessor for audit service
 builder.Services.AddHttpContextAccessor();

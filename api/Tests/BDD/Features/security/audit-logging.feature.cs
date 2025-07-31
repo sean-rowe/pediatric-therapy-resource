@@ -130,53 +130,53 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 14
     testRunner.Given("system audit trail is enabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2340 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2303 = new TechTalk.SpecFlow.Table(new string[] {
                             "Activity Type",
                             "Details",
                             "Required Fields",
                             "Retention Period"});
-                table2340.AddRow(new string[] {
+                table2303.AddRow(new string[] {
                             "User authentication",
                             "Login attempts, MFA usage",
                             "User ID, IP, timestamp, result",
                             "7 years"});
-                table2340.AddRow(new string[] {
+                table2303.AddRow(new string[] {
                             "Authorization decisions",
                             "Access grants/denials",
                             "User, resource, decision, reason",
                             "7 years"});
-                table2340.AddRow(new string[] {
+                table2303.AddRow(new string[] {
                             "Data access",
                             "Student/patient record views",
                             "User, record ID, fields accessed",
                             "7 years"});
-                table2340.AddRow(new string[] {
+                table2303.AddRow(new string[] {
                             "Data modifications",
                             "Create, update, delete operations",
                             "User, before/after values",
                             "7 years"});
-                table2340.AddRow(new string[] {
+                table2303.AddRow(new string[] {
                             "Administrative actions",
                             "User creation, role changes",
                             "Admin user, target, changes made",
                             "7 years"});
-                table2340.AddRow(new string[] {
+                table2303.AddRow(new string[] {
                             "System configuration",
                             "Settings changes, policy updates",
                             "Admin, setting, old/new values",
                             "7 years"});
-                table2340.AddRow(new string[] {
+                table2303.AddRow(new string[] {
                             "File operations",
                             "Upload, download, deletion",
                             "User, file path, operation type",
                             "7 years"});
-                table2340.AddRow(new string[] {
+                table2303.AddRow(new string[] {
                             "Payment transactions",
                             "Billing, refunds, subscriptions",
                             "User, amount, transaction details",
                             "10 years"});
 #line 15
-    testRunner.When("security-relevant activities occur:", ((string)(null)), table2340, "When ");
+    testRunner.When("security-relevant activities occur:", ((string)(null)), table2303, "When ");
 #line hidden
 #line 25
     testRunner.Then("all activities should be logged immediately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -232,52 +232,52 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 34
     testRunner.When("data access occurs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2341 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2304 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value",
                             "Required"});
-                table2341.AddRow(new string[] {
+                table2304.AddRow(new string[] {
                             "User ID",
                             "dr.smith@clinic.com",
                             "Yes"});
-                table2341.AddRow(new string[] {
+                table2304.AddRow(new string[] {
                             "Student ID",
                             "STU-12345",
                             "Yes"});
-                table2341.AddRow(new string[] {
+                table2304.AddRow(new string[] {
                             "Data fields accessed",
                             "[name, therapy_notes, goals]",
                             "Yes"});
-                table2341.AddRow(new string[] {
+                table2304.AddRow(new string[] {
                             "Access timestamp",
                             "2024-01-22T14:30:15Z",
                             "Yes"});
-                table2341.AddRow(new string[] {
+                table2304.AddRow(new string[] {
                             "Source IP address",
                             "192.168.1.100",
                             "Yes"});
-                table2341.AddRow(new string[] {
+                table2304.AddRow(new string[] {
                             "Session ID",
                             "SES-789012",
                             "Yes"});
-                table2341.AddRow(new string[] {
+                table2304.AddRow(new string[] {
                             "Access method",
                             "Web application",
                             "Yes"});
-                table2341.AddRow(new string[] {
+                table2304.AddRow(new string[] {
                             "Business justification",
                             "Scheduled therapy session",
                             "Yes"});
-                table2341.AddRow(new string[] {
+                table2304.AddRow(new string[] {
                             "Geographic location",
                             "New York, NY, USA",
                             "Yes"});
-                table2341.AddRow(new string[] {
+                table2304.AddRow(new string[] {
                             "Device information",
                             "Windows 11, Chrome 120",
                             "Yes"});
 #line 35
-    testRunner.Then("audit log should capture:", ((string)(null)), table2341, "Then ");
+    testRunner.Then("audit log should capture:", ((string)(null)), table2304, "Then ");
 #line hidden
 #line 47
     testRunner.And("log entry should be immutable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -321,60 +321,60 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 52
     testRunner.Given("I am a system administrator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2342 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2305 = new TechTalk.SpecFlow.Table(new string[] {
                             "Operation Type",
                             "Details",
                             "Risk Level"});
-                table2342.AddRow(new string[] {
+                table2305.AddRow(new string[] {
                             "User role modification",
                             "Change basic therapist to admin",
                             "High"});
-                table2342.AddRow(new string[] {
+                table2305.AddRow(new string[] {
                             "System configuration",
                             "Modify security policy settings",
                             "Critical"});
-                table2342.AddRow(new string[] {
+                table2305.AddRow(new string[] {
                             "Bulk data operations",
                             "Export 1000+ student records",
                             "High"});
-                table2342.AddRow(new string[] {
+                table2305.AddRow(new string[] {
                             "License management",
                             "Add/remove software licenses",
                             "Medium"});
-                table2342.AddRow(new string[] {
+                table2305.AddRow(new string[] {
                             "Database maintenance",
                             "Schema changes, index rebuilds",
                             "High"});
-                table2342.AddRow(new string[] {
+                table2305.AddRow(new string[] {
                             "Security setting changes",
                             "Password policy, session timeouts",
                             "Critical"});
 #line 53
-    testRunner.When("I perform administrative operations:", ((string)(null)), table2342, "When ");
+    testRunner.When("I perform administrative operations:", ((string)(null)), table2305, "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2343 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2306 = new TechTalk.SpecFlow.Table(new string[] {
                             "Audit Field",
                             "Purpose"});
-                table2343.AddRow(new string[] {
+                table2306.AddRow(new string[] {
                             "Administrator identity",
                             "Who performed the action"});
-                table2343.AddRow(new string[] {
+                table2306.AddRow(new string[] {
                             "Operation details",
                             "What was changed"});
-                table2343.AddRow(new string[] {
+                table2306.AddRow(new string[] {
                             "Before/after values",
                             "Full change documentation"});
-                table2343.AddRow(new string[] {
+                table2306.AddRow(new string[] {
                             "Business justification",
                             "Why the change was made"});
-                table2343.AddRow(new string[] {
+                table2306.AddRow(new string[] {
                             "Approval chain",
                             "Who authorized the change"});
-                table2343.AddRow(new string[] {
+                table2306.AddRow(new string[] {
                             "Impact assessment",
                             "Systems/users affected"});
 #line 61
-    testRunner.Then("each operation should be logged with:", ((string)(null)), table2343, "Then ");
+    testRunner.Then("each operation should be logged with:", ((string)(null)), table2306, "Then ");
 #line hidden
 #line 69
     testRunner.And("critical operations should require dual approval", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -418,52 +418,52 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 74
     testRunner.Given("payment processing requires audit compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2344 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2307 = new TechTalk.SpecFlow.Table(new string[] {
                             "Transaction Type",
                             "Details",
                             "Compliance Requirement"});
-                table2344.AddRow(new string[] {
+                table2307.AddRow(new string[] {
                             "Subscription payment",
                             "Monthly subscription renewal",
                             "PCI DSS"});
-                table2344.AddRow(new string[] {
+                table2307.AddRow(new string[] {
                             "Marketplace purchase",
                             "Resource purchased from seller",
                             "Tax reporting"});
-                table2344.AddRow(new string[] {
+                table2307.AddRow(new string[] {
                             "Refund processing",
                             "Subscription cancellation refund",
                             "Financial regulations"});
-                table2344.AddRow(new string[] {
+                table2307.AddRow(new string[] {
                             "Commission calculation",
                             "Seller revenue sharing",
                             "1099 reporting"});
 #line 75
-    testRunner.When("financial transactions occur:", ((string)(null)), table2344, "When ");
+    testRunner.When("financial transactions occur:", ((string)(null)), table2307, "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2345 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2308 = new TechTalk.SpecFlow.Table(new string[] {
                             "Audit Element",
                             "Details"});
-                table2345.AddRow(new string[] {
+                table2308.AddRow(new string[] {
                             "Transaction ID",
                             "Unique identifier"});
-                table2345.AddRow(new string[] {
+                table2308.AddRow(new string[] {
                             "User information",
                             "Buyer/seller details"});
-                table2345.AddRow(new string[] {
+                table2308.AddRow(new string[] {
                             "Amount and currency",
                             "Exact financial details"});
-                table2345.AddRow(new string[] {
+                table2308.AddRow(new string[] {
                             "Payment method",
                             "Card type, last 4 digits"});
-                table2345.AddRow(new string[] {
+                table2308.AddRow(new string[] {
                             "Tax calculations",
                             "Geographic tax implications"});
-                table2345.AddRow(new string[] {
+                table2308.AddRow(new string[] {
                             "Commission splits",
                             "Platform/seller revenue breakdown"});
 #line 81
-    testRunner.Then("transaction audit should include:", ((string)(null)), table2345, "Then ");
+    testRunner.Then("transaction audit should include:", ((string)(null)), table2308, "Then ");
 #line hidden
 #line 89
     testRunner.And("financial logs should be retained for 10 years", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -512,32 +512,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 96
     testRunner.When("audit entries are created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2346 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2309 = new TechTalk.SpecFlow.Table(new string[] {
                             "Protection Method",
                             "Implementation",
                             "Purpose"});
-                table2346.AddRow(new string[] {
+                table2309.AddRow(new string[] {
                             "Digital signatures",
                             "RSA-2048 or ECDSA P-256",
                             "Entry authenticity"});
-                table2346.AddRow(new string[] {
+                table2309.AddRow(new string[] {
                             "Hash chaining",
                             "SHA-256 sequential hashing",
                             "Tamper detection"});
-                table2346.AddRow(new string[] {
+                table2309.AddRow(new string[] {
                             "Immutable storage",
                             "Write-once, read-many storage",
                             "Prevent modification"});
-                table2346.AddRow(new string[] {
+                table2309.AddRow(new string[] {
                             "Encrypted transmission",
                             "TLS 1.3 for log forwarding",
                             "Transit protection"});
-                table2346.AddRow(new string[] {
+                table2309.AddRow(new string[] {
                             "Access controls",
                             "Role-based log access",
                             "Authorized access only"});
 #line 97
-    testRunner.Then("log integrity protection should include:", ((string)(null)), table2346, "Then ");
+    testRunner.Then("log integrity protection should include:", ((string)(null)), table2309, "Then ");
 #line hidden
 #line 104
     testRunner.And("any tampering attempts should be immediately detected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -584,43 +584,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 110
     testRunner.Given("different log types have different retention requirements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2347 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2310 = new TechTalk.SpecFlow.Table(new string[] {
                             "Log Type",
                             "Retention Period",
                             "Compliance Driver",
                             "Archive Method"});
-                table2347.AddRow(new string[] {
+                table2310.AddRow(new string[] {
                             "Authentication logs",
                             "7 years",
                             "HIPAA/FERPA",
                             "Encrypted archive"});
-                table2347.AddRow(new string[] {
+                table2310.AddRow(new string[] {
                             "Data access logs",
                             "7 years",
                             "HIPAA/FERPA",
                             "Encrypted archive"});
-                table2347.AddRow(new string[] {
+                table2310.AddRow(new string[] {
                             "Financial transaction",
                             "10 years",
                             "Tax regulations",
                             "Secure storage"});
-                table2347.AddRow(new string[] {
+                table2310.AddRow(new string[] {
                             "System administration",
                             "7 years",
                             "SOX compliance",
                             "Encrypted archive"});
-                table2347.AddRow(new string[] {
+                table2310.AddRow(new string[] {
                             "Security incidents",
                             "10 years",
                             "Legal requirements",
                             "Immutable storage"});
-                table2347.AddRow(new string[] {
+                table2310.AddRow(new string[] {
                             "Marketing activities",
                             "3 years",
                             "Privacy regulations",
                             "Standard archive"});
 #line 111
-    testRunner.When("log retention policies are applied:", ((string)(null)), table2347, "When ");
+    testRunner.When("log retention policies are applied:", ((string)(null)), table2310, "When ");
 #line hidden
 #line 119
     testRunner.Then("logs should be automatically archived before retention expiry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -670,32 +670,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 126
     testRunner.Given("audit logs feed security monitoring systems", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2348 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2311 = new TechTalk.SpecFlow.Table(new string[] {
                             "Pattern Type",
                             "Detection Criteria",
                             "Response Action"});
-                table2348.AddRow(new string[] {
+                table2311.AddRow(new string[] {
                             "Brute force attempts",
                             "10+ failed logins in 5 minutes",
                             "Block IP, alert SOC"});
-                table2348.AddRow(new string[] {
+                table2311.AddRow(new string[] {
                             "Data exfiltration",
                             "Bulk downloads outside normal hours",
                             "Lock account, escalate"});
-                table2348.AddRow(new string[] {
+                table2311.AddRow(new string[] {
                             "Privilege escalation",
                             "Admin actions by standard users",
                             "Alert security team"});
-                table2348.AddRow(new string[] {
+                table2311.AddRow(new string[] {
                             "Geographic anomalies",
                             "Logins from unusual locations",
                             "Require additional auth"});
-                table2348.AddRow(new string[] {
+                table2311.AddRow(new string[] {
                             "Time-based anomalies",
                             "Access outside normal hours",
                             "Enhanced monitoring"});
 #line 127
-    testRunner.When("suspicious patterns are detected in logs:", ((string)(null)), table2348, "When ");
+    testRunner.When("suspicious patterns are detected in logs:", ((string)(null)), table2311, "When ");
 #line hidden
 #line 134
     testRunner.Then("alerts should be generated in real-time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -745,32 +745,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 142
     testRunner.Given("regulatory audits require comprehensive reporting", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2349 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2312 = new TechTalk.SpecFlow.Table(new string[] {
                             "Report Type",
                             "Regulatory Requirement",
                             "Content Requirements"});
-                table2349.AddRow(new string[] {
+                table2312.AddRow(new string[] {
                             "HIPAA audit report",
                             "Annual compliance demonstration",
                             "PHI access patterns"});
-                table2349.AddRow(new string[] {
+                table2312.AddRow(new string[] {
                             "FERPA compliance",
                             "Educational data protection",
                             "Student data access"});
-                table2349.AddRow(new string[] {
+                table2312.AddRow(new string[] {
                             "PCI DSS audit",
                             "Payment card security",
                             "Card data handling"});
-                table2349.AddRow(new string[] {
+                table2312.AddRow(new string[] {
                             "SOX compliance",
                             "Financial controls",
                             "Administrative actions"});
-                table2349.AddRow(new string[] {
+                table2312.AddRow(new string[] {
                             "Privacy impact",
                             "Data protection assessment",
                             "Personal data processing"});
 #line 143
-    testRunner.When("compliance reports are requested:", ((string)(null)), table2349, "When ");
+    testRunner.When("compliance reports are requested:", ((string)(null)), table2312, "When ");
 #line hidden
 #line 150
     testRunner.Then("reports should be generated automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -826,36 +826,36 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 159
     testRunner.When("investigators need to analyze patterns", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2350 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2313 = new TechTalk.SpecFlow.Table(new string[] {
                             "Search Type",
                             "Functionality",
                             "Performance Target"});
-                table2350.AddRow(new string[] {
+                table2313.AddRow(new string[] {
                             "Full-text search",
                             "Search across all log fields",
                             "<5 seconds response"});
-                table2350.AddRow(new string[] {
+                table2313.AddRow(new string[] {
                             "Time-range queries",
                             "Filter by specific date/time ranges",
                             "<3 seconds response"});
-                table2350.AddRow(new string[] {
+                table2313.AddRow(new string[] {
                             "User activity tracking",
                             "All actions by specific user",
                             "<2 seconds response"});
-                table2350.AddRow(new string[] {
+                table2313.AddRow(new string[] {
                             "Resource access patterns",
                             "Who accessed what resources when",
                             "<5 seconds response"});
-                table2350.AddRow(new string[] {
+                table2313.AddRow(new string[] {
                             "Correlation analysis",
                             "Find related events across logs",
                             "<10 seconds response"});
-                table2350.AddRow(new string[] {
+                table2313.AddRow(new string[] {
                             "Statistical aggregation",
                             "Count, average, trend analysis",
                             "<15 seconds response"});
 #line 160
-    testRunner.Then("search capabilities should include:", ((string)(null)), table2350, "Then ");
+    testRunner.Then("search capabilities should include:", ((string)(null)), table2313, "Then ");
 #line hidden
 #line 168
     testRunner.And("search results should be paginated for large result sets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -905,32 +905,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 175
     testRunner.When("log forwarding is configured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2351 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2314 = new TechTalk.SpecFlow.Table(new string[] {
                             "Destination Type",
                             "Protocol/Format",
                             "Use Case"});
-                table2351.AddRow(new string[] {
+                table2314.AddRow(new string[] {
                             "SIEM platforms",
                             "Syslog, CEF, LEEF formats",
                             "Security monitoring"});
-                table2351.AddRow(new string[] {
+                table2314.AddRow(new string[] {
                             "Cloud logging services",
                             "JSON over HTTPS",
                             "Centralized logging"});
-                table2351.AddRow(new string[] {
+                table2314.AddRow(new string[] {
                             "Compliance databases",
                             "Structured database formats",
                             "Regulatory reporting"});
-                table2351.AddRow(new string[] {
+                table2314.AddRow(new string[] {
                             "Analytics platforms",
                             "Streaming data formats",
                             "Behavioral analytics"});
-                table2351.AddRow(new string[] {
+                table2314.AddRow(new string[] {
                             "Backup systems",
                             "Encrypted archive formats",
                             "Long-term retention"});
 #line 176
-    testRunner.Then("integration should support:", ((string)(null)), table2351, "Then ");
+    testRunner.Then("integration should support:", ((string)(null)), table2314, "Then ");
 #line hidden
 #line 183
     testRunner.And("forwarding should be reliable with retry mechanisms", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -982,28 +982,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 191
     testRunner.When("audit logging system fails", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2352 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2315 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failure Type",
                             "System Response",
                             "Fallback Action"});
-                table2352.AddRow(new string[] {
+                table2315.AddRow(new string[] {
                             "Disk space exhaustion",
                             "Alert administrators, rotate logs",
                             "Emergency cleanup"});
-                table2352.AddRow(new string[] {
+                table2315.AddRow(new string[] {
                             "Database connectivity",
                             "Queue logs locally, retry",
                             "Local file backup"});
-                table2352.AddRow(new string[] {
+                table2315.AddRow(new string[] {
                             "Log corruption",
                             "Switch to backup logging system",
                             "Integrity verification"});
-                table2352.AddRow(new string[] {
+                table2315.AddRow(new string[] {
                             "Performance degradation",
                             "Reduce log detail, maintain core",
                             "Essential logs only"});
 #line 192
-    testRunner.Then("system should respond as follows:", ((string)(null)), table2352, "Then ");
+    testRunner.Then("system should respond as follows:", ((string)(null)), table2315, "Then ");
 #line hidden
 #line 198
     testRunner.And("business operations should continue with degraded logging", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1055,32 +1055,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 205
     testRunner.When("log tampering is attempted or detected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2353 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2316 = new TechTalk.SpecFlow.Table(new string[] {
                             "Tampering Type",
                             "Detection Method",
                             "Response Action"});
-                table2353.AddRow(new string[] {
+                table2316.AddRow(new string[] {
                             "Direct file modification",
                             "File system monitoring",
                             "Immediate alert"});
-                table2353.AddRow(new string[] {
+                table2316.AddRow(new string[] {
                             "Database log alteration",
                             "Cryptographic hash verification",
                             "Lock database access"});
-                table2353.AddRow(new string[] {
+                table2316.AddRow(new string[] {
                             "Unauthorized access",
                             "Access control monitoring",
                             "Revoke access"});
-                table2353.AddRow(new string[] {
+                table2316.AddRow(new string[] {
                             "Time manipulation",
                             "Network time synchronization",
                             "Timestamp validation"});
-                table2353.AddRow(new string[] {
+                table2316.AddRow(new string[] {
                             "Bulk deletion",
                             "Change volume monitoring",
                             "Backup restoration"});
 #line 206
-    testRunner.Then("detection mechanisms should identify:", ((string)(null)), table2353, "Then ");
+    testRunner.Then("detection mechanisms should identify:", ((string)(null)), table2316, "Then ");
 #line hidden
 #line 213
     testRunner.And("security incident should be automatically triggered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1132,28 +1132,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 220
     testRunner.When("audit logging performance is monitored", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2354 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2317 = new TechTalk.SpecFlow.Table(new string[] {
                             "Performance Metric",
                             "Target Value",
                             "Alert Threshold"});
-                table2354.AddRow(new string[] {
+                table2317.AddRow(new string[] {
                             "Logging latency",
                             "<10ms for 95% of entries",
                             ">50ms"});
-                table2354.AddRow(new string[] {
+                table2317.AddRow(new string[] {
                             "System throughput impact",
                             "<5% reduction in API performance",
                             ">10% reduction"});
-                table2354.AddRow(new string[] {
+                table2317.AddRow(new string[] {
                             "Storage growth rate",
                             "Predictable, manageable growth",
                             "Unexpected spikes"});
-                table2354.AddRow(new string[] {
+                table2317.AddRow(new string[] {
                             "Query response time",
                             "<5 seconds for standard queries",
                             ">15 seconds"});
 #line 221
-    testRunner.Then("performance metrics should show:", ((string)(null)), table2354, "Then ");
+    testRunner.Then("performance metrics should show:", ((string)(null)), table2317, "Then ");
 #line hidden
 #line 227
     testRunner.And("performance issues should trigger optimization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1202,28 +1202,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 233
     testRunner.Given("audit logs are required for regulatory compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2355 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2318 = new TechTalk.SpecFlow.Table(new string[] {
                             "Violation Type",
                             "Detection Method",
                             "Remediation Required"});
-                table2355.AddRow(new string[] {
+                table2318.AddRow(new string[] {
                             "Missing required logs",
                             "Automated compliance checking",
                             "Investigation, fix"});
-                table2355.AddRow(new string[] {
+                table2318.AddRow(new string[] {
                             "Insufficient detail",
                             "Log content validation",
                             "Enhanced logging"});
-                table2355.AddRow(new string[] {
+                table2318.AddRow(new string[] {
                             "Retention violations",
                             "Automated retention monitoring",
                             "Process improvement"});
-                table2355.AddRow(new string[] {
+                table2318.AddRow(new string[] {
                             "Access control failures",
                             "Permission auditing",
                             "Security hardening"});
 #line 234
-    testRunner.When("compliance violations are detected:", ((string)(null)), table2355, "When ");
+    testRunner.When("compliance violations are detected:", ((string)(null)), table2318, "When ");
 #line hidden
 #line 240
     testRunner.Then("violations should be documented and tracked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1278,28 +1278,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 248
     testRunner.When("log recovery is required", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2356 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2319 = new TechTalk.SpecFlow.Table(new string[] {
                             "Recovery Scenario",
                             "Recovery Method",
                             "Recovery Target"});
-                table2356.AddRow(new string[] {
+                table2319.AddRow(new string[] {
                             "Accidental deletion",
                             "Restore from latest backup",
                             "<4 hours RPO"});
-                table2356.AddRow(new string[] {
+                table2319.AddRow(new string[] {
                             "Corruption detection",
                             "Restore from verified backup",
                             "<1 hour RTO"});
-                table2356.AddRow(new string[] {
+                table2319.AddRow(new string[] {
                             "Disaster recovery",
                             "Restore from offsite backups",
                             "<24 hours RTO"});
-                table2356.AddRow(new string[] {
+                table2319.AddRow(new string[] {
                             "Selective recovery",
                             "Restore specific time periods",
                             "<2 hours for range"});
 #line 249
-    testRunner.Then("recovery procedures should include:", ((string)(null)), table2356, "Then ");
+    testRunner.Then("recovery procedures should include:", ((string)(null)), table2319, "Then ");
 #line hidden
 #line 255
     testRunner.And("recovery should maintain log integrity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1351,28 +1351,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 262
     testRunner.When("audit volume reaches scalability limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2357 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2320 = new TechTalk.SpecFlow.Table(new string[] {
                             "Scaling Challenge",
                             "Solution Approach",
                             "Implementation"});
-                table2357.AddRow(new string[] {
+                table2320.AddRow(new string[] {
                             "High write volume",
                             "Distributed logging architecture",
                             "Horizontal scaling"});
-                table2357.AddRow(new string[] {
+                table2320.AddRow(new string[] {
                             "Large storage requirements",
                             "Tiered storage with compression",
                             "Cost optimization"});
-                table2357.AddRow(new string[] {
+                table2320.AddRow(new string[] {
                             "Query performance",
                             "Indexed search with caching",
                             "Performance tuning"});
-                table2357.AddRow(new string[] {
+                table2320.AddRow(new string[] {
                             "Real-time processing",
                             "Stream processing capabilities",
                             "Event-driven architecture"});
 #line 263
-    testRunner.Then("scaling solutions should include:", ((string)(null)), table2357, "Then ");
+    testRunner.Then("scaling solutions should include:", ((string)(null)), table2320, "Then ");
 #line hidden
 #line 269
     testRunner.And("scaling should be transparent to users", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

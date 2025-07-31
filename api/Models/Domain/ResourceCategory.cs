@@ -28,7 +28,7 @@ public class Category
     public bool IsActive { get; set; } = true;
 
     public Guid CreatedBy { get; set; }
-    
+
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
     // Navigation properties

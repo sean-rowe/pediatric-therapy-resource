@@ -128,29 +128,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 14
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1485 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1448 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1485.AddRow(new string[] {
+                table1448.AddRow(new string[] {
                             "integrationId",
                             "string"});
-                table1485.AddRow(new string[] {
+                table1448.AddRow(new string[] {
                             "name",
                             "string"});
-                table1485.AddRow(new string[] {
+                table1448.AddRow(new string[] {
                             "category",
                             "string"});
-                table1485.AddRow(new string[] {
+                table1448.AddRow(new string[] {
                             "description",
                             "string"});
-                table1485.AddRow(new string[] {
+                table1448.AddRow(new string[] {
                             "status",
                             "string"});
-                table1485.AddRow(new string[] {
+                table1448.AddRow(new string[] {
                             "configured",
                             "boolean"});
 #line 15
-    testRunner.And("the response should contain array of:", ((string)(null)), table1485, "And ");
+    testRunner.And("the response should contain array of:", ((string)(null)), table1448, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -185,44 +185,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1486 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1449 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1486.AddRow(new string[] {
+                table1449.AddRow(new string[] {
                             "provider",
                             "SimplePractice"});
-                table1486.AddRow(new string[] {
+                table1449.AddRow(new string[] {
                             "apiKey",
                             "encrypted-api-key"});
-                table1486.AddRow(new string[] {
+                table1449.AddRow(new string[] {
                             "practiceId",
                             "practice-123"});
-                table1486.AddRow(new string[] {
+                table1449.AddRow(new string[] {
                             "syncOptions",
                             "[\"sessions\", \"notes\"]"});
 #line 27
-    testRunner.When("I send a POST request to \"/api/integrations/ehr/connect\" with:", ((string)(null)), table1486, "When ");
+    testRunner.When("I send a POST request to \"/api/integrations/ehr/connect\" with:", ((string)(null)), table1449, "When ");
 #line hidden
 #line 33
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1487 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1450 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1487.AddRow(new string[] {
+                table1450.AddRow(new string[] {
                             "connectionId",
                             "string"});
-                table1487.AddRow(new string[] {
+                table1450.AddRow(new string[] {
                             "status",
                             "string"});
-                table1487.AddRow(new string[] {
+                table1450.AddRow(new string[] {
                             "lastSync",
                             "string"});
-                table1487.AddRow(new string[] {
+                table1450.AddRow(new string[] {
                             "capabilities",
                             "array"});
 #line 34
-    testRunner.And("the response should contain:", ((string)(null)), table1487, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1450, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -266,20 +266,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 46
     testRunner.Then("the response status should be 202", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1488 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1451 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1488.AddRow(new string[] {
+                table1451.AddRow(new string[] {
                             "syncJobId",
                             "string"});
-                table1488.AddRow(new string[] {
+                table1451.AddRow(new string[] {
                             "status",
                             "string"});
-                table1488.AddRow(new string[] {
+                table1451.AddRow(new string[] {
                             "itemsToSync",
                             "number"});
 #line 47
-    testRunner.And("the response should contain:", ((string)(null)), table1488, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1451, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -314,20 +314,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1489 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1452 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1489.AddRow(new string[] {
+                table1452.AddRow(new string[] {
                             "lmsType",
                             "google-classroom"});
-                table1489.AddRow(new string[] {
+                table1452.AddRow(new string[] {
                             "authCode",
                             "oauth-code-123"});
-                table1489.AddRow(new string[] {
+                table1452.AddRow(new string[] {
                             "permissions",
                             "[\"create\", \"grade\"]"});
 #line 56
-    testRunner.When("I send a POST request to \"/api/integrations/lms/connect\" with:", ((string)(null)), table1489, "When ");
+    testRunner.When("I send a POST request to \"/api/integrations/lms/connect\" with:", ((string)(null)), table1452, "When ");
 #line hidden
 #line 61
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -374,26 +374,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 68
     testRunner.Given("LMS connection \"lms-123\" exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1490 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1453 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1490.AddRow(new string[] {
+                table1453.AddRow(new string[] {
                             "classId",
                             "class-456"});
-                table1490.AddRow(new string[] {
+                table1453.AddRow(new string[] {
                             "resourceIds",
                             "[\"res-123\", \"res-124\"]"});
-                table1490.AddRow(new string[] {
+                table1453.AddRow(new string[] {
                             "title",
                             "Speech Practice Week 3"});
-                table1490.AddRow(new string[] {
+                table1453.AddRow(new string[] {
                             "dueDate",
                             "2024-01-29"});
-                table1490.AddRow(new string[] {
+                table1453.AddRow(new string[] {
                             "points",
                             "100"});
 #line 69
-    testRunner.When("I send a POST request to \"/api/integrations/lms/lms-123/assign\" with:", ((string)(null)), table1490, "When ");
+    testRunner.When("I send a POST request to \"/api/integrations/lms/lms-123/assign\" with:", ((string)(null)), table1453, "When ");
 #line hidden
 #line 76
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -440,26 +440,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 83
     testRunner.Given("I have admin permissions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1491 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1454 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1491.AddRow(new string[] {
+                table1454.AddRow(new string[] {
                             "provider",
                             "clever"});
-                table1491.AddRow(new string[] {
+                table1454.AddRow(new string[] {
                             "clientId",
                             "client-123"});
-                table1491.AddRow(new string[] {
+                table1454.AddRow(new string[] {
                             "clientSecret",
                             "encrypted-secret"});
-                table1491.AddRow(new string[] {
+                table1454.AddRow(new string[] {
                             "redirectUri",
                             "https://app.uptrms.com/auth"});
-                table1491.AddRow(new string[] {
+                table1454.AddRow(new string[] {
                             "scopes",
                             "[\"profile\", \"roster\"]"});
 #line 84
-    testRunner.When("I send a POST request to \"/api/integrations/sso/configure\" with:", ((string)(null)), table1491, "When ");
+    testRunner.When("I send a POST request to \"/api/integrations/sso/configure\" with:", ((string)(null)), table1454, "When ");
 #line hidden
 #line 91
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -513,20 +513,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 100
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1492 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1455 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1492.AddRow(new string[] {
+                table1455.AddRow(new string[] {
                             "slots",
                             "array"});
-                table1492.AddRow(new string[] {
+                table1455.AddRow(new string[] {
                             "timezone",
                             "string"});
-                table1492.AddRow(new string[] {
+                table1455.AddRow(new string[] {
                             "conflicts",
                             "array"});
 #line 101
-    testRunner.And("the response should contain:", ((string)(null)), table1492, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1455, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -561,26 +561,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1493 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1456 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1493.AddRow(new string[] {
+                table1456.AddRow(new string[] {
                             "studentId",
                             "student-123"});
-                table1493.AddRow(new string[] {
+                table1456.AddRow(new string[] {
                             "dateTime",
                             "2024-01-22T10:00:00Z"});
-                table1493.AddRow(new string[] {
+                table1456.AddRow(new string[] {
                             "duration",
                             "30"});
-                table1493.AddRow(new string[] {
+                table1456.AddRow(new string[] {
                             "recurring",
                             "weekly"});
-                table1493.AddRow(new string[] {
+                table1456.AddRow(new string[] {
                             "endDate",
                             "2024-05-30"});
 #line 110
-    testRunner.When("I send a POST request to \"/api/integrations/calendar/schedule\" with:", ((string)(null)), table1493, "When ");
+    testRunner.When("I send a POST request to \"/api/integrations/calendar/schedule\" with:", ((string)(null)), table1456, "When ");
 #line hidden
 #line 117
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -624,23 +624,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1494 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1457 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1494.AddRow(new string[] {
+                table1457.AddRow(new string[] {
                             "provider",
                             "google-drive"});
-                table1494.AddRow(new string[] {
+                table1457.AddRow(new string[] {
                             "folderId",
                             "folder-123"});
-                table1494.AddRow(new string[] {
+                table1457.AddRow(new string[] {
                             "fileTypes",
                             "[\"pdf\", \"docx\"]"});
-                table1494.AddRow(new string[] {
+                table1457.AddRow(new string[] {
                             "importAs",
                             "draft"});
 #line 124
-    testRunner.When("I send a POST request to \"/api/integrations/drive/import\" with:", ((string)(null)), table1494, "When ");
+    testRunner.When("I send a POST request to \"/api/integrations/drive/import\" with:", ((string)(null)), table1457, "When ");
 #line hidden
 #line 130
     testRunner.Then("the response status should be 202", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -687,20 +687,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 137
     testRunner.Given("I am a marketplace seller", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1495 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1458 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1495.AddRow(new string[] {
+                table1458.AddRow(new string[] {
                             "marketplace",
                             "etsy"});
-                table1495.AddRow(new string[] {
+                table1458.AddRow(new string[] {
                             "storeId",
                             "store-123"});
-                table1495.AddRow(new string[] {
+                table1458.AddRow(new string[] {
                             "syncDirection",
                             "bidirectional"});
 #line 138
-    testRunner.When("I send a POST request to \"/api/integrations/marketplace/sync\" with:", ((string)(null)), table1495, "When ");
+    testRunner.When("I send a POST request to \"/api/integrations/marketplace/sync\" with:", ((string)(null)), table1458, "When ");
 #line hidden
 #line 143
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -744,23 +744,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1496 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1459 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1496.AddRow(new string[] {
+                table1459.AddRow(new string[] {
                             "provider",
                             "sendgrid"});
-                table1496.AddRow(new string[] {
+                table1459.AddRow(new string[] {
                             "apiKey",
                             "encrypted-key"});
-                table1496.AddRow(new string[] {
+                table1459.AddRow(new string[] {
                             "fromEmail",
                             "clinic@example.com"});
-                table1496.AddRow(new string[] {
+                table1459.AddRow(new string[] {
                             "fromName",
                             "Sunshine Therapy"});
 #line 150
-    testRunner.When("I send a POST request to \"/api/integrations/email/configure\" with:", ((string)(null)), table1496, "When ");
+    testRunner.When("I send a POST request to \"/api/integrations/email/configure\" with:", ((string)(null)), table1459, "When ");
 #line hidden
 #line 156
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -810,26 +810,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 164
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1497 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1460 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1497.AddRow(new string[] {
+                table1460.AddRow(new string[] {
                             "integrationName",
                             "string"});
-                table1497.AddRow(new string[] {
+                table1460.AddRow(new string[] {
                             "status",
                             "string"});
-                table1497.AddRow(new string[] {
+                table1460.AddRow(new string[] {
                             "lastActivity",
                             "string"});
-                table1497.AddRow(new string[] {
+                table1460.AddRow(new string[] {
                             "errorCount",
                             "number"});
-                table1497.AddRow(new string[] {
+                table1460.AddRow(new string[] {
                             "nextSync",
                             "string"});
 #line 165
-    testRunner.And("the response should contain array of:", ((string)(null)), table1497, "And ");
+    testRunner.And("the response should contain array of:", ((string)(null)), table1460, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -915,23 +915,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1498 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1461 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1498.AddRow(new string[] {
+                table1461.AddRow(new string[] {
                             "url",
                             "https://example.com/webhook"});
-                table1498.AddRow(new string[] {
+                table1461.AddRow(new string[] {
                             "events",
                             "[\"resource.created\", \"student.progress\"]"});
-                table1498.AddRow(new string[] {
+                table1461.AddRow(new string[] {
                             "secret",
                             "webhook-secret"});
-                table1498.AddRow(new string[] {
+                table1461.AddRow(new string[] {
                             "active",
                             "true"});
 #line 186
-    testRunner.When("I send a POST request to \"/api/integrations/webhooks\" with:", ((string)(null)), table1498, "When ");
+    testRunner.When("I send a POST request to \"/api/integrations/webhooks\" with:", ((string)(null)), table1461, "When ");
 #line hidden
 #line 192
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -984,20 +984,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 201
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1499 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1462 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1499.AddRow(new string[] {
+                table1462.AddRow(new string[] {
                             "logs",
                             "array"});
-                table1499.AddRow(new string[] {
+                table1462.AddRow(new string[] {
                             "summary",
                             "object"});
-                table1499.AddRow(new string[] {
+                table1462.AddRow(new string[] {
                             "errors",
                             "array"});
 #line 202
-    testRunner.And("the response should contain:", ((string)(null)), table1499, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1462, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1041,50 +1041,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 213
     testRunner.When("I enable Etsy synchronization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1500 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1463 = new TechTalk.SpecFlow.Table(new string[] {
                             "Setting",
                             "Value"});
-                table1500.AddRow(new string[] {
+                table1463.AddRow(new string[] {
                             "Sync Direction",
                             "Bidirectional"});
-                table1500.AddRow(new string[] {
+                table1463.AddRow(new string[] {
                             "Price Sync",
                             "Enabled"});
-                table1500.AddRow(new string[] {
+                table1463.AddRow(new string[] {
                             "Inventory Sync",
                             "Enabled"});
-                table1500.AddRow(new string[] {
+                table1463.AddRow(new string[] {
                             "Description Sync",
                             "UPTRMS to Etsy only"});
-                table1500.AddRow(new string[] {
+                table1463.AddRow(new string[] {
                             "Image Sync",
                             "Enabled"});
 #line 214
-    testRunner.And("I configure sync settings:", ((string)(null)), table1500, "And ");
+    testRunner.And("I configure sync settings:", ((string)(null)), table1463, "And ");
 #line hidden
 #line 221
     testRunner.Then("all qualifying products should sync to Etsy within 1 hour", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1501 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1464 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Sync Status"});
-                table1501.AddRow(new string[] {
+                table1464.AddRow(new string[] {
                             "Product Title",
                             "Synced with SEO optimization"});
-                table1501.AddRow(new string[] {
+                table1464.AddRow(new string[] {
                             "Description",
                             "Formatted for Etsy audience"});
-                table1501.AddRow(new string[] {
+                table1464.AddRow(new string[] {
                             "Price",
                             "Synced with currency conversion"});
-                table1501.AddRow(new string[] {
+                table1464.AddRow(new string[] {
                             "Inventory Count",
                             "Real-time sync"});
-                table1501.AddRow(new string[] {
+                table1464.AddRow(new string[] {
                             "Product Images",
                             "Optimized for Etsy display"});
 #line 222
-    testRunner.And("Etsy product listings should match UPTRMS data:", ((string)(null)), table1501, "And ");
+    testRunner.And("Etsy product listings should match UPTRMS data:", ((string)(null)), table1464, "And ");
 #line hidden
 #line 229
     testRunner.When("I update a product price in UPTRMS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1137,47 +1137,47 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 237
     testRunner.When("I select products to sync with Amazon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1502 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1465 = new TechTalk.SpecFlow.Table(new string[] {
                             "Setting",
                             "Value"});
-                table1502.AddRow(new string[] {
+                table1465.AddRow(new string[] {
                             "Category Mapping",
                             "Crafts & Sewing > Educational"});
-                table1502.AddRow(new string[] {
+                table1465.AddRow(new string[] {
                             "Fulfillment Method",
                             "Merchant Fulfilled"});
-                table1502.AddRow(new string[] {
+                table1465.AddRow(new string[] {
                             "Shipping Templates",
                             "Standard Education Materials"});
-                table1502.AddRow(new string[] {
+                table1465.AddRow(new string[] {
                             "Tax Settings",
                             "Use Amazon tax calculation"});
 #line 238
-    testRunner.And("I configure Amazon-specific settings:", ((string)(null)), table1502, "And ");
+    testRunner.And("I configure Amazon-specific settings:", ((string)(null)), table1465, "And ");
 #line hidden
 #line 244
     testRunner.Then("products should appear in Amazon Handmade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1503 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1466 = new TechTalk.SpecFlow.Table(new string[] {
                             "Required Field",
                             "Source"});
-                table1503.AddRow(new string[] {
+                table1466.AddRow(new string[] {
                             "Product Title",
                             "Auto-generated from UPTRMS"});
-                table1503.AddRow(new string[] {
+                table1466.AddRow(new string[] {
                             "Bullet Points",
                             "Generated from features"});
-                table1503.AddRow(new string[] {
+                table1466.AddRow(new string[] {
                             "Product Description",
                             "Formatted for Amazon audience"});
-                table1503.AddRow(new string[] {
+                table1466.AddRow(new string[] {
                             "Keywords",
                             "Auto-generated SEO tags"});
-                table1503.AddRow(new string[] {
+                table1466.AddRow(new string[] {
                             "Images",
                             "Optimized for Amazon display"});
 #line 245
-    testRunner.And("Amazon listings should include:", ((string)(null)), table1503, "And ");
+    testRunner.And("Amazon listings should include:", ((string)(null)), table1466, "And ");
 #line hidden
 #line 252
     testRunner.When("order is placed on Amazon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1237,23 +1237,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 263
     testRunner.Then("videos should be automatically linked to related resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1504 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1467 = new TechTalk.SpecFlow.Table(new string[] {
                             "Integration Feature",
                             "Implementation"});
-                table1504.AddRow(new string[] {
+                table1467.AddRow(new string[] {
                             "Video Thumbnails",
                             "Auto-generated from YouTube"});
-                table1504.AddRow(new string[] {
+                table1467.AddRow(new string[] {
                             "Video Descriptions",
                             "Synced from YouTube metadata"});
-                table1504.AddRow(new string[] {
+                table1467.AddRow(new string[] {
                             "View Counts",
                             "Real-time YouTube analytics"});
-                table1504.AddRow(new string[] {
+                table1467.AddRow(new string[] {
                             "Comments",
                             "Moderated YouTube comments"});
 #line 264
-    testRunner.And("UPTRMS should display:", ((string)(null)), table1504, "And ");
+    testRunner.And("UPTRMS should display:", ((string)(null)), table1467, "And ");
 #line hidden
 #line 270
     testRunner.When("users access resources in UPTRMS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1307,23 +1307,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 279
     testRunner.And("I tag TikTok videos with therapy resource hashtags", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1505 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1468 = new TechTalk.SpecFlow.Table(new string[] {
                             "Integration Feature",
                             "Implementation"});
-                table1505.AddRow(new string[] {
+                table1468.AddRow(new string[] {
                             "Import TikTok Videos",
                             "Embed approved videos"});
-                table1505.AddRow(new string[] {
+                table1468.AddRow(new string[] {
                             "Hashtag Matching",
                             "Link to relevant resources"});
-                table1505.AddRow(new string[] {
+                table1468.AddRow(new string[] {
                             "Engagement Metrics",
                             "Track views and shares"});
-                table1505.AddRow(new string[] {
+                table1468.AddRow(new string[] {
                             "Content Moderation",
                             "Review before platform display"});
 #line 280
-    testRunner.Then("UPTRMS should:", ((string)(null)), table1505, "Then ");
+    testRunner.Then("UPTRMS should:", ((string)(null)), table1468, "Then ");
 #line hidden
 #line 286
     testRunner.When("I create new therapy resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1374,23 +1374,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 294
     testRunner.When("I select therapy resources to share on Pinterest", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1506 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1469 = new TechTalk.SpecFlow.Table(new string[] {
                             "Setting",
                             "Value"});
-                table1506.AddRow(new string[] {
+                table1469.AddRow(new string[] {
                             "Board Name",
                             "Pediatric Therapy Resources"});
-                table1506.AddRow(new string[] {
+                table1469.AddRow(new string[] {
                             "Board Description",
                             "Evidence-based therapy materials"});
-                table1506.AddRow(new string[] {
+                table1469.AddRow(new string[] {
                             "Board Category",
                             "Education"});
-                table1506.AddRow(new string[] {
+                table1469.AddRow(new string[] {
                             "Pin Descriptions",
                             "Auto-generated from resources"});
 #line 295
-    testRunner.And("I configure Pinterest board settings:", ((string)(null)), table1506, "And ");
+    testRunner.And("I configure Pinterest board settings:", ((string)(null)), table1469, "And ");
 #line hidden
 #line 301
     testRunner.Then("Pinterest boards should be created automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1398,23 +1398,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 302
     testRunner.And("resource images should be optimized for Pinterest", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1507 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1470 = new TechTalk.SpecFlow.Table(new string[] {
                             "Pin Element",
                             "Content"});
-                table1507.AddRow(new string[] {
+                table1470.AddRow(new string[] {
                             "Pin Title",
                             "Resource title + age range"});
-                table1507.AddRow(new string[] {
+                table1470.AddRow(new string[] {
                             "Pin Description",
                             "Therapy benefits summary"});
-                table1507.AddRow(new string[] {
+                table1470.AddRow(new string[] {
                             "Pin Image",
                             "Optimized resource preview"});
-                table1507.AddRow(new string[] {
+                table1470.AddRow(new string[] {
                             "Pin Link",
                             "Direct link to UPTRMS resource"});
 #line 303
-    testRunner.And("pins should include:", ((string)(null)), table1507, "And ");
+    testRunner.And("pins should include:", ((string)(null)), table1470, "And ");
 #line hidden
 #line 309
     testRunner.When("Pinterest users save or click pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1465,23 +1465,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 317
     testRunner.When("I view my unified inventory dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1508 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1471 = new TechTalk.SpecFlow.Table(new string[] {
                             "Platform",
                             "Inventory Display"});
-                table1508.AddRow(new string[] {
+                table1471.AddRow(new string[] {
                             "UPTRMS",
                             "Primary inventory count"});
-                table1508.AddRow(new string[] {
+                table1471.AddRow(new string[] {
                             "Etsy",
                             "Synced count with status"});
-                table1508.AddRow(new string[] {
+                table1471.AddRow(new string[] {
                             "Amazon",
                             "Synced count with status"});
-                table1508.AddRow(new string[] {
+                table1471.AddRow(new string[] {
                             "TeachersPayTeachers",
                             "Synced count with status"});
 #line 318
-    testRunner.Then("I should see real-time inventory across all platforms:", ((string)(null)), table1508, "Then ");
+    testRunner.Then("I should see real-time inventory across all platforms:", ((string)(null)), table1471, "Then ");
 #line hidden
 #line 324
     testRunner.When("inventory reaches low stock threshold", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1540,47 +1540,47 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 334
     testRunner.When("I access cross-platform analytics dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1509 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1472 = new TechTalk.SpecFlow.Table(new string[] {
                             "Metric Type",
                             "Data Aggregation"});
-                table1509.AddRow(new string[] {
+                table1472.AddRow(new string[] {
                             "Total Sales",
                             "Sum across all platforms"});
-                table1509.AddRow(new string[] {
+                table1472.AddRow(new string[] {
                             "Revenue by Platform",
                             "Breakdown by marketplace"});
-                table1509.AddRow(new string[] {
+                table1472.AddRow(new string[] {
                             "Traffic Sources",
                             "Referral tracking"});
-                table1509.AddRow(new string[] {
+                table1472.AddRow(new string[] {
                             "Customer Geography",
                             "Combined location data"});
-                table1509.AddRow(new string[] {
+                table1472.AddRow(new string[] {
                             "Product Performance",
                             "Top sellers across platforms"});
-                table1509.AddRow(new string[] {
+                table1472.AddRow(new string[] {
                             "Seasonal Trends",
                             "Multi-platform trend analysis"});
 #line 335
-    testRunner.Then("I should see unified metrics:", ((string)(null)), table1509, "Then ");
+    testRunner.Then("I should see unified metrics:", ((string)(null)), table1472, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1510 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1473 = new TechTalk.SpecFlow.Table(new string[] {
                             "Action",
                             "Capability"});
-                table1510.AddRow(new string[] {
+                table1473.AddRow(new string[] {
                             "Export Reports",
                             "CSV, PDF formats available"});
-                table1510.AddRow(new string[] {
+                table1473.AddRow(new string[] {
                             "Set Date Ranges",
                             "Custom period analysis"});
-                table1510.AddRow(new string[] {
+                table1473.AddRow(new string[] {
                             "Compare Platforms",
                             "Side-by-side performance"});
-                table1510.AddRow(new string[] {
+                table1473.AddRow(new string[] {
                             "Track ROI",
                             "Platform-specific profitability"});
 #line 343
-    testRunner.And("I should be able to:", ((string)(null)), table1510, "And ");
+    testRunner.And("I should be able to:", ((string)(null)), table1473, "And ");
 #line hidden
 #line 349
     testRunner.When("I generate monthly report", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1625,23 +1625,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 355
     testRunner.When("I enable dynamic pricing strategy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1511 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1474 = new TechTalk.SpecFlow.Table(new string[] {
                             "Rule Type",
                             "Configuration"});
-                table1511.AddRow(new string[] {
+                table1474.AddRow(new string[] {
                             "Competitive Pricing",
                             "Match lowest competitor price"});
-                table1511.AddRow(new string[] {
+                table1474.AddRow(new string[] {
                             "Platform Fees",
                             "Adjust for marketplace fees"});
-                table1511.AddRow(new string[] {
+                table1474.AddRow(new string[] {
                             "Seasonal Adjustments",
                             "Increase during back-to-school"});
-                table1511.AddRow(new string[] {
+                table1474.AddRow(new string[] {
                             "Volume Discounts",
                             "Bulk pricing for schools"});
 #line 356
-    testRunner.And("I configure pricing rules:", ((string)(null)), table1511, "And ");
+    testRunner.And("I configure pricing rules:", ((string)(null)), table1474, "And ");
 #line hidden
 #line 362
     testRunner.Then("pricing should adjust automatically across platforms", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1695,41 +1695,41 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 371
     testRunner.When("orders are placed simultaneously", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1512 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1475 = new TechTalk.SpecFlow.Table(new string[] {
                             "Routing Factor",
                             "Priority Logic"});
-                table1512.AddRow(new string[] {
+                table1475.AddRow(new string[] {
                             "Platform Fees",
                             "Lower fee platforms first"});
-                table1512.AddRow(new string[] {
+                table1475.AddRow(new string[] {
                             "Fulfillment Speed",
                             "Fastest delivery method"});
-                table1512.AddRow(new string[] {
+                table1475.AddRow(new string[] {
                             "Inventory Location",
                             "Nearest fulfillment center"});
-                table1512.AddRow(new string[] {
+                table1475.AddRow(new string[] {
                             "Customer Preferences",
                             "Expedited vs standard shipping"});
 #line 372
-    testRunner.Then("system should route orders based on:", ((string)(null)), table1512, "Then ");
+    testRunner.Then("system should route orders based on:", ((string)(null)), table1475, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1513 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1476 = new TechTalk.SpecFlow.Table(new string[] {
                             "Feature",
                             "Implementation"});
-                table1513.AddRow(new string[] {
+                table1476.AddRow(new string[] {
                             "Order Consolidation",
                             "Combine multiple item orders"});
-                table1513.AddRow(new string[] {
+                table1476.AddRow(new string[] {
                             "Automatic Tracking",
                             "Update all platforms with status"});
-                table1513.AddRow(new string[] {
+                table1476.AddRow(new string[] {
                             "Customer Communication",
                             "Unified messaging system"});
-                table1513.AddRow(new string[] {
+                table1476.AddRow(new string[] {
                             "Returns Processing",
                             "Handle returns across platforms"});
 #line 378
-    testRunner.And("order management should include:", ((string)(null)), table1513, "And ");
+    testRunner.And("order management should include:", ((string)(null)), table1476, "And ");
 #line hidden
 #line 384
     testRunner.When("order is fulfilled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

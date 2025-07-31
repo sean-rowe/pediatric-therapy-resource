@@ -142,7 +142,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 17
     testRunner.And("delayed gratification skills are important", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2643 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2606 = new TechTalk.SpecFlow.Table(new string[] {
                             "Student",
                             "Token Type",
                             "Target Behaviors",
@@ -151,7 +151,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Backup Reinforcers",
                             "Implementation Setting",
                             "Success Criteria"});
-                table2643.AddRow(new string[] {
+                table2606.AddRow(new string[] {
                             "Alex",
                             "Star stickers",
                             "Following directions, completing work",
@@ -160,7 +160,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Computer time, snacks, activities",
                             "Classroom",
                             "80% compliance increase"});
-                table2643.AddRow(new string[] {
+                table2606.AddRow(new string[] {
                             "Maria",
                             "Digital points",
                             "Social interaction, help-seeking",
@@ -169,7 +169,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Art supplies, music, books",
                             "Special education",
                             "90% appropriate interactions"});
-                table2643.AddRow(new string[] {
+                table2606.AddRow(new string[] {
                             "James",
                             "Puzzle pieces",
                             "Stay in seat, raise hand",
@@ -178,7 +178,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Sensory toys, movement breaks",
                             "General education",
                             "85% in-seat behavior"});
-                table2643.AddRow(new string[] {
+                table2606.AddRow(new string[] {
                             "Sofia",
                             "Happy faces",
                             "Turn-taking, sharing",
@@ -187,7 +187,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Peer interaction, leadership role",
                             "Social skills group",
                             "75% prosocial behaviors"});
-                table2643.AddRow(new string[] {
+                table2606.AddRow(new string[] {
                             "David",
                             "Token coins",
                             "Task completion, accuracy",
@@ -196,7 +196,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Preferred tasks, special jobs",
                             "Vocational training",
                             "90% task completion"});
-                table2643.AddRow(new string[] {
+                table2606.AddRow(new string[] {
                             "Emma",
                             "Digital badges",
                             "Communication attempts",
@@ -206,7 +206,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Communication therapy",
                             "200% increase in attempts"});
 #line 18
-    testRunner.When("implementing token economy systems:", ((string)(null)), table2643, "When ");
+    testRunner.When("implementing token economy systems:", ((string)(null)), table2606, "When ");
 #line hidden
 #line 26
     testRunner.Then("token systems should be individualized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -263,49 +263,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 34
     testRunner.And("variety prevents satiation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2644 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2607 = new TechTalk.SpecFlow.Table(new string[] {
                             "Reinforcer Category",
                             "Specific Options",
                             "Cost in Tokens",
                             "Availability Schedule",
                             "Preference Assessment",
                             "Rotation Strategy"});
-                table2644.AddRow(new string[] {
+                table2607.AddRow(new string[] {
                             "Activities",
                             "Computer time, art, music",
                             "5-15 tokens",
                             "Daily options",
                             "Weekly choice sampling",
                             "Bi-weekly rotation"});
-                table2644.AddRow(new string[] {
+                table2607.AddRow(new string[] {
                             "Tangibles",
                             "Stickers, toys, books",
                             "3-10 tokens",
                             "Immediate access",
                             "Monthly preference probe",
                             "Monthly updates"});
-                table2644.AddRow(new string[] {
+                table2607.AddRow(new string[] {
                             "Social",
                             "Peer time, teacher helper",
                             "8-12 tokens",
                             "Scheduled opportunities",
                             "Social preference survey",
                             "Weekly options"});
-                table2644.AddRow(new string[] {
+                table2607.AddRow(new string[] {
                             "Edibles",
                             "Healthy snacks, treats",
                             "2-6 tokens",
                             "Designated times",
                             "Daily choice offering",
                             "Daily variety"});
-                table2644.AddRow(new string[] {
+                table2607.AddRow(new string[] {
                             "Privileges",
                             "Line leader, choice seating",
                             "10-20 tokens",
                             "Special occasions",
                             "Privilege ranking",
                             "Event-based"});
-                table2644.AddRow(new string[] {
+                table2607.AddRow(new string[] {
                             "Experiences",
                             "Field trips, special events",
                             "50-100 tokens",
@@ -313,7 +313,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Experience interest survey",
                             "Seasonal planning"});
 #line 35
-    testRunner.When("managing backup reinforcer systems:", ((string)(null)), table2644, "When ");
+    testRunner.When("managing backup reinforcer systems:", ((string)(null)), table2607, "When ");
 #line hidden
 #line 43
     testRunner.Then("reinforcer menus should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -370,49 +370,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 51
     testRunner.And("behavior change requires appropriate contingencies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2645 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2608 = new TechTalk.SpecFlow.Table(new string[] {
                             "Protocol Type",
                             "Earning Criteria",
                             "Token Delivery",
                             "Schedule Type",
                             "Behavior Specificity",
                             "Earning Rate"});
-                table2645.AddRow(new string[] {
+                table2608.AddRow(new string[] {
                             "Fixed ratio",
                             "Every 3 correct responses",
                             "Immediate",
                             "FR3",
                             "Specific task completion",
                             "Predictable rate"});
-                table2645.AddRow(new string[] {
+                table2608.AddRow(new string[] {
                             "Variable ratio",
                             "Average 5 responses",
                             "Immediate",
                             "VR5",
                             "Target behavior occurrence",
                             "Variable rate"});
-                table2645.AddRow(new string[] {
+                table2608.AddRow(new string[] {
                             "Fixed interval",
                             "Every 10 minutes",
                             "End of interval",
                             "FI 10 min",
                             "Interval compliance",
                             "Time-based"});
-                table2645.AddRow(new string[] {
+                table2608.AddRow(new string[] {
                             "Variable interval",
                             "Average 8 minutes",
                             "End of interval",
                             "VI 8 min",
                             "Ongoing behavior",
                             "Unpredictable timing"});
-                table2645.AddRow(new string[] {
+                table2608.AddRow(new string[] {
                             "Differential reinforcement",
                             "Only appropriate behavior",
                             "Immediate",
                             "DRA",
                             "Replacement behavior",
                             "Selective earning"});
-                table2645.AddRow(new string[] {
+                table2608.AddRow(new string[] {
                             "Shaping schedule",
                             "Successive approximations",
                             "Immediate",
@@ -420,7 +420,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Skill development",
                             "Graduated earning"});
 #line 52
-    testRunner.When("implementing earning protocols:", ((string)(null)), table2645, "When ");
+    testRunner.When("implementing earning protocols:", ((string)(null)), table2608, "When ");
 #line hidden
 #line 60
     testRunner.Then("earning should be systematic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -477,49 +477,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 68
     testRunner.And("flexibility maintains motivation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2646 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2609 = new TechTalk.SpecFlow.Table(new string[] {
                             "Exchange Type",
                             "Exchange Timing",
                             "Exchange Options",
                             "Savings Allowance",
                             "Exchange Limits",
                             "Special Features"});
-                table2646.AddRow(new string[] {
+                table2609.AddRow(new string[] {
                             "Immediate",
                             "Any time during session",
                             "All available items",
                             "No savings",
                             "1 exchange per session",
                             "Instant gratification option"});
-                table2646.AddRow(new string[] {
+                table2609.AddRow(new string[] {
                             "Scheduled",
                             "Designated exchange times",
                             "Full menu",
                             "Banking allowed",
                             "2 exchanges per day",
                             "Planned exchange opportunities"});
-                table2646.AddRow(new string[] {
+                table2609.AddRow(new string[] {
                             "Banking",
                             "End of day/week",
                             "Premium items",
                             "Long-term saving",
                             "Unlimited banking",
                             "High-value delayed rewards"});
-                table2646.AddRow(new string[] {
+                table2609.AddRow(new string[] {
                             "Auction",
                             "Weekly group event",
                             "Special items",
                             "Bidding system",
                             "Competitive exchange",
                             "Social exchange experience"});
-                table2646.AddRow(new string[] {
+                table2609.AddRow(new string[] {
                             "Store",
                             "Daily store hours",
                             "Varied inventory",
                             "Spending/saving choice",
                             "Store limit rules",
                             "Shopping experience"});
-                table2646.AddRow(new string[] {
+                table2609.AddRow(new string[] {
                             "Layaway",
                             "Payment plan system",
                             "High-cost items",
@@ -527,7 +527,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Contract-based",
                             "Goal-setting practice"});
 #line 69
-    testRunner.When("implementing exchange systems:", ((string)(null)), table2646, "When ");
+    testRunner.When("implementing exchange systems:", ((string)(null)), table2609, "When ");
 #line hidden
 #line 77
     testRunner.Then("exchange should be flexible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -584,49 +584,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 86
     testRunner.And("token systems must be tailored accordingly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2647 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2610 = new TechTalk.SpecFlow.Table(new string[] {
                             "Individual Profile",
                             "System Adaptations",
                             "Token Modifications",
                             "Reinforcer Adaptations",
                             "Schedule Adjustments",
                             "Special Considerations"});
-                table2647.AddRow(new string[] {
+                table2610.AddRow(new string[] {
                             "Autism + high support needs",
                             "Visual token board",
                             "Large, tactile tokens",
                             "Sensory reinforcers",
                             "Frequent, immediate",
                             "Predictable routine"});
-                table2647.AddRow(new string[] {
+                table2610.AddRow(new string[] {
                             "ADHD profile",
                             "Digital tracking",
                             "Immediate feedback",
                             "Movement-based rewards",
                             "Variable, engaging",
                             "Attention-grabbing cues"});
-                table2647.AddRow(new string[] {
+                table2610.AddRow(new string[] {
                             "Intellectual disability",
                             "Simplified system",
                             "Concrete tokens",
                             "Functional reinforcers",
                             "Fixed, frequent",
                             "Clear contingencies"});
-                table2647.AddRow(new string[] {
+                table2610.AddRow(new string[] {
                             "Anxiety-related behaviors",
                             "Gradual introduction",
                             "Comfort-themed tokens",
                             "Calming reinforcers",
                             "Low-pressure schedule",
                             "Anxiety reduction focus"});
-                table2647.AddRow(new string[] {
+                table2610.AddRow(new string[] {
                             "Communication disorders",
                             "AAC integration",
                             "Communication tokens",
                             "Communication reinforcers",
                             "Communication-based",
                             "Multi-modal delivery"});
-                table2647.AddRow(new string[] {
+                table2610.AddRow(new string[] {
                             "Cultural considerations",
                             "Culturally relevant tokens",
                             "Meaningful symbols",
@@ -634,7 +634,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Family-aligned schedule",
                             "Cultural sensitivity"});
 #line 87
-    testRunner.When("individualizing token systems:", ((string)(null)), table2647, "When ");
+    testRunner.When("individualizing token systems:", ((string)(null)), table2610, "When ");
 #line hidden
 #line 95
     testRunner.Then("individualization should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -691,49 +691,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 103
     testRunner.And("collective goals promote cooperation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2648 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2611 = new TechTalk.SpecFlow.Table(new string[] {
                             "Group Type",
                             "Group Goal",
                             "Individual Contribution",
                             "Group Reward",
                             "Competition Element",
                             "Cooperation Focus"});
-                table2648.AddRow(new string[] {
+                table2611.AddRow(new string[] {
                             "Classroom team",
                             "Class points target",
                             "Individual earnings",
                             "Class celebration",
                             "Teams within class",
                             "Mutual support"});
-                table2648.AddRow(new string[] {
+                table2611.AddRow(new string[] {
                             "Therapy group",
                             "Group behavior goal",
                             "Behavior occurrence",
                             "Group activity",
                             "Group vs. goal",
                             "Peer encouragement"});
-                table2648.AddRow(new string[] {
+                table2611.AddRow(new string[] {
                             "Family system",
                             "Family points",
                             "Chore completion",
                             "Family outing",
                             "Sibling cooperation",
                             "Family teamwork"});
-                table2648.AddRow(new string[] {
+                table2611.AddRow(new string[] {
                             "Peer buddy system",
                             "Mutual goal achievement",
                             "Partner support",
                             "Shared privilege",
                             "Buddy pairs",
                             "Peer assistance"});
-                table2648.AddRow(new string[] {
+                table2611.AddRow(new string[] {
                             "Workplace team",
                             "Productivity target",
                             "Task completion",
                             "Team reward",
                             "Department competition",
                             "Collaborative work"});
-                table2648.AddRow(new string[] {
+                table2611.AddRow(new string[] {
                             "Community group",
                             "Community service",
                             "Service hours",
@@ -741,7 +741,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Service competition",
                             "Community building"});
 #line 104
-    testRunner.When("implementing group token systems:", ((string)(null)), table2648, "When ");
+    testRunner.When("implementing group token systems:", ((string)(null)), table2611, "When ");
 #line hidden
 #line 112
     testRunner.Then("group systems should promote cooperation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -798,49 +798,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 120
     testRunner.And("independence should be systematically built", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2649 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2612 = new TechTalk.SpecFlow.Table(new string[] {
                             "Self-Management Level",
                             "Student Responsibility",
                             "Adult Oversight",
                             "Self-Monitoring Tools",
                             "Independence Markers",
                             "Fading Strategy"});
-                table2649.AddRow(new string[] {
+                table2612.AddRow(new string[] {
                             "Assisted self-recording",
                             "Student records with prompts",
                             "Continuous supervision",
                             "Simple recording sheet",
                             "Accurate recording",
                             "Reduce prompting"});
-                table2649.AddRow(new string[] {
+                table2612.AddRow(new string[] {
                             "Independent recording",
                             "Student records independently",
                             "Periodic checks",
                             "Self-monitoring app",
                             "Consistent recording",
                             "Reduce checking"});
-                table2649.AddRow(new string[] {
+                table2612.AddRow(new string[] {
                             "Self-evaluation",
                             "Student evaluates performance",
                             "Weekly review",
                             "Reflection tools",
                             "Accurate self-assessment",
                             "Increase intervals"});
-                table2649.AddRow(new string[] {
+                table2612.AddRow(new string[] {
                             "Self-reinforcement",
                             "Student manages exchanges",
                             "Monthly consultation",
                             "Banking system",
                             "Appropriate choices",
                             "Reduce consultation"});
-                table2649.AddRow(new string[] {
+                table2612.AddRow(new string[] {
                             "Complete independence",
                             "Student manages entire system",
                             "As-needed support",
                             "Full system access",
                             "System maintenance",
                             "Emergency support only"});
-                table2649.AddRow(new string[] {
+                table2612.AddRow(new string[] {
                             "Generalized self-control",
                             "Natural self-regulation",
                             "No formal oversight",
@@ -848,7 +848,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Internalized standards",
                             "System discontinuation"});
 #line 121
-    testRunner.When("developing self-managed systems:", ((string)(null)), table2649, "When ");
+    testRunner.When("developing self-managed systems:", ((string)(null)), table2612, "When ");
 #line hidden
 #line 129
     testRunner.Then("self-management should be systematically developed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -905,49 +905,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 137
     testRunner.And("digital tools offer unique advantages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2650 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2613 = new TechTalk.SpecFlow.Table(new string[] {
                             "Technology Type",
                             "Application",
                             "Advantages",
                             "Implementation",
                             "Data Benefits",
                             "User Experience"});
-                table2650.AddRow(new string[] {
+                table2613.AddRow(new string[] {
                             "Mobile apps",
                             "Token tracking",
                             "Real-time updates",
                             "Smartphone/tablet",
                             "Automatic data collection",
                             "Engaging interface"});
-                table2650.AddRow(new string[] {
+                table2613.AddRow(new string[] {
                             "Digital badges",
                             "Achievement tokens",
                             "Visual progress",
                             "Gamification platform",
                             "Detailed analytics",
                             "Motivating displays"});
-                table2650.AddRow(new string[] {
+                table2613.AddRow(new string[] {
                             "QR codes",
                             "Token earning",
                             "Instant verification",
                             "Scan-to-earn",
                             "Automated recording",
                             "Quick recognition"});
-                table2650.AddRow(new string[] {
+                table2613.AddRow(new string[] {
                             "RFID systems",
                             "Automatic tracking",
                             "Seamless monitoring",
                             "Wearable tags",
                             "Continuous data",
                             "Unobtrusive system"});
-                table2650.AddRow(new string[] {
+                table2613.AddRow(new string[] {
                             "Blockchain tokens",
                             "Secure token system",
                             "Tamper-proof",
                             "Distributed ledger",
                             "Immutable records",
                             "Modern technology"});
-                table2650.AddRow(new string[] {
+                table2613.AddRow(new string[] {
                             "AI analytics",
                             "Pattern recognition",
                             "Predictive insights",
@@ -955,7 +955,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Optimization suggestions",
                             "Intelligent adaptation"});
 #line 138
-    testRunner.When("integrating technology:", ((string)(null)), table2650, "When ");
+    testRunner.When("integrating technology:", ((string)(null)), table2613, "When ");
 #line hidden
 #line 146
     testRunner.Then("technology should enhance effectiveness", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1012,49 +1012,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 154
     testRunner.And("natural contingencies should take over", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2651 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2614 = new TechTalk.SpecFlow.Table(new string[] {
                             "Fading Stage",
                             "Token Reduction",
                             "Schedule Change",
                             "Reinforcer Modification",
                             "Natural Contingency",
                             "Timeline"});
-                table2651.AddRow(new string[] {
+                table2614.AddRow(new string[] {
                             "Stage 1",
                             "Maintain tokens",
                             "Thin schedule (FR3 to FR5)",
                             "Same reinforcers",
                             "Begin natural praise",
                             "2-3 weeks"});
-                table2651.AddRow(new string[] {
+                table2614.AddRow(new string[] {
                             "Stage 2",
                             "Reduce token frequency",
                             "Further thinning (FR5 to VR8)",
                             "Mix natural/artificial",
                             "Increase natural consequences",
                             "3-4 weeks"});
-                table2651.AddRow(new string[] {
+                table2614.AddRow(new string[] {
                             "Stage 3",
                             "Intermittent tokens",
                             "Variable schedule",
                             "Mostly natural reinforcers",
                             "Natural contingencies primary",
                             "4-6 weeks"});
-                table2651.AddRow(new string[] {
+                table2614.AddRow(new string[] {
                             "Stage 4",
                             "Occasional tokens",
                             "Sparse reinforcement",
                             "Natural consequences",
                             "Full natural contingencies",
                             "6-8 weeks"});
-                table2651.AddRow(new string[] {
+                table2614.AddRow(new string[] {
                             "Stage 5",
                             "Crisis tokens only",
                             "Emergency use only",
                             "Natural environment",
                             "Complete natural control",
                             "Maintenance"});
-                table2651.AddRow(new string[] {
+                table2614.AddRow(new string[] {
                             "Stage 6",
                             "No tokens",
                             "Natural contingencies",
@@ -1062,7 +1062,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Self-regulation",
                             "Long-term"});
 #line 155
-    testRunner.When("implementing fading procedures:", ((string)(null)), table2651, "When ");
+    testRunner.When("implementing fading procedures:", ((string)(null)), table2614, "When ");
 #line hidden
 #line 163
     testRunner.Then("fading should be systematic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1119,49 +1119,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 172
     testRunner.And("multiple variables must be monitored", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2652 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2615 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Category",
                             "Specific Measures",
                             "Collection Method",
                             "Analysis Frequency",
                             "Decision Points",
                             "System Adjustments"});
-                table2652.AddRow(new string[] {
+                table2615.AddRow(new string[] {
                             "Token earning",
                             "Earning rate, patterns",
                             "Automatic logging",
                             "Daily summaries",
                             "Earning too slow/fast",
                             "Schedule adjustments"});
-                table2652.AddRow(new string[] {
+                table2615.AddRow(new string[] {
                             "Exchange behavior",
                             "Exchange frequency, choices",
                             "Transaction records",
                             "Weekly analysis",
                             "Hoarding or impulsive spending",
                             "Exchange modifications"});
-                table2652.AddRow(new string[] {
+                table2615.AddRow(new string[] {
                             "Backup reinforcer effectiveness",
                             "Preference rankings, satiation",
                             "Choice tracking",
                             "Bi-weekly assessment",
                             "Decreased motivation",
                             "Reinforcer rotation"});
-                table2652.AddRow(new string[] {
+                table2615.AddRow(new string[] {
                             "Behavior change",
                             "Target behavior rates",
                             "Ongoing data collection",
                             "Daily progress review",
                             "Insufficient progress",
                             "Contingency strengthening"});
-                table2652.AddRow(new string[] {
+                table2615.AddRow(new string[] {
                             "System fidelity",
                             "Implementation accuracy",
                             "Fidelity checklists",
                             "Weekly monitoring",
                             "Poor implementation",
                             "Training enhancement"});
-                table2652.AddRow(new string[] {
+                table2615.AddRow(new string[] {
                             "Motivation indicators",
                             "Engagement, enthusiasm",
                             "Observation ratings",
@@ -1169,7 +1169,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Decreased engagement",
                             "System revision"});
 #line 173
-    testRunner.When("tracking token economy data:", ((string)(null)), table2652, "When ");
+    testRunner.When("tracking token economy data:", ((string)(null)), table2615, "When ");
 #line hidden
 #line 181
     testRunner.Then("data should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1226,49 +1226,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 189
     testRunner.And("economic principles apply to behavior", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2653 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2616 = new TechTalk.SpecFlow.Table(new string[] {
                             "Economic Principle",
                             "Application",
                             "Measurement",
                             "Analysis Method",
                             "Optimization Strategy",
                             "Outcome Improvement"});
-                table2653.AddRow(new string[] {
+                table2616.AddRow(new string[] {
                             "Supply and demand",
                             "Token/reinforcer balance",
                             "Exchange rates",
                             "Market analysis",
                             "Adjust token supply",
                             "Maintain motivation"});
-                table2653.AddRow(new string[] {
+                table2616.AddRow(new string[] {
                             "Price elasticity",
                             "Reinforcer cost sensitivity",
                             "Purchase patterns",
                             "Elasticity calculation",
                             "Optimize pricing",
                             "Maximize exchanges"});
-                table2653.AddRow(new string[] {
+                table2616.AddRow(new string[] {
                             "Inflation control",
                             "Prevent token devaluation",
                             "Token purchasing power",
                             "Value tracking",
                             "Adjust token availability",
                             "Maintain system value"});
-                table2653.AddRow(new string[] {
+                table2616.AddRow(new string[] {
                             "Budget management",
                             "Individual token budgets",
                             "Spending patterns",
                             "Budget analysis",
                             "Teach financial skills",
                             "Improve self-control"});
-                table2653.AddRow(new string[] {
+                table2616.AddRow(new string[] {
                             "Investment behavior",
                             "Saving vs. spending",
                             "Banking patterns",
                             "Investment analysis",
                             "Encourage saving",
                             "Develop delay tolerance"});
-                table2653.AddRow(new string[] {
+                table2616.AddRow(new string[] {
                             "Market saturation",
                             "Reinforcer oversupply",
                             "Preference stability",
@@ -1276,7 +1276,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Diversify offerings",
                             "Prevent satiation"});
 #line 190
-    testRunner.When("conducting economic analysis:", ((string)(null)), table2653, "When ");
+    testRunner.When("conducting economic analysis:", ((string)(null)), table2616, "When ");
 #line hidden
 #line 198
     testRunner.Then("economic principles should guide decisions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1333,49 +1333,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 206
     testRunner.And("outcomes drive system modifications", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2654 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2617 = new TechTalk.SpecFlow.Table(new string[] {
                             "Outcome Domain",
                             "Measurement Method",
                             "Success Criteria",
                             "Assessment Timeline",
                             "Comparison Standard",
                             "Improvement Actions"});
-                table2654.AddRow(new string[] {
+                table2617.AddRow(new string[] {
                             "Behavior change",
                             "Pre/post comparison",
                             "75% improvement minimum",
                             "Monthly evaluation",
                             "Baseline performance",
                             "System intensification"});
-                table2654.AddRow(new string[] {
+                table2617.AddRow(new string[] {
                             "Skill acquisition",
                             "Learning rate analysis",
                             "80% mastery criterion",
                             "Weekly progress review",
                             "Typical learning rates",
                             "Teaching modifications"});
-                table2654.AddRow(new string[] {
+                table2617.AddRow(new string[] {
                             "Generalization",
                             "Cross-setting probes",
                             "60% transfer rate",
                             "Bi-weekly assessment",
                             "Setting-specific performance",
                             "Generalization programming"});
-                table2654.AddRow(new string[] {
+                table2617.AddRow(new string[] {
                             "Maintenance",
                             "Long-term follow-up",
                             "70% retention rate",
                             "Quarterly checks",
                             "Post-intervention levels",
                             "Booster interventions"});
-                table2654.AddRow(new string[] {
+                table2617.AddRow(new string[] {
                             "Social validity",
                             "Stakeholder satisfaction",
                             "85% approval rating",
                             "End-of-program survey",
                             "Alternative interventions",
                             "System refinement"});
-                table2654.AddRow(new string[] {
+                table2617.AddRow(new string[] {
                             "Cost-effectiveness",
                             "Cost-benefit analysis",
                             "Positive cost-benefit ratio",
@@ -1383,7 +1383,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Other intervention costs",
                             "Efficiency improvements"});
 #line 207
-    testRunner.When("measuring outcomes:", ((string)(null)), table2654, "When ");
+    testRunner.When("measuring outcomes:", ((string)(null)), table2617, "When ");
 #line hidden
 #line 215
     testRunner.Then("outcomes should be systematically measured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1439,49 +1439,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 223
     testRunner.Given("token systems may encounter problems", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2655 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2618 = new TechTalk.SpecFlow.Table(new string[] {
                             "Problem Type",
                             "Symptoms",
                             "Possible Causes",
                             "Assessment Strategy",
                             "Intervention Plan",
                             "Prevention Measures"});
-                table2655.AddRow(new string[] {
+                table2618.AddRow(new string[] {
                             "Token inflation",
                             "Devalued tokens",
                             "Over-earning, poor exchange",
                             "Economic analysis",
                             "Restrict token supply",
                             "Economic monitoring"});
-                table2655.AddRow(new string[] {
+                table2618.AddRow(new string[] {
                             "Reinforcer satiation",
                             "Decreased motivation",
                             "Limited variety",
                             "Preference reassessment",
                             "Expand reinforcer menu",
                             "Regular rotation"});
-                table2655.AddRow(new string[] {
+                table2618.AddRow(new string[] {
                             "Counterfeiting",
                             "Fake tokens",
                             "System vulnerability",
                             "Security audit",
                             "Improve token security",
                             "Security measures"});
-                table2655.AddRow(new string[] {
+                table2618.AddRow(new string[] {
                             "System complexity",
                             "Poor understanding",
                             "Over-complicated rules",
                             "Complexity assessment",
                             "Simplify system",
                             "Design guidelines"});
-                table2655.AddRow(new string[] {
+                table2618.AddRow(new string[] {
                             "Implementation inconsistency",
                             "Variable outcomes",
                             "Staff training issues",
                             "Fidelity assessment",
                             "Enhanced training",
                             "Quality assurance"});
-                table2655.AddRow(new string[] {
+                table2618.AddRow(new string[] {
                             "Behavioral contrast",
                             "Problem increase elsewhere",
                             "Contingency contrast",
@@ -1489,7 +1489,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Comprehensive programming",
                             "System integration"});
 #line 224
-    testRunner.When("system breakdowns occur:", ((string)(null)), table2655, "When ");
+    testRunner.When("system breakdowns occur:", ((string)(null)), table2618, "When ");
 #line hidden
 #line 232
     testRunner.Then("problems should be addressed systematically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1545,49 +1545,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 239
     testRunner.Given("token systems raise ethical questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2656 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2619 = new TechTalk.SpecFlow.Table(new string[] {
                             "Ethical Issue",
                             "Concern",
                             "Assessment Method",
                             "Ethical Guidelines",
                             "Resolution Strategy",
                             "Monitoring Plan"});
-                table2656.AddRow(new string[] {
+                table2619.AddRow(new string[] {
                             "Coercion",
                             "Forced participation",
                             "Consent evaluation",
                             "Voluntary participation",
                             "Choice provision",
                             "Ongoing consent monitoring"});
-                table2656.AddRow(new string[] {
+                table2619.AddRow(new string[] {
                             "Dignity",
                             "Demeaning tokens",
                             "Dignity assessment",
                             "Respect principles",
                             "Age-appropriate systems",
                             "Dignity protection"});
-                table2656.AddRow(new string[] {
+                table2619.AddRow(new string[] {
                             "Autonomy",
                             "Over-control",
                             "Autonomy evaluation",
                             "Self-determination",
                             "Choice integration",
                             "Autonomy enhancement"});
-                table2656.AddRow(new string[] {
+                table2619.AddRow(new string[] {
                             "Fairness",
                             "Unequal access",
                             "Equity assessment",
                             "Fair treatment",
                             "Equal opportunity",
                             "Equity monitoring"});
-                table2656.AddRow(new string[] {
+                table2619.AddRow(new string[] {
                             "Development",
                             "Arrested development",
                             "Developmental assessment",
                             "Growth promotion",
                             "Natural transition",
                             "Development tracking"});
-                table2656.AddRow(new string[] {
+                table2619.AddRow(new string[] {
                             "Cultural sensitivity",
                             "Cultural mismatch",
                             "Cultural assessment",
@@ -1595,7 +1595,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Cultural adaptation",
                             "Cultural monitoring"});
 #line 240
-    testRunner.When("addressing ethical considerations:", ((string)(null)), table2656, "When ");
+    testRunner.When("addressing ethical considerations:", ((string)(null)), table2619, "When ");
 #line hidden
 #line 248
     testRunner.Then("ethical considerations should be paramount", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1649,49 +1649,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 255
     testRunner.Given("token systems must be maintainable long-term", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2657 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2620 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table2657.AddRow(new string[] {
+                table2620.AddRow(new string[] {
                             "Staff training",
                             "Implementation complexity",
                             "Simplified training protocols",
                             "Training materials",
                             "Competent implementation",
                             "Skill maintenance"});
-                table2657.AddRow(new string[] {
+                table2620.AddRow(new string[] {
                             "Cost management",
                             "System expenses",
                             "Cost-effective materials",
                             "Budget allocation",
                             "Reasonable costs",
                             "Financial sustainability"});
-                table2657.AddRow(new string[] {
+                table2620.AddRow(new string[] {
                             "Material maintenance",
                             "Token replacement",
                             "Durable token systems",
                             "Quality materials",
                             "Long-lasting tokens",
                             "Material sustainability"});
-                table2657.AddRow(new string[] {
+                table2620.AddRow(new string[] {
                             "Motivation maintenance",
                             "System fatigue",
                             "Engaging system features",
                             "Innovation resources",
                             "Sustained engagement",
                             "Motivation sustainability"});
-                table2657.AddRow(new string[] {
+                table2620.AddRow(new string[] {
                             "Fading success",
                             "Dependence development",
                             "Systematic fading plans",
                             "Fading protocols",
                             "Natural contingency access",
                             "Independence achievement"});
-                table2657.AddRow(new string[] {
+                table2620.AddRow(new string[] {
                             "Outcome durability",
                             "Variable maintenance",
                             "Follow-up systems",
@@ -1699,7 +1699,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Sustained behavior change",
                             "Long-term effectiveness"});
 #line 256
-    testRunner.When("planning sustainability:", ((string)(null)), table2657, "When ");
+    testRunner.When("planning sustainability:", ((string)(null)), table2620, "When ");
 #line hidden
 #line 264
     testRunner.Then("sustainability should be systematically planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

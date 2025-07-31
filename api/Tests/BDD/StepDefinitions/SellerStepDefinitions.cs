@@ -1,3 +1,5 @@
+using System.Net;
+using System.Text.Json;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc.Testing;
 using TechTalk.SpecFlow;
@@ -261,8 +263,9 @@ public class SellerStepDefinitions : BaseStepDefinitions
     public void ThenMyApplicationShouldBeRejected()
     {
         LastResponse.Should().NotBeNull();
-        var responseContent = GetResponseContent<dynamic>();
-        responseContent?.status.Should().Be("rejected");
+        var responseContent = GetResponseContent();
+        var responseJson = JsonDocument.Parse(responseContent);
+        responseJson.RootElement.GetProperty("status").GetString().Should().Be("rejected");
     }
 
     [Then(@"I should receive detailed feedback:")]

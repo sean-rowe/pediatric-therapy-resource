@@ -8,20 +8,20 @@ public class VersionUpdateRequest
 {
     [Required]
     public Guid OriginalResourceId { get; set; }
-    
+
     [Required]
     [MaxLength(10)]
     public string Version { get; set; } = string.Empty;
-    
+
     public string? Title { get; set; }
-    
+
     public string? Description { get; set; }
-    
+
     [Required]
     public string FileUrl { get; set; } = string.Empty;
-    
+
     public List<string>? Languages { get; set; }
-    
+
     public int? EvidenceLevel { get; set; }
 }
 
@@ -37,7 +37,7 @@ public class VersionApprovalRequest
 {
     [Required]
     public Guid NewVersionId { get; set; }
-    
+
     public string? ApprovalNotes { get; set; }
 }
 

@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 17
     testRunner.And("real-time monitoring enables immediate correction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1963 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1926 = new TechTalk.SpecFlow.Table(new string[] {
                             "Protocol Type",
                             "Monitoring Method",
                             "Compliance Indicators",
                             "Alert Thresholds",
                             "Response Actions",
                             "Reporting"});
-                table1963.AddRow(new string[] {
+                table1926.AddRow(new string[] {
                             "PROMPT fidelity",
                             "Session checklists",
                             "Technique accuracy",
                             "<80% accuracy",
                             "Coaching session",
                             "Weekly summary"});
-                table1963.AddRow(new string[] {
+                table1926.AddRow(new string[] {
                             "NDT principles",
                             "Video review",
                             "Handling quality",
                             "Pattern deviation",
                             "Skill refresher",
                             "Monthly analysis"});
-                table1963.AddRow(new string[] {
+                table1926.AddRow(new string[] {
                             "SI protocol",
                             "Equipment logs",
                             "Appropriate use",
                             "Safety violations",
                             "Immediate correction",
                             "Incident report"});
-                table1963.AddRow(new string[] {
+                table1926.AddRow(new string[] {
                             "PECS phases",
                             "Phase tracking",
                             "Progression criteria",
                             "Stuck >2 weeks",
                             "Consultation",
                             "Progress charts"});
-                table1963.AddRow(new string[] {
+                table1926.AddRow(new string[] {
                             "ABA procedures",
                             "Data collection",
                             "IOA scores",
                             "<85% agreement",
                             "Retraining",
                             "Daily monitoring"});
-                table1963.AddRow(new string[] {
+                table1926.AddRow(new string[] {
                             "Feeding protocol",
                             "Session notes",
                             "Step completion",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "Protocol review",
                             "Compliance rate"});
 #line 18
-    testRunner.When("tracking protocol compliance:", ((string)(null)), table1963, "When ");
+    testRunner.When("tracking protocol compliance:", ((string)(null)), table1926, "When ");
 #line hidden
 #line 26
     testRunner.Then("compliance should be tracked continuously", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 34
     testRunner.And("documentation supports quality improvement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1964 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1927 = new TechTalk.SpecFlow.Table(new string[] {
                             "Audit Component",
                             "Data Captured",
                             "Storage Method",
                             "Retention Period",
                             "Access Control",
                             "Review Schedule"});
-                table1964.AddRow(new string[] {
+                table1927.AddRow(new string[] {
                             "User actions",
                             "Who, what, when",
                             "Immutable logs",
                             "7 years",
                             "Admin only",
                             "Monthly audit"});
-                table1964.AddRow(new string[] {
+                table1927.AddRow(new string[] {
                             "Protocol changes",
                             "Version history",
                             "Change tracking",
                             "Permanent",
                             "Supervisor access",
                             "Change review"});
-                table1964.AddRow(new string[] {
+                table1927.AddRow(new string[] {
                             "Compliance scores",
                             "Daily metrics",
                             "Database archive",
                             "3 years",
                             "Quality team",
                             "Weekly analysis"});
-                table1964.AddRow(new string[] {
+                table1927.AddRow(new string[] {
                             "Training records",
                             "Completion, scores",
                             "Learning system",
                             "Employment + 5",
                             "HR access",
                             "Annual review"});
-                table1964.AddRow(new string[] {
+                table1927.AddRow(new string[] {
                             "Incident reports",
                             "Full details",
                             "Secure storage",
                             "7 years",
                             "Risk management",
                             "Quarterly review"});
-                table1964.AddRow(new string[] {
+                table1927.AddRow(new string[] {
                             "Improvement actions",
                             "Plans, outcomes",
                             "Project tracking",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "All clinicians",
                             "Continuous"});
 #line 35
-    testRunner.When("creating audit documentation:", ((string)(null)), table1964, "When ");
+    testRunner.When("creating audit documentation:", ((string)(null)), table1927, "When ");
 #line hidden
 #line 43
     testRunner.Then("audit trails should be complete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 51
     testRunner.And("regular training ensures protocol fidelity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1965 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1928 = new TechTalk.SpecFlow.Table(new string[] {
                             "Training Type",
                             "Frequency",
                             "Delivery Method",
                             "Assessment",
                             "Passing Criteria",
                             "Remediation"});
-                table1965.AddRow(new string[] {
+                table1928.AddRow(new string[] {
                             "Initial certification",
                             "Once",
                             "Intensive workshop",
                             "Practical exam",
                             "90% accuracy",
                             "Individual coaching"});
-                table1965.AddRow(new string[] {
+                table1928.AddRow(new string[] {
                             "Annual recertification",
                             "Yearly",
                             "Online + practical",
                             "Skills demonstration",
                             "85% proficiency",
                             "Focused practice"});
-                table1965.AddRow(new string[] {
+                table1928.AddRow(new string[] {
                             "Protocol updates",
                             "As needed",
                             "Webinar series",
                             "Knowledge check",
                             "80% correct",
                             "Self-study modules"});
-                table1965.AddRow(new string[] {
+                table1928.AddRow(new string[] {
                             "Peer review",
                             "Quarterly",
                             "Case presentation",
                             "Peer feedback",
                             "Satisfactory rating",
                             "Mentorship"});
-                table1965.AddRow(new string[] {
+                table1928.AddRow(new string[] {
                             "Self-assessment",
                             "Monthly",
                             "Reflection tools",
                             "Honest appraisal",
                             "Completion",
                             "Development plan"});
-                table1965.AddRow(new string[] {
+                table1928.AddRow(new string[] {
                             "Specialist consultation",
                             "Biannual",
                             "Expert review",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "Recommendations",
                             "Implementation tracking"});
 #line 52
-    testRunner.When("managing competency maintenance:", ((string)(null)), table1965, "When ");
+    testRunner.When("managing competency maintenance:", ((string)(null)), table1928, "When ");
 #line hidden
 #line 60
     testRunner.Then("competencies should remain current", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 69
     testRunner.And("metrics guide quality improvement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1966 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1929 = new TechTalk.SpecFlow.Table(new string[] {
                             "Protocol",
                             "Primary Outcomes",
                             "Secondary Outcomes",
                             "Data Collection",
                             "Analysis Frequency",
                             "Benchmarks"});
-                table1966.AddRow(new string[] {
+                table1929.AddRow(new string[] {
                             "PROMPT",
                             "Speech intelligibility",
                             "Motor control",
                             "Standardized assessment",
                             "Quarterly",
                             "70% improvement"});
-                table1966.AddRow(new string[] {
+                table1929.AddRow(new string[] {
                             "DIR/Floortime",
                             "Engagement levels",
                             "Communication circles",
                             "Video coding",
                             "Monthly",
                             "Increased circles"});
-                table1966.AddRow(new string[] {
+                table1929.AddRow(new string[] {
                             "TEACCH",
                             "Independence",
                             "Behavior reduction",
                             "Task analysis",
                             "Biweekly",
                             "80% independent"});
-                table1966.AddRow(new string[] {
+                table1929.AddRow(new string[] {
                             "Lindamood-Bell",
                             "Reading scores",
                             "Phonemic awareness",
                             "Pre/post testing",
                             "Program completion",
                             "Grade level gains"});
-                table1966.AddRow(new string[] {
+                table1929.AddRow(new string[] {
                             "Social Thinking",
                             "Perspective taking",
                             "Social interactions",
                             "Observation rubric",
                             "Weekly",
                             "Skill demonstration"});
-                table1966.AddRow(new string[] {
+                table1929.AddRow(new string[] {
                             "Zones of Regulation",
                             "Self-regulation",
                             "Behavior incidents",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "Daily",
                             "50% reduction"});
 #line 70
-    testRunner.When("measuring protocol outcomes:", ((string)(null)), table1966, "When ");
+    testRunner.When("measuring protocol outcomes:", ((string)(null)), table1929, "When ");
 #line hidden
 #line 78
     testRunner.Then("outcomes should be measured systematically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 86
     testRunner.And("systematic assessment ensures quality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1967 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1930 = new TechTalk.SpecFlow.Table(new string[] {
                             "Fidelity Domain",
                             "Assessment Method",
                             "Quality Indicators",
                             "Scoring System",
                             "Acceptable Level",
                             "Improvement Process"});
-                table1967.AddRow(new string[] {
+                table1930.AddRow(new string[] {
                             "Adherence",
                             "Protocol checklists",
                             "Steps completed",
                             "Percentage scale",
                             ">85% adherence",
                             "Targeted training"});
-                table1967.AddRow(new string[] {
+                table1930.AddRow(new string[] {
                             "Competence",
                             "Skill observation",
                             "Quality ratings",
                             "Likert scale",
                             "4/5 average",
                             "Skill building"});
-                table1967.AddRow(new string[] {
+                table1930.AddRow(new string[] {
                             "Differentiation",
                             "Protocol comparison",
                             "Unique elements",
                             "Present/absent",
                             "Clear distinction",
                             "Protocol clarification"});
-                table1967.AddRow(new string[] {
+                table1930.AddRow(new string[] {
                             "Dosage",
                             "Session tracking",
                             "Frequency/duration",
                             "Actual vs prescribed",
                             ">90% delivered",
                             "Schedule adjustment"});
-                table1967.AddRow(new string[] {
+                table1930.AddRow(new string[] {
                             "Engagement",
                             "Participation ratings",
                             "Active involvement",
                             "Engagement scale",
                             "High engagement",
                             "Motivation strategies"});
-                table1967.AddRow(new string[] {
+                table1930.AddRow(new string[] {
                             "Program reach",
                             "Enrollment data",
                             "Eligible served",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             ">75% reached",
                             "Outreach efforts"});
 #line 87
-    testRunner.When("assessing implementation fidelity:", ((string)(null)), table1967, "When ");
+    testRunner.When("assessing implementation fidelity:", ((string)(null)), table1930, "When ");
 #line hidden
 #line 95
     testRunner.Then("fidelity should be high", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 103
     testRunner.And("reports must be clear and actionable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1968 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1931 = new TechTalk.SpecFlow.Table(new string[] {
                             "Report Type",
                             "Target Audience",
                             "Key Metrics",
                             "Visualization",
                             "Frequency",
                             "Actions Enabled"});
-                table1968.AddRow(new string[] {
+                table1931.AddRow(new string[] {
                             "Executive dashboard",
                             "Administration",
                             "Overall compliance",
                             "Traffic lights",
                             "Real-time",
                             "Strategic decisions"});
-                table1968.AddRow(new string[] {
+                table1931.AddRow(new string[] {
                             "Clinical summary",
                             "Therapy teams",
                             "Protocol adherence",
                             "Trend graphs",
                             "Weekly",
                             "Practice improvement"});
-                table1968.AddRow(new string[] {
+                table1931.AddRow(new string[] {
                             "Quality report",
                             "Board/funders",
                             "Outcome achievements",
                             "Benchmark comparison",
                             "Quarterly",
                             "Resource allocation"});
-                table1968.AddRow(new string[] {
+                table1931.AddRow(new string[] {
                             "Family report",
                             "Parents/caregivers",
                             "Child progress",
                             "Simple graphics",
                             "Monthly",
                             "Engagement"});
-                table1968.AddRow(new string[] {
+                table1931.AddRow(new string[] {
                             "Regulatory report",
                             "Compliance officers",
                             "Required elements",
                             "Checklist format",
                             "As required",
                             "Audit preparation"});
-                table1968.AddRow(new string[] {
+                table1931.AddRow(new string[] {
                             "Improvement report",
                             "All staff",
                             "Changes implemented",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "Monthly",
                             "Culture building"});
 #line 104
-    testRunner.When("creating compliance reports:", ((string)(null)), table1968, "When ");
+    testRunner.When("creating compliance reports:", ((string)(null)), table1931, "When ");
 #line hidden
 #line 112
     testRunner.Then("reports should be informative", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 121
     testRunner.And("proactive management prevents adverse events", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1969 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1932 = new TechTalk.SpecFlow.Table(new string[] {
                             "Risk Category",
                             "Identification Method",
                             "Mitigation Strategy",
                             "Monitoring Plan",
                             "Response Protocol",
                             "Learning Process"});
-                table1969.AddRow(new string[] {
+                table1932.AddRow(new string[] {
                             "Safety risks",
                             "Hazard analysis",
                             "Environmental controls",
                             "Safety rounds",
                             "Incident response",
                             "Root cause analysis"});
-                table1969.AddRow(new string[] {
+                table1932.AddRow(new string[] {
                             "Clinical risks",
                             "Case review",
                             "Protocol modifications",
                             "Outcome tracking",
                             "Rapid adjustment",
                             "M&M conferences"});
-                table1969.AddRow(new string[] {
+                table1932.AddRow(new string[] {
                             "Training risks",
                             "Competency gaps",
                             "Refresher training",
                             "Skills assessment",
                             "Immediate remediation",
                             "Training enhancement"});
-                table1969.AddRow(new string[] {
+                table1932.AddRow(new string[] {
                             "Technology risks",
                             "System failures",
                             "Redundancy planning",
                             "Uptime monitoring",
                             "Backup procedures",
                             "System improvements"});
-                table1969.AddRow(new string[] {
+                table1932.AddRow(new string[] {
                             "Compliance risks",
                             "Audit findings",
                             "Process improvement",
                             "Regular audits",
                             "Corrective action",
                             "Policy updates"});
-                table1969.AddRow(new string[] {
+                table1932.AddRow(new string[] {
                             "Legal risks",
                             "Liability assessment",
                             "Documentation standards",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "Legal consultation",
                             "Risk prevention"});
 #line 122
-    testRunner.When("managing protocol risks:", ((string)(null)), table1969, "When ");
+    testRunner.When("managing protocol risks:", ((string)(null)), table1932, "When ");
 #line hidden
 #line 130
     testRunner.Then("risks should be identified proactively", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 138
     testRunner.And("data drives improvement initiatives", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1970 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1933 = new TechTalk.SpecFlow.Table(new string[] {
                             "Improvement Method",
                             "Data Sources",
                             "Analysis Tools",
                             "Improvement Actions",
                             "Implementation",
                             "Evaluation"});
-                table1970.AddRow(new string[] {
+                table1933.AddRow(new string[] {
                             "PDSA cycles",
                             "Outcome metrics",
                             "Statistical control",
                             "Small tests of change",
                             "Rapid cycles",
                             "Effect measurement"});
-                table1970.AddRow(new string[] {
+                table1933.AddRow(new string[] {
                             "Root cause analysis",
                             "Incident reports",
                             "Fishbone diagrams",
                             "System changes",
                             "Workflow revision",
                             "Incident reduction"});
-                table1970.AddRow(new string[] {
+                table1933.AddRow(new string[] {
                             "Benchmarking",
                             "External comparisons",
                             "Best practice review",
                             "Gap closure",
                             "Adoption planning",
                             "Performance gains"});
-                table1970.AddRow(new string[] {
+                table1933.AddRow(new string[] {
                             "Innovation adoption",
                             "Research literature",
                             "Evidence review",
                             "Pilot programs",
                             "Phased rollout",
                             "Outcome comparison"});
-                table1970.AddRow(new string[] {
+                table1933.AddRow(new string[] {
                             "Staff suggestions",
                             "Frontline input",
                             "Idea evaluation",
                             "Quick wins",
                             "Team implementation",
                             "Satisfaction improvement"});
-                table1970.AddRow(new string[] {
+                table1933.AddRow(new string[] {
                             "Family feedback",
                             "Satisfaction surveys",
                             "Thematic analysis",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "Co-design process",
                             "Experience improvement"});
 #line 139
-    testRunner.When("implementing quality improvement:", ((string)(null)), table1970, "When ");
+    testRunner.When("implementing quality improvement:", ((string)(null)), table1933, "When ");
 #line hidden
 #line 147
     testRunner.Then("improvement should be continuous", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 156
     testRunner.And("automation reduces manual burden", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1971 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1934 = new TechTalk.SpecFlow.Table(new string[] {
                             "Technology Type",
                             "Monitoring Function",
                             "Automation Level",
                             "Data Integration",
                             "Alerts Generated",
                             "Efficiency Gain"});
-                table1971.AddRow(new string[] {
+                table1934.AddRow(new string[] {
                             "EMR integration",
                             "Documentation compliance",
                             "Fully automated",
                             "Real-time sync",
                             "Missing documentation",
                             "80% time saved"});
-                table1971.AddRow(new string[] {
+                table1934.AddRow(new string[] {
                             "Video analysis",
                             "Technique review",
                             "AI-assisted coding",
                             "Cloud storage",
                             "Quality concerns",
                             "60% faster review"});
-                table1971.AddRow(new string[] {
+                table1934.AddRow(new string[] {
                             "Mobile apps",
                             "Real-time data entry",
                             "Voice-to-text",
                             "Instant upload",
                             "Protocol deviations",
                             "Immediate capture"});
-                table1971.AddRow(new string[] {
+                table1934.AddRow(new string[] {
                             "Wearables",
                             "Biometric monitoring",
                             "Continuous tracking",
                             "API integration",
                             "Threshold alerts",
                             "24/7 monitoring"});
-                table1971.AddRow(new string[] {
+                table1934.AddRow(new string[] {
                             "Analytics platforms",
                             "Trend analysis",
                             "Automated reports",
                             "Multi-source",
                             "Statistical anomalies",
                             "Proactive identification"});
-                table1971.AddRow(new string[] {
+                table1934.AddRow(new string[] {
                             "Blockchain",
                             "Credential verification",
                             "Tamper-proof records",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "Expiration alerts",
                             "Trust enhancement"});
 #line 157
-    testRunner.When("using technology for compliance:", ((string)(null)), table1971, "When ");
+    testRunner.When("using technology for compliance:", ((string)(null)), table1934, "When ");
 #line hidden
 #line 165
     testRunner.Then("technology should enhance monitoring", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 174
     testRunner.And("culture supports quality practice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1972 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1935 = new TechTalk.SpecFlow.Table(new string[] {
                             "Culture Element",
                             "Building Strategy",
                             "Reinforcement Method",
                             "Recognition System",
                             "Measurement",
                             "Sustainability"});
-                table1972.AddRow(new string[] {
+                table1935.AddRow(new string[] {
                             "Shared values",
                             "Team discussions",
                             "Visual reminders",
                             "Values awards",
                             "Culture survey",
                             "Regular reinforcement"});
-                table1972.AddRow(new string[] {
+                table1935.AddRow(new string[] {
                             "Learning mindset",
                             "Error as learning",
                             "Psychological safety",
                             "Innovation recognition",
                             "Incident reporting",
                             "Continuous learning"});
-                table1972.AddRow(new string[] {
+                table1935.AddRow(new string[] {
                             "Team accountability",
                             "Peer support",
                             "Buddy systems",
                             "Team achievements",
                             "Team metrics",
                             "Collective ownership"});
-                table1972.AddRow(new string[] {
+                table1935.AddRow(new string[] {
                             "Excellence pursuit",
                             "Best practice sharing",
                             "Journal clubs",
                             "Excellence awards",
                             "Quality metrics",
                             "Benchmark seeking"});
-                table1972.AddRow(new string[] {
+                table1935.AddRow(new string[] {
                             "Patient focus",
                             "Story sharing",
                             "Family involvement",
                             "Impact recognition",
                             "Satisfaction scores",
                             "Mission alignment"});
-                table1972.AddRow(new string[] {
+                table1935.AddRow(new string[] {
                             "Professional pride",
                             "Skill development",
                             "Certification support",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "Competency levels",
                             "Career growth"});
 #line 175
-    testRunner.When("building compliance culture:", ((string)(null)), table1972, "When ");
+    testRunner.When("building compliance culture:", ((string)(null)), table1935, "When ");
 #line hidden
 #line 183
     testRunner.Then("culture should support compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 192
     testRunner.And("accreditation ensures standards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1973 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1936 = new TechTalk.SpecFlow.Table(new string[] {
                             "Validation Type",
                             "Preparing Organization",
                             "Requirements Met",
                             "Evidence Compiled",
                             "Review Process",
                             "Maintenance"});
-                table1973.AddRow(new string[] {
+                table1936.AddRow(new string[] {
                             "CARF accreditation",
                             "Program-wide preparation",
                             "Standards compliance",
                             "Policy documentation",
                             "Site survey",
                             "3-year cycle"});
-                table1973.AddRow(new string[] {
+                table1936.AddRow(new string[] {
                             "Joint Commission",
                             "Safety focus",
                             "National patient safety",
                             "Performance data",
                             "Unannounced survey",
                             "Continuous readiness"});
-                table1973.AddRow(new string[] {
+                table1936.AddRow(new string[] {
                             "State licensure",
                             "Regulatory compliance",
                             "State requirements",
                             "Inspection readiness",
                             "Annual review",
                             "Ongoing compliance"});
-                table1973.AddRow(new string[] {
+                table1936.AddRow(new string[] {
                             "Payer audits",
                             "Billing compliance",
                             "Documentation standards",
                             "Audit trail",
                             "Chart review",
                             "Regular audits"});
-                table1973.AddRow(new string[] {
+                table1936.AddRow(new string[] {
                             "Research compliance",
                             "IRB approval",
                             "Human subjects protection",
                             "Protocol adherence",
                             "Ethics review",
                             "Study monitoring"});
-                table1973.AddRow(new string[] {
+                table1936.AddRow(new string[] {
                             "Professional certification",
                             "Individual credentials",
                             "Specialty requirements",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "Peer review",
                             "Renewal cycles"});
 #line 193
-    testRunner.When("pursuing external validation:", ((string)(null)), table1973, "When ");
+    testRunner.When("pursuing external validation:", ((string)(null)), table1936, "When ");
 #line hidden
 #line 201
     testRunner.Then("external standards should be met", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 210
     testRunner.And("privacy protection is mandatory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1974 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1937 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Type",
                             "Security Measures",
                             "Access Controls",
                             "Privacy Protection",
                             "Audit Capability",
                             "Incident Response"});
-                table1974.AddRow(new string[] {
+                table1937.AddRow(new string[] {
                             "Video recordings",
                             "Encryption at rest",
                             "Role-based access",
                             "Consent management",
                             "Access logs",
                             "Breach protocol"});
-                table1974.AddRow(new string[] {
+                table1937.AddRow(new string[] {
                             "Assessment scores",
                             "Database encryption",
                             "Need-to-know",
                             "De-identification",
                             "Query tracking",
                             "Data recovery"});
-                table1974.AddRow(new string[] {
+                table1937.AddRow(new string[] {
                             "Progress notes",
                             "Secure transmission",
                             "Time-limited access",
                             "Minimum necessary",
                             "Change history",
                             "Investigation process"});
-                table1974.AddRow(new string[] {
+                table1937.AddRow(new string[] {
                             "Research data",
                             "Anonymization",
                             "Study team only",
                             "IRB oversight",
                             "Export tracking",
                             "Protocol deviation"});
-                table1974.AddRow(new string[] {
+                table1937.AddRow(new string[] {
                             "Quality metrics",
                             "Aggregation rules",
                             "Dashboard access",
                             "No individual data",
                             "Usage analytics",
                             "Correction process"});
-                table1974.AddRow(new string[] {
+                table1937.AddRow(new string[] {
                             "Training records",
                             "Secure storage",
                             "Supervisor access",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "Completion audit",
                             "Update procedures"});
 #line 211
-    testRunner.When("securing protocol data:", ((string)(null)), table1974, "When ");
+    testRunner.When("securing protocol data:", ((string)(null)), table1937, "When ");
 #line hidden
 #line 219
     testRunner.Then("data should be secure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 228
     testRunner.And("value must be demonstrated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1975 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1938 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cost Component",
                             "Measurement Method",
                             "Benefit Calculation",
                             "ROI Analysis",
                             "Reporting Format",
                             "Decision Support"});
-                table1975.AddRow(new string[] {
+                table1938.AddRow(new string[] {
                             "Training investment",
                             "Hours and materials",
                             "Skill improvement",
                             "Performance gains",
                             "Cost per outcome",
                             "Training decisions"});
-                table1975.AddRow(new string[] {
+                table1938.AddRow(new string[] {
                             "Technology costs",
                             "License and support",
                             "Efficiency gains",
                             "Time savings value",
                             "Dashboard metrics",
                             "Tech investments"});
-                table1975.AddRow(new string[] {
+                table1938.AddRow(new string[] {
                             "Quality programs",
                             "Program expenses",
                             "Outcome improvements",
                             "Cost per improvement",
                             "Executive summary",
                             "Resource allocation"});
-                table1975.AddRow(new string[] {
+                table1938.AddRow(new string[] {
                             "Compliance activities",
                             "Staff time",
                             "Risk reduction",
                             "Avoided costs",
                             "Quarterly report",
                             "Compliance budget"});
-                table1975.AddRow(new string[] {
+                table1938.AddRow(new string[] {
                             "Protocol materials",
                             "Supply costs",
                             "Usage tracking",
                             "Cost per session",
                             "Department reports",
                             "Purchasing decisions"});
-                table1975.AddRow(new string[] {
+                table1938.AddRow(new string[] {
                             "Consultation fees",
                             "Expert time",
                             "Quality improvements",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "Annual analysis",
                             "Consultation planning"});
 #line 229
-    testRunner.When("analyzing cost-effectiveness:", ((string)(null)), table1975, "When ");
+    testRunner.When("analyzing cost-effectiveness:", ((string)(null)), table1938, "When ");
 #line hidden
 #line 237
     testRunner.Then("costs should be tracked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 246
     testRunner.And("protocols must adapt quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1976 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1939 = new TechTalk.SpecFlow.Table(new string[] {
                             "Emergency Type",
                             "Protocol Adaptations",
                             "Minimum Standards",
                             "Communication Plan",
                             "Documentation",
                             "Recovery Process"});
-                table1976.AddRow(new string[] {
+                table1939.AddRow(new string[] {
                             "Natural disaster",
                             "Remote delivery options",
                             "Core services only",
                             "Multi-channel alerts",
                             "Simplified notes",
                             "Gradual restoration"});
-                table1976.AddRow(new string[] {
+                table1939.AddRow(new string[] {
                             "Pandemic",
                             "Infection control priority",
                             "Safety first",
                             "Daily updates",
                             "Modified tracking",
                             "New normal integration"});
-                table1976.AddRow(new string[] {
+                table1939.AddRow(new string[] {
                             "Technology failure",
                             "Manual backups",
                             "Paper protocols",
                             "Phone trees",
                             "Downtime logs",
                             "System restoration"});
-                table1976.AddRow(new string[] {
+                table1939.AddRow(new string[] {
                             "Staffing crisis",
                             "Cross-training activation",
                             "Essential coverage",
                             "Schedule communication",
                             "Overtime tracking",
                             "Recruitment priority"});
-                table1976.AddRow(new string[] {
+                table1939.AddRow(new string[] {
                             "Facility emergency",
                             "Alternative locations",
                             "Continuity planning",
                             "Location updates",
                             "Temporary procedures",
                             "Return planning"});
-                table1976.AddRow(new string[] {
+                table1939.AddRow(new string[] {
                             "Supply shortage",
                             "Resource allocation",
                             "Rationing protocols",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "Usage monitoring",
                             "Restock planning"});
 #line 247
-    testRunner.When("managing emergency compliance:", ((string)(null)), table1976, "When ");
+    testRunner.When("managing emergency compliance:", ((string)(null)), table1939, "When ");
 #line hidden
 #line 255
     testRunner.Then("services should continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 264
     testRunner.And("integration must maintain standards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1977 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1940 = new TechTalk.SpecFlow.Table(new string[] {
                             "Innovation Type",
                             "Evaluation Process",
                             "Pilot Design",
                             "Integration Plan",
                             "Quality Monitoring",
                             "Scaling Decision"});
-                table1977.AddRow(new string[] {
+                table1940.AddRow(new string[] {
                             "New technology",
                             "Evidence review",
                             "Limited trial",
                             "Phased rollout",
                             "Outcome tracking",
                             "Data-driven expansion"});
-                table1977.AddRow(new string[] {
+                table1940.AddRow(new string[] {
                             "Modified protocols",
                             "Literature support",
                             "Controlled test",
                             "Training plan",
                             "Fidelity measures",
                             "Full implementation"});
-                table1977.AddRow(new string[] {
+                table1940.AddRow(new string[] {
                             "Hybrid approaches",
                             "Expert consultation",
                             "Comparison study",
                             "Gradual adoption",
                             "Effectiveness data",
                             "Best practice selection"});
-                table1977.AddRow(new string[] {
+                table1940.AddRow(new string[] {
                             "AI assistance",
                             "Ethical review",
                             "Supervised use",
                             "Human oversight",
                             "Accuracy validation",
                             "Appropriate use"});
-                table1977.AddRow(new string[] {
+                table1940.AddRow(new string[] {
                             "Novel assessments",
                             "Validity testing",
                             "Parallel administration",
                             "Transition planning",
                             "Reliability checks",
                             "Standard adoption"});
-                table1977.AddRow(new string[] {
+                table1940.AddRow(new string[] {
                             "Creative materials",
                             "Safety evaluation",
                             "Small group trial",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "Engagement metrics",
                             "Wide distribution"});
 #line 265
-    testRunner.When("adopting innovations:", ((string)(null)), table1977, "When ");
+    testRunner.When("adopting innovations:", ((string)(null)), table1940, "When ");
 #line hidden
 #line 273
     testRunner.Then("innovation should be evaluated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 282
     testRunner.And("stakeholders need accurate information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1978 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1941 = new TechTalk.SpecFlow.Table(new string[] {
                             "Stakeholder Group",
                             "Communication Method",
                             "Information Shared",
                             "Frequency",
                             "Feedback Channel",
                             "Engagement Strategy"});
-                table1978.AddRow(new string[] {
+                table1941.AddRow(new string[] {
                             "Families",
                             "Progress meetings",
                             "Child-specific outcomes",
                             "Monthly",
                             "Surveys, meetings",
                             "Collaborative planning"});
-                table1978.AddRow(new string[] {
+                table1941.AddRow(new string[] {
                             "Staff",
                             "Team meetings",
                             "Department metrics",
                             "Weekly",
                             "Suggestion box",
                             "Improvement participation"});
-                table1978.AddRow(new string[] {
+                table1941.AddRow(new string[] {
                             "Leadership",
                             "Executive dashboards",
                             "KPI performance",
                             "Real-time",
                             "Strategic planning",
                             "Goal alignment"});
-                table1978.AddRow(new string[] {
+                table1941.AddRow(new string[] {
                             "Funders",
                             "Formal reports",
                             "Outcome achievements",
                             "Quarterly",
                             "Site visits",
                             "Success stories"});
-                table1978.AddRow(new string[] {
+                table1941.AddRow(new string[] {
                             "Regulators",
                             "Compliance reports",
                             "Required metrics",
                             "As mandated",
                             "Audit findings",
                             "Proactive communication"});
-                table1978.AddRow(new string[] {
+                table1941.AddRow(new string[] {
                             "Community",
                             "Public reports",
                             "Aggregate outcomes",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "Community forums",
                             "Transparency commitment"});
 #line 283
-    testRunner.When("communicating compliance status:", ((string)(null)), table1978, "When ");
+    testRunner.When("communicating compliance status:", ((string)(null)), table1941, "When ");
 #line hidden
 #line 291
     testRunner.Then("communication should be clear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1854,49 +1854,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 300
     testRunner.And("development opportunities enhance skills", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1979 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1942 = new TechTalk.SpecFlow.Table(new string[] {
                             "Development Area",
                             "Compliance Link",
                             "Growth Opportunities",
                             "Recognition System",
                             "Career Impact",
                             "Support Provided"});
-                table1979.AddRow(new string[] {
+                table1942.AddRow(new string[] {
                             "Clinical expertise",
                             "Protocol mastery",
                             "Advanced training",
                             "Certification display",
                             "Specialization",
                             "Funding support"});
-                table1979.AddRow(new string[] {
+                table1942.AddRow(new string[] {
                             "Leadership skills",
                             "Quality champion",
                             "Committee leadership",
                             "Leadership roles",
                             "Advancement",
                             "Mentorship"});
-                table1979.AddRow(new string[] {
+                table1942.AddRow(new string[] {
                             "Research participation",
                             "Evidence generation",
                             "Publication opportunities",
                             "Academic recognition",
                             "CV building",
                             "Time allocation"});
-                table1979.AddRow(new string[] {
+                table1942.AddRow(new string[] {
                             "Teaching ability",
                             "Peer education",
                             "Workshop presenter",
                             "Teaching awards",
                             "Reputation",
                             "Presentation skills"});
-                table1979.AddRow(new string[] {
+                table1942.AddRow(new string[] {
                             "Innovation",
                             "Improvement projects",
                             "Innovation time",
                             "Innovation showcase",
                             "Thought leadership",
                             "Resources"});
-                table1979.AddRow(new string[] {
+                table1942.AddRow(new string[] {
                             "Quality expertise",
                             "Audit participation",
                             "Quality certification",
@@ -1904,7 +1904,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "Expertise recognition",
                             "Training support"});
 #line 301
-    testRunner.When("connecting compliance to development:", ((string)(null)), table1979, "When ");
+    testRunner.When("connecting compliance to development:", ((string)(null)), table1942, "When ");
 #line hidden
 #line 309
     testRunner.Then("development should be encouraged", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1961,49 +1961,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 318
     testRunner.And("best practices transcend borders", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1980 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1943 = new TechTalk.SpecFlow.Table(new string[] {
                             "Standard Source",
                             "Adaptation Process",
                             "Local Integration",
                             "Training Required",
                             "Monitoring Method",
                             "Benefit Realization"});
-                table1980.AddRow(new string[] {
+                table1943.AddRow(new string[] {
                             "WHO guidelines",
                             "Cultural adaptation",
                             "Pilot testing",
                             "Cross-cultural training",
                             "Outcome comparison",
                             "Universal principles"});
-                table1980.AddRow(new string[] {
+                table1943.AddRow(new string[] {
                             "International research",
                             "Evidence review",
                             "Local validation",
                             "Research literacy",
                             "Effect measurement",
                             "Enhanced outcomes"});
-                table1980.AddRow(new string[] {
+                table1943.AddRow(new string[] {
                             "Global networks",
                             "Collaboration",
                             "Knowledge exchange",
                             "Language support",
                             "Shared metrics",
                             "Collective learning"});
-                table1980.AddRow(new string[] {
+                table1943.AddRow(new string[] {
                             "Best practice databases",
                             "Systematic review",
                             "Feasibility assessment",
                             "Implementation training",
                             "Adoption tracking",
                             "Rapid improvement"});
-                table1980.AddRow(new string[] {
+                table1943.AddRow(new string[] {
                             "International accreditation",
                             "Gap analysis",
                             "Standards alignment",
                             "Preparation support",
                             "External validation",
                             "Global recognition"});
-                table1980.AddRow(new string[] {
+                table1943.AddRow(new string[] {
                             "Cross-border partnerships",
                             "Partnership development",
                             "Exchange programs",
@@ -2011,7 +2011,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "Satisfaction measures",
                             "Expanded perspectives"});
 #line 319
-    testRunner.When("implementing international standards:", ((string)(null)), table1980, "When ");
+    testRunner.When("implementing international standards:", ((string)(null)), table1943, "When ");
 #line hidden
 #line 327
     testRunner.Then("global standards should be adopted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -2068,49 +2068,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
 #line 336
     testRunner.And("preparation ensures readiness", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1981 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1944 = new TechTalk.SpecFlow.Table(new string[] {
                             "Future Trend",
                             "Preparation Strategy",
                             "Capability Building",
                             "Investment Required",
                             "Timeline",
                             "Expected Impact"});
-                table1981.AddRow(new string[] {
+                table1944.AddRow(new string[] {
                             "AI governance",
                             "Ethical frameworks",
                             "AI literacy training",
                             "Moderate",
                             "1-2 years",
                             "Responsible AI use"});
-                table1981.AddRow(new string[] {
+                table1944.AddRow(new string[] {
                             "Outcome transparency",
                             "Public reporting systems",
                             "Data visualization",
                             "Significant",
                             "2-3 years",
                             "Increased accountability"});
-                table1981.AddRow(new string[] {
+                table1944.AddRow(new string[] {
                             "Personalized protocols",
                             "Precision medicine",
                             "Genomics understanding",
                             "High",
                             "3-5 years",
                             "Individualized care"});
-                table1981.AddRow(new string[] {
+                table1944.AddRow(new string[] {
                             "Real-time compliance",
                             "Automated monitoring",
                             "Technical infrastructure",
                             "High",
                             "1-2 years",
                             "Immediate correction"});
-                table1981.AddRow(new string[] {
+                table1944.AddRow(new string[] {
                             "Global standards",
                             "International alignment",
                             "Cross-cultural competence",
                             "Moderate",
                             "2-3 years",
                             "Universal quality"});
-                table1981.AddRow(new string[] {
+                table1944.AddRow(new string[] {
                             "Predictive compliance",
                             "Analytics capability",
                             "Data science skills",
@@ -2118,7 +2118,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Protocols
                             "2-3 years",
                             "Proactive management"});
 #line 337
-    testRunner.When("preparing for future requirements:", ((string)(null)), table1981, "When ");
+    testRunner.When("preparing for future requirements:", ((string)(null)), table1944, "When ");
 #line hidden
 #line 345
     testRunner.Then("future readiness should be planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

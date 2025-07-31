@@ -69,14 +69,39 @@ public class Resource
     public decimal? Price { get; set; }
 
     public Guid? SellerId { get; set; }
+    
+    // Alias for compatibility with stored procedures
+    public Guid? SellerUserId 
+    { 
+        get => SellerId; 
+        set => SellerId = value; 
+    }
 
     public string? PreviewUrl { get; set; }
+    
+    public bool IsFree { get; set; } = true;
+    
+    public decimal CommissionRate { get; set; } = 0.30m;
+    
+    // Alias for compatibility with stored procedures
+    public List<string> Languages 
+    { 
+        get => LanguagesAvailable; 
+        set => LanguagesAvailable = value; 
+    }
 
     public int ViewCount { get; set; } = 0;
 
     public int DownloadCount { get; set; } = 0;
 
     public decimal Rating { get; set; } = 0;
+    
+    // Alias for compatibility with stored procedures
+    public decimal AverageRating 
+    { 
+        get => Rating; 
+        set => Rating = value; 
+    }
 
     public int ReviewCount { get; set; } = 0;
 
@@ -97,6 +122,11 @@ public class Resource
     public bool IsSuperseded { get; set; } = false;
 
     public DateTime? SupersededAt { get; set; }
+    
+    // Soft delete support
+    public bool IsDeleted { get; set; } = false;
+    
+    public DateTime? DeletedAt { get; set; }
 
     // Navigation properties
     public virtual User? CreatedByUser { get; set; }
@@ -107,20 +137,20 @@ public class Resource
     public virtual ICollection<SessionResource> SessionUses { get; set; } = new List<SessionResource>();
 
     // Helper methods for JSON fields
-    public Dictionary<string, object> GetSkillAreas() => 
+    public Dictionary<string, object> GetSkillAreas() =>
         string.IsNullOrEmpty(SkillAreas) ? new() : JsonSerializer.Deserialize<Dictionary<string, object>>(SkillAreas) ?? new();
 
-    public void SetSkillAreas(Dictionary<string, object> value) => 
+    public void SetSkillAreas(Dictionary<string, object> value) =>
         SkillAreas = JsonSerializer.Serialize(value);
 
-    public List<int> GetGradeLevels() => 
+    public List<int> GetGradeLevels() =>
         string.IsNullOrEmpty(GradeLevels) ? new() : JsonSerializer.Deserialize<List<int>>(GradeLevels) ?? new();
 
-    public void SetGradeLevels(List<int> value) => 
+    public void SetGradeLevels(List<int> value) =>
         GradeLevels = JsonSerializer.Serialize(value);
 
     // Helper method for suggested alternatives (stored as JSON in the database if needed)
-    public void SetSuggestedAlternatives(List<Guid> value) => 
+    public void SetSuggestedAlternatives(List<Guid> value) =>
         SuggestedAlternatives = value;
 }
 

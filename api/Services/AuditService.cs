@@ -23,10 +23,10 @@ public class AuditService : IAuditService
     }
 
     public async Task LogAsync(
-        string action, 
-        Guid? userId = null, 
-        string? entityType = null, 
-        Guid? entityId = null, 
+        string action,
+        Guid? userId = null,
+        string? entityType = null,
+        Guid? entityId = null,
         string? details = null,
         bool success = true,
         string? errorMessage = null)
@@ -62,10 +62,10 @@ public class AuditService : IAuditService
     }
 
     public async Task LogAuthenticationAsync(
-        string action, 
-        string email, 
-        bool success, 
-        string? ipAddress = null, 
+        string action,
+        string email,
+        bool success,
+        string? ipAddress = null,
         string? userAgent = null,
         string? errorMessage = null)
     {
@@ -108,9 +108,9 @@ public class AuditService : IAuditService
     }
 
     public async Task LogResourceAccessAsync(
-        Guid userId, 
-        Guid resourceId, 
-        string action, 
+        Guid userId,
+        Guid resourceId,
+        string action,
         string? ipAddress = null)
     {
         try
@@ -142,10 +142,10 @@ public class AuditService : IAuditService
     }
 
     public async Task LogDataAccessAsync(
-        Guid userId, 
-        string entityType, 
-        Guid entityId, 
-        string action, 
+        Guid userId,
+        string entityType,
+        Guid entityId,
+        string action,
         string? ipAddress = null)
     {
         try
@@ -173,13 +173,13 @@ public class AuditService : IAuditService
             // Log sensitive data access
             if (entityType == "Student" || entityType == "User")
             {
-                _logger.LogInformation("Sensitive data accessed: {EntityType} {EntityId} by user {UserId}", 
+                _logger.LogInformation("Sensitive data accessed: {EntityType} {EntityId} by user {UserId}",
                     entityType, entityId, userId);
             }
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Failed to write data access audit log for entity: {EntityType} {EntityId}", 
+            _logger.LogError(ex, "Failed to write data access audit log for entity: {EntityType} {EntityId}",
                 entityType, entityId);
         }
     }

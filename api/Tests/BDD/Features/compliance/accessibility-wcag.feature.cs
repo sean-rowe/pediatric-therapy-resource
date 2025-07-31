@@ -141,49 +141,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 17
     testRunner.And("alternatives must be provided for non-text content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table647 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table610 = new TechTalk.SpecFlow.Table(new string[] {
                             "Content Type",
                             "Accessibility Requirement",
                             "Implementation Method",
                             "Success Criteria",
                             "Testing Method",
                             "User Benefit"});
-                table647.AddRow(new string[] {
+                table610.AddRow(new string[] {
                             "Images",
                             "Alt text required",
                             "Descriptive alt attributes",
                             "1.1.1 compliance",
                             "Screen reader testing",
                             "Image understanding"});
-                table647.AddRow(new string[] {
+                table610.AddRow(new string[] {
                             "Videos",
                             "Captions and descriptions",
                             "Synchronized captions",
                             "1.2.2, 1.2.5 compliance",
                             "Caption accuracy test",
                             "Deaf/blind access"});
-                table647.AddRow(new string[] {
+                table610.AddRow(new string[] {
                             "Audio",
                             "Transcripts required",
                             "Text alternatives",
                             "1.2.1 compliance",
                             "Transcript verification",
                             "Deaf user access"});
-                table647.AddRow(new string[] {
+                table610.AddRow(new string[] {
                             "Color usage",
                             "Not sole indicator",
                             "Additional indicators",
                             "1.4.1 compliance",
                             "Colorblind simulation",
                             "Color independence"});
-                table647.AddRow(new string[] {
+                table610.AddRow(new string[] {
                             "Contrast ratios",
                             "4.5:1 minimum (AA)",
                             "Color contrast tools",
                             "1.4.3 compliance",
                             "Automated scanning",
                             "Visual clarity"});
-                table647.AddRow(new string[] {
+                table610.AddRow(new string[] {
                             "Text resize",
                             "200% without loss",
                             "Responsive design",
@@ -191,7 +191,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Zoom testing",
                             "Low vision support"});
 #line 18
-    testRunner.When("implementing perceivable content:", ((string)(null)), table647, "When ");
+    testRunner.When("implementing perceivable content:", ((string)(null)), table610, "When ");
 #line hidden
 #line 26
     testRunner.Then("all content should be perceivable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -248,49 +248,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 34
     testRunner.And("keyboard access must be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table648 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table611 = new TechTalk.SpecFlow.Table(new string[] {
                             "Interface Element",
                             "Keyboard Requirement",
                             "Navigation Pattern",
                             "Success Criteria",
                             "Testing Protocol",
                             "Accessibility Feature"});
-                table648.AddRow(new string[] {
+                table611.AddRow(new string[] {
                             "Navigation menus",
                             "Full keyboard access",
                             "Tab/arrow keys",
                             "2.1.1 compliance",
                             "Keyboard-only testing",
                             "Skip links provided"});
-                table648.AddRow(new string[] {
+                table611.AddRow(new string[] {
                             "Form controls",
                             "Keyboard operable",
                             "Logical tab order",
                             "2.1.1, 2.4.3 compliance",
                             "Tab order verification",
                             "Focus indicators"});
-                table648.AddRow(new string[] {
+                table611.AddRow(new string[] {
                             "Interactive elements",
                             "Keyboard activation",
                             "Enter/space activation",
                             "2.1.1 compliance",
                             "Interaction testing",
                             "Clear focus states"});
-                table648.AddRow(new string[] {
+                table611.AddRow(new string[] {
                             "Modal dialogs",
                             "Keyboard trap free",
                             "Escape to close",
                             "2.1.2 compliance",
                             "Focus trap testing",
                             "Focus management"});
-                table648.AddRow(new string[] {
+                table611.AddRow(new string[] {
                             "Drag and drop",
                             "Keyboard alternative",
                             "Button controls",
                             "2.1.1 compliance",
                             "Alternative testing",
                             "Accessible options"});
-                table648.AddRow(new string[] {
+                table611.AddRow(new string[] {
                             "Time limits",
                             "User control",
                             "Extend/disable options",
@@ -298,7 +298,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Timer testing",
                             "Time adjustments"});
 #line 35
-    testRunner.When("implementing operable interfaces:", ((string)(null)), table648, "When ");
+    testRunner.When("implementing operable interfaces:", ((string)(null)), table611, "When ");
 #line hidden
 #line 43
     testRunner.Then("all functions should be keyboard accessible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -355,49 +355,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 51
     testRunner.And("interfaces must behave predictably", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table649 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table612 = new TechTalk.SpecFlow.Table(new string[] {
                             "Aspect",
                             "Requirement",
                             "Implementation",
                             "Success Criteria",
                             "Validation Method",
                             "User Impact"});
-                table649.AddRow(new string[] {
+                table612.AddRow(new string[] {
                             "Language",
                             "Page language declared",
                             "HTML lang attribute",
                             "3.1.1 compliance",
                             "Language detection",
                             "Screen reader support"});
-                table649.AddRow(new string[] {
+                table612.AddRow(new string[] {
                             "Instructions",
                             "Clear instructions",
                             "Contextual help",
                             "3.3.2 compliance",
                             "User testing",
                             "Error prevention"});
-                table649.AddRow(new string[] {
+                table612.AddRow(new string[] {
                             "Error messages",
                             "Descriptive errors",
                             "Specific guidance",
                             "3.3.1 compliance",
                             "Error scenario testing",
                             "Error resolution"});
-                table649.AddRow(new string[] {
+                table612.AddRow(new string[] {
                             "Consistent navigation",
                             "Predictable layout",
                             "Template consistency",
                             "3.2.3 compliance",
                             "Navigation testing",
                             "User orientation"});
-                table649.AddRow(new string[] {
+                table612.AddRow(new string[] {
                             "Input purpose",
                             "Field purpose clear",
                             "Autocomplete attributes",
                             "1.3.5 compliance",
                             "Form testing",
                             "Efficient completion"});
-                table649.AddRow(new string[] {
+                table612.AddRow(new string[] {
                             "Context changes",
                             "User-initiated only",
                             "Explicit actions",
@@ -405,7 +405,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Behavior testing",
                             "Predictable experience"});
 #line 52
-    testRunner.When("implementing understandable content:", ((string)(null)), table649, "When ");
+    testRunner.When("implementing understandable content:", ((string)(null)), table612, "When ");
 #line hidden
 #line 60
     testRunner.Then("content should be clearly written", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -462,49 +462,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 68
     testRunner.And("markup must be valid and semantic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table650 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table613 = new TechTalk.SpecFlow.Table(new string[] {
                             "Technology Aspect",
                             "Compatibility Requirement",
                             "Implementation Standard",
                             "Success Criteria",
                             "Testing Tools",
                             "Supported Technologies"});
-                table650.AddRow(new string[] {
+                table613.AddRow(new string[] {
                             "Screen readers",
                             "Full compatibility",
                             "ARIA implementation",
                             "4.1.2 compliance",
                             "NVDA, JAWS testing",
                             "Major screen readers"});
-                table650.AddRow(new string[] {
+                table613.AddRow(new string[] {
                             "Voice control",
                             "Voice navigation",
                             "Semantic markup",
                             "4.1.2 compliance",
                             "Dragon testing",
                             "Voice input software"});
-                table650.AddRow(new string[] {
+                table613.AddRow(new string[] {
                             "Switch devices",
                             "Switch navigation",
                             "Keyboard foundation",
                             "2.1.1 compliance",
                             "Switch testing",
                             "Switch controllers"});
-                table650.AddRow(new string[] {
+                table613.AddRow(new string[] {
                             "Magnification",
                             "Zoom compatibility",
                             "Responsive design",
                             "1.4.4 compliance",
                             "ZoomText testing",
                             "Screen magnifiers"});
-                table650.AddRow(new string[] {
+                table613.AddRow(new string[] {
                             "Valid markup",
                             "W3C validation",
                             "Standards compliance",
                             "4.1.1 compliance",
                             "HTML validator",
                             "All AT devices"});
-                table650.AddRow(new string[] {
+                table613.AddRow(new string[] {
                             "ARIA usage",
                             "Correct implementation",
                             "ARIA best practices",
@@ -512,7 +512,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "ARIA validator",
                             "Modern AT"});
 #line 69
-    testRunner.When("ensuring robust implementation:", ((string)(null)), table650, "When ");
+    testRunner.When("ensuring robust implementation:", ((string)(null)), table613, "When ");
 #line hidden
 #line 77
     testRunner.Then("markup should be valid and semantic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -569,49 +569,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 86
     testRunner.And("clear design helps all users", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table651 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table614 = new TechTalk.SpecFlow.Table(new string[] {
                             "Support Feature",
                             "Implementation Method",
                             "Benefit Provided",
                             "Testing Approach",
                             "Success Metric",
                             "User Group"});
-                table651.AddRow(new string[] {
+                table614.AddRow(new string[] {
                             "Simple language",
                             "Plain language writing",
                             "Easier comprehension",
                             "Readability scoring",
                             "8th grade level",
                             "Cognitive disabilities"});
-                table651.AddRow(new string[] {
+                table614.AddRow(new string[] {
                             "Clear layouts",
                             "Visual hierarchy",
                             "Reduced confusion",
                             "User testing",
                             "Task completion",
                             "ADHD users"});
-                table651.AddRow(new string[] {
+                table614.AddRow(new string[] {
                             "Consistent patterns",
                             "Design system",
                             "Predictable interface",
                             "Pattern testing",
                             "Recognition rate",
                             "Memory impairments"});
-                table651.AddRow(new string[] {
+                table614.AddRow(new string[] {
                             "Progress indicators",
                             "Multi-step guidance",
                             "Orientation support",
                             "Journey testing",
                             "Completion rate",
                             "Learning disabilities"});
-                table651.AddRow(new string[] {
+                table614.AddRow(new string[] {
                             "Error recovery",
                             "Forgiving design",
                             "Reduced anxiety",
                             "Error testing",
                             "Recovery rate",
                             "All users"});
-                table651.AddRow(new string[] {
+                table614.AddRow(new string[] {
                             "Help availability",
                             "Contextual assistance",
                             "Just-in-time support",
@@ -619,7 +619,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Support effectiveness",
                             "Assistance needs"});
 #line 87
-    testRunner.When("implementing cognitive support:", ((string)(null)), table651, "When ");
+    testRunner.When("implementing cognitive support:", ((string)(null)), table614, "When ");
 #line hidden
 #line 95
     testRunner.Then("cognitive support should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -676,49 +676,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 103
     testRunner.And("touch interfaces need accessible design", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table652 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table615 = new TechTalk.SpecFlow.Table(new string[] {
                             "Mobile Feature",
                             "Accessibility Requirement",
                             "Implementation",
                             "Success Criteria",
                             "Testing Method",
                             "Adaptive Support"});
-                table652.AddRow(new string[] {
+                table615.AddRow(new string[] {
                             "Touch targets",
                             "44x44px minimum",
                             "Large tap areas",
                             "2.5.5 compliance",
                             "Touch testing",
                             "Motor impairments"});
-                table652.AddRow(new string[] {
+                table615.AddRow(new string[] {
                             "Gesture alternatives",
                             "Button alternatives",
                             "Multiple methods",
                             "2.5.1 compliance",
                             "Gesture testing",
                             "Limited mobility"});
-                table652.AddRow(new string[] {
+                table615.AddRow(new string[] {
                             "Orientation",
                             "Both orientations",
                             "Responsive layout",
                             "1.3.4 compliance",
                             "Rotation testing",
                             "Device mounting"});
-                table652.AddRow(new string[] {
+                table615.AddRow(new string[] {
                             "Motion control",
                             "Motion optional",
                             "Settings control",
                             "2.5.4 compliance",
                             "Motion testing",
                             "Vestibular disorders"});
-                table652.AddRow(new string[] {
+                table615.AddRow(new string[] {
                             "Screen reader",
                             "Mobile SR support",
                             "iOS/Android testing",
                             "4.1.2 compliance",
                             "TalkBack/VoiceOver",
                             "Blind users"});
-                table652.AddRow(new string[] {
+                table615.AddRow(new string[] {
                             "Zoom support",
                             "Pinch zoom enabled",
                             "No zoom blocking",
@@ -726,7 +726,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Zoom testing",
                             "Low vision users"});
 #line 104
-    testRunner.When("implementing mobile accessibility:", ((string)(null)), table652, "When ");
+    testRunner.When("implementing mobile accessibility:", ((string)(null)), table615, "When ");
 #line hidden
 #line 112
     testRunner.Then("mobile interfaces should be accessible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -783,49 +783,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 120
     testRunner.And("synchronized alternatives ensure access", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table653 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table616 = new TechTalk.SpecFlow.Table(new string[] {
                             "Media Type",
                             "Accessibility Features",
                             "Quality Standards",
                             "Synchronization",
                             "Validation Method",
                             "User Options"});
-                table653.AddRow(new string[] {
+                table616.AddRow(new string[] {
                             "Video content",
                             "Captions, descriptions",
                             "99% accuracy",
                             "Frame-accurate",
                             "Caption review",
                             "Caption customization"});
-                table653.AddRow(new string[] {
+                table616.AddRow(new string[] {
                             "Audio content",
                             "Transcripts, visual cues",
                             "Complete transcripts",
                             "Time-stamped",
                             "Transcript review",
                             "Download options"});
-                table653.AddRow(new string[] {
+                table616.AddRow(new string[] {
                             "Live streaming",
                             "Real-time captions",
                             "95% accuracy",
                             "<5 second delay",
                             "Live monitoring",
                             "Caption positioning"});
-                table653.AddRow(new string[] {
+                table616.AddRow(new string[] {
                             "Animations",
                             "Pause controls",
                             "User control",
                             "Play/pause/stop",
                             "Control testing",
                             "Animation preferences"});
-                table653.AddRow(new string[] {
+                table616.AddRow(new string[] {
                             "Interactive media",
                             "Keyboard control",
                             "Full functionality",
                             "Synchronized controls",
                             "Interaction testing",
                             "Simplified versions"});
-                table653.AddRow(new string[] {
+                table616.AddRow(new string[] {
                             "VR/AR content",
                             "Alternative formats",
                             "2D alternatives",
@@ -833,7 +833,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Alternative testing",
                             "Non-immersive options"});
 #line 121
-    testRunner.When("making multimedia accessible:", ((string)(null)), table653, "When ");
+    testRunner.When("making multimedia accessible:", ((string)(null)), table616, "When ");
 #line hidden
 #line 129
     testRunner.Then("multimedia should be fully accessible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -890,49 +890,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 137
     testRunner.And("accessibility ensures successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table654 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table617 = new TechTalk.SpecFlow.Table(new string[] {
                             "Form Feature",
                             "Accessibility Implementation",
                             "Error Handling",
                             "Success Support",
                             "Validation Timing",
                             "Recovery Options"});
-                table654.AddRow(new string[] {
+                table617.AddRow(new string[] {
                             "Field labels",
                             "Visible, associated labels",
                             "Clear error messages",
                             "Success confirmation",
                             "On blur validation",
                             "Field clearing"});
-                table654.AddRow(new string[] {
+                table617.AddRow(new string[] {
                             "Required fields",
                             "Multiple indicators",
                             "Specific requirements",
                             "Progress indication",
                             "Before submission",
                             "Partial save"});
-                table654.AddRow(new string[] {
+                table617.AddRow(new string[] {
                             "Field groups",
                             "Fieldset/legend",
                             "Group error summary",
                             "Section completion",
                             "Progressive disclosure",
                             "Section navigation"});
-                table654.AddRow(new string[] {
+                table617.AddRow(new string[] {
                             "Error identification",
                             "Inline + summary",
                             "Error prevention tips",
                             "Correction guidance",
                             "Real-time when possible",
                             "Error recovery"});
-                table654.AddRow(new string[] {
+                table617.AddRow(new string[] {
                             "Help text",
                             "Persistent help",
                             "Context-sensitive",
                             "Examples provided",
                             "Always visible option",
                             "Help expansion"});
-                table654.AddRow(new string[] {
+                table617.AddRow(new string[] {
                             "Submission",
                             "Clear actions",
                             "Confirmation step",
@@ -940,7 +940,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Final validation",
                             "Edit capability"});
 #line 138
-    testRunner.When("building accessible forms:", ((string)(null)), table654, "When ");
+    testRunner.When("building accessible forms:", ((string)(null)), table617, "When ");
 #line hidden
 #line 146
     testRunner.Then("forms should guide users effectively", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -997,49 +997,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 155
     testRunner.And("continuous testing ensures maintained compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table655 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table618 = new TechTalk.SpecFlow.Table(new string[] {
                             "Test Category",
                             "Testing Tools",
                             "Test Coverage",
                             "Failure Threshold",
                             "Integration Point",
                             "Remediation Process"});
-                table655.AddRow(new string[] {
+                table618.AddRow(new string[] {
                             "Color contrast",
                             "axe-core, WAVE",
                             "All color combinations",
                             "Zero failures",
                             "CI/CD pipeline",
                             "Immediate fix required"});
-                table655.AddRow(new string[] {
+                table618.AddRow(new string[] {
                             "ARIA validation",
                             "aria-query",
                             "All ARIA usage",
                             "Invalid ARIA blocks",
                             "Build process",
                             "Code review flagged"});
-                table655.AddRow(new string[] {
+                table618.AddRow(new string[] {
                             "Keyboard testing",
                             "Selenium + axe",
                             "All interactions",
                             "Inaccessible elements",
                             "Test suite",
                             "Sprint priority"});
-                table655.AddRow(new string[] {
+                table618.AddRow(new string[] {
                             "Screen reader",
                             "Testing library",
                             "Critical paths",
                             "Announcement failures",
                             "Unit tests",
                             "Accessibility backlog"});
-                table655.AddRow(new string[] {
+                table618.AddRow(new string[] {
                             "Responsive testing",
                             "Multiple viewports",
                             "All breakpoints",
                             "Reflow issues",
                             "Visual regression",
                             "Design review"});
-                table655.AddRow(new string[] {
+                table618.AddRow(new string[] {
                             "Performance",
                             "Lighthouse",
                             "Load + runtime",
@@ -1047,7 +1047,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Performance tests",
                             "Optimization sprint"});
 #line 156
-    testRunner.When("automating accessibility testing:", ((string)(null)), table655, "When ");
+    testRunner.When("automating accessibility testing:", ((string)(null)), table618, "When ");
 #line hidden
 #line 164
     testRunner.Then("automated testing should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1104,49 +1104,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 172
     testRunner.And("real user feedback is invaluable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table656 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table619 = new TechTalk.SpecFlow.Table(new string[] {
                             "Test Type",
                             "User Group",
                             "Testing Focus",
                             "Success Metrics",
                             "Feedback Method",
                             "Implementation"});
-                table656.AddRow(new string[] {
+                table619.AddRow(new string[] {
                             "Screen reader testing",
                             "Blind users",
                             "Full journey testing",
                             "Task completion",
                             "Think-aloud protocol",
                             "Immediate fixes"});
-                table656.AddRow(new string[] {
+                table619.AddRow(new string[] {
                             "Keyboard testing",
                             "Motor disabilities",
                             "All functionality",
                             "Efficiency metrics",
                             "Time + errors",
                             "Navigation improvements"});
-                table656.AddRow(new string[] {
+                table619.AddRow(new string[] {
                             "Cognitive testing",
                             "Cognitive disabilities",
                             "Understanding",
                             "Comprehension rate",
                             "Guided tasks",
                             "Simplification"});
-                table656.AddRow(new string[] {
+                table619.AddRow(new string[] {
                             "Low vision testing",
                             "Partial sight",
                             "Visual clarity",
                             "Reading efficiency",
                             "Eye tracking",
                             "Contrast enhancement"});
-                table656.AddRow(new string[] {
+                table619.AddRow(new string[] {
                             "Deaf user testing",
                             "Deaf community",
                             "Multimedia access",
                             "Content understanding",
                             "Comprehension tests",
                             "Caption improvement"});
-                table656.AddRow(new string[] {
+                table619.AddRow(new string[] {
                             "Mobile AT testing",
                             "Mobile AT users",
                             "Touch + SR",
@@ -1154,7 +1154,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Device-specific",
                             "Platform optimization"});
 #line 173
-    testRunner.When("conducting manual testing:", ((string)(null)), table656, "When ");
+    testRunner.When("conducting manual testing:", ((string)(null)), table619, "When ");
 #line hidden
 #line 181
     testRunner.Then("manual testing should involve real users", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1211,49 +1211,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 189
     testRunner.And("VPATs help customers assess accessibility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table657 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table620 = new TechTalk.SpecFlow.Table(new string[] {
                             "Document Type",
                             "Content Required",
                             "Update Frequency",
                             "Distribution Method",
                             "Validation Process",
                             "Public Access"});
-                table657.AddRow(new string[] {
+                table620.AddRow(new string[] {
                             "Accessibility statement",
                             "Compliance level, contact",
                             "Quarterly updates",
                             "Website footer",
                             "Legal review",
                             "Public page"});
-                table657.AddRow(new string[] {
+                table620.AddRow(new string[] {
                             "VPAT (ACR)",
                             "Detailed criteria assessment",
                             "Major releases",
                             "Sales + website",
                             "Expert review",
                             "Download available"});
-                table657.AddRow(new string[] {
+                table620.AddRow(new string[] {
                             "Testing methodology",
                             "Test procedures, tools",
                             "Annual review",
                             "Internal wiki",
                             "QA approval",
                             "Available on request"});
-                table657.AddRow(new string[] {
+                table620.AddRow(new string[] {
                             "Known issues",
                             "Current limitations",
                             "Real-time updates",
                             "Status page",
                             "Product review",
                             "Transparent disclosure"});
-                table657.AddRow(new string[] {
+                table620.AddRow(new string[] {
                             "Roadmap",
                             "Planned improvements",
                             "Quarterly updates",
                             "Blog posts",
                             "Executive approval",
                             "Public commitment"});
-                table657.AddRow(new string[] {
+                table620.AddRow(new string[] {
                             "Training materials",
                             "Best practices guide",
                             "Continuous updates",
@@ -1261,7 +1261,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Accessibility team",
                             "Internal access"});
 #line 190
-    testRunner.When("creating accessibility documentation:", ((string)(null)), table657, "When ");
+    testRunner.When("creating accessibility documentation:", ((string)(null)), table620, "When ");
 #line hidden
 #line 198
     testRunner.Then("documentation should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1318,49 +1318,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 207
     testRunner.And("training ensures consistent implementation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table658 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table621 = new TechTalk.SpecFlow.Table(new string[] {
                             "Role",
                             "Training Content",
                             "Depth Level",
                             "Frequency",
                             "Assessment Method",
                             "Certification"});
-                table658.AddRow(new string[] {
+                table621.AddRow(new string[] {
                             "Developers",
                             "Technical implementation",
                             "Deep technical",
                             "Quarterly updates",
                             "Code review",
                             "IAAP CPWA"});
-                table658.AddRow(new string[] {
+                table621.AddRow(new string[] {
                             "Designers",
                             "Inclusive design",
                             "Design principles",
                             "Bi-annual",
                             "Design critique",
                             "Accessibility champion"});
-                table658.AddRow(new string[] {
+                table621.AddRow(new string[] {
                             "Product managers",
                             "Requirements, impact",
                             "Strategic level",
                             "Annual + updates",
                             "Case studies",
                             "Product accessibility"});
-                table658.AddRow(new string[] {
+                table621.AddRow(new string[] {
                             "QA testers",
                             "Testing procedures",
                             "Testing expertise",
                             "Monthly updates",
                             "Test scenarios",
                             "Testing certification"});
-                table658.AddRow(new string[] {
+                table621.AddRow(new string[] {
                             "Content creators",
                             "Content accessibility",
                             "Practical skills",
                             "Onboarding + annual",
                             "Content review",
                             "Content standards"});
-                table658.AddRow(new string[] {
+                table621.AddRow(new string[] {
                             "Leadership",
                             "Business case, legal",
                             "Executive overview",
@@ -1368,7 +1368,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Compliance metrics",
                             "Executive sponsor"});
 #line 208
-    testRunner.When("providing accessibility training:", ((string)(null)), table658, "When ");
+    testRunner.When("providing accessibility training:", ((string)(null)), table621, "When ");
 #line hidden
 #line 216
     testRunner.Then("training should be role-appropriate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1425,49 +1425,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 224
     testRunner.And("practices embed accessibility throughout", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table659 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table622 = new TechTalk.SpecFlow.Table(new string[] {
                             "Culture Element",
                             "Implementation Method",
                             "Success Indicator",
                             "Reinforcement",
                             "Measurement",
                             "Recognition"});
-                table659.AddRow(new string[] {
+                table622.AddRow(new string[] {
                             "Accessibility champions",
                             "Champion network",
                             "Active participation",
                             "Monthly meetings",
                             "Contribution tracking",
                             "Champion awards"});
-                table659.AddRow(new string[] {
+                table622.AddRow(new string[] {
                             "Inclusive design",
                             "Design thinking workshops",
                             "Accessibility-first designs",
                             "Design reviews",
                             "Accessibility score",
                             "Design recognition"});
-                table659.AddRow(new string[] {
+                table622.AddRow(new string[] {
                             "User empathy",
                             "Disability simulations",
                             "Increased awareness",
                             "Regular sessions",
                             "Empathy surveys",
                             "Story sharing"});
-                table659.AddRow(new string[] {
+                table622.AddRow(new string[] {
                             "Continuous improvement",
                             "Accessibility sprints",
                             "Reduced issues",
                             "Sprint reviews",
                             "Issue reduction",
                             "Team recognition"});
-                table659.AddRow(new string[] {
+                table622.AddRow(new string[] {
                             "External engagement",
                             "Community involvement",
                             "Conference speaking",
                             "Support provided",
                             "External impact",
                             "Company promotion"});
-                table659.AddRow(new string[] {
+                table622.AddRow(new string[] {
                             "Innovation",
                             "Accessibility hackathons",
                             "New solutions",
@@ -1475,7 +1475,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Innovation adoption",
                             "Innovation awards"});
 #line 225
-    testRunner.When("building accessibility culture:", ((string)(null)), table659, "When ");
+    testRunner.When("building accessibility culture:", ((string)(null)), table622, "When ");
 #line hidden
 #line 233
     testRunner.Then("culture should prioritize accessibility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1532,49 +1532,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 241
     testRunner.And("procurement must consider accessibility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table660 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table623 = new TechTalk.SpecFlow.Table(new string[] {
                             "Tool Category",
                             "Accessibility Requirements",
                             "Evaluation Method",
                             "Minimum Standard",
                             "Contract Terms",
                             "Monitoring"});
-                table660.AddRow(new string[] {
+                table623.AddRow(new string[] {
                             "UI components",
                             "WCAG 2.1 AA compliance",
                             "Component testing",
                             "Full compliance",
                             "Compliance warranty",
                             "Regular audits"});
-                table660.AddRow(new string[] {
+                table623.AddRow(new string[] {
                             "SaaS platforms",
                             "Accessibility statement",
                             "VPAT review",
                             "Known issues acceptable",
                             "Improvement commitment",
                             "Annual review"});
-                table660.AddRow(new string[] {
+                table623.AddRow(new string[] {
                             "Content tools",
                             "Accessible output",
                             "Output testing",
                             "Author-controllable",
                             "Training included",
                             "Output monitoring"});
-                table660.AddRow(new string[] {
+                table623.AddRow(new string[] {
                             "Analytics tools",
                             "Accessible dashboards",
                             "Dashboard review",
                             "Keyboard navigable",
                             "Accessibility roadmap",
                             "Feature tracking"});
-                table660.AddRow(new string[] {
+                table623.AddRow(new string[] {
                             "Communication tools",
                             "Multi-modal access",
                             "User testing",
                             "Alternative formats",
                             "Support commitment",
                             "User feedback"});
-                table660.AddRow(new string[] {
+                table623.AddRow(new string[] {
                             "Development tools",
                             "Accessibility features",
                             "Feature evaluation",
@@ -1582,7 +1582,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Feature requests",
                             "Update tracking"});
 #line 242
-    testRunner.When("evaluating third-party tools:", ((string)(null)), table660, "When ");
+    testRunner.When("evaluating third-party tools:", ((string)(null)), table623, "When ");
 #line hidden
 #line 250
     testRunner.Then("procurement should require accessibility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1639,49 +1639,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 258
     testRunner.And("risk management prevents litigation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table661 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table624 = new TechTalk.SpecFlow.Table(new string[] {
                             "Legal Aspect",
                             "Compliance Activity",
                             "Risk Mitigation",
                             "Documentation",
                             "Review Cycle",
                             "Escalation Path"});
-                table661.AddRow(new string[] {
+                table624.AddRow(new string[] {
                             "ADA compliance",
                             "Regular audits",
                             "Proactive remediation",
                             "Audit trails",
                             "Quarterly",
                             "Legal counsel"});
-                table661.AddRow(new string[] {
+                table624.AddRow(new string[] {
                             "Section 508",
                             "Federal compliance",
                             "Government readiness",
                             "Compliance reports",
                             "Annual",
                             "Compliance officer"});
-                table661.AddRow(new string[] {
+                table624.AddRow(new string[] {
                             "State laws",
                             "Multi-state analysis",
                             "State-specific features",
                             "State compliance",
                             "Legislative updates",
                             "Legal team"});
-                table661.AddRow(new string[] {
+                table624.AddRow(new string[] {
                             "International",
                             "Global standards",
                             "Highest standard",
                             "Global compliance",
                             "Regional reviews",
                             "Regional counsel"});
-                table661.AddRow(new string[] {
+                table624.AddRow(new string[] {
                             "Litigation risk",
                             "Preventive measures",
                             "Rapid response plan",
                             "Issue tracking",
                             "Monthly",
                             "Executive team"});
-                table661.AddRow(new string[] {
+                table624.AddRow(new string[] {
                             "Settlement compliance",
                             "Agreement adherence",
                             "Milestone tracking",
@@ -1689,7 +1689,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Per agreement",
                             "Legal + executive"});
 #line 259
-    testRunner.When("managing legal compliance:", ((string)(null)), table661, "When ");
+    testRunner.When("managing legal compliance:", ((string)(null)), table624, "When ");
 #line hidden
 #line 267
     testRunner.Then("legal requirements should be met", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1746,49 +1746,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 275
     testRunner.And("early consideration ensures accessibility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table662 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table625 = new TechTalk.SpecFlow.Table(new string[] {
                             "Technology",
                             "Accessibility Challenges",
                             "Design Solutions",
                             "Testing Methods",
                             "Standards Gap",
                             "Future Planning"});
-                table662.AddRow(new string[] {
+                table625.AddRow(new string[] {
                             "AI/ML interfaces",
                             "Explainable AI",
                             "Transparency features",
                             "AI fairness testing",
                             "AI accessibility",
                             "Standards participation"});
-                table662.AddRow(new string[] {
+                table625.AddRow(new string[] {
                             "Voice interfaces",
                             "Multi-modal design",
                             "Visual alternatives",
                             "Voice variation testing",
                             "Voice standards",
                             "Inclusive voice"});
-                table662.AddRow(new string[] {
+                table625.AddRow(new string[] {
                             "AR/VR experiences",
                             "Motion sensitivity",
                             "Comfort settings",
                             "Simulator sickness testing",
                             "XR accessibility",
                             "XR alternatives"});
-                table662.AddRow(new string[] {
+                table625.AddRow(new string[] {
                             "IoT devices",
                             "Limited interfaces",
                             "Companion apps",
                             "Multi-device testing",
                             "IoT standards",
                             "Connected accessibility"});
-                table662.AddRow(new string[] {
+                table625.AddRow(new string[] {
                             "Biometric auth",
                             "Alternative methods",
                             "Fallback options",
                             "Inclusive testing",
                             "Biometric standards",
                             "Universal access"});
-                table662.AddRow(new string[] {
+                table625.AddRow(new string[] {
                             "Gesture control",
                             "Physical limitations",
                             "Alternative inputs",
@@ -1796,7 +1796,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Gesture standards",
                             "Adaptive interfaces"});
 #line 276
-    testRunner.When("implementing emerging technologies:", ((string)(null)), table662, "When ");
+    testRunner.When("implementing emerging technologies:", ((string)(null)), table625, "When ");
 #line hidden
 #line 284
     testRunner.Then("emerging tech should be accessible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1850,49 +1850,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 291
     testRunner.Given("accessibility requires ongoing commitment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table663 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table626 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table663.AddRow(new string[] {
+                table626.AddRow(new string[] {
                             "Standards evolution",
                             "WCAG 3.0 preparation",
                             "Continuous learning",
                             "Training investment",
                             "Early adoption",
                             "Future compliance"});
-                table663.AddRow(new string[] {
+                table626.AddRow(new string[] {
                             "Technology change",
                             "Rapid platform evolution",
                             "Flexible frameworks",
                             "Technical resources",
                             "Maintained compliance",
                             "Adaptive accessibility"});
-                table663.AddRow(new string[] {
+                table626.AddRow(new string[] {
                             "User expectations",
                             "Rising accessibility bar",
                             "User-centered design",
                             "User research",
                             "User satisfaction",
                             "Exceeding standards"});
-                table663.AddRow(new string[] {
+                table626.AddRow(new string[] {
                             "Legal landscape",
                             "Increasing requirements",
                             "Proactive compliance",
                             "Legal resources",
                             "Zero litigation",
                             "Legal readiness"});
-                table663.AddRow(new string[] {
+                table626.AddRow(new string[] {
                             "Resource allocation",
                             "Competing priorities",
                             "Accessibility ROI",
                             "Dedicated team",
                             "Consistent funding",
                             "Business integration"});
-                table663.AddRow(new string[] {
+                table626.AddRow(new string[] {
                             "Knowledge retention",
                             "Staff turnover",
                             "Knowledge management",
@@ -1900,7 +1900,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Institutional knowledge",
                             "Sustained expertise"});
 #line 292
-    testRunner.When("planning sustainable accessibility:", ((string)(null)), table663, "When ");
+    testRunner.When("planning sustainable accessibility:", ((string)(null)), table626, "When ");
 #line hidden
 #line 300
     testRunner.Then("sustainability should be planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

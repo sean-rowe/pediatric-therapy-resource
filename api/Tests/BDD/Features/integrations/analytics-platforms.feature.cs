@@ -140,50 +140,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 17
     testRunner.And("event tracking is optimized for therapy platform use", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1425 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1388 = new TechTalk.SpecFlow.Table(new string[] {
                             "Event Category",
                             "Event Type",
                             "Properties Tracked",
                             "User Privacy Level",
                             "Real-time Processing"});
-                table1425.AddRow(new string[] {
+                table1388.AddRow(new string[] {
                             "User engagement",
                             "Resource download",
                             "Resource ID, category, time",
                             "Anonymized user ID",
                             "<2 seconds"});
-                table1425.AddRow(new string[] {
+                table1388.AddRow(new string[] {
                             "Therapy sessions",
                             "Session start/end",
                             "Duration, activities used",
                             "Encrypted data",
                             "<1 second"});
-                table1425.AddRow(new string[] {
+                table1388.AddRow(new string[] {
                             "Marketplace activity",
                             "Purchase completion",
                             "Amount, seller, items",
                             "Transaction hash",
                             "<3 seconds"});
-                table1425.AddRow(new string[] {
+                table1388.AddRow(new string[] {
                             "Learning progress",
                             "Goal achievement",
                             "Goal type, progress %",
                             "Student hash",
                             "<2 seconds"});
-                table1425.AddRow(new string[] {
+                table1388.AddRow(new string[] {
                             "Platform navigation",
                             "Page views, clicks",
                             "Page path, element ID",
                             "Session tracking",
                             "<1 second"});
-                table1425.AddRow(new string[] {
+                table1388.AddRow(new string[] {
                             "Feature usage",
                             "Tool activation",
                             "Feature name, context",
                             "Usage patterns",
                             "<2 seconds"});
 #line 18
-    testRunner.When("Mixpanel integration is tested across user events:", ((string)(null)), table1425, "When ");
+    testRunner.When("Mixpanel integration is tested across user events:", ((string)(null)), table1388, "When ");
 #line hidden
 #line 26
     testRunner.Then("Mixpanel should track all user events accurately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -238,50 +238,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 34
     testRunner.And("user journey mapping is optimized for platform workflows", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1426 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1389 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Feature",
                             "Data Points Tracked",
                             "Analysis Type",
                             "Reporting Frequency",
                             "Retention Period"});
-                table1426.AddRow(new string[] {
+                table1389.AddRow(new string[] {
                             "User acquisition",
                             "Signup source, conversion",
                             "Funnel analysis",
                             "Daily",
                             "2 years"});
-                table1426.AddRow(new string[] {
+                table1389.AddRow(new string[] {
                             "Feature adoption",
                             "First use, frequency",
                             "Cohort analysis",
                             "Weekly",
                             "1 year"});
-                table1426.AddRow(new string[] {
+                table1389.AddRow(new string[] {
                             "Retention analysis",
                             "Daily/weekly/monthly",
                             "Retention curves",
                             "Weekly",
                             "2 years"});
-                table1426.AddRow(new string[] {
+                table1389.AddRow(new string[] {
                             "Revenue attribution",
                             "Subscription events",
                             "Revenue analysis",
                             "Daily",
                             "5 years"});
-                table1426.AddRow(new string[] {
+                table1389.AddRow(new string[] {
                             "User segmentation",
                             "Behavior patterns",
                             "Segment analysis",
                             "Real-time",
                             "1 year"});
-                table1426.AddRow(new string[] {
+                table1389.AddRow(new string[] {
                             "Product experiments",
                             "A/B test results",
                             "Statistical analysis",
                             "Per experiment",
                             "1 year"});
 #line 35
-    testRunner.When("Amplitude integration is tested:", ((string)(null)), table1426, "When ");
+    testRunner.When("Amplitude integration is tested:", ((string)(null)), table1389, "When ");
 #line hidden
 #line 43
     testRunner.Then("Amplitude should provide comprehensive product insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -336,50 +336,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 51
     testRunner.And("therapy-specific data models are configured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1427 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1390 = new TechTalk.SpecFlow.Table(new string[] {
                             "Report Category",
                             "Data Sources",
                             "Dashboard Type",
                             "Update Frequency",
                             "Access Control"});
-                table1427.AddRow(new string[] {
+                table1390.AddRow(new string[] {
                             "Platform performance",
                             "User activity, system",
                             "Executive dashboard",
                             "Real-time",
                             "C-level access"});
-                table1427.AddRow(new string[] {
+                table1390.AddRow(new string[] {
                             "Clinical outcomes",
                             "Therapy data, progress",
                             "Clinical dashboard",
                             "Daily",
                             "Clinical team"});
-                table1427.AddRow(new string[] {
+                table1390.AddRow(new string[] {
                             "Business metrics",
                             "Revenue, subscriptions",
                             "Financial dashboard",
                             "Hourly",
                             "Finance team"});
-                table1427.AddRow(new string[] {
+                table1390.AddRow(new string[] {
                             "Content analytics",
                             "Resource usage, ratings",
                             "Content dashboard",
                             "Daily",
                             "Content team"});
-                table1427.AddRow(new string[] {
+                table1390.AddRow(new string[] {
                             "Marketplace insights",
                             "Sales, seller performance",
                             "Marketplace dashboard",
                             "Real-time",
                             "Marketplace team"});
-                table1427.AddRow(new string[] {
+                table1390.AddRow(new string[] {
                             "User support metrics",
                             "Support tickets, satisfaction",
                             "Support dashboard",
                             "Hourly",
                             "Support team"});
 #line 52
-    testRunner.When("Looker integration is tested:", ((string)(null)), table1427, "When ");
+    testRunner.When("Looker integration is tested:", ((string)(null)), table1390, "When ");
 #line hidden
 #line 60
     testRunner.Then("Looker should provide accurate business intelligence", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -434,50 +434,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 68
     testRunner.And("data consistency across platforms is required", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1428 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1391 = new TechTalk.SpecFlow.Table(new string[] {
                             "Consistency Check",
                             "Primary Platform",
                             "Secondary Platform",
                             "Tolerance Level",
                             "Sync Frequency"});
-                table1428.AddRow(new string[] {
+                table1391.AddRow(new string[] {
                             "User event counts",
                             "Mixpanel",
                             "Amplitude",
                             "±2%",
                             "Every 15 minutes"});
-                table1428.AddRow(new string[] {
+                table1391.AddRow(new string[] {
                             "Revenue tracking",
                             "Amplitude",
                             "Looker",
                             "±0.1%",
                             "Every 5 minutes"});
-                table1428.AddRow(new string[] {
+                table1391.AddRow(new string[] {
                             "User acquisition",
                             "Mixpanel",
                             "Looker",
                             "±1%",
                             "Daily"});
-                table1428.AddRow(new string[] {
+                table1391.AddRow(new string[] {
                             "Feature usage metrics",
                             "Amplitude",
                             "Mixpanel",
                             "±3%",
                             "Hourly"});
-                table1428.AddRow(new string[] {
+                table1391.AddRow(new string[] {
                             "Conversion rates",
                             "All platforms",
                             "Data warehouse",
                             "±1.5%",
                             "Hourly"});
-                table1428.AddRow(new string[] {
+                table1391.AddRow(new string[] {
                             "Session duration",
                             "Mixpanel",
                             "Internal analytics",
                             "±5%",
                             "Real-time"});
 #line 69
-    testRunner.When("cross-platform analytics is tested:", ((string)(null)), table1428, "When ");
+    testRunner.When("cross-platform analytics is tested:", ((string)(null)), table1391, "When ");
 #line hidden
 #line 77
     testRunner.Then("data consistency should be maintained across platforms", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -532,50 +532,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 86
     testRunner.And("event validation ensures data quality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1429 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1392 = new TechTalk.SpecFlow.Table(new string[] {
                             "Custom Event Type",
                             "Event Schema",
                             "Validation Rules",
                             "Processing Priority",
                             "Data Enrichment"});
-                table1429.AddRow(new string[] {
+                table1392.AddRow(new string[] {
                             "PECS phase completion",
                             "Phase, success, duration",
                             "Required fields present",
                             "High",
                             "User context"});
-                table1429.AddRow(new string[] {
+                table1392.AddRow(new string[] {
                             "ABA trial recording",
                             "Trial type, accuracy",
                             "Accuracy 0-100%",
                             "High",
                             "Session metadata"});
-                table1429.AddRow(new string[] {
+                table1392.AddRow(new string[] {
                             "Assessment completion",
                             "Assessment ID, scores",
                             "Valid score ranges",
                             "Medium",
                             "Student progress"});
-                table1429.AddRow(new string[] {
+                table1392.AddRow(new string[] {
                             "Resource sharing",
                             "Share method, recipient",
                             "Valid recipient format",
                             "Low",
                             "Social graph"});
-                table1429.AddRow(new string[] {
+                table1392.AddRow(new string[] {
                             "Goal progress update",
                             "Goal ID, progress %",
                             "Progress 0-100%",
                             "High",
                             "IEP timeline"});
-                table1429.AddRow(new string[] {
+                table1392.AddRow(new string[] {
                             "Marketplace review",
                             "Rating, content length",
                             "Rating 1-5 scale",
                             "Medium",
                             "Purchase history"});
 #line 87
-    testRunner.When("custom event tracking is tested:", ((string)(null)), table1429, "When ");
+    testRunner.When("custom event tracking is tested:", ((string)(null)), table1392, "When ");
 #line hidden
 #line 95
     testRunner.Then("custom events should be tracked with proper schema", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -630,50 +630,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 103
     testRunner.And("user consent management is integrated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1430 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1393 = new TechTalk.SpecFlow.Table(new string[] {
                             "Privacy Regulation",
                             "Compliance Requirement",
                             "Implementation Method",
                             "Audit Trail",
                             "User Rights"});
-                table1430.AddRow(new string[] {
+                table1393.AddRow(new string[] {
                             "GDPR",
                             "Explicit consent",
                             "Consent management",
                             "Complete logging",
                             "Right to deletion"});
-                table1430.AddRow(new string[] {
+                table1393.AddRow(new string[] {
                             "COPPA",
                             "Parental consent",
                             "Age verification",
                             "Consent records",
                             "Data access"});
-                table1430.AddRow(new string[] {
+                table1393.AddRow(new string[] {
                             "HIPAA",
                             "PHI protection",
                             "Data anonymization",
                             "Access logs",
                             "Breach notification"});
-                table1430.AddRow(new string[] {
+                table1393.AddRow(new string[] {
                             "CCPA",
                             "Opt-out rights",
                             "Privacy controls",
                             "Request tracking",
                             "Data portability"});
-                table1430.AddRow(new string[] {
+                table1393.AddRow(new string[] {
                             "FERPA",
                             "Educational privacy",
                             "Role-based access",
                             "Activity monitoring",
                             "Parent access"});
-                table1430.AddRow(new string[] {
+                table1393.AddRow(new string[] {
                             "Internal policies",
                             "Data minimization",
                             "Collection limits",
                             "Retention policies",
                             "Regular purging"});
 #line 104
-    testRunner.When("privacy compliance scenarios are tested:", ((string)(null)), table1430, "When ");
+    testRunner.When("privacy compliance scenarios are tested:", ((string)(null)), table1393, "When ");
 #line hidden
 #line 112
     testRunner.Then("privacy compliance should be maintained across all platforms", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -728,50 +728,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 120
     testRunner.And("alerting system is configured for anomalies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1431 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1394 = new TechTalk.SpecFlow.Table(new string[] {
                             "Real-time Event",
                             "Processing Target",
                             "Alert Threshold",
                             "Response Action",
                             "Recovery Time"});
-                table1431.AddRow(new string[] {
+                table1394.AddRow(new string[] {
                             "System error spike",
                             "<30 seconds",
                             ">5% error rate",
                             "Page on-call team",
                             "<2 minutes"});
-                table1431.AddRow(new string[] {
+                table1394.AddRow(new string[] {
                             "Revenue anomaly",
                             "<1 minute",
                             "±20% from baseline",
                             "Notify finance",
                             "<5 minutes"});
-                table1431.AddRow(new string[] {
+                table1394.AddRow(new string[] {
                             "User activity drop",
                             "<2 minutes",
                             ">30% decrease",
                             "Alert operations",
                             "<10 minutes"});
-                table1431.AddRow(new string[] {
+                table1394.AddRow(new string[] {
                             "Security event",
                             "<10 seconds",
                             "Any suspicious activity",
                             "Security team",
                             "Immediate"});
-                table1431.AddRow(new string[] {
+                table1394.AddRow(new string[] {
                             "Payment failure surge",
                             "<1 minute",
                             ">10% failure rate",
                             "Payment team",
                             "<3 minutes"});
-                table1431.AddRow(new string[] {
+                table1394.AddRow(new string[] {
                             "Performance degradation",
                             "<30 seconds",
                             ">2x response time",
                             "Engineering team",
                             "<5 minutes"});
 #line 121
-    testRunner.When("real-time processing scenarios are tested:", ((string)(null)), table1431, "When ");
+    testRunner.When("real-time processing scenarios are tested:", ((string)(null)), table1394, "When ");
 #line hidden
 #line 129
     testRunner.Then("real-time processing should meet latency targets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -826,50 +826,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 138
     testRunner.And("event processing should scale automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1432 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1395 = new TechTalk.SpecFlow.Table(new string[] {
                             "Volume Scenario",
                             "Events per Second",
                             "Processing Latency",
                             "Data Loss Tolerance",
                             "Scaling Strategy"});
-                table1432.AddRow(new string[] {
+                table1395.AddRow(new string[] {
                             "Normal operations",
                             "1,000 events/sec",
                             "<2 seconds",
                             "0%",
                             "Auto-scaling"});
-                table1432.AddRow(new string[] {
+                table1395.AddRow(new string[] {
                             "Peak usage hours",
                             "5,000 events/sec",
                             "<5 seconds",
                             "<0.1%",
                             "Pre-scaling"});
-                table1432.AddRow(new string[] {
+                table1395.AddRow(new string[] {
                             "Marketing campaign",
                             "10,000 events/sec",
                             "<10 seconds",
                             "<0.5%",
                             "Burst capacity"});
-                table1432.AddRow(new string[] {
+                table1395.AddRow(new string[] {
                             "System stress test",
                             "25,000 events/sec",
                             "<30 seconds",
                             "<2%",
                             "Emergency scaling"});
-                table1432.AddRow(new string[] {
+                table1395.AddRow(new string[] {
                             "Black Friday events",
                             "50,000 events/sec",
                             "<60 seconds",
                             "<5%",
                             "Pre-provisioned"});
-                table1432.AddRow(new string[] {
+                table1395.AddRow(new string[] {
                             "Product launch surge",
                             "15,000 events/sec",
                             "<15 seconds",
                             "<1%",
                             "Dynamic scaling"});
 #line 139
-    testRunner.When("high-volume scenarios are tested:", ((string)(null)), table1432, "When ");
+    testRunner.When("high-volume scenarios are tested:", ((string)(null)), table1395, "When ");
 #line hidden
 #line 147
     testRunner.Then("high-volume event processing should maintain performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -924,50 +924,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 155
     testRunner.And("ETL processes maintain data quality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1433 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1396 = new TechTalk.SpecFlow.Table(new string[] {
                             "ETL Process",
                             "Data Source",
                             "Processing Schedule",
                             "Quality Checks",
                             "Error Handling"});
-                table1433.AddRow(new string[] {
+                table1396.AddRow(new string[] {
                             "User behavior extract",
                             "Mixpanel API",
                             "Every 15 minutes",
                             "Completeness check",
                             "Retry with backoff"});
-                table1433.AddRow(new string[] {
+                table1396.AddRow(new string[] {
                             "Product analytics load",
                             "Amplitude export",
                             "Hourly",
                             "Schema validation",
                             "Dead letter queue"});
-                table1433.AddRow(new string[] {
+                table1396.AddRow(new string[] {
                             "Business metrics sync",
                             "Looker API",
                             "Real-time",
                             "Consistency checks",
                             "Alert on failure"});
-                table1433.AddRow(new string[] {
+                table1396.AddRow(new string[] {
                             "Revenue data pipeline",
                             "Payment processors",
                             "Every 5 minutes",
                             "Reconciliation",
                             "Manual intervention"});
-                table1433.AddRow(new string[] {
+                table1396.AddRow(new string[] {
                             "Content usage transform",
                             "Platform database",
                             "Daily",
                             "Aggregation rules",
                             "Data quality alerts"});
-                table1433.AddRow(new string[] {
+                table1396.AddRow(new string[] {
                             "User profile enrichment",
                             "Multiple sources",
                             "Weekly",
                             "Identity resolution",
                             "Conflict resolution"});
 #line 156
-    testRunner.When("data warehouse integration is tested:", ((string)(null)), table1433, "When ");
+    testRunner.When("data warehouse integration is tested:", ((string)(null)), table1396, "When ");
 #line hidden
 #line 164
     testRunner.Then("ETL processes should run according to schedule", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1019,50 +1019,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 172
     testRunner.Given("analytics platforms require continuous monitoring", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1434 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1397 = new TechTalk.SpecFlow.Table(new string[] {
                             "Monitoring Aspect",
                             "Metrics Tracked",
                             "Alert Thresholds",
                             "Response Actions",
                             "SLA Requirements"});
-                table1434.AddRow(new string[] {
+                table1397.AddRow(new string[] {
                             "Data ingestion rate",
                             "Events processed/min",
                             "<80% of expected",
                             "Investigate pipeline",
                             "99.9% uptime"});
-                table1434.AddRow(new string[] {
+                table1397.AddRow(new string[] {
                             "Query performance",
                             "Response times",
                             ">10 second queries",
                             "Optimize queries",
                             "<5 sec average"});
-                table1434.AddRow(new string[] {
+                table1397.AddRow(new string[] {
                             "Dashboard availability",
                             "Uptime percentage",
                             "<99% availability",
                             "Failover system",
                             "99.5% uptime"});
-                table1434.AddRow(new string[] {
+                table1397.AddRow(new string[] {
                             "Data freshness",
                             "Last update timestamp",
                             ">30 min delay",
                             "Pipeline alert",
                             "<15 min delay"});
-                table1434.AddRow(new string[] {
+                table1397.AddRow(new string[] {
                             "Storage utilization",
                             "Disk/memory usage",
                             ">85% capacity",
                             "Scale resources",
                             "No outages"});
-                table1434.AddRow(new string[] {
+                table1397.AddRow(new string[] {
                             "API rate limits",
                             "Request counts",
                             ">80% of limit",
                             "Throttle requests",
                             "Stay under limits"});
 #line 173
-    testRunner.When("analytics monitoring is tested:", ((string)(null)), table1434, "When ");
+    testRunner.When("analytics monitoring is tested:", ((string)(null)), table1397, "When ");
 #line hidden
 #line 181
     testRunner.Then("monitoring should provide comprehensive visibility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1114,50 +1114,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 188
     testRunner.Given("analytics data requires backup and recovery capabilities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1435 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1398 = new TechTalk.SpecFlow.Table(new string[] {
                             "Backup Type",
                             "Backup Frequency",
                             "Recovery Time Target",
                             "Data Loss Tolerance",
                             "Validation Method"});
-                table1435.AddRow(new string[] {
+                table1398.AddRow(new string[] {
                             "Incremental events",
                             "Every 15 minutes",
                             "<30 minutes",
                             "<15 minutes data",
                             "Sample verification"});
-                table1435.AddRow(new string[] {
+                table1398.AddRow(new string[] {
                             "Full dataset backup",
                             "Daily",
                             "<4 hours",
                             "<24 hours data",
                             "Complete restore"});
-                table1435.AddRow(new string[] {
+                table1398.AddRow(new string[] {
                             "Configuration backup",
                             "On change",
                             "<10 minutes",
                             "No loss acceptable",
                             "Config validation"});
-                table1435.AddRow(new string[] {
+                table1398.AddRow(new string[] {
                             "Dashboard backup",
                             "Weekly",
                             "<1 hour",
                             "1 week acceptable",
                             "Visual verification"});
-                table1435.AddRow(new string[] {
+                table1398.AddRow(new string[] {
                             "User profiles backup",
                             "Daily",
                             "<2 hours",
                             "<24 hours data",
                             "Profile validation"});
-                table1435.AddRow(new string[] {
+                table1398.AddRow(new string[] {
                             "Cross-region replication",
                             "Real-time",
                             "<5 minutes",
                             "<5 minutes data",
                             "Sync verification"});
 #line 189
-    testRunner.When("backup and recovery scenarios are tested:", ((string)(null)), table1435, "When ");
+    testRunner.When("backup and recovery scenarios are tested:", ((string)(null)), table1398, "When ");
 #line hidden
 #line 197
     testRunner.Then("backup processes should run according to schedule", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1209,50 +1209,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 205
     testRunner.Given("analytics APIs may experience failures or outages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1436 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1399 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failure Type",
                             "Error Condition",
                             "Recovery Strategy",
                             "Data Preservation",
                             "User Impact"});
-                table1436.AddRow(new string[] {
+                table1399.AddRow(new string[] {
                             "Network timeout",
                             "No response in 30s",
                             "Retry with backoff",
                             "Queue events locally",
                             "None visible"});
-                table1436.AddRow(new string[] {
+                table1399.AddRow(new string[] {
                             "Authentication failure",
                             "Invalid API key",
                             "Refresh credentials",
                             "Buffer events",
                             "Brief delay"});
-                table1436.AddRow(new string[] {
+                table1399.AddRow(new string[] {
                             "Rate limit exceeded",
                             "Too many requests",
                             "Exponential backoff",
                             "Queue and delay",
                             "Processing delay"});
-                table1436.AddRow(new string[] {
+                table1399.AddRow(new string[] {
                             "Service unavailable",
                             "503 status code",
                             "Switch to backup",
                             "Local storage",
                             "Minimal impact"});
-                table1436.AddRow(new string[] {
+                table1399.AddRow(new string[] {
                             "Invalid payload",
                             "400 bad request",
                             "Fix format and retry",
                             "Correct and resend",
                             "Event processed"});
-                table1436.AddRow(new string[] {
+                table1399.AddRow(new string[] {
                             "Quota exceeded",
                             "Monthly limit reached",
                             "Disable non-critical",
                             "Priority events only",
                             "Reduced analytics"});
 #line 206
-    testRunner.When("analytics API failure scenarios are tested:", ((string)(null)), table1436, "When ");
+    testRunner.When("analytics API failure scenarios are tested:", ((string)(null)), table1399, "When ");
 #line hidden
 #line 214
     testRunner.Then("API failures should be handled gracefully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1304,50 +1304,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 221
     testRunner.Given("analytics data quality must be maintained", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1437 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1400 = new TechTalk.SpecFlow.Table(new string[] {
                             "Quality Issue",
                             "Detection Method",
                             "Correction Strategy",
                             "Impact Assessment",
                             "Prevention Method"});
-                table1437.AddRow(new string[] {
+                table1400.AddRow(new string[] {
                             "Missing event properties",
                             "Schema validation",
                             "Default values/reject",
                             "Partial data loss",
                             "Strict validation"});
-                table1437.AddRow(new string[] {
+                table1400.AddRow(new string[] {
                             "Duplicate events",
                             "Event deduplication",
                             "Remove duplicates",
                             "Inflated metrics",
                             "Idempotency keys"});
-                table1437.AddRow(new string[] {
+                table1400.AddRow(new string[] {
                             "Timestamp inconsistency",
                             "Time validation",
                             "Adjust to server time",
                             "Temporal ordering",
                             "Time sync"});
-                table1437.AddRow(new string[] {
+                table1400.AddRow(new string[] {
                             "Invalid user IDs",
                             "ID format validation",
                             "Map to anonymous",
                             "User attribution",
                             "ID validation"});
-                table1437.AddRow(new string[] {
+                table1400.AddRow(new string[] {
                             "Metric calculation errors",
                             "Cross-validation",
                             "Recalculate metrics",
                             "Incorrect reporting",
                             "Automated checks"});
-                table1437.AddRow(new string[] {
+                table1400.AddRow(new string[] {
                             "Schema evolution issues",
                             "Version compatibility",
                             "Migrate data format",
                             "Legacy data issues",
                             "Backward compatibility"});
 #line 222
-    testRunner.When("data quality scenarios are tested:", ((string)(null)), table1437, "When ");
+    testRunner.When("data quality scenarios are tested:", ((string)(null)), table1400, "When ");
 #line hidden
 #line 230
     testRunner.Then("data quality issues should be detected automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1399,50 +1399,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 237
     testRunner.Given("analytics data contains sensitive information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1438 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1401 = new TechTalk.SpecFlow.Table(new string[] {
                             "Violation Type",
                             "Detection Method",
                             "Response Action",
                             "User Notification",
                             "Remediation"});
-                table1438.AddRow(new string[] {
+                table1401.AddRow(new string[] {
                             "PII data exposure",
                             "Automated scanning",
                             "Remove sensitive data",
                             "Immediate notice",
                             "Data purging"});
-                table1438.AddRow(new string[] {
+                table1401.AddRow(new string[] {
                             "Unauthorized access",
                             "Access monitoring",
                             "Revoke access",
                             "Security team alert",
                             "Access review"});
-                table1438.AddRow(new string[] {
+                table1401.AddRow(new string[] {
                             "Consent violations",
                             "Consent validation",
                             "Stop data collection",
                             "User notification",
                             "Consent refresh"});
-                table1438.AddRow(new string[] {
+                table1401.AddRow(new string[] {
                             "Data retention excess",
                             "Retention audits",
                             "Purge old data",
                             "Compliance team",
                             "Policy enforcement"});
-                table1438.AddRow(new string[] {
+                table1401.AddRow(new string[] {
                             "Cross-border transfer",
                             "Transfer monitoring",
                             "Block transfers",
                             "Legal team alert",
                             "Compliance review"});
-                table1438.AddRow(new string[] {
+                table1401.AddRow(new string[] {
                             "Third-party sharing",
                             "Sharing audits",
                             "Revoke sharing",
                             "Privacy team",
                             "Contract review"});
 #line 238
-    testRunner.When("privacy violation scenarios are tested:", ((string)(null)), table1438, "When ");
+    testRunner.When("privacy violation scenarios are tested:", ((string)(null)), table1401, "When ");
 #line hidden
 #line 246
     testRunner.Then("privacy violations should be detected immediately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1494,50 +1494,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 253
     testRunner.Given("analytics platforms may experience performance issues", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1439 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1402 = new TechTalk.SpecFlow.Table(new string[] {
                             "Degradation Type",
                             "Performance Impact",
                             "Mitigation Strategy",
                             "User Experience",
                             "Recovery Actions"});
-                table1439.AddRow(new string[] {
+                table1402.AddRow(new string[] {
                             "Slow query responses",
                             "Dashboard delays",
                             "Query optimization",
                             "Longer load times",
                             "Performance tuning"});
-                table1439.AddRow(new string[] {
+                table1402.AddRow(new string[] {
                             "High memory usage",
                             "System sluggishness",
                             "Memory optimization",
                             "Slower responses",
                             "Resource scaling"});
-                table1439.AddRow(new string[] {
+                table1402.AddRow(new string[] {
                             "Network congestion",
                             "Data transfer delays",
                             "Compression/batching",
                             "Delayed updates",
                             "Network optimization"});
-                table1439.AddRow(new string[] {
+                table1402.AddRow(new string[] {
                             "Storage bottlenecks",
                             "Write/read slowdowns",
                             "Storage optimization",
                             "Processing delays",
                             "Storage scaling"});
-                table1439.AddRow(new string[] {
+                table1402.AddRow(new string[] {
                             "CPU overutilization",
                             "Processing delays",
                             "Load balancing",
                             "Queued operations",
                             "Horizontal scaling"});
-                table1439.AddRow(new string[] {
+                table1402.AddRow(new string[] {
                             "Database locks",
                             "Query timeouts",
                             "Query optimization",
                             "Failed operations",
                             "Lock optimization"});
 #line 254
-    testRunner.When("performance degradation scenarios are tested:", ((string)(null)), table1439, "When ");
+    testRunner.When("performance degradation scenarios are tested:", ((string)(null)), table1402, "When ");
 #line hidden
 #line 262
     testRunner.Then("performance degradation should be detected early", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

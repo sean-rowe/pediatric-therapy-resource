@@ -140,50 +140,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 17
     testRunner.And("S3 bucket structure is optimized for therapy content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1530 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1493 = new TechTalk.SpecFlow.Table(new string[] {
                             "Storage Type",
                             "File Categories",
                             "Access Patterns",
                             "Security Level",
                             "Performance Target"});
-                table1530.AddRow(new string[] {
+                table1493.AddRow(new string[] {
                             "Therapy resources",
                             "PDFs, images, videos",
                             "Frequent read access",
                             "Encrypted at rest",
                             "<500ms retrieval"});
-                table1530.AddRow(new string[] {
+                table1493.AddRow(new string[] {
                             "User-generated content",
                             "Uploads, recordings",
                             "Write-heavy",
                             "User-scoped access",
                             "<2s upload"});
-                table1530.AddRow(new string[] {
+                table1493.AddRow(new string[] {
                             "Assessment data",
                             "Forms, results",
                             "Occasional access",
                             "HIPAA compliant",
                             "<1s retrieval"});
-                table1530.AddRow(new string[] {
+                table1493.AddRow(new string[] {
                             "Backup archives",
                             "System backups",
                             "Rare access",
                             "Multi-region",
                             "<10s retrieval"});
-                table1530.AddRow(new string[] {
+                table1493.AddRow(new string[] {
                             "Temporary files",
                             "Processing intermediates",
                             "Short-lived",
                             "Auto-deletion",
                             "<100ms operations"});
-                table1530.AddRow(new string[] {
+                table1493.AddRow(new string[] {
                             "Static assets",
                             "CSS, JS, fonts",
                             "High-frequency read",
                             "Public CDN cached",
                             "<50ms global"});
 #line 18
-    testRunner.When("AWS S3 integration is tested across storage scenarios:", ((string)(null)), table1530, "When ");
+    testRunner.When("AWS S3 integration is tested across storage scenarios:", ((string)(null)), table1493, "When ");
 #line hidden
 #line 26
     testRunner.Then("AWS S3 should handle all storage types efficiently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -238,50 +238,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 34
     testRunner.And("automatic optimization pipelines are active", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1531 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1494 = new TechTalk.SpecFlow.Table(new string[] {
                             "Media Type",
                             "Transformation Pipeline",
                             "Quality Settings",
                             "Delivery Format",
                             "Processing Time"});
-                table1531.AddRow(new string[] {
+                table1494.AddRow(new string[] {
                             "Therapy worksheet images",
                             "Resize, compress, watermark",
                             "High quality 90%",
                             "WebP with PNG fallback",
                             "<5 seconds"});
-                table1531.AddRow(new string[] {
+                table1494.AddRow(new string[] {
                             "Video demonstrations",
                             "Transcode, thumbnail gen",
                             "Adaptive bitrate",
                             "MP4 + HLS streams",
                             "<2 minutes"});
-                table1531.AddRow(new string[] {
+                table1494.AddRow(new string[] {
                             "User profile photos",
                             "Crop, resize, moderate",
                             "Standard quality 80%",
                             "WebP with JPEG fallback",
                             "<3 seconds"});
-                table1531.AddRow(new string[] {
+                table1494.AddRow(new string[] {
                             "Assessment screenshots",
                             "OCR extract, archive",
                             "Lossless quality",
                             "Original + OCR text",
                             "<10 seconds"});
-                table1531.AddRow(new string[] {
+                table1494.AddRow(new string[] {
                             "Exercise illustrations",
                             "Vector optimization",
                             "High quality 95%",
                             "SVG + PNG variants",
                             "<2 seconds"});
-                table1531.AddRow(new string[] {
+                table1494.AddRow(new string[] {
                             "Marketing assets",
                             "Brand overlay, resize",
                             "Maximum quality 100%",
                             "Multiple formats",
                             "<5 seconds"});
 #line 35
-    testRunner.When("Cloudinary integration is tested:", ((string)(null)), table1531, "When ");
+    testRunner.When("Cloudinary integration is tested:", ((string)(null)), table1494, "When ");
 #line hidden
 #line 43
     testRunner.Then("Cloudinary should optimize all media types effectively", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -336,50 +336,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 51
     testRunner.And("automated workflows handle content validation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1532 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1495 = new TechTalk.SpecFlow.Table(new string[] {
                             "Processing Type",
                             "Input Formats",
                             "Validation Checks",
                             "Output Formats",
                             "Quality Assurance"});
-                table1532.AddRow(new string[] {
+                table1495.AddRow(new string[] {
                             "Document processing",
                             "PDF, DOC, DOCX",
                             "Virus scan, content",
                             "PDF/A, HTML, images",
                             "Clinical review"});
-                table1532.AddRow(new string[] {
+                table1495.AddRow(new string[] {
                             "Image processing",
                             "JPEG, PNG, GIF, TIFF",
                             "Content moderation",
                             "WebP, AVIF, thumbnails",
                             "Automated approval"});
-                table1532.AddRow(new string[] {
+                table1495.AddRow(new string[] {
                             "Video processing",
                             "MP4, MOV, AVI, WMV",
                             "Content analysis",
                             "MP4, WebM, thumbnails",
                             "Manual review"});
-                table1532.AddRow(new string[] {
+                table1495.AddRow(new string[] {
                             "Audio processing",
                             "MP3, WAV, M4A, FLAC",
                             "Speech recognition",
                             "MP3, OGG, transcripts",
                             "Accuracy validation"});
-                table1532.AddRow(new string[] {
+                table1495.AddRow(new string[] {
                             "Archive processing",
                             "ZIP, RAR, 7Z, TAR",
                             "Security scan",
                             "Extracted files",
                             "Virus detection"});
-                table1532.AddRow(new string[] {
+                table1495.AddRow(new string[] {
                             "Spreadsheet processing",
                             "XLS, XLSX, CSV, ODS",
                             "Data validation",
                             "CSV, JSON, charts",
                             "Schema compliance"});
 #line 52
-    testRunner.When("file processing scenarios are tested:", ((string)(null)), table1532, "When ");
+    testRunner.When("file processing scenarios are tested:", ((string)(null)), table1495, "When ");
 #line hidden
 #line 60
     testRunner.Then("file processing should handle all supported formats", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -434,50 +434,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 68
     testRunner.And("permissions are integrated with platform roles", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1533 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1496 = new TechTalk.SpecFlow.Table(new string[] {
                             "User Role",
                             "Access Permissions",
                             "File Categories",
                             "Operation Limits",
                             "Audit Requirements"});
-                table1533.AddRow(new string[] {
+                table1496.AddRow(new string[] {
                             "Student",
                             "Read own assignments",
                             "Student materials",
                             "Download only",
                             "Access logging"});
-                table1533.AddRow(new string[] {
+                table1496.AddRow(new string[] {
                             "Parent",
                             "Read child\'s resources",
                             "Child-specific",
                             "View and download",
                             "Access timestamps"});
-                table1533.AddRow(new string[] {
+                table1496.AddRow(new string[] {
                             "Therapist",
                             "Read/write therapy files",
                             "Caseload resources",
                             "Full CRUD access",
                             "Action audit trail"});
-                table1533.AddRow(new string[] {
+                table1496.AddRow(new string[] {
                             "Admin",
                             "Full platform access",
                             "All file categories",
                             "Administrative ops",
                             "Complete audit"});
-                table1533.AddRow(new string[] {
+                table1496.AddRow(new string[] {
                             "Content Creator",
                             "Upload/manage content",
                             "Own creations",
                             "Create, update, delete",
                             "Creation tracking"});
-                table1533.AddRow(new string[] {
+                table1496.AddRow(new string[] {
                             "Guest User",
                             "Read public resources",
                             "Public materials",
                             "View only",
                             "Anonymous logging"});
 #line 69
-    testRunner.When("storage access control is tested:", ((string)(null)), table1533, "When ");
+    testRunner.When("storage access control is tested:", ((string)(null)), table1496, "When ");
 #line hidden
 #line 77
     testRunner.Then("access permissions should be enforced correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -532,50 +532,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 86
     testRunner.And("cache strategies are optimized for content types", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1534 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1497 = new TechTalk.SpecFlow.Table(new string[] {
                             "Content Type",
                             "Cache Strategy",
                             "Geographic Distribution",
                             "Cache TTL",
                             "Performance Target"});
-                table1534.AddRow(new string[] {
+                table1497.AddRow(new string[] {
                             "Static therapy resources",
                             "Long-term cache",
                             "Global edge locations",
                             "30 days",
                             "<100ms worldwide"});
-                table1534.AddRow(new string[] {
+                table1497.AddRow(new string[] {
                             "Dynamic user content",
                             "Short-term cache",
                             "Regional distribution",
                             "1 hour",
                             "<300ms regional"});
-                table1534.AddRow(new string[] {
+                table1497.AddRow(new string[] {
                             "Video streaming",
                             "Adaptive cache",
                             "Popular content cached",
                             "Variable by popularity",
                             "<500ms start time"});
-                table1534.AddRow(new string[] {
+                table1497.AddRow(new string[] {
                             "User-generated uploads",
                             "No cache initially",
                             "Origin only",
                             "Immediate invalidation",
                             "<1s upload"});
-                table1534.AddRow(new string[] {
+                table1497.AddRow(new string[] {
                             "API responses",
                             "Smart cache",
                             "Regional caching",
                             "5 minutes",
                             "<200ms API calls"});
-                table1534.AddRow(new string[] {
+                table1497.AddRow(new string[] {
                             "Large file downloads",
                             "Progressive delivery",
                             "Multi-region mirrors",
                             "7 days",
                             "Resume capability"});
 #line 87
-    testRunner.When("CDN delivery is tested:", ((string)(null)), table1534, "When ");
+    testRunner.When("CDN delivery is tested:", ((string)(null)), table1497, "When ");
 #line hidden
 #line 95
     testRunner.Then("CDN should deliver content with optimal performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -630,50 +630,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 103
     testRunner.And("disaster recovery procedures are automated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1535 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1498 = new TechTalk.SpecFlow.Table(new string[] {
                             "Backup Type",
                             "Backup Frequency",
                             "Recovery Time Objective",
                             "Recovery Point Objective",
                             "Validation Method"});
-                table1535.AddRow(new string[] {
+                table1498.AddRow(new string[] {
                             "Critical therapy data",
                             "Real-time replication",
                             "RTO: <15 minutes",
                             "RPO: <5 minutes",
                             "Automated testing"});
-                table1535.AddRow(new string[] {
+                table1498.AddRow(new string[] {
                             "User-generated content",
                             "Hourly incremental",
                             "RTO: <2 hours",
                             "RPO: <1 hour",
                             "Sample verification"});
-                table1535.AddRow(new string[] {
+                table1498.AddRow(new string[] {
                             "System configuration",
                             "Daily full backup",
                             "RTO: <4 hours",
                             "RPO: <24 hours",
                             "Config validation"});
-                table1535.AddRow(new string[] {
+                table1498.AddRow(new string[] {
                             "Historical archives",
                             "Weekly backup",
                             "RTO: <24 hours",
                             "RPO: <7 days",
                             "Integrity checks"});
-                table1535.AddRow(new string[] {
+                table1498.AddRow(new string[] {
                             "Database backups",
                             "Continuous replication",
                             "RTO: <5 minutes",
                             "RPO: <1 minute",
                             "Point-in-time recovery"});
-                table1535.AddRow(new string[] {
+                table1498.AddRow(new string[] {
                             "Code and assets",
                             "Version-controlled",
                             "RTO: <1 hour",
                             "RPO: <commit frequency",
                             "Git verification"});
 #line 104
-    testRunner.When("backup and recovery scenarios are tested:", ((string)(null)), table1535, "When ");
+    testRunner.When("backup and recovery scenarios are tested:", ((string)(null)), table1498, "When ");
 #line hidden
 #line 112
     testRunner.Then("backup procedures should run according to schedule", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -728,50 +728,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 120
     testRunner.And("compliance monitoring is continuous", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1536 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1499 = new TechTalk.SpecFlow.Table(new string[] {
                             "Regulation",
                             "Compliance Requirement",
                             "Implementation Method",
                             "Monitoring Strategy",
                             "Audit Preparation"});
-                table1536.AddRow(new string[] {
+                table1499.AddRow(new string[] {
                             "HIPAA",
                             "PHI encryption at rest",
                             "AES-256 encryption",
                             "Continuous scanning",
                             "Access logs ready"});
-                table1536.AddRow(new string[] {
+                table1499.AddRow(new string[] {
                             "FERPA",
                             "Student data protection",
                             "Role-based access",
                             "Permission auditing",
                             "Educational records"});
-                table1536.AddRow(new string[] {
+                table1499.AddRow(new string[] {
                             "GDPR",
                             "Right to deletion",
                             "Automated purging",
                             "Deletion tracking",
                             "Data processing logs"});
-                table1536.AddRow(new string[] {
+                table1499.AddRow(new string[] {
                             "SOX",
                             "Financial data controls",
                             "Segregated storage",
                             "Financial audit trail",
                             "Control documentation"});
-                table1536.AddRow(new string[] {
+                table1499.AddRow(new string[] {
                             "PCI DSS",
                             "Payment data security",
                             "Tokenized storage",
                             "Security monitoring",
                             "Cardholder data logs"});
-                table1536.AddRow(new string[] {
+                table1499.AddRow(new string[] {
                             "State regulations",
                             "Local data residency",
                             "Geographic controls",
                             "Location verification",
                             "Compliance reporting"});
 #line 121
-    testRunner.When("storage compliance is tested:", ((string)(null)), table1536, "When ");
+    testRunner.When("storage compliance is tested:", ((string)(null)), table1499, "When ");
 #line hidden
 #line 129
     testRunner.Then("compliance requirements should be met automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -826,50 +826,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 137
     testRunner.And("efficiency monitoring tracks usage patterns", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1537 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1500 = new TechTalk.SpecFlow.Table(new string[] {
                             "Optimization Strategy",
                             "Target Metrics",
                             "Implementation Method",
                             "Cost Savings Target",
                             "Performance Impact"});
-                table1537.AddRow(new string[] {
+                table1500.AddRow(new string[] {
                             "Intelligent tiering",
                             "Access frequency",
                             "Automated lifecycle",
                             "30% storage cost",
                             "<5% latency increase"});
-                table1537.AddRow(new string[] {
+                table1500.AddRow(new string[] {
                             "Compression algorithms",
                             "File size reduction",
                             "Content-aware compress",
                             "50% bandwidth savings",
                             "<2% CPU overhead"});
-                table1537.AddRow(new string[] {
+                table1500.AddRow(new string[] {
                             "Deduplication",
                             "Duplicate content",
                             "Hash-based detection",
                             "20% storage savings",
                             "No performance impact"});
-                table1537.AddRow(new string[] {
+                table1500.AddRow(new string[] {
                             "Archive management",
                             "Age-based archival",
                             "Policy-driven moves",
                             "60% long-term savings",
                             "Slower archive access"});
-                table1537.AddRow(new string[] {
+                table1500.AddRow(new string[] {
                             "CDN cache optimization",
                             "Cache hit ratios",
                             "Smart cache policies",
                             "40% bandwidth savings",
                             "Faster global access"});
-                table1537.AddRow(new string[] {
+                table1500.AddRow(new string[] {
                             "Unused file cleanup",
                             "Orphaned file detection",
                             "Automated cleanup",
                             "15% storage reclaim",
                             "No performance impact"});
 #line 138
-    testRunner.When("storage optimization is tested:", ((string)(null)), table1537, "When ");
+    testRunner.When("storage optimization is tested:", ((string)(null)), table1500, "When ");
 #line hidden
 #line 146
     testRunner.Then("optimization should achieve cost savings targets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -924,50 +924,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 155
     testRunner.And("performance targets must be maintained", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1538 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1501 = new TechTalk.SpecFlow.Table(new string[] {
                             "Load Scenario",
                             "Concurrent Operations",
                             "Throughput Target",
                             "Latency Target",
                             "Success Rate Target"});
-                table1538.AddRow(new string[] {
+                table1501.AddRow(new string[] {
                             "Normal operations",
                             "1,000 ops/second",
                             "100 MB/s transfer",
                             "<200ms average",
                             ">99.9%"});
-                table1538.AddRow(new string[] {
+                table1501.AddRow(new string[] {
                             "Peak usage hours",
                             "5,000 ops/second",
                             "500 MB/s transfer",
                             "<500ms average",
                             ">99.5%"});
-                table1538.AddRow(new string[] {
+                table1501.AddRow(new string[] {
                             "Bulk upload events",
                             "10,000 ops/second",
                             "1 GB/s transfer",
                             "<1s average",
                             ">99%"});
-                table1538.AddRow(new string[] {
+                table1501.AddRow(new string[] {
                             "Backup operations",
                             "2,000 ops/second",
                             "200 MB/s sustained",
                             "<1s average",
                             ">99.8%"});
-                table1538.AddRow(new string[] {
+                table1501.AddRow(new string[] {
                             "Disaster recovery",
                             "25,000 ops/second",
                             "2 GB/s burst",
                             "<2s average",
                             ">98%"});
-                table1538.AddRow(new string[] {
+                table1501.AddRow(new string[] {
                             "Archive retrieval",
                             "500 ops/second",
                             "50 MB/s sustained",
                             "<5s average",
                             ">99.9%"});
 #line 156
-    testRunner.When("storage performance is tested:", ((string)(null)), table1538, "When ");
+    testRunner.When("storage performance is tested:", ((string)(null)), table1501, "When ");
 #line hidden
 #line 164
     testRunner.Then("storage should handle all load scenarios effectively", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1019,50 +1019,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 171
     testRunner.Given("storage services require comprehensive monitoring", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1539 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1502 = new TechTalk.SpecFlow.Table(new string[] {
                             "Monitoring Aspect",
                             "Metrics Tracked",
                             "Alert Thresholds",
                             "Response Actions",
                             "SLA Requirements"});
-                table1539.AddRow(new string[] {
+                table1502.AddRow(new string[] {
                             "Storage capacity",
                             "Used vs available space",
                             ">80% capacity",
                             "Auto-expansion",
                             "Unlimited growth"});
-                table1539.AddRow(new string[] {
+                table1502.AddRow(new string[] {
                             "Performance metrics",
                             "Latency, throughput",
                             ">2x baseline",
                             "Performance tuning",
                             "<500ms average"});
-                table1539.AddRow(new string[] {
+                table1502.AddRow(new string[] {
                             "Error rates",
                             "Failed operations",
                             ">1% error rate",
                             "Investigation",
                             "<0.5% error rate"});
-                table1539.AddRow(new string[] {
+                table1502.AddRow(new string[] {
                             "Security events",
                             "Unauthorized access",
                             "Any security breach",
                             "Immediate lockdown",
                             "Zero tolerance"});
-                table1539.AddRow(new string[] {
+                table1502.AddRow(new string[] {
                             "Cost tracking",
                             "Spending vs budget",
                             ">110% of budget",
                             "Cost optimization",
                             "Budget compliance"});
-                table1539.AddRow(new string[] {
+                table1502.AddRow(new string[] {
                             "Compliance status",
                             "Regulation adherence",
                             "Any violation",
                             "Immediate remediation",
                             "100% compliance"});
 #line 172
-    testRunner.When("storage monitoring is tested:", ((string)(null)), table1539, "When ");
+    testRunner.When("storage monitoring is tested:", ((string)(null)), table1502, "When ");
 #line hidden
 #line 180
     testRunner.Then("monitoring should provide comprehensive visibility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1114,50 +1114,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 187
     testRunner.Given("storage must scale automatically with demand", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1540 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1503 = new TechTalk.SpecFlow.Table(new string[] {
                             "Scaling Trigger",
                             "Scaling Response",
                             "Scale-up Time",
                             "Scale-down Time",
                             "Resource Efficiency"});
-                table1540.AddRow(new string[] {
+                table1503.AddRow(new string[] {
                             "Capacity threshold",
                             "Add storage nodes",
                             "<5 minutes",
                             "<15 minutes",
                             ">90% utilization"});
-                table1540.AddRow(new string[] {
+                table1503.AddRow(new string[] {
                             "Performance degradation",
                             "Increase IOPS",
                             "<2 minutes",
                             "<10 minutes",
                             "Performance restored"});
-                table1540.AddRow(new string[] {
+                table1503.AddRow(new string[] {
                             "High request volume",
                             "Add processing power",
                             "<3 minutes",
                             "<5 minutes",
                             "Load distributed"});
-                table1540.AddRow(new string[] {
+                table1503.AddRow(new string[] {
                             "Geographic demand",
                             "Deploy edge storage",
                             "<10 minutes",
                             "<30 minutes",
                             "Regional optimization"});
-                table1540.AddRow(new string[] {
+                table1503.AddRow(new string[] {
                             "Disaster scenarios",
                             "Activate hot standby",
                             "<1 minute",
                             "Manual control",
                             "Full redundancy"});
-                table1540.AddRow(new string[] {
+                table1503.AddRow(new string[] {
                             "Cost optimization",
                             "Tier storage classes",
                             "<1 hour",
                             "<2 hours",
                             "Cost savings achieved"});
 #line 188
-    testRunner.When("storage scaling scenarios are tested:", ((string)(null)), table1540, "When ");
+    testRunner.When("storage scaling scenarios are tested:", ((string)(null)), table1503, "When ");
 #line hidden
 #line 196
     testRunner.Then("scaling should be automatic and responsive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1209,50 +1209,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 204
     testRunner.Given("storage may experience corruption or integrity issues", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1541 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1504 = new TechTalk.SpecFlow.Table(new string[] {
                             "Corruption Type",
                             "Detection Method",
                             "Recovery Strategy",
                             "Data Loss Tolerance",
                             "Recovery Time"});
-                table1541.AddRow(new string[] {
+                table1504.AddRow(new string[] {
                             "File corruption",
                             "Checksum validation",
                             "Restore from backup",
                             "Zero data loss",
                             "<30 minutes"});
-                table1541.AddRow(new string[] {
+                table1504.AddRow(new string[] {
                             "Metadata corruption",
                             "Consistency checks",
                             "Rebuild from replicas",
                             "Zero metadata loss",
                             "<15 minutes"});
-                table1541.AddRow(new string[] {
+                table1504.AddRow(new string[] {
                             "Index corruption",
                             "Index validation",
                             "Rebuild indexes",
                             "No data loss",
                             "<1 hour"});
-                table1541.AddRow(new string[] {
+                table1504.AddRow(new string[] {
                             "Bit rot detection",
                             "Periodic verification",
                             "Auto-repair from ECC",
                             "Auto-correction",
                             "Immediate"});
-                table1541.AddRow(new string[] {
+                table1504.AddRow(new string[] {
                             "Ransomware attack",
                             "Behavioral detection",
                             "Isolate and restore",
                             "<1 hour data loss",
                             "<4 hours"});
-                table1541.AddRow(new string[] {
+                table1504.AddRow(new string[] {
                             "Hardware failure",
                             "RAID monitoring",
                             "Hot swap replacement",
                             "Zero data loss",
                             "<10 minutes"});
 #line 205
-    testRunner.When("data corruption scenarios are tested:", ((string)(null)), table1541, "When ");
+    testRunner.When("data corruption scenarios are tested:", ((string)(null)), table1504, "When ");
 #line hidden
 #line 213
     testRunner.Then("corruption should be detected automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1304,50 +1304,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 220
     testRunner.Given("storage operations depend on network connectivity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1542 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1505 = new TechTalk.SpecFlow.Table(new string[] {
                             "Network Issue",
                             "Failure Impact",
                             "Mitigation Strategy",
                             "User Experience",
                             "Recovery Method"});
-                table1542.AddRow(new string[] {
+                table1505.AddRow(new string[] {
                             "Intermittent connectivity",
                             "Partial operation failure",
                             "Retry with backoff",
                             "Temporary slowdowns",
                             "Automatic reconnection"});
-                table1542.AddRow(new string[] {
+                table1505.AddRow(new string[] {
                             "Complete network outage",
                             "All operations blocked",
                             "Local cache fallback",
                             "Read-only mode",
                             "Queue operations"});
-                table1542.AddRow(new string[] {
+                table1505.AddRow(new string[] {
                             "High latency network",
                             "Slow operations",
                             "Compression + batching",
                             "Slower responses",
                             "Network optimization"});
-                table1542.AddRow(new string[] {
+                table1505.AddRow(new string[] {
                             "Bandwidth limitations",
                             "Transfer rate reduced",
                             "Priority queuing",
                             "Large file delays",
                             "Adaptive quality"});
-                table1542.AddRow(new string[] {
+                table1505.AddRow(new string[] {
                             "DNS resolution failure",
                             "Service unreachable",
                             "IP address fallback",
                             "Brief interruption",
                             "DNS cache refresh"});
-                table1542.AddRow(new string[] {
+                table1505.AddRow(new string[] {
                             "SSL/TLS certificate issues",
                             "Secure connection fails",
                             "Certificate renewal",
                             "Security warnings",
                             "Emergency certificates"});
 #line 221
-    testRunner.When("network failure scenarios are tested:", ((string)(null)), table1542, "When ");
+    testRunner.When("network failure scenarios are tested:", ((string)(null)), table1505, "When ");
 #line hidden
 #line 229
     testRunner.Then("network failures should be handled gracefully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1399,50 +1399,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 236
     testRunner.Given("storage services have quotas and rate limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1543 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1506 = new TechTalk.SpecFlow.Table(new string[] {
                             "Limit Type",
                             "Limit Threshold",
                             "Response Strategy",
                             "User Communication",
                             "Escalation Process"});
-                table1543.AddRow(new string[] {
+                table1506.AddRow(new string[] {
                             "Storage quota exceeded",
                             "95% of allocated space",
                             "Warn and cleanup",
                             "Quota warning",
                             "Auto-expansion"});
-                table1543.AddRow(new string[] {
+                table1506.AddRow(new string[] {
                             "API rate limit hit",
                             "Requests per second",
                             "Queue and throttle",
                             "Processing delay",
                             "Rate limit increase"});
-                table1543.AddRow(new string[] {
+                table1506.AddRow(new string[] {
                             "Bandwidth limit reached",
                             "Monthly transfer quota",
                             "Throttle large files",
                             "Speed limitation",
                             "Bandwidth upgrade"});
-                table1543.AddRow(new string[] {
+                table1506.AddRow(new string[] {
                             "File count limit",
                             "Maximum files per user",
                             "Archive old files",
                             "File limit notice",
                             "Limit increase"});
-                table1543.AddRow(new string[] {
+                table1506.AddRow(new string[] {
                             "Upload size exceeded",
                             "Maximum file size",
                             "Reject with message",
                             "Size limit error",
                             "Manual review"});
-                table1543.AddRow(new string[] {
+                table1506.AddRow(new string[] {
                             "Concurrent operation limit",
                             "Simultaneous operations",
                             "Queue additional ops",
                             "Wait time message",
                             "Priority processing"});
 #line 237
-    testRunner.When("quota limit scenarios are tested:", ((string)(null)), table1543, "When ");
+    testRunner.When("quota limit scenarios are tested:", ((string)(null)), table1506, "When ");
 #line hidden
 #line 245
     testRunner.Then("quota limits should be enforced gracefully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1494,50 +1494,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 252
     testRunner.Given("storage contains sensitive therapy and user data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1544 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1507 = new TechTalk.SpecFlow.Table(new string[] {
                             "Security Incident",
                             "Incident Detection",
                             "Response Protocol",
                             "Containment Actions",
                             "Recovery Procedures"});
-                table1544.AddRow(new string[] {
+                table1507.AddRow(new string[] {
                             "Unauthorized access",
                             "Access pattern analysis",
                             "Immediate account lock",
                             "Revoke access tokens",
                             "Full access audit"});
-                table1544.AddRow(new string[] {
+                table1507.AddRow(new string[] {
                             "Data exfiltration",
                             "Transfer monitoring",
                             "Block suspicious IPs",
                             "Forensic investigation",
                             "Breach notification"});
-                table1544.AddRow(new string[] {
+                table1507.AddRow(new string[] {
                             "Malware infection",
                             "File scanning",
                             "Quarantine files",
                             "System isolation",
                             "Clean and restore"});
-                table1544.AddRow(new string[] {
+                table1507.AddRow(new string[] {
                             "Insider threat",
                             "Behavior analytics",
                             "Restrict privileges",
                             "HR investigation",
                             "Access review"});
-                table1544.AddRow(new string[] {
+                table1507.AddRow(new string[] {
                             "API key compromise",
                             "Usage anomaly detection",
                             "Rotate keys",
                             "Invalidate old keys",
                             "Security assessment"});
-                table1544.AddRow(new string[] {
+                table1507.AddRow(new string[] {
                             "Encryption bypass",
                             "Security monitoring",
                             "Emergency lockdown",
                             "Secure all data",
                             "Security hardening"});
 #line 253
-    testRunner.When("security incident scenarios are tested:", ((string)(null)), table1544, "When ");
+    testRunner.When("security incident scenarios are tested:", ((string)(null)), table1507, "When ");
 #line hidden
 #line 261
     testRunner.Then("security incidents should be detected rapidly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1589,50 +1589,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 268
     testRunner.Given("storage performance may degrade under various conditions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1545 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1508 = new TechTalk.SpecFlow.Table(new string[] {
                             "Degradation Cause",
                             "Performance Impact",
                             "Detection Method",
                             "Mitigation Strategy",
                             "Recovery Timeline"});
-                table1545.AddRow(new string[] {
+                table1508.AddRow(new string[] {
                             "High concurrent load",
                             "Increased latency",
                             "Latency monitoring",
                             "Load balancing",
                             "<5 minutes"});
-                table1545.AddRow(new string[] {
+                table1508.AddRow(new string[] {
                             "Storage node failure",
                             "Reduced throughput",
                             "Health checks",
                             "Traffic rerouting",
                             "<10 minutes"});
-                table1545.AddRow(new string[] {
+                table1508.AddRow(new string[] {
                             "Network congestion",
                             "Slow transfers",
                             "Bandwidth monitoring",
                             "Alternative routes",
                             "<15 minutes"});
-                table1545.AddRow(new string[] {
+                table1508.AddRow(new string[] {
                             "Disk space exhaustion",
                             "Write operation failures",
                             "Capacity monitoring",
                             "Emergency cleanup",
                             "<30 minutes"});
-                table1545.AddRow(new string[] {
+                table1508.AddRow(new string[] {
                             "Memory pressure",
                             "Cache misses",
                             "Memory monitoring",
                             "Memory optimization",
                             "<20 minutes"});
-                table1545.AddRow(new string[] {
+                table1508.AddRow(new string[] {
                             "CPU throttling",
                             "Processing delays",
                             "CPU monitoring",
                             "Resource scaling",
                             "<10 minutes"});
 #line 269
-    testRunner.When("performance degradation scenarios are tested:", ((string)(null)), table1545, "When ");
+    testRunner.When("performance degradation scenarios are tested:", ((string)(null)), table1508, "When ");
 #line hidden
 #line 277
     testRunner.Then("performance issues should be detected early", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

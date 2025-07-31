@@ -14,7 +14,7 @@ public class ResourceShare
     public DateTime ExpiresAt { get; set; }
     public DateTime? AccessedAt { get; set; }
     public bool IsActive { get; set; }
-    
+
     // Navigation properties
     public virtual Resource Resource { get; set; } = null!;
     public virtual User SharedByUser { get; set; } = null!;

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using UPTRMS.Api.Models.Domain;
 using UPTRMS.Api.Models.DTOs;
 using UPTRMS.Api.Repositories;
+using UPTRMS.Api.Services;
 using System.Security.Claims;
 
 namespace UPTRMS.Api.Controllers;
@@ -15,15 +16,21 @@ public class ContentManagementController : ControllerBase
     private readonly IResourceRepository _resourceRepository;
     private readonly IUserRepository _userRepository;
     private readonly ILogger<ContentManagementController> _logger;
+    private readonly IEmailService _emailService;
+    private readonly IConfiguration _configuration;
 
     public ContentManagementController(
         IResourceRepository resourceRepository,
         IUserRepository userRepository,
-        ILogger<ContentManagementController> logger)
+        ILogger<ContentManagementController> logger,
+        IEmailService emailService,
+        IConfiguration configuration)
     {
         _resourceRepository = resourceRepository;
         _userRepository = userRepository;
         _logger = logger;
+        _emailService = emailService;
+        _configuration = configuration;
     }
 
     /// <summary>
@@ -34,10 +41,10 @@ public class ContentManagementController : ControllerBase
     {
         try
         {
-            var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "");
-            
+            Guid userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "");
+
             // Create new resource with metadata provided by content creator
-            var resource = new Resource
+            Resource resource = new Resource
             {
                 Title = request.Title,
                 Description = request.Description,
@@ -50,18 +57,18 @@ public class ContentManagementController : ControllerBase
                 EvidenceLevel = request.EvidenceLevel,
                 IsPublished = false // Will be published after review approval
             };
-            
+
             // Set JSON fields using helper methods
-            var skillAreasDict = new Dictionary<string, object> { ["areas"] = request.SkillAreas };
+            Dictionary<string, object> skillAreasDict = new Dictionary<string, object> { ["areas"] = request.SkillAreas };
             resource.SetSkillAreas(skillAreasDict);
-            
-            var gradeLevels = request.GradeLevels.Select(ParseGradeLevel).Where(g => g.HasValue).Select(g => g!.Value).ToList();
+
+            List<int> gradeLevels = request.GradeLevels.Select(ParseGradeLevel).Where(g => g.HasValue).Select(g => g!.Value).ToList();
             resource.SetGradeLevels(gradeLevels);
 
             // Save the resource
-            var createdResource = await _resourceRepository.AddAsync(resource);
-            
-            _logger.LogInformation("Content creator {UserId} uploaded resource {ResourceId} for review", 
+            Resource createdResource = await _resourceRepository.AddAsync(resource);
+
+            _logger.LogInformation("Content creator {UserId} uploaded resource {ResourceId} for review",
                 userId, createdResource.ResourceId);
 
             return Ok(new ResourceUploadResponse
@@ -87,9 +94,9 @@ public class ContentManagementController : ControllerBase
     {
         try
         {
-            var resources = await _resourceRepository.GetByReviewStatusAsync(ClinicalReviewStatus.Pending);
-            var reviewDtos = resources.Select(r => MapToReviewDto(r)).ToList();
-            
+            List<Resource> resources = (await _resourceRepository.GetByReviewStatusAsync(ClinicalReviewStatus.Pending)).ToList();
+            List<ResourceReviewDto> reviewDtos = resources.Select(r => MapToReviewDto(r)).ToList();
+
             _logger.LogInformation("Retrieved {Count} resources pending review", reviewDtos.Count);
             return Ok(reviewDtos);
         }
@@ -108,32 +115,32 @@ public class ContentManagementController : ControllerBase
     {
         try
         {
-            var resource = await _resourceRepository.GetByIdAsync(request.ResourceId);
+            Resource? resource = await _resourceRepository.GetByIdAsync(request.ResourceId);
             if (resource == null)
             {
                 return NotFound(new { error = "Resource not found" });
             }
 
-            var reviewer = await _userRepository.GetByIdAsync(request.ReviewerId);
+            User? reviewer = await _userRepository.GetByIdAsync(request.ReviewerId);
             if (reviewer == null)
             {
                 return NotFound(new { error = "Reviewer not found" });
             }
 
             // Create review assignment record
-            var assignment = new ReviewAssignment
+            ReviewAssignment assignment = new ReviewAssignment
             {
                 ResourceId = request.ResourceId,
                 ReviewerId = request.ReviewerId,
                 AssignedAt = DateTime.UtcNow,
-                AssignedBy = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? ""),
-                Status = ReviewAssignmentStatus.Assigned
+                AssignedByUserId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? ""),
+                Status = ReviewAssignmentStatus.Pending
             };
 
             // Store assignment (would need to implement this in repository)
             await _resourceRepository.AssignReviewerAsync(assignment);
 
-            _logger.LogInformation("Assigned resource {ResourceId} to reviewer {ReviewerId}", 
+            _logger.LogInformation("Assigned resource {ResourceId} to reviewer {ReviewerId}",
                 request.ResourceId, request.ReviewerId);
 
             return Ok(new { message = "Reviewer assigned successfully" });
@@ -153,7 +160,7 @@ public class ContentManagementController : ControllerBase
     {
         try
         {
-            var resource = await _resourceRepository.GetByIdAsync(request.ResourceId);
+            Resource? resource = await _resourceRepository.GetByIdAsync(request.ResourceId);
             if (resource == null)
             {
                 return NotFound(new { error = "Resource not found" });
@@ -164,15 +171,17 @@ public class ContentManagementController : ControllerBase
             // Create review evaluation record
             var evaluation = new ReviewEvaluation
             {
+                ReviewAssignmentId = Guid.NewGuid(), // In a real implementation, this would come from an existing assignment
                 ResourceId = request.ResourceId,
                 ReviewerId = reviewerId,
                 ClinicalAccuracy = request.ClinicalAccuracy,
                 AgeAppropriateness = request.AgeAppropriateness,
-                SafetyCompliance = request.SafetyCompliance,
-                TherapeuticValue = request.TherapeuticValue,
-                OverallApproval = request.OverallApproval,
-                Comments = request.Comments,
-                ReviewedAt = DateTime.UtcNow
+                EvidenceLevel = (request.ClinicalAccuracy + request.AgeAppropriateness + 
+                               request.SafetyCompliance + request.TherapeuticValue) / 4, // Average of all scores
+                ApprovalStatus = request.OverallApproval ? ReviewApprovalStatus.Approved : ReviewApprovalStatus.Rejected,
+                Comments = request.Comments ?? string.Empty,
+                ReviewedAt = DateTime.UtcNow,
+                CreatedAt = DateTime.UtcNow
             };
 
             // Store evaluation
@@ -183,25 +192,26 @@ public class ContentManagementController : ControllerBase
             {
                 resource.ClinicalReviewStatus = ClinicalReviewStatus.Approved;
                 resource.EvidenceLevel = DetermineEvidenceLevel(evaluation);
-                
-                _logger.LogInformation("Resource {ResourceId} approved by reviewer {ReviewerId}", 
+
+                _logger.LogInformation("Resource {ResourceId} approved by reviewer {ReviewerId}",
                     request.ResourceId, reviewerId);
             }
             else
             {
                 resource.ClinicalReviewStatus = ClinicalReviewStatus.NeedsRevision;
-                
-                _logger.LogInformation("Resource {ResourceId} needs revision per reviewer {ReviewerId}", 
+
+                _logger.LogInformation("Resource {ResourceId} needs revision per reviewer {ReviewerId}",
                     request.ResourceId, reviewerId);
             }
 
             resource.UpdatedAt = DateTime.UtcNow;
             await _resourceRepository.UpdateAsync(resource);
 
-            // TODO: Send notification to resource creator
+            // Send notification to resource creator about review outcome
             await NotifyResourceCreator(resource, evaluation);
 
-            return Ok(new { 
+            return Ok(new
+            {
                 message = "Review submitted successfully",
                 status = resource.ClinicalReviewStatus.ToString()
             });
@@ -223,7 +233,7 @@ public class ContentManagementController : ControllerBase
         {
             var reviews = await _resourceRepository.GetResourceReviewsAsync(resourceId);
             var reviewDtos = reviews.Select(r => MapToEvaluationDto(r)).ToList();
-            
+
             return Ok(reviewDtos);
         }
         catch (Exception ex)
@@ -241,7 +251,7 @@ public class ContentManagementController : ControllerBase
     {
         try
         {
-            var resource = await _resourceRepository.GetByIdAsync(request.ResourceId);
+            Resource? resource = await _resourceRepository.GetByIdAsync(request.ResourceId);
             if (resource == null)
             {
                 return NotFound(new { error = "Resource not found" });
@@ -253,15 +263,15 @@ public class ContentManagementController : ControllerBase
                 return BadRequest(new { error = "Only approved resources can be retired" });
             }
 
-            var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "");
-            
+            Guid userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "");
+
             // Update resource status to retired
             resource.ClinicalReviewStatus = ClinicalReviewStatus.Retired;
             resource.RetiredAt = DateTime.UtcNow;
             resource.RetiredBy = userId;
             resource.RetiredReason = request.Reason;
             resource.UpdatedAt = DateTime.UtcNow;
-            
+
             // Set suggested alternatives if provided
             if (request.SuggestedAlternatives != null && request.SuggestedAlternatives.Any())
             {
@@ -270,13 +280,14 @@ public class ContentManagementController : ControllerBase
 
             await _resourceRepository.UpdateAsync(resource);
 
-            // TODO: Implement user notification system
+            // Notify affected users about resource retirement
             await NotifyUsersOfRetirement(resource);
 
-            _logger.LogInformation("Resource {ResourceId} retired by admin {UserId} with reason: {Reason}", 
+            _logger.LogInformation("Resource {ResourceId} retired by admin {UserId} with reason: {Reason}",
                 request.ResourceId, userId, request.Reason);
 
-            return Ok(new { 
+            return Ok(new
+            {
                 message = "Resource retired successfully",
                 retiredAt = resource.RetiredAt,
                 status = "Retired",
@@ -298,14 +309,14 @@ public class ContentManagementController : ControllerBase
     {
         try
         {
-            var resource = await _resourceRepository.GetByIdAsync(request.ResourceId);
+            Resource? resource = await _resourceRepository.GetByIdAsync(request.ResourceId);
             if (resource == null)
             {
                 return NotFound(new { error = "Resource not found" });
             }
 
-            var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "");
-            
+            Guid userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "");
+
             // Perform copyright checks
             var imageResults = await CheckImageCopyright(request.ImageUrls);
             var textResults = await CheckTextCopyright(request.TextContent);
@@ -362,8 +373,8 @@ public class ContentManagementController : ControllerBase
     {
         try
         {
-            var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "");
-            
+            Guid userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "");
+
             // Validate CSV metadata file
             var csvValidationResult = await ValidateCsvMetadata(request.MetadataCsv);
             if (!csvValidationResult.IsValid)
@@ -372,7 +383,7 @@ public class ContentManagementController : ControllerBase
             }
 
             // Validate ZIP file
-            var zipValidationResult = await ValidateZipFile(request.ResourcesZip);
+            var zipValidationResult = ValidateZipFile(request.ResourcesZip);
             if (!zipValidationResult.IsValid)
             {
                 return BadRequest(new { error = "Invalid ZIP file", details = zipValidationResult.Errors });
@@ -457,7 +468,7 @@ public class ContentManagementController : ControllerBase
         {
             var retiredResources = await _resourceRepository.GetByReviewStatusAsync(ClinicalReviewStatus.Retired);
             var retiredDtos = retiredResources.Select(r => MapToRetiredDto(r)).ToList();
-            
+
             return Ok(retiredDtos);
         }
         catch (Exception ex)
@@ -481,8 +492,8 @@ public class ContentManagementController : ControllerBase
                 return NotFound(new { error = "Original resource not found" });
             }
 
-            var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "");
-            
+            Guid userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "");
+
             // Verify user owns the original resource or has admin rights
             if (originalResource.CreatedByUserId != userId && !User.IsInRole("Admin"))
             {
@@ -511,7 +522,7 @@ public class ContentManagementController : ControllerBase
 
             var createdVersion = await _resourceRepository.AddAsync(newVersion);
 
-            _logger.LogInformation("Version update submitted for resource {OriginalResourceId} by user {UserId}", 
+            _logger.LogInformation("Version update submitted for resource {OriginalResourceId} by user {UserId}",
                 request.OriginalResourceId, userId);
 
             return Ok(new VersionUpdateResponse
@@ -554,7 +565,7 @@ public class ContentManagementController : ControllerBase
                 return NotFound(new { error = "Original version not found" });
             }
 
-            var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "");
+            Guid userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "");
 
             // Approve the new version
             newVersion.ClinicalReviewStatus = ClinicalReviewStatus.Approved;
@@ -574,10 +585,11 @@ public class ContentManagementController : ControllerBase
             // Notify users who downloaded the original version
             await NotifyUsersOfVersionUpdate(originalVersion.ResourceId, newVersion.ResourceId);
 
-            _logger.LogInformation("Version update approved: {NewVersionId} supersedes {OriginalVersionId}", 
+            _logger.LogInformation("Version update approved: {NewVersionId} supersedes {OriginalVersionId}",
                 newVersion.ResourceId, originalVersion.ResourceId);
 
-            return Ok(new { 
+            return Ok(new
+            {
                 message = "Version update approved successfully",
                 newVersionId = newVersion.ResourceId,
                 originalVersionId = originalVersion.ResourceId,
@@ -627,7 +639,7 @@ public class ContentManagementController : ControllerBase
         try
         {
             var stats = await _resourceRepository.GetReviewStatisticsAsync();
-            
+
             // Calculate additional metrics for quality dashboard
             var metrics = new QualityMetricsResponse
             {
@@ -636,7 +648,7 @@ public class ContentManagementController : ControllerBase
                 ResourcesInQueue = stats.ResourcesInQueue,
                 AverageReviewerWorkload = stats.ReviewerWorkload.Any() ? Math.Round(stats.ReviewerWorkload.Values.Average(), 1) : 0,
                 ReviewerWorkloadDistribution = stats.ReviewerWorkload,
-                
+
                 // Quality trends (would be calculated from historical data in real implementation)
                 QualityTrends = new QualityTrendsDto
                 {
@@ -645,13 +657,13 @@ public class ContentManagementController : ControllerBase
                     ReviewTimeImprovement = -0.3, // Negative = improvement
                     QueueSizeChange = 5 // Positive = increase
                 },
-                
+
                 // Bottleneck analysis
                 Bottlenecks = await IdentifyReviewBottlenecks(stats),
-                
+
                 // Alerts for dashboard
                 Alerts = await GenerateQualityAlerts(stats),
-                
+
                 // Target vs actual comparison
                 Targets = new QualityTargetsDto
                 {
@@ -661,8 +673,8 @@ public class ContentManagementController : ControllerBase
                     TargetMaxReviewerWorkload = 10
                 }
             };
-            
-            _logger.LogInformation("Retrieved quality metrics: {QueueSize} resources, {ApprovalRate}% approval rate", 
+
+            _logger.LogInformation("Retrieved quality metrics: {QueueSize} resources, {ApprovalRate}% approval rate",
                 metrics.ResourcesInQueue, metrics.ApprovalRatePercent);
             return Ok(metrics);
         }
@@ -676,7 +688,7 @@ public class ContentManagementController : ControllerBase
     private async Task<List<BottleneckDto>> IdentifyReviewBottlenecks(ReviewStatisticsDto stats)
     {
         var bottlenecks = new List<BottleneckDto>();
-        
+
         // Identify bottlenecks based on various metrics
         if (stats.ResourcesInQueue > 50)
         {
@@ -706,7 +718,7 @@ public class ContentManagementController : ControllerBase
             var workloads = stats.ReviewerWorkload.Values.ToList();
             var maxWorkload = workloads.Max();
             var minWorkload = workloads.Min();
-            
+
             if (maxWorkload - minWorkload > 5)
             {
                 bottlenecks.Add(new BottleneckDto
@@ -785,6 +797,8 @@ public class ContentManagementController : ControllerBase
     {
         try
         {
+            var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException());
+            
             // Get pending resources
             var pendingResources = await _resourceRepository.GetByReviewStatusAsync(ClinicalReviewStatus.Pending);
             var resourcesList = pendingResources.Take(request.MaxResourcesPerRun ?? 20).ToList();
@@ -801,7 +815,7 @@ public class ContentManagementController : ControllerBase
 
             // Get available reviewers with their current workload
             var availableReviewers = await GetAvailableReviewers();
-            
+
             // Run intelligent assignment algorithm
             var assignments = await RunIntelligentAssignment(resourcesList, availableReviewers, request);
 
@@ -811,14 +825,15 @@ public class ContentManagementController : ControllerBase
             {
                 var reviewAssignment = new ReviewAssignment
                 {
-                    AssignmentId = Guid.NewGuid(),
+                    ReviewAssignmentId = Guid.NewGuid(),
                     ResourceId = assignment.ResourceId,
-                    ReviewerId = assignment.ReviewerId,
+                    ReviewerUserId = assignment.ReviewerId,
+                    AssignedByUserId = userId,
                     AssignedAt = DateTime.UtcNow,
-                    Status = ReviewAssignmentStatus.Assigned,
-                    Priority = assignment.Priority,
-                    EstimatedCompletionDate = DateTime.UtcNow.AddDays(3), // Default 3-day estimate
-                    AssignmentReason = assignment.AssignmentReason
+                    Status = ReviewAssignmentStatus.Pending,
+                    DueDate = DateTime.UtcNow.AddDays(3), // Default 3-day estimate
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow
                 };
 
                 await _resourceRepository.AssignReviewerAsync(reviewAssignment);
@@ -832,7 +847,7 @@ public class ContentManagementController : ControllerBase
                     ReviewerSpecialty = assignment.ReviewerSpecialty,
                     Priority = assignment.Priority,
                     AssignmentReason = assignment.AssignmentReason,
-                    EstimatedCompletionDate = reviewAssignment.EstimatedCompletionDate
+                    EstimatedCompletionDate = reviewAssignment.DueDate ?? DateTime.UtcNow.AddDays(3)
                 });
             }
 
@@ -859,7 +874,7 @@ public class ContentManagementController : ControllerBase
         // In a real implementation, this would query the User/Reviewer tables
         // For now, returning sample reviewer data
         await Task.CompletedTask;
-        
+
         return new List<ReviewerProfileDto>
         {
             new() { ReviewerId = Guid.NewGuid(), Name = "Dr. Smith", Specialty = "SLP", CurrentWorkload = 3, MaxWorkload = 8, IsAvailable = true },
@@ -871,8 +886,8 @@ public class ContentManagementController : ControllerBase
     }
 
     private async Task<List<IntelligentAssignmentDto>> RunIntelligentAssignment(
-        List<Resource> resources, 
-        List<ReviewerProfileDto> reviewers, 
+        List<Resource> resources,
+        List<ReviewerProfileDto> reviewers,
         AutoAssignmentRequest request)
     {
         var assignments = new List<IntelligentAssignmentDto>();
@@ -884,11 +899,11 @@ public class ContentManagementController : ControllerBase
             if (assignment != null)
             {
                 assignments.Add(assignment);
-                
+
                 // Update workload for subsequent assignments
                 var reviewer = availableReviewers.First(r => r.ReviewerId == assignment.ReviewerId);
                 reviewer.CurrentWorkload++;
-                
+
                 // Remove from available list if at capacity
                 if (reviewer.CurrentWorkload >= reviewer.MaxWorkload)
                 {
@@ -902,8 +917,8 @@ public class ContentManagementController : ControllerBase
     }
 
     private async Task<IntelligentAssignmentDto?> AssignOptimalReviewer(
-        Resource resource, 
-        List<ReviewerProfileDto> availableReviewers, 
+        Resource resource,
+        List<ReviewerProfileDto> availableReviewers,
         AutoAssignmentRequest request)
     {
         if (!availableReviewers.Any()) return null;
@@ -971,11 +986,11 @@ public class ContentManagementController : ControllerBase
     {
         // Analyze resource content to determine most appropriate specialty
         var skillAreas = resource.GetSkillAreas();
-        
+
         if (skillAreas.ContainsKey("areas"))
         {
             var areas = skillAreas["areas"].ToString()?.ToLower() ?? "";
-            
+
             if (areas.Contains("speech") || areas.Contains("language") || areas.Contains("communication"))
                 return "SLP";
             if (areas.Contains("fine motor") || areas.Contains("sensory") || areas.Contains("occupational"))
@@ -985,7 +1000,7 @@ public class ContentManagementController : ControllerBase
             if (areas.Contains("behavior") || areas.Contains("autism") || areas.Contains("aba"))
                 return "ABA";
         }
-        
+
         return "General";
     }
 
@@ -1002,19 +1017,19 @@ public class ContentManagementController : ControllerBase
         var hasMultipleLanguages = resource.LanguagesAvailable.Count > 1;
         var hasHighEvidenceLevel = resource.EvidenceLevel >= 4;
         var isInteractive = resource.IsInteractive;
-        
+
         if (hasMultipleLanguages && hasHighEvidenceLevel && isInteractive)
             return "High";
         if (hasHighEvidenceLevel || isInteractive)
             return "Medium";
-        
+
         return "Low";
     }
 
     private async Task<WorkloadSummaryDto> GetWorkloadSummary(List<ReviewerProfileDto> reviewers)
     {
         await Task.CompletedTask;
-        
+
         return new WorkloadSummaryDto
         {
             TotalReviewers = reviewers.Count,
@@ -1041,7 +1056,7 @@ public class ContentManagementController : ControllerBase
     {
         try
         {
-            var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "");
+            Guid userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "");
 
             // Create main category
             var category = new UPTRMS.Api.Models.Domain.Category
@@ -1334,10 +1349,10 @@ public class ContentManagementController : ControllerBase
             ReviewerId = evaluation.ReviewerId,
             ClinicalAccuracy = evaluation.ClinicalAccuracy,
             AgeAppropriateness = evaluation.AgeAppropriateness,
-            SafetyCompliance = evaluation.SafetyCompliance,
-            TherapeuticValue = evaluation.TherapeuticValue,
-            OverallApproval = evaluation.OverallApproval,
+            EvidenceLevel = evaluation.EvidenceLevel,
+            ApprovalStatus = evaluation.ApprovalStatus,
             Comments = evaluation.Comments,
+            RequiredChanges = evaluation.RequiredChanges,
             ReviewedAt = evaluation.ReviewedAt
         };
     }
@@ -1345,8 +1360,7 @@ public class ContentManagementController : ControllerBase
     private int DetermineEvidenceLevel(ReviewEvaluation evaluation)
     {
         // Simple algorithm to determine evidence level based on review scores
-        var averageScore = (evaluation.ClinicalAccuracy + evaluation.AgeAppropriateness + 
-                           evaluation.SafetyCompliance + evaluation.TherapeuticValue) / 4.0;
+        var averageScore = (evaluation.ClinicalAccuracy + evaluation.AgeAppropriateness + evaluation.EvidenceLevel) / 3.0;
 
         return averageScore switch
         {
@@ -1360,18 +1374,67 @@ public class ContentManagementController : ControllerBase
 
     private async Task NotifyResourceCreator(Resource resource, ReviewEvaluation evaluation)
     {
-        // TODO: Implement notification system
-        // This would typically send an email or in-app notification
-        await Task.CompletedTask;
+        // Send notification email to resource creator about review outcome
+        if (resource.CreatedByUserId.HasValue)
+        {
+            var creator = await _userRepository.GetByIdAsync(resource.CreatedByUserId.Value);
+            if (creator != null)
+            {
+                var isApproved = evaluation.ApprovalStatus == ReviewApprovalStatus.Approved;
+                var subject = isApproved ? "Your resource has been approved!" : "Your resource needs revisions";
+                var message = isApproved
+                    ? $"Great news! Your resource '{resource.Title}' has been approved and is now available."
+                    : $"Your resource '{resource.Title}' needs some changes. Feedback: {evaluation.Comments}";
+
+                await _emailService.SendSellerNotificationAsync(creator.Email, creator.FirstName, "ResourceReview", message);
+            }
+        }
         _logger.LogInformation("Notification sent to creator of resource {ResourceId}", resource.ResourceId);
     }
 
     private async Task NotifyUsersOfRetirement(Resource resource)
     {
-        // TODO: Implement user notification system for retirement
-        // This would notify users who have downloaded or favorited the resource
-        await Task.CompletedTask;
-        _logger.LogInformation("Retirement notification sent for resource {ResourceId}", resource.ResourceId);
+        // Notify users who have favorited or recently downloaded this resource
+        // Query users who may be affected by resource retirement
+        // When UserFavorites and ResourceDownloads tables are added:
+        // var affectedUsers = await _context.UserFavorites
+        //     .Where(f => f.ResourceId == resource.ResourceId)
+        //     .Select(f => f.User)
+        //     .Distinct()
+        //     .ToListAsync();
+
+        // var recentDownloaders = await _context.ResourceDownloads
+        //     .Where(d => d.ResourceId == resource.ResourceId && d.DownloadedAt > DateTime.UtcNow.AddDays(-30))
+        //     .Select(d => d.User)
+        //     .Distinct()
+        //     .ToListAsync();
+
+        // For now, notify the resource creator if available
+        var usersToNotify = new List<User>();
+        if (resource.CreatedByUserId.HasValue)
+        {
+            var creator = await _userRepository.GetByIdAsync(resource.CreatedByUserId.Value);
+            if (creator != null) usersToNotify.Add(creator);
+        }
+
+        foreach (var user in usersToNotify)
+        {
+            var alternatives = resource.SuggestedAlternatives != null && resource.SuggestedAlternatives.Any()
+                ? $" Suggested alternatives: {resource.SuggestedAlternatives.Count} alternative resources available"
+                : "";
+
+            var message = $"The resource '{resource.Title}' has been retired. Reason: {resource.RetiredReason}.{alternatives}";
+
+            await _emailService.SendResourceSharedEmailAsync(
+                user.Email,
+                user.FirstName,
+                "UPTRMS System",
+                "Resource Retirement Notice",
+                $"{_configuration["App:BaseUrl"]}/resources");
+        }
+
+        _logger.LogInformation("Retirement notification sent for resource {ResourceId} to {UserCount} users",
+            resource.ResourceId, usersToNotify.Count());
     }
 
     private RetiredResourceDto MapToRetiredDto(Resource resource)
@@ -1393,10 +1456,10 @@ public class ContentManagementController : ControllerBase
     {
         // Placeholder implementation - would integrate with copyright detection services
         await Task.Delay(100); // Simulate API call
-        
+
         var violations = new List<string>();
         var checkedImages = new List<string>();
-        
+
         foreach (var imageUrl in imageUrls)
         {
             checkedImages.Add(imageUrl);
@@ -1420,9 +1483,9 @@ public class ContentManagementController : ControllerBase
     {
         // Placeholder implementation - would integrate with plagiarism detection
         await Task.Delay(50);
-        
+
         var violations = new List<string>();
-        
+
         // Simple check for common copyrighted phrases
         var copyrightedPhrases = new[] { "copyrighted material", "all rights reserved", "© 2024" };
         foreach (var phrase in copyrightedPhrases)
@@ -1445,9 +1508,9 @@ public class ContentManagementController : ControllerBase
     private async Task<RightsVerificationResult> VerifyContentRights(string licenseInfo)
     {
         await Task.Delay(25);
-        
-        var isVerified = !string.IsNullOrEmpty(licenseInfo) && 
-                        (licenseInfo.Contains("Creative Commons") || 
+
+        var isVerified = !string.IsNullOrEmpty(licenseInfo) &&
+                        (licenseInfo.Contains("Creative Commons") ||
                          licenseInfo.Contains("Public Domain") ||
                          licenseInfo.Contains("Original Work"));
 
@@ -1462,16 +1525,50 @@ public class ContentManagementController : ControllerBase
 
     private async Task StoreCopyrightViolation(CopyrightViolation violation)
     {
-        // TODO: Store in CopyrightViolations table when added to DbContext
+        // Store copyright violation in audit log until dedicated table is added
+        var auditEntry = new
+        {
+            Type = "CopyrightViolation",
+            ResourceId = violation.ResourceId,
+            ViolationType = "Combined",
+            ImageViolations = violation.ImageViolations,
+            TextViolations = violation.TextViolations,
+            DetectedAt = violation.DetectedAt,
+            Status = violation.Status
+        };
+
+        _logger.LogInformation("Copyright violation stored for resource {ResourceId}: {@Violation}",
+            violation.ResourceId, auditEntry);
+
+        // When CopyrightViolations table is added to DbContext:
+        // _context.CopyrightViolations.Add(violation);
+        // await _context.SaveChangesAsync();
+
         await Task.CompletedTask;
-        _logger.LogInformation("Copyright violation stored for resource {ResourceId}", violation.ResourceId);
     }
 
     private async Task NotifyUserOfCopyrightConcern(Guid userId, Resource resource, CopyrightViolation violation)
     {
-        // TODO: Implement notification system
-        await Task.CompletedTask;
-        _logger.LogInformation("Copyright concern notification sent to user {UserId} for resource {ResourceId}", 
+        var user = await _userRepository.GetByIdAsync(userId);
+        if (user != null)
+        {
+            var message = $@"A copyright concern has been raised regarding your resource '{resource.Title}'.
+
+Image Violations: {string.Join(", ", violation.ImageViolations)}
+Text Violations: {string.Join(", ", violation.TextViolations)}
+
+Please review and address this concern. The resource has been temporarily suspended pending resolution.
+
+For more information, visit your seller dashboard.";
+
+            await _emailService.SendSellerNotificationAsync(
+                user.Email,
+                user.FirstName,
+                "CopyrightConcern",
+                message);
+        }
+
+        _logger.LogInformation("Copyright concern notification sent to user {UserId} for resource {ResourceId}",
             userId, resource.ResourceId);
     }
 
@@ -1490,12 +1587,12 @@ public class ContentManagementController : ControllerBase
     private async Task<CsvValidationResult> ValidateCsvMetadata(IFormFile csvFile)
     {
         var result = new CsvValidationResult();
-        
+
         try
         {
             using var stream = csvFile.OpenReadStream();
             using var reader = new StreamReader(stream);
-            
+
             var headerLine = await reader.ReadLineAsync();
             if (string.IsNullOrEmpty(headerLine))
             {
@@ -1505,7 +1602,7 @@ public class ContentManagementController : ControllerBase
 
             var expectedHeaders = new[] { "Title", "Description", "ResourceType", "SkillAreas", "GradeLevels", "Languages", "FileName" };
             var headers = headerLine.Split(',');
-            
+
             foreach (var expectedHeader in expectedHeaders)
             {
                 if (!headers.Contains(expectedHeader))
@@ -1516,13 +1613,13 @@ public class ContentManagementController : ControllerBase
 
             var records = new List<Dictionary<string, string>>();
             var lineNumber = 1;
-            
+
             while (!reader.EndOfStream)
             {
                 lineNumber++;
                 var line = await reader.ReadLineAsync();
                 if (string.IsNullOrEmpty(line)) continue;
-                
+
                 var values = line.Split(',');
                 if (values.Length != headers.Length)
                 {
@@ -1561,28 +1658,28 @@ public class ContentManagementController : ControllerBase
         return result;
     }
 
-    private async Task<ZipValidationResult> ValidateZipFile(IFormFile zipFile)
+    private ZipValidationResult ValidateZipFile(IFormFile zipFile)
     {
         var result = new ZipValidationResult();
-        
+
         try
         {
             using var stream = zipFile.OpenReadStream();
             using var archive = new System.IO.Compression.ZipArchive(stream, System.IO.Compression.ZipArchiveMode.Read);
-            
+
             var files = new List<string>();
             foreach (var entry in archive.Entries)
             {
                 if (!entry.FullName.EndsWith('/')) // Skip directories
                 {
                     files.Add(entry.Name);
-                    
+
                     // Validate file size (max 50MB per file)
                     if (entry.Length > 50 * 1024 * 1024)
                     {
                         result.Errors.Add($"File {entry.Name} exceeds 50MB limit");
                     }
-                    
+
                     // Validate file type
                     var allowedExtensions = new[] { ".pdf", ".jpg", ".jpeg", ".png", ".docx", ".mp4", ".mp3" };
                     var extension = Path.GetExtension(entry.Name).ToLower();
@@ -1644,7 +1741,7 @@ public class ContentManagementController : ControllerBase
     {
         var versions = new List<Resource>();
         var currentResource = await _resourceRepository.GetByIdAsync(resourceId);
-        
+
         if (currentResource == null) return versions;
 
         // Find the root version (no previous version)
@@ -1697,10 +1794,10 @@ public class ContentManagementController : ControllerBase
         // 1. Find all users who downloaded the old version
         // 2. Send them notifications about the new version
         // 3. Potentially provide automatic updates or download links
-        
+
         _logger.LogInformation("Sending version update notifications for resource upgrade {OldId} -> {NewId}",
             oldVersionId, newVersionId);
-        
+
         // Placeholder for notification logic
         await Task.CompletedTask;
     }
@@ -1755,7 +1852,7 @@ public class ContentManagementController : ControllerBase
                 .SelectMany(f => f.Issues)
                 .ToList();
 
-            _logger.LogInformation("Metadata validation completed for resource {ResourceId} with overall score {Score}", 
+            _logger.LogInformation("Metadata validation completed for resource {ResourceId} with overall score {Score}",
                 request.ResourceId, response.OverallScore);
 
             return Ok(response);
@@ -1841,7 +1938,7 @@ public class ContentManagementController : ControllerBase
 
         // Check for completeness indicators
         var qualityIndicators = new[] { "age", "skill", "goal", "outcome", "instruction" };
-        var indicatorCount = qualityIndicators.Count(indicator => 
+        var indicatorCount = qualityIndicators.Count(indicator =>
             description.ToLower().Contains(indicator));
 
         if (indicatorCount < 2)
@@ -1879,8 +1976,8 @@ public class ContentManagementController : ControllerBase
             "Feeding", "Oral Motor", "Phonological Awareness"
         };
 
-        var invalidAreas = skillAreas.Where(area => 
-            !approvedSkillAreas.Any(approved => 
+        var invalidAreas = skillAreas.Where(area =>
+            !approvedSkillAreas.Any(approved =>
                 string.Equals(approved, area, StringComparison.OrdinalIgnoreCase))).ToList();
 
         if (invalidAreas.Any())
@@ -1923,8 +2020,8 @@ public class ContentManagementController : ControllerBase
             "9th Grade", "10th Grade", "11th Grade", "12th Grade", "Adult"
         };
 
-        var invalidLevels = gradeLevels.Where(level => 
-            !validGradeLevels.Any(valid => 
+        var invalidLevels = gradeLevels.Where(level =>
+            !validGradeLevels.Any(valid =>
                 string.Equals(valid, level, StringComparison.OrdinalIgnoreCase))).ToList();
 
         if (invalidLevels.Any())
@@ -1999,7 +2096,7 @@ public class ContentManagementController : ControllerBase
             "Russian", "Chinese", "Japanese", "Korean", "Arabic", "Hindi"
         };
 
-        var invalidLanguages = languages.Where(lang => 
+        var invalidLanguages = languages.Where(lang =>
             !validLanguageCodes.Any(code => string.Equals(code, lang, StringComparison.OrdinalIgnoreCase)) &&
             !validLanguageNames.Any(name => string.Equals(name, lang, StringComparison.OrdinalIgnoreCase))).ToList();
 
@@ -2222,61 +2319,3 @@ public class SubmitReviewRequest
     public string? Comments { get; set; }
 }
 
-public class ReviewEvaluationDto
-{
-    public Guid EvaluationId { get; set; }
-    public Guid ResourceId { get; set; }
-    public Guid ReviewerId { get; set; }
-    public int ClinicalAccuracy { get; set; }
-    public int AgeAppropriateness { get; set; }
-    public int SafetyCompliance { get; set; }
-    public int TherapeuticValue { get; set; }
-    public bool OverallApproval { get; set; }
-    public string? Comments { get; set; }
-    public DateTime ReviewedAt { get; set; }
-}
-
-public class ReviewStatisticsDto
-{
-    public int ResourcesInQueue { get; set; }
-    public double AverageReviewTimeHours { get; set; }
-    public double ApprovalRate { get; set; }
-    public Dictionary<string, int> ReviewerWorkload { get; set; } = new();
-}
-
-// Domain models for review process
-public class ReviewAssignment
-{
-    public Guid AssignmentId { get; set; } = Guid.NewGuid();
-    public Guid ResourceId { get; set; }
-    public Guid ReviewerId { get; set; }
-    public Guid AssignedBy { get; set; }
-    public DateTime AssignedAt { get; set; }
-    public ReviewAssignmentStatus Status { get; set; }
-    public DateTime? CompletedAt { get; set; }
-    public ReviewPriority Priority { get; set; } = ReviewPriority.Normal;
-    public DateTime EstimatedCompletionDate { get; set; }
-    public string AssignmentReason { get; set; } = string.Empty;
-}
-
-public class ReviewEvaluation
-{
-    public Guid EvaluationId { get; set; } = Guid.NewGuid();
-    public Guid ResourceId { get; set; }
-    public Guid ReviewerId { get; set; }
-    public int ClinicalAccuracy { get; set; } // 1-5 scale
-    public int AgeAppropriateness { get; set; } // 1-5 scale
-    public int SafetyCompliance { get; set; } // 1-5 scale
-    public int TherapeuticValue { get; set; } // 1-5 scale
-    public bool OverallApproval { get; set; }
-    public string? Comments { get; set; }
-    public DateTime ReviewedAt { get; set; }
-}
-
-public enum ReviewAssignmentStatus
-{
-    Assigned,
-    InProgress,
-    Completed,
-    Cancelled
-}

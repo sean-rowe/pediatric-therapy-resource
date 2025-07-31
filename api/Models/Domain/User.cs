@@ -59,6 +59,9 @@ public class User
 
     public string PreferredLanguage { get; set; } = "en";
 
+    [MaxLength(500)]
+    public string? ProfileImageUrl { get; set; }
+
     public SubscriptionStatus SubscriptionStatus { get; set; } = SubscriptionStatus.Active;
 
     public DateTime? SubscriptionStartDate { get; set; }
@@ -66,6 +69,41 @@ public class User
     public DateTime? SubscriptionEndDate { get; set; }
 
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+
+    // Soft delete fields
+    public bool IsDeleted { get; set; } = false;
+
+    public DateTime? DeletedAt { get; set; }
+
+    [MaxLength(2)]
+    public string LicenseState { get; set; } = "CA";
+
+    [MaxLength(500)]
+    public string? RefreshToken { get; set; }
+
+    public DateTime? RefreshTokenExpiresAt { get; set; }
+
+    // License verification fields
+    [MaxLength(10)]
+    public string? LicenseType { get; set; }
+    
+    public bool LicenseVerified { get; set; } = false;
+    
+    public DateTime? LicenseVerifiedAt { get; set; }
+    
+    public DateTime? LicenseExpirationDate { get; set; }
+
+    // User preferences
+    [MaxLength(50)]
+    public string? Timezone { get; set; }
+    
+    public bool EmailNotificationsEnabled { get; set; } = true;
+    
+    [MaxLength(20)]
+    public string? Theme { get; set; }
+    
+    [MaxLength(50)]
+    public string? DefaultView { get; set; }
 
     // Navigation properties
     public virtual Organization? Organization { get; set; }

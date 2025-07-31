@@ -141,7 +141,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 17
     testRunner.And("quotas must be enforced fairly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2320 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2283 = new TechTalk.SpecFlow.Table(new string[] {
                             "Service Tier",
                             "CPU Quota",
                             "Memory Limit",
@@ -149,7 +149,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "API Calls/Hour",
                             "Concurrent Users",
                             "Network Bandwidth"});
-                table2320.AddRow(new string[] {
+                table2283.AddRow(new string[] {
                             "Free tier",
                             "0.5 vCPU",
                             "512MB",
@@ -157,7 +157,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "1,000",
                             "5",
                             "10 Mbps"});
-                table2320.AddRow(new string[] {
+                table2283.AddRow(new string[] {
                             "Basic tier",
                             "2 vCPU",
                             "2GB",
@@ -165,7 +165,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "10,000",
                             "50",
                             "100 Mbps"});
-                table2320.AddRow(new string[] {
+                table2283.AddRow(new string[] {
                             "Professional",
                             "8 vCPU",
                             "8GB",
@@ -173,7 +173,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "100,000",
                             "500",
                             "1 Gbps"});
-                table2320.AddRow(new string[] {
+                table2283.AddRow(new string[] {
                             "Enterprise",
                             "32 vCPU",
                             "32GB",
@@ -181,7 +181,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "1,000,000",
                             "5,000",
                             "10 Gbps"});
-                table2320.AddRow(new string[] {
+                table2283.AddRow(new string[] {
                             "Unlimited",
                             "No limit",
                             "No limit",
@@ -189,7 +189,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "10,000,000",
                             "50,000",
                             "100 Gbps"});
-                table2320.AddRow(new string[] {
+                table2283.AddRow(new string[] {
                             "Custom",
                             "Negotiated",
                             "Negotiated",
@@ -198,7 +198,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Negotiated",
                             "Negotiated"});
 #line 18
-    testRunner.When("implementing quota enforcement:", ((string)(null)), table2320, "When ");
+    testRunner.When("implementing quota enforcement:", ((string)(null)), table2283, "When ");
 #line hidden
 #line 26
     testRunner.Then("quotas should be enforced strictly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -255,49 +255,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 34
     testRunner.And("legitimate bursts should be allowed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2321 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2284 = new TechTalk.SpecFlow.Table(new string[] {
                             "API Endpoint",
                             "Rate Limit",
                             "Burst Capacity",
                             "Window Type",
                             "Penalty Duration",
                             "Override Conditions"});
-                table2321.AddRow(new string[] {
+                table2284.AddRow(new string[] {
                             "Authentication",
                             "10/minute",
                             "20 burst",
                             "Sliding window",
                             "5 min lockout",
                             "2FA enabled: 2x"});
-                table2321.AddRow(new string[] {
+                table2284.AddRow(new string[] {
                             "Search API",
                             "100/minute",
                             "200 burst",
                             "Fixed window",
                             "Progressive backoff",
                             "Paid tier: 10x"});
-                table2321.AddRow(new string[] {
+                table2284.AddRow(new string[] {
                             "Data upload",
                             "50MB/hour",
                             "100MB burst",
                             "Rolling window",
                             "1 hour throttle",
                             "Enterprise: unlimited"});
-                table2321.AddRow(new string[] {
+                table2284.AddRow(new string[] {
                             "Report generation",
                             "10/hour",
                             "15 burst",
                             "Token bucket",
                             "Queue position",
                             "Priority access"});
-                table2321.AddRow(new string[] {
+                table2284.AddRow(new string[] {
                             "Webhook delivery",
                             "1000/hour",
                             "2000 burst",
                             "Leaky bucket",
                             "Exponential backoff",
                             "Verified endpoint: 2x"});
-                table2321.AddRow(new string[] {
+                table2284.AddRow(new string[] {
                             "Analytics API",
                             "500/hour",
                             "1000 burst",
@@ -305,7 +305,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Soft throttle",
                             "Internal use: bypass"});
 #line 35
-    testRunner.When("implementing rate limiting:", ((string)(null)), table2321, "When ");
+    testRunner.When("implementing rate limiting:", ((string)(null)), table2284, "When ");
 #line hidden
 #line 43
     testRunner.Then("rate limits should be enforced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -362,49 +362,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 51
     testRunner.And("OOM conditions must be prevented", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2322 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2285 = new TechTalk.SpecFlow.Table(new string[] {
                             "Component",
                             "Memory Allocation",
                             "Soft Limit",
                             "Hard Limit",
                             "OOM Score",
                             "Eviction Policy"});
-                table2322.AddRow(new string[] {
+                table2285.AddRow(new string[] {
                             "Application pods",
                             "2GB baseline",
                             "3GB warning",
                             "4GB kill",
                             "-500 (protected)",
                             "Least recently used"});
-                table2322.AddRow(new string[] {
+                table2285.AddRow(new string[] {
                             "Cache layers",
                             "16GB allocated",
                             "14GB pressure",
                             "15GB eviction",
                             "0 (neutral)",
                             "LRU with TTL"});
-                table2322.AddRow(new string[] {
+                table2285.AddRow(new string[] {
                             "Database connections",
                             "100MB per conn",
                             "150MB warning",
                             "200MB close",
                             "-1000 (never kill)",
                             "Idle timeout"});
-                table2322.AddRow(new string[] {
+                table2285.AddRow(new string[] {
                             "Background jobs",
                             "1GB per job",
                             "1.5GB throttle",
                             "2GB terminate",
                             "500 (killable)",
                             "Job checkpoint"});
-                table2322.AddRow(new string[] {
+                table2285.AddRow(new string[] {
                             "User sessions",
                             "10MB per session",
                             "15MB warning",
                             "20MB cleanup",
                             "200 (expendable)",
                             "Inactive first"});
-                table2322.AddRow(new string[] {
+                table2285.AddRow(new string[] {
                             "File buffers",
                             "Dynamic",
                             "80% available",
@@ -412,7 +412,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "800 (very killable)",
                             "Write and release"});
 #line 52
-    testRunner.When("implementing memory management:", ((string)(null)), table2322, "When ");
+    testRunner.When("implementing memory management:", ((string)(null)), table2285, "When ");
 #line hidden
 #line 60
     testRunner.Then("memory usage should be controlled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -469,49 +469,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 68
     testRunner.And("throttling prevents resource monopolization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2323 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2286 = new TechTalk.SpecFlow.Table(new string[] {
                             "Process Type",
                             "CPU Shares",
                             "Soft Limit",
                             "Hard Limit",
                             "Nice Priority",
                             "Throttle Behavior"});
-                table2323.AddRow(new string[] {
+                table2286.AddRow(new string[] {
                             "User requests",
                             "1024 shares",
                             "80% CPU",
                             "100% CPU",
                             "0 (normal)",
                             "Gradual throttle"});
-                table2323.AddRow(new string[] {
+                table2286.AddRow(new string[] {
                             "Background jobs",
                             "512 shares",
                             "50% CPU",
                             "70% CPU",
                             "10 (lower)",
                             "Immediate throttle"});
-                table2323.AddRow(new string[] {
+                table2286.AddRow(new string[] {
                             "System processes",
                             "2048 shares",
                             "No limit",
                             "No limit",
                             "-5 (higher)",
                             "Never throttle"});
-                table2323.AddRow(new string[] {
+                table2286.AddRow(new string[] {
                             "Analytics",
                             "256 shares",
                             "30% CPU",
                             "50% CPU",
                             "15 (lowest)",
                             "Aggressive throttle"});
-                table2323.AddRow(new string[] {
+                table2286.AddRow(new string[] {
                             "Real-time features",
                             "4096 shares",
                             "90% CPU",
                             "No limit",
                             "-10 (highest)",
                             "Minimal throttle"});
-                table2323.AddRow(new string[] {
+                table2286.AddRow(new string[] {
                             "Maintenance tasks",
                             "128 shares",
                             "20% CPU",
@@ -519,7 +519,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "19 (idle)",
                             "Stop when busy"});
 #line 69
-    testRunner.When("implementing CPU limits:", ((string)(null)), table2323, "When ");
+    testRunner.When("implementing CPU limits:", ((string)(null)), table2286, "When ");
 #line hidden
 #line 77
     testRunner.Then("CPU usage should be fair", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -576,49 +576,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 86
     testRunner.And("quotas must prevent exhaustion", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2324 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2287 = new TechTalk.SpecFlow.Table(new string[] {
                             "Storage Type",
                             "Quota Policy",
                             "Warning Level",
                             "Hard Limit",
                             "Grace Period",
                             "Cleanup Policy"});
-                table2324.AddRow(new string[] {
+                table2287.AddRow(new string[] {
                             "User uploads",
                             "10GB default",
                             "80% full",
                             "100% block",
                             "7 days over",
                             "Archive old files"});
-                table2324.AddRow(new string[] {
+                table2287.AddRow(new string[] {
                             "Database storage",
                             "1TB allocated",
                             "85% alert",
                             "95% read-only",
                             "None",
                             "Partition rotation"});
-                table2324.AddRow(new string[] {
+                table2287.AddRow(new string[] {
                             "Log storage",
                             "100GB rolling",
                             "90% warn",
                             "100% rotate",
                             "Immediate",
                             "Delete oldest"});
-                table2324.AddRow(new string[] {
+                table2287.AddRow(new string[] {
                             "Backup storage",
                             "5TB reserved",
                             "80% notify",
                             "90% compress",
                             "30 days",
                             "Incremental only"});
-                table2324.AddRow(new string[] {
+                table2287.AddRow(new string[] {
                             "Cache storage",
                             "500GB dynamic",
                             "No warning",
                             "LRU eviction",
                             "N/A",
                             "Automatic cleanup"});
-                table2324.AddRow(new string[] {
+                table2287.AddRow(new string[] {
                             "Temp files",
                             "50GB shared",
                             "70% clean",
@@ -626,7 +626,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Immediate",
                             "Age-based deletion"});
 #line 87
-    testRunner.When("implementing storage quotas:", ((string)(null)), table2324, "When ");
+    testRunner.When("implementing storage quotas:", ((string)(null)), table2287, "When ");
 #line hidden
 #line 95
     testRunner.Then("storage quotas should be enforced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -683,49 +683,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 103
     testRunner.And("IOPS must be distributed fairly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2325 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2288 = new TechTalk.SpecFlow.Table(new string[] {
                             "Workload Type",
                             "Read IOPS",
                             "Write IOPS",
                             "Read Bandwidth",
                             "Write Bandwidth",
                             "Priority Class"});
-                table2325.AddRow(new string[] {
+                table2288.AddRow(new string[] {
                             "Database primary",
                             "Unlimited",
                             "Unlimited",
                             "Unlimited",
                             "Unlimited",
                             "Critical"});
-                table2325.AddRow(new string[] {
+                table2288.AddRow(new string[] {
                             "Database replica",
                             "10,000",
                             "5,000",
                             "1 GB/s",
                             "500 MB/s",
                             "High"});
-                table2325.AddRow(new string[] {
+                table2288.AddRow(new string[] {
                             "User uploads",
                             "1,000",
                             "2,000",
                             "100 MB/s",
                             "200 MB/s",
                             "Normal"});
-                table2325.AddRow(new string[] {
+                table2288.AddRow(new string[] {
                             "Backup operations",
                             "500",
                             "1,000",
                             "50 MB/s",
                             "100 MB/s",
                             "Low"});
-                table2325.AddRow(new string[] {
+                table2288.AddRow(new string[] {
                             "Analytics queries",
                             "5,000",
                             "100",
                             "500 MB/s",
                             "10 MB/s",
                             "Batch"});
-                table2325.AddRow(new string[] {
+                table2288.AddRow(new string[] {
                             "Log writing",
                             "100",
                             "1,000",
@@ -733,7 +733,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "100 MB/s",
                             "Background"});
 #line 104
-    testRunner.When("implementing I/O limits:", ((string)(null)), table2325, "When ");
+    testRunner.When("implementing I/O limits:", ((string)(null)), table2288, "When ");
 #line hidden
 #line 112
     testRunner.Then("IOPS should be limited per workload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -790,49 +790,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 120
     testRunner.And("traffic shaping ensures fairness", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2326 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2289 = new TechTalk.SpecFlow.Table(new string[] {
                             "Traffic Type",
                             "Guaranteed Bandwidth",
                             "Maximum Bandwidth",
                             "Burst Size",
                             "Priority",
                             "Shaping Algorithm"});
-                table2326.AddRow(new string[] {
+                table2289.AddRow(new string[] {
                             "API traffic",
                             "100 Mbps",
                             "1 Gbps",
                             "100 MB",
                             "High",
                             "Token bucket"});
-                table2326.AddRow(new string[] {
+                table2289.AddRow(new string[] {
                             "Media streaming",
                             "500 Mbps",
                             "5 Gbps",
                             "500 MB",
                             "Medium",
                             "Leaky bucket"});
-                table2326.AddRow(new string[] {
+                table2289.AddRow(new string[] {
                             "Backup traffic",
                             "50 Mbps",
                             "500 Mbps",
                             "50 MB",
                             "Low",
                             "Hierarchical"});
-                table2326.AddRow(new string[] {
+                table2289.AddRow(new string[] {
                             "Replication",
                             "200 Mbps",
                             "2 Gbps",
                             "200 MB",
                             "Critical",
                             "Guaranteed rate"});
-                table2326.AddRow(new string[] {
+                table2289.AddRow(new string[] {
                             "User downloads",
                             "10 Mbps/user",
                             "100 Mbps/user",
                             "10 MB",
                             "Normal",
                             "Fair queuing"});
-                table2326.AddRow(new string[] {
+                table2289.AddRow(new string[] {
                             "System updates",
                             "10 Mbps",
                             "100 Mbps",
@@ -840,7 +840,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Lowest",
                             "Best effort"});
 #line 121
-    testRunner.When("implementing bandwidth limits:", ((string)(null)), table2326, "When ");
+    testRunner.When("implementing bandwidth limits:", ((string)(null)), table2289, "When ");
 #line hidden
 #line 129
     testRunner.Then("bandwidth should be allocated fairly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -897,49 +897,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 138
     testRunner.And("limits ensure cluster stability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2327 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2290 = new TechTalk.SpecFlow.Table(new string[] {
                             "Container Type",
                             "CPU Request",
                             "CPU Limit",
                             "Memory Request",
                             "Memory Limit",
                             "Ephemeral Storage"});
-                table2327.AddRow(new string[] {
+                table2290.AddRow(new string[] {
                             "Web frontend",
                             "100m",
                             "500m",
                             "128Mi",
                             "512Mi",
                             "1Gi"});
-                table2327.AddRow(new string[] {
+                table2290.AddRow(new string[] {
                             "API backend",
                             "250m",
                             "1000m",
                             "256Mi",
                             "1Gi",
                             "2Gi"});
-                table2327.AddRow(new string[] {
+                table2290.AddRow(new string[] {
                             "Database proxy",
                             "500m",
                             "2000m",
                             "512Mi",
                             "2Gi",
                             "5Gi"});
-                table2327.AddRow(new string[] {
+                table2290.AddRow(new string[] {
                             "Cache service",
                             "1000m",
                             "4000m",
                             "4Gi",
                             "8Gi",
                             "10Gi"});
-                table2327.AddRow(new string[] {
+                table2290.AddRow(new string[] {
                             "Batch processor",
                             "2000m",
                             "8000m",
                             "8Gi",
                             "16Gi",
                             "50Gi"});
-                table2327.AddRow(new string[] {
+                table2290.AddRow(new string[] {
                             "ML inference",
                             "4000m",
                             "No limit",
@@ -947,7 +947,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "32Gi",
                             "100Gi"});
 #line 139
-    testRunner.When("implementing container limits:", ((string)(null)), table2327, "When ");
+    testRunner.When("implementing container limits:", ((string)(null)), table2290, "When ");
 #line hidden
 #line 147
     testRunner.Then("containers should have appropriate limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1004,49 +1004,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 155
     testRunner.And("quotas prevent tenant resource abuse", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2328 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2291 = new TechTalk.SpecFlow.Table(new string[] {
                             "Namespace Type",
                             "Pod Count",
                             "CPU Quota",
                             "Memory Quota",
                             "Storage Quota",
                             "LoadBalancer Services"});
-                table2328.AddRow(new string[] {
+                table2291.AddRow(new string[] {
                             "Free tier",
                             "10 pods",
                             "2 cores",
                             "4Gi",
                             "10Gi",
                             "0"});
-                table2328.AddRow(new string[] {
+                table2291.AddRow(new string[] {
                             "Small tenant",
                             "50 pods",
                             "10 cores",
                             "20Gi",
                             "100Gi",
                             "1"});
-                table2328.AddRow(new string[] {
+                table2291.AddRow(new string[] {
                             "Medium tenant",
                             "200 pods",
                             "50 cores",
                             "100Gi",
                             "1Ti",
                             "5"});
-                table2328.AddRow(new string[] {
+                table2291.AddRow(new string[] {
                             "Large tenant",
                             "1000 pods",
                             "200 cores",
                             "500Gi",
                             "10Ti",
                             "20"});
-                table2328.AddRow(new string[] {
+                table2291.AddRow(new string[] {
                             "Enterprise",
                             "5000 pods",
                             "1000 cores",
                             "2Ti",
                             "100Ti",
                             "100"});
-                table2328.AddRow(new string[] {
+                table2291.AddRow(new string[] {
                             "System",
                             "Unlimited",
                             "Unlimited",
@@ -1054,7 +1054,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Unlimited",
                             "Unlimited"});
 #line 156
-    testRunner.When("implementing namespace quotas:", ((string)(null)), table2328, "When ");
+    testRunner.When("implementing namespace quotas:", ((string)(null)), table2291, "When ");
 #line hidden
 #line 164
     testRunner.Then("namespace quotas should be enforced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1111,49 +1111,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 173
     testRunner.And("connection limits prevent exhaustion", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2329 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2292 = new TechTalk.SpecFlow.Table(new string[] {
                             "Application Tier",
                             "Min Connections",
                             "Max Connections",
                             "Idle Timeout",
                             "Max Lifetime",
                             "Overflow Policy"});
-                table2329.AddRow(new string[] {
+                table2292.AddRow(new string[] {
                             "Web servers",
                             "10",
                             "100",
                             "10 minutes",
                             "1 hour",
                             "Queue requests"});
-                table2329.AddRow(new string[] {
+                table2292.AddRow(new string[] {
                             "API servers",
                             "20",
                             "200",
                             "5 minutes",
                             "30 minutes",
                             "Reject with 503"});
-                table2329.AddRow(new string[] {
+                table2292.AddRow(new string[] {
                             "Background jobs",
                             "5",
                             "50",
                             "30 minutes",
                             "2 hours",
                             "Wait with timeout"});
-                table2329.AddRow(new string[] {
+                table2292.AddRow(new string[] {
                             "Analytics",
                             "2",
                             "20",
                             "1 hour",
                             "4 hours",
                             "Use read replica"});
-                table2329.AddRow(new string[] {
+                table2292.AddRow(new string[] {
                             "Admin tools",
                             "1",
                             "10",
                             "5 minutes",
                             "15 minutes",
                             "Single connection"});
-                table2329.AddRow(new string[] {
+                table2292.AddRow(new string[] {
                             "Monitoring",
                             "1",
                             "5",
@@ -1161,7 +1161,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "24 hours",
                             "Fallback metrics"});
 #line 174
-    testRunner.When("implementing connection management:", ((string)(null)), table2329, "When ");
+    testRunner.When("implementing connection management:", ((string)(null)), table2292, "When ");
 #line hidden
 #line 182
     testRunner.Then("connection pools should be sized appropriately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1218,49 +1218,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 190
     testRunner.And("timeouts prevent resource monopolization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2330 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2293 = new TechTalk.SpecFlow.Table(new string[] {
                             "Query Type",
                             "Timeout Duration",
                             "Memory Limit",
                             "Row Limit",
                             "CPU Time Limit",
                             "Cancellation Policy"});
-                table2330.AddRow(new string[] {
+                table2293.AddRow(new string[] {
                             "Interactive queries",
                             "30 seconds",
                             "1GB",
                             "10,000 rows",
                             "60 CPU seconds",
                             "User cancellable"});
-                table2330.AddRow(new string[] {
+                table2293.AddRow(new string[] {
                             "Report queries",
                             "5 minutes",
                             "4GB",
                             "1M rows",
                             "300 CPU seconds",
                             "Warning at 80%"});
-                table2330.AddRow(new string[] {
+                table2293.AddRow(new string[] {
                             "Analytics queries",
                             "30 minutes",
                             "16GB",
                             "No limit",
                             "1800 CPU seconds",
                             "Kill after timeout"});
-                table2330.AddRow(new string[] {
+                table2293.AddRow(new string[] {
                             "Export queries",
                             "1 hour",
                             "8GB",
                             "10M rows",
                             "3600 CPU seconds",
                             "Checkpoint support"});
-                table2330.AddRow(new string[] {
+                table2293.AddRow(new string[] {
                             "System queries",
                             "10 seconds",
                             "512MB",
                             "1,000 rows",
                             "30 CPU seconds",
                             "Auto retry"});
-                table2330.AddRow(new string[] {
+                table2293.AddRow(new string[] {
                             "Maintenance queries",
                             "No limit",
                             "32GB",
@@ -1268,7 +1268,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "No limit",
                             "Manual only"});
 #line 191
-    testRunner.When("implementing query limits:", ((string)(null)), table2330, "When ");
+    testRunner.When("implementing query limits:", ((string)(null)), table2293, "When ");
 #line hidden
 #line 199
     testRunner.Then("queries should respect timeouts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1325,49 +1325,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 208
     testRunner.And("limits prevent abuse", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2331 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2294 = new TechTalk.SpecFlow.Table(new string[] {
                             "API Type",
                             "Max Depth",
                             "Max Complexity",
                             "Time Limit",
                             "Result Size Limit",
                             "Cost Calculation"});
-                table2331.AddRow(new string[] {
+                table2294.AddRow(new string[] {
                             "REST API",
                             "N/A",
                             "N/A",
                             "30 seconds",
                             "10MB response",
                             "N/A"});
-                table2331.AddRow(new string[] {
+                table2294.AddRow(new string[] {
                             "GraphQL queries",
                             "10 levels",
                             "1000 points",
                             "10 seconds",
                             "1MB response",
                             "Field-based cost"});
-                table2331.AddRow(new string[] {
+                table2294.AddRow(new string[] {
                             "GraphQL mutations",
                             "5 levels",
                             "500 points",
                             "30 seconds",
                             "100KB response",
                             "Mutation cost 10x"});
-                table2331.AddRow(new string[] {
+                table2294.AddRow(new string[] {
                             "Batch APIs",
                             "100 items",
                             "N/A",
                             "60 seconds",
                             "50MB total",
                             "Linear scaling"});
-                table2331.AddRow(new string[] {
+                table2294.AddRow(new string[] {
                             "Webhook callbacks",
                             "N/A",
                             "N/A",
                             "30 seconds",
                             "1MB payload",
                             "Retry limits"});
-                table2331.AddRow(new string[] {
+                table2294.AddRow(new string[] {
                             "Admin APIs",
                             "20 levels",
                             "5000 points",
@@ -1375,7 +1375,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "100MB response",
                             "Elevated limits"});
 #line 209
-    testRunner.When("implementing API complexity limits:", ((string)(null)), table2331, "When ");
+    testRunner.When("implementing API complexity limits:", ((string)(null)), table2294, "When ");
 #line hidden
 #line 217
     testRunner.Then("API complexity should be limited", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1432,49 +1432,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 225
     testRunner.And("restrictions prevent abuse", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2332 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2295 = new TechTalk.SpecFlow.Table(new string[] {
                             "File Type",
                             "Max Size",
                             "Max Count/Day",
                             "Allowed Formats",
                             "Scan Requirements",
                             "Storage Duration"});
-                table2332.AddRow(new string[] {
+                table2295.AddRow(new string[] {
                             "Images",
                             "10MB",
                             "100",
                             "JPG, PNG, GIF",
                             "Virus + content",
                             "Permanent"});
-                table2332.AddRow(new string[] {
+                table2295.AddRow(new string[] {
                             "Documents",
                             "50MB",
                             "50",
                             "PDF, DOCX, TXT",
                             "Virus + malware",
                             "Permanent"});
-                table2332.AddRow(new string[] {
+                table2295.AddRow(new string[] {
                             "Videos",
                             "500MB",
                             "10",
                             "MP4, MOV, AVI",
                             "Virus + encoding",
                             "90 days"});
-                table2332.AddRow(new string[] {
+                table2295.AddRow(new string[] {
                             "Audio",
                             "100MB",
                             "20",
                             "MP3, WAV, M4A",
                             "Virus scan",
                             "180 days"});
-                table2332.AddRow(new string[] {
+                table2295.AddRow(new string[] {
                             "Data files",
                             "1GB",
                             "5",
                             "CSV, JSON, XML",
                             "Format validation",
                             "30 days"});
-                table2332.AddRow(new string[] {
+                table2295.AddRow(new string[] {
                             "Archives",
                             "100MB",
                             "10",
@@ -1482,7 +1482,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Recursive scan",
                             "7 days"});
 #line 226
-    testRunner.When("implementing upload limits:", ((string)(null)), table2332, "When ");
+    testRunner.When("implementing upload limits:", ((string)(null)), table2295, "When ");
 #line hidden
 #line 234
     testRunner.Then("upload limits should be enforced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1539,49 +1539,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 243
     testRunner.And("alerts enable timely response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2333 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2296 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resource Type",
                             "Warning Threshold",
                             "Critical Threshold",
                             "Alert Method",
                             "Escalation Time",
                             "Auto-remediation"});
-                table2333.AddRow(new string[] {
+                table2296.AddRow(new string[] {
                             "CPU usage",
                             "70%",
                             "90%",
                             "Email + Slack",
                             "15 minutes",
                             "Scale out"});
-                table2333.AddRow(new string[] {
+                table2296.AddRow(new string[] {
                             "Memory usage",
                             "75%",
                             "85%",
                             "PagerDuty",
                             "10 minutes",
                             "Restart pods"});
-                table2333.AddRow(new string[] {
+                table2296.AddRow(new string[] {
                             "Disk space",
                             "80%",
                             "90%",
                             "Email + SMS",
                             "30 minutes",
                             "Cleanup scripts"});
-                table2333.AddRow(new string[] {
+                table2296.AddRow(new string[] {
                             "Connection pool",
                             "80%",
                             "95%",
                             "Slack + Page",
                             "5 minutes",
                             "Increase pool"});
-                table2333.AddRow(new string[] {
+                table2296.AddRow(new string[] {
                             "API rate limit",
                             "85%",
                             "95%",
                             "Dashboard",
                             "20 minutes",
                             "Traffic redirect"});
-                table2333.AddRow(new string[] {
+                table2296.AddRow(new string[] {
                             "Error rate",
                             "1%",
                             "5%",
@@ -1589,7 +1589,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Immediate",
                             "Circuit breaker"});
 #line 244
-    testRunner.When("implementing limit monitoring:", ((string)(null)), table2333, "When ");
+    testRunner.When("implementing limit monitoring:", ((string)(null)), table2296, "When ");
 #line hidden
 #line 252
     testRunner.Then("monitoring should track all limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1646,49 +1646,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 260
     testRunner.And("trends indicate future needs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2334 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2297 = new TechTalk.SpecFlow.Table(new string[] {
                             "Metric",
                             "Current Usage",
                             "Growth Rate",
                             "Limit",
                             "Time to Limit",
                             "Action Required"});
-                table2334.AddRow(new string[] {
+                table2297.AddRow(new string[] {
                             "Storage",
                             "60TB",
                             "5TB/month",
                             "100TB",
                             "8 months",
                             "Order expansion"});
-                table2334.AddRow(new string[] {
+                table2297.AddRow(new string[] {
                             "API calls",
                             "10M/day",
                             "20%/month",
                             "50M/day",
                             "9 months",
                             "Architecture review"});
-                table2334.AddRow(new string[] {
+                table2297.AddRow(new string[] {
                             "Database size",
                             "2TB",
                             "200GB/month",
                             "5TB",
                             "15 months",
                             "Partitioning plan"});
-                table2334.AddRow(new string[] {
+                table2297.AddRow(new string[] {
                             "Memory usage",
                             "70% average",
                             "2%/month",
                             "100%",
                             "15 months",
                             "Optimization needed"});
-                table2334.AddRow(new string[] {
+                table2297.AddRow(new string[] {
                             "Concurrent users",
                             "50K",
                             "5K/month",
                             "100K",
                             "10 months",
                             "Scaling plan"});
-                table2334.AddRow(new string[] {
+                table2297.AddRow(new string[] {
                             "Network bandwidth",
                             "5Gbps",
                             "500Mbps/month",
@@ -1696,7 +1696,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "10 months",
                             "Peering expansion"});
 #line 261
-    testRunner.When("analyzing limit utilization:", ((string)(null)), table2334, "When ");
+    testRunner.When("analyzing limit utilization:", ((string)(null)), table2297, "When ");
 #line hidden
 #line 269
     testRunner.Then("trends should be analyzed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1753,50 +1753,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 277
     testRunner.And("degradation should maintain core functionality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2335 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2298 = new TechTalk.SpecFlow.Table(new string[] {
                             "Limit Type",
                             "Degradation Strategy",
                             "Features Disabled",
                             "User Impact",
                             "Recovery Trigger"});
-                table2335.AddRow(new string[] {
+                table2298.AddRow(new string[] {
                             "Memory limit",
                             "Disable caching",
                             "In-memory cache",
                             "Slower responses",
                             "Memory <70%"});
-                table2335.AddRow(new string[] {
+                table2298.AddRow(new string[] {
                             "CPU limit",
                             "Reduce quality",
                             "HD video, complex analytics",
                             "Lower quality",
                             "CPU <80%"});
-                table2335.AddRow(new string[] {
+                table2298.AddRow(new string[] {
                             "Storage limit",
                             "Archive old data",
                             "Historical access",
                             "Limited history",
                             "Space >20% free"});
-                table2335.AddRow(new string[] {
+                table2298.AddRow(new string[] {
                             "Connection limit",
                             "Queue requests",
                             "Instant processing",
                             "Delayed responses",
                             "Connections <80%"});
-                table2335.AddRow(new string[] {
+                table2298.AddRow(new string[] {
                             "API rate limit",
                             "Prioritize critical",
                             "Non-essential features",
                             "Reduced functionality",
                             "Rate <70%"});
-                table2335.AddRow(new string[] {
+                table2298.AddRow(new string[] {
                             "Bandwidth limit",
                             "Compress data",
                             "High-res media",
                             "Lower quality",
                             "Bandwidth <80%"});
 #line 278
-    testRunner.When("approaching resource limits:", ((string)(null)), table2335, "When ");
+    testRunner.When("approaching resource limits:", ((string)(null)), table2298, "When ");
 #line hidden
 #line 286
     testRunner.Then("degradation should be graceful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1853,49 +1853,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 294
     testRunner.And("budgets must be enforced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2336 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2299 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resource Category",
                             "Monthly Budget",
                             "Warning Level",
                             "Hard Stop",
                             "Cost Optimization",
                             "Override Authority"});
-                table2336.AddRow(new string[] {
+                table2299.AddRow(new string[] {
                             "Compute",
                             "$50,000",
                             "$40,000",
                             "$55,000",
                             "Spot instances",
                             "VP approval"});
-                table2336.AddRow(new string[] {
+                table2299.AddRow(new string[] {
                             "Storage",
                             "$20,000",
                             "$16,000",
                             "$22,000",
                             "Lifecycle policies",
                             "Director approval"});
-                table2336.AddRow(new string[] {
+                table2299.AddRow(new string[] {
                             "Network",
                             "$10,000",
                             "$8,000",
                             "$11,000",
                             "CDN optimization",
                             "Manager approval"});
-                table2336.AddRow(new string[] {
+                table2299.AddRow(new string[] {
                             "Database",
                             "$30,000",
                             "$24,000",
                             "$33,000",
                             "Reserved instances",
                             "VP approval"});
-                table2336.AddRow(new string[] {
+                table2299.AddRow(new string[] {
                             "Third-party APIs",
                             "$5,000",
                             "$4,000",
                             "$5,500",
                             "Caching",
                             "Product approval"});
-                table2336.AddRow(new string[] {
+                table2299.AddRow(new string[] {
                             "Total",
                             "$115,000",
                             "$92,000",
@@ -1903,7 +1903,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "All methods",
                             "C-level only"});
 #line 295
-    testRunner.When("implementing cost controls:", ((string)(null)), table2336, "When ");
+    testRunner.When("implementing cost controls:", ((string)(null)), table2299, "When ");
 #line hidden
 #line 303
     testRunner.Then("costs should be tracked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1960,49 +1960,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 311
     testRunner.And("no tenant should monopolize resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2337 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2300 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resource",
                             "Distribution Algorithm",
                             "Minimum Guarantee",
                             "Maximum Limit",
                             "Burst Allowance",
                             "Enforcement"});
-                table2337.AddRow(new string[] {
+                table2300.AddRow(new string[] {
                             "CPU time",
                             "Weighted fair queue",
                             "10% per tenant",
                             "50% per tenant",
                             "2x for 1 minute",
                             "Kernel scheduler"});
-                table2337.AddRow(new string[] {
+                table2300.AddRow(new string[] {
                             "Memory",
                             "Proportional share",
                             "1GB per tenant",
                             "10GB per tenant",
                             "1.5x for 5 minutes",
                             "Memory cgroups"});
-                table2337.AddRow(new string[] {
+                table2300.AddRow(new string[] {
                             "API calls",
                             "Token bucket per tenant",
                             "1K/hour minimum",
                             "100K/hour max",
                             "2x burst capacity",
                             "API gateway"});
-                table2337.AddRow(new string[] {
+                table2300.AddRow(new string[] {
                             "Storage IOPS",
                             "CFQ scheduler",
                             "100 IOPS",
                             "10K IOPS",
                             "3x for 30 seconds",
                             "Block I/O controller"});
-                table2337.AddRow(new string[] {
+                table2300.AddRow(new string[] {
                             "Network bandwidth",
                             "HTB shaping",
                             "10 Mbps",
                             "1 Gbps",
                             "2x for 1 minute",
                             "Traffic control"});
-                table2337.AddRow(new string[] {
+                table2300.AddRow(new string[] {
                             "Queue priority",
                             "Fair queuing",
                             "Equal share",
@@ -2010,7 +2010,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "N/A",
                             "Queue weights"});
 #line 312
-    testRunner.When("implementing fair resource distribution:", ((string)(null)), table2337, "When ");
+    testRunner.When("implementing fair resource distribution:", ((string)(null)), table2300, "When ");
 #line hidden
 #line 320
     testRunner.Then("resources should be distributed fairly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -2067,49 +2067,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 328
     testRunner.And("emergency procedures minimize impact", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2338 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2301 = new TechTalk.SpecFlow.Table(new string[] {
                             "Breach Type",
                             "Immediate Action",
                             "Escalation Path",
                             "Recovery Steps",
                             "Post-Incident",
                             "Prevention"});
-                table2338.AddRow(new string[] {
+                table2301.AddRow(new string[] {
                             "OOM killer activated",
                             "Restart affected pods",
                             "Page on-call",
                             "Add memory capacity",
                             "Root cause analysis",
                             "Memory limits review"});
-                table2338.AddRow(new string[] {
+                table2301.AddRow(new string[] {
                             "Disk full",
                             "Emergency cleanup",
                             "Wake ops team",
                             "Add storage",
                             "Capacity planning",
                             "Monitoring improvement"});
-                table2338.AddRow(new string[] {
+                table2301.AddRow(new string[] {
                             "CPU throttling critical",
                             "Shed load",
                             "All hands",
                             "Scale out",
                             "Performance review",
                             "Architecture review"});
-                table2338.AddRow(new string[] {
+                table2301.AddRow(new string[] {
                             "Database connections exhausted",
                             "Kill idle connections",
                             "Page DBA",
                             "Increase pool size",
                             "Query audit",
                             "Connection pooling"});
-                table2338.AddRow(new string[] {
+                table2301.AddRow(new string[] {
                             "API rate limit ceiling",
                             "Enable strict mode",
                             "Customer communication",
                             "Temporary increase",
                             "Contract review",
                             "Tier adjustment"});
-                table2338.AddRow(new string[] {
+                table2301.AddRow(new string[] {
                             "Network saturated",
                             "Enable compression",
                             "Network team",
@@ -2117,7 +2117,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Traffic analysis",
                             "CDN expansion"});
 #line 329
-    testRunner.When("limits are critically breached:", ((string)(null)), table2338, "When ");
+    testRunner.When("limits are critically breached:", ((string)(null)), table2301, "When ");
 #line hidden
 #line 337
     testRunner.Then("emergencies should be handled quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -2174,49 +2174,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
 #line 345
     testRunner.And("elastic limits improve utilization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2339 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2302 = new TechTalk.SpecFlow.Table(new string[] {
                             "Limit Type",
                             "Base Value",
                             "Elasticity Range",
                             "Adaptation Speed",
                             "Decision Criteria",
                             "Safety Bounds"});
-                table2339.AddRow(new string[] {
+                table2302.AddRow(new string[] {
                             "Auto-scaling",
                             "10 instances",
                             "5-100 instances",
                             "2 min response",
                             "CPU + queue depth",
                             "Cost ceiling"});
-                table2339.AddRow(new string[] {
+                table2302.AddRow(new string[] {
                             "Memory allocation",
                             "4GB",
                             "2GB-16GB",
                             "30 sec response",
                             "Memory pressure",
                             "OOM prevention"});
-                table2339.AddRow(new string[] {
+                table2302.AddRow(new string[] {
                             "API rate limits",
                             "1K/hour",
                             "500-5K/hour",
                             "5 min window",
                             "Success rate",
                             "Abuse detection"});
-                table2339.AddRow(new string[] {
+                table2302.AddRow(new string[] {
                             "Storage quotas",
                             "100GB",
                             "50GB-500GB",
                             "Daily adjustment",
                             "Usage patterns",
                             "Total capacity"});
-                table2339.AddRow(new string[] {
+                table2302.AddRow(new string[] {
                             "Connection pools",
                             "50 connections",
                             "20-200",
                             "1 min response",
                             "Wait time",
                             "Database limits"});
-                table2339.AddRow(new string[] {
+                table2302.AddRow(new string[] {
                             "Bandwidth allocation",
                             "100 Mbps",
                             "50-1000 Mbps",
@@ -2224,7 +2224,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Scalability
                             "Traffic priority",
                             "Link capacity"});
 #line 346
-    testRunner.When("implementing elastic limits:", ((string)(null)), table2339, "When ");
+    testRunner.When("implementing elastic limits:", ((string)(null)), table2302, "When ");
 #line hidden
 #line 354
     testRunner.Then("limits should adapt to demand", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

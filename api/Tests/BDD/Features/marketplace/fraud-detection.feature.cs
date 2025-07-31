@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 17
     testRunner.And("real-time detection is essential for fraud prevention", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1632 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1595 = new TechTalk.SpecFlow.Table(new string[] {
                             "Fraud Type",
                             "Detection Signals",
                             "Risk Indicators",
                             "Response Time",
                             "Action Thresholds",
                             "Prevention Measures"});
-                table1632.AddRow(new string[] {
+                table1595.AddRow(new string[] {
                             "Credit card fraud",
                             "Card validation, velocity",
                             "Stolen card patterns",
                             "<30 seconds",
                             "High risk: block",
                             "Real-time verification"});
-                table1632.AddRow(new string[] {
+                table1595.AddRow(new string[] {
                             "Chargeback fraud",
                             "Dispute patterns",
                             "Chargeback history",
                             "<1 minute",
                             "Medium risk: flag",
                             "Purchase verification"});
-                table1632.AddRow(new string[] {
+                table1595.AddRow(new string[] {
                             "Account takeover",
                             "Login anomalies",
                             "Credential stuffing",
                             "<10 seconds",
                             "Suspicious: MFA",
                             "Account monitoring"});
-                table1632.AddRow(new string[] {
+                table1595.AddRow(new string[] {
                             "Identity theft",
                             "Identity verification",
                             "Synthetic identity",
                             "<2 minutes",
                             "Identity mismatch: block",
                             "Identity validation"});
-                table1632.AddRow(new string[] {
+                table1595.AddRow(new string[] {
                             "Money laundering",
                             "Transaction patterns",
                             "Suspicious flows",
                             "<5 minutes",
                             "Pattern detection: investigate",
                             "Transaction monitoring"});
-                table1632.AddRow(new string[] {
+                table1595.AddRow(new string[] {
                             "Refund fraud",
                             "Refund patterns",
                             "Abuse indicators",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Abuse threshold: reject",
                             "Refund policy enforcement"});
 #line 18
-    testRunner.When("implementing payment fraud detection:", ((string)(null)), table1632, "When ");
+    testRunner.When("implementing payment fraud detection:", ((string)(null)), table1595, "When ");
 #line hidden
 #line 26
     testRunner.Then("detection should be real-time and accurate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 34
     testRunner.And("comprehensive monitoring protects legitimate sellers and buyers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1633 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1596 = new TechTalk.SpecFlow.Table(new string[] {
                             "Seller Fraud Type",
                             "Detection Methods",
                             "Risk Assessment",
                             "Investigation Process",
                             "Enforcement Actions",
                             "Rehabilitation Options"});
-                table1633.AddRow(new string[] {
+                table1596.AddRow(new string[] {
                             "Fake product listings",
                             "Content analysis, image matching",
                             "Product authenticity score",
                             "Manual review",
                             "Listing removal",
                             "Content correction"});
-                table1633.AddRow(new string[] {
+                table1596.AddRow(new string[] {
                             "Review manipulation",
                             "Review pattern analysis",
                             "Manipulation probability",
                             "Algorithm + human review",
                             "Review removal",
                             "Seller education"});
-                table1633.AddRow(new string[] {
+                table1596.AddRow(new string[] {
                             "Price manipulation",
                             "Pricing anomaly detection",
                             "Market distortion score",
                             "Competitive analysis",
                             "Price correction",
                             "Pricing guidelines"});
-                table1633.AddRow(new string[] {
+                table1596.AddRow(new string[] {
                             "Inventory fraud",
                             "Stock inconsistency detection",
                             "Availability reliability",
                             "Inventory audit",
                             "Listing suspension",
                             "Inventory verification"});
-                table1633.AddRow(new string[] {
+                table1596.AddRow(new string[] {
                             "Credential fraud",
                             "Credential verification",
                             "Professional authenticity",
                             "Credential validation",
                             "Account suspension",
                             "Re-verification process"});
-                table1633.AddRow(new string[] {
+                table1596.AddRow(new string[] {
                             "Intellectual property theft",
                             "Content similarity detection",
                             "IP violation probability",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Content removal",
                             "IP education"});
 #line 35
-    testRunner.When("implementing seller fraud detection:", ((string)(null)), table1633, "When ");
+    testRunner.When("implementing seller fraud detection:", ((string)(null)), table1596, "When ");
 #line hidden
 #line 43
     testRunner.Then("seller fraud should be detected comprehensively", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 51
     testRunner.And("abuse prevention protects legitimate marketplace participants", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1634 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1597 = new TechTalk.SpecFlow.Table(new string[] {
                             "Buyer Fraud Type",
                             "Detection Indicators",
                             "Risk Calculation",
                             "Response Strategy",
                             "Protection Measures",
                             "Recovery Procedures"});
-                table1634.AddRow(new string[] {
+                table1597.AddRow(new string[] {
                             "Payment fraud",
                             "Payment failure patterns",
                             "Payment risk score",
                             "Payment blocking",
                             "Seller protection",
                             "Payment verification"});
-                table1634.AddRow(new string[] {
+                table1597.AddRow(new string[] {
                             "Return fraud",
                             "Return abuse patterns",
                             "Return abuse score",
                             "Return restrictions",
                             "Return policy enforcement",
                             "Legitimate return support"});
-                table1634.AddRow(new string[] {
+                table1597.AddRow(new string[] {
                             "Coupon fraud",
                             "Coupon misuse detection",
                             "Coupon abuse score",
                             "Coupon invalidation",
                             "Coupon security",
                             "Valid usage restoration"});
-                table1634.AddRow(new string[] {
+                table1597.AddRow(new string[] {
                             "Account farming",
                             "Account creation patterns",
                             "Fake account probability",
                             "Account suspension",
                             "Platform protection",
                             "Identity verification"});
-                table1634.AddRow(new string[] {
+                table1597.AddRow(new string[] {
                             "Content theft",
                             "Download abuse patterns",
                             "Usage violation score",
                             "Access restriction",
                             "Content protection",
                             "Usage education"});
-                table1634.AddRow(new string[] {
+                table1597.AddRow(new string[] {
                             "Service abuse",
                             "Platform misuse detection",
                             "Abuse severity score",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Service protection",
                             "Behavior correction"});
 #line 52
-    testRunner.When("implementing buyer fraud detection:", ((string)(null)), table1634, "When ");
+    testRunner.When("implementing buyer fraud detection:", ((string)(null)), table1597, "When ");
 #line hidden
 #line 60
     testRunner.Then("buyer fraud should be identified accurately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 68
     testRunner.And("systematic detection prevents large-scale fraud", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1635 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1598 = new TechTalk.SpecFlow.Table(new string[] {
                             "Attack Type",
                             "Pattern Recognition",
                             "Network Analysis",
                             "Coordination Indicators",
                             "Response Coordination",
                             "Disruption Strategies"});
-                table1635.AddRow(new string[] {
+                table1598.AddRow(new string[] {
                             "Bot networks",
                             "Behavioral similarity",
                             "Network topology",
                             "Synchronized actions",
                             "Multi-layer blocking",
                             "Network disruption"});
-                table1635.AddRow(new string[] {
+                table1598.AddRow(new string[] {
                             "Click farms",
                             "Geographic clustering",
                             "IP relationships",
                             "Volume anomalies",
                             "Geographic blocking",
                             "Traffic filtering"});
-                table1635.AddRow(new string[] {
+                table1598.AddRow(new string[] {
                             "Rating manipulation rings",
                             "Review coordination",
                             "Reviewer connections",
                             "Timing patterns",
                             "Account network suspension",
                             "Review validation"});
-                table1635.AddRow(new string[] {
+                table1598.AddRow(new string[] {
                             "Price fixing schemes",
                             "Pricing coordination",
                             "Seller relationships",
                             "Market manipulation",
                             "Anti-trust investigation",
                             "Market correction"});
-                table1635.AddRow(new string[] {
+                table1598.AddRow(new string[] {
                             "Inventory manipulation",
                             "Stock coordination",
                             "Supply chain analysis",
                             "Artificial scarcity",
                             "Inventory investigation",
                             "Supply restoration"});
-                table1635.AddRow(new string[] {
+                table1598.AddRow(new string[] {
                             "Account sharing networks",
                             "Access pattern analysis",
                             "Credential sharing",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Shared account termination",
                             "Individual verification"});
 #line 69
-    testRunner.When("implementing systematic fraud detection:", ((string)(null)), table1635, "When ");
+    testRunner.When("implementing systematic fraud detection:", ((string)(null)), table1598, "When ");
 #line hidden
 #line 77
     testRunner.Then("systematic attacks should be detected early", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 86
     testRunner.And("machine learning improves detection accuracy over time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1636 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1599 = new TechTalk.SpecFlow.Table(new string[] {
                             "AI Technology",
                             "Application Area",
                             "Training Data",
                             "Accuracy Target",
                             "False Positive Rate",
                             "Learning Frequency"});
-                table1636.AddRow(new string[] {
+                table1599.AddRow(new string[] {
                             "Neural networks",
                             "Transaction pattern analysis",
                             "Historical fraud data",
                             "95% accuracy",
                             "<3% false positives",
                             "Daily retraining"});
-                table1636.AddRow(new string[] {
+                table1599.AddRow(new string[] {
                             "Anomaly detection",
                             "Behavioral deviation identification",
                             "Normal behavior baselines",
                             "90% accuracy",
                             "<5% false positives",
                             "Real-time learning"});
-                table1636.AddRow(new string[] {
+                table1599.AddRow(new string[] {
                             "Graph neural networks",
                             "Network relationship analysis",
                             "Connection patterns",
                             "92% accuracy",
                             "<4% false positives",
                             "Weekly updates"});
-                table1636.AddRow(new string[] {
+                table1599.AddRow(new string[] {
                             "Natural language processing",
                             "Content fraud detection",
                             "Text patterns",
                             "88% accuracy",
                             "<6% false positives",
                             "Bi-weekly updates"});
-                table1636.AddRow(new string[] {
+                table1599.AddRow(new string[] {
                             "Computer vision",
                             "Image fraud detection",
                             "Visual content",
                             "93% accuracy",
                             "<3% false positives",
                             "Monthly updates"});
-                table1636.AddRow(new string[] {
+                table1599.AddRow(new string[] {
                             "Ensemble methods",
                             "Multi-model fraud scoring",
                             "Combined predictions",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "<2% false positives",
                             "Continuous optimization"});
 #line 87
-    testRunner.When("implementing AI fraud detection:", ((string)(null)), table1636, "When ");
+    testRunner.When("implementing AI fraud detection:", ((string)(null)), table1599, "When ");
 #line hidden
 #line 95
     testRunner.Then("AI models should achieve high accuracy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 103
     testRunner.And("user profiling enables risk assessment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1637 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1600 = new TechTalk.SpecFlow.Table(new string[] {
                             "Behavioral Signal",
                             "Analysis Method",
                             "Profile Elements",
                             "Risk Weighting",
                             "Detection Window",
                             "Action Thresholds"});
-                table1637.AddRow(new string[] {
+                table1600.AddRow(new string[] {
                             "Mouse movement patterns",
                             "Trajectory analysis",
                             "Movement characteristics",
                             "15% weight",
                             "Real-time",
                             "Bot probability >80%"});
-                table1637.AddRow(new string[] {
+                table1600.AddRow(new string[] {
                             "Typing patterns",
                             "Keystroke dynamics",
                             "Typing rhythm",
                             "10% weight",
                             "Session-based",
                             "Human verification"});
-                table1637.AddRow(new string[] {
+                table1600.AddRow(new string[] {
                             "Navigation patterns",
                             "Click path analysis",
                             "Site usage patterns",
                             "20% weight",
                             "Multi-session",
                             "Anomaly score >70%"});
-                table1637.AddRow(new string[] {
+                table1600.AddRow(new string[] {
                             "Time-based behaviors",
                             "Temporal analysis",
                             "Activity timing",
                             "12% weight",
                             "24-hour cycles",
                             "Night activity flags"});
-                table1637.AddRow(new string[] {
+                table1600.AddRow(new string[] {
                             "Device fingerprinting",
                             "Hardware profiling",
                             "Device characteristics",
                             "18% weight",
                             "Per device",
                             "Device sharing >60%"});
-                table1637.AddRow(new string[] {
+                table1600.AddRow(new string[] {
                             "Geographic consistency",
                             "Location analysis",
                             "IP geolocation",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Location changes",
                             "VPN/proxy detection"});
 #line 104
-    testRunner.When("implementing behavioral fraud detection:", ((string)(null)), table1637, "When ");
+    testRunner.When("implementing behavioral fraud detection:", ((string)(null)), table1600, "When ");
 #line hidden
 #line 112
     testRunner.Then("behavioral analysis should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 120
     testRunner.And("threat intelligence provides external context", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1638 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1601 = new TechTalk.SpecFlow.Table(new string[] {
                             "Monitoring Component",
                             "Data Sources",
                             "Processing Speed",
                             "Alert Generation",
                             "Intelligence Integration",
                             "Response Automation"});
-                table1638.AddRow(new string[] {
+                table1601.AddRow(new string[] {
                             "Transaction monitoring",
                             "Payment systems",
                             "<100ms processing",
                             "Risk-based alerts",
                             "Payment blacklists",
                             "Automatic blocking"});
-                table1638.AddRow(new string[] {
+                table1601.AddRow(new string[] {
                             "Account activity monitoring",
                             "User behavior",
                             "Real-time streaming",
                             "Behavioral alerts",
                             "Known threat indicators",
                             "Account flagging"});
-                table1638.AddRow(new string[] {
+                table1601.AddRow(new string[] {
                             "Content monitoring",
                             "Platform content",
                             "<500ms analysis",
                             "Content alerts",
                             "IP violation databases",
                             "Content removal"});
-                table1638.AddRow(new string[] {
+                table1601.AddRow(new string[] {
                             "Network monitoring",
                             "Traffic analysis",
                             "<50ms processing",
                             "Network alerts",
                             "Botnet intelligence",
                             "Traffic filtering"});
-                table1638.AddRow(new string[] {
+                table1601.AddRow(new string[] {
                             "Device monitoring",
                             "Device signals",
                             "<200ms analysis",
                             "Device alerts",
                             "Device reputation",
                             "Device blocking"});
-                table1638.AddRow(new string[] {
+                table1601.AddRow(new string[] {
                             "Geographic monitoring",
                             "Location data",
                             "<300ms processing",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Geographic risk data",
                             "Location restrictions"});
 #line 121
-    testRunner.When("implementing real-time fraud monitoring:", ((string)(null)), table1638, "When ");
+    testRunner.When("implementing real-time fraud monitoring:", ((string)(null)), table1601, "When ");
 #line hidden
 #line 129
     testRunner.Then("monitoring should operate in real-time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 138
     testRunner.And("adaptive algorithms improve with new fraud patterns", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1639 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1602 = new TechTalk.SpecFlow.Table(new string[] {
                             "Risk Factor",
                             "Scoring Algorithm",
                             "Weight Assignment",
                             "Adaptation Method",
                             "Score Range",
                             "Decision Thresholds"});
-                table1639.AddRow(new string[] {
+                table1602.AddRow(new string[] {
                             "Transaction history",
                             "Historical analysis",
                             "Data-driven weights",
                             "Machine learning",
                             "0-100 scale",
                             "Low: <20, High: >80"});
-                table1639.AddRow(new string[] {
+                table1602.AddRow(new string[] {
                             "Account age and activity",
                             "Temporal analysis",
                             "Age-weighted scoring",
                             "Behavioral learning",
                             "0-100 scale",
                             "New: >60, Established: >90"});
-                table1639.AddRow(new string[] {
+                table1602.AddRow(new string[] {
                             "Device and location",
                             "Geographic analysis",
                             "Location risk weighting",
                             "Geographic learning",
                             "0-100 scale",
                             "Known: <30, Unknown: >70"});
-                table1639.AddRow(new string[] {
+                table1602.AddRow(new string[] {
                             "Network associations",
                             "Graph analysis",
                             "Network risk propagation",
                             "Network learning",
                             "0-100 scale",
                             "Isolated: <40, Connected: >70"});
-                table1639.AddRow(new string[] {
+                table1602.AddRow(new string[] {
                             "Behavioral consistency",
                             "Pattern analysis",
                             "Consistency scoring",
                             "Behavioral adaptation",
                             "0-100 scale",
                             "Consistent: <25, Anomalous: >75"});
-                table1639.AddRow(new string[] {
+                table1602.AddRow(new string[] {
                             "External intelligence",
                             "Threat feeds",
                             "Intelligence weighting",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "0-100 scale",
                             "Clean: <15, Flagged: >85"});
 #line 139
-    testRunner.When("implementing risk scoring systems:", ((string)(null)), table1639, "When ");
+    testRunner.When("implementing risk scoring systems:", ((string)(null)), table1602, "When ");
 #line hidden
 #line 147
     testRunner.Then("risk scoring should be comprehensive and dynamic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 155
     testRunner.And("real-time scoring enables instant protection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1640 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1603 = new TechTalk.SpecFlow.Table(new string[] {
                             "Scoring Scenario",
                             "Response Time",
                             "Scoring Complexity",
                             "Data Integration",
                             "Decision Automation",
                             "Accuracy Requirement"});
-                table1640.AddRow(new string[] {
+                table1603.AddRow(new string[] {
                             "Payment authorization",
                             "<200ms",
                             "Multi-factor analysis",
                             "Real-time data",
                             "Automatic approve/deny",
                             "98% accuracy"});
-                table1640.AddRow(new string[] {
+                table1603.AddRow(new string[] {
                             "Account access",
                             "<100ms",
                             "Behavioral analysis",
                             "Session data",
                             "Automatic/MFA/block",
                             "96% accuracy"});
-                table1640.AddRow(new string[] {
+                table1603.AddRow(new string[] {
                             "Content publication",
                             "<500ms",
                             "Content analysis",
                             "Content databases",
                             "Automatic moderate",
                             "94% accuracy"});
-                table1640.AddRow(new string[] {
+                table1603.AddRow(new string[] {
                             "Transaction initiation",
                             "<150ms",
                             "Transaction analysis",
                             "Transaction history",
                             "Risk-based processing",
                             "97% accuracy"});
-                table1640.AddRow(new string[] {
+                table1603.AddRow(new string[] {
                             "Account creation",
                             "<300ms",
                             "Registration analysis",
                             "Identity verification",
                             "Automatic approve/verify",
                             "95% accuracy"});
-                table1640.AddRow(new string[] {
+                table1603.AddRow(new string[] {
                             "High-value activities",
                             "<250ms",
                             "Comprehensive analysis",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Enhanced verification",
                             "99% accuracy"});
 #line 156
-    testRunner.When("implementing real-time risk scoring:", ((string)(null)), table1640, "When ");
+    testRunner.When("implementing real-time risk scoring:", ((string)(null)), table1603, "When ");
 #line hidden
 #line 164
     testRunner.Then("real-time scoring should be lightning-fast", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 173
     testRunner.And("case management enables systematic fraud response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1641 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1604 = new TechTalk.SpecFlow.Table(new string[] {
                             "Investigation Stage",
                             "Process Requirements",
                             "Evidence Collection",
                             "Analysis Methods",
                             "Decision Criteria",
                             "Documentation Standards"});
-                table1641.AddRow(new string[] {
+                table1604.AddRow(new string[] {
                             "Initial assessment",
                             "Rapid triage",
                             "Automated evidence gathering",
                             "Risk score analysis",
                             "Clear thresholds",
                             "Standardized case creation"});
-                table1641.AddRow(new string[] {
+                table1604.AddRow(new string[] {
                             "Detailed investigation",
                             "Thorough analysis",
                             "Manual evidence review",
                             "Expert analysis",
                             "Evidence-based decisions",
                             "Comprehensive documentation"});
-                table1641.AddRow(new string[] {
+                table1604.AddRow(new string[] {
                             "External verification",
                             "Third-party validation",
                             "External data sources",
                             "Cross-reference verification",
                             "Multi-source confirmation",
                             "Verified evidence chain"});
-                table1641.AddRow(new string[] {
+                table1604.AddRow(new string[] {
                             "Resolution determination",
                             "Final decision",
                             "Complete evidence review",
                             "Holistic analysis",
                             "Fair adjudication",
                             "Decision rationale"});
-                table1641.AddRow(new string[] {
+                table1604.AddRow(new string[] {
                             "Implementation",
                             "Action execution",
                             "Implementation tracking",
                             "Outcome monitoring",
                             "Effective enforcement",
                             "Action documentation"});
-                table1641.AddRow(new string[] {
+                table1604.AddRow(new string[] {
                             "Appeals handling",
                             "Appeal review",
                             "Additional evidence",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Appeal criteria",
                             "Appeal documentation"});
 #line 174
-    testRunner.When("implementing fraud investigation processes:", ((string)(null)), table1641, "When ");
+    testRunner.When("implementing fraud investigation processes:", ((string)(null)), table1604, "When ");
 #line hidden
 #line 182
     testRunner.Then("investigations should be thorough and fair", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 190
     testRunner.And("digital evidence must be properly collected and analyzed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1642 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1605 = new TechTalk.SpecFlow.Table(new string[] {
                             "Forensic Area",
                             "Analysis Techniques",
                             "Evidence Types",
                             "Tool Requirements",
                             "Expertise Level",
                             "Legal Standards"});
-                table1642.AddRow(new string[] {
+                table1605.AddRow(new string[] {
                             "Digital footprints",
                             "Log analysis",
                             "Access logs, IP traces",
                             "Forensic software",
                             "Expert analyst",
                             "Legal admissibility"});
-                table1642.AddRow(new string[] {
+                table1605.AddRow(new string[] {
                             "Financial flows",
                             "Transaction tracing",
                             "Payment records",
                             "Financial analysis tools",
                             "Financial expert",
                             "Audit standards"});
-                table1642.AddRow(new string[] {
+                table1605.AddRow(new string[] {
                             "Communication patterns",
                             "Communication analysis",
                             "Messages, emails",
                             "Communication tools",
                             "Communication analyst",
                             "Privacy compliance"});
-                table1642.AddRow(new string[] {
+                table1605.AddRow(new string[] {
                             "Network activity",
                             "Network forensics",
                             "Network logs",
                             "Network analysis tools",
                             "Network expert",
                             "Technical standards"});
-                table1642.AddRow(new string[] {
+                table1605.AddRow(new string[] {
                             "Device analysis",
                             "Device forensics",
                             "Device data",
                             "Forensic hardware",
                             "Device expert",
                             "Chain of custody"});
-                table1642.AddRow(new string[] {
+                table1605.AddRow(new string[] {
                             "Content analysis",
                             "Content forensics",
                             "Digital content",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Content expert",
                             "Intellectual property law"});
 #line 191
-    testRunner.When("conducting forensic analysis:", ((string)(null)), table1642, "When ");
+    testRunner.When("conducting forensic analysis:", ((string)(null)), table1605, "When ");
 #line hidden
 #line 199
     testRunner.Then("forensic analysis should be professionally conducted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 207
     testRunner.And("remediation should enable rehabilitation when appropriate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1643 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1606 = new TechTalk.SpecFlow.Table(new string[] {
                             "Violation Severity",
                             "Enforcement Actions",
                             "Remediation Options",
                             "Appeal Rights",
                             "Monitoring Requirements",
                             "Success Metrics"});
-                table1643.AddRow(new string[] {
+                table1606.AddRow(new string[] {
                             "Minor violations",
                             "Warning, education",
                             "Corrective training",
                             "Standard appeal",
                             "Basic monitoring",
                             "Behavior improvement"});
-                table1643.AddRow(new string[] {
+                table1606.AddRow(new string[] {
                             "Moderate violations",
                             "Temporary restrictions",
                             "Probationary period",
                             "Enhanced appeal",
                             "Enhanced monitoring",
                             "Compliance achievement"});
-                table1643.AddRow(new string[] {
+                table1606.AddRow(new string[] {
                             "Serious violations",
                             "Account suspension",
                             "Verification process",
                             "Formal appeal",
                             "Intensive monitoring",
                             "Full rehabilitation"});
-                table1643.AddRow(new string[] {
+                table1606.AddRow(new string[] {
                             "Severe violations",
                             "Account termination",
                             "Re-application process",
                             "Executive appeal",
                             "Permanent monitoring",
                             "New account compliance"});
-                table1643.AddRow(new string[] {
+                table1606.AddRow(new string[] {
                             "Criminal activity",
                             "Legal action",
                             "Legal resolution",
                             "Legal process",
                             "Law enforcement cooperation",
                             "Legal outcome"});
-                table1643.AddRow(new string[] {
+                table1606.AddRow(new string[] {
                             "Systemic abuse",
                             "Network disruption",
                             "Network rehabilitation",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Network monitoring",
                             "Network compliance"});
 #line 208
-    testRunner.When("implementing enforcement strategies:", ((string)(null)), table1643, "When ");
+    testRunner.When("implementing enforcement strategies:", ((string)(null)), table1606, "When ");
 #line hidden
 #line 216
     testRunner.Then("enforcement should be fair and proportional", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 225
     testRunner.And("awareness improves overall platform security", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1644 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1607 = new TechTalk.SpecFlow.Table(new string[] {
                             "Education Target",
                             "Education Content",
                             "Delivery Methods",
                             "Engagement Metrics",
                             "Effectiveness Measures",
                             "Update Frequency"});
-                table1644.AddRow(new string[] {
+                table1607.AddRow(new string[] {
                             "New users",
                             "Basic security awareness",
                             "Onboarding tutorials",
                             "Completion rates",
                             "Security behavior improvement",
                             "Monthly updates"});
-                table1644.AddRow(new string[] {
+                table1607.AddRow(new string[] {
                             "Existing users",
                             "Advanced security practices",
                             "Email campaigns, notifications",
                             "Engagement rates",
                             "Incident reduction",
                             "Quarterly updates"});
-                table1644.AddRow(new string[] {
+                table1607.AddRow(new string[] {
                             "Sellers",
                             "Seller-specific threats",
                             "Seller resources, webinars",
                             "Participation rates",
                             "Seller protection improvement",
                             "Bi-annual updates"});
-                table1644.AddRow(new string[] {
+                table1607.AddRow(new string[] {
                             "High-risk users",
                             "Targeted security education",
                             "Personalized communications",
                             "Response rates",
                             "Risk behavior reduction",
                             "As-needed updates"});
-                table1644.AddRow(new string[] {
+                table1607.AddRow(new string[] {
                             "All users",
                             "Emerging threat awareness",
                             "Platform announcements",
                             "Awareness rates",
                             "Threat preparedness",
                             "Real-time updates"});
-                table1644.AddRow(new string[] {
+                table1607.AddRow(new string[] {
                             "Support staff",
                             "Fraud recognition training",
                             "Training programs",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Detection improvement",
                             "Annual updates"});
 #line 226
-    testRunner.When("implementing fraud prevention education:", ((string)(null)), table1644, "When ");
+    testRunner.When("implementing fraud prevention education:", ((string)(null)), table1607, "When ");
 #line hidden
 #line 234
     testRunner.Then("education should be comprehensive and relevant", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 242
     testRunner.And("security enhancements reduce fraud opportunities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1645 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1608 = new TechTalk.SpecFlow.Table(new string[] {
                             "Prevention Area",
                             "Proactive Measures",
                             "Implementation Timeline",
                             "Effectiveness Metrics",
                             "Cost-Benefit Analysis",
                             "Maintenance Requirements"});
-                table1645.AddRow(new string[] {
+                table1608.AddRow(new string[] {
                             "Identity verification",
                             "Enhanced KYC processes",
                             "30-day implementation",
                             "Identity fraud reduction",
                             "ROI calculation",
                             "Quarterly verification updates"});
-                table1645.AddRow(new string[] {
+                table1608.AddRow(new string[] {
                             "Payment security",
                             "Advanced payment validation",
                             "60-day implementation",
                             "Payment fraud reduction",
                             "Cost comparison",
                             "Monthly security updates"});
-                table1645.AddRow(new string[] {
+                table1608.AddRow(new string[] {
                             "Content protection",
                             "Automated content verification",
                             "45-day implementation",
                             "Content fraud reduction",
                             "Efficiency analysis",
                             "Ongoing content monitoring"});
-                table1645.AddRow(new string[] {
+                table1608.AddRow(new string[] {
                             "Access controls",
                             "Multi-factor authentication",
                             "14-day implementation",
                             "Account takeover reduction",
                             "Security improvement",
                             "Daily access monitoring"});
-                table1645.AddRow(new string[] {
+                table1608.AddRow(new string[] {
                             "Network security",
                             "Advanced traffic filtering",
                             "90-day implementation",
                             "Network attack reduction",
                             "Security enhancement",
                             "Continuous monitoring"});
-                table1645.AddRow(new string[] {
+                table1608.AddRow(new string[] {
                             "Behavioral barriers",
                             "Friction for suspicious activities",
                             "21-day implementation",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "User experience balance",
                             "Weekly optimization"});
 #line 243
-    testRunner.When("implementing proactive fraud prevention:", ((string)(null)), table1645, "When ");
+    testRunner.When("implementing proactive fraud prevention:", ((string)(null)), table1608, "When ");
 #line hidden
 #line 251
     testRunner.Then("prevention should be comprehensive and layered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 260
     testRunner.And("intelligence reports enable proactive threat management", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1646 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1609 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Category",
                             "Report Types",
                             "Data Sources",
                             "Analysis Depth",
                             "Audience",
                             "Frequency"});
-                table1646.AddRow(new string[] {
+                table1609.AddRow(new string[] {
                             "Fraud trends",
                             "Trend analysis reports",
                             "Historical fraud data",
                             "Statistical analysis",
                             "Security team",
                             "Weekly"});
-                table1646.AddRow(new string[] {
+                table1609.AddRow(new string[] {
                             "Attack patterns",
                             "Pattern recognition reports",
                             "Attack data",
                             "Pattern analysis",
                             "Incident response",
                             "Daily"});
-                table1646.AddRow(new string[] {
+                table1609.AddRow(new string[] {
                             "Risk assessments",
                             "Risk evaluation reports",
                             "Risk factors",
                             "Risk modeling",
                             "Management",
                             "Monthly"});
-                table1646.AddRow(new string[] {
+                table1609.AddRow(new string[] {
                             "Prevention effectiveness",
                             "Prevention metrics",
                             "Prevention systems",
                             "Effectiveness analysis",
                             "Operations",
                             "Bi-weekly"});
-                table1646.AddRow(new string[] {
+                table1609.AddRow(new string[] {
                             "Financial impact",
                             "Loss analysis reports",
                             "Financial data",
                             "Impact analysis",
                             "Finance team",
                             "Monthly"});
-                table1646.AddRow(new string[] {
+                table1609.AddRow(new string[] {
                             "Threat intelligence",
                             "Intelligence briefings",
                             "External sources",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Security leadership",
                             "Real-time"});
 #line 261
-    testRunner.When("generating fraud analytics:", ((string)(null)), table1646, "When ");
+    testRunner.When("generating fraud analytics:", ((string)(null)), table1609, "When ");
 #line hidden
 #line 269
     testRunner.Then("analytics should provide actionable insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 277
     testRunner.And("optimization improves fraud prevention capabilities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1647 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1610 = new TechTalk.SpecFlow.Table(new string[] {
                             "Performance Metric",
                             "Measurement Method",
                             "Target Performance",
                             "Optimization Triggers",
                             "Improvement Actions",
                             "Success Indicators"});
-                table1647.AddRow(new string[] {
+                table1610.AddRow(new string[] {
                             "Detection accuracy",
                             "True positive/negative rates",
                             ">95% accuracy",
                             "<93% accuracy",
                             "Model retraining",
                             "Accuracy improvement"});
-                table1647.AddRow(new string[] {
+                table1610.AddRow(new string[] {
                             "False positive rate",
                             "Incorrect fraud flags",
                             "<3% false positives",
                             ">5% false positives",
                             "Threshold adjustment",
                             "Rate reduction"});
-                table1647.AddRow(new string[] {
+                table1610.AddRow(new string[] {
                             "Response time",
                             "Alert to action time",
                             "<5 minutes average",
                             ">10 minutes",
                             "Process optimization",
                             "Time reduction"});
-                table1647.AddRow(new string[] {
+                table1610.AddRow(new string[] {
                             "Coverage effectiveness",
                             "Fraud type coverage",
                             "100% fraud type coverage",
                             "<95% coverage",
                             "System enhancement",
                             "Coverage improvement"});
-                table1647.AddRow(new string[] {
+                table1610.AddRow(new string[] {
                             "Cost effectiveness",
                             "Cost per fraud prevented",
                             "ROI >10:1",
                             "ROI <5:1",
                             "Cost optimization",
                             "ROI improvement"});
-                table1647.AddRow(new string[] {
+                table1610.AddRow(new string[] {
                             "User experience impact",
                             "Legitimate user friction",
                             "<2% user complaints",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "UX optimization",
                             "Complaint reduction"});
 #line 278
-    testRunner.When("tracking fraud detection performance:", ((string)(null)), table1647, "When ");
+    testRunner.When("tracking fraud detection performance:", ((string)(null)), table1610, "When ");
 #line hidden
 #line 286
     testRunner.Then("performance should be continuously monitored", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1851,49 +1851,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 294
     testRunner.Given("fraud detection system failures can expose platform to risk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1648 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1611 = new TechTalk.SpecFlow.Table(new string[] {
                             "Error Type",
                             "Detection Method",
                             "Recovery Process",
                             "Timeline",
                             "Risk Mitigation",
                             "Prevention Measures"});
-                table1648.AddRow(new string[] {
+                table1611.AddRow(new string[] {
                             "Model failures",
                             "Performance monitoring",
                             "Model rollback",
                             "<10 minutes",
                             "Backup models",
                             "Model validation"});
-                table1648.AddRow(new string[] {
+                table1611.AddRow(new string[] {
                             "False positive spikes",
                             "Alert monitoring",
                             "Threshold adjustment",
                             "<5 minutes",
                             "Manual review",
                             "Alert tuning"});
-                table1648.AddRow(new string[] {
+                table1611.AddRow(new string[] {
                             "Data pipeline failures",
                             "Pipeline monitoring",
                             "Pipeline restart",
                             "<15 minutes",
                             "Cached data",
                             "Pipeline redundancy"});
-                table1648.AddRow(new string[] {
+                table1611.AddRow(new string[] {
                             "Integration failures",
                             "Connection monitoring",
                             "Connection restoration",
                             "<20 minutes",
                             "Offline mode",
                             "Integration redundancy"});
-                table1648.AddRow(new string[] {
+                table1611.AddRow(new string[] {
                             "Performance degradation",
                             "Performance monitoring",
                             "Resource scaling",
                             "<3 minutes",
                             "Graceful degradation",
                             "Capacity planning"});
-                table1648.AddRow(new string[] {
+                table1611.AddRow(new string[] {
                             "Alert system failures",
                             "Alert monitoring",
                             "Alert system restart",
@@ -1901,7 +1901,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Backup alerts",
                             "Alert redundancy"});
 #line 295
-    testRunner.When("fraud detection errors occur:", ((string)(null)), table1648, "When ");
+    testRunner.When("fraud detection errors occur:", ((string)(null)), table1611, "When ");
 #line hidden
 #line 303
     testRunner.Then("errors should be detected and resolved quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1955,49 +1955,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 310
     testRunner.Given("fraud patterns evolve and require adaptive defenses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1649 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1612 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table1649.AddRow(new string[] {
+                table1612.AddRow(new string[] {
                             "Threat evolution",
                             "Changing fraud tactics",
                             "Adaptive detection systems",
                             "AI/ML resources",
                             "Detection accuracy maintenance",
                             "Security sustainability"});
-                table1649.AddRow(new string[] {
+                table1612.AddRow(new string[] {
                             "Scale management",
                             "Growing platform size",
                             "Scalable detection architecture",
                             "Infrastructure resources",
                             "Linear performance scaling",
                             "Performance sustainability"});
-                table1649.AddRow(new string[] {
+                table1612.AddRow(new string[] {
                             "Model accuracy",
                             "Model drift over time",
                             "Continuous learning systems",
                             "Data science resources",
                             "Sustained accuracy",
                             "Accuracy sustainability"});
-                table1649.AddRow(new string[] {
+                table1612.AddRow(new string[] {
                             "Cost management",
                             "Detection system costs",
                             "Cost-effective optimization",
                             "Budget optimization",
                             "Controlled costs",
                             "Financial sustainability"});
-                table1649.AddRow(new string[] {
+                table1612.AddRow(new string[] {
                             "Team expertise",
                             "Security talent retention",
                             "Knowledge management",
                             "HR resources",
                             "Team capability",
                             "Expertise sustainability"});
-                table1649.AddRow(new string[] {
+                table1612.AddRow(new string[] {
                             "Technology advancement",
                             "Emerging security tech",
                             "Technology adoption",
@@ -2005,7 +2005,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Technology currency",
                             "Technical sustainability"});
 #line 311
-    testRunner.When("planning fraud detection sustainability:", ((string)(null)), table1649, "When ");
+    testRunner.When("planning fraud detection sustainability:", ((string)(null)), table1612, "When ");
 #line hidden
 #line 319
     testRunner.Then("sustainability should be systematically planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

@@ -7,24 +7,24 @@ namespace UPTRMS.Api.Models.DTOs;
 public class MetadataValidationRequest
 {
     public Guid ResourceId { get; set; }
-    
+
     [Required]
     public string Title { get; set; } = string.Empty;
-    
-    [Required] 
+
+    [Required]
     public string Description { get; set; } = string.Empty;
-    
+
     [Required]
     public List<string> SkillAreas { get; set; } = new();
-    
+
     [Required]
     public List<string> GradeLevels { get; set; } = new();
-    
+
     [Range(1, 5)]
     public int EvidenceLevel { get; set; }
-    
+
     public string? EvidenceJustification { get; set; }
-    
+
     [Required]
     public List<string> Languages { get; set; } = new();
 }

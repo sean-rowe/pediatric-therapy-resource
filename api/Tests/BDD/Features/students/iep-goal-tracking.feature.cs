@@ -119,29 +119,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Students
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2921 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2884 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table2921.AddRow(new string[] {
+                table2884.AddRow(new string[] {
                             "Goal Number",
                             "OT-1"});
-                table2921.AddRow(new string[] {
+                table2884.AddRow(new string[] {
                             "Goal Area",
                             "Fine Motor"});
-                table2921.AddRow(new string[] {
+                table2884.AddRow(new string[] {
                             "Goal Text",
                             "Emma will improve handwriting legibility to form all lowercase letters correctly"});
-                table2921.AddRow(new string[] {
+                table2884.AddRow(new string[] {
                             "Measurement Method",
                             "4 out of 5 trials with 80% accuracy"});
-                table2921.AddRow(new string[] {
+                table2884.AddRow(new string[] {
                             "Baseline",
                             "Currently forms 12 of 26 letters correctly (46%)"});
-                table2921.AddRow(new string[] {
+                table2884.AddRow(new string[] {
                             "Target Date",
                             "2024-06-15"});
 #line 15
-      testRunner.When("I create a goal with:", ((string)(null)), table2921, "When ");
+      testRunner.When("I create a goal with:", ((string)(null)), table2884, "When ");
 #line hidden
 #line 23
       testRunner.Then("the goal is created successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -297,29 +297,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Students
 #line 54
       testRunner.Given("\"Emma Wilson\" has goal \"OT-1\" for handwriting", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2922 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2885 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table2922.AddRow(new string[] {
+                table2885.AddRow(new string[] {
                             "Date",
                             "2024-02-15"});
-                table2922.AddRow(new string[] {
+                table2885.AddRow(new string[] {
                             "Progress Rating",
                             "3"});
-                table2922.AddRow(new string[] {
+                table2885.AddRow(new string[] {
                             "Trials Attempted",
                             "5"});
-                table2922.AddRow(new string[] {
+                table2885.AddRow(new string[] {
                             "Trials Successful",
                             "4"});
-                table2922.AddRow(new string[] {
+                table2885.AddRow(new string[] {
                             "Independence Level",
                             "Minimal assistance"});
-                table2922.AddRow(new string[] {
+                table2885.AddRow(new string[] {
                             "Notes",
                             "Showed improvement with letter formation"});
 #line 55
-      testRunner.When("I record progress:", ((string)(null)), table2922, "When ");
+      testRunner.When("I record progress:", ((string)(null)), table2885, "When ");
 #line hidden
 #line 63
       testRunner.Then("the progress entry is saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -360,20 +360,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Students
 #line 69
       testRunner.Given("\"Emma Wilson\" has goal \"OT-1\" with baseline \"46%\" and target \"80%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2923 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2886 = new TechTalk.SpecFlow.Table(new string[] {
                             "Date",
                             "Performance"});
-                table2923.AddRow(new string[] {
+                table2886.AddRow(new string[] {
                             "2024-01-30",
                             "52%"});
-                table2923.AddRow(new string[] {
+                table2886.AddRow(new string[] {
                             "2024-02-15",
                             "58%"});
-                table2923.AddRow(new string[] {
+                table2886.AddRow(new string[] {
                             "2024-03-01",
                             "65%"});
 #line 70
-      testRunner.And("the following progress entries exist:", ((string)(null)), table2923, "And ");
+      testRunner.And("the following progress entries exist:", ((string)(null)), table2886, "And ");
 #line hidden
 #line 75
       testRunner.When("I view the goal progress", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -498,20 +498,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Students
 #line 99
       testRunner.Then("the goal status changes to \"met\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2924 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2887 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table2924.AddRow(new string[] {
+                table2887.AddRow(new string[] {
                             "Date Met",
                             "2024-03-15"});
-                table2924.AddRow(new string[] {
+                table2887.AddRow(new string[] {
                             "Final Performance",
                             "82% accuracy in letter formation"});
-                table2924.AddRow(new string[] {
+                table2887.AddRow(new string[] {
                             "Next Steps",
                             "Maintain skill in classroom setting"});
 #line 100
-      testRunner.And("I must provide outcome data:", ((string)(null)), table2924, "And ");
+      testRunner.And("I must provide outcome data:", ((string)(null)), table2887, "And ");
 #line hidden
 #line 105
       testRunner.And("an audit log entry is created for \"goal_met\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -549,20 +549,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Students
 #line 110
       testRunner.When("I update the goal status to \"discontinued\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2925 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2888 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table2925.AddRow(new string[] {
+                table2888.AddRow(new string[] {
                             "Reason",
                             "Student moved to different service model"});
-                table2925.AddRow(new string[] {
+                table2888.AddRow(new string[] {
                             "Date Discontinued",
                             "2024-02-28"});
-                table2925.AddRow(new string[] {
+                table2888.AddRow(new string[] {
                             "Final Notes",
                             "Recommend reassessment in new setting"});
 #line 111
-      testRunner.Then("I must provide a reason:", ((string)(null)), table2925, "Then ");
+      testRunner.Then("I must provide a reason:", ((string)(null)), table2888, "Then ");
 #line hidden
 #line 116
       testRunner.And("the goal status changes to \"discontinued\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -603,17 +603,17 @@ namespace UPTRMS.Api.Tests.BDD.Features.Students
 #line 122
       testRunner.When("I extend the target date to \"2024-12-15\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2926 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2889 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table2926.AddRow(new string[] {
+                table2889.AddRow(new string[] {
                             "New Date",
                             "2024-12-15"});
-                table2926.AddRow(new string[] {
+                table2889.AddRow(new string[] {
                             "Justification",
                             "Progress slower than expected due to medical absence"});
 #line 123
-      testRunner.Then("I must provide justification:", ((string)(null)), table2926, "Then ");
+      testRunner.Then("I must provide justification:", ((string)(null)), table2889, "Then ");
 #line hidden
 #line 127
       testRunner.And("the target date is updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -738,17 +738,17 @@ namespace UPTRMS.Api.Tests.BDD.Features.Students
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2927 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2890 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table2927.AddRow(new string[] {
+                table2890.AddRow(new string[] {
                             "Goal Text",
                             "Student will demonstrate grade-level writing skills"});
-                table2927.AddRow(new string[] {
+                table2890.AddRow(new string[] {
                             "State Standard",
                             "TX.ELA.3.11A - Plan drafts by generating ideas"});
 #line 154
-      testRunner.When("I create a goal with:", ((string)(null)), table2927, "When ");
+      testRunner.When("I create a goal with:", ((string)(null)), table2890, "When ");
 #line hidden
 #line 158
       testRunner.Then("the goal is linked to state standard \"TX.ELA.3.11A\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -825,23 +825,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Students
 #line 172
       testRunner.When("I generate a progress report for date range \"2024-01-01\" to \"2024-03-31\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2928 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2891 = new TechTalk.SpecFlow.Table(new string[] {
                             "Section",
                             "Content"});
-                table2928.AddRow(new string[] {
+                table2891.AddRow(new string[] {
                             "Goals Summary",
                             "Total: 3, Met: 1, Active: 2"});
-                table2928.AddRow(new string[] {
+                table2891.AddRow(new string[] {
                             "Progress Charts",
                             "Line graphs for each goal"});
-                table2928.AddRow(new string[] {
+                table2891.AddRow(new string[] {
                             "Session Correlation",
                             "Goals addressed per session"});
-                table2928.AddRow(new string[] {
+                table2891.AddRow(new string[] {
                             "Therapist Notes",
                             "Combined progress notes"});
 #line 173
-      testRunner.Then("the report includes:", ((string)(null)), table2928, "Then ");
+      testRunner.Then("the report includes:", ((string)(null)), table2891, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -876,20 +876,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Students
 #line 183
       testRunner.When("I view analytics for \"Fine Motor\" goals", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2929 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2892 = new TechTalk.SpecFlow.Table(new string[] {
                             "Metric",
                             "Value"});
-                table2929.AddRow(new string[] {
+                table2892.AddRow(new string[] {
                             "Average Time to Master",
                             "4.2 months"});
-                table2929.AddRow(new string[] {
+                table2892.AddRow(new string[] {
                             "Success Rate",
                             "78%"});
-                table2929.AddRow(new string[] {
+                table2892.AddRow(new string[] {
                             "Most Effective Methods",
                             "Visual cues, Hand-over-hand"});
 #line 184
-      testRunner.Then("I see:", ((string)(null)), table2929, "Then ");
+      testRunner.Then("I see:", ((string)(null)), table2892, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -924,20 +924,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Students
 #line 193
       testRunner.When("the system analyzes progress trends", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2930 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2893 = new TechTalk.SpecFlow.Table(new string[] {
                             "Prediction",
                             "Value"});
-                table2930.AddRow(new string[] {
+                table2893.AddRow(new string[] {
                             "Likely Achievement Date",
                             "2024-05-20"});
-                table2930.AddRow(new string[] {
+                table2893.AddRow(new string[] {
                             "Confidence Level",
                             "75%"});
-                table2930.AddRow(new string[] {
+                table2893.AddRow(new string[] {
                             "Risk Factors",
                             "Attendance"});
 #line 194
-      testRunner.Then("it predicts:", ((string)(null)), table2930, "Then ");
+      testRunner.Then("it predicts:", ((string)(null)), table2893, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

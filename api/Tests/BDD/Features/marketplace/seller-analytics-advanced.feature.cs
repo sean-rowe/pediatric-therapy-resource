@@ -141,49 +141,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 17
     testRunner.And("dashboard must provide actionable data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1682 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1645 = new TechTalk.SpecFlow.Table(new string[] {
                             "Metric Category",
                             "Key Metrics",
                             "Time Periods",
                             "Visualization Type",
                             "Update Frequency",
                             "Drill-down Capability"});
-                table1682.AddRow(new string[] {
+                table1645.AddRow(new string[] {
                             "Sales Performance",
                             "Revenue, units sold, conversion rate",
                             "Daily/weekly/monthly/yearly",
                             "Line charts, bar graphs",
                             "Real-time",
                             "Product level"});
-                table1682.AddRow(new string[] {
+                table1645.AddRow(new string[] {
                             "Product Analytics",
                             "View counts, favorites, downloads",
                             "Last 7/30/90 days",
                             "Heat maps, tables",
                             "Hourly",
                             "Individual products"});
-                table1682.AddRow(new string[] {
+                table1645.AddRow(new string[] {
                             "Customer Insights",
                             "Demographics, repeat customers, reviews",
                             "Monthly/quarterly",
                             "Pie charts, geographic maps",
                             "Daily",
                             "Customer segments"});
-                table1682.AddRow(new string[] {
+                table1645.AddRow(new string[] {
                             "Traffic Analysis",
                             "Profile views, search impressions",
                             "Daily/weekly",
                             "Area charts, trend lines",
                             "Real-time",
                             "Traffic sources"});
-                table1682.AddRow(new string[] {
+                table1645.AddRow(new string[] {
                             "Financial Metrics",
                             "Gross revenue, net earnings, fees",
                             "Monthly/quarterly/yearly",
                             "Financial charts, summaries",
                             "Daily",
                             "Transaction level"});
-                table1682.AddRow(new string[] {
+                table1645.AddRow(new string[] {
                             "Competitive Analysis",
                             "Market share, ranking, pricing",
                             "Weekly/monthly",
@@ -191,7 +191,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Weekly",
                             "Category comparisons"});
 #line 18
-    testRunner.When("accessing seller performance dashboard:", ((string)(null)), table1682, "When ");
+    testRunner.When("accessing seller performance dashboard:", ((string)(null)), table1645, "When ");
 #line hidden
 #line 26
     testRunner.Then("dashboard should load within 3 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -248,49 +248,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 34
     testRunner.And("pattern recognition helps predict future performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1683 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1646 = new TechTalk.SpecFlow.Table(new string[] {
                             "Trend Type",
                             "Analysis Period",
                             "Data Points",
                             "Pattern Recognition",
                             "Forecasting",
                             "Recommendation Engine"});
-                table1683.AddRow(new string[] {
+                table1646.AddRow(new string[] {
                             "Revenue trends",
                             "12-month rolling",
                             "Daily revenue",
                             "Seasonal patterns",
                             "3-month forecast",
                             "Pricing optimization"});
-                table1683.AddRow(new string[] {
+                table1646.AddRow(new string[] {
                             "Product popularity",
                             "6-month view",
                             "Download counts",
                             "Trending items",
                             "Demand prediction",
                             "Inventory suggestions"});
-                table1683.AddRow(new string[] {
+                table1646.AddRow(new string[] {
                             "Customer behavior",
                             "Quarterly analysis",
                             "Purchase patterns",
                             "Buying cycles",
                             "Customer lifetime value",
                             "Retention strategies"});
-                table1683.AddRow(new string[] {
+                table1646.AddRow(new string[] {
                             "Market cycles",
                             "Annual overview",
                             "Category performance",
                             "Market shifts",
                             "Market opportunity",
                             "Category expansion"});
-                table1683.AddRow(new string[] {
+                table1646.AddRow(new string[] {
                             "Promotional impact",
                             "Campaign periods",
                             "Sales lift analysis",
                             "Effectiveness metrics",
                             "ROI prediction",
                             "Campaign optimization"});
-                table1683.AddRow(new string[] {
+                table1646.AddRow(new string[] {
                             "Geographic trends",
                             "Regional analysis",
                             "Location-based sales",
@@ -298,7 +298,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Market expansion",
                             "Geographic targeting"});
 #line 35
-    testRunner.When("analyzing sales trends:", ((string)(null)), table1683, "When ");
+    testRunner.When("analyzing sales trends:", ((string)(null)), table1646, "When ");
 #line hidden
 #line 43
     testRunner.Then("trends should be visualized clearly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -355,49 +355,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 51
     testRunner.And("optimization insights improve sales performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1684 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1647 = new TechTalk.SpecFlow.Table(new string[] {
                             "Product Metric",
                             "Measurement Method",
                             "Benchmark Comparison",
                             "Optimization Insights",
                             "Action Recommendations",
                             "Performance Tracking"});
-                table1684.AddRow(new string[] {
+                table1647.AddRow(new string[] {
                             "View-to-purchase ratio",
                             "Conversion tracking",
                             "Category average",
                             "Low conversion products",
                             "Price adjustment, description improvement",
                             "Weekly monitoring"});
-                table1684.AddRow(new string[] {
+                table1647.AddRow(new string[] {
                             "Search ranking",
                             "Position tracking",
                             "Competitor comparison",
                             "Ranking factors",
                             "SEO optimization, keyword improvement",
                             "Daily tracking"});
-                table1684.AddRow(new string[] {
+                table1647.AddRow(new string[] {
                             "Customer ratings",
                             "Review aggregation",
                             "Platform average",
                             "Quality issues",
                             "Product improvement, customer service",
                             "Review monitoring"});
-                table1684.AddRow(new string[] {
+                table1647.AddRow(new string[] {
                             "Price competitiveness",
                             "Market analysis",
                             "Similar products",
                             "Pricing position",
                             "Price optimization strategy",
                             "Price alert system"});
-                table1684.AddRow(new string[] {
+                table1647.AddRow(new string[] {
                             "Download frequency",
                             "Usage analytics",
                             "Historical performance",
                             "Demand patterns",
                             "Promotional timing, inventory planning",
                             "Trend analysis"});
-                table1684.AddRow(new string[] {
+                table1647.AddRow(new string[] {
                             "Revenue contribution",
                             "Financial analysis",
                             "Portfolio mix",
@@ -405,7 +405,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Resource allocation, marketing focus",
                             "Monthly review"});
 #line 52
-    testRunner.When("analyzing product performance:", ((string)(null)), table1684, "When ");
+    testRunner.When("analyzing product performance:", ((string)(null)), table1647, "When ");
 #line hidden
 #line 60
     testRunner.Then("product insights should drive decisions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -462,49 +462,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 68
     testRunner.And("segmentation enables personalized strategies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1685 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1648 = new TechTalk.SpecFlow.Table(new string[] {
                             "Customer Segment",
                             "Segmentation Criteria",
                             "Behavior Analysis",
                             "Value Metrics",
                             "Engagement Patterns",
                             "Retention Strategies"});
-                table1685.AddRow(new string[] {
+                table1648.AddRow(new string[] {
                             "New customers",
                             "First purchase <30 days",
                             "Purchase behavior",
                             "Initial order value",
                             "Onboarding engagement",
                             "Welcome campaigns"});
-                table1685.AddRow(new string[] {
+                table1648.AddRow(new string[] {
                             "Repeat customers",
                             "2+ purchases",
                             "Loyalty patterns",
                             "Customer lifetime value",
                             "Purchase frequency",
                             "Loyalty programs"});
-                table1685.AddRow(new string[] {
+                table1648.AddRow(new string[] {
                             "High-value customers",
                             "Top 20% by revenue",
                             "Premium preferences",
                             "Average order value",
                             "Premium engagement",
                             "VIP treatment"});
-                table1685.AddRow(new string[] {
+                table1648.AddRow(new string[] {
                             "At-risk customers",
                             "No purchase 60+ days",
                             "Churn indicators",
                             "Historical value",
                             "Declining engagement",
                             "Win-back campaigns"});
-                table1685.AddRow(new string[] {
+                table1648.AddRow(new string[] {
                             "Seasonal customers",
                             "Holiday/event buyers",
                             "Seasonal patterns",
                             "Seasonal value",
                             "Periodic engagement",
                             "Seasonal marketing"});
-                table1685.AddRow(new string[] {
+                table1648.AddRow(new string[] {
                             "Geographic segments",
                             "Location-based",
                             "Regional preferences",
@@ -512,7 +512,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Local engagement",
                             "Geographic targeting"});
 #line 69
-    testRunner.When("analyzing customer data:", ((string)(null)), table1685, "When ");
+    testRunner.When("analyzing customer data:", ((string)(null)), table1648, "When ");
 #line hidden
 #line 77
     testRunner.Then("customer segments should be clearly defined", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -569,49 +569,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 86
     testRunner.And("market positioning affects sales success", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1686 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1649 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analysis Type",
                             "Data Sources",
                             "Competitive Metrics",
                             "Market Intelligence",
                             "Positioning Insights",
                             "Strategic Recommendations"});
-                table1686.AddRow(new string[] {
+                table1649.AddRow(new string[] {
                             "Price comparison",
                             "Market data",
                             "Price points, discounts",
                             "Pricing strategies",
                             "Price positioning",
                             "Competitive pricing"});
-                table1686.AddRow(new string[] {
+                table1649.AddRow(new string[] {
                             "Product comparison",
                             "Product features",
                             "Feature sets, quality",
                             "Product gaps",
                             "Differentiation opportunities",
                             "Product development"});
-                table1686.AddRow(new string[] {
+                table1649.AddRow(new string[] {
                             "Performance comparison",
                             "Sales rankings",
                             "Market share, growth",
                             "Performance benchmarks",
                             "Competitive standing",
                             "Performance improvement"});
-                table1686.AddRow(new string[] {
+                table1649.AddRow(new string[] {
                             "Customer comparison",
                             "Review analysis",
                             "Customer satisfaction",
                             "Service quality",
                             "Customer experience gaps",
                             "Service enhancement"});
-                table1686.AddRow(new string[] {
+                table1649.AddRow(new string[] {
                             "Marketing comparison",
                             "Promotional analysis",
                             "Campaign effectiveness",
                             "Marketing strategies",
                             "Marketing gaps",
                             "Marketing optimization"});
-                table1686.AddRow(new string[] {
+                table1649.AddRow(new string[] {
                             "Innovation comparison",
                             "Product launches",
                             "Innovation rate",
@@ -619,7 +619,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Innovation opportunities",
                             "R&D focus"});
 #line 87
-    testRunner.When("analyzing competitive landscape:", ((string)(null)), table1686, "When ");
+    testRunner.When("analyzing competitive landscape:", ((string)(null)), table1649, "When ");
 #line hidden
 #line 95
     testRunner.Then("competitive data should be current and accurate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -676,49 +676,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 103
     testRunner.And("profitability analysis guides resource allocation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1687 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1650 = new TechTalk.SpecFlow.Table(new string[] {
                             "Financial Metric",
                             "Calculation Method",
                             "Profitability Analysis",
                             "Cost Breakdown",
                             "Margin Analysis",
                             "ROI Calculation"});
-                table1687.AddRow(new string[] {
+                table1650.AddRow(new string[] {
                             "Gross revenue",
                             "Total sales",
                             "Revenue trends",
                             "Sales by channel",
                             "Revenue per product",
                             "Investment return"});
-                table1687.AddRow(new string[] {
+                table1650.AddRow(new string[] {
                             "Net earnings",
                             "Revenue minus fees",
                             "Profit margins",
                             "Platform fees, taxes",
                             "Margin by category",
                             "Marketing ROI"});
-                table1687.AddRow(new string[] {
+                table1650.AddRow(new string[] {
                             "Cost analysis",
                             "Expense tracking",
                             "Cost structure",
                             "Production, marketing costs",
                             "Cost per acquisition",
                             "Resource ROI"});
-                table1687.AddRow(new string[] {
+                table1650.AddRow(new string[] {
                             "Profit optimization",
                             "Margin improvement",
                             "Profitability drivers",
                             "Cost reduction opportunities",
                             "Pricing optimization",
                             "Strategy ROI"});
-                table1687.AddRow(new string[] {
+                table1650.AddRow(new string[] {
                             "Cash flow analysis",
                             "Payment timing",
                             "Cash flow patterns",
                             "Payment cycles",
                             "Working capital needs",
                             "Liquidity analysis"});
-                table1687.AddRow(new string[] {
+                table1650.AddRow(new string[] {
                             "Financial forecasting",
                             "Predictive modeling",
                             "Revenue projections",
@@ -726,7 +726,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Financial planning",
                             "Investment planning"});
 #line 104
-    testRunner.When("analyzing financial performance:", ((string)(null)), table1687, "When ");
+    testRunner.When("analyzing financial performance:", ((string)(null)), table1650, "When ");
 #line hidden
 #line 112
     testRunner.Then("financial metrics should be accurate and timely", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -783,49 +783,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 120
     testRunner.And("campaign analysis improves future marketing efforts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1688 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1651 = new TechTalk.SpecFlow.Table(new string[] {
                             "Marketing Channel",
                             "Performance Metrics",
                             "Attribution Analysis",
                             "Campaign Effectiveness",
                             "Customer Acquisition",
                             "Optimization Insights"});
-                table1688.AddRow(new string[] {
+                table1651.AddRow(new string[] {
                             "Search marketing",
                             "Click-through rates, conversions",
                             "Search attribution",
                             "Keyword performance",
                             "Search acquisition cost",
                             "Keyword optimization"});
-                table1688.AddRow(new string[] {
+                table1651.AddRow(new string[] {
                             "Social media",
                             "Engagement, referral traffic",
                             "Social attribution",
                             "Content effectiveness",
                             "Social acquisition cost",
                             "Content optimization"});
-                table1688.AddRow(new string[] {
+                table1651.AddRow(new string[] {
                             "Email marketing",
                             "Open rates, click rates",
                             "Email attribution",
                             "Campaign performance",
                             "Email acquisition cost",
                             "Email optimization"});
-                table1688.AddRow(new string[] {
+                table1651.AddRow(new string[] {
                             "Paid advertising",
                             "Ad spend, conversion rates",
                             "Ad attribution",
                             "Ad effectiveness",
                             "Paid acquisition cost",
                             "Ad optimization"});
-                table1688.AddRow(new string[] {
+                table1651.AddRow(new string[] {
                             "Content marketing",
                             "Content views, engagement",
                             "Content attribution",
                             "Content effectiveness",
                             "Content acquisition cost",
                             "Content strategy"});
-                table1688.AddRow(new string[] {
+                table1651.AddRow(new string[] {
                             "Referral programs",
                             "Referral rates, conversions",
                             "Referral attribution",
@@ -833,7 +833,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Referral acquisition cost",
                             "Program optimization"});
 #line 121
-    testRunner.When("analyzing marketing performance:", ((string)(null)), table1688, "When ");
+    testRunner.When("analyzing marketing performance:", ((string)(null)), table1651, "When ");
 #line hidden
 #line 129
     testRunner.Then("marketing ROI should be calculated accurately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -890,49 +890,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 137
     testRunner.And("cyclical analysis informs inventory and marketing decisions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1689 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1652 = new TechTalk.SpecFlow.Table(new string[] {
                             "Seasonal Pattern",
                             "Analysis Period",
                             "Performance Metrics",
                             "Pattern Recognition",
                             "Forecasting Model",
                             "Planning Recommendations"});
-                table1689.AddRow(new string[] {
+                table1652.AddRow(new string[] {
                             "Holiday seasons",
                             "Annual cycles",
                             "Holiday sales lift",
                             "Peak performance periods",
                             "Holiday forecasting",
                             "Holiday preparation"});
-                table1689.AddRow(new string[] {
+                table1652.AddRow(new string[] {
                             "School year cycles",
                             "Academic calendar",
                             "Educational sales patterns",
                             "School-related demand",
                             "Academic forecasting",
                             "Academic planning"});
-                table1689.AddRow(new string[] {
+                table1652.AddRow(new string[] {
                             "Quarterly patterns",
                             "Business quarters",
                             "Quarterly performance",
                             "Quarter-end effects",
                             "Quarterly forecasting",
                             "Quarterly strategy"});
-                table1689.AddRow(new string[] {
+                table1652.AddRow(new string[] {
                             "Monthly trends",
                             "Monthly cycles",
                             "Monthly variations",
                             "Month-specific patterns",
                             "Monthly forecasting",
                             "Monthly optimization"});
-                table1689.AddRow(new string[] {
+                table1652.AddRow(new string[] {
                             "Weekly patterns",
                             "Weekly cycles",
                             "Weekday vs weekend",
                             "Day-of-week effects",
                             "Weekly forecasting",
                             "Weekly planning"});
-                table1689.AddRow(new string[] {
+                table1652.AddRow(new string[] {
                             "Event-driven cycles",
                             "Special events",
                             "Event-related sales",
@@ -940,7 +940,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Event forecasting",
                             "Event marketing"});
 #line 138
-    testRunner.When("analyzing seasonal performance:", ((string)(null)), table1689, "When ");
+    testRunner.When("analyzing seasonal performance:", ((string)(null)), table1652, "When ");
 #line hidden
 #line 146
     testRunner.Then("seasonal patterns should be clearly identified", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -997,49 +997,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 155
     testRunner.And("interactive charts enable detailed analysis", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1690 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1653 = new TechTalk.SpecFlow.Table(new string[] {
                             "Chart Type",
                             "Data Representation",
                             "Interactivity Level",
                             "Customization Options",
                             "Export Capabilities",
                             "Mobile Optimization"});
-                table1690.AddRow(new string[] {
+                table1653.AddRow(new string[] {
                             "Revenue charts",
                             "Time series data",
                             "Zoom, filter, drill-down",
                             "Time periods, metrics",
                             "PNG, PDF, CSV",
                             "Responsive design"});
-                table1690.AddRow(new string[] {
+                table1653.AddRow(new string[] {
                             "Product heat maps",
                             "Performance matrix",
                             "Hover details, click-through",
                             "Color schemes, metrics",
                             "Image formats",
                             "Touch-friendly"});
-                table1690.AddRow(new string[] {
+                table1653.AddRow(new string[] {
                             "Geographic maps",
                             "Location-based data",
                             "Region selection, zoom",
                             "Map styles, data layers",
                             "Vector formats",
                             "Gesture support"});
-                table1690.AddRow(new string[] {
+                table1653.AddRow(new string[] {
                             "Comparison charts",
                             "Competitive data",
                             "Benchmark selection",
                             "Comparison metrics",
                             "Report formats",
                             "Simplified views"});
-                table1690.AddRow(new string[] {
+                table1653.AddRow(new string[] {
                             "Trend analysis",
                             "Historical patterns",
                             "Trend lines, projections",
                             "Forecasting periods",
                             "Analysis reports",
                             "Essential metrics"});
-                table1690.AddRow(new string[] {
+                table1653.AddRow(new string[] {
                             "Custom dashboards",
                             "Personalized views",
                             "Widget arrangement",
@@ -1047,7 +1047,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Dashboard exports",
                             "Optimized layouts"});
 #line 156
-    testRunner.When("implementing data visualizations:", ((string)(null)), table1690, "When ");
+    testRunner.When("implementing data visualizations:", ((string)(null)), table1653, "When ");
 #line hidden
 #line 164
     testRunner.Then("visualizations should be intuitive and informative", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1104,49 +1104,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 172
     testRunner.And("scheduled reports ensure regular insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1691 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1654 = new TechTalk.SpecFlow.Table(new string[] {
                             "Report Type",
                             "Content Customization",
                             "Scheduling Options",
                             "Delivery Methods",
                             "Format Options",
                             "Automation Level"});
-                table1691.AddRow(new string[] {
+                table1654.AddRow(new string[] {
                             "Sales summaries",
                             "Metrics selection",
                             "Daily/weekly/monthly",
                             "Email, dashboard",
                             "PDF, Excel, CSV",
                             "Fully automated"});
-                table1691.AddRow(new string[] {
+                table1654.AddRow(new string[] {
                             "Product performance",
                             "Product filtering",
                             "On-demand/scheduled",
                             "Download, email",
                             "Interactive/static",
                             "Semi-automated"});
-                table1691.AddRow(new string[] {
+                table1654.AddRow(new string[] {
                             "Financial reports",
                             "Financial metrics",
                             "Monthly/quarterly",
                             "Secure delivery",
                             "Financial formats",
                             "Fully automated"});
-                table1691.AddRow(new string[] {
+                table1654.AddRow(new string[] {
                             "Customer analysis",
                             "Segment selection",
                             "Weekly/monthly",
                             "Dashboard, email",
                             "Analytics formats",
                             "Automated insights"});
-                table1691.AddRow(new string[] {
+                table1654.AddRow(new string[] {
                             "Competitive reports",
                             "Competitor selection",
                             "Weekly updates",
                             "Secure access",
                             "Comparison formats",
                             "Semi-automated"});
-                table1691.AddRow(new string[] {
+                table1654.AddRow(new string[] {
                             "Custom analytics",
                             "Metric combinations",
                             "Flexible scheduling",
@@ -1154,7 +1154,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Various formats",
                             "Configurable"});
 #line 173
-    testRunner.When("generating custom reports:", ((string)(null)), table1691, "When ");
+    testRunner.When("generating custom reports:", ((string)(null)), table1654, "When ");
 #line hidden
 #line 181
     testRunner.Then("reports should be highly customizable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1211,49 +1211,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 189
     testRunner.And("notification preferences vary by seller needs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1692 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1655 = new TechTalk.SpecFlow.Table(new string[] {
                             "Alert Type",
                             "Trigger Conditions",
                             "Notification Methods",
                             "Urgency Levels",
                             "Customization Options",
                             "Response Tracking"});
-                table1692.AddRow(new string[] {
+                table1655.AddRow(new string[] {
                             "Sales milestones",
                             "Revenue thresholds",
                             "Email, SMS, push",
                             "High priority",
                             "Threshold setting",
                             "Achievement tracking"});
-                table1692.AddRow(new string[] {
+                table1655.AddRow(new string[] {
                             "Performance drops",
                             "Metric declines",
                             "Email, dashboard",
                             "Medium priority",
                             "Decline percentage",
                             "Recovery monitoring"});
-                table1692.AddRow(new string[] {
+                table1655.AddRow(new string[] {
                             "Competitive changes",
                             "Price/ranking changes",
                             "Email notification",
                             "Medium priority",
                             "Competitor selection",
                             "Competitive response"});
-                table1692.AddRow(new string[] {
+                table1655.AddRow(new string[] {
                             "Customer feedback",
                             "New reviews/ratings",
                             "Email, push",
                             "Variable priority",
                             "Rating thresholds",
                             "Response tracking"});
-                table1692.AddRow(new string[] {
+                table1655.AddRow(new string[] {
                             "Inventory alerts",
                             "Stock level changes",
                             "Email, SMS",
                             "High priority",
                             "Stock thresholds",
                             "Restocking tracking"});
-                table1692.AddRow(new string[] {
+                table1655.AddRow(new string[] {
                             "Opportunity alerts",
                             "Market opportunities",
                             "Email, dashboard",
@@ -1261,7 +1261,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Opportunity criteria",
                             "Opportunity capture"});
 #line 190
-    testRunner.When("implementing alert system:", ((string)(null)), table1692, "When ");
+    testRunner.When("implementing alert system:", ((string)(null)), table1655, "When ");
 #line hidden
 #line 198
     testRunner.Then("alerts should be timely and relevant", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1318,49 +1318,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 207
     testRunner.And("automated recommendations save time and improve results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1693 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1656 = new TechTalk.SpecFlow.Table(new string[] {
                             "Optimization Area",
                             "AI Analysis",
                             "Recommendation Types",
                             "Impact Prediction",
                             "Implementation Guidance",
                             "Success Tracking"});
-                table1693.AddRow(new string[] {
+                table1656.AddRow(new string[] {
                             "Pricing strategy",
                             "Market analysis",
                             "Price adjustments",
                             "Revenue impact",
                             "Pricing guidance",
                             "Price performance"});
-                table1693.AddRow(new string[] {
+                table1656.AddRow(new string[] {
                             "Product positioning",
                             "Performance data",
                             "Positioning improvements",
                             "Visibility impact",
                             "SEO guidance",
                             "Ranking improvement"});
-                table1693.AddRow(new string[] {
+                table1656.AddRow(new string[] {
                             "Inventory management",
                             "Demand analysis",
                             "Stock recommendations",
                             "Sales impact",
                             "Inventory guidance",
                             "Stock performance"});
-                table1693.AddRow(new string[] {
+                table1656.AddRow(new string[] {
                             "Marketing focus",
                             "Campaign data",
                             "Marketing optimization",
                             "ROI impact",
                             "Campaign guidance",
                             "Marketing results"});
-                table1693.AddRow(new string[] {
+                table1656.AddRow(new string[] {
                             "Customer targeting",
                             "Behavior analysis",
                             "Targeting improvements",
                             "Conversion impact",
                             "Targeting guidance",
                             "Conversion tracking"});
-                table1693.AddRow(new string[] {
+                table1656.AddRow(new string[] {
                             "Content optimization",
                             "Engagement data",
                             "Content improvements",
@@ -1368,7 +1368,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Content guidance",
                             "Content performance"});
 #line 208
-    testRunner.When("generating optimization recommendations:", ((string)(null)), table1693, "When ");
+    testRunner.When("generating optimization recommendations:", ((string)(null)), table1656, "When ");
 #line hidden
 #line 216
     testRunner.Then("AI recommendations should be data-driven", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1425,49 +1425,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 224
     testRunner.And("comparative analysis identifies improvement opportunities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1694 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1657 = new TechTalk.SpecFlow.Table(new string[] {
                             "Benchmark Type",
                             "Comparison Basis",
                             "Peer Selection",
                             "Performance Metrics",
                             "Percentile Rankings",
                             "Improvement Targets"});
-                table1694.AddRow(new string[] {
+                table1657.AddRow(new string[] {
                             "Category benchmarks",
                             "Similar products",
                             "Category peers",
                             "Sales, conversion rates",
                             "Category percentiles",
                             "Top quartile targets"});
-                table1694.AddRow(new string[] {
+                table1657.AddRow(new string[] {
                             "Size benchmarks",
                             "Business size",
                             "Revenue tiers",
                             "Growth, profitability",
                             "Size percentiles",
                             "Tier advancement"});
-                table1694.AddRow(new string[] {
+                table1657.AddRow(new string[] {
                             "Geographic benchmarks",
                             "Location-based",
                             "Regional peers",
                             "Market performance",
                             "Regional percentiles",
                             "Regional leadership"});
-                table1694.AddRow(new string[] {
+                table1657.AddRow(new string[] {
                             "Experience benchmarks",
                             "Seller tenure",
                             "Tenure groups",
                             "Maturity metrics",
                             "Experience percentiles",
                             "Maturity targets"});
-                table1694.AddRow(new string[] {
+                table1657.AddRow(new string[] {
                             "Quality benchmarks",
                             "Product quality",
                             "Quality tiers",
                             "Quality scores",
                             "Quality percentiles",
                             "Quality excellence"});
-                table1694.AddRow(new string[] {
+                table1657.AddRow(new string[] {
                             "Growth benchmarks",
                             "Growth rate",
                             "Growth cohorts",
@@ -1475,7 +1475,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Growth percentiles",
                             "Growth acceleration"});
 #line 225
-    testRunner.When("implementing benchmarking features:", ((string)(null)), table1694, "When ");
+    testRunner.When("implementing benchmarking features:", ((string)(null)), table1657, "When ");
 #line hidden
 #line 233
     testRunner.Then("benchmarks should provide meaningful context", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1532,49 +1532,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 241
     testRunner.And("forecasting supports strategic decision-making", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1695 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1658 = new TechTalk.SpecFlow.Table(new string[] {
                             "Prediction Type",
                             "Forecasting Model",
                             "Input Variables",
                             "Prediction Horizon",
                             "Confidence Intervals",
                             "Update Frequency"});
-                table1695.AddRow(new string[] {
+                table1658.AddRow(new string[] {
                             "Sales forecasting",
                             "Time series analysis",
                             "Historical sales, trends",
                             "3-12 months",
                             "80-95% confidence",
                             "Weekly updates"});
-                table1695.AddRow(new string[] {
+                table1658.AddRow(new string[] {
                             "Demand prediction",
                             "Machine learning",
                             "Market data, seasonality",
                             "1-6 months",
                             "75-90% confidence",
                             "Daily updates"});
-                table1695.AddRow(new string[] {
+                table1658.AddRow(new string[] {
                             "Customer behavior",
                             "Behavioral modeling",
                             "Customer history",
                             "30-180 days",
                             "70-85% confidence",
                             "Real-time updates"});
-                table1695.AddRow(new string[] {
+                table1658.AddRow(new string[] {
                             "Market opportunities",
                             "Market analysis",
                             "Market trends, competition",
                             "6-24 months",
                             "60-80% confidence",
                             "Monthly updates"});
-                table1695.AddRow(new string[] {
+                table1658.AddRow(new string[] {
                             "Risk assessment",
                             "Risk modeling",
                             "Performance indicators",
                             "30-365 days",
                             "85-95% confidence",
                             "Daily updates"});
-                table1695.AddRow(new string[] {
+                table1658.AddRow(new string[] {
                             "Growth projections",
                             "Growth modeling",
                             "Business metrics",
@@ -1582,7 +1582,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "70-85% confidence",
                             "Quarterly updates"});
 #line 242
-    testRunner.When("implementing predictive analytics:", ((string)(null)), table1695, "When ");
+    testRunner.When("implementing predictive analytics:", ((string)(null)), table1658, "When ");
 #line hidden
 #line 250
     testRunner.Then("predictions should be statistically sound", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1639,49 +1639,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 259
     testRunner.And("integration reduces manual data entry and improves insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1696 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1659 = new TechTalk.SpecFlow.Table(new string[] {
                             "Integration Type",
                             "External System",
                             "Data Synchronization",
                             "Integration Method",
                             "Data Mapping",
                             "Sync Frequency"});
-                table1696.AddRow(new string[] {
+                table1659.AddRow(new string[] {
                             "Accounting integration",
                             "QuickBooks, Xero",
                             "Financial data",
                             "API connection",
                             "Revenue, expenses",
                             "Daily sync"});
-                table1696.AddRow(new string[] {
+                table1659.AddRow(new string[] {
                             "Inventory management",
                             "Inventory systems",
                             "Stock levels",
                             "Real-time API",
                             "Product quantities",
                             "Real-time"});
-                table1696.AddRow(new string[] {
+                table1659.AddRow(new string[] {
                             "Email marketing",
                             "Mailchimp, Constant Contact",
                             "Customer data",
                             "OAuth integration",
                             "Customer lists",
                             "Weekly sync"});
-                table1696.AddRow(new string[] {
+                table1659.AddRow(new string[] {
                             "Social media",
                             "Facebook, Instagram",
                             "Marketing data",
                             "Platform APIs",
                             "Campaign metrics",
                             "Daily sync"});
-                table1696.AddRow(new string[] {
+                table1659.AddRow(new string[] {
                             "CRM systems",
                             "Salesforce, HubSpot",
                             "Customer relationships",
                             "API integration",
                             "Customer interactions",
                             "Real-time"});
-                table1696.AddRow(new string[] {
+                table1659.AddRow(new string[] {
                             "Analytics platforms",
                             "Google Analytics",
                             "Website data",
@@ -1689,7 +1689,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Traffic, conversions",
                             "Hourly sync"});
 #line 260
-    testRunner.When("integrating with external tools:", ((string)(null)), table1696, "When ");
+    testRunner.When("integrating with external tools:", ((string)(null)), table1659, "When ");
 #line hidden
 #line 268
     testRunner.Then("integrations should be reliable and secure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1746,49 +1746,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 276
     testRunner.And("API access enables custom integrations", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1697 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1660 = new TechTalk.SpecFlow.Table(new string[] {
                             "Export Type",
                             "Data Format",
                             "Export Scope",
                             "Access Method",
                             "Usage Limits",
                             "Authentication"});
-                table1697.AddRow(new string[] {
+                table1660.AddRow(new string[] {
                             "Raw data export",
                             "CSV, JSON, XML",
                             "All analytics data",
                             "Download, API",
                             "10 exports/day",
                             "API key required"});
-                table1697.AddRow(new string[] {
+                table1660.AddRow(new string[] {
                             "Report exports",
                             "PDF, Excel",
                             "Formatted reports",
                             "Email, download",
                             "5 reports/day",
                             "User authentication"});
-                table1697.AddRow(new string[] {
+                table1660.AddRow(new string[] {
                             "Real-time API",
                             "JSON",
                             "Live data access",
                             "REST API",
                             "1000 calls/hour",
                             "OAuth 2.0"});
-                table1697.AddRow(new string[] {
+                table1660.AddRow(new string[] {
                             "Bulk export",
                             "Compressed files",
                             "Historical data",
                             "FTP, cloud storage",
                             "Weekly limits",
                             "Secure credentials"});
-                table1697.AddRow(new string[] {
+                table1660.AddRow(new string[] {
                             "Custom queries",
                             "SQL-like syntax",
                             "Filtered data",
                             "Query interface",
                             "50 queries/day",
                             "User permissions"});
-                table1697.AddRow(new string[] {
+                table1660.AddRow(new string[] {
                             "Webhook integration",
                             "JSON payloads",
                             "Event-driven",
@@ -1796,7 +1796,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Event-based",
                             "Webhook validation"});
 #line 277
-    testRunner.When("providing data export and API access:", ((string)(null)), table1697, "When ");
+    testRunner.When("providing data export and API access:", ((string)(null)), table1660, "When ");
 #line hidden
 #line 285
     testRunner.Then("exports should preserve data integrity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1852,49 +1852,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 293
     testRunner.Given("accurate data is critical for business decisions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1698 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1661 = new TechTalk.SpecFlow.Table(new string[] {
                             "Error Type",
                             "Detection Method",
                             "Resolution Process",
                             "Timeline",
                             "Impact Assessment",
                             "Prevention Measures"});
-                table1698.AddRow(new string[] {
+                table1661.AddRow(new string[] {
                             "Data inconsistency",
                             "Automated validation",
                             "Data reconciliation",
                             "<6 hours",
                             "Decision impact analysis",
                             "Validation rules"});
-                table1698.AddRow(new string[] {
+                table1661.AddRow(new string[] {
                             "Calculation errors",
                             "Algorithm verification",
                             "Recalculation process",
                             "<4 hours",
                             "Accuracy impact analysis",
                             "Algorithm testing"});
-                table1698.AddRow(new string[] {
+                table1661.AddRow(new string[] {
                             "Missing data",
                             "Completeness checks",
                             "Data recovery",
                             "<12 hours",
                             "Completeness impact analysis",
                             "Data redundancy"});
-                table1698.AddRow(new string[] {
+                table1661.AddRow(new string[] {
                             "Display errors",
                             "Visual validation",
                             "Display correction",
                             "<2 hours",
                             "User experience impact",
                             "Display testing"});
-                table1698.AddRow(new string[] {
+                table1661.AddRow(new string[] {
                             "Performance issues",
                             "Response monitoring",
                             "Performance optimization",
                             "<1 hour",
                             "User experience impact",
                             "Performance tuning"});
-                table1698.AddRow(new string[] {
+                table1661.AddRow(new string[] {
                             "Integration failures",
                             "Connection monitoring",
                             "Integration repair",
@@ -1902,7 +1902,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Integration impact analysis",
                             "Redundant connections"});
 #line 294
-    testRunner.When("data accuracy issues occur:", ((string)(null)), table1698, "When ");
+    testRunner.When("data accuracy issues occur:", ((string)(null)), table1661, "When ");
 #line hidden
 #line 302
     testRunner.Then("errors should be detected quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1956,49 +1956,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 309
     testRunner.Given("analytics systems require long-term sustainability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1699 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1662 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table1699.AddRow(new string[] {
+                table1662.AddRow(new string[] {
                             "Data growth",
                             "Increasing data volume",
                             "Scalable data architecture",
                             "Storage and processing resources",
                             "Linear scaling",
                             "Performance sustainability"});
-                table1699.AddRow(new string[] {
+                table1662.AddRow(new string[] {
                             "Feature complexity",
                             "Complex analytics needs",
                             "Modular feature architecture",
                             "Development resources",
                             "Feature maintainability",
                             "Technical sustainability"});
-                table1699.AddRow(new string[] {
+                table1662.AddRow(new string[] {
                             "User adoption",
                             "Varying user needs",
                             "User-centric design",
                             "UX resources",
                             "High adoption rates",
                             "User sustainability"});
-                table1699.AddRow(new string[] {
+                table1662.AddRow(new string[] {
                             "Technology evolution",
                             "Changing technology",
                             "Future-proof architecture",
                             "Technology resources",
                             "Technology compatibility",
                             "Technology sustainability"});
-                table1699.AddRow(new string[] {
+                table1662.AddRow(new string[] {
                             "Cost management",
                             "Resource costs",
                             "Cost optimization strategies",
                             "Budget optimization",
                             "Controlled costs",
                             "Financial sustainability"});
-                table1699.AddRow(new string[] {
+                table1662.AddRow(new string[] {
                             "Performance maintenance",
                             "System performance",
                             "Performance optimization",
@@ -2006,7 +2006,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Consistent performance",
                             "Performance sustainability"});
 #line 310
-    testRunner.When("planning sustainability:", ((string)(null)), table1699, "When ");
+    testRunner.When("planning sustainability:", ((string)(null)), table1662, "When ");
 #line hidden
 #line 318
     testRunner.Then("sustainability should be systematically planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

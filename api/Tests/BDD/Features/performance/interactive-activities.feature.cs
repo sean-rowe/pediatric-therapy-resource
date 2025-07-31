@@ -134,44 +134,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 15
     testRunner.Given("the platform supports high-volume interactive activities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1770 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1733 = new TechTalk.SpecFlow.Table(new string[] {
                             "Session Count",
                             "Activity Type",
                             "Response Time Target",
                             "Success Rate",
                             "Resource Usage"});
-                table1770.AddRow(new string[] {
+                table1733.AddRow(new string[] {
                             "10,000",
                             "Drag & Drop exercises",
                             "<100ms",
                             ">99.5%",
                             "<60% CPU"});
-                table1770.AddRow(new string[] {
+                table1733.AddRow(new string[] {
                             "25,000",
                             "Multiple choice quizzes",
                             "<75ms",
                             ">99.0%",
                             "<70% CPU"});
-                table1770.AddRow(new string[] {
+                table1733.AddRow(new string[] {
                             "50,000",
                             "Drawing/tracing tasks",
                             "<150ms",
                             ">98.5%",
                             "<75% CPU"});
-                table1770.AddRow(new string[] {
+                table1733.AddRow(new string[] {
                             "75,000",
                             "Audio recording tasks",
                             "<200ms",
                             ">98.0%",
                             "<80% CPU"});
-                table1770.AddRow(new string[] {
+                table1733.AddRow(new string[] {
                             "100,000",
                             "Mixed activity types",
                             "<250ms",
                             ">97.5%",
                             "<85% CPU"});
 #line 16
-    testRunner.When("concurrent interactive activity load is tested:", ((string)(null)), table1770, "When ");
+    testRunner.When("concurrent interactive activity load is tested:", ((string)(null)), table1733, "When ");
 #line hidden
 #line 23
     testRunner.Then("interactive activities should maintain responsive performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -221,44 +221,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 30
     testRunner.Given("real-time synchronization is required for interactive activities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1771 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1734 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sync Scenario",
                             "Concurrent Users",
                             "Update Frequency",
                             "Sync Latency Target",
                             "Conflict Resolution"});
-                table1771.AddRow(new string[] {
+                table1734.AddRow(new string[] {
                             "Collaborative drawing",
                             "100",
                             "50 updates/sec",
                             "<50ms",
                             "Last-write-wins"});
-                table1771.AddRow(new string[] {
+                table1734.AddRow(new string[] {
                             "Shared quiz sessions",
                             "500",
                             "10 updates/sec",
                             "<100ms",
                             "Server authoritative"});
-                table1771.AddRow(new string[] {
+                table1734.AddRow(new string[] {
                             "Group problem solving",
                             "25",
                             "5 updates/sec",
                             "<75ms",
                             "Consensus-based"});
-                table1771.AddRow(new string[] {
+                table1734.AddRow(new string[] {
                             "Teacher demonstrations",
                             "1000",
                             "20 updates/sec",
                             "<150ms",
                             "Read-only sync"});
-                table1771.AddRow(new string[] {
+                table1734.AddRow(new string[] {
                             "Peer review activities",
                             "200",
                             "2 updates/sec",
                             "<200ms",
                             "Sequential updates"});
 #line 31
-    testRunner.When("multiple users interact with shared activities:", ((string)(null)), table1771, "When ");
+    testRunner.When("multiple users interact with shared activities:", ((string)(null)), table1734, "When ");
 #line hidden
 #line 38
     testRunner.Then("real-time synchronization should maintain consistency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -308,44 +308,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 45
     testRunner.Given("mobile devices require optimized interactive performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1772 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1735 = new TechTalk.SpecFlow.Table(new string[] {
                             "Device Category",
                             "Activity Interaction",
                             "Touch Response Target",
                             "Frame Rate",
                             "Battery Impact"});
-                table1772.AddRow(new string[] {
+                table1735.AddRow(new string[] {
                             "High-end smartphone",
                             "Multi-touch gestures",
                             "<16ms (60fps)",
                             "60fps",
                             "<10%/hour"});
-                table1772.AddRow(new string[] {
+                table1735.AddRow(new string[] {
                             "Mid-range smartphone",
                             "Single touch actions",
                             "<33ms (30fps)",
                             "30fps",
                             "<15%/hour"});
-                table1772.AddRow(new string[] {
+                table1735.AddRow(new string[] {
                             "Budget smartphone",
                             "Basic interactions",
                             "<50ms (20fps)",
                             "20fps",
                             "<20%/hour"});
-                table1772.AddRow(new string[] {
+                table1735.AddRow(new string[] {
                             "Tablet (high-end)",
                             "Complex manipulations",
                             "<16ms (60fps)",
                             "60fps",
                             "<8%/hour"});
-                table1772.AddRow(new string[] {
+                table1735.AddRow(new string[] {
                             "Tablet (standard)",
                             "Standard interactions",
                             "<25ms (40fps)",
                             "40fps",
                             "<12%/hour"});
 #line 46
-    testRunner.When("interactive activities are tested on mobile platforms:", ((string)(null)), table1772, "When ");
+    testRunner.When("interactive activities are tested on mobile platforms:", ((string)(null)), table1735, "When ");
 #line hidden
 #line 53
     testRunner.Then("touch responsiveness should meet target frame rates", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -395,44 +395,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 60
     testRunner.Given("interactive activities include audio and video elements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1773 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1736 = new TechTalk.SpecFlow.Table(new string[] {
                             "Media Type",
                             "Interaction Type",
                             "Sync Tolerance",
                             "Quality Target",
                             "Concurrent Sessions"});
-                table1773.AddRow(new string[] {
+                table1736.AddRow(new string[] {
                             "Audio instructions",
                             "Voice recognition",
                             "±10ms",
                             "95% accuracy",
                             "5,000"});
-                table1773.AddRow(new string[] {
+                table1736.AddRow(new string[] {
                             "Video demonstrations",
                             "Progress tracking",
                             "±25ms",
                             "Frame-accurate",
                             "3,000"});
-                table1773.AddRow(new string[] {
+                table1736.AddRow(new string[] {
                             "Animation feedback",
                             "Touch interactions",
                             "±5ms",
                             "Smooth 60fps",
                             "10,000"});
-                table1773.AddRow(new string[] {
+                table1736.AddRow(new string[] {
                             "Music rhythm games",
                             "Beat synchronization",
                             "±2ms",
                             "Perfect timing",
                             "1,000"});
-                table1773.AddRow(new string[] {
+                table1736.AddRow(new string[] {
                             "Speech therapy",
                             "Audio analysis",
                             "±15ms",
                             "Real-time",
                             "2,000"});
 #line 61
-    testRunner.When("multimedia interactive activities are performance tested:", ((string)(null)), table1773, "When ");
+    testRunner.When("multimedia interactive activities are performance tested:", ((string)(null)), table1736, "When ");
 #line hidden
 #line 68
     testRunner.Then("multimedia synchronization should be precise", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -482,44 +482,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 76
     testRunner.Given("activity state must be preserved across sessions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1774 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1737 = new TechTalk.SpecFlow.Table(new string[] {
                             "State Type",
                             "Save Frequency",
                             "Recovery Time Target",
                             "Data Integrity",
                             "Concurrent Updates"});
-                table1774.AddRow(new string[] {
+                table1737.AddRow(new string[] {
                             "Progress checkpoints",
                             "Every 30 seconds",
                             "<2 seconds",
                             "100%",
                             "1,000/second"});
-                table1774.AddRow(new string[] {
+                table1737.AddRow(new string[] {
                             "User input history",
                             "Real-time",
                             "<1 second",
                             "100%",
                             "5,000/second"});
-                table1774.AddRow(new string[] {
+                table1737.AddRow(new string[] {
                             "Media playback position",
                             "Every 5 seconds",
                             "<500ms",
                             "100%",
                             "2,000/second"});
-                table1774.AddRow(new string[] {
+                table1737.AddRow(new string[] {
                             "Drawing/annotation data",
                             "Every stroke",
                             "<100ms",
                             "100%",
                             "10,000/second"});
-                table1774.AddRow(new string[] {
+                table1737.AddRow(new string[] {
                             "Quiz answers",
                             "On submission",
                             "<50ms",
                             "100%",
                             "500/second"});
 #line 77
-    testRunner.When("activity state management is tested:", ((string)(null)), table1774, "When ");
+    testRunner.When("activity state management is tested:", ((string)(null)), table1737, "When ");
 #line hidden
 #line 84
     testRunner.Then("activity state should be saved reliably", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -569,44 +569,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 91
     testRunner.Given("activities must work offline with later synchronization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1775 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1738 = new TechTalk.SpecFlow.Table(new string[] {
                             "Offline Scenario",
                             "Storage Capacity",
                             "Sync Delay Tolerance",
                             "Conflict Resolution",
                             "Performance Impact"});
-                table1775.AddRow(new string[] {
+                table1738.AddRow(new string[] {
                             "Complete activity sets",
                             "100MB",
                             "24 hours",
                             "User preference",
                             "<5% slowdown"});
-                table1775.AddRow(new string[] {
+                table1738.AddRow(new string[] {
                             "Progress tracking",
                             "10MB",
                             "1 hour",
                             "Merge strategies",
                             "<2% slowdown"});
-                table1775.AddRow(new string[] {
+                table1738.AddRow(new string[] {
                             "Media content cache",
                             "500MB",
                             "1 week",
                             "Latest version wins",
                             "<10% slowdown"});
-                table1775.AddRow(new string[] {
+                table1738.AddRow(new string[] {
                             "User-generated content",
                             "50MB",
                             "4 hours",
                             "Manual resolution",
                             "<15% slowdown"});
-                table1775.AddRow(new string[] {
+                table1738.AddRow(new string[] {
                             "Assessment results",
                             "5MB",
                             "30 minutes",
                             "Server authoritative",
                             "No impact"});
 #line 92
-    testRunner.When("offline interactive activities are tested:", ((string)(null)), table1775, "When ");
+    testRunner.When("offline interactive activities are tested:", ((string)(null)), table1738, "When ");
 #line hidden
 #line 99
     testRunner.Then("offline activities should perform identically to online", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -656,44 +656,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 106
     testRunner.Given("activities adapt difficulty based on user performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1776 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1739 = new TechTalk.SpecFlow.Table(new string[] {
                             "Algorithm Type",
                             "Response Time Target",
                             "Accuracy Requirement",
                             "Concurrent Users",
                             "Data Processing"});
-                table1776.AddRow(new string[] {
+                table1739.AddRow(new string[] {
                             "Real-time adaptation",
                             "<50ms",
                             "95% appropriate",
                             "10,000",
                             "Stream processing"});
-                table1776.AddRow(new string[] {
+                table1739.AddRow(new string[] {
                             "Session-based adjustment",
                             "<200ms",
                             "98% appropriate",
                             "25,000",
                             "Batch processing"});
-                table1776.AddRow(new string[] {
+                table1739.AddRow(new string[] {
                             "ML-powered prediction",
                             "<100ms",
                             "90% appropriate",
                             "5,000",
                             "Model inference"});
-                table1776.AddRow(new string[] {
+                table1739.AddRow(new string[] {
                             "Rule-based systems",
                             "<25ms",
                             "99% appropriate",
                             "50,000",
                             "Logic evaluation"});
-                table1776.AddRow(new string[] {
+                table1739.AddRow(new string[] {
                             "Hybrid approaches",
                             "<75ms",
                             "95% appropriate",
                             "15,000",
                             "Multi-stage"});
 #line 107
-    testRunner.When("adaptive difficulty algorithms are tested under load:", ((string)(null)), table1776, "When ");
+    testRunner.When("adaptive difficulty algorithms are tested under load:", ((string)(null)), table1739, "When ");
 #line hidden
 #line 114
     testRunner.Then("difficulty adaptation should be responsive and accurate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -743,44 +743,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 122
     testRunner.Given("interactive activities require fast content loading", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1777 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1740 = new TechTalk.SpecFlow.Table(new string[] {
                             "Content Type",
                             "Size Range",
                             "Load Time Target",
                             "Cache Strategy",
                             "Concurrent Downloads"});
-                table1777.AddRow(new string[] {
+                table1740.AddRow(new string[] {
                             "Activity definitions",
                             "10-100KB",
                             "<200ms",
                             "Long-term cache",
                             "5,000"});
-                table1777.AddRow(new string[] {
+                table1740.AddRow(new string[] {
                             "Interactive media",
                             "1-10MB",
                             "<2 seconds",
                             "Progressive load",
                             "1,000"});
-                table1777.AddRow(new string[] {
+                table1740.AddRow(new string[] {
                             "User interface assets",
                             "100KB-1MB",
                             "<500ms",
                             "Browser cache",
                             "10,000"});
-                table1777.AddRow(new string[] {
+                table1740.AddRow(new string[] {
                             "Audio clips",
                             "100KB-5MB",
                             "<1 second",
                             "Streaming cache",
                             "3,000"});
-                table1777.AddRow(new string[] {
+                table1740.AddRow(new string[] {
                             "Animation sequences",
                             "500KB-20MB",
                             "<3 seconds",
                             "Preload cache",
                             "500"});
 #line 123
-    testRunner.When("interactive content delivery is performance tested:", ((string)(null)), table1777, "When ");
+    testRunner.When("interactive content delivery is performance tested:", ((string)(null)), table1740, "When ");
 #line hidden
 #line 130
     testRunner.Then("content should load within target timeframes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -830,44 +830,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 137
     testRunner.Given("complex interactive activities require optimized rendering", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1778 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1741 = new TechTalk.SpecFlow.Table(new string[] {
                             "Rendering Scenario",
                             "Complexity Level",
                             "Frame Rate Target",
                             "Memory Usage",
                             "GPU Acceleration"});
-                table1778.AddRow(new string[] {
+                table1741.AddRow(new string[] {
                             "Simple text interactions",
                             "Low",
                             "60fps",
                             "<50MB",
                             "Not required"});
-                table1778.AddRow(new string[] {
+                table1741.AddRow(new string[] {
                             "2D graphics manipulation",
                             "Medium",
                             "60fps",
                             "<100MB",
                             "Recommended"});
-                table1778.AddRow(new string[] {
+                table1741.AddRow(new string[] {
                             "Complex animations",
                             "High",
                             "60fps",
                             "<200MB",
                             "Required"});
-                table1778.AddRow(new string[] {
+                table1741.AddRow(new string[] {
                             "3D interactive models",
                             "Very High",
                             "30fps",
                             "<300MB",
                             "Required"});
-                table1778.AddRow(new string[] {
+                table1741.AddRow(new string[] {
                             "Multi-layer compositions",
                             "Extreme",
                             "30fps",
                             "<400MB",
                             "Required"});
 #line 138
-    testRunner.When("rendering performance is tested across different scenarios:", ((string)(null)), table1778, "When ");
+    testRunner.When("rendering performance is tested across different scenarios:", ((string)(null)), table1741, "When ");
 #line hidden
 #line 145
     testRunner.Then("rendering should maintain target frame rates", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -917,44 +917,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 153
     testRunner.Given("interactive activities generate assessment data in real-time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1779 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1742 = new TechTalk.SpecFlow.Table(new string[] {
                             "Assessment Type",
                             "Data Volume",
                             "Processing Time",
                             "Analytics Delay",
                             "Concurrent Sessions"});
-                table1779.AddRow(new string[] {
+                table1742.AddRow(new string[] {
                             "Multiple choice scoring",
                             "100 points/min",
                             "<10ms",
                             "<100ms",
                             "10,000"});
-                table1779.AddRow(new string[] {
+                table1742.AddRow(new string[] {
                             "Drawing analysis",
                             "1MB data/min",
                             "<500ms",
                             "<1 second",
                             "1,000"});
-                table1779.AddRow(new string[] {
+                table1742.AddRow(new string[] {
                             "Audio pronunciation",
                             "10MB audio/min",
                             "<2 seconds",
                             "<5 seconds",
                             "2,000"});
-                table1779.AddRow(new string[] {
+                table1742.AddRow(new string[] {
                             "Behavioral tracking",
                             "1000 events/min",
                             "<5ms",
                             "<50ms",
                             "5,000"});
-                table1779.AddRow(new string[] {
+                table1742.AddRow(new string[] {
                             "Progress calculations",
                             "Complex formulas",
                             "<100ms",
                             "<200ms",
                             "25,000"});
 #line 154
-    testRunner.When("assessment data processing is performance tested:", ((string)(null)), table1779, "When ");
+    testRunner.When("assessment data processing is performance tested:", ((string)(null)), table1742, "When ");
 #line hidden
 #line 161
     testRunner.Then("assessment processing should be real-time or near real-time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1004,44 +1004,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 168
     testRunner.Given("AI provides personalized feedback for interactive activities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1780 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1743 = new TechTalk.SpecFlow.Table(new string[] {
                             "Feedback Type",
                             "Generation Time",
                             "Accuracy Target",
                             "Concurrent Requests",
                             "Model Complexity"});
-                table1780.AddRow(new string[] {
+                table1743.AddRow(new string[] {
                             "Automated text feedback",
                             "<200ms",
                             "95% relevant",
                             "1,000",
                             "Medium"});
-                table1780.AddRow(new string[] {
+                table1743.AddRow(new string[] {
                             "Speech pattern analysis",
                             "<1 second",
                             "90% accurate",
                             "500",
                             "High"});
-                table1780.AddRow(new string[] {
+                table1743.AddRow(new string[] {
                             "Drawing evaluation",
                             "<500ms",
                             "85% helpful",
                             "2,000",
                             "Medium"});
-                table1780.AddRow(new string[] {
+                table1743.AddRow(new string[] {
                             "Progress suggestions",
                             "<100ms",
                             "98% appropriate",
                             "5,000",
                             "Low"});
-                table1780.AddRow(new string[] {
+                table1743.AddRow(new string[] {
                             "Adaptive hints",
                             "<50ms",
                             "92% effective",
                             "10,000",
                             "Low"});
 #line 169
-    testRunner.When("AI feedback systems are performance tested:", ((string)(null)), table1780, "When ");
+    testRunner.When("AI feedback systems are performance tested:", ((string)(null)), table1743, "When ");
 #line hidden
 #line 176
     testRunner.Then("AI feedback should be generated within target timeframes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1093,38 +1093,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 184
     testRunner.Given("interactive sessions may be interrupted unexpectedly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1781 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1744 = new TechTalk.SpecFlow.Table(new string[] {
                             "Interruption Type",
                             "Recovery Strategy",
                             "Data Loss Tolerance",
                             "User Experience"});
-                table1781.AddRow(new string[] {
+                table1744.AddRow(new string[] {
                             "Network disconnection",
                             "Local state preservation",
                             "0% loss",
                             "Seamless reconnection"});
-                table1781.AddRow(new string[] {
+                table1744.AddRow(new string[] {
                             "Browser crash",
                             "Auto-save mechanisms",
                             "<1 minute of work",
                             "Resume from checkpoint"});
-                table1781.AddRow(new string[] {
+                table1744.AddRow(new string[] {
                             "Device sleep mode",
                             "Session pause and resume",
                             "0% loss",
                             "Automatic continuation"});
-                table1781.AddRow(new string[] {
+                table1744.AddRow(new string[] {
                             "App backgrounding",
                             "Graceful state pause",
                             "0% loss",
                             "Quick reactivation"});
-                table1781.AddRow(new string[] {
+                table1744.AddRow(new string[] {
                             "Server maintenance",
                             "Client-side fallback",
                             "0% loss",
                             "Offline mode enabled"});
 #line 185
-    testRunner.When("session interruptions occur:", ((string)(null)), table1781, "When ");
+    testRunner.When("session interruptions occur:", ((string)(null)), table1744, "When ");
 #line hidden
 #line 192
     testRunner.Then("session recovery should be automatic and complete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1176,33 +1176,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 199
     testRunner.Given("some users may experience high network latency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1782 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1745 = new TechTalk.SpecFlow.Table(new string[] {
                             "Latency Level",
                             "Mitigation Strategy",
                             "User Experience Target",
                             "Performance Impact"});
-                table1782.AddRow(new string[] {
+                table1745.AddRow(new string[] {
                             "Moderate (200-500ms)",
                             "Predictive pre-loading",
                             "Barely noticeable",
                             "<10% degradation"});
-                table1782.AddRow(new string[] {
+                table1745.AddRow(new string[] {
                             "High (500ms-1s)",
                             "Aggressive caching",
                             "Slight delays",
                             "<25% degradation"});
-                table1782.AddRow(new string[] {
+                table1745.AddRow(new string[] {
                             "Very high (1-2s)",
                             "Offline mode transition",
                             "Functional but slow",
                             "<50% degradation"});
-                table1782.AddRow(new string[] {
+                table1745.AddRow(new string[] {
                             "Extreme (>2s)",
                             "Connection optimization",
                             "Basic functionality",
                             "Graceful degradation"});
 #line 200
-    testRunner.When("high latency conditions are simulated:", ((string)(null)), table1782, "When ");
+    testRunner.When("high latency conditions are simulated:", ((string)(null)), table1745, "When ");
 #line hidden
 #line 206
     testRunner.Then("activities should remain functional under high latency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1254,33 +1254,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 213
     testRunner.Given("some devices have limited memory for interactive activities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1783 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1746 = new TechTalk.SpecFlow.Table(new string[] {
                             "Device Memory Type",
                             "Available Memory",
                             "Activity Adaptation",
                             "Performance Target"});
-                table1783.AddRow(new string[] {
+                table1746.AddRow(new string[] {
                             "Very low (1GB RAM)",
                             "<500MB available",
                             "Simplified interactions",
                             "Basic functionality"});
-                table1783.AddRow(new string[] {
+                table1746.AddRow(new string[] {
                             "Low (2GB RAM)",
                             "<1GB available",
                             "Reduced quality assets",
                             "Limited features"});
-                table1783.AddRow(new string[] {
+                table1746.AddRow(new string[] {
                             "Standard (4GB RAM)",
                             "<2GB available",
                             "Standard experience",
                             "Full functionality"});
-                table1783.AddRow(new string[] {
+                table1746.AddRow(new string[] {
                             "High (8GB+ RAM)",
                             ">4GB available",
                             "Enhanced experience",
                             "Premium features"});
 #line 214
-    testRunner.When("memory-constrained scenarios are tested:", ((string)(null)), table1783, "When ");
+    testRunner.When("memory-constrained scenarios are tested:", ((string)(null)), table1746, "When ");
 #line hidden
 #line 220
     testRunner.Then("activities should adapt to available memory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1332,33 +1332,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 227
     testRunner.Given("multiple users may access shared interactive content simultaneously", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1784 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1747 = new TechTalk.SpecFlow.Table(new string[] {
                             "Conflict Type",
                             "Resolution Strategy",
                             "Data Integrity",
                             "User Communication"});
-                table1784.AddRow(new string[] {
+                table1747.AddRow(new string[] {
                             "Simultaneous edits",
                             "Last-write-wins with notification",
                             "Preserved",
                             "Clear conflict alerts"});
-                table1784.AddRow(new string[] {
+                table1747.AddRow(new string[] {
                             "Resource contention",
                             "Fair queuing system",
                             "Maintained",
                             "Wait time indicators"});
-                table1784.AddRow(new string[] {
+                table1747.AddRow(new string[] {
                             "State synchronization",
                             "Operational transforms",
                             "Consistent",
                             "Real-time updates"});
-                table1784.AddRow(new string[] {
+                table1747.AddRow(new string[] {
                             "Cache inconsistencies",
                             "Cache invalidation",
                             "Resolved automatically",
                             "Transparent to user"});
 #line 228
-    testRunner.When("concurrent access conflicts arise:", ((string)(null)), table1784, "When ");
+    testRunner.When("concurrent access conflicts arise:", ((string)(null)), table1747, "When ");
 #line hidden
 #line 234
     testRunner.Then("conflicts should be resolved automatically where possible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1410,38 +1410,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 241
     testRunner.Given("activities must work across a wide range of devices and browsers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1785 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1748 = new TechTalk.SpecFlow.Table(new string[] {
                             "Compatibility Issue",
                             "Fallback Strategy",
                             "Feature Availability",
                             "Performance Impact"});
-                table1785.AddRow(new string[] {
+                table1748.AddRow(new string[] {
                             "Touch unsupported",
                             "Mouse/keyboard fallback",
                             "Core functionality",
                             "No significant impact"});
-                table1785.AddRow(new string[] {
+                table1748.AddRow(new string[] {
                             "Audio unsupported",
                             "Visual feedback only",
                             "Reduced experience",
                             "Improved performance"});
-                table1785.AddRow(new string[] {
+                table1748.AddRow(new string[] {
                             "Canvas unsupported",
                             "Static image fallback",
                             "Limited interactivity",
                             "Much improved"});
-                table1785.AddRow(new string[] {
+                table1748.AddRow(new string[] {
                             "WebGL unsupported",
                             "2D rendering fallback",
                             "Simplified graphics",
                             "Improved performance"});
-                table1785.AddRow(new string[] {
+                table1748.AddRow(new string[] {
                             "Mobile gestures limited",
                             "Single-touch adaptation",
                             "Basic interactions",
                             "Maintained performance"});
 #line 242
-    testRunner.When("device compatibility issues arise:", ((string)(null)), table1785, "When ");
+    testRunner.When("device compatibility issues arise:", ((string)(null)), table1748, "When ");
 #line hidden
 #line 249
     testRunner.Then("activities should gracefully degrade on unsupported devices", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 17
     testRunner.And("family competence is crucial for AAC success", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2543 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2506 = new TechTalk.SpecFlow.Table(new string[] {
                             "Family Member",
                             "Training Focus",
                             "Training Duration",
                             "Competency Level Target",
                             "Support Frequency",
                             "Training Materials"});
-                table2543.AddRow(new string[] {
+                table2506.AddRow(new string[] {
                             "Primary caregiver",
                             "Complete AAC competency",
                             "12-15 hours",
                             "Advanced",
                             "Weekly check-ins",
                             "Comprehensive manual"});
-                table2543.AddRow(new string[] {
+                table2506.AddRow(new string[] {
                             "Secondary caregiver",
                             "Essential skills",
                             "8-10 hours",
                             "Intermediate",
                             "Bi-weekly check-ins",
                             "Essential guide"});
-                table2543.AddRow(new string[] {
+                table2506.AddRow(new string[] {
                             "Siblings",
                             "Age-appropriate support",
                             "4-6 hours",
                             "Basic-intermediate",
                             "Monthly check-ins",
                             "Sibling handbook"});
-                table2543.AddRow(new string[] {
+                table2506.AddRow(new string[] {
                             "Grandparents",
                             "Supportive communication",
                             "3-4 hours",
                             "Basic",
                             "Monthly check-ins",
                             "Grandparent guide"});
-                table2543.AddRow(new string[] {
+                table2506.AddRow(new string[] {
                             "Extended family",
                             "Awareness and respect",
                             "2-3 hours",
                             "Basic awareness",
                             "Quarterly check-ins",
                             "Awareness materials"});
-                table2543.AddRow(new string[] {
+                table2506.AddRow(new string[] {
                             "Family friends",
                             "Social inclusion",
                             "1-2 hours",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "As-needed support",
                             "Quick reference"});
 #line 18
-    testRunner.When("implementing family training programs:", ((string)(null)), table2543, "When ");
+    testRunner.When("implementing family training programs:", ((string)(null)), table2506, "When ");
 #line hidden
 #line 26
     testRunner.Then("family training should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 34
     testRunner.And("teacher competence affects academic success", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2544 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2507 = new TechTalk.SpecFlow.Table(new string[] {
                             "Educational Role",
                             "Training Components",
                             "Training Schedule",
                             "Competency Requirements",
                             "Integration Focus",
                             "Assessment Methods"});
-                table2544.AddRow(new string[] {
+                table2507.AddRow(new string[] {
                             "General education teacher",
                             "Classroom AAC integration",
                             "6-8 hours initial + ongoing",
                             "Intermediate competency",
                             "Curriculum integration",
                             "Classroom observation"});
-                table2544.AddRow(new string[] {
+                table2507.AddRow(new string[] {
                             "Special education teacher",
                             "Advanced AAC strategies",
                             "12-15 hours",
                             "Advanced competency",
                             "IEP implementation",
                             "Skills demonstration"});
-                table2544.AddRow(new string[] {
+                table2507.AddRow(new string[] {
                             "Teaching assistant",
                             "Daily support skills",
                             "4-6 hours",
                             "Basic-intermediate",
                             "Instructional support",
                             "Support checklist"});
-                table2544.AddRow(new string[] {
+                table2507.AddRow(new string[] {
                             "Related service providers",
                             "Discipline-specific integration",
                             "8-10 hours",
                             "Advanced competency",
                             "Service delivery",
                             "Service integration"});
-                table2544.AddRow(new string[] {
+                table2507.AddRow(new string[] {
                             "Administration",
                             "Policy and support",
                             "2-3 hours",
                             "Awareness",
                             "System support",
                             "Policy implementation"});
-                table2544.AddRow(new string[] {
+                table2507.AddRow(new string[] {
                             "Substitute teachers",
                             "Emergency support",
                             "1-2 hours",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Continuity maintenance",
                             "Quick competency check"});
 #line 35
-    testRunner.When("training educational partners:", ((string)(null)), table2544, "When ");
+    testRunner.When("training educational partners:", ((string)(null)), table2507, "When ");
 #line hidden
 #line 43
     testRunner.Then("educational training should be role-specific", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 51
     testRunner.And("peer acceptance enhances social inclusion", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2545 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2508 = new TechTalk.SpecFlow.Table(new string[] {
                             "Peer Group",
                             "Training Approach",
                             "Training Content",
                             "Duration",
                             "Competency Goal",
                             "Social Benefits"});
-                table2545.AddRow(new string[] {
+                table2508.AddRow(new string[] {
                             "Classroom peers",
                             "Group awareness sessions",
                             "AAC understanding",
                             "1-2 hours",
                             "Basic awareness",
                             "Inclusive classroom"});
-                table2545.AddRow(new string[] {
+                table2508.AddRow(new string[] {
                             "Close friends",
                             "Individual training",
                             "Detailed support skills",
                             "3-4 hours",
                             "Intermediate support",
                             "Strong friendships"});
-                table2545.AddRow(new string[] {
+                table2508.AddRow(new string[] {
                             "Activity partners",
                             "Activity-specific training",
                             "Context-relevant skills",
                             "2-3 hours",
                             "Activity competency",
                             "Successful participation"});
-                table2545.AddRow(new string[] {
+                table2508.AddRow(new string[] {
                             "Peer buddies",
                             "Formal buddy training",
                             "Comprehensive support",
                             "4-6 hours",
                             "Advanced support",
                             "Structured friendship"});
-                table2545.AddRow(new string[] {
+                table2508.AddRow(new string[] {
                             "Team members",
                             "Team integration training",
                             "Collaborative skills",
                             "2-3 hours",
                             "Team competency",
                             "Team inclusion"});
-                table2545.AddRow(new string[] {
+                table2508.AddRow(new string[] {
                             "Study partners",
                             "Academic support training",
                             "Educational assistance",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Academic support",
                             "Educational success"});
 #line 52
-    testRunner.When("developing peer training programs:", ((string)(null)), table2545, "When ");
+    testRunner.When("developing peer training programs:", ((string)(null)), table2508, "When ");
 #line hidden
 #line 60
     testRunner.Then("peer training should be age-appropriate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 68
     testRunner.And("professional support affects service quality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2546 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2509 = new TechTalk.SpecFlow.Table(new string[] {
                             "Professional Type",
                             "Specialized Training",
                             "Professional Requirements",
                             "Competency Standards",
                             "Continuing Education",
                             "Professional Integration"});
-                table2546.AddRow(new string[] {
+                table2509.AddRow(new string[] {
                             "Speech-language pathologists",
                             "Advanced AAC expertise",
                             "Professional certification",
                             "Expert level",
                             "Annual updates",
                             "Full integration"});
-                table2546.AddRow(new string[] {
+                table2509.AddRow(new string[] {
                             "Occupational therapists",
                             "Access and positioning",
                             "Professional knowledge",
                             "Advanced level",
                             "Bi-annual updates",
                             "Access optimization"});
-                table2546.AddRow(new string[] {
+                table2509.AddRow(new string[] {
                             "Physical therapists",
                             "Motor aspects of AAC",
                             "Professional awareness",
                             "Intermediate level",
                             "Bi-annual updates",
                             "Motor integration"});
-                table2546.AddRow(new string[] {
+                table2509.AddRow(new string[] {
                             "Psychologists",
                             "Behavioral aspects",
                             "Professional understanding",
                             "Intermediate level",
                             "Annual updates",
                             "Behavioral support"});
-                table2546.AddRow(new string[] {
+                table2509.AddRow(new string[] {
                             "Social workers",
                             "Family and system support",
                             "Professional awareness",
                             "Basic-intermediate",
                             "Annual updates",
                             "System coordination"});
-                table2546.AddRow(new string[] {
+                table2509.AddRow(new string[] {
                             "Medical professionals",
                             "Healthcare communication",
                             "Medical awareness",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "As-needed updates",
                             "Healthcare integration"});
 #line 69
-    testRunner.When("training professional partners:", ((string)(null)), table2546, "When ");
+    testRunner.When("training professional partners:", ((string)(null)), table2509, "When ");
 #line hidden
 #line 77
     testRunner.Then("professional training should be discipline-specific", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 86
     testRunner.And("effective modeling requires specific skills", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2547 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2510 = new TechTalk.SpecFlow.Table(new string[] {
                             "Modeling Technique",
                             "Training Components",
                             "Skill Development",
                             "Practice Requirements",
                             "Competency Indicators",
                             "Impact on Learning"});
-                table2547.AddRow(new string[] {
+                table2510.AddRow(new string[] {
                             "Aided language stimulation",
                             "Natural AAC use",
                             "Fluent AAC modeling",
                             "Daily practice",
                             "Consistent modeling",
                             "Accelerated learning"});
-                table2547.AddRow(new string[] {
+                table2510.AddRow(new string[] {
                             "Focused stimulation",
                             "Target vocabulary emphasis",
                             "Strategic highlighting",
                             "Structured practice",
                             "Targeted emphasis",
                             "Vocabulary growth"});
-                table2547.AddRow(new string[] {
+                table2510.AddRow(new string[] {
                             "Expansion modeling",
                             "Message expansion",
                             "Elaboration skills",
                             "Conversational practice",
                             "Appropriate expansion",
                             "Language development"});
-                table2547.AddRow(new string[] {
+                table2510.AddRow(new string[] {
                             "Expectant waiting",
                             "Communication opportunities",
                             "Patience and timing",
                             "Interaction practice",
                             "Optimal wait time",
                             "Increased initiation"});
-                table2547.AddRow(new string[] {
+                table2510.AddRow(new string[] {
                             "Recasting",
                             "Error correction",
                             "Gentle correction",
                             "Natural interaction",
                             "Supportive recasting",
                             "Improved accuracy"});
-                table2547.AddRow(new string[] {
+                table2510.AddRow(new string[] {
                             "Sabotage techniques",
                             "Communication temptations",
                             "Opportunity creation",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Effective sabotage",
                             "Motivation increase"});
 #line 87
-    testRunner.When("training modeling techniques:", ((string)(null)), table2547, "When ");
+    testRunner.When("training modeling techniques:", ((string)(null)), table2510, "When ");
 #line hidden
 #line 95
     testRunner.Then("modeling should be natural and effective", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 103
     testRunner.And("interaction quality affects communication success", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2548 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2511 = new TechTalk.SpecFlow.Table(new string[] {
                             "Strategy Type",
                             "Training Focus",
                             "Skill Components",
                             "Application Context",
                             "Mastery Criteria",
                             "Communication Benefits"});
-                table2548.AddRow(new string[] {
+                table2511.AddRow(new string[] {
                             "Turn-taking",
                             "Conversation flow",
                             "Timing and patience",
                             "Social conversations",
                             "Smooth turn exchanges",
                             "Natural conversation"});
-                table2548.AddRow(new string[] {
+                table2511.AddRow(new string[] {
                             "Topic maintenance",
                             "Conversation coherence",
                             "Topic awareness",
                             "Extended conversations",
                             "Sustained topics",
                             "Meaningful interaction"});
-                table2548.AddRow(new string[] {
+                table2511.AddRow(new string[] {
                             "Repair strategies",
                             "Communication breakdowns",
                             "Problem-solving",
                             "Challenging situations",
                             "Effective repairs",
                             "Successful resolution"});
-                table2548.AddRow(new string[] {
+                table2511.AddRow(new string[] {
                             "Question techniques",
                             "Information gathering",
                             "Question variety",
                             "Learning contexts",
                             "Appropriate questioning",
                             "Enhanced learning"});
-                table2548.AddRow(new string[] {
+                table2511.AddRow(new string[] {
                             "Story co-construction",
                             "Narrative building",
                             "Collaborative storytelling",
                             "Narrative contexts",
                             "Joint story creation",
                             "Rich narratives"});
-                table2548.AddRow(new string[] {
+                table2511.AddRow(new string[] {
                             "Conflict resolution",
                             "Problem-solving",
                             "Negotiation skills",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Peaceful resolution",
                             "Relationship maintenance"});
 #line 104
-    testRunner.When("developing interaction strategies:", ((string)(null)), table2548, "When ");
+    testRunner.When("developing interaction strategies:", ((string)(null)), table2511, "When ");
 #line hidden
 #line 112
     testRunner.Then("strategies should be natural", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 120
     testRunner.And("partner problem-solving maintains communication flow", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2549 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2512 = new TechTalk.SpecFlow.Table(new string[] {
                             "Problem Type",
                             "Troubleshooting Training",
                             "Solution Strategies",
                             "Emergency Procedures",
                             "Prevention Education",
                             "Partner Confidence"});
-                table2549.AddRow(new string[] {
+                table2512.AddRow(new string[] {
                             "Device malfunctions",
                             "Technical problem-solving",
                             "Basic tech support",
                             "Backup communication",
                             "Device maintenance",
                             "Increased confidence"});
-                table2549.AddRow(new string[] {
+                table2512.AddRow(new string[] {
                             "Communication breakdowns",
                             "Message repair",
                             "Clarification strategies",
                             "Alternative methods",
                             "Breakdown prevention",
                             "Communication confidence"});
-                table2549.AddRow(new string[] {
+                table2512.AddRow(new string[] {
                             "Motivation issues",
                             "Engagement strategies",
                             "Motivation techniques",
                             "Crisis communication",
                             "Motivation maintenance",
                             "Motivational confidence"});
-                table2549.AddRow(new string[] {
+                table2512.AddRow(new string[] {
                             "Access difficulties",
                             "Accessibility solutions",
                             "Position adjustments",
                             "Emergency positioning",
                             "Access optimization",
                             "Access confidence"});
-                table2549.AddRow(new string[] {
+                table2512.AddRow(new string[] {
                             "Symbol confusion",
                             "Symbol clarification",
                             "Symbol teaching",
                             "Visual supports",
                             "Symbol organization",
                             "Symbol confidence"});
-                table2549.AddRow(new string[] {
+                table2512.AddRow(new string[] {
                             "Environmental barriers",
                             "Environmental modification",
                             "Barrier removal",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Environmental planning",
                             "Environmental confidence"});
 #line 121
-    testRunner.When("training troubleshooting skills:", ((string)(null)), table2549, "When ");
+    testRunner.When("training troubleshooting skills:", ((string)(null)), table2512, "When ");
 #line hidden
 #line 129
     testRunner.Then("troubleshooting should be systematic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 137
     testRunner.And("culturally responsive practice is essential", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2550 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2513 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cultural Aspect",
                             "Competency Training",
                             "Cultural Awareness",
                             "Adaptation Strategies",
                             "Respect Practices",
                             "Inclusive Approaches"});
-                table2550.AddRow(new string[] {
+                table2513.AddRow(new string[] {
                             "Communication styles",
                             "Cultural communication patterns",
                             "Direct vs. indirect styles",
                             "Style adaptation",
                             "Cultural respect",
                             "Style accommodation"});
-                table2550.AddRow(new string[] {
+                table2513.AddRow(new string[] {
                             "Family dynamics",
                             "Cultural family structures",
                             "Authority patterns",
                             "Family-centered approaches",
                             "Hierarchy respect",
                             "Family inclusion"});
-                table2550.AddRow(new string[] {
+                table2513.AddRow(new string[] {
                             "Language preferences",
                             "Bilingual considerations",
                             "Code-switching support",
                             "Language integration",
                             "Language respect",
                             "Multilingual support"});
-                table2550.AddRow(new string[] {
+                table2513.AddRow(new string[] {
                             "Religious considerations",
                             "Faith-based perspectives",
                             "Religious accommodation",
                             "Faith integration",
                             "Religious respect",
                             "Faith inclusion"});
-                table2550.AddRow(new string[] {
+                table2513.AddRow(new string[] {
                             "Socioeconomic factors",
                             "Economic considerations",
                             "Resource adaptation",
                             "Economic sensitivity",
                             "Economic respect",
                             "Accessible solutions"});
-                table2550.AddRow(new string[] {
+                table2513.AddRow(new string[] {
                             "Educational backgrounds",
                             "Literacy considerations",
                             "Education adaptation",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Educational respect",
                             "Educational inclusion"});
 #line 138
-    testRunner.When("developing cultural competency:", ((string)(null)), table2550, "When ");
+    testRunner.When("developing cultural competency:", ((string)(null)), table2513, "When ");
 #line hidden
 #line 146
     testRunner.Then("cultural competency should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 155
     testRunner.And("delivery methods affect training effectiveness", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2551 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2514 = new TechTalk.SpecFlow.Table(new string[] {
                             "Delivery Method",
                             "Target Audience",
                             "Effectiveness Level",
                             "Resource Requirements",
                             "Accessibility Features",
                             "Scalability Potential"});
-                table2551.AddRow(new string[] {
+                table2514.AddRow(new string[] {
                             "In-person workshops",
                             "Local partners",
                             "High effectiveness",
                             "Trainer, materials, venue",
                             "Physical accessibility",
                             "Limited scalability"});
-                table2551.AddRow(new string[] {
+                table2514.AddRow(new string[] {
                             "Online courses",
                             "Remote partners",
                             "Moderate effectiveness",
                             "Platform, content",
                             "Digital accessibility",
                             "High scalability"});
-                table2551.AddRow(new string[] {
+                table2514.AddRow(new string[] {
                             "Video training",
                             "Visual learners",
                             "Good effectiveness",
                             "Video production",
                             "Captioning, transcripts",
                             "High scalability"});
-                table2551.AddRow(new string[] {
+                table2514.AddRow(new string[] {
                             "Hands-on practice",
                             "Practical learners",
                             "High effectiveness",
                             "Equipment, supervision",
                             "Physical adaptations",
                             "Moderate scalability"});
-                table2551.AddRow(new string[] {
+                table2514.AddRow(new string[] {
                             "Mentoring programs",
                             "Individual support",
                             "Very high effectiveness",
                             "Mentors, coordination",
                             "Individual adaptations",
                             "Limited scalability"});
-                table2551.AddRow(new string[] {
+                table2514.AddRow(new string[] {
                             "Peer learning",
                             "Collaborative learners",
                             "Good effectiveness",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Group accessibility",
                             "Moderate scalability"});
 #line 156
-    testRunner.When("implementing training delivery:", ((string)(null)), table2551, "When ");
+    testRunner.When("implementing training delivery:", ((string)(null)), table2514, "When ");
 #line hidden
 #line 164
     testRunner.Then("delivery should match learning preferences", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 172
     testRunner.And("assessment drives training decisions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2552 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2515 = new TechTalk.SpecFlow.Table(new string[] {
                             "Assessment Type",
                             "Assessment Method",
                             "Competency Standards",
                             "Assessment Frequency",
                             "Feedback Provision",
                             "Improvement Planning"});
-                table2552.AddRow(new string[] {
+                table2515.AddRow(new string[] {
                             "Initial assessment",
                             "Pre-training evaluation",
                             "Baseline competency",
                             "Before training",
                             "Immediate feedback",
                             "Training customization"});
-                table2552.AddRow(new string[] {
+                table2515.AddRow(new string[] {
                             "Progress assessment",
                             "Mid-training evaluation",
                             "Developing competency",
                             "During training",
                             "Ongoing feedback",
                             "Training adjustment"});
-                table2552.AddRow(new string[] {
+                table2515.AddRow(new string[] {
                             "Final assessment",
                             "Post-training evaluation",
                             "Target competency",
                             "After training",
                             "Comprehensive feedback",
                             "Certification decision"});
-                table2552.AddRow(new string[] {
+                table2515.AddRow(new string[] {
                             "Follow-up assessment",
                             "Ongoing evaluation",
                             "Maintained competency",
                             "Quarterly",
                             "Performance feedback",
                             "Refresher planning"});
-                table2552.AddRow(new string[] {
+                table2515.AddRow(new string[] {
                             "Practical assessment",
                             "Real-world observation",
                             "Applied competency",
                             "Monthly",
                             "Observational feedback",
                             "Skills reinforcement"});
-                table2552.AddRow(new string[] {
+                table2515.AddRow(new string[] {
                             "Self-assessment",
                             "Partner self-evaluation",
                             "Self-awareness",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Self-reflection",
                             "Self-improvement"});
 #line 173
-    testRunner.When("implementing competency assessment:", ((string)(null)), table2552, "When ");
+    testRunner.When("implementing competency assessment:", ((string)(null)), table2515, "When ");
 #line hidden
 #line 181
     testRunner.Then("assessment should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 189
     testRunner.And("recognition motivates participation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2553 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2516 = new TechTalk.SpecFlow.Table(new string[] {
                             "Certification Level",
                             "Requirements",
                             "Training Hours",
                             "Competency Demonstration",
                             "Maintenance Requirements",
                             "Recognition Benefits"});
-                table2553.AddRow(new string[] {
+                table2516.AddRow(new string[] {
                             "Basic awareness",
                             "Awareness training",
                             "2-4 hours",
                             "Knowledge test",
                             "Annual refresher",
                             "Awareness certificate"});
-                table2553.AddRow(new string[] {
+                table2516.AddRow(new string[] {
                             "Support competency",
                             "Support training",
                             "8-12 hours",
                             "Skills demonstration",
                             "Bi-annual update",
                             "Support certificate"});
-                table2553.AddRow(new string[] {
+                table2516.AddRow(new string[] {
                             "Advanced partnership",
                             "Advanced training",
                             "20-30 hours",
                             "Comprehensive assessment",
                             "Annual recertification",
                             "Advanced certificate"});
-                table2553.AddRow(new string[] {
+                table2516.AddRow(new string[] {
                             "Trainer certification",
                             "Training preparation",
                             "40-60 hours",
                             "Training demonstration",
                             "Ongoing professional development",
                             "Trainer credentials"});
-                table2553.AddRow(new string[] {
+                table2516.AddRow(new string[] {
                             "Expert partnership",
                             "Expert development",
                             "60+ hours",
                             "Expert assessment",
                             "Continuous education",
                             "Expert recognition"});
-                table2553.AddRow(new string[] {
+                table2516.AddRow(new string[] {
                             "Professional certification",
                             "Professional standards",
                             "Variable",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Professional requirements",
                             "Professional credentials"});
 #line 190
-    testRunner.When("developing certification programs:", ((string)(null)), table2553, "When ");
+    testRunner.When("developing certification programs:", ((string)(null)), table2516, "When ");
 #line hidden
 #line 198
     testRunner.Then("certification should recognize competency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 207
     testRunner.And("ongoing support maintains competency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2554 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2517 = new TechTalk.SpecFlow.Table(new string[] {
                             "Support Type",
                             "Support Frequency",
                             "Support Method",
                             "Target Audience",
                             "Support Goals",
                             "Success Indicators"});
-                table2554.AddRow(new string[] {
+                table2517.AddRow(new string[] {
                             "Consultation",
                             "Weekly initially, monthly ongoing",
                             "Individual meetings",
                             "All partners",
                             "Problem-solving",
                             "Issue resolution"});
-                table2554.AddRow(new string[] {
+                table2517.AddRow(new string[] {
                             "Group support",
                             "Monthly meetings",
                             "Group sessions",
                             "Partner groups",
                             "Peer learning",
                             "Shared knowledge"});
-                table2554.AddRow(new string[] {
+                table2517.AddRow(new string[] {
                             "Resource updates",
                             "As needed",
                             "Digital distribution",
                             "All partners",
                             "Current information",
                             "Updated practices"});
-                table2554.AddRow(new string[] {
+                table2517.AddRow(new string[] {
                             "Refresher training",
                             "Quarterly sessions",
                             "Skill practice",
                             "All partners",
                             "Skill maintenance",
                             "Maintained competency"});
-                table2554.AddRow(new string[] {
+                table2517.AddRow(new string[] {
                             "Troubleshooting",
                             "As needed",
                             "On-demand help",
                             "All partners",
                             "Immediate assistance",
                             "Quick resolution"});
-                table2554.AddRow(new string[] {
+                table2517.AddRow(new string[] {
                             "Advanced training",
                             "Annual opportunities",
                             "Specialized sessions",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Skill enhancement",
                             "Enhanced abilities"});
 #line 208
-    testRunner.When("providing ongoing support:", ((string)(null)), table2554, "When ");
+    testRunner.When("providing ongoing support:", ((string)(null)), table2517, "When ");
 #line hidden
 #line 216
     testRunner.Then("support should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 224
     testRunner.And("feedback drives program improvement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2555 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2518 = new TechTalk.SpecFlow.Table(new string[] {
                             "Evaluation Component",
                             "Measurement Method",
                             "Data Collection",
                             "Analysis Approach",
                             "Feedback Recipients",
                             "Improvement Actions"});
-                table2555.AddRow(new string[] {
+                table2518.AddRow(new string[] {
                             "Partner satisfaction",
                             "Satisfaction surveys",
                             "Post-training surveys",
                             "Statistical analysis",
                             "Training team",
                             "Program modification"});
-                table2555.AddRow(new string[] {
+                table2518.AddRow(new string[] {
                             "Competency achievement",
                             "Skills assessment",
                             "Performance testing",
                             "Competency analysis",
                             "Partners and supervisors",
                             "Individual support"});
-                table2555.AddRow(new string[] {
+                table2518.AddRow(new string[] {
                             "Training effectiveness",
                             "Outcome measurement",
                             "Pre/post comparison",
                             "Effect size calculation",
                             "Program administrators",
                             "Program enhancement"});
-                table2555.AddRow(new string[] {
+                table2518.AddRow(new string[] {
                             "Long-term impact",
                             "Follow-up evaluation",
                             "Longitudinal tracking",
                             "Trend analysis",
                             "Stakeholders",
                             "Strategic planning"});
-                table2555.AddRow(new string[] {
+                table2518.AddRow(new string[] {
                             "Cost-effectiveness",
                             "Cost-benefit analysis",
                             "Financial tracking",
                             "Economic analysis",
                             "Administrators",
                             "Resource allocation"});
-                table2555.AddRow(new string[] {
+                table2518.AddRow(new string[] {
                             "Quality indicators",
                             "Quality metrics",
                             "Systematic monitoring",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Quality team",
                             "Quality improvement"});
 #line 225
-    testRunner.When("implementing evaluation systems:", ((string)(null)), table2555, "When ");
+    testRunner.When("implementing evaluation systems:", ((string)(null)), table2518, "When ");
 #line hidden
 #line 233
     testRunner.Then("evaluation should be systematic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 242
     testRunner.And("crisis preparation prevents communication breakdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2556 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2519 = new TechTalk.SpecFlow.Table(new string[] {
                             "Crisis Type",
                             "Communication Challenges",
                             "Training Preparation",
                             "Emergency Procedures",
                             "Partner Roles",
                             "Success Measures"});
-                table2556.AddRow(new string[] {
+                table2519.AddRow(new string[] {
                             "Medical emergency",
                             "Rapid communication needs",
                             "Medical vocabulary",
                             "Emergency communication board",
                             "Rapid communication",
                             "Fast, accurate communication"});
-                table2556.AddRow(new string[] {
+                table2519.AddRow(new string[] {
                             "Safety emergency",
                             "Critical safety messages",
                             "Safety vocabulary",
                             "Safety communication protocols",
                             "Safety communication",
                             "Immediate safety response"});
-                table2556.AddRow(new string[] {
+                table2519.AddRow(new string[] {
                             "Behavioral crisis",
                             "De-escalation communication",
                             "Calming strategies",
                             "Crisis communication plans",
                             "Calming presence",
                             "Successful de-escalation"});
-                table2556.AddRow(new string[] {
+                table2519.AddRow(new string[] {
                             "Device failure",
                             "Communication backup",
                             "Backup systems",
                             "Alternative communication",
                             "Backup implementation",
                             "Continued communication"});
-                table2556.AddRow(new string[] {
+                table2519.AddRow(new string[] {
                             "Environmental crisis",
                             "Adapted communication",
                             "Environmental adaptation",
                             "Crisis adaptation",
                             "Environmental adjustment",
                             "Effective adaptation"});
-                table2556.AddRow(new string[] {
+                table2519.AddRow(new string[] {
                             "Social crisis",
                             "Support communication",
                             "Support strategies",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Emotional support",
                             "Social stability"});
 #line 243
-    testRunner.When("training crisis communication:", ((string)(null)), table2556, "When ");
+    testRunner.When("training crisis communication:", ((string)(null)), table2519, "When ");
 #line hidden
 #line 251
     testRunner.Then("crisis training should be thorough", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 259
     testRunner.And("partner tech competence affects AAC success", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2557 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2520 = new TechTalk.SpecFlow.Table(new string[] {
                             "Technology Aspect",
                             "Training Components",
                             "Competency Development",
                             "Support Capabilities",
                             "Troubleshooting Skills",
                             "Innovation Adoption"});
-                table2557.AddRow(new string[] {
+                table2520.AddRow(new string[] {
                             "Device operation",
                             "Basic to advanced functions",
                             "Operational fluency",
                             "User support",
                             "Problem resolution",
                             "Feature utilization"});
-                table2557.AddRow(new string[] {
+                table2520.AddRow(new string[] {
                             "Software navigation",
                             "App functionality",
                             "Navigation skills",
                             "Software assistance",
                             "Software troubleshooting",
                             "Software optimization"});
-                table2557.AddRow(new string[] {
+                table2520.AddRow(new string[] {
                             "Connectivity management",
                             "Network and sync",
                             "Connection skills",
                             "Connectivity support",
                             "Connection troubleshooting",
                             "Network optimization"});
-                table2557.AddRow(new string[] {
+                table2520.AddRow(new string[] {
                             "Data management",
                             "Backup and security",
                             "Data skills",
                             "Data protection",
                             "Data recovery",
                             "Data optimization"});
-                table2557.AddRow(new string[] {
+                table2520.AddRow(new string[] {
                             "Update management",
                             "Software updates",
                             "Update skills",
                             "Update assistance",
                             "Update troubleshooting",
                             "Version management"});
-                table2557.AddRow(new string[] {
+                table2520.AddRow(new string[] {
                             "Integration support",
                             "Cross-platform use",
                             "Integration skills",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Integration troubleshooting",
                             "Platform optimization"});
 #line 260
-    testRunner.When("training technology integration:", ((string)(null)), table2557, "When ");
+    testRunner.When("training technology integration:", ((string)(null)), table2520, "When ");
 #line hidden
 #line 268
     testRunner.Then("technology training should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 277
     testRunner.And("quality monitoring ensures program effectiveness", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2558 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2521 = new TechTalk.SpecFlow.Table(new string[] {
                             "Quality Aspect",
                             "Monitoring Method",
                             "Quality Standards",
                             "Assessment Frequency",
                             "Quality Indicators",
                             "Improvement Actions"});
-                table2558.AddRow(new string[] {
+                table2521.AddRow(new string[] {
                             "Content accuracy",
                             "Expert review",
                             "Evidence-based content",
                             "Annual review",
                             "Content validity",
                             "Content updates"});
-                table2558.AddRow(new string[] {
+                table2521.AddRow(new string[] {
                             "Training effectiveness",
                             "Outcome measurement",
                             "Competency achievement",
                             "Quarterly assessment",
                             "Learning outcomes",
                             "Training enhancement"});
-                table2558.AddRow(new string[] {
+                table2521.AddRow(new string[] {
                             "Trainer competency",
                             "Trainer evaluation",
                             "Training standards",
                             "Bi-annual review",
                             "Trainer performance",
                             "Trainer development"});
-                table2558.AddRow(new string[] {
+                table2521.AddRow(new string[] {
                             "Material quality",
                             "Material assessment",
                             "Professional standards",
                             "Annual review",
                             "Material effectiveness",
                             "Material improvement"});
-                table2558.AddRow(new string[] {
+                table2521.AddRow(new string[] {
                             "Accessibility compliance",
                             "Accessibility audit",
                             "Universal design",
                             "Annual audit",
                             "Accessibility metrics",
                             "Accessibility enhancement"});
-                table2558.AddRow(new string[] {
+                table2521.AddRow(new string[] {
                             "Cultural responsiveness",
                             "Cultural evaluation",
                             "Cultural competency",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Cultural indicators",
                             "Cultural improvement"});
 #line 278
-    testRunner.When("monitoring training quality:", ((string)(null)), table2558, "When ");
+    testRunner.When("monitoring training quality:", ((string)(null)), table2521, "When ");
 #line hidden
 #line 286
     testRunner.Then("quality should be systematically monitored", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1851,49 +1851,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 293
     testRunner.Given("training programs require long-term sustainability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2559 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2522 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table2559.AddRow(new string[] {
+                table2522.AddRow(new string[] {
                             "Trainer development",
                             "Limited qualified trainers",
                             "Trainer pipeline development",
                             "Trainer resources",
                             "Adequate trainers",
                             "Trainer sustainability"});
-                table2559.AddRow(new string[] {
+                table2522.AddRow(new string[] {
                             "Resource management",
                             "Resource limitations",
                             "Efficient resource use",
                             "Optimized resources",
                             "Resource adequacy",
                             "Resource sustainability"});
-                table2559.AddRow(new string[] {
+                table2522.AddRow(new string[] {
                             "Technology currency",
                             "Rapid technology change",
                             "Technology update systems",
                             "Technology resources",
                             "Current technology",
                             "Technology sustainability"});
-                table2559.AddRow(new string[] {
+                table2522.AddRow(new string[] {
                             "Quality maintenance",
                             "Variable quality",
                             "Quality assurance systems",
                             "Quality resources",
                             "Consistent quality",
                             "Quality sustainability"});
-                table2559.AddRow(new string[] {
+                table2522.AddRow(new string[] {
                             "Cost effectiveness",
                             "High program costs",
                             "Cost optimization",
                             "Financial resources",
                             "Reasonable costs",
                             "Financial sustainability"});
-                table2559.AddRow(new string[] {
+                table2522.AddRow(new string[] {
                             "Impact measurement",
                             "Limited outcome data",
                             "Comprehensive evaluation",
@@ -1901,7 +1901,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Demonstrated impact",
                             "Evidence sustainability"});
 #line 294
-    testRunner.When("planning sustainability:", ((string)(null)), table2559, "When ");
+    testRunner.When("planning sustainability:", ((string)(null)), table2522, "When ");
 #line hidden
 #line 302
     testRunner.Then("sustainability should be systematically planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

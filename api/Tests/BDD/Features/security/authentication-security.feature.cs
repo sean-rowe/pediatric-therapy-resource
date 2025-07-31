@@ -245,32 +245,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 37
     testRunner.Given("I am attempting MFA verification", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2358 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2321 = new TechTalk.SpecFlow.Table(new string[] {
                             "Attempt",
                             "Code",
                             "Result"});
-                table2358.AddRow(new string[] {
+                table2321.AddRow(new string[] {
                             "1",
                             "111111",
                             "Invalid, try again"});
-                table2358.AddRow(new string[] {
+                table2321.AddRow(new string[] {
                             "2",
                             "222222",
                             "Invalid, try again"});
-                table2358.AddRow(new string[] {
+                table2321.AddRow(new string[] {
                             "3",
                             "333333",
                             "Invalid, try again"});
-                table2358.AddRow(new string[] {
+                table2321.AddRow(new string[] {
                             "4",
                             "444444",
                             "Invalid, try again"});
-                table2358.AddRow(new string[] {
+                table2321.AddRow(new string[] {
                             "5",
                             "555555",
                             "Account locked"});
 #line 38
-    testRunner.When("I enter incorrect MFA codes 5 times:", ((string)(null)), table2358, "When ");
+    testRunner.When("I enter incorrect MFA codes 5 times:", ((string)(null)), table2321, "When ");
 #line hidden
 #line 45
     testRunner.Then("my account should be temporarily locked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -317,7 +317,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 52
     testRunner.Given("I am creating a new account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2359 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2322 = new TechTalk.SpecFlow.Table(new string[] {
                             "Password",
                             "Length",
                             "Uppercase",
@@ -325,7 +325,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
                             "Numbers",
                             "Symbols",
                             "Result"});
-                table2359.AddRow(new string[] {
+                table2322.AddRow(new string[] {
                             "password123",
                             "11",
                             "0",
@@ -333,7 +333,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
                             "3",
                             "0",
                             "Rejected"});
-                table2359.AddRow(new string[] {
+                table2322.AddRow(new string[] {
                             "Password123",
                             "11",
                             "1",
@@ -341,7 +341,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
                             "3",
                             "0",
                             "Rejected"});
-                table2359.AddRow(new string[] {
+                table2322.AddRow(new string[] {
                             "Password123!",
                             "12",
                             "1",
@@ -349,7 +349,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
                             "3",
                             "1",
                             "Accepted"});
-                table2359.AddRow(new string[] {
+                table2322.AddRow(new string[] {
                             "MyP@ssw0rd2024",
                             "14",
                             "2",
@@ -358,7 +358,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
                             "2",
                             "Accepted"});
 #line 53
-    testRunner.When("I attempt to set passwords with varying complexity:", ((string)(null)), table2359, "When ");
+    testRunner.When("I attempt to set passwords with varying complexity:", ((string)(null)), table2322, "When ");
 #line hidden
 #line 59
     testRunner.Then("only passwords meeting all complexity requirements should be accepted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -402,26 +402,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 64
     testRunner.Given("I am an authenticated user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2360 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2323 = new TechTalk.SpecFlow.Table(new string[] {
                             "Previous Password",
                             "Date Changed"});
-                table2360.AddRow(new string[] {
+                table2323.AddRow(new string[] {
                             "OldPassword1!",
                             "2024-01-01"});
-                table2360.AddRow(new string[] {
+                table2323.AddRow(new string[] {
                             "OldPassword2!",
                             "2024-02-01"});
-                table2360.AddRow(new string[] {
+                table2323.AddRow(new string[] {
                             "OldPassword3!",
                             "2024-03-01"});
-                table2360.AddRow(new string[] {
+                table2323.AddRow(new string[] {
                             "OldPassword4!",
                             "2024-04-01"});
-                table2360.AddRow(new string[] {
+                table2323.AddRow(new string[] {
                             "OldPassword5!",
                             "2024-05-01"});
 #line 65
-    testRunner.And("my password history includes:", ((string)(null)), table2360, "And ");
+    testRunner.And("my password history includes:", ((string)(null)), table2323, "And ");
 #line hidden
 #line 72
     testRunner.When("I attempt to change password to \"OldPassword2!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -726,32 +726,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 134
     testRunner.Given("account lockout is configured with progressive delays", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2361 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2324 = new TechTalk.SpecFlow.Table(new string[] {
                             "Attempt",
                             "Delay After Failure",
                             "Status"});
-                table2361.AddRow(new string[] {
+                table2324.AddRow(new string[] {
                             "1",
                             "0 seconds",
                             "Try again"});
-                table2361.AddRow(new string[] {
+                table2324.AddRow(new string[] {
                             "2",
                             "0 seconds",
                             "Try again"});
-                table2361.AddRow(new string[] {
+                table2324.AddRow(new string[] {
                             "3",
                             "30 seconds",
                             "Brief lockout"});
-                table2361.AddRow(new string[] {
+                table2324.AddRow(new string[] {
                             "4",
                             "60 seconds",
                             "Extended lockout"});
-                table2361.AddRow(new string[] {
+                table2324.AddRow(new string[] {
                             "5",
                             "300 seconds",
                             "Long lockout"});
 #line 135
-    testRunner.When("I make failed login attempts:", ((string)(null)), table2361, "When ");
+    testRunner.When("I make failed login attempts:", ((string)(null)), table2324, "When ");
 #line hidden
 #line 142
     testRunner.Then("lockout duration should increase progressively", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -798,50 +798,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 148
     testRunner.Given("I have normal usage patterns established", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2362 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2325 = new TechTalk.SpecFlow.Table(new string[] {
                             "Activity Type",
                             "Indicator",
                             "Risk Level"});
-                table2362.AddRow(new string[] {
+                table2325.AddRow(new string[] {
                             "Mass file downloads",
                             "500+ resources in 1 hour",
                             "High"});
-                table2362.AddRow(new string[] {
+                table2325.AddRow(new string[] {
                             "Unusual access pattern",
                             "3 AM login (normally 9-5)",
                             "Medium"});
-                table2362.AddRow(new string[] {
+                table2325.AddRow(new string[] {
                             "New device login",
                             "Unrecognized browser/OS",
                             "Medium"});
-                table2362.AddRow(new string[] {
+                table2325.AddRow(new string[] {
                             "Geographic anomaly",
                             "Login from different country",
                             "High"});
-                table2362.AddRow(new string[] {
+                table2325.AddRow(new string[] {
                             "Password change",
                             "No recent activity trigger",
                             "Medium"});
 #line 149
-    testRunner.When("suspicious activities are detected:", ((string)(null)), table2362, "When ");
+    testRunner.When("suspicious activities are detected:", ((string)(null)), table2325, "When ");
 #line hidden
 #line 156
     testRunner.Then("risk score should be calculated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2363 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2326 = new TechTalk.SpecFlow.Table(new string[] {
                             "Risk Level",
                             "Response"});
-                table2363.AddRow(new string[] {
+                table2326.AddRow(new string[] {
                             "Low",
                             "Log event for monitoring"});
-                table2363.AddRow(new string[] {
+                table2326.AddRow(new string[] {
                             "Medium",
                             "Require additional verification"});
-                table2363.AddRow(new string[] {
+                table2326.AddRow(new string[] {
                             "High",
                             "Lock account, alert security team"});
 #line 157
-    testRunner.And("appropriate security measures should be triggered:", ((string)(null)), table2363, "And ");
+    testRunner.And("appropriate security measures should be triggered:", ((string)(null)), table2326, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1002,20 +1002,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 192
     testRunner.When("users attempt to login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2364 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2327 = new TechTalk.SpecFlow.Table(new string[] {
                             "Fallback Level",
                             "Available Functions"});
-                table2364.AddRow(new string[] {
+                table2327.AddRow(new string[] {
                             "Level 1",
                             "Cached authentication only"});
-                table2364.AddRow(new string[] {
+                table2327.AddRow(new string[] {
                             "Level 2",
                             "Read-only access to resources"});
-                table2364.AddRow(new string[] {
+                table2327.AddRow(new string[] {
                             "Level 3",
                             "Emergency access for critical users"});
 #line 193
-    testRunner.Then("graceful degradation should occur:", ((string)(null)), table2364, "Then ");
+    testRunner.Then("graceful degradation should occur:", ((string)(null)), table2327, "Then ");
 #line hidden
 #line 198
     testRunner.And("users should be notified of service status", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1062,23 +1062,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 204
     testRunner.When("authentication requests are made", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2365 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2328 = new TechTalk.SpecFlow.Table(new string[] {
                             "Response",
                             "Implementation"});
-                table2365.AddRow(new string[] {
+                table2328.AddRow(new string[] {
                             "Fail securely",
                             "Deny access rather than allow"});
-                table2365.AddRow(new string[] {
+                table2328.AddRow(new string[] {
                             "Activate backup systems",
                             "Secondary auth database"});
-                table2365.AddRow(new string[] {
+                table2328.AddRow(new string[] {
                             "Alert administrators",
                             "Immediate notification"});
-                table2365.AddRow(new string[] {
+                table2328.AddRow(new string[] {
                             "Log all attempts",
                             "Forensic analysis capability"});
 #line 205
-    testRunner.Then("system should:", ((string)(null)), table2365, "Then ");
+    testRunner.Then("system should:", ((string)(null)), table2328, "Then ");
 #line hidden
 #line 211
     testRunner.And("no user data should be exposed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1170,24 +1170,24 @@ namespace UPTRMS.Api.Tests.BDD.Features.Security
 #line 224
     testRunner.Given("authentication system implements timing attack protection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2366 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2329 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username Type",
                             "Password Type",
                             "Expected Response Time"});
-                table2366.AddRow(new string[] {
+                table2329.AddRow(new string[] {
                             "Valid user",
                             "Wrong password",
                             "500ms ± 50ms"});
-                table2366.AddRow(new string[] {
+                table2329.AddRow(new string[] {
                             "Invalid user",
                             "Any password",
                             "500ms ± 50ms"});
-                table2366.AddRow(new string[] {
+                table2329.AddRow(new string[] {
                             "Valid user",
                             "Correct password",
                             "500ms ± 50ms"});
 #line 225
-    testRunner.When("login attempts are made with:", ((string)(null)), table2366, "When ");
+    testRunner.When("login attempts are made with:", ((string)(null)), table2329, "When ");
 #line hidden
 #line 230
     testRunner.Then("response times should be consistent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

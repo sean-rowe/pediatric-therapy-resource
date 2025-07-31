@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 17
     testRunner.And("HIPAA compliance requires specific configurations", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1304 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1267 = new TechTalk.SpecFlow.Table(new string[] {
                             "Service Category",
                             "Services Used",
                             "Configuration",
                             "Compliance",
                             "High Availability",
                             "Cost Control"});
-                table1304.AddRow(new string[] {
+                table1267.AddRow(new string[] {
                             "Compute",
                             "EC2, Lambda, ECS, EKS",
                             "Auto-scaling groups",
                             "HIPAA eligible",
                             "Multi-AZ deployment",
                             "Reserved instances"});
-                table1304.AddRow(new string[] {
+                table1267.AddRow(new string[] {
                             "Storage",
                             "S3, EBS, EFS, Glacier",
                             "Encryption enabled",
                             "BAA signed",
                             "Cross-region replication",
                             "Lifecycle policies"});
-                table1304.AddRow(new string[] {
+                table1267.AddRow(new string[] {
                             "Database",
                             "RDS, DynamoDB, Aurora",
                             "Encrypted at rest",
                             "Audit logging",
                             "Multi-AZ failover",
                             "Reserved capacity"});
-                table1304.AddRow(new string[] {
+                table1267.AddRow(new string[] {
                             "Networking",
                             "VPC, CloudFront, Route53",
                             "Private subnets",
                             "Security groups",
                             "Multiple regions",
                             "Data transfer optimization"});
-                table1304.AddRow(new string[] {
+                table1267.AddRow(new string[] {
                             "Security",
                             "IAM, KMS, GuardDuty",
                             "MFA enforced",
                             "CloudTrail enabled",
                             "Key rotation",
                             "Security Hub"});
-                table1304.AddRow(new string[] {
+                table1267.AddRow(new string[] {
                             "Analytics",
                             "Athena, EMR, Kinesis",
                             "Data encryption",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Redundant streams",
                             "Spot instances"});
 #line 18
-    testRunner.When("implementing AWS integration:", ((string)(null)), table1304, "When ");
+    testRunner.When("implementing AWS integration:", ((string)(null)), table1267, "When ");
 #line hidden
 #line 26
     testRunner.Then("AWS services should be integrated securely", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 34
     testRunner.And("healthcare compliance is built-in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1305 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1268 = new TechTalk.SpecFlow.Table(new string[] {
                             "Service Type",
                             "Azure Services",
                             "Healthcare Features",
                             "Security Config",
                             "Redundancy",
                             "Management"});
-                table1305.AddRow(new string[] {
+                table1268.AddRow(new string[] {
                             "Compute",
                             "VMs, AKS, Functions",
                             "Dedicated hosts",
                             "Azure Security Center",
                             "Availability zones",
                             "Azure Policy"});
-                table1305.AddRow(new string[] {
+                table1268.AddRow(new string[] {
                             "Storage",
                             "Blob, Files, Archive",
                             "Immutable storage",
                             "Storage encryption",
                             "RA-GRS replication",
                             "Lifecycle management"});
-                table1305.AddRow(new string[] {
+                table1268.AddRow(new string[] {
                             "Database",
                             "SQL Database, Cosmos",
                             "Transparent encryption",
                             "Advanced threat protection",
                             "Geo-replication",
                             "Automated tuning"});
-                table1305.AddRow(new string[] {
+                table1268.AddRow(new string[] {
                             "AI/ML",
                             "Cognitive Services, ML",
                             "Healthcare APIs",
                             "Private endpoints",
                             "Regional failover",
                             "Model management"});
-                table1305.AddRow(new string[] {
+                table1268.AddRow(new string[] {
                             "Identity",
                             "Azure AD, B2C",
                             "Healthcare workers",
                             "Conditional access",
                             "Multi-region",
                             "PIM"});
-                table1305.AddRow(new string[] {
+                table1268.AddRow(new string[] {
                             "Monitoring",
                             "Monitor, App Insights",
                             "Health metrics",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Redundant collection",
                             "Cost Management"});
 #line 35
-    testRunner.When("implementing Azure integration:", ((string)(null)), table1305, "When ");
+    testRunner.When("implementing Azure integration:", ((string)(null)), table1268, "When ");
 #line hidden
 #line 43
     testRunner.Then("Azure services should be configured properly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 51
     testRunner.And("healthcare APIs provide specialized features", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1306 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1269 = new TechTalk.SpecFlow.Table(new string[] {
                             "Service Area",
                             "GCP Services",
                             "Unique Features",
                             "Compliance Setup",
                             "Scalability",
                             "Innovation"});
-                table1306.AddRow(new string[] {
+                table1269.AddRow(new string[] {
                             "Compute",
                             "GCE, GKE, Cloud Run",
                             "Preemptible VMs",
                             "Shielded VMs",
                             "Global load balancing",
                             "Anthos hybrid"});
-                table1306.AddRow(new string[] {
+                table1269.AddRow(new string[] {
                             "Storage",
                             "Cloud Storage, Filestore",
                             "Nearline/Coldline",
                             "Customer-managed encryption",
                             "Multi-regional",
                             "Storage Transfer"});
-                table1306.AddRow(new string[] {
+                table1269.AddRow(new string[] {
                             "Database",
                             "Cloud SQL, Spanner",
                             "Global consistency",
                             "CMEK",
                             "Horizontal scaling",
                             "AlloyDB"});
-                table1306.AddRow(new string[] {
+                table1269.AddRow(new string[] {
                             "Healthcare",
                             "Healthcare API",
                             "FHIR/HL7 support",
                             "HIPAA compliance",
                             "Auto-scaling",
                             "Medical imaging"});
-                table1306.AddRow(new string[] {
+                table1269.AddRow(new string[] {
                             "AI Platform",
                             "Vertex AI",
                             "AutoML healthcare",
                             "VPC Service Controls",
                             "Distributed training",
                             "Model monitoring"});
-                table1306.AddRow(new string[] {
+                table1269.AddRow(new string[] {
                             "BigData",
                             "BigQuery, Dataflow",
                             "Serverless analytics",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Petabyte scale",
                             "Streaming analytics"});
 #line 52
-    testRunner.When("integrating GCP services:", ((string)(null)), table1306, "When ");
+    testRunner.When("integrating GCP services:", ((string)(null)), table1269, "When ");
 #line hidden
 #line 60
     testRunner.Then("GCP services should be integrated effectively", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 69
     testRunner.And("redundancy prevents single points of failure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1307 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1270 = new TechTalk.SpecFlow.Table(new string[] {
                             "CDN Provider",
                             "Use Case",
                             "Geographic Coverage",
                             "Features",
                             "Failover Strategy",
                             "Performance"});
-                table1307.AddRow(new string[] {
+                table1270.AddRow(new string[] {
                             "CloudFront",
                             "Primary CDN",
                             "Global AWS regions",
                             "Lambda@Edge",
                             "Route 53 health checks",
                             "<50ms latency"});
-                table1307.AddRow(new string[] {
+                table1270.AddRow(new string[] {
                             "Cloudflare",
                             "DDoS protection",
                             "200+ cities",
                             "Workers, WAF",
                             "Automatic failover",
                             "<30ms latency"});
-                table1307.AddRow(new string[] {
+                table1270.AddRow(new string[] {
                             "Akamai",
                             "Enterprise content",
                             "130+ countries",
                             "Image optimization",
                             "DNS failover",
                             "<40ms latency"});
-                table1307.AddRow(new string[] {
+                table1270.AddRow(new string[] {
                             "Fastly",
                             "Real-time purging",
                             "Strategic POPs",
                             "Instant purge",
                             "Multi-CDN switching",
                             "<35ms latency"});
-                table1307.AddRow(new string[] {
+                table1270.AddRow(new string[] {
                             "Azure CDN",
                             "Microsoft integration",
                             "Azure regions",
                             "Rules engine",
                             "Traffic Manager",
                             "<45ms latency"});
-                table1307.AddRow(new string[] {
+                table1270.AddRow(new string[] {
                             "Local CDNs",
                             "Regional optimization",
                             "Country-specific",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Regional fallback",
                             "<20ms in-region"});
 #line 70
-    testRunner.When("implementing multi-CDN:", ((string)(null)), table1307, "When ");
+    testRunner.When("implementing multi-CDN:", ((string)(null)), table1270, "When ");
 #line hidden
 #line 78
     testRunner.Then("content should be delivered quickly globally", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 86
     testRunner.And("orchestration must work across clouds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1308 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1271 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cloud Provider",
                             "Service",
                             "Cluster Config",
                             "Networking",
                             "Security",
                             "Monitoring"});
-                table1308.AddRow(new string[] {
+                table1271.AddRow(new string[] {
                             "AWS",
                             "EKS",
                             "Managed nodes",
                             "VPC CNI",
                             "IRSA, PSP",
                             "CloudWatch Container Insights"});
-                table1308.AddRow(new string[] {
+                table1271.AddRow(new string[] {
                             "Azure",
                             "AKS",
                             "Node pools",
                             "Azure CNI",
                             "Azure AD, Policy",
                             "Azure Monitor"});
-                table1308.AddRow(new string[] {
+                table1271.AddRow(new string[] {
                             "GCP",
                             "GKE",
                             "Autopilot",
                             "Alias IPs",
                             "Workload Identity",
                             "Cloud Operations"});
-                table1308.AddRow(new string[] {
+                table1271.AddRow(new string[] {
                             "Multi-cloud",
                             "Rancher",
                             "Unified management",
                             "Overlay network",
                             "RBAC sync",
                             "Prometheus federation"});
-                table1308.AddRow(new string[] {
+                table1271.AddRow(new string[] {
                             "On-premise",
                             "OpenShift",
                             "Hybrid nodes",
                             "SDN",
                             "OAuth integration",
                             "EFK stack"});
-                table1308.AddRow(new string[] {
+                table1271.AddRow(new string[] {
                             "Edge",
                             "K3s",
                             "Lightweight",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Minimal RBAC",
                             "Edge monitoring"});
 #line 87
-    testRunner.When("implementing container services:", ((string)(null)), table1308, "When ");
+    testRunner.When("implementing container services:", ((string)(null)), table1271, "When ");
 #line hidden
 #line 95
     testRunner.Then("container orchestration should be unified", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 103
     testRunner.And("functions must work across providers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1309 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1272 = new TechTalk.SpecFlow.Table(new string[] {
                             "Platform",
                             "Runtime Support",
                             "Trigger Types",
                             "Cold Start",
                             "Limits",
                             "Use Cases"});
-                table1309.AddRow(new string[] {
+                table1272.AddRow(new string[] {
                             "AWS Lambda",
                             "Node, Python, Java, .NET",
                             "200+ services",
                             "100-500ms",
                             "15 min, 10GB",
                             "API backends, processing"});
-                table1309.AddRow(new string[] {
+                table1272.AddRow(new string[] {
                             "Azure Functions",
                             "Multiple languages",
                             "Bindings",
                             "300-800ms",
                             "Unlimited time",
                             "Workflows, integrations"});
-                table1309.AddRow(new string[] {
+                table1272.AddRow(new string[] {
                             "Google Cloud Functions",
                             "Standard runtimes",
                             "HTTP, Pub/Sub",
                             "200-600ms",
                             "9 min, 8GB",
                             "Event processing"});
-                table1309.AddRow(new string[] {
+                table1272.AddRow(new string[] {
                             "Cloudflare Workers",
                             "JavaScript/WASM",
                             "HTTP requests",
                             "0ms (always warm)",
                             "50ms CPU",
                             "Edge computing"});
-                table1309.AddRow(new string[] {
+                table1272.AddRow(new string[] {
                             "Vercel Functions",
                             "Node, Go, Python",
                             "HTTP/Webhooks",
                             "50-300ms",
                             "10s, 50MB",
                             "API routes"});
-                table1309.AddRow(new string[] {
+                table1272.AddRow(new string[] {
                             "OpenFaaS",
                             "Any via container",
                             "Multiple",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Configurable",
                             "Self-hosted functions"});
 #line 104
-    testRunner.When("implementing serverless:", ((string)(null)), table1309, "When ");
+    testRunner.When("implementing serverless:", ((string)(null)), table1272, "When ");
 #line hidden
 #line 112
     testRunner.Then("serverless should reduce complexity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 121
     testRunner.And("multi-cloud prevents vendor lock-in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1310 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1273 = new TechTalk.SpecFlow.Table(new string[] {
                             "Component",
                             "AWS Solution",
                             "Azure Solution",
                             "GCP Solution",
                             "Features",
                             "Integration"});
-                table1310.AddRow(new string[] {
+                table1273.AddRow(new string[] {
                             "Object Storage",
                             "S3",
                             "ADLS Gen2",
                             "Cloud Storage",
                             "Versioning, lifecycle",
                             "Cross-cloud sync"});
-                table1310.AddRow(new string[] {
+                table1273.AddRow(new string[] {
                             "Catalog",
                             "Glue",
                             "Purview",
                             "Data Catalog",
                             "Auto-discovery",
                             "Unified metadata"});
-                table1310.AddRow(new string[] {
+                table1273.AddRow(new string[] {
                             "Processing",
                             "EMR, Athena",
                             "Synapse",
                             "Dataproc, BigQuery",
                             "Serverless options",
                             "Spark compatible"});
-                table1310.AddRow(new string[] {
+                table1273.AddRow(new string[] {
                             "Streaming",
                             "Kinesis",
                             "Event Hubs",
                             "Pub/Sub",
                             "Real-time ingestion",
                             "Kafka compatible"});
-                table1310.AddRow(new string[] {
+                table1273.AddRow(new string[] {
                             "Governance",
                             "Lake Formation",
                             "Purview",
                             "Dataplex",
                             "Security, lineage",
                             "Policy sync"});
-                table1310.AddRow(new string[] {
+                table1273.AddRow(new string[] {
                             "ML Platform",
                             "SageMaker",
                             "ML Studio",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "End-to-end ML",
                             "Model portability"});
 #line 122
-    testRunner.When("implementing data lakes:", ((string)(null)), table1310, "When ");
+    testRunner.When("implementing data lakes:", ((string)(null)), table1273, "When ");
 #line hidden
 #line 130
     testRunner.Then("data lakes should be cloud-agnostic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 138
     testRunner.And("recovery must be rapid and reliable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1311 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1274 = new TechTalk.SpecFlow.Table(new string[] {
                             "DR Component",
                             "Primary Cloud",
                             "Backup Cloud",
                             "RPO Target",
                             "RTO Target",
                             "Testing Frequency"});
-                table1311.AddRow(new string[] {
+                table1274.AddRow(new string[] {
                             "Database backup",
                             "AWS RDS",
                             "Azure SQL",
                             "15 minutes",
                             "1 hour",
                             "Monthly failover"});
-                table1311.AddRow(new string[] {
+                table1274.AddRow(new string[] {
                             "File storage",
                             "S3",
                             "Azure Blob",
                             "1 hour",
                             "2 hours",
                             "Quarterly restore"});
-                table1311.AddRow(new string[] {
+                table1274.AddRow(new string[] {
                             "Application state",
                             "EKS",
                             "AKS",
                             "5 minutes",
                             "30 minutes",
                             "Weekly validation"});
-                table1311.AddRow(new string[] {
+                table1274.AddRow(new string[] {
                             "Configuration",
                             "Systems Manager",
                             "Key Vault",
                             "Real-time",
                             "15 minutes",
                             "Daily sync check"});
-                table1311.AddRow(new string[] {
+                table1274.AddRow(new string[] {
                             "User data",
                             "DynamoDB",
                             "Cosmos DB",
                             "1 minute",
                             "45 minutes",
                             "Monthly failover"});
-                table1311.AddRow(new string[] {
+                table1274.AddRow(new string[] {
                             "Archives",
                             "Glacier",
                             "Cool storage",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "24 hours",
                             "Annual restore"});
 #line 139
-    testRunner.When("implementing DR strategy:", ((string)(null)), table1311, "When ");
+    testRunner.When("implementing DR strategy:", ((string)(null)), table1274, "When ");
 #line hidden
 #line 147
     testRunner.Then("backups should be cross-cloud", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 156
     testRunner.And("compliance needs continuous monitoring", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1312 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1275 = new TechTalk.SpecFlow.Table(new string[] {
                             "Security Layer",
                             "AWS Service",
                             "Azure Service",
                             "GCP Service",
                             "Coverage",
                             "Integration"});
-                table1312.AddRow(new string[] {
+                table1275.AddRow(new string[] {
                             "Identity",
                             "IAM + SSO",
                             "Azure AD",
                             "Cloud Identity",
                             "Users, roles, policies",
                             "SAML federation"});
-                table1312.AddRow(new string[] {
+                table1275.AddRow(new string[] {
                             "Network",
                             "Security Groups, NACLs",
                             "NSGs, Firewall",
                             "VPC firewall",
                             "Micro-segmentation",
                             "Policy as code"});
-                table1312.AddRow(new string[] {
+                table1275.AddRow(new string[] {
                             "Data",
                             "KMS, Macie",
                             "Key Vault, Purview",
                             "Cloud KMS, DLP",
                             "Encryption, classification",
                             "Cross-cloud keys"});
-                table1312.AddRow(new string[] {
+                table1275.AddRow(new string[] {
                             "Threat detection",
                             "GuardDuty",
                             "Sentinel",
                             "Security Command",
                             "Anomaly detection",
                             "SIEM integration"});
-                table1312.AddRow(new string[] {
+                table1275.AddRow(new string[] {
                             "Compliance",
                             "Config, Security Hub",
                             "Policy, Compliance",
                             "Security Center",
                             "Continuous monitoring",
                             "Unified dashboard"});
-                table1312.AddRow(new string[] {
+                table1275.AddRow(new string[] {
                             "Secrets",
                             "Secrets Manager",
                             "Key Vault",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Rotation, access",
                             "Application integration"});
 #line 157
-    testRunner.When("implementing security services:", ((string)(null)), table1312, "When ");
+    testRunner.When("implementing security services:", ((string)(null)), table1275, "When ");
 #line hidden
 #line 165
     testRunner.Then("security should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 173
     testRunner.And("optimization requires unified management", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1313 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1276 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cost Factor",
                             "Optimization Strategy",
                             "Tools Used",
                             "Savings Target",
                             "Monitoring",
                             "Governance"});
-                table1313.AddRow(new string[] {
+                table1276.AddRow(new string[] {
                             "Compute",
                             "Right-sizing, spot usage",
                             "CloudHealth",
                             "30% reduction",
                             "Daily reports",
                             "Budget alerts"});
-                table1313.AddRow(new string[] {
+                table1276.AddRow(new string[] {
                             "Storage",
                             "Tiering, compression",
                             "Cloud Custodian",
                             "50% reduction",
                             "Weekly analysis",
                             "Lifecycle policies"});
-                table1313.AddRow(new string[] {
+                table1276.AddRow(new string[] {
                             "Network",
                             "Regional placement",
                             "CloudCheckr",
                             "40% reduction",
                             "Traffic analysis",
                             "Egress controls"});
-                table1313.AddRow(new string[] {
+                table1276.AddRow(new string[] {
                             "Reserved capacity",
                             "Commitment planning",
                             "ParkMyCloud",
                             "35% savings",
                             "Utilization tracking",
                             "Purchase approval"});
-                table1313.AddRow(new string[] {
+                table1276.AddRow(new string[] {
                             "Idle resources",
                             "Auto-shutdown",
                             "Turbonomic",
                             "60% reduction",
                             "Real-time monitoring",
                             "Enforcement rules"});
-                table1313.AddRow(new string[] {
+                table1276.AddRow(new string[] {
                             "License optimization",
                             "BYOL vs included",
                             "Flexera",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "License tracking",
                             "Compliance audit"});
 #line 174
-    testRunner.When("implementing FinOps:", ((string)(null)), table1313, "When ");
+    testRunner.When("implementing FinOps:", ((string)(null)), table1276, "When ");
 #line hidden
 #line 182
     testRunner.Then("costs should be optimized continuously", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 191
     testRunner.And("edge processing reduces latency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1314 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1277 = new TechTalk.SpecFlow.Table(new string[] {
                             "Service Type",
                             "AWS Solution",
                             "Azure Solution",
                             "GCP Solution",
                             "Edge Capability",
                             "Management"});
-                table1314.AddRow(new string[] {
+                table1277.AddRow(new string[] {
                             "IoT Platform",
                             "IoT Core",
                             "IoT Hub",
                             "IoT Core",
                             "Device registry",
                             "Fleet management"});
-                table1314.AddRow(new string[] {
+                table1277.AddRow(new string[] {
                             "Edge Runtime",
                             "Greengrass",
                             "IoT Edge",
                             "Cloud IoT Edge",
                             "Local processing",
                             "Remote deployment"});
-                table1314.AddRow(new string[] {
+                table1277.AddRow(new string[] {
                             "Stream Processing",
                             "Kinesis",
                             "Stream Analytics",
                             "Dataflow",
                             "Edge analytics",
                             "Pipeline management"});
-                table1314.AddRow(new string[] {
+                table1277.AddRow(new string[] {
                             "ML at Edge",
                             "SageMaker Edge",
                             "ML Edge",
                             "Edge TPU",
                             "Model deployment",
                             "Model updates"});
-                table1314.AddRow(new string[] {
+                table1277.AddRow(new string[] {
                             "Device Security",
                             "IoT Device Defender",
                             "Defender for IoT",
                             "Cloud IoT security",
                             "Threat detection",
                             "Security policies"});
-                table1314.AddRow(new string[] {
+                table1277.AddRow(new string[] {
                             "Time Series",
                             "Timestream",
                             "Time Series Insights",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Local buffering",
                             "Data sync"});
 #line 192
-    testRunner.When("implementing IoT/Edge:", ((string)(null)), table1314, "When ");
+    testRunner.When("implementing IoT/Edge:", ((string)(null)), table1277, "When ");
 #line hidden
 #line 200
     testRunner.Then("IoT data should flow seamlessly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 209
     testRunner.And("multi-cloud requires abstraction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1315 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1278 = new TechTalk.SpecFlow.Table(new string[] {
                             "Feature",
                             "Implementation",
                             "Security",
                             "Scalability",
                             "Monitoring",
                             "Developer Experience"});
-                table1315.AddRow(new string[] {
+                table1278.AddRow(new string[] {
                             "Gateway",
                             "Kong/Apigee",
                             "OAuth, API keys",
                             "Auto-scaling",
                             "Real-time metrics",
                             "Developer portal"});
-                table1315.AddRow(new string[] {
+                table1278.AddRow(new string[] {
                             "Rate limiting",
                             "Token bucket",
                             "DDoS protection",
                             "Distributed limits",
                             "Limit tracking",
                             "Clear error messages"});
-                table1315.AddRow(new string[] {
+                table1278.AddRow(new string[] {
                             "Transformation",
                             "Request/response",
                             "Data masking",
                             "Minimal latency",
                             "Transform metrics",
                             "Testing tools"});
-                table1315.AddRow(new string[] {
+                table1278.AddRow(new string[] {
                             "Caching",
                             "Edge caching",
                             "Cache encryption",
                             "Global distribution",
                             "Hit rates",
                             "Cache control"});
-                table1315.AddRow(new string[] {
+                table1278.AddRow(new string[] {
                             "Documentation",
                             "OpenAPI/Swagger",
                             "Security schemes",
                             "Version management",
                             "Usage analytics",
                             "Interactive docs"});
-                table1315.AddRow(new string[] {
+                table1278.AddRow(new string[] {
                             "Monetization",
                             "Usage plans",
                             "Billing integration",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Revenue tracking",
                             "Billing portal"});
 #line 210
-    testRunner.When("implementing API management:", ((string)(null)), table1315, "When ");
+    testRunner.When("implementing API management:", ((string)(null)), table1278, "When ");
 #line hidden
 #line 218
     testRunner.Then("APIs should be managed consistently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 227
     testRunner.And("observability enables quick troubleshooting", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1316 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1279 = new TechTalk.SpecFlow.Table(new string[] {
                             "Observability Pillar",
                             "Data Sources",
                             "Aggregation Platform",
                             "Visualization",
                             "Alerting",
                             "Retention"});
-                table1316.AddRow(new string[] {
+                table1279.AddRow(new string[] {
                             "Metrics",
                             "CloudWatch, Azure Monitor, Cloud Monitoring",
                             "Prometheus",
                             "Grafana",
                             "PagerDuty",
                             "1 year"});
-                table1316.AddRow(new string[] {
+                table1279.AddRow(new string[] {
                             "Logs",
                             "CloudTrail, Activity Logs, Cloud Logging",
                             "Elasticsearch",
                             "Kibana",
                             "Opsgenie",
                             "90 days hot"});
-                table1316.AddRow(new string[] {
+                table1279.AddRow(new string[] {
                             "Traces",
                             "X-Ray, App Insights, Cloud Trace",
                             "Jaeger",
                             "Jaeger UI",
                             "Custom webhooks",
                             "30 days"});
-                table1316.AddRow(new string[] {
+                table1279.AddRow(new string[] {
                             "Events",
                             "EventBridge, Event Grid, Eventarc",
                             "Kafka",
                             "Custom dashboards",
                             "SNS/Slack",
                             "7 days"});
-                table1316.AddRow(new string[] {
+                table1279.AddRow(new string[] {
                             "Synthetics",
                             "CloudWatch Synthetics, Availability tests",
                             "Datadog",
                             "Status pages",
                             "Multi-channel",
                             "60 days"});
-                table1316.AddRow(new string[] {
+                table1279.AddRow(new string[] {
                             "Cost",
                             "Cost Explorer, Cost Management, Billing",
                             "CloudHealth",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Budget alerts",
                             "13 months"});
 #line 228
-    testRunner.When("implementing observability:", ((string)(null)), table1316, "When ");
+    testRunner.When("implementing observability:", ((string)(null)), table1279, "When ");
 #line hidden
 #line 236
     testRunner.Then("observability should be unified", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 245
     testRunner.And("modernization improves efficiency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1317 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1280 = new TechTalk.SpecFlow.Table(new string[] {
                             "Migration Phase",
                             "Strategy",
                             "Tools",
                             "Timeline",
                             "Risk Mitigation",
                             "Success Criteria"});
-                table1317.AddRow(new string[] {
+                table1280.AddRow(new string[] {
                             "Assessment",
                             "Portfolio analysis",
                             "Migration evaluator",
                             "1 month",
                             "Dependency mapping",
                             "Complete inventory"});
-                table1317.AddRow(new string[] {
+                table1280.AddRow(new string[] {
                             "Planning",
                             "Wave planning",
                             "Migration planner",
                             "2 months",
                             "Pilot selection",
                             "Approved plan"});
-                table1317.AddRow(new string[] {
+                table1280.AddRow(new string[] {
                             "Proof of concept",
                             "Lift and shift pilot",
                             "Cloud Endure",
                             "1 month",
                             "Rollback ready",
                             "Successful pilot"});
-                table1317.AddRow(new string[] {
+                table1280.AddRow(new string[] {
                             "Migration",
                             "Replatforming",
                             "Database Migration Service",
                             "6 months",
                             "Parallel run",
                             "Zero data loss"});
-                table1317.AddRow(new string[] {
+                table1280.AddRow(new string[] {
                             "Optimization",
                             "Cloud-native refactor",
                             "Modernization tools",
                             "Ongoing",
                             "Gradual approach",
                             "Cost reduction"});
-                table1317.AddRow(new string[] {
+                table1280.AddRow(new string[] {
                             "Innovation",
                             "New capabilities",
                             "Native services",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Experimentation",
                             "Business value"});
 #line 246
-    testRunner.When("implementing migration:", ((string)(null)), table1317, "When ");
+    testRunner.When("implementing migration:", ((string)(null)), table1280, "When ");
 #line hidden
 #line 254
     testRunner.Then("migration should be systematic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 262
     testRunner.And("compliance must be demonstrable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1318 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1281 = new TechTalk.SpecFlow.Table(new string[] {
                             "Governance Area",
                             "Policies",
                             "Enforcement",
                             "Monitoring",
                             "Remediation",
                             "Reporting"});
-                table1318.AddRow(new string[] {
+                table1281.AddRow(new string[] {
                             "Resource naming",
                             "Naming conventions",
                             "Tagging policies",
                             "Tag compliance",
                             "Auto-tagging",
                             "Compliance reports"});
-                table1318.AddRow(new string[] {
+                table1281.AddRow(new string[] {
                             "Cost control",
                             "Budget limits",
                             "Spending alerts",
                             "Cost anomalies",
                             "Resource termination",
                             "Cost reports"});
-                table1318.AddRow(new string[] {
+                table1281.AddRow(new string[] {
                             "Security standards",
                             "Baseline configs",
                             "Security policies",
                             "Drift detection",
                             "Auto-remediation",
                             "Security posture"});
-                table1318.AddRow(new string[] {
+                table1281.AddRow(new string[] {
                             "Access management",
                             "RBAC policies",
                             "IAM boundaries",
                             "Access reviews",
                             "Permission removal",
                             "Access audit"});
-                table1318.AddRow(new string[] {
+                table1281.AddRow(new string[] {
                             "Data residency",
                             "Location policies",
                             "Geo-restrictions",
                             "Data flow monitoring",
                             "Data migration",
                             "Residency proof"});
-                table1318.AddRow(new string[] {
+                table1281.AddRow(new string[] {
                             "Change management",
                             "Approval workflows",
                             "Pipeline gates",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Rollback procedures",
                             "Change reports"});
 #line 263
-    testRunner.When("implementing governance:", ((string)(null)), table1318, "When ");
+    testRunner.When("implementing governance:", ((string)(null)), table1281, "When ");
 #line hidden
 #line 271
     testRunner.Then("governance should be automated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 279
     testRunner.And("hybrid provides flexibility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1319 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1282 = new TechTalk.SpecFlow.Table(new string[] {
                             "Component",
                             "On-Premise",
                             "Cloud Service",
                             "Connection",
                             "Use Case",
                             "Management"});
-                table1319.AddRow(new string[] {
+                table1282.AddRow(new string[] {
                             "Compute",
                             "VMware vSphere",
                             "AWS Outposts",
                             "Direct Connect",
                             "Low latency apps",
                             "vCenter + AWS"});
-                table1319.AddRow(new string[] {
+                table1282.AddRow(new string[] {
                             "Storage",
                             "NetApp",
                             "Azure Stack",
                             "ExpressRoute",
                             "Data sovereignty",
                             "Unified console"});
-                table1319.AddRow(new string[] {
+                table1282.AddRow(new string[] {
                             "Database",
                             "Oracle RAC",
                             "Cloud@Customer",
                             "FastConnect",
                             "License optimization",
                             "OCI Console"});
-                table1319.AddRow(new string[] {
+                table1282.AddRow(new string[] {
                             "Kubernetes",
                             "OpenShift",
                             "ARO/EKS-A",
                             "VPN/Private",
                             "Regulatory requirements",
                             "Single pane"});
-                table1319.AddRow(new string[] {
+                table1282.AddRow(new string[] {
                             "Backup",
                             "Commvault",
                             "Cloud backup",
                             "Dedicated line",
                             "Disaster recovery",
                             "Unified policy"});
-                table1319.AddRow(new string[] {
+                table1282.AddRow(new string[] {
                             "Identity",
                             "Active Directory",
                             "Azure AD",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Single sign-on",
                             "Hybrid identity"});
 #line 280
-    testRunner.When("implementing hybrid cloud:", ((string)(null)), table1319, "When ");
+    testRunner.When("implementing hybrid cloud:", ((string)(null)), table1282, "When ");
 #line hidden
 #line 288
     testRunner.Then("hybrid architecture should work seamlessly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1854,49 +1854,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 296
     testRunner.And("early adoption provides advantages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1320 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1283 = new TechTalk.SpecFlow.Table(new string[] {
                             "Service Category",
                             "Emerging Technology",
                             "Potential Use Case",
                             "Timeline",
                             "Preparation",
                             "Risk Assessment"});
-                table1320.AddRow(new string[] {
+                table1283.AddRow(new string[] {
                             "Quantum computing",
                             "Braket, Quantum",
                             "Complex optimization",
                             "2-5 years",
                             "Algorithm research",
                             "High uncertainty"});
-                table1320.AddRow(new string[] {
+                table1283.AddRow(new string[] {
                             "Blockchain",
                             "Managed blockchain",
                             "Credential verification",
                             "1-2 years",
                             "Pilot projects",
                             "Medium risk"});
-                table1320.AddRow(new string[] {
+                table1283.AddRow(new string[] {
                             "5G/Edge",
                             "Wavelength, Edge Zones",
                             "Ultra-low latency",
                             "Now-1 year",
                             "Edge architecture",
                             "Low risk"});
-                table1320.AddRow(new string[] {
+                table1283.AddRow(new string[] {
                             "Confidential computing",
                             "Nitro Enclaves",
                             "PHI processing",
                             "Now",
                             "Security review",
                             "Low risk"});
-                table1320.AddRow(new string[] {
+                table1283.AddRow(new string[] {
                             "Sustainable compute",
                             "Carbon-aware",
                             "Green computing",
                             "1-2 years",
                             "Monitoring setup",
                             "Low risk"});
-                table1320.AddRow(new string[] {
+                table1283.AddRow(new string[] {
                             "Neuromorphic",
                             "Brain-inspired chips",
                             "Pattern recognition",
@@ -1904,7 +1904,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Research only",
                             "High uncertainty"});
 #line 297
-    testRunner.When("evaluating emerging services:", ((string)(null)), table1320, "When ");
+    testRunner.When("evaluating emerging services:", ((string)(null)), table1283, "When ");
 #line hidden
 #line 305
     testRunner.Then("emerging services should be evaluated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

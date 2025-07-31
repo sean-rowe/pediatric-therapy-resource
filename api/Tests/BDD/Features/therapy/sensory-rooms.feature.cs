@@ -130,56 +130,56 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 14
     testRunner.When("I access the room design templates", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3224 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3187 = new TechTalk.SpecFlow.Table(new string[] {
                             "Room Size",
                             "Square Footage",
                             "Capacity"});
-                table3224.AddRow(new string[] {
+                table3187.AddRow(new string[] {
                             "Small therapy room",
                             "80-120 sq ft",
                             "1-2 students"});
-                table3224.AddRow(new string[] {
+                table3187.AddRow(new string[] {
                             "Medium classroom",
                             "150-250 sq ft",
                             "3-5 students"});
-                table3224.AddRow(new string[] {
+                table3187.AddRow(new string[] {
                             "Large multi-purpose",
                             "300-500 sq ft",
                             "6-10 students"});
-                table3224.AddRow(new string[] {
+                table3187.AddRow(new string[] {
                             "Dedicated sensory",
                             "200-400 sq ft",
                             "4-8 students"});
-                table3224.AddRow(new string[] {
+                table3187.AddRow(new string[] {
                             "Outdoor space",
                             "Variable",
                             "Weather dependent"});
 #line 15
-    testRunner.Then("I should find templates organized by:", ((string)(null)), table3224, "Then ");
+    testRunner.Then("I should find templates organized by:", ((string)(null)), table3187, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3225 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3188 = new TechTalk.SpecFlow.Table(new string[] {
                             "Design Element",
                             "Content"});
-                table3225.AddRow(new string[] {
+                table3188.AddRow(new string[] {
                             "Floor plan layout",
                             "Optimized traffic flow"});
-                table3225.AddRow(new string[] {
+                table3188.AddRow(new string[] {
                             "Zone organization",
                             "Calming, alerting, organizing"});
-                table3225.AddRow(new string[] {
+                table3188.AddRow(new string[] {
                             "Equipment placement",
                             "Strategic positioning guides"});
-                table3225.AddRow(new string[] {
+                table3188.AddRow(new string[] {
                             "Storage solutions",
                             "Organization and accessibility"});
-                table3225.AddRow(new string[] {
+                table3188.AddRow(new string[] {
                             "Safety considerations",
                             "Exit routes, supervision areas"});
-                table3225.AddRow(new string[] {
+                table3188.AddRow(new string[] {
                             "Lighting design",
                             "Natural and artificial options"});
 #line 22
-    testRunner.And("each template should include:", ((string)(null)), table3225, "And ");
+    testRunner.And("each template should include:", ((string)(null)), table3188, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -218,55 +218,55 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 34
     testRunner.When("I use the equipment recommendation tool", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3226 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3189 = new TechTalk.SpecFlow.Table(new string[] {
                             "Budget Tier",
                             "Range",
                             "Priority Items"});
-                table3226.AddRow(new string[] {
+                table3189.AddRow(new string[] {
                             "Essential starter",
                             "$500-1,500",
                             "Basic sensory tools"});
-                table3226.AddRow(new string[] {
+                table3189.AddRow(new string[] {
                             "Standard setup",
                             "$1,500-5,000",
                             "Comprehensive equipment"});
-                table3226.AddRow(new string[] {
+                table3189.AddRow(new string[] {
                             "Premium installation",
                             "$5,000-15,000",
                             "Professional-grade items"});
-                table3226.AddRow(new string[] {
+                table3189.AddRow(new string[] {
                             "Deluxe center",
                             "$15,000+",
                             "Full sensory environment"});
 #line 35
-    testRunner.Then("I should see recommendations organized by:", ((string)(null)), table3226, "Then ");
+    testRunner.Then("I should see recommendations organized by:", ((string)(null)), table3189, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3227 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3190 = new TechTalk.SpecFlow.Table(new string[] {
                             "Information Type",
                             "Details"});
-                table3227.AddRow(new string[] {
+                table3190.AddRow(new string[] {
                             "Cost breakdown",
                             "Itemized pricing"});
-                table3227.AddRow(new string[] {
+                table3190.AddRow(new string[] {
                             "Therapeutic value",
                             "Which sensory needs addressed"});
-                table3227.AddRow(new string[] {
+                table3190.AddRow(new string[] {
                             "Age appropriateness",
                             "Recommended age ranges"});
-                table3227.AddRow(new string[] {
+                table3190.AddRow(new string[] {
                             "Durability rating",
                             "Expected lifespan"});
-                table3227.AddRow(new string[] {
+                table3190.AddRow(new string[] {
                             "Maintenance needs",
                             "Cleaning and upkeep requirements"});
-                table3227.AddRow(new string[] {
+                table3190.AddRow(new string[] {
                             "Vendor information",
                             "Where to purchase"});
-                table3227.AddRow(new string[] {
+                table3190.AddRow(new string[] {
                             "Installation notes",
                             "Professional vs DIY setup"});
 #line 41
-    testRunner.And("each recommendation should include:", ((string)(null)), table3227, "And ");
+    testRunner.And("each recommendation should include:", ((string)(null)), table3190, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -305,50 +305,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 54
     testRunner.When("I access the safety compliance module", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3228 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3191 = new TechTalk.SpecFlow.Table(new string[] {
                             "Safety Category",
                             "Specific Checks"});
-                table3228.AddRow(new string[] {
+                table3191.AddRow(new string[] {
                             "Structural safety",
                             "Weight limits, mounting points"});
-                table3228.AddRow(new string[] {
+                table3191.AddRow(new string[] {
                             "Electrical safety",
                             "GFCI outlets, cord management"});
-                table3228.AddRow(new string[] {
+                table3191.AddRow(new string[] {
                             "Fire safety",
                             "Exit routes, fire-resistant materials"});
-                table3228.AddRow(new string[] {
+                table3191.AddRow(new string[] {
                             "Age-appropriate use",
                             "Equipment suitable for users"});
-                table3228.AddRow(new string[] {
+                table3191.AddRow(new string[] {
                             "Supervision levels",
                             "Required adult-to-child ratios"});
-                table3228.AddRow(new string[] {
+                table3191.AddRow(new string[] {
                             "Emergency procedures",
                             "Action plans for various scenarios"});
 #line 55
-    testRunner.Then("I should find checklists covering:", ((string)(null)), table3228, "Then ");
+    testRunner.Then("I should find checklists covering:", ((string)(null)), table3191, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3229 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3192 = new TechTalk.SpecFlow.Table(new string[] {
                             "Output Type",
                             "Purpose"});
-                table3229.AddRow(new string[] {
+                table3192.AddRow(new string[] {
                             "Safety certificate",
                             "Compliance documentation"});
-                table3229.AddRow(new string[] {
+                table3192.AddRow(new string[] {
                             "Risk assessment",
                             "Identify potential hazards"});
-                table3229.AddRow(new string[] {
+                table3192.AddRow(new string[] {
                             "Insurance checklist",
                             "Requirements for coverage"});
-                table3229.AddRow(new string[] {
+                table3192.AddRow(new string[] {
                             "Staff training plan",
                             "Proper equipment use"});
-                table3229.AddRow(new string[] {
+                table3192.AddRow(new string[] {
                             "Emergency protocols",
                             "Quick reference procedures"});
 #line 63
-    testRunner.And("the system should generate:", ((string)(null)), table3229, "And ");
+    testRunner.And("the system should generate:", ((string)(null)), table3192, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -387,57 +387,57 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 74
     testRunner.When("I plan the room organization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3230 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3193 = new TechTalk.SpecFlow.Table(new string[] {
                             "Zone Type",
                             "Purpose",
                             "Equipment Examples"});
-                table3230.AddRow(new string[] {
+                table3193.AddRow(new string[] {
                             "Calming zone",
                             "Self-regulation, wind-down",
                             "Bean bags, dim lighting"});
-                table3230.AddRow(new string[] {
+                table3193.AddRow(new string[] {
                             "Alerting zone",
                             "Energy increase, wake-up",
                             "Vibrating cushions, bright lights"});
-                table3230.AddRow(new string[] {
+                table3193.AddRow(new string[] {
                             "Organizing zone",
                             "Focus, attention",
                             "Fidgets, structured activities"});
-                table3230.AddRow(new string[] {
+                table3193.AddRow(new string[] {
                             "Proprioceptive area",
                             "Heavy work, body awareness",
                             "Weighted items, resistance bands"});
-                table3230.AddRow(new string[] {
+                table3193.AddRow(new string[] {
                             "Vestibular space",
                             "Movement, balance",
                             "Swings, balance equipment"});
-                table3230.AddRow(new string[] {
+                table3193.AddRow(new string[] {
                             "Tactile station",
                             "Touch exploration",
                             "Texture boards, materials"});
 #line 75
-    testRunner.Then("I should be able to designate areas for:", ((string)(null)), table3230, "Then ");
+    testRunner.Then("I should be able to designate areas for:", ((string)(null)), table3193, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3231 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3194 = new TechTalk.SpecFlow.Table(new string[] {
                             "Design Element",
                             "Consideration"});
-                table3231.AddRow(new string[] {
+                table3194.AddRow(new string[] {
                             "Visual boundaries",
                             "Clear separation of areas"});
-                table3231.AddRow(new string[] {
+                table3194.AddRow(new string[] {
                             "Traffic flow",
                             "Smooth transitions between zones"});
-                table3231.AddRow(new string[] {
+                table3194.AddRow(new string[] {
                             "Storage integration",
                             "Equipment organization"});
-                table3231.AddRow(new string[] {
+                table3194.AddRow(new string[] {
                             "Flexibility",
                             "Multi-purpose use capability"});
-                table3231.AddRow(new string[] {
+                table3194.AddRow(new string[] {
                             "Supervision sight lines",
                             "Clear visibility for staff"});
 #line 83
-    testRunner.And("zone design should include:", ((string)(null)), table3231, "And ");
+    testRunner.And("zone design should include:", ((string)(null)), table3194, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -476,60 +476,60 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 94
     testRunner.When("I explore DIY options", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3232 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3195 = new TechTalk.SpecFlow.Table(new string[] {
                             "DIY Project",
                             "Materials Needed",
                             "Cost Estimate"});
-                table3232.AddRow(new string[] {
+                table3195.AddRow(new string[] {
                             "Sensory bottles",
                             "Plastic bottles, various fillers",
                             "$2-5 each"});
-                table3232.AddRow(new string[] {
+                table3195.AddRow(new string[] {
                             "Texture boards",
                             "Wood, various textures",
                             "$15-25 each"});
-                table3232.AddRow(new string[] {
+                table3195.AddRow(new string[] {
                             "Weighted lap pads",
                             "Fabric, rice/beans",
                             "$10-20 each"});
-                table3232.AddRow(new string[] {
+                table3195.AddRow(new string[] {
                             "Calming tent",
                             "PVC pipes, fabric",
                             "$30-50"});
-                table3232.AddRow(new string[] {
+                table3195.AddRow(new string[] {
                             "Balance beam",
                             "2x4 lumber, padding",
                             "$25-40"});
-                table3232.AddRow(new string[] {
+                table3195.AddRow(new string[] {
                             "Fidget tools",
                             "Various craft materials",
                             "$1-10 each"});
 #line 95
-    testRunner.Then("I should find instructions for:", ((string)(null)), table3232, "Then ");
+    testRunner.Then("I should find instructions for:", ((string)(null)), table3195, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3233 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3196 = new TechTalk.SpecFlow.Table(new string[] {
                             "Guide Component",
                             "Content"});
-                table3233.AddRow(new string[] {
+                table3196.AddRow(new string[] {
                             "Step-by-step photos",
                             "Visual construction guide"});
-                table3233.AddRow(new string[] {
+                table3196.AddRow(new string[] {
                             "Safety warnings",
                             "Important precautions"});
-                table3233.AddRow(new string[] {
+                table3196.AddRow(new string[] {
                             "Skill level",
                             "Beginner, intermediate, advanced"});
-                table3233.AddRow(new string[] {
+                table3196.AddRow(new string[] {
                             "Time required",
                             "Estimated completion time"});
-                table3233.AddRow(new string[] {
+                table3196.AddRow(new string[] {
                             "Age recommendations",
                             "Appropriate user ages"});
-                table3233.AddRow(new string[] {
+                table3196.AddRow(new string[] {
                             "Customization tips",
                             "Adaptation suggestions"});
 #line 103
-    testRunner.And("each DIY guide should include:", ((string)(null)), table3233, "And ");
+    testRunner.And("each DIY guide should include:", ((string)(null)), table3196, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -568,59 +568,59 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 115
     testRunner.When("I use the space optimization calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3234 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3197 = new TechTalk.SpecFlow.Table(new string[] {
                             "Space Allocation",
                             "Percentage",
                             "Square Footage",
                             "Purpose"});
-                table3234.AddRow(new string[] {
+                table3197.AddRow(new string[] {
                             "Calming area",
                             "30%",
                             "60 sq ft",
                             "Quiet self-regulation"});
-                table3234.AddRow(new string[] {
+                table3197.AddRow(new string[] {
                             "Active movement",
                             "25%",
                             "50 sq ft",
                             "Gross motor activities"});
-                table3234.AddRow(new string[] {
+                table3197.AddRow(new string[] {
                             "Structured activity",
                             "20%",
                             "40 sq ft",
                             "Focused work"});
-                table3234.AddRow(new string[] {
+                table3197.AddRow(new string[] {
                             "Storage",
                             "15%",
                             "30 sq ft",
                             "Equipment organization"});
-                table3234.AddRow(new string[] {
+                table3197.AddRow(new string[] {
                             "Traffic/transitions",
                             "10%",
                             "20 sq ft",
                             "Movement between zones"});
 #line 116
-    testRunner.Then("the system should recommend:", ((string)(null)), table3234, "Then ");
+    testRunner.Then("the system should recommend:", ((string)(null)), table3197, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3235 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3198 = new TechTalk.SpecFlow.Table(new string[] {
                             "Factor",
                             "Impact on Design"});
-                table3235.AddRow(new string[] {
+                table3198.AddRow(new string[] {
                             "Number of users",
                             "Space per person requirements"});
-                table3235.AddRow(new string[] {
+                table3198.AddRow(new string[] {
                             "Age groups served",
                             "Equipment size and safety"});
-                table3235.AddRow(new string[] {
+                table3198.AddRow(new string[] {
                             "Disability access",
                             "Wheelchair accessibility"});
-                table3235.AddRow(new string[] {
+                table3198.AddRow(new string[] {
                             "Supervision model",
                             "Staff positioning needs"});
-                table3235.AddRow(new string[] {
+                table3198.AddRow(new string[] {
                             "Multi-use function",
                             "Flexibility requirements"});
 #line 123
-    testRunner.And("the calculator should consider:", ((string)(null)), table3235, "And ");
+    testRunner.And("the calculator should consider:", ((string)(null)), table3198, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -659,56 +659,56 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 134
     testRunner.When("I access maintenance planning tools", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3236 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3199 = new TechTalk.SpecFlow.Table(new string[] {
                             "Maintenance Type",
                             "Frequency",
                             "Tasks"});
-                table3236.AddRow(new string[] {
+                table3199.AddRow(new string[] {
                             "Daily cleaning",
                             "End of each day",
                             "Sanitize surfaces, organize"});
-                table3236.AddRow(new string[] {
+                table3199.AddRow(new string[] {
                             "Weekly deep clean",
                             "Once per week",
                             "Wash fabric items, vacuum"});
-                table3236.AddRow(new string[] {
+                table3199.AddRow(new string[] {
                             "Monthly inspection",
                             "Once per month",
                             "Check equipment safety"});
-                table3236.AddRow(new string[] {
+                table3199.AddRow(new string[] {
                             "Quarterly review",
                             "Every 3 months",
                             "Assess wear and replacement"});
-                table3236.AddRow(new string[] {
+                table3199.AddRow(new string[] {
                             "Annual safety audit",
                             "Yearly",
                             "Professional safety inspection"});
 #line 135
-    testRunner.Then("I should get schedules for:", ((string)(null)), table3236, "Then ");
+    testRunner.Then("I should get schedules for:", ((string)(null)), table3199, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3237 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3200 = new TechTalk.SpecFlow.Table(new string[] {
                             "Guide Element",
                             "Information"});
-                table3237.AddRow(new string[] {
+                table3200.AddRow(new string[] {
                             "Cleaning products",
                             "Safe, appropriate cleaners"});
-                table3237.AddRow(new string[] {
+                table3200.AddRow(new string[] {
                             "Inspection checklists",
                             "What to look for"});
-                table3237.AddRow(new string[] {
+                table3200.AddRow(new string[] {
                             "Replacement schedules",
                             "When to replace items"});
-                table3237.AddRow(new string[] {
+                table3200.AddRow(new string[] {
                             "Professional services",
                             "When to call experts"});
-                table3237.AddRow(new string[] {
+                table3200.AddRow(new string[] {
                             "Budget planning",
                             "Annual maintenance costs"});
-                table3237.AddRow(new string[] {
+                table3200.AddRow(new string[] {
                             "Documentation forms",
                             "Record keeping requirements"});
 #line 142
-    testRunner.And("maintenance guides should include:", ((string)(null)), table3237, "And ");
+    testRunner.And("maintenance guides should include:", ((string)(null)), table3200, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -747,56 +747,56 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 154
     testRunner.When("I create portable sensory setups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3238 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3201 = new TechTalk.SpecFlow.Table(new string[] {
                             "Kit Type",
                             "Use Case",
                             "Contents Example"});
-                table3238.AddRow(new string[] {
+                table3201.AddRow(new string[] {
                             "Classroom cart",
                             "Regular classroom use",
                             "Fidgets, noise-reducing tools"});
-                table3238.AddRow(new string[] {
+                table3201.AddRow(new string[] {
                             "Travel therapy bag",
                             "Home visits, multiple sites",
                             "Compact sensory tools"});
-                table3238.AddRow(new string[] {
+                table3201.AddRow(new string[] {
                             "Emergency kit",
                             "Crisis de-escalation",
                             "Immediate calming items"});
-                table3238.AddRow(new string[] {
+                table3201.AddRow(new string[] {
                             "Outdoor kit",
                             "Playground, recess support",
                             "Weather-resistant equipment"});
-                table3238.AddRow(new string[] {
+                table3201.AddRow(new string[] {
                             "Individual kit",
                             "Single student use",
                             "Personalized sensory tools"});
 #line 155
-    testRunner.Then("I should be able to design kits for:", ((string)(null)), table3238, "Then ");
+    testRunner.Then("I should be able to design kits for:", ((string)(null)), table3201, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3239 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3202 = new TechTalk.SpecFlow.Table(new string[] {
                             "Kit Component",
                             "Specifications"});
-                table3239.AddRow(new string[] {
+                table3202.AddRow(new string[] {
                             "Storage container",
                             "Portable, organized sections"});
-                table3239.AddRow(new string[] {
+                table3202.AddRow(new string[] {
                             "Equipment list",
                             "Inventory management"});
-                table3239.AddRow(new string[] {
+                table3202.AddRow(new string[] {
                             "Usage instructions",
                             "Quick setup guides"});
-                table3239.AddRow(new string[] {
+                table3202.AddRow(new string[] {
                             "Safety protocols",
                             "Supervision requirements"});
-                table3239.AddRow(new string[] {
+                table3202.AddRow(new string[] {
                             "Cleaning supplies",
                             "Sanitization between uses"});
-                table3239.AddRow(new string[] {
+                table3202.AddRow(new string[] {
                             "Replacement parts",
                             "Common wear items"});
 #line 162
-    testRunner.And("each kit should include:", ((string)(null)), table3239, "And ");
+    testRunner.And("each kit should include:", ((string)(null)), table3202, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -835,60 +835,60 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 174
     testRunner.When("I assess the space for sensory adaptations", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3240 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3203 = new TechTalk.SpecFlow.Table(new string[] {
                             "Modification Type",
                             "Examples",
                             "Estimated Cost"});
-                table3240.AddRow(new string[] {
+                table3203.AddRow(new string[] {
                             "Lighting changes",
                             "Dimmer switches, colored filters",
                             "$50-200"});
-                table3240.AddRow(new string[] {
+                table3203.AddRow(new string[] {
                             "Sound management",
                             "Acoustic panels, white noise",
                             "$100-500"});
-                table3240.AddRow(new string[] {
+                table3203.AddRow(new string[] {
                             "Seating options",
                             "Alternative seating choices",
                             "$200-800"});
-                table3240.AddRow(new string[] {
+                table3203.AddRow(new string[] {
                             "Organizational aids",
                             "Visual schedules, boundary markers",
                             "$50-300"});
-                table3240.AddRow(new string[] {
+                table3203.AddRow(new string[] {
                             "Sensory stations",
                             "Dedicated corners for tools",
                             "$100-600"});
-                table3240.AddRow(new string[] {
+                table3203.AddRow(new string[] {
                             "Movement areas",
                             "Clear spaces for activity",
                             "$0-200"});
 #line 175
-    testRunner.Then("I should get recommendations for:", ((string)(null)), table3240, "Then ");
+    testRunner.Then("I should get recommendations for:", ((string)(null)), table3203, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3241 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3204 = new TechTalk.SpecFlow.Table(new string[] {
                             "Plan Element",
                             "Details"});
-                table3241.AddRow(new string[] {
+                table3204.AddRow(new string[] {
                             "Before/after photos",
                             "Visual comparison"});
-                table3241.AddRow(new string[] {
+                table3204.AddRow(new string[] {
                             "Implementation steps",
                             "Phase-by-phase changes"});
-                table3241.AddRow(new string[] {
+                table3204.AddRow(new string[] {
                             "Budget breakdown",
                             "Cost analysis"});
-                table3241.AddRow(new string[] {
+                table3204.AddRow(new string[] {
                             "Timeline",
                             "Realistic completion schedule"});
-                table3241.AddRow(new string[] {
+                table3204.AddRow(new string[] {
                             "Staff training",
                             "How to use modifications"});
-                table3241.AddRow(new string[] {
+                table3204.AddRow(new string[] {
                             "Outcome measures",
                             "Success evaluation methods"});
 #line 183
-    testRunner.And("modification plans should include:", ((string)(null)), table3241, "And ");
+    testRunner.And("modification plans should include:", ((string)(null)), table3204, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -927,60 +927,60 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 195
     testRunner.When("I access funding resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3242 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3205 = new TechTalk.SpecFlow.Table(new string[] {
                             "Funding Source",
                             "Application Process",
                             "Typical Awards"});
-                table3242.AddRow(new string[] {
+                table3205.AddRow(new string[] {
                             "Federal grants",
                             "Department of Education",
                             "$5,000-50,000"});
-                table3242.AddRow(new string[] {
+                table3205.AddRow(new string[] {
                             "State programs",
                             "Special education funding",
                             "$1,000-25,000"});
-                table3242.AddRow(new string[] {
+                table3205.AddRow(new string[] {
                             "Local foundations",
                             "Community organization grants",
                             "$500-10,000"});
-                table3242.AddRow(new string[] {
+                table3205.AddRow(new string[] {
                             "Corporate sponsors",
                             "Business community support",
                             "$1,000-15,000"});
-                table3242.AddRow(new string[] {
+                table3205.AddRow(new string[] {
                             "Crowdfunding",
                             "Online fundraising platforms",
                             "$500-5,000"});
-                table3242.AddRow(new string[] {
+                table3205.AddRow(new string[] {
                             "Parent organizations",
                             "PTA/PTO fundraising",
                             "$200-3,000"});
 #line 196
-    testRunner.Then("I should find information about:", ((string)(null)), table3242, "Then ");
+    testRunner.Then("I should find information about:", ((string)(null)), table3205, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3243 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3206 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resource Type",
                             "Content"});
-                table3243.AddRow(new string[] {
+                table3206.AddRow(new string[] {
                             "Grant database",
                             "Searchable funding opportunities"});
-                table3243.AddRow(new string[] {
+                table3206.AddRow(new string[] {
                             "Application templates",
                             "Pre-written proposal sections"});
-                table3243.AddRow(new string[] {
+                table3206.AddRow(new string[] {
                             "Budget calculators",
                             "Cost estimation tools"});
-                table3243.AddRow(new string[] {
+                table3206.AddRow(new string[] {
                             "Success stories",
                             "Examples of funded projects"});
-                table3243.AddRow(new string[] {
+                table3206.AddRow(new string[] {
                             "Timeline planning",
                             "Application deadline tracking"});
-                table3243.AddRow(new string[] {
+                table3206.AddRow(new string[] {
                             "Writing assistance",
                             "Grant proposal guidance"});
 #line 204
-    testRunner.And("the system should provide:", ((string)(null)), table3243, "And ");
+    testRunner.And("the system should provide:", ((string)(null)), table3206, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -86,20 +86,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Communication
 #line 8
     testRunner.And("I am logged in as parent \"Lisa Wilson\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table629 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table592 = new TechTalk.SpecFlow.Table(new string[] {
                         "Child Name",
                         "Services",
                         "Therapist"});
-            table629.AddRow(new string[] {
+            table592.AddRow(new string[] {
                         "Emma Wilson",
                         "OT, Speech",
                         "Sarah Johnson"});
-            table629.AddRow(new string[] {
+            table592.AddRow(new string[] {
                         "Jack Wilson",
                         "PT",
                         "Mike Chen"});
 #line 9
-    testRunner.And("I have children:", ((string)(null)), table629, "And ");
+    testRunner.And("I have children:", ((string)(null)), table592, "And ");
 #line hidden
         }
         
@@ -137,20 +137,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Communication
 #line 19
       testRunner.When("\"Robert Wilson\" receives invitation email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table630 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table593 = new TechTalk.SpecFlow.Table(new string[] {
                             "Content",
                             "Details"});
-                table630.AddRow(new string[] {
+                table593.AddRow(new string[] {
                             "Access Code",
                             "Unique 8-character code"});
-                table630.AddRow(new string[] {
+                table593.AddRow(new string[] {
                             "Registration Link",
                             "Expires in 48 hours"});
-                table630.AddRow(new string[] {
+                table593.AddRow(new string[] {
                             "Student Connection",
                             "For Emma Wilson"});
 #line 20
-      testRunner.Then("email contains:", ((string)(null)), table630, "Then ");
+      testRunner.Then("email contains:", ((string)(null)), table593, "Then ");
 #line hidden
 #line 25
       testRunner.When("he registers with the access code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -278,34 +278,34 @@ namespace UPTRMS.Api.Tests.BDD.Features.Communication
 #line 50
       testRunner.When("I view session history", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table631 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table594 = new TechTalk.SpecFlow.Table(new string[] {
                             "Date",
                             "Therapist",
                             "Focus Area",
                             "Progress Note"});
-                table631.AddRow(new string[] {
+                table594.AddRow(new string[] {
                             "2024-01-15",
                             "Sarah Johnson",
                             "Fine Motor",
                             "Worked on letter formation"});
-                table631.AddRow(new string[] {
+                table594.AddRow(new string[] {
                             "2024-01-17",
                             "Amy Lee",
                             "Articulation",
                             "Practiced \'r\' sounds in words"});
 #line 51
-      testRunner.Then("I see parent-friendly summaries:", ((string)(null)), table631, "Then ");
+      testRunner.Then("I see parent-friendly summaries:", ((string)(null)), table594, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table632 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table595 = new TechTalk.SpecFlow.Table(new string[] {
                             "Restricted Info"});
-                table632.AddRow(new string[] {
+                table595.AddRow(new string[] {
                             "Clinical diagnoses"});
-                table632.AddRow(new string[] {
+                table595.AddRow(new string[] {
                             "Other student names"});
-                table632.AddRow(new string[] {
+                table595.AddRow(new string[] {
                             "Detailed SOAP notes"});
 #line 55
-      testRunner.But("I cannot see:", ((string)(null)), table632, "But ");
+      testRunner.But("I cannot see:", ((string)(null)), table595, "But ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -340,23 +340,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Communication
 #line 64
       testRunner.When("I view goals section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table633 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table596 = new TechTalk.SpecFlow.Table(new string[] {
                             "Goal Area",
                             "Current Level",
                             "Target",
                             "Progress"});
-                table633.AddRow(new string[] {
+                table596.AddRow(new string[] {
                             "Handwriting",
                             "Forms 65%",
                             "Forms 80%",
                             "On Track"});
-                table633.AddRow(new string[] {
+                table596.AddRow(new string[] {
                             "Speech Sounds",
                             "70% accurate",
                             "90%",
                             "Improving"});
 #line 65
-      testRunner.Then("I see simplified goal information:", ((string)(null)), table633, "Then ");
+      testRunner.Then("I see simplified goal information:", ((string)(null)), table596, "Then ");
 #line hidden
 #line 69
       testRunner.And("visual progress bars", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -400,24 +400,24 @@ namespace UPTRMS.Api.Tests.BDD.Features.Communication
 #line 76
       testRunner.When("I view reports section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table634 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table597 = new TechTalk.SpecFlow.Table(new string[] {
                             "Report Type",
                             "Format",
                             "Content"});
-                table634.AddRow(new string[] {
+                table597.AddRow(new string[] {
                             "Progress Summary",
                             "PDF",
                             "Quarter achievements"});
-                table634.AddRow(new string[] {
+                table597.AddRow(new string[] {
                             "Home Activities",
                             "PDF",
                             "Recommended practice"});
-                table634.AddRow(new string[] {
+                table597.AddRow(new string[] {
                             "Goal Update",
                             "PDF",
                             "IEP goal progress"});
 #line 77
-      testRunner.Then("I can download:", ((string)(null)), table634, "Then ");
+      testRunner.Then("I can download:", ((string)(null)), table597, "Then ");
 #line hidden
 #line 82
       testRunner.And("reports are watermarked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -458,23 +458,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Communication
 #line 90
       testRunner.When("I view home activities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table635 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table598 = new TechTalk.SpecFlow.Table(new string[] {
                             "Activity",
                             "Frequency",
                             "Instructions",
                             "Demo"});
-                table635.AddRow(new string[] {
+                table598.AddRow(new string[] {
                             "Pencil Exercises",
                             "Daily 5 min",
                             "Step-by-step guide",
                             "Video"});
-                table635.AddRow(new string[] {
+                table598.AddRow(new string[] {
                             "Speech Practice",
                             "3x daily",
                             "Word list with audio",
                             "Audio"});
 #line 91
-      testRunner.Then("I see:", ((string)(null)), table635, "Then ");
+      testRunner.Then("I see:", ((string)(null)), table598, "Then ");
 #line hidden
 #line 95
       testRunner.And("I can mark activities as completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -515,20 +515,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Communication
 #line 101
       testRunner.When("I browse resource library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table636 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table599 = new TechTalk.SpecFlow.Table(new string[] {
                             "Category",
                             "Resources"});
-                table636.AddRow(new string[] {
+                table599.AddRow(new string[] {
                             "Fine Motor",
                             "15 activities, 5 videos"});
-                table636.AddRow(new string[] {
+                table599.AddRow(new string[] {
                             "Speech Development",
                             "20 games, 10 printables"});
-                table636.AddRow(new string[] {
+                table599.AddRow(new string[] {
                             "Sensory Activities",
                             "12 guides, 8 videos"});
 #line 102
-      testRunner.Then("I see categories:", ((string)(null)), table636, "Then ");
+      testRunner.Then("I see categories:", ((string)(null)), table599, "Then ");
 #line hidden
 #line 107
       testRunner.And("resources are filtered by child\'s age", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -569,20 +569,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Communication
 #line 113
       testRunner.When("I access video library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table637 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table600 = new TechTalk.SpecFlow.Table(new string[] {
                             "Video Title",
                             "Duration",
                             "Therapist"});
-                table637.AddRow(new string[] {
+                table600.AddRow(new string[] {
                             "Proper Pencil Grip",
                             "3:45",
                             "Sarah Johnson"});
-                table637.AddRow(new string[] {
+                table600.AddRow(new string[] {
                             "Making Speech Practice Fun",
                             "5:20",
                             "Amy Lee"});
 #line 114
-      testRunner.Then("videos include:", ((string)(null)), table637, "Then ");
+      testRunner.Then("videos include:", ((string)(null)), table600, "Then ");
 #line hidden
 #line 118
       testRunner.And("videos track completion", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -620,17 +620,17 @@ namespace UPTRMS.Api.Tests.BDD.Features.Communication
 #line 125
       testRunner.Given("I have a question about home practice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table638 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table601 = new TechTalk.SpecFlow.Table(new string[] {
                             "To",
                             "Sarah Johnson"});
-                table638.AddRow(new string[] {
+                table601.AddRow(new string[] {
                             "Subject",
                             "Question about pencil grip"});
-                table638.AddRow(new string[] {
+                table601.AddRow(new string[] {
                             "Message",
                             "Emma is holding the pencil differently"});
 #line 126
-      testRunner.When("I send message:", ((string)(null)), table638, "When ");
+      testRunner.When("I send message:", ((string)(null)), table601, "When ");
 #line hidden
 #line 130
       testRunner.Then("message is delivered to therapist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -674,20 +674,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Communication
 #line 137
       testRunner.Given("I need to discuss concerns", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table639 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table602 = new TechTalk.SpecFlow.Table(new string[] {
                             "Therapist",
                             "Sarah Johnson"});
-                table639.AddRow(new string[] {
+                table602.AddRow(new string[] {
                             "Preferred Times",
                             "Weekdays after 3 PM"});
-                table639.AddRow(new string[] {
+                table602.AddRow(new string[] {
                             "Meeting Type",
                             "Phone call"});
-                table639.AddRow(new string[] {
+                table602.AddRow(new string[] {
                             "Topics",
                             "Progress concerns"});
 #line 138
-      testRunner.When("I request meeting with:", ((string)(null)), table639, "When ");
+      testRunner.When("I request meeting with:", ((string)(null)), table602, "When ");
 #line hidden
 #line 143
       testRunner.Then("request is sent to therapist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -770,17 +770,17 @@ namespace UPTRMS.Api.Tests.BDD.Features.Communication
 #line 159
       testRunner.Given("my phone number changed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table640 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table603 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "New Value"});
-                table640.AddRow(new string[] {
+                table603.AddRow(new string[] {
                             "Phone",
                             "555-0123"});
-                table640.AddRow(new string[] {
+                table603.AddRow(new string[] {
                             "Alt Phone",
                             "555-0456"});
 #line 160
-      testRunner.When("I update profile:", ((string)(null)), table640, "When ");
+      testRunner.When("I update profile:", ((string)(null)), table603, "When ");
 #line hidden
 #line 164
       testRunner.Then("changes are saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -824,20 +824,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Communication
 #line 171
       testRunner.When("I view pending forms", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table641 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table604 = new TechTalk.SpecFlow.Table(new string[] {
                             "Form",
                             "Due Date",
                             "Status"});
-                table641.AddRow(new string[] {
+                table604.AddRow(new string[] {
                             "Photo Release",
                             "2024-02-01",
                             "Pending"});
-                table641.AddRow(new string[] {
+                table604.AddRow(new string[] {
                             "Field Trip Permission",
                             "2024-02-15",
                             "Pending"});
 #line 172
-      testRunner.Then("I see:", ((string)(null)), table641, "Then ");
+      testRunner.Then("I see:", ((string)(null)), table604, "Then ");
 #line hidden
 #line 176
       testRunner.And("I can electronically sign", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -881,23 +881,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Communication
 #line 183
       testRunner.When("I view calendar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table642 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table605 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
                             "Time",
                             "Service",
                             "Location"});
-                table642.AddRow(new string[] {
+                table605.AddRow(new string[] {
                             "Monday",
                             "9:00 AM",
                             "OT",
                             "OT Room"});
-                table642.AddRow(new string[] {
+                table605.AddRow(new string[] {
                             "Thursday",
                             "1:30 PM",
                             "Speech",
                             "Speech Room"});
 #line 184
-      testRunner.Then("I see:", ((string)(null)), table642, "Then ");
+      testRunner.Then("I see:", ((string)(null)), table605, "Then ");
 #line hidden
 #line 188
       testRunner.And("upcoming changes are highlighted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -977,20 +977,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Communication
 #line 203
       testRunner.Given("I have two children in therapy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table643 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table606 = new TechTalk.SpecFlow.Table(new string[] {
                             "Setting",
                             "Choice"});
-                table643.AddRow(new string[] {
+                table606.AddRow(new string[] {
                             "Share progress with spouse",
                             "Yes"});
-                table643.AddRow(new string[] {
+                table606.AddRow(new string[] {
                             "Include in group emails",
                             "No"});
-                table643.AddRow(new string[] {
+                table606.AddRow(new string[] {
                             "Allow therapist photos",
                             "Yes, internal only"});
 #line 204
-      testRunner.When("I set privacy preferences:", ((string)(null)), table643, "When ");
+      testRunner.When("I set privacy preferences:", ((string)(null)), table606, "When ");
 #line hidden
 #line 209
       testRunner.Then("preferences are applied", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1034,18 +1034,18 @@ namespace UPTRMS.Api.Tests.BDD.Features.Communication
 #line 216
       testRunner.Then("request is processed within 45 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table644 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table607 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Type"});
-                table644.AddRow(new string[] {
+                table607.AddRow(new string[] {
                             "Session records"});
-                table644.AddRow(new string[] {
+                table607.AddRow(new string[] {
                             "Communications"});
-                table644.AddRow(new string[] {
+                table607.AddRow(new string[] {
                             "Progress reports"});
-                table644.AddRow(new string[] {
+                table607.AddRow(new string[] {
                             "Consent forms"});
 #line 217
-      testRunner.And("export includes all:", ((string)(null)), table644, "And ");
+      testRunner.And("export includes all:", ((string)(null)), table607, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1077,33 +1077,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Communication
 #line 228
       testRunner.Given("I want specific updates", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table645 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table608 = new TechTalk.SpecFlow.Table(new string[] {
                             "Event",
                             "Email",
                             "SMS",
                             "Push"});
-                table645.AddRow(new string[] {
+                table608.AddRow(new string[] {
                             "Session completed",
                             "Yes",
                             "No",
                             "Yes"});
-                table645.AddRow(new string[] {
+                table608.AddRow(new string[] {
                             "New message",
                             "Yes",
                             "Yes",
                             "Yes"});
-                table645.AddRow(new string[] {
+                table608.AddRow(new string[] {
                             "Progress report ready",
                             "Yes",
                             "No",
                             "Yes"});
-                table645.AddRow(new string[] {
+                table608.AddRow(new string[] {
                             "Schedule change",
                             "Yes",
                             "Yes",
                             "Yes"});
 #line 229
-      testRunner.When("I set notification preferences:", ((string)(null)), table645, "When ");
+      testRunner.When("I set notification preferences:", ((string)(null)), table608, "When ");
 #line hidden
 #line 235
       testRunner.Then("preferences are saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1144,26 +1144,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Communication
 #line 241
       testRunner.When("Friday evening arrives", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table646 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table609 = new TechTalk.SpecFlow.Table(new string[] {
                             "Section",
                             "Content"});
-                table646.AddRow(new string[] {
+                table609.AddRow(new string[] {
                             "Sessions This Week",
                             "3 completed, 0 missed"});
-                table646.AddRow(new string[] {
+                table609.AddRow(new string[] {
                             "Progress Highlights",
                             "New milestone reached"});
-                table646.AddRow(new string[] {
+                table609.AddRow(new string[] {
                             "Upcoming Week",
                             "3 sessions scheduled"});
-                table646.AddRow(new string[] {
+                table609.AddRow(new string[] {
                             "Home Practice",
                             "80% completion rate"});
-                table646.AddRow(new string[] {
+                table609.AddRow(new string[] {
                             "Messages",
                             "1 unread from therapist"});
 #line 242
-      testRunner.Then("I receive email with:", ((string)(null)), table646, "Then ");
+      testRunner.Then("I receive email with:", ((string)(null)), table609, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

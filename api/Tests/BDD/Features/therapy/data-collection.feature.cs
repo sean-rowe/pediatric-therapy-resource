@@ -125,26 +125,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 13
     testRunner.Given("I am in session with student \"student-123\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table3101 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3064 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3101.AddRow(new string[] {
+                table3064.AddRow(new string[] {
                             "goalId",
                             "goal-789"});
-                table3101.AddRow(new string[] {
+                table3064.AddRow(new string[] {
                             "trialData",
                             "[{\"trial\": 1, \"response\": \"correct\", \"prompt\": \"none\"}]"});
-                table3101.AddRow(new string[] {
+                table3064.AddRow(new string[] {
                             "percentCorrect",
                             "80"});
-                table3101.AddRow(new string[] {
+                table3064.AddRow(new string[] {
                             "notes",
                             "Good attention, minimal prompting"});
-                table3101.AddRow(new string[] {
+                table3064.AddRow(new string[] {
                             "timestamp",
                             "2024-01-22T10:15:00Z"});
 #line 14
-    testRunner.When("I send a POST request to \"/api/data-collection/sessions/session-456/data\" with:", ((string)(null)), table3101, "When ");
+    testRunner.When("I send a POST request to \"/api/data-collection/sessions/session-456/data\" with:", ((string)(null)), table3064, "When ");
 #line hidden
 #line 21
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -191,26 +191,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 28
     testRunner.Given("I am collecting frequency data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table3102 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3065 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3102.AddRow(new string[] {
+                table3065.AddRow(new string[] {
                             "studentId",
                             "student-123"});
-                table3102.AddRow(new string[] {
+                table3065.AddRow(new string[] {
                             "behavior",
                             "hand-raising"});
-                table3102.AddRow(new string[] {
+                table3065.AddRow(new string[] {
                             "count",
                             "15"});
-                table3102.AddRow(new string[] {
+                table3065.AddRow(new string[] {
                             "duration",
                             "30"});
-                table3102.AddRow(new string[] {
+                table3065.AddRow(new string[] {
                             "context",
                             "group-activity"});
 #line 29
-    testRunner.When("I send a POST request to \"/api/data-collection/quick-tally\" with:", ((string)(null)), table3102, "When ");
+    testRunner.When("I send a POST request to \"/api/data-collection/quick-tally\" with:", ((string)(null)), table3065, "When ");
 #line hidden
 #line 36
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -257,29 +257,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 43
     testRunner.Given("goal \"goal-789\" requires weekly probes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table3103 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3066 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3103.AddRow(new string[] {
+                table3066.AddRow(new string[] {
                             "probeDate",
                             "2024-01-22"});
-                table3103.AddRow(new string[] {
+                table3066.AddRow(new string[] {
                             "trials",
                             "10"});
-                table3103.AddRow(new string[] {
+                table3066.AddRow(new string[] {
                             "correct",
                             "7"});
-                table3103.AddRow(new string[] {
+                table3066.AddRow(new string[] {
                             "promptLevel",
                             "gestural"});
-                table3103.AddRow(new string[] {
+                table3066.AddRow(new string[] {
                             "setting",
                             "therapy-room"});
-                table3103.AddRow(new string[] {
+                table3066.AddRow(new string[] {
                             "materials",
                             "[\"flashcards\", \"manipulatives\"]"});
 #line 44
-    testRunner.When("I send a POST request to \"/api/data-collection/goals/goal-789/probe\" with:", ((string)(null)), table3103, "When ");
+    testRunner.When("I send a POST request to \"/api/data-collection/goals/goal-789/probe\" with:", ((string)(null)), table3066, "When ");
 #line hidden
 #line 52
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -333,23 +333,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 61
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3104 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3067 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table3104.AddRow(new string[] {
+                table3067.AddRow(new string[] {
                             "dataPoints",
                             "array"});
-                table3104.AddRow(new string[] {
+                table3067.AddRow(new string[] {
                             "summary",
                             "object"});
-                table3104.AddRow(new string[] {
+                table3067.AddRow(new string[] {
                             "trends",
                             "object"});
-                table3104.AddRow(new string[] {
+                table3067.AddRow(new string[] {
                             "graphs",
                             "array"});
 #line 62
-    testRunner.And("the response should contain:", ((string)(null)), table3104, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table3067, "And ");
 #line hidden
 #line 68
     testRunner.And("data should be organized by goal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -390,35 +390,35 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 73
     testRunner.Given("I am observing behavior", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table3105 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3068 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3105.AddRow(new string[] {
+                table3068.AddRow(new string[] {
                             "studentId",
                             "student-123"});
-                table3105.AddRow(new string[] {
+                table3068.AddRow(new string[] {
                             "antecedent",
                             "Transition to math"});
-                table3105.AddRow(new string[] {
+                table3068.AddRow(new string[] {
                             "behavior",
                             "Threw materials"});
-                table3105.AddRow(new string[] {
+                table3068.AddRow(new string[] {
                             "consequence",
                             "Removed from activity"});
-                table3105.AddRow(new string[] {
+                table3068.AddRow(new string[] {
                             "duration",
                             "3 minutes"});
-                table3105.AddRow(new string[] {
+                table3068.AddRow(new string[] {
                             "intensity",
                             "moderate"});
-                table3105.AddRow(new string[] {
+                table3068.AddRow(new string[] {
                             "time",
                             "2024-01-22T10:30:00Z"});
-                table3105.AddRow(new string[] {
+                table3068.AddRow(new string[] {
                             "setting",
                             "classroom"});
 #line 74
-    testRunner.When("I send a POST request to \"/api/data-collection/abc\" with:", ((string)(null)), table3105, "When ");
+    testRunner.When("I send a POST request to \"/api/data-collection/abc\" with:", ((string)(null)), table3068, "When ");
 #line hidden
 #line 84
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -471,26 +471,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 93
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3106 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3069 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table3106.AddRow(new string[] {
+                table3069.AddRow(new string[] {
                             "progressSummary",
                             "object"});
-                table3106.AddRow(new string[] {
+                table3069.AddRow(new string[] {
                             "trendAnalysis",
                             "object"});
-                table3106.AddRow(new string[] {
+                table3069.AddRow(new string[] {
                             "recommendations",
                             "array"});
-                table3106.AddRow(new string[] {
+                table3069.AddRow(new string[] {
                             "predictedOutcomes",
                             "object"});
-                table3106.AddRow(new string[] {
+                table3069.AddRow(new string[] {
                             "comparisonToPeers",
                             "object"});
 #line 94
-    testRunner.And("the response should contain:", ((string)(null)), table3106, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table3069, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -525,26 +525,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3107 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3070 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3107.AddRow(new string[] {
+                table3070.AddRow(new string[] {
                             "studentId",
                             "student-123"});
-                table3107.AddRow(new string[] {
+                table3070.AddRow(new string[] {
                             "rubricId",
                             "social-skills-rubric"});
-                table3107.AddRow(new string[] {
+                table3070.AddRow(new string[] {
                             "scores",
                             "{\"initiation\": 3, \"maintenance\": 2, \"reciprocity\": 2}"});
-                table3107.AddRow(new string[] {
+                table3070.AddRow(new string[] {
                             "observations",
                             "Improved initiation this week"});
-                table3107.AddRow(new string[] {
+                table3070.AddRow(new string[] {
                             "date",
                             "2024-01-22"});
 #line 105
-    testRunner.When("I send a POST request to \"/api/data-collection/rubric\" with:", ((string)(null)), table3107, "When ");
+    testRunner.When("I send a POST request to \"/api/data-collection/rubric\" with:", ((string)(null)), table3070, "When ");
 #line hidden
 #line 112
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -588,29 +588,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3108 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3071 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3108.AddRow(new string[] {
+                table3071.AddRow(new string[] {
                             "studentId",
                             "student-123"});
-                table3108.AddRow(new string[] {
+                table3071.AddRow(new string[] {
                             "behavior",
                             "on-task"});
-                table3108.AddRow(new string[] {
+                table3071.AddRow(new string[] {
                             "startTime",
                             "2024-01-22T10:00:00Z"});
-                table3108.AddRow(new string[] {
+                table3071.AddRow(new string[] {
                             "endTime",
                             "2024-01-22T10:08:30Z"});
-                table3108.AddRow(new string[] {
+                table3071.AddRow(new string[] {
                             "totalInterval",
                             "600"});
-                table3108.AddRow(new string[] {
+                table3071.AddRow(new string[] {
                             "notes",
                             "With visual timer"});
 #line 119
-    testRunner.When("I send a POST request to \"/api/data-collection/duration\" with:", ((string)(null)), table3108, "When ");
+    testRunner.When("I send a POST request to \"/api/data-collection/duration\" with:", ((string)(null)), table3071, "When ");
 #line hidden
 #line 127
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -654,29 +654,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3109 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3072 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3109.AddRow(new string[] {
+                table3072.AddRow(new string[] {
                             "studentId",
                             "student-123"});
-                table3109.AddRow(new string[] {
+                table3072.AddRow(new string[] {
                             "behavior",
                             "vocal-stereotypy"});
-                table3109.AddRow(new string[] {
+                table3072.AddRow(new string[] {
                             "intervalType",
                             "partial"});
-                table3109.AddRow(new string[] {
+                table3072.AddRow(new string[] {
                             "intervalLength",
                             "15"});
-                table3109.AddRow(new string[] {
+                table3072.AddRow(new string[] {
                             "intervals",
                             "[true, false, true, true, false, false]"});
-                table3109.AddRow(new string[] {
+                table3072.AddRow(new string[] {
                             "totalIntervals",
                             "6"});
 #line 134
-    testRunner.When("I send a POST request to \"/api/data-collection/interval\" with:", ((string)(null)), table3109, "When ");
+    testRunner.When("I send a POST request to \"/api/data-collection/interval\" with:", ((string)(null)), table3072, "When ");
 #line hidden
 #line 142
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -729,26 +729,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 151
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3110 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3073 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table3110.AddRow(new string[] {
+                table3073.AddRow(new string[] {
                             "lineGraph",
                             "object"});
-                table3110.AddRow(new string[] {
+                table3073.AddRow(new string[] {
                             "barChart",
                             "object"});
-                table3110.AddRow(new string[] {
+                table3073.AddRow(new string[] {
                             "trendLine",
                             "object"});
-                table3110.AddRow(new string[] {
+                table3073.AddRow(new string[] {
                             "aimLine",
                             "object"});
-                table3110.AddRow(new string[] {
+                table3073.AddRow(new string[] {
                             "phaseChangeLines",
                             "array"});
 #line 152
-    testRunner.And("the response should contain:", ((string)(null)), table3110, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table3073, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -783,23 +783,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3111 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3074 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3111.AddRow(new string[] {
+                table3074.AddRow(new string[] {
                             "format",
                             "csv"});
-                table3111.AddRow(new string[] {
+                table3074.AddRow(new string[] {
                             "studentId",
                             "student-123"});
-                table3111.AddRow(new string[] {
+                table3074.AddRow(new string[] {
                             "goalId",
                             "goal-789"});
-                table3111.AddRow(new string[] {
+                table3074.AddRow(new string[] {
                             "mapping",
                             "{\"date\": \"A\", \"score\": \"B\", \"notes\": \"C\"}"});
 #line 163
-    testRunner.When("I send a POST request to \"/api/data-collection/import\" with:", ((string)(null)), table3111, "When ");
+    testRunner.When("I send a POST request to \"/api/data-collection/import\" with:", ((string)(null)), table3074, "When ");
 #line hidden
 #line 169
     testRunner.And("I attach \"progress_data.csv\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -846,26 +846,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3112 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3075 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3112.AddRow(new string[] {
+                table3075.AddRow(new string[] {
                             "name",
                             "Articulation Progress Tracker"});
-                table3112.AddRow(new string[] {
+                table3075.AddRow(new string[] {
                             "dataType",
                             "percentage"});
-                table3112.AddRow(new string[] {
+                table3075.AddRow(new string[] {
                             "fields",
                             "[\"position\", \"wordLevel\", \"cues\"]"});
-                table3112.AddRow(new string[] {
+                table3075.AddRow(new string[] {
                             "calculations",
                             "[\"average\", \"trend\"]"});
-                table3112.AddRow(new string[] {
+                table3075.AddRow(new string[] {
                             "graphType",
                             "line"});
 #line 177
-    testRunner.When("I send a POST request to \"/api/data-collection/templates\" with:", ((string)(null)), table3112, "When ");
+    testRunner.When("I send a POST request to \"/api/data-collection/templates\" with:", ((string)(null)), table3075, "When ");
 #line hidden
 #line 184
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -919,20 +919,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 193
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3113 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3076 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table3113.AddRow(new string[] {
+                table3076.AddRow(new string[] {
                             "downloadUrl",
                             "string"});
-                table3113.AddRow(new string[] {
+                table3076.AddRow(new string[] {
                             "fileName",
                             "string"});
-                table3113.AddRow(new string[] {
+                table3076.AddRow(new string[] {
                             "format",
                             "string"});
 #line 194
-    testRunner.And("the response should contain:", ((string)(null)), table3113, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table3076, "And ");
 #line hidden
 #line 199
     testRunner.And("file should include all data with graphs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -970,26 +970,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3114 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3077 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3114.AddRow(new string[] {
+                table3077.AddRow(new string[] {
                             "studentId",
                             "student-123"});
-                table3114.AddRow(new string[] {
+                table3077.AddRow(new string[] {
                             "goalId",
                             "goal-789"});
-                table3114.AddRow(new string[] {
+                table3077.AddRow(new string[] {
                             "phaseDate",
                             "2024-01-22"});
-                table3114.AddRow(new string[] {
+                table3077.AddRow(new string[] {
                             "phaseName",
                             "Intervention B"});
-                table3114.AddRow(new string[] {
+                table3077.AddRow(new string[] {
                             "description",
                             "Added visual supports"});
 #line 204
-    testRunner.When("I send a POST request to \"/api/data-collection/phase-change\" with:", ((string)(null)), table3114, "When ");
+    testRunner.When("I send a POST request to \"/api/data-collection/phase-change\" with:", ((string)(null)), table3077, "When ");
 #line hidden
 #line 211
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1036,41 +1036,41 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 218
     testRunner.Given("goal \"goal-789\" has mastery criteria", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table3115 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3078 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3115.AddRow(new string[] {
+                table3078.AddRow(new string[] {
                             "studentId",
                             "student-123"});
-                table3115.AddRow(new string[] {
+                table3078.AddRow(new string[] {
                             "goalId",
                             "goal-789"});
 #line 219
-    testRunner.When("I send a POST request to \"/api/data-collection/mastery\" with:", ((string)(null)), table3115, "When ");
+    testRunner.When("I send a POST request to \"/api/data-collection/mastery\" with:", ((string)(null)), table3078, "When ");
 #line hidden
 #line 223
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3116 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3079 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table3116.AddRow(new string[] {
+                table3079.AddRow(new string[] {
                             "masteryMet",
                             "boolean"});
-                table3116.AddRow(new string[] {
+                table3079.AddRow(new string[] {
                             "currentLevel",
                             "number"});
-                table3116.AddRow(new string[] {
+                table3079.AddRow(new string[] {
                             "criteriaRequired",
                             "string"});
-                table3116.AddRow(new string[] {
+                table3079.AddRow(new string[] {
                             "consecutiveDays",
                             "number"});
-                table3116.AddRow(new string[] {
+                table3079.AddRow(new string[] {
                             "recommendation",
                             "string"});
 #line 224
-    testRunner.And("the response should contain:", ((string)(null)), table3116, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table3079, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1105,20 +1105,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3117 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3080 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3117.AddRow(new string[] {
+                table3080.AddRow(new string[] {
                             "entries",
                             "[{\"studentId\": \"s1\", \"goalId\": \"g1\", \"score\": 85}]"});
-                table3117.AddRow(new string[] {
+                table3080.AddRow(new string[] {
                             "date",
                             "2024-01-22"});
-                table3117.AddRow(new string[] {
+                table3080.AddRow(new string[] {
                             "session",
                             "group-therapy"});
 #line 235
-    testRunner.When("I send a POST request to \"/api/data-collection/bulk\" with:", ((string)(null)), table3117, "When ");
+    testRunner.When("I send a POST request to \"/api/data-collection/bulk\" with:", ((string)(null)), table3080, "When ");
 #line hidden
 #line 240
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

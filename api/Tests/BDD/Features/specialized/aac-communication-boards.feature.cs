@@ -142,7 +142,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 17
     testRunner.And("board complexity must match user capabilities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2441 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2404 = new TechTalk.SpecFlow.Table(new string[] {
                             "User Level",
                             "Board Type",
                             "Symbol Count",
@@ -150,7 +150,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Complexity Level",
                             "Target Audience",
                             "Customization Needs"});
-                table2441.AddRow(new string[] {
+                table2404.AddRow(new string[] {
                             "Emerging",
                             "Core board",
                             "4-8 symbols",
@@ -158,7 +158,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Very basic",
                             "Early communicators",
                             "High visual contrast"});
-                table2441.AddRow(new string[] {
+                table2404.AddRow(new string[] {
                             "Beginning",
                             "Basic needs board",
                             "12-20 symbols",
@@ -166,7 +166,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Basic",
                             "New AAC users",
                             "Clear organization"});
-                table2441.AddRow(new string[] {
+                table2404.AddRow(new string[] {
                             "Developing",
                             "Activity board",
                             "24-40 symbols",
@@ -174,7 +174,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Intermediate",
                             "Progressing users",
                             "Context-specific"});
-                table2441.AddRow(new string[] {
+                table2404.AddRow(new string[] {
                             "Intermediate",
                             "Comprehensive board",
                             "50-80 symbols",
@@ -182,7 +182,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Advanced",
                             "Regular users",
                             "Personalized content"});
-                table2441.AddRow(new string[] {
+                table2404.AddRow(new string[] {
                             "Advanced",
                             "Complex board",
                             "100+ symbols",
@@ -190,7 +190,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Sophisticated",
                             "Fluent users",
                             "Professional features"});
-                table2441.AddRow(new string[] {
+                table2404.AddRow(new string[] {
                             "Expert",
                             "Professional board",
                             "200+ symbols",
@@ -199,7 +199,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Power users",
                             "Full customization"});
 #line 18
-    testRunner.When("creating communication boards:", ((string)(null)), table2441, "When ");
+    testRunner.When("creating communication boards:", ((string)(null)), table2404, "When ");
 #line hidden
 #line 26
     testRunner.Then("boards should match user capabilities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -256,49 +256,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 34
     testRunner.And("consistent layouts improve usability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2442 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2405 = new TechTalk.SpecFlow.Table(new string[] {
                             "Template Category",
                             "Template Count",
                             "Customization Level",
                             "Target Context",
                             "Professional Quality",
                             "Time Savings"});
-                table2442.AddRow(new string[] {
+                table2405.AddRow(new string[] {
                             "Basic needs",
                             "15 templates",
                             "High customization",
                             "Daily living",
                             "Professional design",
                             "70% time reduction"});
-                table2442.AddRow(new string[] {
+                table2405.AddRow(new string[] {
                             "Educational",
                             "25 templates",
                             "Moderate customization",
                             "School settings",
                             "Curriculum-aligned",
                             "60% time reduction"});
-                table2442.AddRow(new string[] {
+                table2405.AddRow(new string[] {
                             "Medical",
                             "12 templates",
                             "High customization",
                             "Healthcare",
                             "Medical accuracy",
                             "75% time reduction"});
-                table2442.AddRow(new string[] {
+                table2405.AddRow(new string[] {
                             "Social",
                             "20 templates",
                             "High customization",
                             "Social interaction",
                             "Age-appropriate",
                             "65% time reduction"});
-                table2442.AddRow(new string[] {
+                table2405.AddRow(new string[] {
                             "Vocational",
                             "10 templates",
                             "Moderate customization",
                             "Work settings",
                             "Professional context",
                             "55% time reduction"});
-                table2442.AddRow(new string[] {
+                table2405.AddRow(new string[] {
                             "Recreation",
                             "18 templates",
                             "High customization",
@@ -306,7 +306,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Engaging design",
                             "60% time reduction"});
 #line 35
-    testRunner.When("implementing template system:", ((string)(null)), table2442, "When ");
+    testRunner.When("implementing template system:", ((string)(null)), table2405, "When ");
 #line hidden
 #line 43
     testRunner.Then("templates should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -363,49 +363,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 51
     testRunner.And("design impacts usability and appeal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2443 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2406 = new TechTalk.SpecFlow.Table(new string[] {
                             "Layout Type",
                             "Grid Options",
                             "Design Flexibility",
                             "Visual Hierarchy",
                             "Navigation Support",
                             "Accessibility Features"});
-                table2443.AddRow(new string[] {
+                table2406.AddRow(new string[] {
                             "Grid layout",
                             "2x2 to 10x10 grids",
                             "Full position control",
                             "Size-based hierarchy",
                             "Grid navigation",
                             "High contrast options"});
-                table2443.AddRow(new string[] {
+                table2406.AddRow(new string[] {
                             "Free-form layout",
                             "Unlimited positioning",
                             "Complete freedom",
                             "Color-based hierarchy",
                             "Spatial navigation",
                             "Adjustable sizes"});
-                table2443.AddRow(new string[] {
+                table2406.AddRow(new string[] {
                             "Template layout",
                             "Pre-designed structures",
                             "Template modification",
                             "Structured hierarchy",
                             "Template navigation",
                             "Built-in accessibility"});
-                table2443.AddRow(new string[] {
+                table2406.AddRow(new string[] {
                             "Category layout",
                             "Grouped organization",
                             "Category customization",
                             "Category hierarchy",
                             "Category navigation",
                             "Category highlighting"});
-                table2443.AddRow(new string[] {
+                table2406.AddRow(new string[] {
                             "Frequency layout",
                             "Usage-based positioning",
                             "Dynamic reorganization",
                             "Frequency hierarchy",
                             "Predictive navigation",
                             "Usage highlighting"});
-                table2443.AddRow(new string[] {
+                table2406.AddRow(new string[] {
                             "Contextual layout",
                             "Situation-based design",
                             "Context adaptation",
@@ -413,7 +413,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Context navigation",
                             "Context indicators"});
 #line 52
-    testRunner.When("implementing layout design:", ((string)(null)), table2443, "When ");
+    testRunner.When("implementing layout design:", ((string)(null)), table2406, "When ");
 #line hidden
 #line 60
     testRunner.Then("layouts should be flexible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -470,49 +470,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 68
     testRunner.And("organization impacts communication flow", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2444 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2407 = new TechTalk.SpecFlow.Table(new string[] {
                             "Placement Strategy",
                             "Organization Method",
                             "Access Efficiency",
                             "Learning Support",
                             "Modification Ease",
                             "User Adaptation"});
-                table2444.AddRow(new string[] {
+                table2407.AddRow(new string[] {
                             "Frequency-based",
                             "Most used centrally",
                             "90% efficiency",
                             "Fast learning",
                             "Dynamic updates",
                             "Quick adaptation"});
-                table2444.AddRow(new string[] {
+                table2407.AddRow(new string[] {
                             "Category clusters",
                             "Semantic groupings",
                             "80% efficiency",
                             "Logical learning",
                             "Category updates",
                             "Structured adaptation"});
-                table2444.AddRow(new string[] {
+                table2407.AddRow(new string[] {
                             "Alphabetical order",
                             "Letter organization",
                             "70% efficiency",
                             "Predictable learning",
                             "Alphabetic updates",
                             "Systematic adaptation"});
-                table2444.AddRow(new string[] {
+                table2407.AddRow(new string[] {
                             "Personal preference",
                             "User-defined layout",
                             "95% efficiency",
                             "Personal learning",
                             "Individual updates",
                             "Custom adaptation"});
-                table2444.AddRow(new string[] {
+                table2407.AddRow(new string[] {
                             "Motor accessibility",
                             "Physical limitations",
                             "85% efficiency",
                             "Accessible learning",
                             "Accessibility updates",
                             "Adaptive modifications"});
-                table2444.AddRow(new string[] {
+                table2407.AddRow(new string[] {
                             "Visual scanning",
                             "Scan pattern optimization",
                             "75% efficiency",
@@ -520,7 +520,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Pattern updates",
                             "Scanning adaptation"});
 #line 69
-    testRunner.When("optimizing symbol placement:", ((string)(null)), table2444, "When ");
+    testRunner.When("optimizing symbol placement:", ((string)(null)), table2407, "When ");
 #line hidden
 #line 77
     testRunner.Then("placement should optimize access", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -577,49 +577,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 86
     testRunner.And("hierarchical organization manages complexity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2445 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2408 = new TechTalk.SpecFlow.Table(new string[] {
                             "Level Type",
                             "Navigation Method",
                             "Content Organization",
                             "Return Navigation",
                             "Level Indicators",
                             "User Guidance"});
-                table2445.AddRow(new string[] {
+                table2408.AddRow(new string[] {
                             "Main level",
                             "Category selection",
                             "Core categories",
                             "Home button",
                             "Level breadcrumbs",
                             "Clear level labels"});
-                table2445.AddRow(new string[] {
+                table2408.AddRow(new string[] {
                             "Category level",
                             "Topic browsing",
                             "Thematic groups",
                             "Back button",
                             "Category highlights",
                             "Category indicators"});
-                table2445.AddRow(new string[] {
+                table2408.AddRow(new string[] {
                             "Detail level",
                             "Specific selection",
                             "Detailed options",
                             "Category return",
                             "Detail markers",
                             "Selection guidance"});
-                table2445.AddRow(new string[] {
+                table2408.AddRow(new string[] {
                             "Action level",
                             "Action execution",
                             "Action choices",
                             "Detail return",
                             "Action indicators",
                             "Action prompts"});
-                table2445.AddRow(new string[] {
+                table2408.AddRow(new string[] {
                             "Confirmation level",
                             "Choice confirmation",
                             "Confirmation options",
                             "Action return",
                             "Confirmation markers",
                             "Confirmation guidance"});
-                table2445.AddRow(new string[] {
+                table2408.AddRow(new string[] {
                             "Result level",
                             "Communication output",
                             "Result display",
@@ -627,7 +627,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Result indicators",
                             "Output guidance"});
 #line 87
-    testRunner.When("creating multi-level boards:", ((string)(null)), table2445, "When ");
+    testRunner.When("creating multi-level boards:", ((string)(null)), table2408, "When ");
 #line hidden
 #line 95
     testRunner.Then("navigation should be intuitive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -684,49 +684,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 103
     testRunner.And("adaptive boards improve relevance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2446 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2409 = new TechTalk.SpecFlow.Table(new string[] {
                             "Dynamic Feature",
                             "Adaptation Trigger",
                             "Change Type",
                             "Response Time",
                             "User Control",
                             "Personalization Level"});
-                table2446.AddRow(new string[] {
+                table2409.AddRow(new string[] {
                             "Context awareness",
                             "Location/time/activity",
                             "Content adaptation",
                             "Real-time",
                             "Override available",
                             "High personalization"});
-                table2446.AddRow(new string[] {
+                table2409.AddRow(new string[] {
                             "Usage learning",
                             "Communication patterns",
                             "Layout optimization",
                             "Daily updates",
                             "Learning control",
                             "Automatic personalization"});
-                table2446.AddRow(new string[] {
+                table2409.AddRow(new string[] {
                             "Preference adaptation",
                             "User choices",
                             "Content prioritization",
                             "Immediate",
                             "Full control",
                             "Complete personalization"});
-                table2446.AddRow(new string[] {
+                table2409.AddRow(new string[] {
                             "Skill progression",
                             "Ability development",
                             "Complexity adjustment",
                             "Weekly updates",
                             "Progress control",
                             "Developmental personalization"});
-                table2446.AddRow(new string[] {
+                table2409.AddRow(new string[] {
                             "Environmental adaptation",
                             "Setting changes",
                             "Board modification",
                             "Context switch",
                             "Environment control",
                             "Context personalization"});
-                table2446.AddRow(new string[] {
+                table2409.AddRow(new string[] {
                             "Partner adaptation",
                             "Communication partner",
                             "Style adjustment",
@@ -734,7 +734,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Partner control",
                             "Social personalization"});
 #line 104
-    testRunner.When("implementing dynamic boards:", ((string)(null)), table2446, "When ");
+    testRunner.When("implementing dynamic boards:", ((string)(null)), table2409, "When ");
 #line hidden
 #line 112
     testRunner.Then("adaptation should be intelligent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -791,49 +791,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 120
     testRunner.And("feedback improves communication effectiveness", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2447 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2410 = new TechTalk.SpecFlow.Table(new string[] {
                             "Interactive Type",
                             "Functionality",
                             "User Engagement",
                             "Feedback Type",
                             "Learning Support",
                             "Technical Requirements"});
-                table2447.AddRow(new string[] {
+                table2410.AddRow(new string[] {
                             "Animated symbols",
                             "Symbol animation",
                             "High engagement",
                             "Visual feedback",
                             "Visual learning",
                             "Animation support"});
-                table2447.AddRow(new string[] {
+                table2410.AddRow(new string[] {
                             "Sound feedback",
                             "Audio responses",
                             "Moderate engagement",
                             "Audio feedback",
                             "Auditory learning",
                             "Audio system"});
-                table2447.AddRow(new string[] {
+                table2410.AddRow(new string[] {
                             "Haptic feedback",
                             "Touch responses",
                             "Physical engagement",
                             "Tactile feedback",
                             "Kinesthetic learning",
                             "Haptic hardware"});
-                table2447.AddRow(new string[] {
+                table2410.AddRow(new string[] {
                             "Visual effects",
                             "Highlight effects",
                             "Visual engagement",
                             "Visual confirmation",
                             "Visual reinforcement",
                             "Graphics support"});
-                table2447.AddRow(new string[] {
+                table2410.AddRow(new string[] {
                             "Progress indicators",
                             "Achievement tracking",
                             "Motivational engagement",
                             "Progress feedback",
                             "Achievement learning",
                             "Progress tracking"});
-                table2447.AddRow(new string[] {
+                table2410.AddRow(new string[] {
                             "Interactive games",
                             "Communication games",
                             "High engagement",
@@ -841,7 +841,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Playful learning",
                             "Game engine"});
 #line 121
-    testRunner.When("integrating interactive elements:", ((string)(null)), table2447, "When ");
+    testRunner.When("integrating interactive elements:", ((string)(null)), table2410, "When ");
 #line hidden
 #line 129
     testRunner.Then("interactivity should enhance communication", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -898,49 +898,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 137
     testRunner.And("individual preferences vary significantly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2448 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2411 = new TechTalk.SpecFlow.Table(new string[] {
                             "Personalization Type",
                             "Customization Options",
                             "Implementation Method",
                             "User Control Level",
                             "Maintenance Requirements",
                             "Impact on Communication"});
-                table2448.AddRow(new string[] {
+                table2411.AddRow(new string[] {
                             "Personal photos",
                             "Family, friends, places",
                             "Photo integration",
                             "Full user control",
                             "User photo management",
                             "Maximum relevance"});
-                table2448.AddRow(new string[] {
+                table2411.AddRow(new string[] {
                             "Custom vocabulary",
                             "Personal words/phrases",
                             "Text integration",
                             "Complete control",
                             "Vocabulary maintenance",
                             "High relevance"});
-                table2448.AddRow(new string[] {
+                table2411.AddRow(new string[] {
                             "Visual preferences",
                             "Colors, themes, styles",
                             "Theme selection",
                             "Style control",
                             "Theme updates",
                             "Visual comfort"});
-                table2448.AddRow(new string[] {
+                table2411.AddRow(new string[] {
                             "Motor adaptations",
                             "Size, spacing, arrangement",
                             "Layout adaptation",
                             "Accessibility control",
                             "Adaptation maintenance",
                             "Access improvement"});
-                table2448.AddRow(new string[] {
+                table2411.AddRow(new string[] {
                             "Communication style",
                             "Formal/informal, tone",
                             "Style templates",
                             "Communication control",
                             "Style management",
                             "Style matching"});
-                table2448.AddRow(new string[] {
+                table2411.AddRow(new string[] {
                             "Cultural elements",
                             "Cultural symbols/concepts",
                             "Cultural integration",
@@ -948,7 +948,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Cultural updates",
                             "Cultural relevance"});
 #line 138
-    testRunner.When("implementing personalization:", ((string)(null)), table2448, "When ");
+    testRunner.When("implementing personalization:", ((string)(null)), table2411, "When ");
 #line hidden
 #line 146
     testRunner.Then("personalization should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1005,49 +1005,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 155
     testRunner.And("topic boards improve communication efficiency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2449 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2412 = new TechTalk.SpecFlow.Table(new string[] {
                             "Topic Category",
                             "Vocabulary Focus",
                             "Board Features",
                             "Context Integration",
                             "Professional Input",
                             "Usage Scenarios"});
-                table2449.AddRow(new string[] {
+                table2412.AddRow(new string[] {
                             "Medical appointments",
                             "Medical vocabulary",
                             "Symptom reporting",
                             "Healthcare settings",
                             "Medical review",
                             "Doctor visits"});
-                table2449.AddRow(new string[] {
+                table2412.AddRow(new string[] {
                             "School activities",
                             "Academic vocabulary",
                             "Curriculum support",
                             "Educational settings",
                             "Teacher input",
                             "Classroom use"});
-                table2449.AddRow(new string[] {
+                table2412.AddRow(new string[] {
                             "Social interactions",
                             "Social vocabulary",
                             "Relationship building",
                             "Social settings",
                             "Social worker input",
                             "Peer interactions"});
-                table2449.AddRow(new string[] {
+                table2412.AddRow(new string[] {
                             "Recreation activities",
                             "Leisure vocabulary",
                             "Fun and games",
                             "Recreation settings",
                             "Recreation therapist input",
                             "Play time"});
-                table2449.AddRow(new string[] {
+                table2412.AddRow(new string[] {
                             "Workplace communication",
                             "Work vocabulary",
                             "Job-specific terms",
                             "Work settings",
                             "Vocational counselor input",
                             "Employment"});
-                table2449.AddRow(new string[] {
+                table2412.AddRow(new string[] {
                             "Emergency situations",
                             "Crisis vocabulary",
                             "Safety communication",
@@ -1055,7 +1055,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Safety expert input",
                             "Crisis response"});
 #line 156
-    testRunner.When("creating topic-specific boards:", ((string)(null)), table2449, "When ");
+    testRunner.When("creating topic-specific boards:", ((string)(null)), table2412, "When ");
 #line hidden
 #line 164
     testRunner.Then("vocabulary should be topic-appropriate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1112,49 +1112,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 172
     testRunner.And("age appropriateness affects acceptance and effectiveness", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2450 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2413 = new TechTalk.SpecFlow.Table(new string[] {
                             "Age Group",
                             "Design Elements",
                             "Vocabulary Level",
                             "Visual Style",
                             "Interaction Methods",
                             "Social Considerations"});
-                table2450.AddRow(new string[] {
+                table2413.AddRow(new string[] {
                             "Early childhood (2-5)",
                             "Large, colorful symbols",
                             "Basic vocabulary",
                             "Cartoon style",
                             "Simple touch",
                             "Parent involvement"});
-                table2450.AddRow(new string[] {
+                table2413.AddRow(new string[] {
                             "School age (6-12)",
                             "Clear, engaging symbols",
                             "Educational vocabulary",
                             "Realistic style",
                             "Multi-touch",
                             "Peer acceptance"});
-                table2450.AddRow(new string[] {
+                table2413.AddRow(new string[] {
                             "Adolescence (13-17)",
                             "Mature, relevant symbols",
                             "Teen vocabulary",
                             "Modern style",
                             "Gesture support",
                             "Social acceptance"});
-                table2450.AddRow(new string[] {
+                table2413.AddRow(new string[] {
                             "Young adult (18-25)",
                             "Professional symbols",
                             "Adult vocabulary",
                             "Clean style",
                             "Efficient interaction",
                             "Independence focus"});
-                table2450.AddRow(new string[] {
+                table2413.AddRow(new string[] {
                             "Adult (26-65)",
                             "Functional symbols",
                             "Practical vocabulary",
                             "Professional style",
                             "Accessible interaction",
                             "Work/family focus"});
-                table2450.AddRow(new string[] {
+                table2413.AddRow(new string[] {
                             "Older adult (65+)",
                             "Clear, large symbols",
                             "Familiar vocabulary",
@@ -1162,7 +1162,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Simple interaction",
                             "Dignity preservation"});
 #line 173
-    testRunner.When("designing age-appropriate boards:", ((string)(null)), table2450, "When ");
+    testRunner.When("designing age-appropriate boards:", ((string)(null)), table2413, "When ");
 #line hidden
 #line 181
     testRunner.Then("design should match age expectations", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1219,49 +1219,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 189
     testRunner.And("environmental boards improve contextual relevance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2451 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2414 = new TechTalk.SpecFlow.Table(new string[] {
                             "Environment",
                             "Communication Needs",
                             "Board Adaptations",
                             "Access Methods",
                             "Durability Requirements",
                             "Portability Needs"});
-                table2451.AddRow(new string[] {
+                table2414.AddRow(new string[] {
                             "Classroom",
                             "Academic communication",
                             "Educational vocabulary",
                             "Student-friendly access",
                             "School-day durability",
                             "Desk portability"});
-                table2451.AddRow(new string[] {
+                table2414.AddRow(new string[] {
                             "Hospital",
                             "Medical communication",
                             "Health vocabulary",
                             "Patient-accessible",
                             "Medical environment durability",
                             "Bedside portability"});
-                table2451.AddRow(new string[] {
+                table2414.AddRow(new string[] {
                             "Home",
                             "Daily living",
                             "Family vocabulary",
                             "Family-friendly access",
                             "Home durability",
                             "Room-to-room portability"});
-                table2451.AddRow(new string[] {
+                table2414.AddRow(new string[] {
                             "Community",
                             "Public communication",
                             "Social vocabulary",
                             "Public-appropriate access",
                             "Weather durability",
                             "Mobile portability"});
-                table2451.AddRow(new string[] {
+                table2414.AddRow(new string[] {
                             "Workplace",
                             "Work communication",
                             "Professional vocabulary",
                             "Work-appropriate access",
                             "Workplace durability",
                             "Office portability"});
-                table2451.AddRow(new string[] {
+                table2414.AddRow(new string[] {
                             "Recreation",
                             "Leisure communication",
                             "Fun vocabulary",
@@ -1269,7 +1269,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Activity durability",
                             "Activity portability"});
 #line 190
-    testRunner.When("creating environmental boards:", ((string)(null)), table2451, "When ");
+    testRunner.When("creating environmental boards:", ((string)(null)), table2414, "When ");
 #line hidden
 #line 198
     testRunner.Then("environmental needs should be addressed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1326,49 +1326,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 207
     testRunner.And("print quality affects usability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2452 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2415 = new TechTalk.SpecFlow.Table(new string[] {
                             "Print Specification",
                             "Quality Standard",
                             "Material Options",
                             "Durability Features",
                             "Cost Considerations",
                             "Production Timeline"});
-                table2452.AddRow(new string[] {
+                table2415.AddRow(new string[] {
                             "Resolution",
                             "300 DPI minimum",
                             "Cardstock, laminated",
                             "Tear-resistant",
                             "Cost-effective",
                             "2-3 business days"});
-                table2452.AddRow(new string[] {
+                table2415.AddRow(new string[] {
                             "Color accuracy",
                             "CMYK color matching",
                             "Photo paper",
                             "Water-resistant",
                             "Premium pricing",
                             "1-2 business days"});
-                table2452.AddRow(new string[] {
+                table2415.AddRow(new string[] {
                             "Size options",
                             "Multiple standard sizes",
                             "Magnetic backing",
                             "Heavy-use durability",
                             "Mid-range pricing",
                             "3-5 business days"});
-                table2452.AddRow(new string[] {
+                table2415.AddRow(new string[] {
                             "Binding options",
                             "Ring, spiral, perfect",
                             "Velcro attachments",
                             "Portable durability",
                             "Variable pricing",
                             "5-7 business days"});
-                table2452.AddRow(new string[] {
+                table2415.AddRow(new string[] {
                             "Finishing options",
                             "Lamination, coating",
                             "Wipeable surfaces",
                             "Sanitizable",
                             "Hygiene pricing",
                             "3-4 business days"});
-                table2452.AddRow(new string[] {
+                table2415.AddRow(new string[] {
                             "Quantity options",
                             "Single to bulk orders",
                             "Replacement parts",
@@ -1376,7 +1376,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Volume discounts",
                             "1-2 weeks"});
 #line 208
-    testRunner.When("optimizing for printing:", ((string)(null)), table2452, "When ");
+    testRunner.When("optimizing for printing:", ((string)(null)), table2415, "When ");
 #line hidden
 #line 216
     testRunner.Then("print quality should be professional", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1433,49 +1433,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 224
     testRunner.And("sharing facilitates collaboration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2453 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2416 = new TechTalk.SpecFlow.Table(new string[] {
                             "Distribution Method",
                             "Platform Support",
                             "Sharing Options",
                             "Security Features",
                             "Version Control",
                             "Collaboration Features"});
-                table2453.AddRow(new string[] {
+                table2416.AddRow(new string[] {
                             "App download",
                             "iOS, Android, Windows",
                             "Direct download",
                             "Device encryption",
                             "Version tracking",
                             "Individual use"});
-                table2453.AddRow(new string[] {
+                table2416.AddRow(new string[] {
                             "Cloud sharing",
                             "Web-based access",
                             "Link sharing",
                             "Password protection",
                             "Change history",
                             "Team collaboration"});
-                table2453.AddRow(new string[] {
+                table2416.AddRow(new string[] {
                             "Email distribution",
                             "Attachment format",
                             "Email sending",
                             "Secure transmission",
                             "Email versions",
                             "Simple sharing"});
-                table2453.AddRow(new string[] {
+                table2416.AddRow(new string[] {
                             "Platform integration",
                             "AAC app integration",
                             "Native sharing",
                             "App security",
                             "Platform versions",
                             "Platform collaboration"});
-                table2453.AddRow(new string[] {
+                table2416.AddRow(new string[] {
                             "QR code access",
                             "Quick access",
                             "Code scanning",
                             "Public access",
                             "Code versions",
                             "Public sharing"});
-                table2453.AddRow(new string[] {
+                table2416.AddRow(new string[] {
                             "USB distribution",
                             "Offline transfer",
                             "Physical transfer",
@@ -1483,7 +1483,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "File versions",
                             "Offline sharing"});
 #line 225
-    testRunner.When("supporting digital distribution:", ((string)(null)), table2453, "When ");
+    testRunner.When("supporting digital distribution:", ((string)(null)), table2416, "When ");
 #line hidden
 #line 233
     testRunner.Then("distribution should be flexible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1540,49 +1540,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 242
     testRunner.And("testing validates design decisions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2454 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2417 = new TechTalk.SpecFlow.Table(new string[] {
                             "Testing Type",
                             "Test Participants",
                             "Testing Method",
                             "Success Metrics",
                             "Improvement Actions",
                             "Validation Criteria"});
-                table2454.AddRow(new string[] {
+                table2417.AddRow(new string[] {
                             "Navigation testing",
                             "AAC users",
                             "Task completion",
                             "<3 touches to target",
                             "Navigation simplification",
                             "90% task success"});
-                table2454.AddRow(new string[] {
+                table2417.AddRow(new string[] {
                             "Symbol recognition",
                             "Target users",
                             "Recognition tasks",
                             ">95% recognition rate",
                             "Symbol clarification",
                             "High recognition"});
-                table2454.AddRow(new string[] {
+                table2417.AddRow(new string[] {
                             "Speed testing",
                             "Fluent users",
                             "Timed tasks",
                             "<2 seconds per symbol",
                             "Layout optimization",
                             "Speed improvement"});
-                table2454.AddRow(new string[] {
+                table2417.AddRow(new string[] {
                             "Accessibility testing",
                             "Users with disabilities",
                             "Accessibility tasks",
                             "Full access achieved",
                             "Accessibility enhancement",
                             "Complete access"});
-                table2454.AddRow(new string[] {
+                table2417.AddRow(new string[] {
                             "Context testing",
                             "Real environment",
                             "Real-world use",
                             "Effective communication",
                             "Context optimization",
                             "Communication success"});
-                table2454.AddRow(new string[] {
+                table2417.AddRow(new string[] {
                             "Learning testing",
                             "New users",
                             "Learning tasks",
@@ -1590,7 +1590,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Learning support",
                             "Fast adoption"});
 #line 243
-    testRunner.When("conducting usability testing:", ((string)(null)), table2454, "When ");
+    testRunner.When("conducting usability testing:", ((string)(null)), table2417, "When ");
 #line hidden
 #line 251
     testRunner.Then("testing should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1647,49 +1647,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 259
     testRunner.And("validation criteria must be evidence-based", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2455 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2418 = new TechTalk.SpecFlow.Table(new string[] {
                             "Quality Aspect",
                             "Validation Method",
                             "Quality Criteria",
                             "Assessment Tools",
                             "Professional Review",
                             "Improvement Process"});
-                table2455.AddRow(new string[] {
+                table2418.AddRow(new string[] {
                             "Symbol clarity",
                             "Visual assessment",
                             "High contrast, clear details",
                             "Visual analysis tools",
                             "Graphics expert review",
                             "Symbol enhancement"});
-                table2455.AddRow(new string[] {
+                table2418.AddRow(new string[] {
                             "Communication effectiveness",
                             "Communication testing",
                             "Successful message transmission",
                             "Communication measures",
                             "SLP review",
                             "Communication optimization"});
-                table2455.AddRow(new string[] {
+                table2418.AddRow(new string[] {
                             "User satisfaction",
                             "Satisfaction surveys",
                             "High user acceptance",
                             "Survey instruments",
                             "User experience review",
                             "Satisfaction improvement"});
-                table2455.AddRow(new string[] {
+                table2418.AddRow(new string[] {
                             "Accessibility compliance",
                             "Accessibility audit",
                             "WCAG compliance",
                             "Accessibility tools",
                             "Accessibility expert review",
                             "Compliance enhancement"});
-                table2455.AddRow(new string[] {
+                table2418.AddRow(new string[] {
                             "Clinical appropriateness",
                             "Clinical review",
                             "Evidence-based design",
                             "Clinical assessment",
                             "Clinician review",
                             "Clinical optimization"});
-                table2455.AddRow(new string[] {
+                table2418.AddRow(new string[] {
                             "Cultural sensitivity",
                             "Cultural assessment",
                             "Cultural appropriateness",
@@ -1697,7 +1697,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Cultural expert review",
                             "Cultural enhancement"});
 #line 260
-    testRunner.When("validating board quality:", ((string)(null)), table2455, "When ");
+    testRunner.When("validating board quality:", ((string)(null)), table2418, "When ");
 #line hidden
 #line 268
     testRunner.Then("validation should be thorough", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1753,49 +1753,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 276
     testRunner.Given("design issues can impair communication", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2456 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2419 = new TechTalk.SpecFlow.Table(new string[] {
                             "Issue Type",
                             "Problem Description",
                             "Detection Method",
                             "Resolution Strategy",
                             "Prevention Measures",
                             "Quality Impact"});
-                table2456.AddRow(new string[] {
+                table2419.AddRow(new string[] {
                             "Poor symbol visibility",
                             "Low contrast, small size",
                             "Visual testing",
                             "Increase contrast, size",
                             "Design standards",
                             "Improved visibility"});
-                table2456.AddRow(new string[] {
+                table2419.AddRow(new string[] {
                             "Confusing layout",
                             "Illogical organization",
                             "User testing",
                             "Reorganize layout",
                             "Layout guidelines",
                             "Better organization"});
-                table2456.AddRow(new string[] {
+                table2419.AddRow(new string[] {
                             "Navigation difficulties",
                             "Complex navigation",
                             "Usability testing",
                             "Simplify navigation",
                             "Navigation standards",
                             "Easier navigation"});
-                table2456.AddRow(new string[] {
+                table2419.AddRow(new string[] {
                             "Symbol ambiguity",
                             "Unclear meaning",
                             "Recognition testing",
                             "Replace symbols",
                             "Symbol standards",
                             "Clear communication"});
-                table2456.AddRow(new string[] {
+                table2419.AddRow(new string[] {
                             "Access barriers",
                             "Physical/motor barriers",
                             "Accessibility testing",
                             "Remove barriers",
                             "Accessibility design",
                             "Universal access"});
-                table2456.AddRow(new string[] {
+                table2419.AddRow(new string[] {
                             "Cultural inappropriateness",
                             "Cultural insensitivity",
                             "Cultural review",
@@ -1803,7 +1803,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Cultural guidelines",
                             "Cultural respect"});
 #line 277
-    testRunner.When("design issues occur:", ((string)(null)), table2456, "When ");
+    testRunner.When("design issues occur:", ((string)(null)), table2419, "When ");
 #line hidden
 #line 285
     testRunner.Then("issues should be detected early", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1857,49 +1857,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
 #line 292
     testRunner.Given("boards require ongoing development and updates", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2457 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2420 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table2457.AddRow(new string[] {
+                table2420.AddRow(new string[] {
                             "Content updates",
                             "Changing needs",
                             "Regular update schedule",
                             "Update resources",
                             "Current content",
                             "Content sustainability"});
-                table2457.AddRow(new string[] {
+                table2420.AddRow(new string[] {
                             "Technology compatibility",
                             "Platform changes",
                             "Future-proof formats",
                             "Technology resources",
                             "Broad compatibility",
                             "Technology sustainability"});
-                table2457.AddRow(new string[] {
+                table2420.AddRow(new string[] {
                             "User training",
                             "Training needs",
                             "Scalable training programs",
                             "Training resources",
                             "User competency",
                             "Training sustainability"});
-                table2457.AddRow(new string[] {
+                table2420.AddRow(new string[] {
                             "Quality maintenance",
                             "Varying quality",
                             "Quality assurance systems",
                             "Quality resources",
                             "Consistent quality",
                             "Quality sustainability"});
-                table2457.AddRow(new string[] {
+                table2420.AddRow(new string[] {
                             "Cost effectiveness",
                             "Development costs",
                             "Efficient development processes",
                             "Optimized resources",
                             "Reasonable costs",
                             "Financial sustainability"});
-                table2457.AddRow(new string[] {
+                table2420.AddRow(new string[] {
                             "Innovation integration",
                             "Rapid changes",
                             "Flexible development approaches",
@@ -1907,7 +1907,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Specialized
                             "Current features",
                             "Innovation sustainability"});
 #line 293
-    testRunner.When("planning sustainability:", ((string)(null)), table2457, "When ");
+    testRunner.When("planning sustainability:", ((string)(null)), table2420, "When ");
 #line hidden
 #line 301
     testRunner.Then("sustainability should be systematically planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

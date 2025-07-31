@@ -134,7 +134,7 @@ public class IntegrationStepDefinitions : BaseStepDefinitions
         
         var json = System.Text.Json.JsonSerializer.Serialize(resourceList);
         var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
-        LastResponse = await Client.PostAsync("/api/print/queue", content);
+        SetLastResponse(await Client.PostAsync("/api/print/queue", content));
     }
     [Then(@"integration system should:")]
     public async Task ThenIntegrationSystemShould(Table expectedBehaviors)

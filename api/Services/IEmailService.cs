@@ -9,4 +9,6 @@ public interface IEmailService
     Task SendResourceSharedEmailAsync(string email, string recipientName, string senderName, string resourceTitle, string accessLink);
     Task SendPaymentReceiptAsync(string email, string firstName, decimal amount, string description);
     Task SendSellerNotificationAsync(string email, string sellerName, string notificationType, string details);
+    Task SendAccountStatusChangeAsync(string email, string firstName, bool isSuspended, string? reason);
+    Task SendAccountDeletionConfirmationAsync(string email, string firstName);
 }

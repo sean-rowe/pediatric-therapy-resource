@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 17
     testRunner.And("PHI must never enter Slack channels", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1321 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1284 = new TechTalk.SpecFlow.Table(new string[] {
                             "Integration Feature",
                             "Implementation",
                             "Security Controls",
                             "PHI Protection",
                             "Automation",
                             "Monitoring"});
-                table1321.AddRow(new string[] {
+                table1284.AddRow(new string[] {
                             "Notifications",
                             "Incoming webhooks",
                             "Token security",
                             "No PHI in messages",
                             "Event-driven",
                             "Delivery tracking"});
-                table1321.AddRow(new string[] {
+                table1284.AddRow(new string[] {
                             "Slash commands",
                             "Custom commands",
                             "Request signing",
                             "Reference IDs only",
                             "Quick actions",
                             "Usage analytics"});
-                table1321.AddRow(new string[] {
+                table1284.AddRow(new string[] {
                             "Bot interactions",
                             "Slack app",
                             "OAuth scopes",
                             "Anonymized data",
                             "Conversational UI",
                             "Interaction logs"});
-                table1321.AddRow(new string[] {
+                table1284.AddRow(new string[] {
                             "Channel management",
                             "API automation",
                             "Access controls",
                             "Private channels",
                             "Auto-provisioning",
                             "Member tracking"});
-                table1321.AddRow(new string[] {
+                table1284.AddRow(new string[] {
                             "File sharing",
                             "Link references",
                             "No file upload",
                             "Secure links only",
                             "Expiring URLs",
                             "Access logs"});
-                table1321.AddRow(new string[] {
+                table1284.AddRow(new string[] {
                             "Workflow builder",
                             "Custom workflows",
                             "Approval chains",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Process automation",
                             "Workflow metrics"});
 #line 18
-    testRunner.When("implementing Slack integration:", ((string)(null)), table1321, "When ");
+    testRunner.When("implementing Slack integration:", ((string)(null)), table1284, "When ");
 #line hidden
 #line 26
     testRunner.Then("Slack integration should enhance collaboration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 34
     testRunner.And("integration must support healthcare scenarios", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1322 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1285 = new TechTalk.SpecFlow.Table(new string[] {
                             "Feature",
                             "API/SDK Used",
                             "Healthcare Compliance",
                             "Data Handling",
                             "User Experience",
                             "Administration"});
-                table1322.AddRow(new string[] {
+                table1285.AddRow(new string[] {
                             "Chat notifications",
                             "Graph API",
                             "No PHI in chat",
                             "Secure references",
                             "@mentions support",
                             "Policy enforcement"});
-                table1322.AddRow(new string[] {
+                table1285.AddRow(new string[] {
                             "Video meetings",
                             "Teams SDK",
                             "HIPAA compliant calls",
                             "Encrypted streams",
                             "One-click join",
                             "Meeting policies"});
-                table1322.AddRow(new string[] {
+                table1285.AddRow(new string[] {
                             "File collaboration",
                             "SharePoint API",
                             "Document references",
                             "Link sharing only",
                             "Co-authoring",
                             "Permission sync"});
-                table1322.AddRow(new string[] {
+                table1285.AddRow(new string[] {
                             "Apps/Tabs",
                             "Teams Apps",
                             "Custom tabs",
                             "Embedded views",
                             "SSO enabled",
                             "App governance"});
-                table1322.AddRow(new string[] {
+                table1285.AddRow(new string[] {
                             "Calendar sync",
                             "Outlook API",
                             "Appointment types",
                             "No details shared",
                             "Availability sync",
                             "Booking rules"});
-                table1322.AddRow(new string[] {
+                table1285.AddRow(new string[] {
                             "Phone system",
                             "Teams Calling",
                             "Call recording consent",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Direct routing",
                             "Call analytics"});
 #line 35
-    testRunner.When("implementing Teams integration:", ((string)(null)), table1322, "When ");
+    testRunner.When("implementing Teams integration:", ((string)(null)), table1285, "When ");
 #line hidden
 #line 43
     testRunner.Then("Teams integration should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 51
     testRunner.And("integration must work with major clients", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1323 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1286 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email Platform",
                             "Integration Method",
                             "Features Supported",
                             "Security",
                             "Sync Capability",
                             "Management"});
-                table1323.AddRow(new string[] {
+                table1286.AddRow(new string[] {
                             "Outlook Desktop",
                             "Add-in/VSTO",
                             "Calendar, contacts, tasks",
                             "Exchange security",
                             "Bidirectional",
                             "Group policy"});
-                table1323.AddRow(new string[] {
+                table1286.AddRow(new string[] {
                             "Outlook Web",
                             "Office Add-ins",
                             "Limited features",
                             "Browser sandbox",
                             "Real-time",
                             "Centralized"});
-                table1323.AddRow(new string[] {
+                table1286.AddRow(new string[] {
                             "Gmail",
                             "Google Workspace API",
                             "Full integration",
                             "OAuth 2.0",
                             "Push notifications",
                             "Admin console"});
-                table1323.AddRow(new string[] {
+                table1286.AddRow(new string[] {
                             "Apple Mail",
                             "CalDAV/CardDAV",
                             "Calendar, contacts",
                             "TLS encryption",
                             "Periodic sync",
                             "Profile-based"});
-                table1323.AddRow(new string[] {
+                table1286.AddRow(new string[] {
                             "Thunderbird",
                             "Extensions",
                             "Basic features",
                             "Local security",
                             "Manual sync",
                             "User-managed"});
-                table1323.AddRow(new string[] {
+                table1286.AddRow(new string[] {
                             "Mobile clients",
                             "Exchange ActiveSync",
                             "Push email",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Continuous",
                             "MDM integration"});
 #line 52
-    testRunner.When("implementing email integration:", ((string)(null)), table1323, "When ");
+    testRunner.When("implementing email integration:", ((string)(null)), table1286, "When ");
 #line hidden
 #line 60
     testRunner.Then("email integration should work across platforms", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 69
     testRunner.And("teletherapy requires reliable video", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1324 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1287 = new TechTalk.SpecFlow.Table(new string[] {
                             "Platform",
                             "Integration Depth",
                             "Session Features",
                             "Recording",
                             "Analytics",
                             "Compliance"});
-                table1324.AddRow(new string[] {
+                table1287.AddRow(new string[] {
                             "Zoom Healthcare",
                             "Native SDK",
                             "Waiting room, breakouts",
                             "Cloud + local",
                             "Detailed metrics",
                             "HIPAA BAA"});
-                table1324.AddRow(new string[] {
+                table1287.AddRow(new string[] {
                             "Teams for Healthcare",
                             "Embedded app",
                             "Background blur, together mode",
                             "Stream integration",
                             "Teams analytics",
                             "Microsoft compliance"});
-                table1324.AddRow(new string[] {
+                table1287.AddRow(new string[] {
                             "Google Meet",
                             "Calendar integration",
                             "Live captions, hand raising",
                             "Drive storage",
                             "Basic metrics",
                             "Google Workspace"});
-                table1324.AddRow(new string[] {
+                table1287.AddRow(new string[] {
                             "WebEx Healthcare",
                             "API integration",
                             "Virtual backgrounds",
                             "Encrypted storage",
                             "Session reports",
                             "Healthcare certified"});
-                table1324.AddRow(new string[] {
+                table1287.AddRow(new string[] {
                             "Doxy.me",
                             "iframe embed",
                             "HIPAA compliant",
                             "Local only",
                             "Usage statistics",
                             "Built for healthcare"});
-                table1324.AddRow(new string[] {
+                table1287.AddRow(new string[] {
                             "SimplePractice Telehealth",
                             "Direct integration",
                             "Therapy-specific",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Integrated billing",
                             "Healthcare focused"});
 #line 70
-    testRunner.When("supporting multiple platforms:", ((string)(null)), table1324, "When ");
+    testRunner.When("supporting multiple platforms:", ((string)(null)), table1287, "When ");
 #line hidden
 #line 78
     testRunner.Then("multiple platforms should be supported", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 86
     testRunner.And("convenience must not compromise security", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1325 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1288 = new TechTalk.SpecFlow.Table(new string[] {
                             "Messaging Type",
                             "Encryption",
                             "User Authentication",
                             "Message Lifespan",
                             "Audit Trail",
                             "Compliance Features"});
-                table1325.AddRow(new string[] {
+                table1288.AddRow(new string[] {
                             "Provider-to-provider",
                             "End-to-end",
                             "MFA required",
                             "Configurable retention",
                             "Complete history",
                             "HIPAA compliant"});
-                table1325.AddRow(new string[] {
+                table1288.AddRow(new string[] {
                             "Provider-to-patient",
                             "TLS + at-rest",
                             "Identity verification",
                             "Auto-expire option",
                             "Read receipts",
                             "Consent tracking"});
-                table1325.AddRow(new string[] {
+                table1288.AddRow(new string[] {
                             "Team messaging",
                             "Channel encryption",
                             "Role-based access",
                             "Archive after 90 days",
                             "Searchable logs",
                             "PHI detection"});
-                table1325.AddRow(new string[] {
+                table1288.AddRow(new string[] {
                             "Automated messages",
                             "System encrypted",
                             "API authentication",
                             "Based on type",
                             "Delivery tracking",
                             "Template approval"});
-                table1325.AddRow(new string[] {
+                table1288.AddRow(new string[] {
                             "Emergency broadcast",
                             "Priority encryption",
                             "Override permissions",
                             "Permanent record",
                             "Access logging",
                             "Crisis protocols"});
-                table1325.AddRow(new string[] {
+                table1288.AddRow(new string[] {
                             "File attachments",
                             "Separate encryption",
                             "Download tracking",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Version control",
                             "Scan for PHI"});
 #line 87
-    testRunner.When("implementing secure messaging:", ((string)(null)), table1325, "When ");
+    testRunner.When("implementing secure messaging:", ((string)(null)), table1288, "When ");
 #line hidden
 #line 95
     testRunner.Then("messaging should be secure by default", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 104
     testRunner.And("double-booking must be prevented", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1326 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1289 = new TechTalk.SpecFlow.Table(new string[] {
                             "Calendar System",
                             "Sync Method",
                             "Conflict Resolution",
                             "Privacy Controls",
                             "Features",
                             "Performance"});
-                table1326.AddRow(new string[] {
+                table1289.AddRow(new string[] {
                             "Google Calendar",
                             "CalDAV + API",
                             "Last write wins",
                             "Private events hidden",
                             "All-day events",
                             "Real-time sync"});
-                table1326.AddRow(new string[] {
+                table1289.AddRow(new string[] {
                             "Outlook Calendar",
                             "Exchange Web Services",
                             "Priority rules",
                             "Free/busy only",
                             "Recurring events",
                             "Push notifications"});
-                table1326.AddRow(new string[] {
+                table1289.AddRow(new string[] {
                             "Apple Calendar",
                             "CalDAV protocol",
                             "Manual resolution",
                             "Invitation filtering",
                             "Time zone support",
                             "Batch updates"});
-                table1326.AddRow(new string[] {
+                table1289.AddRow(new string[] {
                             "Office 365",
                             "Graph API",
                             "Automatic merging",
                             "Conditional access",
                             "Resource booking",
                             "Delta sync"});
-                table1326.AddRow(new string[] {
+                table1289.AddRow(new string[] {
                             "Calendly",
                             "Webhook + API",
                             "Slot locking",
                             "Available times only",
                             "Round-robin",
                             "Instant updates"});
-                table1326.AddRow(new string[] {
+                table1289.AddRow(new string[] {
                             "Practice management",
                             "Direct integration",
                             "System of record",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Therapy-specific",
                             "Bidirectional"});
 #line 105
-    testRunner.When("implementing calendar sync:", ((string)(null)), table1326, "When ");
+    testRunner.When("implementing calendar sync:", ((string)(null)), table1289, "When ");
 #line hidden
 #line 113
     testRunner.Then("calendars should stay synchronized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 121
     testRunner.And("critical messages must be delivered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1327 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1290 = new TechTalk.SpecFlow.Table(new string[] {
                             "Channel",
                             "Use Case",
                             "Delivery Method",
                             "Fallback Strategy",
                             "Opt-in/Out",
                             "Analytics"});
-                table1327.AddRow(new string[] {
+                table1290.AddRow(new string[] {
                             "Email",
                             "Non-urgent updates",
                             "SMTP/API",
                             "Retry queue",
                             "Granular preferences",
                             "Open/click rates"});
-                table1327.AddRow(new string[] {
+                table1290.AddRow(new string[] {
                             "SMS",
                             "Appointment reminders",
                             "Twilio/carrier APIs",
                             "Voice call",
                             "Explicit opt-in",
                             "Delivery receipts"});
-                table1327.AddRow(new string[] {
+                table1290.AddRow(new string[] {
                             "Push notifications",
                             "App alerts",
                             "FCM/APNS",
                             "In-app message",
                             "Per category",
                             "Engagement metrics"});
-                table1327.AddRow(new string[] {
+                table1290.AddRow(new string[] {
                             "In-app messages",
                             "System notices",
                             "WebSocket/polling",
                             "Persistent storage",
                             "Always on",
                             "Read tracking"});
-                table1327.AddRow(new string[] {
+                table1290.AddRow(new string[] {
                             "Voice calls",
                             "Urgent only",
                             "Automated calling",
                             "Multiple numbers",
                             "Emergency only",
                             "Call completion"});
-                table1327.AddRow(new string[] {
+                table1290.AddRow(new string[] {
                             "Slack/Teams",
                             "Team notifications",
                             "Webhooks/bots",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Channel subscription",
                             "Interaction tracking"});
 #line 122
-    testRunner.When("implementing notifications:", ((string)(null)), table1327, "When ");
+    testRunner.When("implementing notifications:", ((string)(null)), table1290, "When ");
 #line hidden
 #line 130
     testRunner.Then("notifications should reach users reliably", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 139
     testRunner.And("PHI requires special handling", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1328 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1291 = new TechTalk.SpecFlow.Table(new string[] {
                             "Platform",
                             "Integration Type",
                             "Security Model",
                             "Collaboration Features",
                             "Access Control",
                             "Versioning"});
-                table1328.AddRow(new string[] {
+                table1291.AddRow(new string[] {
                             "Google Workspace",
                             "Drive API",
                             "Team drives",
                             "Real-time editing",
                             "Granular permissions",
                             "Automatic"});
-                table1328.AddRow(new string[] {
+                table1291.AddRow(new string[] {
                             "Microsoft 365",
                             "SharePoint API",
                             "Sensitivity labels",
                             "Co-authoring",
                             "Conditional access",
                             "Check-in/out"});
-                table1328.AddRow(new string[] {
+                table1291.AddRow(new string[] {
                             "Box Healthcare",
                             "Box API",
                             "HIPAA compliant",
                             "Comments, tasks",
                             "Watermarking",
                             "Unlimited"});
-                table1328.AddRow(new string[] {
+                table1291.AddRow(new string[] {
                             "Dropbox Business",
                             "Dropbox API",
                             "Smart Sync",
                             "File requests",
                             "Link expiration",
                             "180 days"});
-                table1328.AddRow(new string[] {
+                table1291.AddRow(new string[] {
                             "Internal storage",
                             "Native integration",
                             "Encrypted storage",
                             "Locking mechanism",
                             "Role-based",
                             "Full history"});
-                table1328.AddRow(new string[] {
+                table1291.AddRow(new string[] {
                             "Adobe Document Cloud",
                             "PDF Services API",
                             "Certificate security",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Digital signatures",
                             "Audit trail"});
 #line 140
-    testRunner.When("implementing document collaboration:", ((string)(null)), table1328, "When ");
+    testRunner.When("implementing document collaboration:", ((string)(null)), table1291, "When ");
 #line hidden
 #line 148
     testRunner.Then("document collaboration should be secure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 157
     testRunner.And("integration reduces duplicate entry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1329 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1292 = new TechTalk.SpecFlow.Table(new string[] {
                             "CRM Platform",
                             "Sync Strategy",
                             "Data Mapping",
                             "Conflict Resolution",
                             "Privacy Controls",
                             "Automation"});
-                table1329.AddRow(new string[] {
+                table1292.AddRow(new string[] {
                             "Salesforce Health Cloud",
                             "Bidirectional sync",
                             "Custom objects",
                             "CRM as master",
                             "Shield encryption",
                             "Workflow rules"});
-                table1329.AddRow(new string[] {
+                table1292.AddRow(new string[] {
                             "HubSpot",
                             "API integration",
                             "Contact properties",
                             "Last modified wins",
                             "GDPR tools",
                             "Marketing automation"});
-                table1329.AddRow(new string[] {
+                table1292.AddRow(new string[] {
                             "Microsoft Dynamics",
                             "Common Data Service",
                             "Entity mapping",
                             "Merge rules",
                             "Field security",
                             "Power Automate"});
-                table1329.AddRow(new string[] {
+                table1292.AddRow(new string[] {
                             "Pipedrive",
                             "REST API",
                             "Custom fields",
                             "Manual review",
                             "Access control",
                             "Automations"});
-                table1329.AddRow(new string[] {
+                table1292.AddRow(new string[] {
                             "Simple Practice",
                             "Native integration",
                             "Patient records",
                             "Practice management leads",
                             "HIPAA compliant",
                             "Appointment triggers"});
-                table1329.AddRow(new string[] {
+                table1292.AddRow(new string[] {
                             "Custom CRM",
                             "Webhook-based",
                             "Flexible mapping",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "API filtering",
                             "Event-driven"});
 #line 158
-    testRunner.When("implementing CRM integration:", ((string)(null)), table1329, "When ");
+    testRunner.When("implementing CRM integration:", ((string)(null)), table1292, "When ");
 #line hidden
 #line 166
     testRunner.Then("contacts should sync seamlessly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 175
     testRunner.And("knowledge sharing improves outcomes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1330 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1293 = new TechTalk.SpecFlow.Table(new string[] {
                             "Tool Type",
                             "Platform Choice",
                             "Content Types",
                             "Access Model",
                             "Search Capability",
                             "Engagement"});
-                table1330.AddRow(new string[] {
+                table1293.AddRow(new string[] {
                             "Intranet",
                             "SharePoint/Confluence",
                             "Policies, news",
                             "SSO authentication",
                             "Full-text search",
                             "Comments, likes"});
-                table1330.AddRow(new string[] {
+                table1293.AddRow(new string[] {
                             "Knowledge base",
                             "Notion/Guru",
                             "Best practices, FAQs",
                             "Role-based",
                             "AI-powered",
                             "Verification status"});
-                table1330.AddRow(new string[] {
+                table1293.AddRow(new string[] {
                             "Discussion forums",
                             "Discourse/Flarum",
                             "Clinical discussions",
                             "Moderated access",
                             "Tag-based",
                             "Threading, voting"});
-                table1330.AddRow(new string[] {
+                table1293.AddRow(new string[] {
                             "Announcement system",
                             "Custom/Slack",
                             "Important updates",
                             "Broadcast only",
                             "Archived",
                             "Read confirmations"});
-                table1330.AddRow(new string[] {
+                table1293.AddRow(new string[] {
                             "Suggestion box",
                             "Forms/platform",
                             "Improvement ideas",
                             "Anonymous option",
                             "Categorized",
                             "Status tracking"});
-                table1330.AddRow(new string[] {
+                table1293.AddRow(new string[] {
                             "Wiki",
                             "MediaWiki/Confluence",
                             "Documentation",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Category search",
                             "Collaborative editing"});
 #line 176
-    testRunner.When("implementing internal tools:", ((string)(null)), table1330, "When ");
+    testRunner.When("implementing internal tools:", ((string)(null)), table1293, "When ");
 #line hidden
 #line 184
     testRunner.Then("internal communication should be effective", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 193
     testRunner.And("communication must work on-the-go", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1331 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1294 = new TechTalk.SpecFlow.Table(new string[] {
                             "Feature",
                             "iOS Implementation",
                             "Android Implementation",
                             "Cross-Platform",
                             "Offline Support",
                             "Battery Impact"});
-                table1331.AddRow(new string[] {
+                table1294.AddRow(new string[] {
                             "Push notifications",
                             "APNS",
                             "FCM",
                             "Unified API",
                             "Queue when offline",
                             "Optimized delivery"});
-                table1331.AddRow(new string[] {
+                table1294.AddRow(new string[] {
                             "In-app messaging",
                             "Native SDK",
                             "Native SDK",
                             "React Native",
                             "Local storage",
                             "Efficient polling"});
-                table1331.AddRow(new string[] {
+                table1294.AddRow(new string[] {
                             "Voice calling",
                             "CallKit",
                             "ConnectionService",
                             "WebRTC",
                             "Voicemail",
                             "Background efficiency"});
-                table1331.AddRow(new string[] {
+                table1294.AddRow(new string[] {
                             "Video calling",
                             "ReplayKit",
                             "Media projection",
                             "Platform bridges",
                             "Not supported",
                             "Hardware acceleration"});
-                table1331.AddRow(new string[] {
+                table1294.AddRow(new string[] {
                             "File sharing",
                             "Share extensions",
                             "Intent filters",
                             "Universal links",
                             "Sync when online",
                             "Progressive upload"});
-                table1331.AddRow(new string[] {
+                table1294.AddRow(new string[] {
                             "Quick replies",
                             "Notification actions",
                             "Direct reply",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Cached responses",
                             "Minimal wake"});
 #line 194
-    testRunner.When("implementing mobile communication:", ((string)(null)), table1331, "When ");
+    testRunner.When("implementing mobile communication:", ((string)(null)), table1294, "When ");
 #line hidden
 #line 202
     testRunner.Then("mobile communication should be native-feeling", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 211
     testRunner.And("patterns reveal optimization opportunities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1332 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1295 = new TechTalk.SpecFlow.Table(new string[] {
                             "Metric Category",
                             "Data Points",
                             "Analysis Method",
                             "Insights Generated",
                             "Actions Enabled",
                             "Privacy"});
-                table1332.AddRow(new string[] {
+                table1295.AddRow(new string[] {
                             "Response times",
                             "Message timestamps",
                             "Statistical analysis",
                             "Average response time",
                             "SLA monitoring",
                             "Anonymized"});
-                table1332.AddRow(new string[] {
+                table1295.AddRow(new string[] {
                             "Channel usage",
                             "Platform metrics",
                             "Usage patterns",
                             "Preferred channels",
                             "Resource allocation",
                             "Aggregated"});
-                table1332.AddRow(new string[] {
+                table1295.AddRow(new string[] {
                             "Message volume",
                             "Count by type",
                             "Trend analysis",
                             "Peak times",
                             "Staffing optimization",
                             "No content"});
-                table1332.AddRow(new string[] {
+                table1295.AddRow(new string[] {
                             "Engagement rates",
                             "Read/response rates",
                             "Cohort analysis",
                             "Effectiveness",
                             "Message optimization",
                             "User-level opt-in"});
-                table1332.AddRow(new string[] {
+                table1295.AddRow(new string[] {
                             "Meeting analytics",
                             "Duration, attendance",
                             "Participation metrics",
                             "Meeting efficiency",
                             "Schedule optimization",
                             "Consent required"});
-                table1332.AddRow(new string[] {
+                table1295.AddRow(new string[] {
                             "Collaboration health",
                             "Team interactions",
                             "Network analysis",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Team building",
                             "Team-level only"});
 #line 212
-    testRunner.When("implementing analytics:", ((string)(null)), table1332, "When ");
+    testRunner.When("implementing analytics:", ((string)(null)), table1295, "When ");
 #line hidden
 #line 220
     testRunner.Then("analytics should reveal patterns", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 229
     testRunner.And("compliance must be maintained everywhere", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1333 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1296 = new TechTalk.SpecFlow.Table(new string[] {
                             "Compliance Area",
                             "Requirements",
                             "Implementation",
                             "Monitoring",
                             "Enforcement",
                             "Documentation"});
-                table1333.AddRow(new string[] {
+                table1296.AddRow(new string[] {
                             "HIPAA",
                             "PHI protection",
                             "Encryption, BAAs",
                             "Automated scanning",
                             "Access controls",
                             "Audit logs"});
-                table1333.AddRow(new string[] {
+                table1296.AddRow(new string[] {
                             "Retention",
                             "7-year minimum",
                             "Automated archival",
                             "Retention reports",
                             "Legal holds",
                             "Compliance certificates"});
-                table1333.AddRow(new string[] {
+                table1296.AddRow(new string[] {
                             "Consent",
                             "Documented consent",
                             "Consent management",
                             "Consent tracking",
                             "Communication blocks",
                             "Consent records"});
-                table1333.AddRow(new string[] {
+                table1296.AddRow(new string[] {
                             "International",
                             "GDPR, others",
                             "Data localization",
                             "Cross-border monitoring",
                             "Geographic restrictions",
                             "Privacy assessments"});
-                table1333.AddRow(new string[] {
+                table1296.AddRow(new string[] {
                             "Accessibility",
                             "ADA compliance",
                             "Multi-format delivery",
                             "Accessibility testing",
                             "Alternative formats",
                             "Compliance reports"});
-                table1333.AddRow(new string[] {
+                table1296.AddRow(new string[] {
                             "Ethics",
                             "Professional standards",
                             "Content filtering",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Violation handling",
                             "Training records"});
 #line 230
-    testRunner.When("implementing governance:", ((string)(null)), table1333, "When ");
+    testRunner.When("implementing governance:", ((string)(null)), table1296, "When ");
 #line hidden
 #line 238
     testRunner.Then("compliance should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 247
     testRunner.And("testing must cover all scenarios", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1334 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1297 = new TechTalk.SpecFlow.Table(new string[] {
                             "Test Type",
                             "Platforms Tested",
                             "Test Scenarios",
                             "Success Criteria",
                             "Automation",
                             "Frequency"});
-                table1334.AddRow(new string[] {
+                table1297.AddRow(new string[] {
                             "Functional",
                             "All integrated",
                             "Message delivery, sync",
                             "100% feature coverage",
                             "CI/CD pipeline",
                             "Per deployment"});
-                table1334.AddRow(new string[] {
+                table1297.AddRow(new string[] {
                             "Performance",
                             "High-volume platforms",
                             "Load testing, latency",
                             "<100ms overhead",
                             "Load scripts",
                             "Weekly"});
-                table1334.AddRow(new string[] {
+                table1297.AddRow(new string[] {
                             "Security",
                             "All platforms",
                             "Penetration testing",
                             "No vulnerabilities",
                             "Security scanning",
                             "Monthly"});
-                table1334.AddRow(new string[] {
+                table1297.AddRow(new string[] {
                             "Failover",
                             "Critical platforms",
                             "Service disruption",
                             "Graceful degradation",
                             "Chaos testing",
                             "Quarterly"});
-                table1334.AddRow(new string[] {
+                table1297.AddRow(new string[] {
                             "Compatibility",
                             "Version updates",
                             "API changes",
                             "Backward compatible",
                             "Version testing",
                             "Per update"});
-                table1334.AddRow(new string[] {
+                table1297.AddRow(new string[] {
                             "End-to-end",
                             "Complete workflows",
                             "User journeys",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Automated + manual",
                             "Bi-weekly"});
 #line 248
-    testRunner.When("testing integrations:", ((string)(null)), table1334, "When ");
+    testRunner.When("testing integrations:", ((string)(null)), table1297, "When ");
 #line hidden
 #line 256
     testRunner.Then("testing should ensure reliability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 264
     testRunner.And("flexibility enables quick adoption", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1335 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1298 = new TechTalk.SpecFlow.Table(new string[] {
                             "Platform Type",
                             "Timeline",
                             "Preparation Needed",
                             "Integration Approach",
                             "Expected Impact",
                             "Investment"});
-                table1335.AddRow(new string[] {
+                table1298.AddRow(new string[] {
                             "AR/VR meetings",
                             "2-3 years",
                             "3D avatar systems",
                             "SDK evaluation",
                             "Immersive therapy",
                             "Research phase"});
-                table1335.AddRow(new string[] {
+                table1298.AddRow(new string[] {
                             "AI assistants",
                             "1-2 years",
                             "Voice interface design",
                             "API standards",
                             "Automated scheduling",
                             "Pilot ready"});
-                table1335.AddRow(new string[] {
+                table1298.AddRow(new string[] {
                             "Blockchain messaging",
                             "3-5 years",
                             "Decentralized architecture",
                             "Protocol research",
                             "Verifiable communications",
                             "Monitoring only"});
-                table1335.AddRow(new string[] {
+                table1298.AddRow(new string[] {
                             "Neural interfaces",
                             "10+ years",
                             "Accessibility focus",
                             "Universal design",
                             "Direct communication",
                             "Concept only"});
-                table1335.AddRow(new string[] {
+                table1298.AddRow(new string[] {
                             "Holographic calls",
                             "5-7 years",
                             "Bandwidth planning",
                             "Platform agnostic",
                             "Presence therapy",
                             "Early tracking"});
-                table1335.AddRow(new string[] {
+                table1298.AddRow(new string[] {
                             "Quantum communication",
                             "15+ years",
                             "Security implications",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Unbreakable encryption",
                             "Academic only"});
 #line 265
-    testRunner.When("preparing for new platforms:", ((string)(null)), table1335, "When ");
+    testRunner.When("preparing for new platforms:", ((string)(null)), table1298, "When ");
 #line hidden
 #line 273
     testRunner.Then("emerging platforms should be monitored", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

@@ -55,7 +55,7 @@ public class SpecializedStepDefinitions : BaseStepDefinitions
         var studentId = GetFromContext<string>("CurrentStudentId") ?? "test-student";
         var json = TableToJson(preferences);
         var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
-        LastResponse = await Client.PostAsync($"/api/pecs/student/{studentId}/preferences", content);
+        SetLastResponse(await Client.PostAsync($"/api/pecs/student/{studentId}/preferences", content));
     }
     [Then(@"the system should generate:")]
     public async Task ThenTheSystemShouldGenerate(Table expectedMaterials)

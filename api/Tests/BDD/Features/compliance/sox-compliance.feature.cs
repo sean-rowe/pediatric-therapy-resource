@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 17
     testRunner.And("marketplace transactions affect financial statements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table778 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table741 = new TechTalk.SpecFlow.Table(new string[] {
                             "Control Area",
                             "Control Objective",
                             "Control Activity",
                             "Testing Method",
                             "Documentation",
                             "Review Frequency"});
-                table778.AddRow(new string[] {
+                table741.AddRow(new string[] {
                             "Revenue recognition",
                             "Accurate revenue recording",
                             "Automated transaction matching",
                             "Transaction sampling",
                             "Revenue policy",
                             "Monthly close"});
-                table778.AddRow(new string[] {
+                table741.AddRow(new string[] {
                             "Marketplace fees",
                             "Correct fee calculation",
                             "System-calculated fees",
                             "Recalculation testing",
                             "Fee schedule docs",
                             "Quarterly review"});
-                table778.AddRow(new string[] {
+                table741.AddRow(new string[] {
                             "Seller payouts",
                             "Accurate disbursements",
                             "Reconciliation controls",
                             "Payout verification",
                             "Payout procedures",
                             "Daily reconciliation"});
-                table778.AddRow(new string[] {
+                table741.AddRow(new string[] {
                             "Refund processing",
                             "Valid refund authorization",
                             "Approval workflows",
                             "Refund audit",
                             "Refund policy",
                             "Weekly review"});
-                table778.AddRow(new string[] {
+                table741.AddRow(new string[] {
                             "Commission tracking",
                             "Proper commission allocation",
                             "Automated splits",
                             "Commission testing",
                             "Commission matrix",
                             "Monthly validation"});
-                table778.AddRow(new string[] {
+                table741.AddRow(new string[] {
                             "Financial close",
                             "Timely accurate reporting",
                             "Close checklist",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Close calendar",
                             "Monthly execution"});
 #line 18
-    testRunner.When("implementing internal controls:", ((string)(null)), table778, "When ");
+    testRunner.When("implementing internal controls:", ((string)(null)), table741, "When ");
 #line hidden
 #line 26
     testRunner.Then("internal controls should ensure accuracy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 34
     testRunner.And("conflicting responsibilities must be separated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table779 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table742 = new TechTalk.SpecFlow.Table(new string[] {
                             "Process Area",
                             "Segregated Functions",
                             "Role Restrictions",
                             "Compensating Controls",
                             "Monitoring Method",
                             "Violation Response"});
-                table779.AddRow(new string[] {
+                table742.AddRow(new string[] {
                             "Payment processing",
                             "Initiate vs approve",
                             "Dual approval required",
                             "Audit trail review",
                             "Access monitoring",
                             "Immediate correction"});
-                table779.AddRow(new string[] {
+                table742.AddRow(new string[] {
                             "Seller onboarding",
                             "Setup vs approval",
                             "Separate teams",
                             "Management review",
                             "Onboarding audit",
                             "Access adjustment"});
-                table779.AddRow(new string[] {
+                table742.AddRow(new string[] {
                             "Refund handling",
                             "Request vs authorize",
                             "Role-based limits",
                             "Refund reports",
                             "Exception reporting",
                             "Investigation"});
-                table779.AddRow(new string[] {
+                table742.AddRow(new string[] {
                             "System access",
                             "Grant vs use",
                             "No self-provisioning",
                             "Access reviews",
                             "Privilege monitoring",
                             "Access revocation"});
-                table779.AddRow(new string[] {
+                table742.AddRow(new string[] {
                             "Financial reporting",
                             "Prepare vs review",
                             "Independent review",
                             "Management oversight",
                             "Change tracking",
                             "Process revision"});
-                table779.AddRow(new string[] {
+                table742.AddRow(new string[] {
                             "System changes",
                             "Develop vs deploy",
                             "Change management",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Change audit",
                             "Rollback procedures"});
 #line 35
-    testRunner.When("implementing segregation:", ((string)(null)), table779, "When ");
+    testRunner.When("implementing segregation:", ((string)(null)), table742, "When ");
 #line hidden
 #line 43
     testRunner.Then("duties should be properly segregated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 51
     testRunner.And("assessments must be documented and tested", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table780 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table743 = new TechTalk.SpecFlow.Table(new string[] {
                             "Assessment Component",
                             "Evaluation Method",
                             "Testing Approach",
                             "Deficiency Criteria",
                             "Remediation Process",
                             "Reporting Level"});
-                table780.AddRow(new string[] {
+                table743.AddRow(new string[] {
                             "Control design",
                             "Design effectiveness review",
                             "Walkthrough testing",
                             "Design gaps",
                             "Redesign controls",
                             "Material weakness"});
-                table780.AddRow(new string[] {
+                table743.AddRow(new string[] {
                             "Operating effectiveness",
                             "Control operation testing",
                             "Sample testing",
                             "Operation failures",
                             "Control enhancement",
                             "Significant deficiency"});
-                table780.AddRow(new string[] {
+                table743.AddRow(new string[] {
                             "Documentation quality",
                             "Documentation review",
                             "Completeness check",
                             "Missing documentation",
                             "Documentation update",
                             "Control deficiency"});
-                table780.AddRow(new string[] {
+                table743.AddRow(new string[] {
                             "Risk assessment",
                             "Risk evaluation",
                             "Risk scoring",
                             "Unmitigated risks",
                             "Risk mitigation",
                             "Risk reporting"});
-                table780.AddRow(new string[] {
+                table743.AddRow(new string[] {
                             "Fraud risk",
                             "Fraud risk assessment",
                             "Scenario analysis",
                             "Fraud vulnerabilities",
                             "Anti-fraud controls",
                             "Board reporting"});
-                table780.AddRow(new string[] {
+                table743.AddRow(new string[] {
                             "IT general controls",
                             "ITGC assessment",
                             "System testing",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "IT remediation",
                             "Audit committee"});
 #line 52
-    testRunner.When("conducting management assessment:", ((string)(null)), table780, "When ");
+    testRunner.When("conducting management assessment:", ((string)(null)), table743, "When ");
 #line hidden
 #line 60
     testRunner.Then("assessments should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 68
     testRunner.And("controls must ensure transaction integrity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table781 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table744 = new TechTalk.SpecFlow.Table(new string[] {
                             "Transaction Type",
                             "Control Mechanism",
                             "Validation Process",
                             "Reconciliation Method",
                             "Exception Handling",
                             "Audit Trail"});
-                table781.AddRow(new string[] {
+                table744.AddRow(new string[] {
                             "Seller listings",
                             "Automated pricing validation",
                             "Price reasonableness",
                             "Listing audit",
                             "Price anomaly alerts",
                             "Listing history"});
-                table781.AddRow(new string[] {
+                table744.AddRow(new string[] {
                             "Purchase transactions",
                             "Payment verification",
                             "Payment processor match",
                             "Daily reconciliation",
                             "Failed payment handling",
                             "Transaction log"});
-                table781.AddRow(new string[] {
+                table744.AddRow(new string[] {
                             "Commission calculation",
                             "System-calculated rates",
                             "Rate table validation",
                             "Commission audit",
                             "Calculation exceptions",
                             "Commission trail"});
-                table781.AddRow(new string[] {
+                table744.AddRow(new string[] {
                             "Escrow handling",
                             "Segregated accounts",
                             "Bank reconciliation",
                             "Daily balance verify",
                             "Escrow exceptions",
                             "Fund movement log"});
-                table781.AddRow(new string[] {
+                table744.AddRow(new string[] {
                             "Dispute resolution",
                             "Documented process",
                             "Resolution tracking",
                             "Dispute reconciliation",
                             "Escalation procedures",
                             "Dispute history"});
-                table781.AddRow(new string[] {
+                table744.AddRow(new string[] {
                             "Tax collection",
                             "Automated tax calculation",
                             "Tax table updates",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Tax exceptions",
                             "Tax audit trail"});
 #line 69
-    testRunner.When("implementing marketplace controls:", ((string)(null)), table781, "When ");
+    testRunner.When("implementing marketplace controls:", ((string)(null)), table744, "When ");
 #line hidden
 #line 77
     testRunner.Then("marketplace controls should be robust", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 86
     testRunner.And("system integrity is essential for SOX", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table782 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table745 = new TechTalk.SpecFlow.Table(new string[] {
                             "ITGC Domain",
                             "Control Objective",
                             "Implementation Method",
                             "Testing Protocol",
                             "Evidence Required",
                             "Assessment Frequency"});
-                table782.AddRow(new string[] {
+                table745.AddRow(new string[] {
                             "Access management",
                             "Authorized access only",
                             "Identity management system",
                             "User access reviews",
                             "Access logs",
                             "Quarterly"});
-                table782.AddRow(new string[] {
+                table745.AddRow(new string[] {
                             "Change management",
                             "Controlled changes",
                             "Change advisory board",
                             "Change testing",
                             "Change records",
                             "Monthly"});
-                table782.AddRow(new string[] {
+                table745.AddRow(new string[] {
                             "Operations",
                             "Reliable processing",
                             "Automated monitoring",
                             "Performance testing",
                             "System metrics",
                             "Continuous"});
-                table782.AddRow(new string[] {
+                table745.AddRow(new string[] {
                             "Data backup",
                             "Data recoverability",
                             "Automated backups",
                             "Recovery testing",
                             "Backup logs",
                             "Monthly"});
-                table782.AddRow(new string[] {
+                table745.AddRow(new string[] {
                             "Security",
                             "System protection",
                             "Security controls",
                             "Vulnerability scanning",
                             "Security reports",
                             "Weekly"});
-                table782.AddRow(new string[] {
+                table745.AddRow(new string[] {
                             "Development",
                             "Secure development",
                             "SDLC controls",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Development docs",
                             "Per release"});
 #line 87
-    testRunner.When("implementing IT controls:", ((string)(null)), table782, "When ");
+    testRunner.When("implementing IT controls:", ((string)(null)), table745, "When ");
 #line hidden
 #line 95
     testRunner.Then("IT controls should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 103
     testRunner.And("trails must be tamper-proof and complete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table783 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table746 = new TechTalk.SpecFlow.Table(new string[] {
                             "Audit Element",
                             "Data Captured",
                             "Retention Period",
                             "Protection Method",
                             "Access Control",
                             "Review Process"});
-                table783.AddRow(new string[] {
+                table746.AddRow(new string[] {
                             "User actions",
                             "Who, what, when, where",
                             "7 years",
                             "Immutable logging",
                             "Read-only access",
                             "Monthly review"});
-                table783.AddRow(new string[] {
+                table746.AddRow(new string[] {
                             "Transaction details",
                             "Full transaction data",
                             "7 years",
                             "Cryptographic hash",
                             "Restricted access",
                             "Daily monitoring"});
-                table783.AddRow(new string[] {
+                table746.AddRow(new string[] {
                             "System changes",
                             "Configuration changes",
                             "7 years",
                             "Change logs",
                             "Audit team only",
                             "Change review"});
-                table783.AddRow(new string[] {
+                table746.AddRow(new string[] {
                             "Access events",
                             "Login/logout, permissions",
                             "7 years",
                             "Secure storage",
                             "Security team",
                             "Access analysis"});
-                table783.AddRow(new string[] {
+                table746.AddRow(new string[] {
                             "Data modifications",
                             "Before/after values",
                             "7 years",
                             "Database logging",
                             "Controlled access",
                             "Modification review"});
-                table783.AddRow(new string[] {
+                table746.AddRow(new string[] {
                             "Financial adjustments",
                             "Adjustment details",
                             "7 years",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Management only",
                             "Adjustment audit"});
 #line 104
-    testRunner.When("implementing audit trails:", ((string)(null)), table783, "When ");
+    testRunner.When("implementing audit trails:", ((string)(null)), table746, "When ");
 #line hidden
 #line 112
     testRunner.Then("audit trails should capture all activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 120
     testRunner.And("SOX requires fraud risk management", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table784 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table747 = new TechTalk.SpecFlow.Table(new string[] {
                             "Fraud Risk",
                             "Preventive Control",
                             "Detective Control",
                             "Response Protocol",
                             "Monitoring Method",
                             "Effectiveness Measure"});
-                table784.AddRow(new string[] {
+                table747.AddRow(new string[] {
                             "Fake listings",
                             "Listing verification",
                             "Anomaly detection",
                             "Listing removal",
                             "ML-based screening",
                             "Fraud rate reduction"});
-                table784.AddRow(new string[] {
+                table747.AddRow(new string[] {
                             "Payment fraud",
                             "Payment validation",
                             "Transaction monitoring",
                             "Payment blocking",
                             "Real-time analysis",
                             "Chargeback rates"});
-                table784.AddRow(new string[] {
+                table747.AddRow(new string[] {
                             "Seller fraud",
                             "Identity verification",
                             "Behavior analysis",
                             "Account suspension",
                             "Pattern detection",
                             "Fraud loss metrics"});
-                table784.AddRow(new string[] {
+                table747.AddRow(new string[] {
                             "Review manipulation",
                             "Review authenticity",
                             "Review patterns",
                             "Review removal",
                             "Sentiment analysis",
                             "Review integrity"});
-                table784.AddRow(new string[] {
+                table747.AddRow(new string[] {
                             "Money laundering",
                             "AML controls",
                             "Transaction patterns",
                             "SAR filing",
                             "Transaction monitoring",
                             "Compliance rate"});
-                table784.AddRow(new string[] {
+                table747.AddRow(new string[] {
                             "Internal fraud",
                             "Segregation of duties",
                             "Activity monitoring",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Employee monitoring",
                             "Internal incidents"});
 #line 121
-    testRunner.When("implementing anti-fraud controls:", ((string)(null)), table784, "When ");
+    testRunner.When("implementing anti-fraud controls:", ((string)(null)), table747, "When ");
 #line hidden
 #line 129
     testRunner.Then("fraud controls should be multi-layered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 138
     testRunner.And("testing must be independent and thorough", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table785 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table748 = new TechTalk.SpecFlow.Table(new string[] {
                             "Control Type",
                             "Test Approach",
                             "Sample Size",
                             "Test Frequency",
                             "Pass Criteria",
                             "Remediation Timeline"});
-                table785.AddRow(new string[] {
+                table748.AddRow(new string[] {
                             "Automated controls",
                             "Re-performance",
                             "Statistical sample",
                             "Quarterly",
                             "100% accuracy",
                             "30 days"});
-                table785.AddRow(new string[] {
+                table748.AddRow(new string[] {
                             "Manual controls",
                             "Observation/inquiry",
                             "Risk-based sample",
                             "Monthly",
                             "95% compliance",
                             "60 days"});
-                table785.AddRow(new string[] {
+                table748.AddRow(new string[] {
                             "IT controls",
                             "Technical testing",
                             "Full population",
                             "Continuous",
                             "Zero critical issues",
                             "Immediate"});
-                table785.AddRow(new string[] {
+                table748.AddRow(new string[] {
                             "Management review",
                             "Evidence inspection",
                             "Judgmental sample",
                             "Quarterly",
                             "Documented reviews",
                             "30 days"});
-                table785.AddRow(new string[] {
+                table748.AddRow(new string[] {
                             "Reconciliations",
                             "Re-reconciliation",
                             "Monthly sample",
                             "Monthly",
                             "All items cleared",
                             "Next cycle"});
-                table785.AddRow(new string[] {
+                table748.AddRow(new string[] {
                             "Approvals",
                             "Authorization testing",
                             "Transaction sample",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Proper approvals",
                             "Immediate"});
 #line 139
-    testRunner.When("testing controls:", ((string)(null)), table785, "When ");
+    testRunner.When("testing controls:", ((string)(null)), table748, "When ");
 #line hidden
 #line 147
     testRunner.Then("testing should be risk-based", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 155
     testRunner.And("severity determines response urgency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table786 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table749 = new TechTalk.SpecFlow.Table(new string[] {
                             "Deficiency Type",
                             "Severity Assessment",
                             "Reporting Requirement",
                             "Remediation Timeline",
                             "Validation Method",
                             "Escalation Level"});
-                table786.AddRow(new string[] {
+                table749.AddRow(new string[] {
                             "Material weakness",
                             "Financial impact >5%",
                             "Board + external auditor",
                             "90 days",
                             "Re-testing required",
                             "CEO/CFO"});
-                table786.AddRow(new string[] {
+                table749.AddRow(new string[] {
                             "Significant deficiency",
                             "Potential material impact",
                             "Audit committee",
                             "120 days",
                             "Management testing",
                             "Controller"});
-                table786.AddRow(new string[] {
+                table749.AddRow(new string[] {
                             "Control deficiency",
                             "Limited impact",
                             "Management",
                             "180 days",
                             "Internal validation",
                             "Process owner"});
-                table786.AddRow(new string[] {
+                table749.AddRow(new string[] {
                             "Design deficiency",
                             "Ineffective design",
                             "Process owner",
                             "Next quarter",
                             "Design review",
                             "Department head"});
-                table786.AddRow(new string[] {
+                table749.AddRow(new string[] {
                             "Operating deficiency",
                             "Execution failure",
                             "Immediate supervisor",
                             "30 days",
                             "Operation review",
                             "Team lead"});
-                table786.AddRow(new string[] {
+                table749.AddRow(new string[] {
                             "Documentation gap",
                             "Missing evidence",
                             "Compliance team",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Documentation review",
                             "Compliance manager"});
 #line 156
-    testRunner.When("managing deficiencies:", ((string)(null)), table786, "When ");
+    testRunner.When("managing deficiencies:", ((string)(null)), table749, "When ");
 #line hidden
 #line 164
     testRunner.Then("deficiencies should be properly classified", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 172
     testRunner.And("procedures ensure complete reporting", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table787 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table750 = new TechTalk.SpecFlow.Table(new string[] {
                             "Disclosure Area",
                             "Control Procedure",
                             "Information Gathering",
                             "Review Process",
                             "Approval Level",
                             "Documentation"});
-                table787.AddRow(new string[] {
+                table750.AddRow(new string[] {
                             "Revenue reporting",
                             "Revenue analysis",
                             "System reports",
                             "Multi-level review",
                             "CFO approval",
                             "Revenue package"});
-                table787.AddRow(new string[] {
+                table750.AddRow(new string[] {
                             "Marketplace metrics",
                             "KPI validation",
                             "Automated dashboards",
                             "Metric reconciliation",
                             "Controller approval",
                             "Metric support"});
-                table787.AddRow(new string[] {
+                table750.AddRow(new string[] {
                             "Risk factors",
                             "Risk assessment",
                             "Risk register",
                             "Legal review",
                             "General counsel",
                             "Risk documentation"});
-                table787.AddRow(new string[] {
+                table750.AddRow(new string[] {
                             "Related parties",
                             "Transaction identification",
                             "Relationship mapping",
                             "Compliance review",
                             "Audit committee",
                             "Related party list"});
-                table787.AddRow(new string[] {
+                table750.AddRow(new string[] {
                             "Subsequent events",
                             "Event monitoring",
                             "Event tracking",
                             "Impact assessment",
                             "CFO approval",
                             "Event documentation"});
-                table787.AddRow(new string[] {
+                table750.AddRow(new string[] {
                             "MD&A preparation",
                             "Analysis preparation",
                             "Variance analysis",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "CEO/CFO approval",
                             "Analysis support"});
 #line 173
-    testRunner.When("implementing disclosure controls:", ((string)(null)), table787, "When ");
+    testRunner.When("implementing disclosure controls:", ((string)(null)), table750, "When ");
 #line hidden
 #line 181
     testRunner.Then("disclosure controls should ensure accuracy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 190
     testRunner.And("real-time detection prevents issues", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table788 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table751 = new TechTalk.SpecFlow.Table(new string[] {
                             "Monitoring Area",
                             "Monitoring Method",
                             "Alert Thresholds",
                             "Response Time",
                             "Escalation Path",
                             "Reporting Dashboard"});
-                table788.AddRow(new string[] {
+                table751.AddRow(new string[] {
                             "Transaction anomalies",
                             "Statistical analysis",
                             "3 sigma deviation",
                             "Real-time",
                             "Finance team",
                             "Anomaly dashboard"});
-                table788.AddRow(new string[] {
+                table751.AddRow(new string[] {
                             "Access violations",
                             "Permission monitoring",
                             "Unauthorized access",
                             "Immediate",
                             "Security team",
                             "Access dashboard"});
-                table788.AddRow(new string[] {
+                table751.AddRow(new string[] {
                             "Control failures",
                             "Automated testing",
                             "Any failure",
                             "Within 1 hour",
                             "Process owner",
                             "Control dashboard"});
-                table788.AddRow(new string[] {
+                table751.AddRow(new string[] {
                             "Reconciliation delays",
                             "Timeline tracking",
                             ">24 hour delay",
                             "Daily",
                             "Controller",
                             "Reconciliation dashboard"});
-                table788.AddRow(new string[] {
+                table751.AddRow(new string[] {
                             "Approval bypasses",
                             "Workflow monitoring",
                             "Any bypass",
                             "Immediate",
                             "Compliance",
                             "Approval dashboard"});
-                table788.AddRow(new string[] {
+                table751.AddRow(new string[] {
                             "System changes",
                             "Change detection",
                             "Unauthorized change",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "IT management",
                             "Change dashboard"});
 #line 191
-    testRunner.When("implementing continuous monitoring:", ((string)(null)), table788, "When ");
+    testRunner.When("implementing continuous monitoring:", ((string)(null)), table751, "When ");
 #line hidden
 #line 199
     testRunner.Then("monitoring should be continuous", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 207
     testRunner.And("third-party controls must be validated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table789 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table752 = new TechTalk.SpecFlow.Table(new string[] {
                             "Vendor Type",
                             "SOX Impact",
                             "Required Evidence",
                             "Review Frequency",
                             "Control Testing",
                             "Contract Terms"});
-                table789.AddRow(new string[] {
+                table752.AddRow(new string[] {
                             "Payment processors",
                             "High - revenue impact",
                             "SOC 1 Type II report",
                             "Annual",
                             "Transaction testing",
                             "Audit rights"});
-                table789.AddRow(new string[] {
+                table752.AddRow(new string[] {
                             "Cloud providers",
                             "High - data integrity",
                             "SOC 2 Type II report",
                             "Annual",
                             "Security review",
                             "Compliance clause"});
-                table789.AddRow(new string[] {
+                table752.AddRow(new string[] {
                             "Banking partners",
                             "High - cash management",
                             "Bank confirmations",
                             "Quarterly",
                             "Reconciliation",
                             "Service standards"});
-                table789.AddRow(new string[] {
+                table752.AddRow(new string[] {
                             "Tax services",
                             "Medium - compliance",
                             "Service attestation",
                             "Annual",
                             "Calculation testing",
                             "Accuracy guarantee"});
-                table789.AddRow(new string[] {
+                table752.AddRow(new string[] {
                             "Analytics vendors",
                             "Low - reporting only",
                             "Security assessment",
                             "Annual",
                             "Access review",
                             "Data protection"});
-                table789.AddRow(new string[] {
+                table752.AddRow(new string[] {
                             "Development partners",
                             "Medium - system changes",
                             "Code review rights",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Change testing",
                             "Quality standards"});
 #line 208
-    testRunner.When("managing vendor compliance:", ((string)(null)), table789, "When ");
+    testRunner.When("managing vendor compliance:", ((string)(null)), table752, "When ");
 #line hidden
 #line 216
     testRunner.Then("vendor impacts should be assessed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 224
     testRunner.And("certifications carry personal liability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table790 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table753 = new TechTalk.SpecFlow.Table(new string[] {
                             "Certification Component",
                             "Preparation Activity",
                             "Evidence Required",
                             "Review Level",
                             "Sign-off Process",
                             "Timeline"});
-                table790.AddRow(new string[] {
+                table753.AddRow(new string[] {
                             "Control documentation",
                             "Documentation update",
                             "Complete control matrix",
                             "Internal audit",
                             "Department heads",
                             "Quarterly"});
-                table790.AddRow(new string[] {
+                table753.AddRow(new string[] {
                             "Testing completion",
                             "Test execution",
                             "Test results summary",
                             "External audit",
                             "Process owners",
                             "Before certification"});
-                table790.AddRow(new string[] {
+                table753.AddRow(new string[] {
                             "Deficiency remediation",
                             "Issue resolution",
                             "Remediation evidence",
                             "Management review",
                             "Control owners",
                             "Before quarter-end"});
-                table790.AddRow(new string[] {
+                table753.AddRow(new string[] {
                             "Sub-certifications",
                             "Cascade process",
                             "Department certifications",
                             "Executive review",
                             "Direct reports",
                             "2 weeks before"});
-                table790.AddRow(new string[] {
+                table753.AddRow(new string[] {
                             "Management review",
                             "Control evaluation",
                             "Review documentation",
                             "CEO/CFO review",
                             "Senior management",
                             "1 week before"});
-                table790.AddRow(new string[] {
+                table753.AddRow(new string[] {
                             "External audit",
                             "Audit facilitation",
                             "Audit workpapers",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Audit committee",
                             "Per audit schedule"});
 #line 225
-    testRunner.When("preparing for certification:", ((string)(null)), table790, "When ");
+    testRunner.When("preparing for certification:", ((string)(null)), table753, "When ");
 #line hidden
 #line 233
     testRunner.Then("preparation should be thorough", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 241
     testRunner.And("SOX compliance must adapt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table791 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table754 = new TechTalk.SpecFlow.Table(new string[] {
                             "Risk Type",
                             "Risk Assessment",
                             "Control Response",
                             "Implementation Timeline",
                             "Effectiveness Measure",
                             "Ongoing Monitoring"});
-                table791.AddRow(new string[] {
+                table754.AddRow(new string[] {
                             "Cryptocurrency payments",
                             "Payment risk analysis",
                             "Crypto controls",
                             "6 months",
                             "Transaction accuracy",
                             "Blockchain monitoring"});
-                table791.AddRow(new string[] {
+                table754.AddRow(new string[] {
                             "AI pricing",
                             "Algorithm risk",
                             "AI governance",
                             "3 months",
                             "Pricing integrity",
                             "Algorithm auditing"});
-                table791.AddRow(new string[] {
+                table754.AddRow(new string[] {
                             "Cross-border transactions",
                             "Regulatory risk",
                             "Jurisdiction controls",
                             "9 months",
                             "Compliance rate",
                             "Multi-region monitoring"});
-                table791.AddRow(new string[] {
+                table754.AddRow(new string[] {
                             "Subscription models",
                             "Revenue recognition risk",
                             "Rev rec controls",
                             "3 months",
                             "Revenue accuracy",
                             "Subscription analytics"});
-                table791.AddRow(new string[] {
+                table754.AddRow(new string[] {
                             "Platform economics",
                             "Business model risk",
                             "Economic controls",
                             "Ongoing",
                             "Financial stability",
                             "Economic indicators"});
-                table791.AddRow(new string[] {
+                table754.AddRow(new string[] {
                             "Regulatory changes",
                             "Compliance risk",
                             "Adaptive controls",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Regulatory compliance",
                             "Regulatory monitoring"});
 #line 242
-    testRunner.When("addressing emerging risks:", ((string)(null)), table791, "When ");
+    testRunner.When("addressing emerging risks:", ((string)(null)), table754, "When ");
 #line hidden
 #line 250
     testRunner.Then("emerging risks should be identified", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 258
     testRunner.And("automation reduces compliance costs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table792 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table755 = new TechTalk.SpecFlow.Table(new string[] {
                             "Technology Solution",
                             "Compliance Benefit",
                             "Implementation Approach",
                             "Expected ROI",
                             "Risk Mitigation",
                             "Success Metrics"});
-                table792.AddRow(new string[] {
+                table755.AddRow(new string[] {
                             "GRC platform",
                             "Integrated compliance",
                             "Phased rollout",
                             "40% efficiency gain",
                             "Single source of truth",
                             "Compliance velocity"});
-                table792.AddRow(new string[] {
+                table755.AddRow(new string[] {
                             "Continuous auditing",
                             "Real-time assurance",
                             "Risk-based deployment",
                             "60% audit reduction",
                             "Continuous coverage",
                             "Issue prevention"});
-                table792.AddRow(new string[] {
+                table755.AddRow(new string[] {
                             "RPA controls",
                             "Automated testing",
                             "High-volume processes",
                             "80% time savings",
                             "Consistent execution",
                             "Error reduction"});
-                table792.AddRow(new string[] {
+                table755.AddRow(new string[] {
                             "AI monitoring",
                             "Anomaly detection",
                             "Machine learning",
                             "90% detection rate",
                             "Predictive insights",
                             "Fraud prevention"});
-                table792.AddRow(new string[] {
+                table755.AddRow(new string[] {
                             "Blockchain audit",
                             "Immutable audit trail",
                             "Transaction logging",
                             "100% trail integrity",
                             "Tamper-proof logs",
                             "Audit efficiency"});
-                table792.AddRow(new string[] {
+                table755.AddRow(new string[] {
                             "Analytics platform",
                             "Control insights",
                             "Dashboard deployment",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Data-driven decisions",
                             "Decision quality"});
 #line 259
-    testRunner.When("implementing SOX technology:", ((string)(null)), table792, "When ");
+    testRunner.When("implementing SOX technology:", ((string)(null)), table755, "When ");
 #line hidden
 #line 267
     testRunner.Then("technology should enhance compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1744,49 +1744,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 274
     testRunner.Given("SOX compliance requires ongoing investment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table793 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table756 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table793.AddRow(new string[] {
+                table756.AddRow(new string[] {
                             "Regulatory changes",
                             "Evolving requirements",
                             "Adaptive framework",
                             "Compliance expertise",
                             "Maintained compliance",
                             "Regulatory readiness"});
-                table793.AddRow(new string[] {
+                table756.AddRow(new string[] {
                             "Business growth",
                             "Scaling complexity",
                             "Scalable controls",
                             "System investment",
                             "Control effectiveness",
                             "Growth compatibility"});
-                table793.AddRow(new string[] {
+                table756.AddRow(new string[] {
                             "Technology evolution",
                             "Platform changes",
                             "Technology governance",
                             "IT resources",
                             "System reliability",
                             "Tech adaptability"});
-                table793.AddRow(new string[] {
+                table756.AddRow(new string[] {
                             "Cost management",
                             "Compliance burden",
                             "Efficiency focus",
                             "Automation tools",
                             "Cost per control",
                             "Cost optimization"});
-                table793.AddRow(new string[] {
+                table756.AddRow(new string[] {
                             "Talent retention",
                             "Expertise scarcity",
                             "Knowledge management",
                             "Training programs",
                             "Team competency",
                             "Skill sustainability"});
-                table793.AddRow(new string[] {
+                table756.AddRow(new string[] {
                             "Stakeholder trust",
                             "Market confidence",
                             "Transparency",
@@ -1794,7 +1794,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Audit opinions",
                             "Trust maintenance"});
 #line 275
-    testRunner.When("planning sustainable compliance:", ((string)(null)), table793, "When ");
+    testRunner.When("planning sustainable compliance:", ((string)(null)), table756, "When ");
 #line hidden
 #line 283
     testRunner.Then("sustainability should be planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

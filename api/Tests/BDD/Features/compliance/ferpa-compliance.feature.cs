@@ -141,49 +141,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 17
     testRunner.And("privacy requirements are strictly defined", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table710 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table673 = new TechTalk.SpecFlow.Table(new string[] {
                             "Record Type",
                             "Protection Method",
                             "Access Control",
                             "Consent Requirement",
                             "Retention Policy",
                             "Audit Mechanism"});
-                table710.AddRow(new string[] {
+                table673.AddRow(new string[] {
                             "Academic records",
                             "Encrypted storage",
                             "Role-based access",
                             "Written consent required",
                             "7-year retention",
                             "Complete audit trail"});
-                table710.AddRow(new string[] {
+                table673.AddRow(new string[] {
                             "IEP documents",
                             "Secure document management",
                             "Need-to-know basis",
                             "Parent consent required",
                             "Active + 3 years",
                             "Document access logging"});
-                table710.AddRow(new string[] {
+                table673.AddRow(new string[] {
                             "Assessment data",
                             "Protected database storage",
                             "Authorized personnel only",
                             "Consent for sharing",
                             "5-year retention",
                             "Assessment access audit"});
-                table710.AddRow(new string[] {
+                table673.AddRow(new string[] {
                             "Therapy notes",
                             "Encrypted note system",
                             "Therapist and supervisors",
                             "Parent consent for others",
                             "Active + 5 years",
                             "Note access tracking"});
-                table710.AddRow(new string[] {
+                table673.AddRow(new string[] {
                             "Progress reports",
                             "Secure report storage",
                             "Educational team access",
                             "Consent for external",
                             "3-year retention",
                             "Report access logging"});
-                table710.AddRow(new string[] {
+                table673.AddRow(new string[] {
                             "Attendance records",
                             "Protected attendance system",
                             "School officials only",
@@ -191,7 +191,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Current + 3 years",
                             "Attendance audit trail"});
 #line 18
-    testRunner.When("implementing educational records protection:", ((string)(null)), table710, "When ");
+    testRunner.When("implementing educational records protection:", ((string)(null)), table673, "When ");
 #line hidden
 #line 26
     testRunner.Then("educational records should be comprehensively protected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -248,49 +248,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 34
     testRunner.And("consent must be obtained for disclosures", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table711 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table674 = new TechTalk.SpecFlow.Table(new string[] {
                             "Parental Right",
                             "Implementation Process",
                             "Verification Method",
                             "Response Timeline",
                             "Documentation",
                             "System Support"});
-                table711.AddRow(new string[] {
+                table674.AddRow(new string[] {
                             "Inspect records",
                             "Parent portal access",
                             "Identity verification",
                             "45 days maximum",
                             "Access log documentation",
                             "Secure parent portal"});
-                table711.AddRow(new string[] {
+                table674.AddRow(new string[] {
                             "Review records",
                             "Record review process",
                             "Parent identity confirmation",
                             "Within 45 days",
                             "Review documentation",
                             "Review tracking system"});
-                table711.AddRow(new string[] {
+                table674.AddRow(new string[] {
                             "Request amendments",
                             "Amendment request system",
                             "Written request verification",
                             "Reasonable time",
                             "Amendment documentation",
                             "Amendment workflow"});
-                table711.AddRow(new string[] {
+                table674.AddRow(new string[] {
                             "Consent to disclosure",
                             "Digital consent forms",
                             "Electronic signature",
                             "Prior to disclosure",
                             "Consent record retention",
                             "Consent management system"});
-                table711.AddRow(new string[] {
+                table674.AddRow(new string[] {
                             "Receive notifications",
                             "Automated notifications",
                             "Contact verification",
                             "Annual notification",
                             "Notification documentation",
                             "Notification system"});
-                table711.AddRow(new string[] {
+                table674.AddRow(new string[] {
                             "File complaints",
                             "Complaint process",
                             "Complaint acknowledgment",
@@ -298,7 +298,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Complaint documentation",
                             "Complaint tracking"});
 #line 35
-    testRunner.When("managing parental rights:", ((string)(null)), table711, "When ");
+    testRunner.When("managing parental rights:", ((string)(null)), table674, "When ");
 #line hidden
 #line 43
     testRunner.Then("parental rights should be fully supported", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -355,49 +355,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 51
     testRunner.And("policies must define what constitutes directory information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table712 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table675 = new TechTalk.SpecFlow.Table(new string[] {
                             "Information Category",
                             "Directory Designation",
                             "Opt-out Process",
                             "Disclosure Restrictions",
                             "Annual Review",
                             "Policy Updates"});
-                table712.AddRow(new string[] {
+                table675.AddRow(new string[] {
                             "Student name",
                             "Designated as directory",
                             "Parent opt-out available",
                             "No commercial use",
                             "Annual designation review",
                             "Policy update process"});
-                table712.AddRow(new string[] {
+                table675.AddRow(new string[] {
                             "Grade level",
                             "Designated as directory",
                             "Written opt-out request",
                             "Educational purposes only",
                             "Annual review required",
                             "Parent notification"});
-                table712.AddRow(new string[] {
+                table675.AddRow(new string[] {
                             "Enrollment status",
                             "Designated as directory",
                             "Online opt-out option",
                             "Verification purposes",
                             "Annual confirmation",
                             "System updates"});
-                table712.AddRow(new string[] {
+                table675.AddRow(new string[] {
                             "Participation records",
                             "Limited directory info",
                             "Specific opt-out",
                             "School activities only",
                             "Annual assessment",
                             "Policy refinement"});
-                table712.AddRow(new string[] {
+                table675.AddRow(new string[] {
                             "Awards/honors",
                             "Designated as directory",
                             "Opt-out per category",
                             "Recognition purposes",
                             "Annual review cycle",
                             "Update notifications"});
-                table712.AddRow(new string[] {
+                table675.AddRow(new string[] {
                             "Photographs",
                             "Conditional directory",
                             "Explicit opt-out required",
@@ -405,7 +405,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Annual consent renewal",
                             "Media policy updates"});
 #line 52
-    testRunner.When("managing directory information:", ((string)(null)), table712, "When ");
+    testRunner.When("managing directory information:", ((string)(null)), table675, "When ");
 #line hidden
 #line 60
     testRunner.Then("directory information should be clearly defined", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -462,49 +462,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 68
     testRunner.And("legitimate educational interest must be established", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table713 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table676 = new TechTalk.SpecFlow.Table(new string[] {
                             "Official Role",
                             "Legitimate Interest Criteria",
                             "Access Scope",
                             "Verification Process",
                             "Training Requirement",
                             "Access Review"});
-                table713.AddRow(new string[] {
+                table676.AddRow(new string[] {
                             "Teachers",
                             "Direct instruction responsibility",
                             "Current students only",
                             "Employment verification",
                             "FERPA training required",
                             "Annual access review"});
-                table713.AddRow(new string[] {
+                table676.AddRow(new string[] {
                             "Therapists",
                             "Service provision responsibility",
                             "Assigned students",
                             "License verification",
                             "FERPA certification",
                             "Quarterly review"});
-                table713.AddRow(new string[] {
+                table676.AddRow(new string[] {
                             "Administrators",
                             "Supervisory responsibility",
                             "School-wide access",
                             "Role verification",
                             "Administrative training",
                             "Semi-annual review"});
-                table713.AddRow(new string[] {
+                table676.AddRow(new string[] {
                             "Support staff",
                             "Specific job functions",
                             "Limited access",
                             "Job description review",
                             "Role-specific training",
                             "Quarterly review"});
-                table713.AddRow(new string[] {
+                table676.AddRow(new string[] {
                             "Contractors",
                             "Contracted services",
                             "Service-specific access",
                             "Contract verification",
                             "Contractor training",
                             "Monthly review"});
-                table713.AddRow(new string[] {
+                table676.AddRow(new string[] {
                             "Volunteers",
                             "Approved volunteer roles",
                             "Supervised access only",
@@ -512,7 +512,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Volunteer training",
                             "Per-event review"});
 #line 69
-    testRunner.When("defining school officials:", ((string)(null)), table713, "When ");
+    testRunner.When("defining school officials:", ((string)(null)), table676, "When ");
 #line hidden
 #line 77
     testRunner.Then("school official definitions should be clear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -569,49 +569,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 86
     testRunner.And("service providers act as school officials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table714 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table677 = new TechTalk.SpecFlow.Table(new string[] {
                             "Provider Type",
                             "FERPA Requirements",
                             "Contract Terms",
                             "Data Handling",
                             "Audit Rights",
                             "Termination Procedures"});
-                table714.AddRow(new string[] {
+                table677.AddRow(new string[] {
                             "Cloud storage",
                             "Full FERPA compliance",
                             "Data protection terms",
                             "Encrypted storage only",
                             "Annual audit rights",
                             "Data return/deletion"});
-                table714.AddRow(new string[] {
+                table677.AddRow(new string[] {
                             "Analytics services",
                             "Limited data access",
                             "Purpose limitation",
                             "Aggregated data only",
                             "Quarterly audit rights",
                             "Complete data removal"});
-                table714.AddRow(new string[] {
+                table677.AddRow(new string[] {
                             "Communication platforms",
                             "Message protection",
                             "Privacy terms",
                             "Secure transmission",
                             "Access audit rights",
                             "Export capabilities"});
-                table714.AddRow(new string[] {
+                table677.AddRow(new string[] {
                             "Assessment tools",
                             "Student data protection",
                             "FERPA addendum required",
                             "Minimal data collection",
                             "Assessment audit rights",
                             "Data portability"});
-                table714.AddRow(new string[] {
+                table677.AddRow(new string[] {
                             "Integration partners",
                             "Data sharing limits",
                             "Explicit permissions",
                             "Need-to-know basis",
                             "Integration audit rights",
                             "Disconnection process"});
-                table714.AddRow(new string[] {
+                table677.AddRow(new string[] {
                             "AI services",
                             "Model training restrictions",
                             "No persistent storage",
@@ -619,7 +619,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "AI audit rights",
                             "Model data deletion"});
 #line 87
-    testRunner.When("managing service providers:", ((string)(null)), table714, "When ");
+    testRunner.When("managing service providers:", ((string)(null)), table677, "When ");
 #line hidden
 #line 95
     testRunner.Then("service providers should meet FERPA requirements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -676,49 +676,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 103
     testRunner.And("secure destruction prevents unauthorized access", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table715 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table678 = new TechTalk.SpecFlow.Table(new string[] {
                             "Record Category",
                             "Retention Period",
                             "Destruction Method",
                             "Verification Process",
                             "Legal Hold Exceptions",
                             "Documentation"});
-                table715.AddRow(new string[] {
+                table678.AddRow(new string[] {
                             "Permanent records",
                             "Indefinite retention",
                             "Not applicable",
                             "Annual verification",
                             "Litigation holds",
                             "Retention documentation"});
-                table715.AddRow(new string[] {
+                table678.AddRow(new string[] {
                             "IEP records",
                             "3 years post-graduation",
                             "Secure shredding/wiping",
                             "Destruction certification",
                             "Legal hold compliance",
                             "Destruction records"});
-                table715.AddRow(new string[] {
+                table678.AddRow(new string[] {
                             "Therapy session notes",
                             "7 years minimum",
                             "Encrypted deletion",
                             "Deletion verification",
                             "Hold notifications",
                             "Deletion logs"});
-                table715.AddRow(new string[] {
+                table678.AddRow(new string[] {
                             "Assessment results",
                             "5 years post-assessment",
                             "Secure data wiping",
                             "Wiping certification",
                             "Assessment disputes",
                             "Destruction audit"});
-                table715.AddRow(new string[] {
+                table678.AddRow(new string[] {
                             "Communication logs",
                             "3 years retention",
                             "Automated purging",
                             "Purge verification",
                             "Investigation holds",
                             "Purge documentation"});
-                table715.AddRow(new string[] {
+                table678.AddRow(new string[] {
                             "Access logs",
                             "7 years retention",
                             "Archived deletion",
@@ -726,7 +726,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Compliance reviews",
                             "Archive documentation"});
 #line 104
-    testRunner.When("implementing retention policies:", ((string)(null)), table715, "When ");
+    testRunner.When("implementing retention policies:", ((string)(null)), table678, "When ");
 #line hidden
 #line 112
     testRunner.Then("retention periods should be enforced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -783,49 +783,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 120
     testRunner.And("age-appropriate access must be implemented", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table716 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table679 = new TechTalk.SpecFlow.Table(new string[] {
                             "Age Group",
                             "Access Rights",
                             "Parental Rights",
                             "Transition Process",
                             "Privacy Controls",
                             "Special Considerations"});
-                table716.AddRow(new string[] {
+                table679.AddRow(new string[] {
                             "Elementary (K-5)",
                             "No direct access",
                             "Full parent access",
                             "Not applicable",
                             "Parent-controlled",
                             "Simplified privacy"});
-                table716.AddRow(new string[] {
+                table679.AddRow(new string[] {
                             "Middle school (6-8)",
                             "Limited supervised access",
                             "Primary parent access",
                             "Gradual introduction",
                             "Hybrid controls",
                             "Developmental appropriate"});
-                table716.AddRow(new string[] {
+                table679.AddRow(new string[] {
                             "High school (9-12)",
                             "Supervised access rights",
                             "Shared access rights",
                             "Increasing autonomy",
                             "Student privacy options",
                             "Mature minor provisions"});
-                table716.AddRow(new string[] {
+                table679.AddRow(new string[] {
                             "18+ or postsecondary",
                             "Full access rights",
                             "No parent access (default)",
                             "Rights transfer",
                             "Student-controlled",
                             "FERPA rights transfer"});
-                table716.AddRow(new string[] {
+                table679.AddRow(new string[] {
                             "Special needs",
                             "Individualized access",
                             "Extended parent rights",
                             "IEP-based transitions",
                             "Customized controls",
                             "Capability-based access"});
-                table716.AddRow(new string[] {
+                table679.AddRow(new string[] {
                             "Emancipated minors",
                             "Full access rights",
                             "No parent access",
@@ -833,7 +833,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Student-controlled",
                             "Court order compliance"});
 #line 121
-    testRunner.When("managing student access:", ((string)(null)), table716, "When ");
+    testRunner.When("managing student access:", ((string)(null)), table679, "When ");
 #line hidden
 #line 129
     testRunner.Then("age-appropriate access should be enforced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -890,49 +890,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 137
     testRunner.And("incident management must protect student privacy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table717 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table680 = new TechTalk.SpecFlow.Table(new string[] {
                             "Incident Type",
                             "Initial Response",
                             "Investigation Process",
                             "Notification Requirements",
                             "Remediation Steps",
                             "Prevention Measures"});
-                table717.AddRow(new string[] {
+                table680.AddRow(new string[] {
                             "Unauthorized access",
                             "Immediate access suspension",
                             "Access log investigation",
                             "Affected parties notification",
                             "Access control review",
                             "Enhanced authentication"});
-                table717.AddRow(new string[] {
+                table680.AddRow(new string[] {
                             "Improper disclosure",
                             "Disclosure cessation",
                             "Disclosure scope assessment",
                             "Parent/student notification",
                             "Disclosure audit",
                             "Training reinforcement"});
-                table717.AddRow(new string[] {
+                table680.AddRow(new string[] {
                             "System breach",
                             "System isolation",
                             "Breach extent investigation",
                             "Regulatory notification",
                             "Security enhancement",
                             "Penetration testing"});
-                table717.AddRow(new string[] {
+                table680.AddRow(new string[] {
                             "Employee violation",
                             "Employee suspension",
                             "Internal investigation",
                             "HR and compliance notification",
                             "Disciplinary action",
                             "Policy reinforcement"});
-                table717.AddRow(new string[] {
+                table680.AddRow(new string[] {
                             "Third-party breach",
                             "Service suspension",
                             "Vendor investigation",
                             "Contract enforcement",
                             "Vendor remediation",
                             "Vendor management"});
-                table717.AddRow(new string[] {
+                table680.AddRow(new string[] {
                             "Records alteration",
                             "Change reversal",
                             "Alteration investigation",
@@ -940,7 +940,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Audit enhancement",
                             "Change controls"});
 #line 138
-    testRunner.When("managing FERPA incidents:", ((string)(null)), table717, "When ");
+    testRunner.When("managing FERPA incidents:", ((string)(null)), table680, "When ");
 #line hidden
 #line 146
     testRunner.Then("incidents should be quickly contained", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -997,49 +997,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 155
     testRunner.And("oversight prevents violations", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table718 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table681 = new TechTalk.SpecFlow.Table(new string[] {
                             "Monitoring Area",
                             "Monitoring Method",
                             "Alert Triggers",
                             "Response Protocol",
                             "Reporting Frequency",
                             "Escalation Path"});
-                table718.AddRow(new string[] {
+                table681.AddRow(new string[] {
                             "Access patterns",
                             "Real-time access monitoring",
                             "Unusual access patterns",
                             "Immediate investigation",
                             "Daily reports",
                             "Privacy officer escalation"});
-                table718.AddRow(new string[] {
+                table681.AddRow(new string[] {
                             "Consent tracking",
                             "Consent management monitoring",
                             "Missing consents",
                             "Consent request initiation",
                             "Weekly reports",
                             "Compliance escalation"});
-                table718.AddRow(new string[] {
+                table681.AddRow(new string[] {
                             "Disclosure tracking",
                             "Disclosure log monitoring",
                             "Unauthorized disclosures",
                             "Disclosure investigation",
                             "Real-time alerts",
                             "Legal escalation"});
-                table718.AddRow(new string[] {
+                table681.AddRow(new string[] {
                             "Retention compliance",
                             "Retention period monitoring",
                             "Overdue destructions",
                             "Destruction initiation",
                             "Monthly reports",
                             "Records manager escalation"});
-                table718.AddRow(new string[] {
+                table681.AddRow(new string[] {
                             "Training compliance",
                             "Training completion monitoring",
                             "Overdue training",
                             "Training reminders",
                             "Quarterly reports",
                             "HR escalation"});
-                table718.AddRow(new string[] {
+                table681.AddRow(new string[] {
                             "Audit trail integrity",
                             "Audit log monitoring",
                             "Audit anomalies",
@@ -1047,7 +1047,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Continuous monitoring",
                             "IT security escalation"});
 #line 156
-    testRunner.When("monitoring compliance:", ((string)(null)), table718, "When ");
+    testRunner.When("monitoring compliance:", ((string)(null)), table681, "When ");
 #line hidden
 #line 164
     testRunner.Then("monitoring should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1104,49 +1104,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 172
     testRunner.And("training ensures compliant behavior", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table719 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table682 = new TechTalk.SpecFlow.Table(new string[] {
                             "Training Component",
                             "Target Audience",
                             "Delivery Method",
                             "Assessment Required",
                             "Refresh Frequency",
                             "Completion Tracking"});
-                table719.AddRow(new string[] {
+                table682.AddRow(new string[] {
                             "Basic FERPA overview",
                             "All staff",
                             "Online modules",
                             "80% passing score",
                             "Annual refresh",
                             "LMS tracking"});
-                table719.AddRow(new string[] {
+                table682.AddRow(new string[] {
                             "Role-specific training",
                             "By job function",
                             "Interactive workshops",
                             "Practical scenarios",
                             "Annual update",
                             "Attendance records"});
-                table719.AddRow(new string[] {
+                table682.AddRow(new string[] {
                             "Consent procedures",
                             "Records handlers",
                             "Hands-on training",
                             "Process demonstration",
                             "Semi-annual",
                             "Skill verification"});
-                table719.AddRow(new string[] {
+                table682.AddRow(new string[] {
                             "Privacy best practices",
                             "All educators",
                             "Case study sessions",
                             "Scenario responses",
                             "Annual review",
                             "Participation tracking"});
-                table719.AddRow(new string[] {
+                table682.AddRow(new string[] {
                             "Incident response",
                             "Administrators",
                             "Simulation exercises",
                             "Response evaluation",
                             "Quarterly drills",
                             "Exercise documentation"});
-                table719.AddRow(new string[] {
+                table682.AddRow(new string[] {
                             "Technology training",
                             "System users",
                             "System-specific training",
@@ -1154,7 +1154,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Per system update",
                             "Certification tracking"});
 #line 173
-    testRunner.When("delivering FERPA training:", ((string)(null)), table719, "When ");
+    testRunner.When("delivering FERPA training:", ((string)(null)), table682, "When ");
 #line hidden
 #line 181
     testRunner.Then("training should cover all aspects", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1211,49 +1211,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 189
     testRunner.And("transparency builds trust and compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table720 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table683 = new TechTalk.SpecFlow.Table(new string[] {
                             "Communication Type",
                             "Content Requirements",
                             "Delivery Methods",
                             "Frequency",
                             "Language Support",
                             "Acknowledgment"});
-                table720.AddRow(new string[] {
+                table683.AddRow(new string[] {
                             "Annual notification",
                             "FERPA rights summary",
                             "Email, portal, mail",
                             "Start of school year",
                             "Multiple languages",
                             "Receipt confirmation"});
-                table720.AddRow(new string[] {
+                table683.AddRow(new string[] {
                             "Privacy policies",
                             "Detailed privacy practices",
                             "School website, handbooks",
                             "Annual update",
                             "Translation available",
                             "Policy acknowledgment"});
-                table720.AddRow(new string[] {
+                table683.AddRow(new string[] {
                             "Consent requests",
                             "Specific disclosure details",
                             "Secure portal, forms",
                             "As needed",
                             "Native language",
                             "Signature required"});
-                table720.AddRow(new string[] {
+                table683.AddRow(new string[] {
                             "Data practices",
                             "How data is used/protected",
                             "Parent meetings, website",
                             "Quarterly updates",
                             "Interpreter services",
                             "Meeting attendance"});
-                table720.AddRow(new string[] {
+                table683.AddRow(new string[] {
                             "Incident notifications",
                             "Breach or violation details",
                             "Direct contact",
                             "Within 72 hours",
                             "Preferred language",
                             "Notification confirmation"});
-                table720.AddRow(new string[] {
+                table683.AddRow(new string[] {
                             "Rights reminders",
                             "How to exercise rights",
                             "Multiple channels",
@@ -1261,7 +1261,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Multilingual support",
                             "Optional acknowledgment"});
 #line 190
-    testRunner.When("communicating with parents:", ((string)(null)), table720, "When ");
+    testRunner.When("communicating with parents:", ((string)(null)), table683, "When ");
 #line hidden
 #line 198
     testRunner.Then("communication should be clear and timely", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1318,49 +1318,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 207
     testRunner.And("data sharing requires careful control", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table721 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table684 = new TechTalk.SpecFlow.Table(new string[] {
                             "Integration Type",
                             "FERPA Considerations",
                             "Technical Controls",
                             "Consent Management",
                             "Audit Requirements",
                             "Data Minimization"});
-                table721.AddRow(new string[] {
+                table684.AddRow(new string[] {
                             "SIS integration",
                             "Full education records",
                             "Encrypted APIs",
                             "Inherited consent",
                             "Complete audit trail",
                             "Minimal necessary data"});
-                table721.AddRow(new string[] {
+                table684.AddRow(new string[] {
                             "LMS integration",
                             "Course-specific data",
                             "Secure authentication",
                             "Purpose-limited consent",
                             "Access logging",
                             "Course data only"});
-                table721.AddRow(new string[] {
+                table684.AddRow(new string[] {
                             "Assessment platforms",
                             "Test results only",
                             "Data segmentation",
                             "Assessment consent",
                             "Result access audit",
                             "Score data only"});
-                table721.AddRow(new string[] {
+                table684.AddRow(new string[] {
                             "Communication tools",
                             "Limited student info",
                             "Privacy controls",
                             "Communication consent",
                             "Message audit trail",
                             "Contact info only"});
-                table721.AddRow(new string[] {
+                table684.AddRow(new string[] {
                             "Analytics systems",
                             "Aggregated data preferred",
                             "De-identification",
                             "Analytics consent",
                             "Analysis audit",
                             "Statistical data"});
-                table721.AddRow(new string[] {
+                table684.AddRow(new string[] {
                             "Health systems",
                             "Health-education intersection",
                             "Double encryption",
@@ -1368,7 +1368,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Comprehensive audit",
                             "Relevant records only"});
 #line 208
-    testRunner.When("integrating systems:", ((string)(null)), table721, "When ");
+    testRunner.When("integrating systems:", ((string)(null)), table684, "When ");
 #line hidden
 #line 216
     testRunner.Then("integrations should maintain compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1425,49 +1425,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 224
     testRunner.And("device security protects educational records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table722 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table685 = new TechTalk.SpecFlow.Table(new string[] {
                             "Access Scenario",
                             "Security Requirements",
                             "Data Restrictions",
                             "Loss Prevention",
                             "Compliance Verification",
                             "User Training"});
-                table722.AddRow(new string[] {
+                table685.AddRow(new string[] {
                             "Teacher devices",
                             "MDM enrollment required",
                             "Cached data limits",
                             "Remote wipe capability",
                             "Device compliance checks",
                             "Mobile security training"});
-                table722.AddRow(new string[] {
+                table685.AddRow(new string[] {
                             "Parent portals",
                             "Secure app required",
                             "View-only access",
                             "Session timeouts",
                             "App security validation",
                             "Parent app training"});
-                table722.AddRow(new string[] {
+                table685.AddRow(new string[] {
                             "Student access",
                             "Age-appropriate controls",
                             "Limited data access",
                             "Parental controls",
                             "Access monitoring",
                             "Student privacy training"});
-                table722.AddRow(new string[] {
+                table685.AddRow(new string[] {
                             "Administrator devices",
                             "Enhanced security",
                             "Full access capability",
                             "Biometric authentication",
                             "Regular security audits",
                             "Advanced security training"});
-                table722.AddRow(new string[] {
+                table685.AddRow(new string[] {
                             "Therapist tablets",
                             "Clinical security",
                             "Session data only",
                             "Encryption required",
                             "Device registration",
                             "Clinical mobile training"});
-                table722.AddRow(new string[] {
+                table685.AddRow(new string[] {
                             "BYOD policies",
                             "Minimum security standards",
                             "Containerized data",
@@ -1475,7 +1475,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "BYOD compliance checks",
                             "BYOD security training"});
 #line 225
-    testRunner.When("enabling mobile access:", ((string)(null)), table722, "When ");
+    testRunner.When("enabling mobile access:", ((string)(null)), table685, "When ");
 #line hidden
 #line 233
     testRunner.Then("mobile access should be secure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1532,49 +1532,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 241
     testRunner.And("cross-border transfers require extra protection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table723 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table686 = new TechTalk.SpecFlow.Table(new string[] {
                             "Student Origin",
                             "Additional Requirements",
                             "Transfer Mechanisms",
                             "Privacy Protections",
                             "Consent Specifications",
                             "Regulatory Compliance"});
-                table723.AddRow(new string[] {
+                table686.AddRow(new string[] {
                             "EU students",
                             "GDPR compliance required",
                             "Standard contractual clauses",
                             "Enhanced privacy rights",
                             "Explicit consent needed",
                             "Dual FERPA/GDPR compliance"});
-                table723.AddRow(new string[] {
+                table686.AddRow(new string[] {
                             "Canadian students",
                             "PIPEDA considerations",
                             "Privacy shield equivalent",
                             "Provincial law compliance",
                             "Informed consent",
                             "Federal/provincial compliance"});
-                table723.AddRow(new string[] {
+                table686.AddRow(new string[] {
                             "Other international",
                             "Country-specific laws",
                             "Secure transfer protocols",
                             "Maximum privacy protection",
                             "Detailed consent",
                             "Multi-jurisdictional compliance"});
-                table723.AddRow(new string[] {
+                table686.AddRow(new string[] {
                             "Exchange students",
                             "Home country coordination",
                             "Bilateral agreements",
                             "Coordinated protection",
                             "Dual institution consent",
                             "Agreement compliance"});
-                table723.AddRow(new string[] {
+                table686.AddRow(new string[] {
                             "Online international",
                             "Remote access security",
                             "VPN requirements",
                             "Encryption mandatory",
                             "Digital consent",
                             "Distance learning compliance"});
-                table723.AddRow(new string[] {
+                table686.AddRow(new string[] {
                             "Refugee students",
                             "Sensitive status protection",
                             "Enhanced security",
@@ -1582,7 +1582,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Guardian consent",
                             "Protection protocols"});
 #line 242
-    testRunner.When("managing international data:", ((string)(null)), table723, "When ");
+    testRunner.When("managing international data:", ((string)(null)), table686, "When ");
 #line hidden
 #line 250
     testRunner.Then("international requirements should be met", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1639,49 +1639,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 258
     testRunner.And("preparation ensures successful outcomes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table724 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table687 = new TechTalk.SpecFlow.Table(new string[] {
                             "Audit Area",
                             "Preparation Steps",
                             "Documentation Required",
                             "System Evidence",
                             "Staff Preparation",
                             "Remediation Planning"});
-                table724.AddRow(new string[] {
+                table687.AddRow(new string[] {
                             "Policy review",
                             "Policy documentation update",
                             "Current policy documents",
                             "Policy implementation evidence",
                             "Policy training refresh",
                             "Policy gap remediation"});
-                table724.AddRow(new string[] {
+                table687.AddRow(new string[] {
                             "Access controls",
                             "Access review completion",
                             "Access control documentation",
                             "System access logs",
                             "Access procedure training",
                             "Access tightening"});
-                table724.AddRow(new string[] {
+                table687.AddRow(new string[] {
                             "Consent management",
                             "Consent audit",
                             "Consent forms archive",
                             "Consent tracking system",
                             "Consent process training",
                             "Consent process improvement"});
-                table724.AddRow(new string[] {
+                table687.AddRow(new string[] {
                             "Training records",
                             "Training documentation",
                             "Training completion records",
                             "LMS reports",
                             "Staff knowledge assessment",
                             "Training enhancement"});
-                table724.AddRow(new string[] {
+                table687.AddRow(new string[] {
                             "Incident handling",
                             "Incident review",
                             "Incident response documentation",
                             "Incident management system",
                             "Response team preparation",
                             "Process improvement"});
-                table724.AddRow(new string[] {
+                table687.AddRow(new string[] {
                             "Third-party compliance",
                             "Vendor assessment",
                             "Vendor compliance documentation",
@@ -1689,7 +1689,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Vendor management training",
                             "Vendor remediation"});
 #line 259
-    testRunner.When("preparing for audits:", ((string)(null)), table724, "When ");
+    testRunner.When("preparing for audits:", ((string)(null)), table687, "When ");
 #line hidden
 #line 267
     testRunner.Then("audit preparation should be thorough", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1746,49 +1746,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 275
     testRunner.And("innovation must maintain compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table725 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table688 = new TechTalk.SpecFlow.Table(new string[] {
                             "Technology Type",
                             "FERPA Implications",
                             "Privacy Assessment",
                             "Implementation Controls",
                             "Consent Updates",
                             "Monitoring Approach"});
-                table725.AddRow(new string[] {
+                table688.AddRow(new string[] {
                             "AI/ML analytics",
                             "Model training on student data",
                             "Privacy impact assessment",
                             "Data anonymization required",
                             "AI-specific consent",
                             "Model audit trails"});
-                table725.AddRow(new string[] {
+                table688.AddRow(new string[] {
                             "VR/AR learning",
                             "Biometric data collection",
                             "Biometric privacy assessment",
                             "Minimal data collection",
                             "Biometric consent",
                             "Usage monitoring"});
-                table725.AddRow(new string[] {
+                table688.AddRow(new string[] {
                             "IoT devices",
                             "Environmental data collection",
                             "Device privacy assessment",
                             "Network segmentation",
                             "IoT consent addendum",
                             "Device activity monitoring"});
-                table725.AddRow(new string[] {
+                table688.AddRow(new string[] {
                             "Blockchain records",
                             "Immutable record implications",
                             "Permanence assessment",
                             "Right to amendment preservation",
                             "Blockchain disclosure",
                             "Transaction monitoring"});
-                table725.AddRow(new string[] {
+                table688.AddRow(new string[] {
                             "Cloud AI services",
                             "Data processing location",
                             "Cross-border assessment",
                             "Data residency controls",
                             "Cloud AI consent",
                             "Processing audit"});
-                table725.AddRow(new string[] {
+                table688.AddRow(new string[] {
                             "Wearable tech",
                             "Continuous data collection",
                             "Wearable privacy assessment",
@@ -1796,7 +1796,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Wearable consent",
                             "Data flow monitoring"});
 #line 276
-    testRunner.When("adopting new technologies:", ((string)(null)), table725, "When ");
+    testRunner.When("adopting new technologies:", ((string)(null)), table688, "When ");
 #line hidden
 #line 284
     testRunner.Then("new technologies should be assessed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1850,49 +1850,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
 #line 291
     testRunner.Given("FERPA compliance requires ongoing effort", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table726 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table689 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table726.AddRow(new string[] {
+                table689.AddRow(new string[] {
                             "Regulatory evolution",
                             "Changing privacy landscape",
                             "Regulatory monitoring",
                             "Legal resources",
                             "Timely updates",
                             "Adaptive compliance"});
-                table726.AddRow(new string[] {
+                table689.AddRow(new string[] {
                             "Technology advancement",
                             "New data collection methods",
                             "Technology assessment",
                             "Privacy expertise",
                             "Controlled adoption",
                             "Tech-ready compliance"});
-                table726.AddRow(new string[] {
+                table689.AddRow(new string[] {
                             "Staff turnover",
                             "Knowledge retention",
                             "Continuous training",
                             "Training resources",
                             "Compliance competency",
                             "Institutional knowledge"});
-                table726.AddRow(new string[] {
+                table689.AddRow(new string[] {
                             "Student expectations",
                             "Digital native privacy views",
                             "Expectation management",
                             "Communication resources",
                             "Student satisfaction",
                             "Balanced approach"});
-                table726.AddRow(new string[] {
+                table689.AddRow(new string[] {
                             "Resource constraints",
                             "Budget limitations",
                             "Efficient processes",
                             "Automation investment",
                             "Cost-effective compliance",
                             "Resource optimization"});
-                table726.AddRow(new string[] {
+                table689.AddRow(new string[] {
                             "Complexity growth",
                             "Increasing data types",
                             "Simplification efforts",
@@ -1900,7 +1900,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Compliance
                             "Manageable complexity",
                             "Scalable compliance"});
 #line 292
-    testRunner.When("planning sustainable compliance:", ((string)(null)), table726, "When ");
+    testRunner.When("planning sustainable compliance:", ((string)(null)), table689, "When ");
 #line hidden
 #line 300
     testRunner.Then("sustainability should be actively planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

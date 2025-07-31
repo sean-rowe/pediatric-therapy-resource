@@ -140,49 +140,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 17
     testRunner.And("video upload limits are set to enterprise levels", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1546 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1509 = new TechTalk.SpecFlow.Table(new string[] {
                             "Video Type",
                             "Duration",
                             "Quality",
                             "Privacy Settings",
                             "CDN Delivery",
                             "Analytics Required"});
-                table1546.AddRow(new string[] {
+                table1509.AddRow(new string[] {
                             "Therapy demonstrations",
                             "5-15 min",
                             "1080p",
                             "Password protected",
                             "Global CDN",
                             "Detailed tracking"});
-                table1546.AddRow(new string[] {
+                table1509.AddRow(new string[] {
                             "Exercise tutorials",
                             "2-10 min",
                             "720p",
                             "Public with embed",
                             "Regional CDN",
                             "Basic metrics"});
-                table1546.AddRow(new string[] {
+                table1509.AddRow(new string[] {
                             "Assessment guides",
                             "10-30 min",
                             "1080p",
                             "Private access",
                             "Global CDN",
                             "Comprehensive"});
-                table1546.AddRow(new string[] {
+                table1509.AddRow(new string[] {
                             "Parent training videos",
                             "5-20 min",
                             "720p",
                             "Restricted access",
                             "Global CDN",
                             "Engagement metrics"});
-                table1546.AddRow(new string[] {
+                table1509.AddRow(new string[] {
                             "Continuing education",
                             "30-60 min",
                             "1080p",
                             "Subscriber only",
                             "Global CDN",
                             "Progress tracking"});
-                table1546.AddRow(new string[] {
+                table1509.AddRow(new string[] {
                             "Live therapy sessions",
                             "30-45 min",
                             "720p",
@@ -190,7 +190,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
                             "Low latency",
                             "Real-time metrics"});
 #line 18
-    testRunner.When("Vimeo Pro integration is tested across video types:", ((string)(null)), table1546, "When ");
+    testRunner.When("Vimeo Pro integration is tested across video types:", ((string)(null)), table1509, "When ");
 #line hidden
 #line 26
     testRunner.Then("Vimeo should host all video types successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -248,50 +248,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 35
     testRunner.And("video processing workflows are optimized for therapy content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1547 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1510 = new TechTalk.SpecFlow.Table(new string[] {
                             "Input Format",
                             "Output Formats",
                             "Processing Features",
                             "Quality Settings",
                             "Processing Time"});
-                table1547.AddRow(new string[] {
+                table1510.AddRow(new string[] {
                             "Raw MP4 upload",
                             "MP4, HLS, DASH",
                             "Adaptive bitrate",
                             "Multi-resolution",
                             "<5 minutes"});
-                table1547.AddRow(new string[] {
+                table1510.AddRow(new string[] {
                             "MOV recordings",
                             "MP4, WebM",
                             "Compression optimization",
                             "Standard quality",
                             "<3 minutes"});
-                table1547.AddRow(new string[] {
+                table1510.AddRow(new string[] {
                             "AVI legacy files",
                             "MP4, thumbnails",
                             "Format conversion",
                             "Quality preservation",
                             "<10 minutes"});
-                table1547.AddRow(new string[] {
+                table1510.AddRow(new string[] {
                             "Live streams",
                             "HLS segments",
                             "Real-time processing",
                             "Low latency",
                             "<30 seconds"});
-                table1547.AddRow(new string[] {
+                table1510.AddRow(new string[] {
                             "Training content",
                             "MP4, captions, audio",
                             "Accessibility features",
                             "High quality",
                             "<8 minutes"});
-                table1547.AddRow(new string[] {
+                table1510.AddRow(new string[] {
                             "Mobile recordings",
                             "MP4, multiple bitrates",
                             "Mobile optimization",
                             "Adaptive quality",
                             "<4 minutes"});
 #line 36
-    testRunner.When("AWS MediaConvert processing is tested:", ((string)(null)), table1547, "When ");
+    testRunner.When("AWS MediaConvert processing is tested:", ((string)(null)), table1510, "When ");
 #line hidden
 #line 44
     testRunner.Then("AWS MediaConvert should process all video formats", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -346,49 +346,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 52
     testRunner.And("content delivery network is optimized for therapy content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1548 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1511 = new TechTalk.SpecFlow.Table(new string[] {
                             "Streaming Scenario",
                             "Concurrent Users",
                             "Video Quality",
                             "Buffering Target",
                             "Load Time Target",
                             "Success Rate"});
-                table1548.AddRow(new string[] {
+                table1511.AddRow(new string[] {
                             "Peak therapy hours",
                             "5,000 users",
                             "720p",
                             "<2% buffering",
                             "<3 seconds",
                             ">99.5%"});
-                table1548.AddRow(new string[] {
+                table1511.AddRow(new string[] {
                             "Training webinars",
                             "2,000 users",
                             "1080p",
                             "<1% buffering",
                             "<2 seconds",
                             ">99.8%"});
-                table1548.AddRow(new string[] {
+                table1511.AddRow(new string[] {
                             "Assessment videos",
                             "1,500 users",
                             "720p",
                             "<1.5% buffering",
                             "<2.5 seconds",
                             ">99.7%"});
-                table1548.AddRow(new string[] {
+                table1511.AddRow(new string[] {
                             "Mobile app streaming",
                             "3,000 users",
                             "Adaptive",
                             "<3% buffering",
                             "<4 seconds",
                             ">99.0%"});
-                table1548.AddRow(new string[] {
+                table1511.AddRow(new string[] {
                             "International users",
                             "1,000 users",
                             "720p",
                             "<5% buffering",
                             "<5 seconds",
                             ">98.5%"});
-                table1548.AddRow(new string[] {
+                table1511.AddRow(new string[] {
                             "Stress test conditions",
                             "10,000 users",
                             "Mixed quality",
@@ -396,7 +396,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
                             "<10 seconds",
                             ">95.0%"});
 #line 53
-    testRunner.When("video streaming performance is tested:", ((string)(null)), table1548, "When ");
+    testRunner.When("video streaming performance is tested:", ((string)(null)), table1511, "When ");
 #line hidden
 #line 61
     testRunner.Then("streaming performance should meet all targets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -451,50 +451,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 69
     testRunner.And("automatic processing pipelines are configured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1549 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1512 = new TechTalk.SpecFlow.Table(new string[] {
                             "Upload Source",
                             "File Size Limit",
                             "Processing Pipeline",
                             "Approval Workflow",
                             "Publication Time"});
-                table1549.AddRow(new string[] {
+                table1512.AddRow(new string[] {
                             "Therapist dashboard",
                             "2GB per file",
                             "Auto-transcode to MP4",
                             "Auto-approve",
                             "<15 minutes"});
-                table1549.AddRow(new string[] {
+                table1512.AddRow(new string[] {
                             "Content creator portal",
                             "5GB per file",
                             "Full processing suite",
                             "Manual review",
                             "<30 minutes"});
-                table1549.AddRow(new string[] {
+                table1512.AddRow(new string[] {
                             "Mobile app upload",
                             "500MB per file",
                             "Mobile optimization",
                             "Auto-approve",
                             "<10 minutes"});
-                table1549.AddRow(new string[] {
+                table1512.AddRow(new string[] {
                             "Bulk import tool",
                             "10GB total",
                             "Batch processing",
                             "Admin approval",
                             "<2 hours"});
-                table1549.AddRow(new string[] {
+                table1512.AddRow(new string[] {
                             "Live stream recording",
                             "Unlimited",
                             "Real-time processing",
                             "Auto-publish",
                             "<5 minutes"});
-                table1549.AddRow(new string[] {
+                table1512.AddRow(new string[] {
                             "External integrations",
                             "1GB per file",
                             "Standard pipeline",
                             "API validation",
                             "<20 minutes"});
 #line 70
-    testRunner.When("video upload scenarios are tested:", ((string)(null)), table1549, "When ");
+    testRunner.When("video upload scenarios are tested:", ((string)(null)), table1512, "When ");
 #line hidden
 #line 78
     testRunner.Then("uploads should complete within size limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -546,50 +546,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 86
     testRunner.Given("video accessibility features are required for compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1550 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1513 = new TechTalk.SpecFlow.Table(new string[] {
                             "Accessibility Feature",
                             "Implementation Method",
                             "Quality Requirements",
                             "Compliance Standard",
                             "Validation Method"});
-                table1550.AddRow(new string[] {
+                table1513.AddRow(new string[] {
                             "Closed captions",
                             "Auto-generation + review",
                             "95% accuracy",
                             "WCAG 2.1 AA",
                             "Manual verification"});
-                table1550.AddRow(new string[] {
+                table1513.AddRow(new string[] {
                             "Audio descriptions",
                             "Manual creation",
                             "Complete descriptions",
                             "Section 508",
                             "Accessibility review"});
-                table1550.AddRow(new string[] {
+                table1513.AddRow(new string[] {
                             "Keyboard navigation",
                             "Player controls",
                             "Full keyboard access",
                             "WCAG 2.1 AA",
                             "Automated testing"});
-                table1550.AddRow(new string[] {
+                table1513.AddRow(new string[] {
                             "Screen reader support",
                             "ARIA labels",
                             "Complete information",
                             "WCAG 2.1 AA",
                             "Screen reader test"});
-                table1550.AddRow(new string[] {
+                table1513.AddRow(new string[] {
                             "High contrast mode",
                             "Player themes",
                             "Sufficient contrast",
                             "WCAG 2.1 AA",
                             "Contrast analyzer"});
-                table1550.AddRow(new string[] {
+                table1513.AddRow(new string[] {
                             "Transcript generation",
                             "Speech-to-text",
                             "Synchronized text",
                             "WCAG 2.1 AA",
                             "Manual review"});
 #line 87
-    testRunner.When("video accessibility is tested:", ((string)(null)), table1550, "When ");
+    testRunner.When("video accessibility is tested:", ((string)(null)), table1513, "When ");
 #line hidden
 #line 95
     testRunner.Then("accessibility features should be implemented correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -644,50 +644,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 103
     testRunner.And("detailed engagement metrics are tracked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1551 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1514 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Type",
                             "Metrics Tracked",
                             "Reporting Frequency",
                             "Data Retention",
                             "Privacy Compliance"});
-                table1551.AddRow(new string[] {
+                table1514.AddRow(new string[] {
                             "Viewer engagement",
                             "Play rate, completion",
                             "Real-time",
                             "2 years",
                             "GDPR compliant"});
-                table1551.AddRow(new string[] {
+                table1514.AddRow(new string[] {
                             "Learning effectiveness",
                             "Replay segments",
                             "Daily aggregation",
                             "Indefinite",
                             "Anonymized data"});
-                table1551.AddRow(new string[] {
+                table1514.AddRow(new string[] {
                             "Content performance",
                             "Popular sections",
                             "Weekly reports",
                             "5 years",
                             "Aggregated only"});
-                table1551.AddRow(new string[] {
+                table1514.AddRow(new string[] {
                             "User behavior patterns",
                             "Viewing habits",
                             "Monthly analysis",
                             "1 year",
                             "Opt-in tracking"});
-                table1551.AddRow(new string[] {
+                table1514.AddRow(new string[] {
                             "Technical performance",
                             "Loading times, errors",
                             "Real-time monitoring",
                             "6 months",
                             "System logs only"});
-                table1551.AddRow(new string[] {
+                table1514.AddRow(new string[] {
                             "Therapeutic outcomes",
                             "Progress correlation",
                             "Session-based",
                             "Per IEP cycle",
                             "Encrypted storage"});
 #line 104
-    testRunner.When("video analytics scenarios are tested:", ((string)(null)), table1551, "When ");
+    testRunner.When("video analytics scenarios are tested:", ((string)(null)), table1514, "When ");
 #line hidden
 #line 112
     testRunner.Then("analytics should provide comprehensive insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -742,50 +742,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 120
     testRunner.And("low-latency streaming is configured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1552 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1515 = new TechTalk.SpecFlow.Table(new string[] {
                             "Streaming Type",
                             "Latency Target",
                             "Quality Options",
                             "Participant Limit",
                             "Recording Option"});
-                table1552.AddRow(new string[] {
+                table1515.AddRow(new string[] {
                             "Individual teletherapy",
                             "<500ms",
                             "720p adaptive",
                             "2 participants",
                             "Optional"});
-                table1552.AddRow(new string[] {
+                table1515.AddRow(new string[] {
                             "Group therapy sessions",
                             "<1 second",
                             "720p",
                             "8 participants",
                             "Automatic"});
-                table1552.AddRow(new string[] {
+                table1515.AddRow(new string[] {
                             "Training webinars",
                             "<2 seconds",
                             "1080p multi-bitrate",
                             "500 participants",
                             "Always"});
-                table1552.AddRow(new string[] {
+                table1515.AddRow(new string[] {
                             "Supervision meetings",
                             "<500ms",
                             "720p",
                             "4 participants",
                             "Required"});
-                table1552.AddRow(new string[] {
+                table1515.AddRow(new string[] {
                             "Parent consultations",
                             "<1 second",
                             "720p",
                             "6 participants",
                             "With consent"});
-                table1552.AddRow(new string[] {
+                table1515.AddRow(new string[] {
                             "Assessment sessions",
                             "<500ms",
                             "1080p",
                             "3 participants",
                             "For review"});
 #line 121
-    testRunner.When("live streaming scenarios are tested:", ((string)(null)), table1552, "When ");
+    testRunner.When("live streaming scenarios are tested:", ((string)(null)), table1515, "When ");
 #line hidden
 #line 129
     testRunner.Then("live streaming should meet latency targets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -840,50 +840,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 137
     testRunner.And("DRM is implemented for sensitive content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1553 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1516 = new TechTalk.SpecFlow.Table(new string[] {
                             "Content Type",
                             "Protection Level",
                             "DRM Technology",
                             "Access Control",
                             "Expiration Policy"});
-                table1553.AddRow(new string[] {
+                table1516.AddRow(new string[] {
                             "Assessment protocols",
                             "High security",
                             "Widevine/FairPlay",
                             "License verification",
                             "24 hours"});
-                table1553.AddRow(new string[] {
+                table1516.AddRow(new string[] {
                             "Proprietary techniques",
                             "Maximum security",
                             "All DRM platforms",
                             "Multi-factor auth",
                             "Session-based"});
-                table1553.AddRow(new string[] {
+                table1516.AddRow(new string[] {
                             "Training materials",
                             "Standard",
                             "Token-based access",
                             "Subscription check",
                             "30 days"});
-                table1553.AddRow(new string[] {
+                table1516.AddRow(new string[] {
                             "Therapy demonstrations",
                             "Medium security",
                             "Encrypted streaming",
                             "Role verification",
                             "7 days"});
-                table1553.AddRow(new string[] {
+                table1516.AddRow(new string[] {
                             "Public education",
                             "Basic protection",
                             "Domain restrictions",
                             "IP whitelisting",
                             "No expiration"});
-                table1553.AddRow(new string[] {
+                table1516.AddRow(new string[] {
                             "Live session recordings",
                             "High security",
                             "Dynamic encryption",
                             "Participant-only",
                             "90 days"});
 #line 138
-    testRunner.When("content protection scenarios are tested:", ((string)(null)), table1553, "When ");
+    testRunner.When("content protection scenarios are tested:", ((string)(null)), table1516, "When ");
 #line hidden
 #line 146
     testRunner.Then("content protection should prevent unauthorized access", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -935,50 +935,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 154
     testRunner.Given("video platform performance requires continuous monitoring", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1554 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1517 = new TechTalk.SpecFlow.Table(new string[] {
                             "Monitoring Aspect",
                             "Metrics Tracked",
                             "Alert Thresholds",
                             "Response Actions",
                             "SLA Requirements"});
-                table1554.AddRow(new string[] {
+                table1517.AddRow(new string[] {
                             "Upload success rate",
                             "Successful uploads",
                             "<95% success",
                             "Investigate failures",
                             "99% uptime"});
-                table1554.AddRow(new string[] {
+                table1517.AddRow(new string[] {
                             "Streaming quality",
                             "Buffering, resolution",
                             ">5% buffering",
                             "CDN optimization",
                             "<2% buffer rate"});
-                table1554.AddRow(new string[] {
+                table1517.AddRow(new string[] {
                             "Processing delays",
                             "Queue times",
                             ">10 minute delay",
                             "Scale processing",
                             "<5 min average"});
-                table1554.AddRow(new string[] {
+                table1517.AddRow(new string[] {
                             "Storage capacity",
                             "Used vs available",
                             ">80% capacity",
                             "Provision storage",
                             "No outages"});
-                table1554.AddRow(new string[] {
+                table1517.AddRow(new string[] {
                             "CDN performance",
                             "Global delivery times",
                             ">5 second load",
                             "Optimize routing",
                             "<3 sec globally"});
-                table1554.AddRow(new string[] {
+                table1517.AddRow(new string[] {
                             "User experience",
                             "Error rates",
                             ">1% error rate",
                             "Emergency response",
                             "<0.5% errors"});
 #line 155
-    testRunner.When("video monitoring is tested:", ((string)(null)), table1554, "When ");
+    testRunner.When("video monitoring is tested:", ((string)(null)), table1517, "When ");
 #line hidden
 #line 163
     testRunner.Then("monitoring should provide comprehensive visibility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1030,50 +1030,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 170
     testRunner.Given("video services may experience outages or degradation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1555 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1518 = new TechTalk.SpecFlow.Table(new string[] {
                             "Primary Service Failure",
                             "Backup Strategy",
                             "Degraded Functionality",
                             "Recovery Time",
                             "Data Protection"});
-                table1555.AddRow(new string[] {
+                table1518.AddRow(new string[] {
                             "Vimeo API outage",
                             "AWS S3 direct delivery",
                             "Reduced analytics",
                             "<5 minutes",
                             "All data safe"});
-                table1555.AddRow(new string[] {
+                table1518.AddRow(new string[] {
                             "MediaConvert overload",
                             "Queue management",
                             "Slower processing",
                             "Automatic scaling",
                             "No data loss"});
-                table1555.AddRow(new string[] {
+                table1518.AddRow(new string[] {
                             "CDN regional failure",
                             "Multi-CDN routing",
                             "Alternate regions",
                             "<2 minutes",
                             "Seamless switch"});
-                table1555.AddRow(new string[] {
+                table1518.AddRow(new string[] {
                             "Live streaming issues",
                             "Backup streaming",
                             "Lower quality",
                             "<30 seconds",
                             "Session continues"});
-                table1555.AddRow(new string[] {
+                table1518.AddRow(new string[] {
                             "Storage service down",
                             "Redundant storage",
                             "Read-only mode",
                             "<10 minutes",
                             "Zero data loss"});
-                table1555.AddRow(new string[] {
+                table1518.AddRow(new string[] {
                             "Analytics failure",
                             "Basic tracking only",
                             "Limited insights",
                             "<1 hour",
                             "Historical data"});
 #line 171
-    testRunner.When("video failover scenarios are tested:", ((string)(null)), table1555, "When ");
+    testRunner.When("video failover scenarios are tested:", ((string)(null)), table1518, "When ");
 #line hidden
 #line 179
     testRunner.Then("failover strategies should maintain core functionality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1125,50 +1125,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 187
     testRunner.Given("video uploads may fail for various reasons", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1556 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1519 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failure Type",
                             "Error Condition",
                             "Recovery Strategy",
                             "User Communication",
                             "Data Recovery"});
-                table1556.AddRow(new string[] {
+                table1519.AddRow(new string[] {
                             "Network interruption",
                             "Connection lost",
                             "Resume upload",
                             "\"Resuming upload\"",
                             "Partial chunks"});
-                table1556.AddRow(new string[] {
+                table1519.AddRow(new string[] {
                             "File corruption",
                             "Invalid video format",
                             "Format validation",
                             "\"File error\"",
                             "None possible"});
-                table1556.AddRow(new string[] {
+                table1519.AddRow(new string[] {
                             "Size limit exceeded",
                             "File too large",
                             "Compression offer",
                             "\"File too large\"",
                             "Original intact"});
-                table1556.AddRow(new string[] {
+                table1519.AddRow(new string[] {
                             "Quota exhausted",
                             "Storage limit reached",
                             "Cleanup old files",
                             "\"Storage full\"",
                             "Admin cleanup"});
-                table1556.AddRow(new string[] {
+                table1519.AddRow(new string[] {
                             "Authentication expired",
                             "Session timeout",
                             "Re-authenticate",
                             "\"Please login\"",
                             "Resume after auth"});
-                table1556.AddRow(new string[] {
+                table1519.AddRow(new string[] {
                             "Processing failure",
                             "Transcoding error",
                             "Retry with fallback",
                             "\"Processing retry\"",
                             "Source preserved"});
 #line 188
-    testRunner.When("video upload failure scenarios are tested:", ((string)(null)), table1556, "When ");
+    testRunner.When("video upload failure scenarios are tested:", ((string)(null)), table1519, "When ");
 #line hidden
 #line 196
     testRunner.Then("upload failures should be handled gracefully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1220,50 +1220,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 203
     testRunner.Given("video streaming may experience interruptions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1557 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1520 = new TechTalk.SpecFlow.Table(new string[] {
                             "Interruption Type",
                             "Cause",
                             "Mitigation Strategy",
                             "User Experience",
                             "Recovery Method"});
-                table1557.AddRow(new string[] {
+                table1520.AddRow(new string[] {
                             "Network congestion",
                             "Bandwidth limitations",
                             "Adaptive bitrate",
                             "Lower quality",
                             "Auto-adjust"});
-                table1557.AddRow(new string[] {
+                table1520.AddRow(new string[] {
                             "CDN node failure",
                             "Infrastructure issue",
                             "Route to backup CDN",
                             "Brief pause",
                             "Seamless switch"});
-                table1557.AddRow(new string[] {
+                table1520.AddRow(new string[] {
                             "Player error",
                             "Browser compatibility",
                             "Fallback player",
                             "Player reload",
                             "Different codec"});
-                table1557.AddRow(new string[] {
+                table1520.AddRow(new string[] {
                             "Authentication loss",
                             "Session expiry",
                             "Background refresh",
                             "Minimal interruption",
                             "Token refresh"});
-                table1557.AddRow(new string[] {
+                table1520.AddRow(new string[] {
                             "Content unavailable",
                             "File corruption",
                             "Alternative quality",
                             "Quality notification",
                             "Best available"});
-                table1557.AddRow(new string[] {
+                table1520.AddRow(new string[] {
                             "Geographic blocking",
                             "Content restrictions",
                             "Proxy detection",
                             "Access denied",
                             "VPN detection"});
 #line 204
-    testRunner.When("streaming interruption scenarios are tested:", ((string)(null)), table1557, "When ");
+    testRunner.When("streaming interruption scenarios are tested:", ((string)(null)), table1520, "When ");
 #line hidden
 #line 212
     testRunner.Then("streaming interruptions should be minimized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1315,50 +1315,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 219
     testRunner.Given("video processing may encounter errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1558 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1521 = new TechTalk.SpecFlow.Table(new string[] {
                             "Processing Error",
                             "Root Cause",
                             "Error Handling",
                             "Retry Strategy",
                             "Fallback Option"});
-                table1558.AddRow(new string[] {
+                table1521.AddRow(new string[] {
                             "Unsupported codec",
                             "Legacy format",
                             "Format conversion",
                             "Different encoder",
                             "Basic MP4"});
-                table1558.AddRow(new string[] {
+                table1521.AddRow(new string[] {
                             "Processing timeout",
                             "Complex video",
                             "Extended timeout",
                             "Lower quality",
                             "Standard preset"});
-                table1558.AddRow(new string[] {
+                table1521.AddRow(new string[] {
                             "Storage write failure",
                             "Disk space issue",
                             "Alternative storage",
                             "Cleanup and retry",
                             "External storage"});
-                table1558.AddRow(new string[] {
+                table1521.AddRow(new string[] {
                             "DRM key generation",
                             "Key server issue",
                             "Regenerate keys",
                             "Multiple attempts",
                             "Unprotected"});
-                table1558.AddRow(new string[] {
+                table1521.AddRow(new string[] {
                             "Caption generation",
                             "Audio quality issue",
                             "Manual upload option",
                             "Enhanced processing",
                             "Skip captions"});
-                table1558.AddRow(new string[] {
+                table1521.AddRow(new string[] {
                             "Thumbnail creation",
                             "Video corruption",
                             "Default thumbnail",
                             "Multiple timepoints",
                             "Generic image"});
 #line 220
-    testRunner.When("video processing error scenarios are tested:", ((string)(null)), table1558, "When ");
+    testRunner.When("video processing error scenarios are tested:", ((string)(null)), table1521, "When ");
 #line hidden
 #line 228
     testRunner.Then("processing errors should be handled systematically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1410,50 +1410,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 235
     testRunner.Given("video platform may experience resource constraints", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1559 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1522 = new TechTalk.SpecFlow.Table(new string[] {
                             "Load Scenario",
                             "Resource Constraint",
                             "Scaling Strategy",
                             "Performance Impact",
                             "User Communication"});
-                table1559.AddRow(new string[] {
+                table1522.AddRow(new string[] {
                             "Peak upload times",
                             "Processing queue full",
                             "Auto-scale workers",
                             "Longer wait times",
                             "Queue position"});
-                table1559.AddRow(new string[] {
+                table1522.AddRow(new string[] {
                             "Viral content surge",
                             "Bandwidth exhaustion",
                             "CDN burst capacity",
                             "Some buffering",
                             "Quality adjustment"});
-                table1559.AddRow(new string[] {
+                table1522.AddRow(new string[] {
                             "Live event streaming",
                             "Concurrent limit hit",
                             "Priority queuing",
                             "Entry restrictions",
                             "Waitlist system"});
-                table1559.AddRow(new string[] {
+                table1522.AddRow(new string[] {
                             "Bulk content import",
                             "Storage I/O limits",
                             "Batch optimization",
                             "Slower processing",
                             "Progress updates"});
-                table1559.AddRow(new string[] {
+                table1522.AddRow(new string[] {
                             "International traffic",
                             "Regional overload",
                             "Geographic balancing",
                             "Routing delays",
                             "Regional notice"});
-                table1559.AddRow(new string[] {
+                table1522.AddRow(new string[] {
                             "System maintenance",
                             "Reduced capacity",
                             "Graceful degradation",
                             "Limited features",
                             "Maintenance notice"});
 #line 236
-    testRunner.When("high-load scenarios are tested:", ((string)(null)), table1559, "When ");
+    testRunner.When("high-load scenarios are tested:", ((string)(null)), table1522, "When ");
 #line hidden
 #line 244
     testRunner.Then("high-load scenarios should be handled gracefully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1505,50 +1505,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 251
     testRunner.Given("video metadata must remain consistent across platforms", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1560 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1523 = new TechTalk.SpecFlow.Table(new string[] {
                             "Consistency Issue",
                             "Data Affected",
                             "Detection Method",
                             "Resolution Strategy",
                             "Prevention Method"});
-                table1560.AddRow(new string[] {
+                table1523.AddRow(new string[] {
                             "Metadata mismatch",
                             "Video properties",
                             "Periodic validation",
                             "Re-sync metadata",
                             "Real-time updates"});
-                table1560.AddRow(new string[] {
+                table1523.AddRow(new string[] {
                             "Playlist corruption",
                             "Video collections",
                             "Integrity checks",
                             "Rebuild playlists",
                             "Atomic operations"});
-                table1560.AddRow(new string[] {
+                table1523.AddRow(new string[] {
                             "Analytics drift",
                             "View count discrepancy",
                             "Daily reconciliation",
                             "Correct counts",
                             "Immediate logging"});
-                table1560.AddRow(new string[] {
+                table1523.AddRow(new string[] {
                             "Permission conflicts",
                             "Access control",
                             "Access audits",
                             "Refresh permissions",
                             "Consistent API"});
-                table1560.AddRow(new string[] {
+                table1523.AddRow(new string[] {
                             "Version inconsistency",
                             "Multiple video versions",
                             "Version tracking",
                             "Promote correct",
                             "Version control"});
-                table1560.AddRow(new string[] {
+                table1523.AddRow(new string[] {
                             "Cache invalidation",
                             "Outdated content",
                             "Cache monitoring",
                             "Force refresh",
                             "TTL management"});
 #line 252
-    testRunner.When("data consistency scenarios are tested:", ((string)(null)), table1560, "When ");
+    testRunner.When("data consistency scenarios are tested:", ((string)(null)), table1523, "When ");
 #line hidden
 #line 260
     testRunner.Then("data consistency should be maintained across all systems", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

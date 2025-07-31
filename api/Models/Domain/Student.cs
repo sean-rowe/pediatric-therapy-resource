@@ -45,16 +45,16 @@ public class Student
     public string? PrimaryDisability { get; set; }
 
     public bool IsActive { get; set; } = true;
-    
+
     public StudentStatus Status { get; set; } = StudentStatus.Active;
-    
+
     public bool HasParentAccess { get; set; } = false;
-    
+
     public DateTime? DischargedAt { get; set; }
 
     [Required]
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    
+
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
     public DateTime? LastActivityAt { get; set; }

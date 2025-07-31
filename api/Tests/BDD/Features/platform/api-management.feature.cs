@@ -122,47 +122,47 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1864 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1827 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1864.AddRow(new string[] {
+                table1827.AddRow(new string[] {
                             "appName",
                             "Therapy Assistant Pro"});
-                table1864.AddRow(new string[] {
+                table1827.AddRow(new string[] {
                             "description",
                             "Mobile app for therapists"});
-                table1864.AddRow(new string[] {
+                table1827.AddRow(new string[] {
                             "redirectUris",
                             "[\"https://app.example.com/callback\"]"});
-                table1864.AddRow(new string[] {
+                table1827.AddRow(new string[] {
                             "scopes",
                             "[\"read:resources\", \"write:sessions\"]"});
-                table1864.AddRow(new string[] {
+                table1827.AddRow(new string[] {
                             "webhookUrl",
                             "https://app.example.com/webhook"});
 #line 13
-    testRunner.When("I send a POST request to \"/api/developer/apps\" with:", ((string)(null)), table1864, "When ");
+    testRunner.When("I send a POST request to \"/api/developer/apps\" with:", ((string)(null)), table1827, "When ");
 #line hidden
 #line 20
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1865 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1828 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1865.AddRow(new string[] {
+                table1828.AddRow(new string[] {
                             "appId",
                             "string"});
-                table1865.AddRow(new string[] {
+                table1828.AddRow(new string[] {
                             "clientId",
                             "string"});
-                table1865.AddRow(new string[] {
+                table1828.AddRow(new string[] {
                             "clientSecret",
                             "string"});
-                table1865.AddRow(new string[] {
+                table1828.AddRow(new string[] {
                             "apiKey",
                             "string"});
 #line 21
-    testRunner.And("the response should contain:", ((string)(null)), table1865, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1828, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -206,20 +206,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 33
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1866 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1829 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1866.AddRow(new string[] {
+                table1829.AddRow(new string[] {
                             "keys",
                             "array"});
-                table1866.AddRow(new string[] {
+                table1829.AddRow(new string[] {
                             "rateLimit",
                             "object"});
-                table1866.AddRow(new string[] {
+                table1829.AddRow(new string[] {
                             "usage",
                             "object"});
 #line 34
-    testRunner.And("the response should contain:", ((string)(null)), table1866, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1829, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -254,20 +254,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1867 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1830 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1867.AddRow(new string[] {
+                table1830.AddRow(new string[] {
                             "requestsPerHour",
                             "10000"});
-                table1867.AddRow(new string[] {
+                table1830.AddRow(new string[] {
                             "burstLimit",
                             "100"});
-                table1867.AddRow(new string[] {
+                table1830.AddRow(new string[] {
                             "concurrentLimit",
                             "50"});
 #line 43
-    testRunner.When("I send a PUT request to \"/api/developer/apps/app-123/rate-limits\" with:", ((string)(null)), table1867, "When ");
+    testRunner.When("I send a PUT request to \"/api/developer/apps/app-123/rate-limits\" with:", ((string)(null)), table1830, "When ");
 #line hidden
 #line 48
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -314,26 +314,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 55
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1868 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1831 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1868.AddRow(new string[] {
+                table1831.AddRow(new string[] {
                             "totalRequests",
                             "number"});
-                table1868.AddRow(new string[] {
+                table1831.AddRow(new string[] {
                             "successfulCalls",
                             "number"});
-                table1868.AddRow(new string[] {
+                table1831.AddRow(new string[] {
                             "errorRate",
                             "number"});
-                table1868.AddRow(new string[] {
+                table1831.AddRow(new string[] {
                             "endpointBreakdown",
                             "object"});
-                table1868.AddRow(new string[] {
+                table1831.AddRow(new string[] {
                             "quotaRemaining",
                             "number"});
 #line 56
-    testRunner.And("the response should contain:", ((string)(null)), table1868, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1831, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -374,23 +374,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 68
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1869 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1832 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1869.AddRow(new string[] {
+                table1832.AddRow(new string[] {
                             "openApiSpec",
                             "object"});
-                table1869.AddRow(new string[] {
+                table1832.AddRow(new string[] {
                             "interactiveDocs",
                             "string"});
-                table1869.AddRow(new string[] {
+                table1832.AddRow(new string[] {
                             "sdkLinks",
                             "object"});
-                table1869.AddRow(new string[] {
+                table1832.AddRow(new string[] {
                             "changelog",
                             "array"});
 #line 69
-    testRunner.And("the response should contain:", ((string)(null)), table1869, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1832, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -425,23 +425,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1870 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1833 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1870.AddRow(new string[] {
+                table1833.AddRow(new string[] {
                             "url",
                             "https://app.example.com/webhook"});
-                table1870.AddRow(new string[] {
+                table1833.AddRow(new string[] {
                             "events",
                             "[\"resource.created\", \"session.completed\"]"});
-                table1870.AddRow(new string[] {
+                table1833.AddRow(new string[] {
                             "secret",
                             "webhook-secret-key"});
-                table1870.AddRow(new string[] {
+                table1833.AddRow(new string[] {
                             "active",
                             "true"});
 #line 79
-    testRunner.When("I send a POST request to \"/api/developer/webhooks\" with:", ((string)(null)), table1870, "When ");
+    testRunner.When("I send a POST request to \"/api/developer/webhooks\" with:", ((string)(null)), table1833, "When ");
 #line hidden
 #line 85
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -491,23 +491,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 93
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1871 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1834 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1871.AddRow(new string[] {
+                table1834.AddRow(new string[] {
                             "sandboxUrl",
                             "string"});
-                table1871.AddRow(new string[] {
+                table1834.AddRow(new string[] {
                             "testCredentials",
                             "object"});
-                table1871.AddRow(new string[] {
+                table1834.AddRow(new string[] {
                             "sampleData",
                             "object"});
-                table1871.AddRow(new string[] {
+                table1834.AddRow(new string[] {
                             "resetEndpoint",
                             "string"});
 #line 94
-    testRunner.And("the response should contain:", ((string)(null)), table1871, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1834, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

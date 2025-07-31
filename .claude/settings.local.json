@@ -55,7 +55,14 @@
       "Bash(gh repo view:*)",
       "Bash(gh pr create:*)",
       "Bash(gh pr:*)",
-      "Bash(git stash:*)"
+      "Bash(git stash:*)",
+      "Bash(docker logs:*)",
+      "Bash(docker:*)",
+      "Bash(kubectl version:*)",
+      "Bash(dotnet vstest:*)",
+      "Bash(timeout:*)",
+      "Bash(curl:*)",
+      "Bash(dotnet format:*)"
     ],
     "deny": []
   }

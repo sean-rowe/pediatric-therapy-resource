@@ -131,32 +131,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 15
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1470 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1433 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1470.AddRow(new string[] {
+                table1433.AddRow(new string[] {
                             "providerId",
                             "string"});
-                table1470.AddRow(new string[] {
+                table1433.AddRow(new string[] {
                             "name",
                             "string"});
-                table1470.AddRow(new string[] {
+                table1433.AddRow(new string[] {
                             "logo",
                             "string"});
-                table1470.AddRow(new string[] {
+                table1433.AddRow(new string[] {
                             "features",
                             "array"});
-                table1470.AddRow(new string[] {
+                table1433.AddRow(new string[] {
                             "authMethod",
                             "string"});
-                table1470.AddRow(new string[] {
+                table1433.AddRow(new string[] {
                             "apiVersion",
                             "string"});
-                table1470.AddRow(new string[] {
+                table1433.AddRow(new string[] {
                             "popular",
                             "boolean"});
 #line 16
-    testRunner.And("the response should contain array of:", ((string)(null)), table1470, "And ");
+    testRunner.And("the response should contain array of:", ((string)(null)), table1433, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -191,47 +191,47 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1471 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1434 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1471.AddRow(new string[] {
+                table1434.AddRow(new string[] {
                             "apiKey",
                             "encrypted-api-key"});
-                table1471.AddRow(new string[] {
+                table1434.AddRow(new string[] {
                             "practiceId",
                             "practice-123"});
-                table1471.AddRow(new string[] {
+                table1434.AddRow(new string[] {
                             "syncDirection",
                             "bidirectional"});
-                table1471.AddRow(new string[] {
+                table1434.AddRow(new string[] {
                             "syncItems",
                             "[\"clients\", \"sessions\", \"notes\"]"});
-                table1471.AddRow(new string[] {
+                table1434.AddRow(new string[] {
                             "autoSync",
                             "true"});
 #line 29
-    testRunner.When("I send a POST request to \"/api/integrations/ehr/simplepractice/connect\" with:", ((string)(null)), table1471, "When ");
+    testRunner.When("I send a POST request to \"/api/integrations/ehr/simplepractice/connect\" with:", ((string)(null)), table1434, "When ");
 #line hidden
 #line 36
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1472 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1435 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1472.AddRow(new string[] {
+                table1435.AddRow(new string[] {
                             "connectionId",
                             "string"});
-                table1472.AddRow(new string[] {
+                table1435.AddRow(new string[] {
                             "status",
                             "string"});
-                table1472.AddRow(new string[] {
+                table1435.AddRow(new string[] {
                             "capabilities",
                             "array"});
-                table1472.AddRow(new string[] {
+                table1435.AddRow(new string[] {
                             "lastSync",
                             "string"});
 #line 37
-    testRunner.And("the response should contain:", ((string)(null)), table1472, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1435, "And ");
 #line hidden
 #line 43
     testRunner.And("test connection should succeed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -278,23 +278,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 50
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1473 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1436 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1473.AddRow(new string[] {
+                table1436.AddRow(new string[] {
                             "syncedPatients",
                             "array"});
-                table1473.AddRow(new string[] {
+                table1436.AddRow(new string[] {
                             "newCount",
                             "number"});
-                table1473.AddRow(new string[] {
+                table1436.AddRow(new string[] {
                             "updatedCount",
                             "number"});
-                table1473.AddRow(new string[] {
+                table1436.AddRow(new string[] {
                             "errors",
                             "array"});
 #line 51
-    testRunner.And("the response should contain:", ((string)(null)), table1473, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1436, "And ");
 #line hidden
 #line 57
     testRunner.And("patient data should be mapped correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -335,29 +335,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 62
     testRunner.Given("EHR connection \"conn-123\" exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1474 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1437 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1474.AddRow(new string[] {
+                table1437.AddRow(new string[] {
                             "sessionId",
                             "session-456"});
-                table1474.AddRow(new string[] {
+                table1437.AddRow(new string[] {
                             "patientId",
                             "patient-789"});
-                table1474.AddRow(new string[] {
+                table1437.AddRow(new string[] {
                             "date",
                             "2024-01-22"});
-                table1474.AddRow(new string[] {
+                table1437.AddRow(new string[] {
                             "duration",
                             "30"});
-                table1474.AddRow(new string[] {
+                table1437.AddRow(new string[] {
                             "cptCode",
                             "92507"});
-                table1474.AddRow(new string[] {
+                table1437.AddRow(new string[] {
                             "activities",
                             "[\"articulation therapy\"]"});
 #line 63
-    testRunner.When("I send a POST request to \"/api/integrations/ehr/conn-123/sessions\" with:", ((string)(null)), table1474, "When ");
+    testRunner.When("I send a POST request to \"/api/integrations/ehr/conn-123/sessions\" with:", ((string)(null)), table1437, "When ");
 #line hidden
 #line 71
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -404,26 +404,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 78
     testRunner.Given("EHR connection \"conn-123\" exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1475 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1438 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1475.AddRow(new string[] {
+                table1438.AddRow(new string[] {
                             "sessionId",
                             "session-456"});
-                table1475.AddRow(new string[] {
+                table1438.AddRow(new string[] {
                             "noteType",
                             "progress"});
-                table1475.AddRow(new string[] {
+                table1438.AddRow(new string[] {
                             "content",
                             "{\"S\": \"Patient reports...\", \"O\": \"Observed...\"}"});
-                table1475.AddRow(new string[] {
+                table1438.AddRow(new string[] {
                             "attachments",
                             "[\"res-123\", \"res-124\"]"});
-                table1475.AddRow(new string[] {
+                table1438.AddRow(new string[] {
                             "signedBy",
                             "therapist-123"});
 #line 79
-    testRunner.When("I send a POST request to \"/api/integrations/ehr/conn-123/notes\" with:", ((string)(null)), table1475, "When ");
+    testRunner.When("I send a POST request to \"/api/integrations/ehr/conn-123/notes\" with:", ((string)(null)), table1438, "When ");
 #line hidden
 #line 86
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -476,29 +476,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 95
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1476 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1439 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1476.AddRow(new string[] {
+                table1439.AddRow(new string[] {
                             "syncInProgress",
                             "boolean"});
-                table1476.AddRow(new string[] {
+                table1439.AddRow(new string[] {
                             "lastSync",
                             "string"});
-                table1476.AddRow(new string[] {
+                table1439.AddRow(new string[] {
                             "nextSync",
                             "string"});
-                table1476.AddRow(new string[] {
+                table1439.AddRow(new string[] {
                             "pendingItems",
                             "number"});
-                table1476.AddRow(new string[] {
+                table1439.AddRow(new string[] {
                             "errorCount",
                             "number"});
-                table1476.AddRow(new string[] {
+                table1439.AddRow(new string[] {
                             "syncHistory",
                             "array"});
 #line 96
-    testRunner.And("the response should contain:", ((string)(null)), table1476, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1439, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -536,20 +536,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 108
     testRunner.Given("EHR connection \"conn-123\" exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1477 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1440 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1477.AddRow(new string[] {
+                table1440.AddRow(new string[] {
                             "patientMapping",
                             "{\"firstName\": \"first_name\", \"lastName\": \"last_name\"}"});
-                table1477.AddRow(new string[] {
+                table1440.AddRow(new string[] {
                             "diagnosisMapping",
                             "{\"icd10\": \"diagnosis_code\"}"});
-                table1477.AddRow(new string[] {
+                table1440.AddRow(new string[] {
                             "customFields",
                             "{\"therapyGoals\": \"custom_field_1\"}"});
 #line 109
-    testRunner.When("I send a PUT request to \"/api/integrations/ehr/conn-123/mapping\" with:", ((string)(null)), table1477, "When ");
+    testRunner.When("I send a PUT request to \"/api/integrations/ehr/conn-123/mapping\" with:", ((string)(null)), table1440, "When ");
 #line hidden
 #line 114
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -602,29 +602,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 123
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1478 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1441 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1478.AddRow(new string[] {
+                table1441.AddRow(new string[] {
                             "connectionValid",
                             "boolean"});
-                table1478.AddRow(new string[] {
+                table1441.AddRow(new string[] {
                             "authenticationOk",
                             "boolean"});
-                table1478.AddRow(new string[] {
+                table1441.AddRow(new string[] {
                             "readAccess",
                             "boolean"});
-                table1478.AddRow(new string[] {
+                table1441.AddRow(new string[] {
                             "writeAccess",
                             "boolean"});
-                table1478.AddRow(new string[] {
+                table1441.AddRow(new string[] {
                             "latency",
                             "number"});
-                table1478.AddRow(new string[] {
+                table1441.AddRow(new string[] {
                             "availableEndpoints",
                             "array"});
 #line 124
-    testRunner.And("the response should contain:", ((string)(null)), table1478, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1441, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -662,17 +662,17 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 136
     testRunner.Given("EHR connection \"conn-123\" exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1479 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1442 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1479.AddRow(new string[] {
+                table1442.AddRow(new string[] {
                             "retainData",
                             "true"});
-                table1479.AddRow(new string[] {
+                table1442.AddRow(new string[] {
                             "reason",
                             "switching-systems"});
 #line 137
-    testRunner.When("I send a DELETE request to \"/api/integrations/ehr/conn-123\" with:", ((string)(null)), table1479, "When ");
+    testRunner.When("I send a DELETE request to \"/api/integrations/ehr/conn-123\" with:", ((string)(null)), table1442, "When ");
 #line hidden
 #line 141
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -725,29 +725,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 150
     testRunner.And("I am conducting a therapy session with patient \"John Doe\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1480 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1443 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table1480.AddRow(new string[] {
+                table1443.AddRow(new string[] {
                             "SessionDate",
                             "2025-01-15"});
-                table1480.AddRow(new string[] {
+                table1443.AddRow(new string[] {
                             "Duration",
                             "45 minutes"});
-                table1480.AddRow(new string[] {
+                table1443.AddRow(new string[] {
                             "Resources Used",
                             "Fine Motor Worksheets, Sensory Cards"});
-                table1480.AddRow(new string[] {
+                table1443.AddRow(new string[] {
                             "Progress Notes",
                             "Patient showed improvement in bilateral coordination"});
-                table1480.AddRow(new string[] {
+                table1443.AddRow(new string[] {
                             "Treatment Goals",
                             "Improve fine motor skills"});
-                table1480.AddRow(new string[] {
+                table1443.AddRow(new string[] {
                             "Next Session Plan",
                             "Continue with cutting activities"});
 #line 151
-    testRunner.When("I document the therapy session with:", ((string)(null)), table1480, "When ");
+    testRunner.When("I document the therapy session with:", ((string)(null)), table1443, "When ");
 #line hidden
 #line 159
     testRunner.And("I save the session documentation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -863,45 +863,45 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 180
     testRunner.And("I am using multiple resources during a session", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1481 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1444 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resource Type",
                             "Resource Name",
                             "Usage Time"});
-                table1481.AddRow(new string[] {
+                table1444.AddRow(new string[] {
                             "Worksheet",
                             "Handwriting Practice Sheet 1",
                             "15 minutes"});
-                table1481.AddRow(new string[] {
+                table1444.AddRow(new string[] {
                             "Digital Activity",
                             "Letter Recognition Game",
                             "20 minutes"});
-                table1481.AddRow(new string[] {
+                table1444.AddRow(new string[] {
                             "Assessment Tool",
                             "Fine Motor Skills Checklist",
                             "10 minutes"});
 #line 181
-    testRunner.When("I use the following resources:", ((string)(null)), table1481, "When ");
+    testRunner.When("I use the following resources:", ((string)(null)), table1444, "When ");
 #line hidden
 #line 186
     testRunner.And("I complete the therapy session", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1482 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1445 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Requirement"});
-                table1482.AddRow(new string[] {
+                table1445.AddRow(new string[] {
                             "Resource Name",
                             "Exact resource title"});
-                table1482.AddRow(new string[] {
+                table1445.AddRow(new string[] {
                             "Usage Duration",
                             "Time spent on each resource"});
-                table1482.AddRow(new string[] {
+                table1445.AddRow(new string[] {
                             "Activity Type",
                             "Classification (worksheet/game/assessment)"});
-                table1482.AddRow(new string[] {
+                table1445.AddRow(new string[] {
                             "Therapeutic Value",
                             "How it addressed treatment goals"});
 #line 187
-    testRunner.Then("each resource should be logged in TheraNest with:", ((string)(null)), table1482, "Then ");
+    testRunner.Then("each resource should be logged in TheraNest with:", ((string)(null)), table1445, "Then ");
 #line hidden
 #line 193
     testRunner.And("the total session time should match individual resource times", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1125,20 +1125,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 234
     testRunner.When("I disconnect from the EHR system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1483 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1446 = new TechTalk.SpecFlow.Table(new string[] {
                             "Option",
                             "Description"});
-                table1483.AddRow(new string[] {
+                table1446.AddRow(new string[] {
                             "Retain all data",
                             "Keep local copies of all EHR data"});
-                table1483.AddRow(new string[] {
+                table1446.AddRow(new string[] {
                             "Retain UPTRMS data",
                             "Keep only UPTRMS-originated data"});
-                table1483.AddRow(new string[] {
+                table1446.AddRow(new string[] {
                             "Purge all data",
                             "Remove all synced data locally"});
 #line 235
-    testRunner.Then("I should be prompted about data retention preferences:", ((string)(null)), table1483, "Then ");
+    testRunner.Then("I should be prompted about data retention preferences:", ((string)(null)), table1446, "Then ");
 #line hidden
 #line 240
     testRunner.And("the selected retention policy should be applied", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1308,32 +1308,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 271
     testRunner.When("any EHR operation occurs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1484 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1447 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Requirement"});
-                table1484.AddRow(new string[] {
+                table1447.AddRow(new string[] {
                             "Timestamp",
                             "Exact time of operation"});
-                table1484.AddRow(new string[] {
+                table1447.AddRow(new string[] {
                             "User ID",
                             "Who performed the operation"});
-                table1484.AddRow(new string[] {
+                table1447.AddRow(new string[] {
                             "Operation Type",
                             "Create/Read/Update/Delete/Sync"});
-                table1484.AddRow(new string[] {
+                table1447.AddRow(new string[] {
                             "Patient ID",
                             "Which patient data was accessed"});
-                table1484.AddRow(new string[] {
+                table1447.AddRow(new string[] {
                             "Data Changes",
                             "What specific data changed"});
-                table1484.AddRow(new string[] {
+                table1447.AddRow(new string[] {
                             "EHR System",
                             "Which EHR system was involved"});
-                table1484.AddRow(new string[] {
+                table1447.AddRow(new string[] {
                             "Success/Failure",
                             "Operation outcome"});
 #line 272
-    testRunner.Then("the audit log should capture:", ((string)(null)), table1484, "Then ");
+    testRunner.Then("the audit log should capture:", ((string)(null)), table1447, "Then ");
 #line hidden
 #line 281
     testRunner.And("audit logs should be tamper-proof", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

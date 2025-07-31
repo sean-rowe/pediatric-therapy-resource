@@ -122,41 +122,41 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2065 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2028 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2065.AddRow(new string[] {
+                table2028.AddRow(new string[] {
                             "productCode",
                             "SENSORY-CARDS-2024"});
-                table2065.AddRow(new string[] {
+                table2028.AddRow(new string[] {
                             "purchaseDate",
                             "2024-01-15"});
-                table2065.AddRow(new string[] {
+                table2028.AddRow(new string[] {
                             "receiptNumber",
                             "REC-123456"});
-                table2065.AddRow(new string[] {
+                table2028.AddRow(new string[] {
                             "email",
                             "therapist@clinic.com"});
 #line 13
-    testRunner.When("I send a POST request to \"/api/hybrid/products/register\" with:", ((string)(null)), table2065, "When ");
+    testRunner.When("I send a POST request to \"/api/hybrid/products/register\" with:", ((string)(null)), table2028, "When ");
 #line hidden
 #line 19
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2066 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2029 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table2066.AddRow(new string[] {
+                table2029.AddRow(new string[] {
                             "digitalAccessCode",
                             "string"});
-                table2066.AddRow(new string[] {
+                table2029.AddRow(new string[] {
                             "unlockedContent",
                             "array"});
-                table2066.AddRow(new string[] {
+                table2029.AddRow(new string[] {
                             "expirationDate",
                             "string"});
 #line 20
-    testRunner.And("the response should contain:", ((string)(null)), table2066, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table2029, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -191,41 +191,41 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2067 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2030 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2067.AddRow(new string[] {
+                table2030.AddRow(new string[] {
                             "qrData",
                             "QR://UPTRMS/PROD/CARD-SET-123"});
-                table2067.AddRow(new string[] {
+                table2030.AddRow(new string[] {
                             "deviceId",
                             "ipad-456"});
-                table2067.AddRow(new string[] {
+                table2030.AddRow(new string[] {
                             "location",
                             "therapy-room"});
 #line 29
-    testRunner.When("I send a POST request to \"/api/hybrid/qr-scan\" with:", ((string)(null)), table2067, "When ");
+    testRunner.When("I send a POST request to \"/api/hybrid/qr-scan\" with:", ((string)(null)), table2030, "When ");
 #line hidden
 #line 34
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2068 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2031 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table2068.AddRow(new string[] {
+                table2031.AddRow(new string[] {
                             "productName",
                             "string"});
-                table2068.AddRow(new string[] {
+                table2031.AddRow(new string[] {
                             "digitalContent",
                             "array"});
-                table2068.AddRow(new string[] {
+                table2031.AddRow(new string[] {
                             "arEnabled",
                             "boolean"});
-                table2068.AddRow(new string[] {
+                table2031.AddRow(new string[] {
                             "sessionLink",
                             "string"});
 #line 35
-    testRunner.And("the response should contain:", ((string)(null)), table2068, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table2031, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -269,26 +269,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 47
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2069 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2032 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table2069.AddRow(new string[] {
+                table2032.AddRow(new string[] {
                             "videos",
                             "array"});
-                table2069.AddRow(new string[] {
+                table2032.AddRow(new string[] {
                             "printables",
                             "array"});
-                table2069.AddRow(new string[] {
+                table2032.AddRow(new string[] {
                             "apps",
                             "array"});
-                table2069.AddRow(new string[] {
+                table2032.AddRow(new string[] {
                             "arMarkers",
                             "array"});
-                table2069.AddRow(new string[] {
+                table2032.AddRow(new string[] {
                             "instructions",
                             "object"});
 #line 48
-    testRunner.And("the response should contain:", ((string)(null)), table2069, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table2032, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -323,41 +323,41 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2070 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2033 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2070.AddRow(new string[] {
+                table2033.AddRow(new string[] {
                             "productId",
                             "anatomy-cards-123"});
-                table2070.AddRow(new string[] {
+                table2033.AddRow(new string[] {
                             "deviceType",
                             "tablet"});
-                table2070.AddRow(new string[] {
+                table2033.AddRow(new string[] {
                             "cameraAccess",
                             "granted"});
 #line 59
-    testRunner.When("I send a POST request to \"/api/hybrid/ar/session\" with:", ((string)(null)), table2070, "When ");
+    testRunner.When("I send a POST request to \"/api/hybrid/ar/session\" with:", ((string)(null)), table2033, "When ");
 #line hidden
 #line 64
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2071 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2034 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table2071.AddRow(new string[] {
+                table2034.AddRow(new string[] {
                             "sessionId",
                             "string"});
-                table2071.AddRow(new string[] {
+                table2034.AddRow(new string[] {
                             "arModels",
                             "array"});
-                table2071.AddRow(new string[] {
+                table2034.AddRow(new string[] {
                             "trackingConfig",
                             "object"});
-                table2071.AddRow(new string[] {
+                table2034.AddRow(new string[] {
                             "interactionMap",
                             "object"});
 #line 65
-    testRunner.And("the response should contain:", ((string)(null)), table2071, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table2034, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -392,47 +392,47 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2072 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2035 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2072.AddRow(new string[] {
+                table2035.AddRow(new string[] {
                             "resourceIds",
                             "[\"res-123\", \"res-124\"]"});
-                table2072.AddRow(new string[] {
+                table2035.AddRow(new string[] {
                             "customization",
                             "{\"name\": \"Emma\'s Book\"}"});
-                table2072.AddRow(new string[] {
+                table2035.AddRow(new string[] {
                             "quantity",
                             "1"});
-                table2072.AddRow(new string[] {
+                table2035.AddRow(new string[] {
                             "binding",
                             "spiral"});
-                table2072.AddRow(new string[] {
+                table2035.AddRow(new string[] {
                             "shipping",
                             "standard"});
 #line 75
-    testRunner.When("I send a POST request to \"/api/hybrid/print-on-demand\" with:", ((string)(null)), table2072, "When ");
+    testRunner.When("I send a POST request to \"/api/hybrid/print-on-demand\" with:", ((string)(null)), table2035, "When ");
 #line hidden
 #line 82
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2073 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2036 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table2073.AddRow(new string[] {
+                table2036.AddRow(new string[] {
                             "orderId",
                             "string"});
-                table2073.AddRow(new string[] {
+                table2036.AddRow(new string[] {
                             "estimatedCost",
                             "number"});
-                table2073.AddRow(new string[] {
+                table2036.AddRow(new string[] {
                             "deliveryDate",
                             "string"});
-                table2073.AddRow(new string[] {
+                table2036.AddRow(new string[] {
                             "trackingInfo",
                             "object"});
 #line 83
-    testRunner.And("the response should contain:", ((string)(null)), table2073, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table2036, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -473,32 +473,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 94
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2074 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2037 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table2074.AddRow(new string[] {
+                table2037.AddRow(new string[] {
                             "bundleId",
                             "string"});
-                table2074.AddRow(new string[] {
+                table2037.AddRow(new string[] {
                             "name",
                             "string"});
-                table2074.AddRow(new string[] {
+                table2037.AddRow(new string[] {
                             "physicalItems",
                             "array"});
-                table2074.AddRow(new string[] {
+                table2037.AddRow(new string[] {
                             "digitalItems",
                             "array"});
-                table2074.AddRow(new string[] {
+                table2037.AddRow(new string[] {
                             "totalValue",
                             "number"});
-                table2074.AddRow(new string[] {
+                table2037.AddRow(new string[] {
                             "bundlePrice",
                             "number"});
-                table2074.AddRow(new string[] {
+                table2037.AddRow(new string[] {
                             "shippingIncluded",
                             "boolean"});
 #line 95
-    testRunner.And("the response should contain array of:", ((string)(null)), table2074, "And ");
+    testRunner.And("the response should contain array of:", ((string)(null)), table2037, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -533,35 +533,35 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2075 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2038 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2075.AddRow(new string[] {
+                table2038.AddRow(new string[] {
                             "hologramCode",
                             "HOLO-123-456-789"});
-                table2075.AddRow(new string[] {
+                table2038.AddRow(new string[] {
                             "productSerial",
                             "SN-2024-001234"});
 #line 108
-    testRunner.When("I send a POST request to \"/api/hybrid/verify-authenticity\" with:", ((string)(null)), table2075, "When ");
+    testRunner.When("I send a POST request to \"/api/hybrid/verify-authenticity\" with:", ((string)(null)), table2038, "When ");
 #line hidden
 #line 112
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2076 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2039 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table2076.AddRow(new string[] {
+                table2039.AddRow(new string[] {
                             "authentic",
                             "boolean"});
-                table2076.AddRow(new string[] {
+                table2039.AddRow(new string[] {
                             "productInfo",
                             "object"});
-                table2076.AddRow(new string[] {
+                table2039.AddRow(new string[] {
                             "warranty",
                             "object"});
 #line 113
-    testRunner.And("the response should contain:", ((string)(null)), table2076, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table2039, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -596,38 +596,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2077 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2040 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table2077.AddRow(new string[] {
+                table2040.AddRow(new string[] {
                             "items",
                             "[{\"id\": \"kit-123\", \"qty\": 2}]"});
-                table2077.AddRow(new string[] {
+                table2040.AddRow(new string[] {
                             "destination",
                             "{\"zip\": \"90210\", \"country\": \"US\"}"});
-                table2077.AddRow(new string[] {
+                table2040.AddRow(new string[] {
                             "expedited",
                             "false"});
 #line 122
-    testRunner.When("I send a POST request to \"/api/hybrid/shipping-calculator\" with:", ((string)(null)), table2077, "When ");
+    testRunner.When("I send a POST request to \"/api/hybrid/shipping-calculator\" with:", ((string)(null)), table2040, "When ");
 #line hidden
 #line 127
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2078 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2041 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table2078.AddRow(new string[] {
+                table2041.AddRow(new string[] {
                             "shippingCost",
                             "number"});
-                table2078.AddRow(new string[] {
+                table2041.AddRow(new string[] {
                             "deliveryTime",
                             "string"});
-                table2078.AddRow(new string[] {
+                table2041.AddRow(new string[] {
                             "carriers",
                             "array"});
 #line 128
-    testRunner.And("the response should contain:", ((string)(null)), table2078, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table2041, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -668,23 +668,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 138
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2079 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2042 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table2079.AddRow(new string[] {
+                table2042.AddRow(new string[] {
                             "inStock",
                             "boolean"});
-                table2079.AddRow(new string[] {
+                table2042.AddRow(new string[] {
                             "quantity",
                             "number"});
-                table2079.AddRow(new string[] {
+                table2042.AddRow(new string[] {
                             "backorderDate",
                             "string"});
-                table2079.AddRow(new string[] {
+                table2042.AddRow(new string[] {
                             "locations",
                             "array"});
 #line 139
-    testRunner.And("the response should contain:", ((string)(null)), table2079, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table2042, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -728,41 +728,41 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 151
     testRunner.When("I scan the QR code on \"Rabbit\" card using mobile app", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2080 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2043 = new TechTalk.SpecFlow.Table(new string[] {
                             "Digital Feature",
                             "Content"});
-                table2080.AddRow(new string[] {
+                table2043.AddRow(new string[] {
                             "Audio model",
                             "Native speaker pronunciation"});
-                table2080.AddRow(new string[] {
+                table2043.AddRow(new string[] {
                             "Video model",
                             "Mouth position close-up"});
-                table2080.AddRow(new string[] {
+                table2043.AddRow(new string[] {
                             "Practice games",
                             "Digital activities with card"});
-                table2080.AddRow(new string[] {
+                table2043.AddRow(new string[] {
                             "Progress tracking",
                             "Log correct/incorrect"});
 #line 152
-    testRunner.Then("I should receive digital content within 3 seconds:", ((string)(null)), table2080, "Then ");
+    testRunner.Then("I should receive digital content within 3 seconds:", ((string)(null)), table2043, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2081 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2044 = new TechTalk.SpecFlow.Table(new string[] {
                             "Action",
                             "Result"});
-                table2081.AddRow(new string[] {
+                table2044.AddRow(new string[] {
                             "Record student",
                             "Compare to model"});
-                table2081.AddRow(new string[] {
+                table2044.AddRow(new string[] {
                             "Play minimal pairs",
                             "Rabbit vs Wabbit contrast"});
-                table2081.AddRow(new string[] {
+                table2044.AddRow(new string[] {
                             "Access home version",
                             "Parent scans same code"});
-                table2081.AddRow(new string[] {
+                table2044.AddRow(new string[] {
                             "Track usage",
                             "Automatic session logging"});
 #line 158
-    testRunner.And("I should be able to:", ((string)(null)), table2081, "And ");
+    testRunner.And("I should be able to:", ((string)(null)), table2044, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -803,65 +803,65 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 168
     testRunner.When("I access the print-on-demand service", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2082 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2045 = new TechTalk.SpecFlow.Table(new string[] {
                             "Customization",
                             "Details"});
-                table2082.AddRow(new string[] {
+                table2045.AddRow(new string[] {
                             "Student name",
                             "\"Jake\'s Communication Book\""});
-                table2082.AddRow(new string[] {
+                table2045.AddRow(new string[] {
                             "Core vocabulary",
                             "48 most-used words"});
-                table2082.AddRow(new string[] {
+                table2045.AddRow(new string[] {
                             "Personal photos",
                             "Family members, favorite items"});
-                table2082.AddRow(new string[] {
+                table2045.AddRow(new string[] {
                             "Size/binding",
                             "8.5x11\", spiral bound"});
-                table2082.AddRow(new string[] {
+                table2045.AddRow(new string[] {
                             "Lamination",
                             "Heavy duty, wipeable"});
 #line 169
-    testRunner.And("I specify customization options:", ((string)(null)), table2082, "And ");
+    testRunner.And("I specify customization options:", ((string)(null)), table2045, "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2083 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2046 = new TechTalk.SpecFlow.Table(new string[] {
                             "Feature",
                             "Appearance"});
-                table2083.AddRow(new string[] {
+                table2046.AddRow(new string[] {
                             "Cover page",
                             "Student name and photo"});
-                table2083.AddRow(new string[] {
+                table2046.AddRow(new string[] {
                             "Organization",
                             "Tabbed sections by category"});
-                table2083.AddRow(new string[] {
+                table2046.AddRow(new string[] {
                             "Symbols",
                             "Consistent with digital use"});
-                table2083.AddRow(new string[] {
+                table2046.AddRow(new string[] {
                             "Durability",
                             "Reinforced corners"});
 #line 176
-    testRunner.Then("print preview should display:", ((string)(null)), table2083, "Then ");
+    testRunner.Then("print preview should display:", ((string)(null)), table2046, "Then ");
 #line hidden
 #line 182
     testRunner.When("I complete the order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2084 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2047 = new TechTalk.SpecFlow.Table(new string[] {
                             "Order Detail",
                             "Information"});
-                table2084.AddRow(new string[] {
+                table2047.AddRow(new string[] {
                             "Production time",
                             "3-5 business days"});
-                table2084.AddRow(new string[] {
+                table2047.AddRow(new string[] {
                             "Shipping options",
                             "Standard or expedited"});
-                table2084.AddRow(new string[] {
+                table2047.AddRow(new string[] {
                             "Cost breakdown",
                             "Materials, printing, shipping"});
-                table2084.AddRow(new string[] {
+                table2047.AddRow(new string[] {
                             "Digital copy",
                             "Included for backup"});
 #line 183
-    testRunner.Then("I should see order confirmation with:", ((string)(null)), table2084, "Then ");
+    testRunner.Then("I should see order confirmation with:", ((string)(null)), table2047, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -905,59 +905,59 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 194
     testRunner.When("student points tablet camera at worksheet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2085 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2048 = new TechTalk.SpecFlow.Table(new string[] {
                             "Worksheet Type",
                             "AR Enhancement"});
-                table2085.AddRow(new string[] {
+                table2048.AddRow(new string[] {
                             "Anatomy diagram",
                             "3D rotating body systems"});
-                table2085.AddRow(new string[] {
+                table2048.AddRow(new string[] {
                             "Math problems",
                             "Animated problem solving"});
-                table2085.AddRow(new string[] {
+                table2048.AddRow(new string[] {
                             "Handwriting",
                             "Tracing guides appear"});
-                table2085.AddRow(new string[] {
+                table2048.AddRow(new string[] {
                             "Categories",
                             "Items float to correct boxes"});
 #line 195
-    testRunner.Then("AR features should activate within 5 seconds:", ((string)(null)), table2085, "Then ");
+    testRunner.Then("AR features should activate within 5 seconds:", ((string)(null)), table2048, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2086 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2049 = new TechTalk.SpecFlow.Table(new string[] {
                             "Feature",
                             "Function"});
-                table2086.AddRow(new string[] {
+                table2049.AddRow(new string[] {
                             "Touch targets",
                             "Tap to hear names/sounds"});
-                table2086.AddRow(new string[] {
+                table2049.AddRow(new string[] {
                             "Animation",
                             "Show correct technique"});
-                table2086.AddRow(new string[] {
+                table2049.AddRow(new string[] {
                             "Rewards",
                             "Virtual stickers when complete"});
-                table2086.AddRow(new string[] {
+                table2049.AddRow(new string[] {
                             "Data capture",
                             "Track accuracy and time"});
 #line 201
-    testRunner.And("interaction should include:", ((string)(null)), table2086, "And ");
+    testRunner.And("interaction should include:", ((string)(null)), table2049, "And ");
 #line hidden
 #line 207
     testRunner.When("worksheet is completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2087 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2050 = new TechTalk.SpecFlow.Table(new string[] {
                             "Action",
                             "Result"});
-                table2087.AddRow(new string[] {
+                table2050.AddRow(new string[] {
                             "Save work",
                             "Digital copy of completed work"});
-                table2087.AddRow(new string[] {
+                table2050.AddRow(new string[] {
                             "Generate report",
                             "Performance summary"});
-                table2087.AddRow(new string[] {
+                table2050.AddRow(new string[] {
                             "Unlock reward",
                             "New AR character or game"});
 #line 208
-    testRunner.Then("AR app should:", ((string)(null)), table2087, "Then ");
+    testRunner.Then("AR app should:", ((string)(null)), table2050, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -998,65 +998,65 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 217
     testRunner.When("I view \"Sensory Diet Starter Kit\" bundle", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2088 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2051 = new TechTalk.SpecFlow.Table(new string[] {
                             "Physical Items",
                             "Digital Components"});
-                table2088.AddRow(new string[] {
+                table2051.AddRow(new string[] {
                             "Therapy putty",
                             "Exercise videos"});
-                table2088.AddRow(new string[] {
+                table2051.AddRow(new string[] {
                             "Balance disc",
                             "Activity cards (printable)"});
-                table2088.AddRow(new string[] {
+                table2051.AddRow(new string[] {
                             "Sensory balls",
                             "Progress tracking sheets"});
-                table2088.AddRow(new string[] {
+                table2051.AddRow(new string[] {
                             "Visual timers",
                             "Digital timer app access"});
-                table2088.AddRow(new string[] {
+                table2051.AddRow(new string[] {
                             "Instruction manual",
                             "Online video course"});
 #line 218
-    testRunner.Then("bundle should include:", ((string)(null)), table2088, "Then ");
+    testRunner.Then("bundle should include:", ((string)(null)), table2051, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2089 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2052 = new TechTalk.SpecFlow.Table(new string[] {
                             "Feature",
                             "Access"});
-                table2089.AddRow(new string[] {
+                table2052.AddRow(new string[] {
                             "Immediate access",
                             "Download upon purchase"});
-                table2089.AddRow(new string[] {
+                table2052.AddRow(new string[] {
                             "Updates",
                             "New activities added monthly"});
-                table2089.AddRow(new string[] {
+                table2052.AddRow(new string[] {
                             "Community",
                             "Private user group"});
-                table2089.AddRow(new string[] {
+                table2052.AddRow(new string[] {
                             "Certification",
                             "Complete course for CEUs"});
 #line 225
-    testRunner.And("digital components should provide:", ((string)(null)), table2089, "And ");
+    testRunner.And("digital components should provide:", ((string)(null)), table2052, "And ");
 #line hidden
 #line 231
     testRunner.When("I purchase bundle", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2090 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2053 = new TechTalk.SpecFlow.Table(new string[] {
                             "Component",
                             "Delivery"});
-                table2090.AddRow(new string[] {
+                table2053.AddRow(new string[] {
                             "Physical items",
                             "Shipped within 2 days"});
-                table2090.AddRow(new string[] {
+                table2053.AddRow(new string[] {
                             "Digital access",
                             "Immediate email with login"});
-                table2090.AddRow(new string[] {
+                table2053.AddRow(new string[] {
                             "QR cards",
                             "Link physical to digital"});
-                table2090.AddRow(new string[] {
+                table2053.AddRow(new string[] {
                             "Support",
                             "Setup video call included"});
 #line 232
-    testRunner.Then("fulfillment should include:", ((string)(null)), table2090, "Then ");
+    testRunner.Then("fulfillment should include:", ((string)(null)), table2053, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1100,44 +1100,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 243
     testRunner.When("I scan QR codes to access digital content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2091 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2054 = new TechTalk.SpecFlow.Table(new string[] {
                             "Offline Feature",
                             "Capability"});
-                table2091.AddRow(new string[] {
+                table2054.AddRow(new string[] {
                             "Cache content",
                             "Download for offline use"});
-                table2091.AddRow(new string[] {
+                table2054.AddRow(new string[] {
                             "Track progress",
                             "Store locally until sync"});
-                table2091.AddRow(new string[] {
+                table2054.AddRow(new string[] {
                             "Audio playback",
                             "Work without internet"});
-                table2091.AddRow(new string[] {
+                table2054.AddRow(new string[] {
                             "Save recordings",
                             "Store student responses"});
 #line 244
-    testRunner.Then("the app should:", ((string)(null)), table2091, "Then ");
+    testRunner.Then("the app should:", ((string)(null)), table2054, "Then ");
 #line hidden
 #line 250
     testRunner.When("internet connection is restored", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2092 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2055 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sync Action",
                             "Result"});
-                table2092.AddRow(new string[] {
+                table2055.AddRow(new string[] {
                             "Upload progress",
                             "Send to therapist dashboard"});
-                table2092.AddRow(new string[] {
+                table2055.AddRow(new string[] {
                             "Download updates",
                             "Get new content automatically"});
-                table2092.AddRow(new string[] {
+                table2055.AddRow(new string[] {
                             "Backup recordings",
                             "Store in secure cloud"});
-                table2092.AddRow(new string[] {
+                table2055.AddRow(new string[] {
                             "Merge conflicts",
                             "Handle duplicate entries"});
 #line 251
-    testRunner.Then("the app should:", ((string)(null)), table2092, "Then ");
+    testRunner.Then("the app should:", ((string)(null)), table2055, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1178,65 +1178,65 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 261
     testRunner.When("I list \"Custom Visual Schedule Cards\" for sale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2093 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2056 = new TechTalk.SpecFlow.Table(new string[] {
                             "Option",
                             "Choices"});
-                table2093.AddRow(new string[] {
+                table2056.AddRow(new string[] {
                             "Size",
                             "2x2\", 3x3\", 4x4\""});
-                table2093.AddRow(new string[] {
+                table2056.AddRow(new string[] {
                             "Quantity",
                             "10, 20, 50 cards"});
-                table2093.AddRow(new string[] {
+                table2056.AddRow(new string[] {
                             "Lamination",
                             "Standard, heavy duty"});
-                table2093.AddRow(new string[] {
+                table2056.AddRow(new string[] {
                             "Customization",
                             "Add student name"});
 #line 262
-    testRunner.And("I configure product options:", ((string)(null)), table2093, "And ");
+    testRunner.And("I configure product options:", ((string)(null)), table2056, "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2094 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2057 = new TechTalk.SpecFlow.Table(new string[] {
                             "Feature",
                             "Implementation"});
-                table2094.AddRow(new string[] {
+                table2057.AddRow(new string[] {
                             "Calculate shipping",
                             "Based on size and weight"});
-                table2094.AddRow(new string[] {
+                table2057.AddRow(new string[] {
                             "Manage inventory",
                             "Track stock levels"});
-                table2094.AddRow(new string[] {
+                table2057.AddRow(new string[] {
                             "Handle orders",
                             "Send to print fulfillment"});
-                table2094.AddRow(new string[] {
+                table2057.AddRow(new string[] {
                             "Track delivery",
                             "Provide tracking numbers"});
 #line 268
-    testRunner.Then("the system should:", ((string)(null)), table2094, "Then ");
+    testRunner.Then("the system should:", ((string)(null)), table2057, "Then ");
 #line hidden
 #line 274
     testRunner.When("customer places order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2095 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2058 = new TechTalk.SpecFlow.Table(new string[] {
                             "Step",
                             "Timeline"});
-                table2095.AddRow(new string[] {
+                table2058.AddRow(new string[] {
                             "Order confirmation",
                             "Immediate"});
-                table2095.AddRow(new string[] {
+                table2058.AddRow(new string[] {
                             "Production start",
                             "Within 24 hours"});
-                table2095.AddRow(new string[] {
+                table2058.AddRow(new string[] {
                             "Quality check",
                             "Before shipping"});
-                table2095.AddRow(new string[] {
+                table2058.AddRow(new string[] {
                             "Shipping",
                             "2-3 business days production"});
-                table2095.AddRow(new string[] {
+                table2058.AddRow(new string[] {
                             "Delivery tracking",
                             "Updates sent to customer"});
 #line 275
-    testRunner.Then("fulfillment process should:", ((string)(null)), table2095, "Then ");
+    testRunner.Then("fulfillment process should:", ((string)(null)), table2058, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1277,62 +1277,62 @@ namespace UPTRMS.Api.Tests.BDD.Features.Resources
 #line 286
     testRunner.When("students interact with AR markers over multiple sessions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2096 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2059 = new TechTalk.SpecFlow.Table(new string[] {
                             "Performance Metric",
                             "Measurement"});
-                table2096.AddRow(new string[] {
+                table2059.AddRow(new string[] {
                             "Recognition speed",
                             "Time to detect marker"});
-                table2096.AddRow(new string[] {
+                table2059.AddRow(new string[] {
                             "Tracking stability",
                             "How well marker stays tracked"});
-                table2096.AddRow(new string[] {
+                table2059.AddRow(new string[] {
                             "User engagement",
                             "Time spent with AR content"});
-                table2096.AddRow(new string[] {
+                table2059.AddRow(new string[] {
                             "Completion rates",
                             "Activities finished"});
 #line 287
-    testRunner.Then("the system should track performance metrics:", ((string)(null)), table2096, "Then ");
+    testRunner.Then("the system should track performance metrics:", ((string)(null)), table2059, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2097 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2060 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics",
                             "Purpose"});
-                table2097.AddRow(new string[] {
+                table2060.AddRow(new string[] {
                             "Marker effectiveness",
                             "Which markers work best"});
-                table2097.AddRow(new string[] {
+                table2060.AddRow(new string[] {
                             "Device performance",
                             "AR capability by device"});
-                table2097.AddRow(new string[] {
+                table2060.AddRow(new string[] {
                             "Usage patterns",
                             "When/how AR is used"});
-                table2097.AddRow(new string[] {
+                table2060.AddRow(new string[] {
                             "Student outcomes",
                             "Learning improvement with AR"});
 #line 293
-    testRunner.And("provide analytics on:", ((string)(null)), table2097, "And ");
+    testRunner.And("provide analytics on:", ((string)(null)), table2060, "And ");
 #line hidden
 #line 299
     testRunner.When("performance issues are detected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2098 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2061 = new TechTalk.SpecFlow.Table(new string[] {
                             "Issue Type",
                             "Auto-Response"});
-                table2098.AddRow(new string[] {
+                table2061.AddRow(new string[] {
                             "Poor tracking",
                             "Suggest lighting adjustments"});
-                table2098.AddRow(new string[] {
+                table2061.AddRow(new string[] {
                             "Slow recognition",
                             "Recommend marker cleaning"});
-                table2098.AddRow(new string[] {
+                table2061.AddRow(new string[] {
                             "Low engagement",
                             "Suggest alternative activities"});
-                table2098.AddRow(new string[] {
+                table2061.AddRow(new string[] {
                             "Device limitations",
                             "Provide compatibility warnings"});
 #line 300
-    testRunner.Then("the system should:", ((string)(null)), table2098, "Then ");
+    testRunner.Then("the system should:", ((string)(null)), table2061, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

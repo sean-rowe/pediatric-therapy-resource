@@ -139,50 +139,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 17
     testRunner.And("SMS messaging is optimized for therapy platform use", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1440 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1403 = new TechTalk.SpecFlow.Table(new string[] {
                             "Communication Type",
                             "Use Case",
                             "Delivery Target",
                             "Compliance Requirement",
                             "Message Content"});
-                table1440.AddRow(new string[] {
+                table1403.AddRow(new string[] {
                             "Appointment reminders",
                             "Therapy session reminder",
                             "95% delivery rate",
                             "HIPAA compliant",
                             "Protected health info"});
-                table1440.AddRow(new string[] {
+                table1403.AddRow(new string[] {
                             "Progress notifications",
                             "Goal achievement update",
                             "98% delivery rate",
                             "FERPA compliant",
                             "Educational progress"});
-                table1440.AddRow(new string[] {
+                table1403.AddRow(new string[] {
                             "Emergency alerts",
                             "System maintenance notice",
                             "99% delivery rate",
                             "Immediate delivery",
                             "Service status"});
-                table1440.AddRow(new string[] {
+                table1403.AddRow(new string[] {
                             "Verification codes",
                             "Account security",
                             "99.5% delivery rate",
                             "Short expiration",
                             "Time-sensitive codes"});
-                table1440.AddRow(new string[] {
+                table1403.AddRow(new string[] {
                             "Parent communications",
                             "Homework assignments",
                             "95% delivery rate",
                             "COPPA compliant",
                             "Student activity"});
-                table1440.AddRow(new string[] {
+                table1403.AddRow(new string[] {
                             "Two-factor auth",
                             "Login security",
                             "99.9% delivery rate",
                             "Security critical",
                             "Authentication codes"});
 #line 18
-    testRunner.When("Twilio integration is tested across communication types:", ((string)(null)), table1440, "When ");
+    testRunner.When("Twilio integration is tested across communication types:", ((string)(null)), table1403, "When ");
 #line hidden
 #line 26
     testRunner.Then("Twilio should deliver all message types reliably", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -237,50 +237,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 34
     testRunner.And("email templates are optimized for therapy communications", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1441 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1404 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email Type",
                             "Template Usage",
                             "Delivery Priority",
                             "Open Rate Target",
                             "Bounce Rate Limit"});
-                table1441.AddRow(new string[] {
+                table1404.AddRow(new string[] {
                             "Welcome emails",
                             "User onboarding",
                             "Standard",
                             ">40%",
                             "<2%"});
-                table1441.AddRow(new string[] {
+                table1404.AddRow(new string[] {
                             "Password resets",
                             "Security workflow",
                             "High priority",
                             ">60%",
                             "<1%"});
-                table1441.AddRow(new string[] {
+                table1404.AddRow(new string[] {
                             "Subscription updates",
                             "Billing notifications",
                             "Standard",
                             ">35%",
                             "<3%"});
-                table1441.AddRow(new string[] {
+                table1404.AddRow(new string[] {
                             "Course completions",
                             "Achievement notifications",
                             "Standard",
                             ">50%",
                             "<2%"});
-                table1441.AddRow(new string[] {
+                table1404.AddRow(new string[] {
                             "System notifications",
                             "Platform updates",
                             "High priority",
                             ">45%",
                             "<1.5%"});
-                table1441.AddRow(new string[] {
+                table1404.AddRow(new string[] {
                             "Support communications",
                             "Help desk responses",
                             "High priority",
                             ">55%",
                             "<1%"});
 #line 35
-    testRunner.When("SendGrid integration is tested:", ((string)(null)), table1441, "When ");
+    testRunner.When("SendGrid integration is tested:", ((string)(null)), table1404, "When ");
 #line hidden
 #line 43
     testRunner.Then("SendGrid should deliver emails with high reliability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -335,50 +335,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 51
     testRunner.And("support workflows are optimized for therapy platform", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1442 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1405 = new TechTalk.SpecFlow.Table(new string[] {
                             "Support Channel",
                             "Response Time Target",
                             "Resolution Rate Target",
                             "Satisfaction Target",
                             "Integration Features"});
-                table1442.AddRow(new string[] {
+                table1405.AddRow(new string[] {
                             "Live chat",
                             "<2 minutes first response",
                             ">85% same-session",
                             ">4.5/5 rating",
                             "Auto-routing"});
-                table1442.AddRow(new string[] {
+                table1405.AddRow(new string[] {
                             "Email support",
                             "<4 hours business time",
                             ">90% within 24 hours",
                             ">4.7/5 rating",
                             "Ticket management"});
-                table1442.AddRow(new string[] {
+                table1405.AddRow(new string[] {
                             "Help articles",
                             "Self-service instant",
                             ">70% self-resolution",
                             ">4.0/5 rating",
                             "Search optimization"});
-                table1442.AddRow(new string[] {
+                table1405.AddRow(new string[] {
                             "Video support",
                             "<30 minutes scheduling",
                             ">95% single session",
                             ">4.8/5 rating",
                             "Screen sharing"});
-                table1442.AddRow(new string[] {
+                table1405.AddRow(new string[] {
                             "Phone support",
                             "<1 minute wait time",
                             ">80% first call",
                             ">4.6/5 rating",
                             "Call routing"});
-                table1442.AddRow(new string[] {
+                table1405.AddRow(new string[] {
                             "Community forum",
                             "<8 hours peer response",
                             ">60% peer resolution",
                             ">4.2/5 rating",
                             "Moderation tools"});
 #line 52
-    testRunner.When("Intercom integration is tested:", ((string)(null)), table1442, "When ");
+    testRunner.When("Intercom integration is tested:", ((string)(null)), table1405, "When ");
 #line hidden
 #line 60
     testRunner.Then("Intercom should provide comprehensive support capabilities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -433,50 +433,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 68
     testRunner.And("message routing is optimized for user preferences", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1443 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1406 = new TechTalk.SpecFlow.Table(new string[] {
                             "Scenario",
                             "Primary Channel",
                             "Fallback Channel",
                             "User Preference",
                             "Delivery Confirmation"});
-                table1443.AddRow(new string[] {
+                table1406.AddRow(new string[] {
                             "Critical system alerts",
                             "Email",
                             "SMS",
                             "Immediate delivery",
                             "Required"});
-                table1443.AddRow(new string[] {
+                table1406.AddRow(new string[] {
                             "Appointment reminders",
                             "SMS",
                             "Email",
                             "User selected",
                             "Optional"});
-                table1443.AddRow(new string[] {
+                table1406.AddRow(new string[] {
                             "Marketing updates",
                             "Email",
                             "In-app notification",
                             "Opt-in only",
                             "Tracking enabled"});
-                table1443.AddRow(new string[] {
+                table1406.AddRow(new string[] {
                             "Support responses",
                             "Intercom",
                             "Email",
                             "Channel of origin",
                             "Automatic"});
-                table1443.AddRow(new string[] {
+                table1406.AddRow(new string[] {
                             "Emergency notifications",
                             "SMS",
                             "Voice call",
                             "All channels",
                             "Mandatory"});
-                table1443.AddRow(new string[] {
+                table1406.AddRow(new string[] {
                             "Progress reports",
                             "Email",
                             "Parent portal",
                             "Parent preference",
                             "Available"});
 #line 69
-    testRunner.When("multi-channel communication is tested:", ((string)(null)), table1443, "When ");
+    testRunner.When("multi-channel communication is tested:", ((string)(null)), table1406, "When ");
 #line hidden
 #line 77
     testRunner.Then("multi-channel routing should work seamlessly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -531,50 +531,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 86
     testRunner.And("personalization engines enhance message relevance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1444 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1407 = new TechTalk.SpecFlow.Table(new string[] {
                             "Template Type",
                             "Dynamic Elements",
                             "Personalization Level",
                             "Language Support",
                             "A/B Testing"});
-                table1444.AddRow(new string[] {
+                table1407.AddRow(new string[] {
                             "Welcome sequences",
                             "User name, signup source",
                             "High personalization",
                             "10+ languages",
                             "Subject line tests"});
-                table1444.AddRow(new string[] {
+                table1407.AddRow(new string[] {
                             "Progress notifications",
                             "Student name, achievements",
                             "Medium personalization",
                             "5+ languages",
                             "Content variation"});
-                table1444.AddRow(new string[] {
+                table1407.AddRow(new string[] {
                             "Billing reminders",
                             "Amount, due date",
                             "Low personalization",
                             "3+ languages",
                             "Timing tests"});
-                table1444.AddRow(new string[] {
+                table1407.AddRow(new string[] {
                             "Feature announcements",
                             "User tier, usage patterns",
                             "High personalization",
                             "10+ languages",
                             "Design tests"});
-                table1444.AddRow(new string[] {
+                table1407.AddRow(new string[] {
                             "Support follow-ups",
                             "Ticket details, satisfaction",
                             "Medium personalization",
                             "5+ languages",
                             "Response tests"});
-                table1444.AddRow(new string[] {
+                table1407.AddRow(new string[] {
                             "Onboarding series",
                             "Role, goals, preferences",
                             "High personalization",
                             "10+ languages",
                             "Flow tests"});
 #line 87
-    testRunner.When("template management is tested:", ((string)(null)), table1444, "When ");
+    testRunner.When("template management is tested:", ((string)(null)), table1407, "When ");
 #line hidden
 #line 95
     testRunner.Then("templates should render dynamic content correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -629,50 +629,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 103
     testRunner.And("consent management tracks user preferences", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1445 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1408 = new TechTalk.SpecFlow.Table(new string[] {
                             "Regulation",
                             "Compliance Requirement",
                             "Implementation Method",
                             "Consent Tracking",
                             "Audit Requirements"});
-                table1445.AddRow(new string[] {
+                table1408.AddRow(new string[] {
                             "CAN-SPAM Act",
                             "Unsubscribe mechanism",
                             "One-click unsubscribe",
                             "Email preferences",
                             "Suppression list logs"});
-                table1445.AddRow(new string[] {
+                table1408.AddRow(new string[] {
                             "GDPR",
                             "Explicit consent",
                             "Double opt-in",
                             "Granular permissions",
                             "Consent timestamps"});
-                table1445.AddRow(new string[] {
+                table1408.AddRow(new string[] {
                             "TCPA",
                             "SMS opt-in verification",
                             "Confirmed opt-in",
                             "SMS preferences",
                             "Opt-in records"});
-                table1445.AddRow(new string[] {
+                table1408.AddRow(new string[] {
                             "HIPAA",
                             "Protected communication",
                             "Encrypted messaging",
                             "Healthcare consent",
                             "Access audit trails"});
-                table1445.AddRow(new string[] {
+                table1408.AddRow(new string[] {
                             "COPPA",
                             "Parental consent",
                             "Parent verification",
                             "Child communication",
                             "Age verification logs"});
-                table1445.AddRow(new string[] {
+                table1408.AddRow(new string[] {
                             "FERPA",
                             "Educational privacy",
                             "Role-based access",
                             "Student data consent",
                             "Educational records"});
 #line 104
-    testRunner.When("communication compliance is tested:", ((string)(null)), table1445, "When ");
+    testRunner.When("communication compliance is tested:", ((string)(null)), table1408, "When ");
 #line hidden
 #line 112
     testRunner.Then("compliance requirements should be met automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -727,50 +727,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 120
     testRunner.And("trigger systems respond to platform events", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1446 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1409 = new TechTalk.SpecFlow.Table(new string[] {
                             "Trigger Event",
                             "Automation Workflow",
                             "Timing Configuration",
                             "Personalization",
                             "Success Metrics"});
-                table1446.AddRow(new string[] {
+                table1409.AddRow(new string[] {
                             "New user registration",
                             "Welcome series (5 emails)",
                             "Days 0, 1, 3, 7, 14",
                             "Role-based content",
                             ">60% series completion"});
-                table1446.AddRow(new string[] {
+                table1409.AddRow(new string[] {
                             "Subscription expiring",
                             "Renewal reminder series",
                             "Days 30, 14, 7, 1",
                             "Usage-based messaging",
                             ">25% renewal rate"});
-                table1446.AddRow(new string[] {
+                table1409.AddRow(new string[] {
                             "Goal achievement",
                             "Celebration + next steps",
                             "Immediate + 1 day",
                             "Achievement-specific",
                             ">80% engagement"});
-                table1446.AddRow(new string[] {
+                table1409.AddRow(new string[] {
                             "Support ticket created",
                             "Auto-response + routing",
                             "<5 minutes",
                             "Issue-category based",
                             ">95% routing accuracy"});
-                table1446.AddRow(new string[] {
+                table1409.AddRow(new string[] {
                             "Payment failure",
                             "Dunning sequence",
                             "Days 1, 3, 7, 14",
                             "Payment method focused",
                             ">40% recovery rate"});
-                table1446.AddRow(new string[] {
+                table1409.AddRow(new string[] {
                             "Course completion",
                             "Certificate + next course",
                             "Immediate + 3 days",
                             "Learning path based",
                             ">35% next course rate"});
 #line 121
-    testRunner.When("automation workflows are tested:", ((string)(null)), table1446, "When ");
+    testRunner.When("automation workflows are tested:", ((string)(null)), table1409, "When ");
 #line hidden
 #line 129
     testRunner.Then("automation workflows should execute reliably", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -825,50 +825,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 138
     testRunner.And("performance targets must be maintained under load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1447 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1410 = new TechTalk.SpecFlow.Table(new string[] {
                             "Volume Scenario",
                             "Messages per Hour",
                             "Processing Latency",
                             "Delivery Success Rate",
                             "Error Rate Tolerance"});
-                table1447.AddRow(new string[] {
+                table1410.AddRow(new string[] {
                             "Normal operations",
                             "10,000 messages",
                             "<30 seconds",
                             ">99%",
                             "<0.5%"});
-                table1447.AddRow(new string[] {
+                table1410.AddRow(new string[] {
                             "Peak usage periods",
                             "50,000 messages",
                             "<2 minutes",
                             ">98.5%",
                             "<1%"});
-                table1447.AddRow(new string[] {
+                table1410.AddRow(new string[] {
                             "Marketing campaigns",
                             "100,000 messages",
                             "<5 minutes",
                             ">98%",
                             "<2%"});
-                table1447.AddRow(new string[] {
+                table1410.AddRow(new string[] {
                             "Emergency broadcasts",
                             "250,000 messages",
                             "<10 minutes",
                             ">97%",
                             "<3%"});
-                table1447.AddRow(new string[] {
+                table1410.AddRow(new string[] {
                             "System stress test",
                             "500,000 messages",
                             "<30 minutes",
                             ">95%",
                             "<5%"});
-                table1447.AddRow(new string[] {
+                table1410.AddRow(new string[] {
                             "Sustained high load",
                             "25,000 msg/hour x 8hr",
                             "<1 minute average",
                             ">98.5%",
                             "<1.5%"});
 #line 139
-    testRunner.When("communication performance is tested:", ((string)(null)), table1447, "When ");
+    testRunner.When("communication performance is tested:", ((string)(null)), table1410, "When ");
 #line hidden
 #line 147
     testRunner.Then("communication services should scale to handle peak loads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -920,50 +920,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 154
     testRunner.Given("communication services require continuous monitoring", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1448 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1411 = new TechTalk.SpecFlow.Table(new string[] {
                             "Monitoring Aspect",
                             "Metrics Tracked",
                             "Alert Thresholds",
                             "Response Actions",
                             "SLA Requirements"});
-                table1448.AddRow(new string[] {
+                table1411.AddRow(new string[] {
                             "Delivery success rates",
                             "SMS/email delivery %",
                             "<95% success rate",
                             "Investigate delivery",
                             "99% uptime"});
-                table1448.AddRow(new string[] {
+                table1411.AddRow(new string[] {
                             "Response time tracking",
                             "API response latency",
                             ">5 second responses",
                             "Performance tuning",
                             "<2 sec average"});
-                table1448.AddRow(new string[] {
+                table1411.AddRow(new string[] {
                             "Template performance",
                             "Open/click rates",
                             "<50% of baseline",
                             "Template optimization",
                             "Baseline maintenance"});
-                table1448.AddRow(new string[] {
+                table1411.AddRow(new string[] {
                             "Bounce rate monitoring",
                             "Hard/soft bounces",
                             ">5% bounce rate",
                             "List hygiene",
                             "<3% bounce rate"});
-                table1448.AddRow(new string[] {
+                table1411.AddRow(new string[] {
                             "Compliance violations",
                             "Opt-out failures",
                             "Any compliance issue",
                             "Immediate correction",
                             "100% compliance"});
-                table1448.AddRow(new string[] {
+                table1411.AddRow(new string[] {
                             "Volume anomalies",
                             "Unusual sending patterns",
                             "3x normal volume",
                             "Fraud investigation",
                             "Prevent abuse"});
 #line 155
-    testRunner.When("communication monitoring is tested:", ((string)(null)), table1448, "When ");
+    testRunner.When("communication monitoring is tested:", ((string)(null)), table1411, "When ");
 #line hidden
 #line 163
     testRunner.Then("monitoring should provide comprehensive visibility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1015,50 +1015,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 170
     testRunner.Given("communication services may experience outages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1449 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1412 = new TechTalk.SpecFlow.Table(new string[] {
                             "Primary Service Failure",
                             "Backup Strategy",
                             "Degraded Functionality",
                             "Recovery Time",
                             "Data Protection"});
-                table1449.AddRow(new string[] {
+                table1412.AddRow(new string[] {
                             "Twilio SMS outage",
                             "Alternative SMS provider",
                             "Reduced delivery speed",
                             "<5 minutes",
                             "Queue messages"});
-                table1449.AddRow(new string[] {
+                table1412.AddRow(new string[] {
                             "SendGrid email down",
                             "Amazon SES backup",
                             "Different templates",
                             "<10 minutes",
                             "Email queue preserved"});
-                table1449.AddRow(new string[] {
+                table1412.AddRow(new string[] {
                             "Intercom chat offline",
                             "Fallback to email",
                             "No real-time chat",
                             "<2 minutes",
                             "Conversation history"});
-                table1449.AddRow(new string[] {
+                table1412.AddRow(new string[] {
                             "Template service down",
                             "Static template fallback",
                             "Basic formatting",
                             "<1 minute",
                             "Template versions"});
-                table1449.AddRow(new string[] {
+                table1412.AddRow(new string[] {
                             "Voice service failure",
                             "SMS fallback only",
                             "No voice calls",
                             "<30 seconds",
                             "Call queue management"});
-                table1449.AddRow(new string[] {
+                table1412.AddRow(new string[] {
                             "Analytics service down",
                             "Basic tracking only",
                             "Limited insights",
                             "<15 minutes",
                             "Data buffering"});
 #line 171
-    testRunner.When("communication failover scenarios are tested:", ((string)(null)), table1449, "When ");
+    testRunner.When("communication failover scenarios are tested:", ((string)(null)), table1412, "When ");
 #line hidden
 #line 179
     testRunner.Then("failover strategies should maintain communication capability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1110,50 +1110,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 187
     testRunner.Given("communication delivery may fail for various reasons", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1450 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1413 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failure Type",
                             "Cause",
                             "Recovery Strategy",
                             "User Communication",
                             "Data Management"});
-                table1450.AddRow(new string[] {
+                table1413.AddRow(new string[] {
                             "Hard email bounce",
                             "Invalid email address",
                             "Suppress future sends",
                             "Update profile prompt",
                             "Remove from lists"});
-                table1450.AddRow(new string[] {
+                table1413.AddRow(new string[] {
                             "Soft email bounce",
                             "Temporary issue",
                             "Retry with backoff",
                             "None required",
                             "Track bounce counts"});
-                table1450.AddRow(new string[] {
+                table1413.AddRow(new string[] {
                             "SMS delivery failure",
                             "Invalid phone number",
                             "Fallback to email",
                             "Email notification",
                             "Update contact info"});
-                table1450.AddRow(new string[] {
+                table1413.AddRow(new string[] {
                             "Rate limit exceeded",
                             "Too many messages",
                             "Queue and delay",
                             "Delivery delay notice",
                             "Respect limits"});
-                table1450.AddRow(new string[] {
+                table1413.AddRow(new string[] {
                             "Content blocked",
                             "Spam filter triggered",
                             "Modify content",
                             "Alternative delivery",
                             "Content analysis"});
-                table1450.AddRow(new string[] {
+                table1413.AddRow(new string[] {
                             "Service quota exceeded",
                             "Monthly limit reached",
                             "Switch to backup",
                             "Service limitation",
                             "Usage monitoring"});
 #line 188
-    testRunner.When("delivery failure scenarios are tested:", ((string)(null)), table1450, "When ");
+    testRunner.When("delivery failure scenarios are tested:", ((string)(null)), table1413, "When ");
 #line hidden
 #line 196
     testRunner.Then("delivery failures should be handled gracefully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1205,50 +1205,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 203
     testRunner.Given("communication content must meet regulatory standards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1451 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1414 = new TechTalk.SpecFlow.Table(new string[] {
                             "Compliance Issue",
                             "Detection Method",
                             "Response Action",
                             "User Impact",
                             "Prevention Strategy"});
-                table1451.AddRow(new string[] {
+                table1414.AddRow(new string[] {
                             "Spam-like content",
                             "Content analysis",
                             "Block and modify",
                             "Delayed delivery",
                             "Content guidelines"});
-                table1451.AddRow(new string[] {
+                table1414.AddRow(new string[] {
                             "PHI in messages",
                             "Automated scanning",
                             "Encrypt or remove",
                             "Secure delivery",
                             "Training and templates"});
-                table1451.AddRow(new string[] {
+                table1414.AddRow(new string[] {
                             "Inappropriate language",
                             "Content filters",
                             "Review and edit",
                             "Manual approval",
                             "Approval workflows"});
-                table1451.AddRow(new string[] {
+                table1414.AddRow(new string[] {
                             "Missing unsubscribe",
                             "Template validation",
                             "Add required links",
                             "Template update",
                             "Template enforcement"});
-                table1451.AddRow(new string[] {
+                table1414.AddRow(new string[] {
                             "Invalid consent",
                             "Consent verification",
                             "Stop delivery",
                             "Consent request",
                             "Consent validation"});
-                table1451.AddRow(new string[] {
+                table1414.AddRow(new string[] {
                             "Excessive frequency",
                             "Send frequency limits",
                             "Delay messaging",
                             "Frequency notice",
                             "Smart scheduling"});
 #line 204
-    testRunner.When("content compliance scenarios are tested:", ((string)(null)), table1451, "When ");
+    testRunner.When("content compliance scenarios are tested:", ((string)(null)), table1414, "When ");
 #line hidden
 #line 212
     testRunner.Then("compliance violations should be detected automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1300,50 +1300,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 219
     testRunner.Given("users have complex communication preferences", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1452 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1415 = new TechTalk.SpecFlow.Table(new string[] {
                             "Preference Conflict",
                             "Conflict Type",
                             "Resolution Strategy",
                             "User Control",
                             "Default Behavior"});
-                table1452.AddRow(new string[] {
+                table1415.AddRow(new string[] {
                             "Channel preferences",
                             "Email vs SMS preference",
                             "Honor most recent",
                             "User settings page",
                             "Platform default"});
-                table1452.AddRow(new string[] {
+                table1415.AddRow(new string[] {
                             "Frequency limits",
                             "Too many messages",
                             "Respect limits",
                             "Frequency controls",
                             "Conservative limits"});
-                table1452.AddRow(new string[] {
+                table1415.AddRow(new string[] {
                             "Content categories",
                             "Conflicting interests",
                             "Granular controls",
                             "Category preferences",
                             "Opt-in required"});
-                table1452.AddRow(new string[] {
+                table1415.AddRow(new string[] {
                             "Time zone differences",
                             "Delivery timing",
                             "Local time delivery",
                             "Time zone settings",
                             "Business hours"});
-                table1452.AddRow(new string[] {
+                table1415.AddRow(new string[] {
                             "Language preferences",
                             "Multiple languages",
                             "Primary language",
                             "Language selection",
                             "Account language"});
-                table1452.AddRow(new string[] {
+                table1415.AddRow(new string[] {
                             "Do not disturb periods",
                             "Critical vs non-critical",
                             "Respect for non-critical",
                             "DND schedule",
                             "Honor DND always"});
 #line 220
-    testRunner.When("preference conflict scenarios are tested:", ((string)(null)), table1452, "When ");
+    testRunner.When("preference conflict scenarios are tested:", ((string)(null)), table1415, "When ");
 #line hidden
 #line 228
     testRunner.Then("preference conflicts should be resolved consistently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1395,50 +1395,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 235
     testRunner.Given("communication systems may be overwhelmed by volume", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1453 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1416 = new TechTalk.SpecFlow.Table(new string[] {
                             "Volume Scenario",
                             "Load Characteristics",
                             "Processing Strategy",
                             "User Experience",
                             "System Protection"});
-                table1453.AddRow(new string[] {
+                table1416.AddRow(new string[] {
                             "Viral content sharing",
                             "Sudden spike in messages",
                             "Queue management",
                             "Delivery delays",
                             "Rate limiting"});
-                table1453.AddRow(new string[] {
+                table1416.AddRow(new string[] {
                             "Emergency broadcasts",
                             "All users simultaneously",
                             "Priority processing",
                             "Immediate delivery",
                             "Resource allocation"});
-                table1453.AddRow(new string[] {
+                table1416.AddRow(new string[] {
                             "Marketing campaigns",
                             "Large recipient lists",
                             "Batch processing",
                             "Scheduled delivery",
                             "Load balancing"});
-                table1453.AddRow(new string[] {
+                table1416.AddRow(new string[] {
                             "System notifications",
                             "Platform-wide messages",
                             "Optimized routing",
                             "Staggered delivery",
                             "Service throttling"});
-                table1453.AddRow(new string[] {
+                table1416.AddRow(new string[] {
                             "Peak registration",
                             "New user onboarding",
                             "Smart queuing",
                             "Welcome delays",
                             "Capacity scaling"});
-                table1453.AddRow(new string[] {
+                table1416.AddRow(new string[] {
                             "Support surge",
                             "High ticket volume",
                             "Agent load balancing",
                             "Longer wait times",
                             "Overflow handling"});
 #line 236
-    testRunner.When("high-volume scenarios are tested:", ((string)(null)), table1453, "When ");
+    testRunner.When("high-volume scenarios are tested:", ((string)(null)), table1416, "When ");
 #line hidden
 #line 244
     testRunner.Then("high-volume loads should be processed efficiently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1490,50 +1490,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 251
     testRunner.Given("communication contains sensitive information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1454 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1417 = new TechTalk.SpecFlow.Table(new string[] {
                             "Privacy Incident",
                             "Incident Type",
                             "Response Protocol",
                             "Stakeholder Notification",
                             "Remediation Actions"});
-                table1454.AddRow(new string[] {
+                table1417.AddRow(new string[] {
                             "Unauthorized access",
                             "System breach",
                             "Immediate lockdown",
                             "Security team",
                             "Access audit"});
-                table1454.AddRow(new string[] {
+                table1417.AddRow(new string[] {
                             "Message interception",
                             "Network compromise",
                             "Encryption enforcement",
                             "IT security",
                             "Enhanced security"});
-                table1454.AddRow(new string[] {
+                table1417.AddRow(new string[] {
                             "Consent violations",
                             "Improper messaging",
                             "Stop campaigns",
                             "Compliance team",
                             "Consent review"});
-                table1454.AddRow(new string[] {
+                table1417.AddRow(new string[] {
                             "Data exposure",
                             "Configuration error",
                             "Isolate and patch",
                             "Privacy officer",
                             "Data protection"});
-                table1454.AddRow(new string[] {
+                table1417.AddRow(new string[] {
                             "Third-party breach",
                             "Vendor compromise",
                             "Assess and contain",
                             "Legal team",
                             "Vendor review"});
-                table1454.AddRow(new string[] {
+                table1417.AddRow(new string[] {
                             "Employee misconduct",
                             "Inappropriate access",
                             "Revoke access",
                             "HR and management",
                             "Training and policies"});
 #line 252
-    testRunner.When("privacy incident scenarios are tested:", ((string)(null)), table1454, "When ");
+    testRunner.When("privacy incident scenarios are tested:", ((string)(null)), table1417, "When ");
 #line hidden
 #line 260
     testRunner.Then("privacy incidents should trigger immediate response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

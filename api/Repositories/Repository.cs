@@ -56,8 +56,8 @@ public class Repository<T> : IRepository<T> where T : class
 
     public virtual async Task<int> CountAsync(Expression<Func<T, bool>>? predicate = null)
     {
-        return predicate == null 
-            ? await _dbSet.CountAsync() 
+        return predicate == null
+            ? await _dbSet.CountAsync()
             : await _dbSet.CountAsync(predicate);
     }
 

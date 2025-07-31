@@ -140,50 +140,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 17
     testRunner.And("content generation templates are optimized for therapy use", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1410 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1373 = new TechTalk.SpecFlow.Table(new string[] {
                             "Content Type",
                             "Input Parameters",
                             "Expected Output",
                             "Quality Requirements",
                             "Processing Time"});
-                table1410.AddRow(new string[] {
+                table1373.AddRow(new string[] {
                             "Therapy activity plan",
                             "Age: 6, Skill: fine motor",
                             "4-week structured plan",
                             "Clinically appropriate",
                             "<10 seconds"});
-                table1410.AddRow(new string[] {
+                table1373.AddRow(new string[] {
                             "Worksheet instructions",
                             "Topic: shapes, Grade: K",
                             "Clear step-by-step guide",
                             "Age-appropriate language",
                             "<5 seconds"});
-                table1410.AddRow(new string[] {
+                table1373.AddRow(new string[] {
                             "Assessment questions",
                             "Domain: speech, Level: basic",
                             "10 evaluation questions",
                             "Evidence-based",
                             "<8 seconds"});
-                table1410.AddRow(new string[] {
+                table1373.AddRow(new string[] {
                             "Parent handout text",
                             "Topic: home exercises",
                             "Educational content",
                             "Simple, clear language",
                             "<7 seconds"});
-                table1410.AddRow(new string[] {
+                table1373.AddRow(new string[] {
                             "Progress report notes",
                             "Data: improvement trends",
                             "Professional summary",
                             "Clinical terminology",
                             "<6 seconds"});
-                table1410.AddRow(new string[] {
+                table1373.AddRow(new string[] {
                             "IEP goal suggestions",
                             "Area: communication",
                             "SMART goal examples",
                             "Measurable objectives",
                             "<9 seconds"});
 #line 18
-    testRunner.When("OpenAI integration is tested across content types:", ((string)(null)), table1410, "When ");
+    testRunner.When("OpenAI integration is tested across content types:", ((string)(null)), table1373, "When ");
 #line hidden
 #line 26
     testRunner.Then("OpenAI should generate appropriate content for all types", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -238,50 +238,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 34
     testRunner.And("image generation prompts are optimized for therapy materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1411 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1374 = new TechTalk.SpecFlow.Table(new string[] {
                             "Image Type",
                             "Prompt Template",
                             "Style Requirements",
                             "Safety Filters",
                             "Generation Time"});
-                table1411.AddRow(new string[] {
+                table1374.AddRow(new string[] {
                             "Therapy activity icons",
                             "\"Simple icon of [activity]\"",
                             "Flat, colorful, clear",
                             "Child-safe content",
                             "<30 seconds"});
-                table1411.AddRow(new string[] {
+                table1374.AddRow(new string[] {
                             "Worksheet illustrations",
                             "\"Educational drawing of [item]\"",
                             "Line art, kid-friendly",
                             "No inappropriate content",
                             "<45 seconds"});
-                table1411.AddRow(new string[] {
+                table1374.AddRow(new string[] {
                             "Visual schedule cards",
                             "\"Clean graphic showing [task]\"",
                             "Consistent style",
                             "Appropriate imagery",
                             "<30 seconds"});
-                table1411.AddRow(new string[] {
+                table1374.AddRow(new string[] {
                             "Exercise demonstrations",
                             "\"Person doing [exercise]\"",
                             "Clear body positioning",
                             "Safe exercise form",
                             "<60 seconds"});
-                table1411.AddRow(new string[] {
+                table1374.AddRow(new string[] {
                             "Emotion cards",
                             "\"Child showing [emotion]\"",
                             "Diverse, inclusive",
                             "Positive representations",
                             "<45 seconds"});
-                table1411.AddRow(new string[] {
+                table1374.AddRow(new string[] {
                             "Environment backgrounds",
                             "\"Therapy room setting\"",
                             "Professional, welcoming",
                             "Clean, organized",
                             "<40 seconds"});
 #line 35
-    testRunner.When("Stable Diffusion integration is tested:", ((string)(null)), table1411, "When ");
+    testRunner.When("Stable Diffusion integration is tested:", ((string)(null)), table1374, "When ");
 #line hidden
 #line 43
     testRunner.Then("Stable Diffusion should generate appropriate visuals", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -333,50 +333,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 50
     testRunner.Given("AWS AI services are configured with proper IAM roles", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1412 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1375 = new TechTalk.SpecFlow.Table(new string[] {
                             "AWS Service",
                             "Use Case",
                             "Input Data",
                             "Expected Output",
                             "Accuracy Target"});
-                table1412.AddRow(new string[] {
+                table1375.AddRow(new string[] {
                             "Amazon Rekognition",
                             "Content moderation",
                             "User-uploaded images",
                             "Safety classification",
                             ">95%"});
-                table1412.AddRow(new string[] {
+                table1375.AddRow(new string[] {
                             "Amazon Transcribe",
                             "Speech session analysis",
                             "Therapy session audio",
                             "Text transcription",
                             ">90%"});
-                table1412.AddRow(new string[] {
+                table1375.AddRow(new string[] {
                             "Amazon Polly",
                             "Text-to-speech generation",
                             "Therapy instructions",
                             "Natural speech audio",
                             "High quality"});
-                table1412.AddRow(new string[] {
+                table1375.AddRow(new string[] {
                             "Amazon Comprehend",
                             "Text analysis",
                             "Therapy notes",
                             "Sentiment and entities",
                             ">85%"});
-                table1412.AddRow(new string[] {
+                table1375.AddRow(new string[] {
                             "Amazon Textract",
                             "Document processing",
                             "Assessment forms",
                             "Structured data",
                             ">92%"});
-                table1412.AddRow(new string[] {
+                table1375.AddRow(new string[] {
                             "Amazon Bedrock",
                             "Advanced AI models",
                             "Complex therapy planning",
                             "Sophisticated content",
                             ">88%"});
 #line 51
-    testRunner.When("AWS AI service integration is tested:", ((string)(null)), table1412, "When ");
+    testRunner.When("AWS AI service integration is tested:", ((string)(null)), table1375, "When ");
 #line hidden
 #line 59
     testRunner.Then("AWS services should integrate seamlessly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -428,43 +428,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 67
     testRunner.Given("AI content requires clinical validation before use", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1413 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1376 = new TechTalk.SpecFlow.Table(new string[] {
                             "QA Check Type",
                             "Validation Method",
                             "Pass Criteria",
                             "Failure Response"});
-                table1413.AddRow(new string[] {
+                table1376.AddRow(new string[] {
                             "Clinical accuracy",
                             "Expert therapist review",
                             "98% accuracy rate",
                             "Flag for manual review"});
-                table1413.AddRow(new string[] {
+                table1376.AddRow(new string[] {
                             "Age appropriateness",
                             "Automated age detection",
                             "Suitable for target age",
                             "Reject and regenerate"});
-                table1413.AddRow(new string[] {
+                table1376.AddRow(new string[] {
                             "Language complexity",
                             "Readability analysis",
                             "Appropriate reading level",
                             "Simplify and retry"});
-                table1413.AddRow(new string[] {
+                table1376.AddRow(new string[] {
                             "Safety screening",
                             "Content safety filters",
                             "No harmful content",
                             "Block and alert"});
-                table1413.AddRow(new string[] {
+                table1376.AddRow(new string[] {
                             "Bias detection",
                             "Fairness algorithms",
                             "No discriminatory content",
                             "Review and correct"});
-                table1413.AddRow(new string[] {
+                table1376.AddRow(new string[] {
                             "Factual verification",
                             "Knowledge base comparison",
                             "Accurate information",
                             "Research and validate"});
 #line 68
-    testRunner.When("AI quality assurance is tested:", ((string)(null)), table1413, "When ");
+    testRunner.When("AI quality assurance is tested:", ((string)(null)), table1376, "When ");
 #line hidden
 #line 76
     testRunner.Then("QA processes should catch inappropriate content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -516,44 +516,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 83
     testRunner.Given("AI services have usage costs and rate limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1414 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1377 = new TechTalk.SpecFlow.Table(new string[] {
                             "User Tier",
                             "Daily Limit",
                             "Rate Limit",
                             "Cost per Request",
                             "Overage Handling"});
-                table1414.AddRow(new string[] {
+                table1377.AddRow(new string[] {
                             "Free tier",
                             "5 generations",
                             "1 request/minute",
                             "$0.00",
                             "Block after limit"});
-                table1414.AddRow(new string[] {
+                table1377.AddRow(new string[] {
                             "Basic subscription",
                             "50 generations",
                             "10 requests/minute",
                             "$0.02",
                             "Throttle requests"});
-                table1414.AddRow(new string[] {
+                table1377.AddRow(new string[] {
                             "Pro subscription",
                             "200 generations",
                             "30 requests/minute",
                             "$0.015",
                             "Queue excess"});
-                table1414.AddRow(new string[] {
+                table1377.AddRow(new string[] {
                             "Enterprise",
                             "1000 generations",
                             "100 requests/minute",
                             "$0.01",
                             "Burst allowance"});
-                table1414.AddRow(new string[] {
+                table1377.AddRow(new string[] {
                             "API partners",
                             "Unlimited",
                             "500 requests/minute",
                             "$0.005",
                             "Scale automatically"});
 #line 84
-    testRunner.When("AI rate limiting is tested:", ((string)(null)), table1414, "When ");
+    testRunner.When("AI rate limiting is tested:", ((string)(null)), table1377, "When ");
 #line hidden
 #line 91
     testRunner.Then("rate limits should be enforced accurately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -605,38 +605,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 99
     testRunner.Given("AI personalization engine is trained on user data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1415 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1378 = new TechTalk.SpecFlow.Table(new string[] {
                             "Personalization Type",
                             "Data Sources",
                             "Learning Method",
                             "Adaptation Speed"});
-                table1415.AddRow(new string[] {
+                table1378.AddRow(new string[] {
                             "Content recommendations",
                             "Usage history, favorites",
                             "Collaborative filtering",
                             "Weekly updates"});
-                table1415.AddRow(new string[] {
+                table1378.AddRow(new string[] {
                             "Difficulty adjustment",
                             "Performance data",
                             "Machine learning model",
                             "Per-session updates"});
-                table1415.AddRow(new string[] {
+                table1378.AddRow(new string[] {
                             "Topic preferences",
                             "Search and download patterns",
                             "Pattern recognition",
                             "Daily analysis"});
-                table1415.AddRow(new string[] {
+                table1378.AddRow(new string[] {
                             "Style preferences",
                             "User feedback, selections",
                             "Preference learning",
                             "Immediate updates"});
-                table1415.AddRow(new string[] {
+                table1378.AddRow(new string[] {
                             "Therapeutic approach",
                             "Clinical outcomes",
                             "Outcome optimization",
                             "Monthly evaluation"});
 #line 100
-    testRunner.When("personalization scenarios are tested:", ((string)(null)), table1415, "When ");
+    testRunner.When("personalization scenarios are tested:", ((string)(null)), table1378, "When ");
 #line hidden
 #line 107
     testRunner.Then("personalization should improve user experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -688,33 +688,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 114
     testRunner.Given("multimodal AI can process text, images, and audio together", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1416 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1379 = new TechTalk.SpecFlow.Table(new string[] {
                             "Input Combination",
                             "Processing Type",
                             "Output Generation",
                             "Integration Quality"});
-                table1416.AddRow(new string[] {
+                table1379.AddRow(new string[] {
                             "Text + Image",
                             "Visual content analysis",
                             "Enhanced descriptions",
                             "Coherent multimedia"});
-                table1416.AddRow(new string[] {
+                table1379.AddRow(new string[] {
                             "Audio + Text",
                             "Speech analysis",
                             "Improved transcriptions",
                             "Accurate representation"});
-                table1416.AddRow(new string[] {
+                table1379.AddRow(new string[] {
                             "Text + Audio + Image",
                             "Comprehensive analysis",
                             "Complete lesson plans",
                             "Fully integrated content"});
-                table1416.AddRow(new string[] {
+                table1379.AddRow(new string[] {
                             "Video + Text",
                             "Video understanding",
                             "Activity descriptions",
                             "Synchronized content"});
 #line 115
-    testRunner.When("multimodal AI scenarios are tested:", ((string)(null)), table1416, "When ");
+    testRunner.When("multimodal AI scenarios are tested:", ((string)(null)), table1379, "When ");
 #line hidden
 #line 121
     testRunner.Then("multimodal AI should create cohesive content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -766,38 +766,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 128
     testRunner.Given("real-time AI processing supports live therapy sessions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1417 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1380 = new TechTalk.SpecFlow.Table(new string[] {
                             "Real-time Feature",
                             "Processing Requirement",
                             "Latency Target",
                             "Accuracy Target"});
-                table1417.AddRow(new string[] {
+                table1380.AddRow(new string[] {
                             "Live speech feedback",
                             "Audio processing",
                             "<200ms",
                             ">90%"});
-                table1417.AddRow(new string[] {
+                table1380.AddRow(new string[] {
                             "Gesture recognition",
                             "Video analysis",
                             "<100ms",
                             ">85%"});
-                table1417.AddRow(new string[] {
+                table1380.AddRow(new string[] {
                             "Emotion detection",
                             "Facial analysis",
                             "<150ms",
                             ">80%"});
-                table1417.AddRow(new string[] {
+                table1380.AddRow(new string[] {
                             "Progress assessment",
                             "Performance analysis",
                             "<500ms",
                             ">88%"});
-                table1417.AddRow(new string[] {
+                table1380.AddRow(new string[] {
                             "Adaptive difficulty",
                             "Behavioral analysis",
                             "<1 second",
                             ">92%"});
 #line 129
-    testRunner.When("real-time AI scenarios are tested:", ((string)(null)), table1417, "When ");
+    testRunner.When("real-time AI scenarios are tested:", ((string)(null)), table1380, "When ");
 #line hidden
 #line 136
     testRunner.Then("real-time processing should meet latency requirements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -849,38 +849,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 144
     testRunner.Given("AI services require continuous monitoring", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1418 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1381 = new TechTalk.SpecFlow.Table(new string[] {
                             "Monitoring Aspect",
                             "Metrics Tracked",
                             "Alert Thresholds",
                             "Response Actions"});
-                table1418.AddRow(new string[] {
+                table1381.AddRow(new string[] {
                             "API availability",
                             "Uptime, response times",
                             "<99% uptime",
                             "Switch to backup service"});
-                table1418.AddRow(new string[] {
+                table1381.AddRow(new string[] {
                             "Generation quality",
                             "User ratings, rejections",
                             "<80% approval rate",
                             "Retrain models"});
-                table1418.AddRow(new string[] {
+                table1381.AddRow(new string[] {
                             "Cost tracking",
                             "API usage, billing amounts",
                             ">120% of budget",
                             "Implement usage caps"});
-                table1418.AddRow(new string[] {
+                table1381.AddRow(new string[] {
                             "Error rates",
                             "Failed requests, timeouts",
                             ">5% error rate",
                             "Investigate and fix"});
-                table1418.AddRow(new string[] {
+                table1381.AddRow(new string[] {
                             "User satisfaction",
                             "Feedback scores, usage",
                             "<4.0/5.0 rating",
                             "Improve AI prompts"});
 #line 145
-    testRunner.When("AI monitoring is tested:", ((string)(null)), table1418, "When ");
+    testRunner.When("AI monitoring is tested:", ((string)(null)), table1381, "When ");
 #line hidden
 #line 152
     testRunner.Then("monitoring should provide comprehensive visibility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -932,38 +932,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 159
     testRunner.Given("AI services may experience outages or degradation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1419 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1382 = new TechTalk.SpecFlow.Table(new string[] {
                             "Primary Service Failure",
                             "Fallback Strategy",
                             "Degraded Functionality",
                             "Recovery Time"});
-                table1419.AddRow(new string[] {
+                table1382.AddRow(new string[] {
                             "OpenAI API down",
                             "Use cached templates",
                             "Limited generation",
                             "<5 minutes detection"});
-                table1419.AddRow(new string[] {
+                table1382.AddRow(new string[] {
                             "Stable Diffusion busy",
                             "Queue requests",
                             "Delayed image generation",
                             "Automatic retry"});
-                table1419.AddRow(new string[] {
+                table1382.AddRow(new string[] {
                             "AWS service outage",
                             "Local processing",
                             "Reduced capabilities",
                             "<10 minutes switchover"});
-                table1419.AddRow(new string[] {
+                table1382.AddRow(new string[] {
                             "Rate limit exceeded",
                             "Defer non-critical tasks",
                             "Essential functions only",
                             "Wait for limit reset"});
-                table1419.AddRow(new string[] {
+                table1382.AddRow(new string[] {
                             "Model performance drop",
                             "Revert to previous version",
                             "Maintain quality",
                             "<1 hour rollback"});
 #line 160
-    testRunner.When("AI fallback scenarios are tested:", ((string)(null)), table1419, "When ");
+    testRunner.When("AI fallback scenarios are tested:", ((string)(null)), table1382, "When ");
 #line hidden
 #line 167
     testRunner.Then("fallback strategies should maintain core functionality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1015,38 +1015,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 175
     testRunner.Given("AI may occasionally generate inappropriate content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1420 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1383 = new TechTalk.SpecFlow.Table(new string[] {
                             "Safety Violation Type",
                             "Detection Method",
                             "Response Action",
                             "Prevention Strategy"});
-                table1420.AddRow(new string[] {
+                table1383.AddRow(new string[] {
                             "Inappropriate language",
                             "Text analysis filters",
                             "Block and regenerate",
                             "Improve prompt engineering"});
-                table1420.AddRow(new string[] {
+                table1383.AddRow(new string[] {
                             "Unsafe instructions",
                             "Safety keyword detection",
                             "Flag for manual review",
                             "Enhanced safety prompts"});
-                table1420.AddRow(new string[] {
+                table1383.AddRow(new string[] {
                             "Biased content",
                             "Bias detection algorithms",
                             "Modify and retry",
                             "Diverse training data"});
-                table1420.AddRow(new string[] {
+                table1383.AddRow(new string[] {
                             "Factual errors",
                             "Knowledge verification",
                             "Correct and validate",
                             "Fact-checking integration"});
-                table1420.AddRow(new string[] {
+                table1383.AddRow(new string[] {
                             "Privacy concerns",
                             "PII detection",
                             "Remove sensitive data",
                             "Privacy-aware prompts"});
 #line 176
-    testRunner.When("content safety scenarios are tested:", ((string)(null)), table1420, "When ");
+    testRunner.When("content safety scenarios are tested:", ((string)(null)), table1383, "When ");
 #line hidden
 #line 183
     testRunner.Then("safety violations should be caught before user exposure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1098,43 +1098,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 190
     testRunner.Given("AI APIs may experience failures or timeouts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1421 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1384 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failure Type",
                             "Error Condition",
                             "Recovery Strategy",
                             "User Communication"});
-                table1421.AddRow(new string[] {
+                table1384.AddRow(new string[] {
                             "Network timeout",
                             "No response in 30 seconds",
                             "Retry with exponential backoff",
                             "\"Processing, please wait\""});
-                table1421.AddRow(new string[] {
+                table1384.AddRow(new string[] {
                             "Authentication failure",
                             "Invalid API key",
                             "Refresh credentials",
                             "\"Service temporarily unavailable\""});
-                table1421.AddRow(new string[] {
+                table1384.AddRow(new string[] {
                             "Rate limit exceeded",
                             "Too many requests",
                             "Queue and delay",
                             "\"Request queued\""});
-                table1421.AddRow(new string[] {
+                table1384.AddRow(new string[] {
                             "Service unavailable",
                             "503 status code",
                             "Switch to backup service",
                             "\"Using alternative method\""});
-                table1421.AddRow(new string[] {
+                table1384.AddRow(new string[] {
                             "Invalid input",
                             "400 bad request",
                             "Modify input and retry",
                             "\"Adjusting request\""});
-                table1421.AddRow(new string[] {
+                table1384.AddRow(new string[] {
                             "Quota exceeded",
                             "Monthly limit reached",
                             "Disable feature",
                             "\"Feature temporarily disabled\""});
 #line 191
-    testRunner.When("AI API failure scenarios are tested:", ((string)(null)), table1421, "When ");
+    testRunner.When("AI API failure scenarios are tested:", ((string)(null)), table1384, "When ");
 #line hidden
 #line 199
     testRunner.Then("API failures should be handled gracefully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1186,38 +1186,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 206
     testRunner.Given("AI quality can vary based on input and model performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1422 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1385 = new TechTalk.SpecFlow.Table(new string[] {
                             "Quality Issue",
                             "Detection Method",
                             "Correction Strategy",
                             "Quality Assurance"});
-                table1422.AddRow(new string[] {
+                table1385.AddRow(new string[] {
                             "Unclear input prompts",
                             "Prompt analysis",
                             "Enhance prompt clarity",
                             "Prompt optimization"});
-                table1422.AddRow(new string[] {
+                table1385.AddRow(new string[] {
                             "Low-quality outputs",
                             "Automated quality scoring",
                             "Regenerate with better prompts",
                             "Quality thresholds"});
-                table1422.AddRow(new string[] {
+                table1385.AddRow(new string[] {
                             "Inconsistent style",
                             "Style analysis",
                             "Apply consistent templates",
                             "Style guide enforcement"});
-                table1422.AddRow(new string[] {
+                table1385.AddRow(new string[] {
                             "Incomplete generation",
                             "Completeness checking",
                             "Request continuation",
                             "Output validation"});
-                table1422.AddRow(new string[] {
+                table1385.AddRow(new string[] {
                             "Irrelevant content",
                             "Relevance scoring",
                             "Refine prompts and retry",
                             "Topic consistency checks"});
 #line 207
-    testRunner.When("data quality scenarios are tested:", ((string)(null)), table1422, "When ");
+    testRunner.When("data quality scenarios are tested:", ((string)(null)), table1385, "When ");
 #line hidden
 #line 214
     testRunner.Then("quality issues should be detected automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1269,38 +1269,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 221
     testRunner.Given("AI services may experience resource constraints", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1423 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1386 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resource Constraint",
                             "Impact on Service",
                             "Scaling Strategy",
                             "User Impact"});
-                table1423.AddRow(new string[] {
+                table1386.AddRow(new string[] {
                             "High request volume",
                             "Slower response times",
                             "Auto-scale processing",
                             "Longer wait times"});
-                table1423.AddRow(new string[] {
+                table1386.AddRow(new string[] {
                             "Memory limitations",
                             "Request failures",
                             "Optimize memory usage",
                             "Some requests may fail"});
-                table1423.AddRow(new string[] {
+                table1386.AddRow(new string[] {
                             "GPU unavailability",
                             "Image generation queued",
                             "Queue management",
                             "Delayed image generation"});
-                table1423.AddRow(new string[] {
+                table1386.AddRow(new string[] {
                             "Bandwidth limitations",
                             "Upload/download delays",
                             "Compression and batching",
                             "Slower transfers"});
-                table1423.AddRow(new string[] {
+                table1386.AddRow(new string[] {
                             "Storage constraints",
                             "Cache misses increase",
                             "Expand storage capacity",
                             "Slower cache retrieval"});
 #line 222
-    testRunner.When("resource exhaustion scenarios are tested:", ((string)(null)), table1423, "When ");
+    testRunner.When("resource exhaustion scenarios are tested:", ((string)(null)), table1386, "When ");
 #line hidden
 #line 229
     testRunner.Then("resource constraints should be detected early", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1352,38 +1352,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integrations
 #line 236
     testRunner.Given("AI models may degrade in performance over time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1424 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1387 = new TechTalk.SpecFlow.Table(new string[] {
                             "Degradation Type",
                             "Detection Metrics",
                             "Response Strategy",
                             "Prevention Measures"});
-                table1424.AddRow(new string[] {
+                table1387.AddRow(new string[] {
                             "Accuracy decline",
                             "User feedback, ratings",
                             "Model retraining",
                             "Continuous monitoring"});
-                table1424.AddRow(new string[] {
+                table1387.AddRow(new string[] {
                             "Bias introduction",
                             "Fairness metrics",
                             "Bias correction",
                             "Diverse training data"});
-                table1424.AddRow(new string[] {
+                table1387.AddRow(new string[] {
                             "Staleness",
                             "Output quality scores",
                             "Model updates",
                             "Regular refresh cycles"});
-                table1424.AddRow(new string[] {
+                table1387.AddRow(new string[] {
                             "Overfitting",
                             "Performance on new data",
                             "Regularization adjustments",
                             "Cross-validation"});
-                table1424.AddRow(new string[] {
+                table1387.AddRow(new string[] {
                             "Concept drift",
                             "Distribution monitoring",
                             "Adaptive learning",
                             "Environment tracking"});
 #line 237
-    testRunner.When("model degradation scenarios are tested:", ((string)(null)), table1424, "When ");
+    testRunner.When("model degradation scenarios are tested:", ((string)(null)), table1387, "When ");
 #line hidden
 #line 244
     testRunner.Then("model degradation should be detected proactively", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

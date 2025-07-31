@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 17
     testRunner.And("integration must support student data sync", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1374 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1337 = new TechTalk.SpecFlow.Table(new string[] {
                             "SIS Platform",
                             "Integration Method",
                             "Data Synchronized",
                             "Update Frequency",
                             "Authentication",
                             "Compliance"});
-                table1374.AddRow(new string[] {
+                table1337.AddRow(new string[] {
                             "PowerSchool",
                             "REST API",
                             "Students, enrollment, schedules",
                             "Real-time",
                             "OAuth 2.0",
                             "FERPA compliant"});
-                table1374.AddRow(new string[] {
+                table1337.AddRow(new string[] {
                             "Infinite Campus",
                             "OneRoster API",
                             "Rosters, demographics, IEPs",
                             "Daily sync",
                             "API key + secret",
                             "State privacy laws"});
-                table1374.AddRow(new string[] {
+                table1337.AddRow(new string[] {
                             "Skyward",
                             "SQL integration",
                             "Student records, contacts",
                             "Hourly batch",
                             "Database auth",
                             "District policies"});
-                table1374.AddRow(new string[] {
+                table1337.AddRow(new string[] {
                             "Clever",
                             "Rostering API",
                             "Classes, teachers, students",
                             "Real-time",
                             "OAuth 2.0",
                             "COPPA certified"});
-                table1374.AddRow(new string[] {
+                table1337.AddRow(new string[] {
                             "Follett Aspen",
                             "Web services",
                             "Enrollment, attendance",
                             "Nightly sync",
                             "SOAP + cert",
                             "FERPA compliant"});
-                table1374.AddRow(new string[] {
+                table1337.AddRow(new string[] {
                             "Tyler SIS",
                             "API gateway",
                             "Complete student data",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Token-based",
                             "Multi-district"});
 #line 18
-    testRunner.When("implementing SIS integrations:", ((string)(null)), table1374, "When ");
+    testRunner.When("implementing SIS integrations:", ((string)(null)), table1337, "When ");
 #line hidden
 #line 26
     testRunner.Then("SIS data should sync accurately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 34
     testRunner.And("therapy materials need LMS integration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1375 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1338 = new TechTalk.SpecFlow.Table(new string[] {
                             "LMS Platform",
                             "Integration Standard",
                             "Content Types",
                             "Grade Passback",
                             "Assignment Creation",
                             "Analytics"});
-                table1375.AddRow(new string[] {
+                table1338.AddRow(new string[] {
                             "Google Classroom",
                             "Google API",
                             "Docs, forms, videos",
                             "Real-time",
                             "API-based",
                             "Engagement tracking"});
-                table1375.AddRow(new string[] {
+                table1338.AddRow(new string[] {
                             "Canvas",
                             "LTI 1.3",
                             "All content types",
                             "Automatic",
                             "Deep linking",
                             "Learning analytics"});
-                table1375.AddRow(new string[] {
+                table1338.AddRow(new string[] {
                             "Schoology",
                             "REST API",
                             "Resources, assessments",
                             "Grade sync",
                             "Bulk creation",
                             "Progress reports"});
-                table1375.AddRow(new string[] {
+                table1338.AddRow(new string[] {
                             "Microsoft Teams",
                             "Graph API",
                             "Office files, videos",
                             "Teams gradebook",
                             "Channel integration",
                             "Insights API"});
-                table1375.AddRow(new string[] {
+                table1338.AddRow(new string[] {
                             "Moodle",
                             "LTI + plugins",
                             "SCORM packages",
                             "Manual + auto",
                             "Activity modules",
                             "Completion tracking"});
-                table1375.AddRow(new string[] {
+                table1338.AddRow(new string[] {
                             "Blackboard",
                             "Building blocks",
                             "All formats",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Content areas",
                             "Analytics API"});
 #line 35
-    testRunner.When("integrating with LMS platforms:", ((string)(null)), table1375, "When ");
+    testRunner.When("integrating with LMS platforms:", ((string)(null)), table1338, "When ");
 #line hidden
 #line 43
     testRunner.Then("LMS integration should be seamless", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 51
     testRunner.And("SSO improves security and usability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1376 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1339 = new TechTalk.SpecFlow.Table(new string[] {
                             "SSO Provider",
                             "Protocol",
                             "User Attributes",
                             "Session Management",
                             "MFA Support",
                             "Provisioning"});
-                table1376.AddRow(new string[] {
+                table1339.AddRow(new string[] {
                             "Google Workspace",
                             "SAML 2.0",
                             "Email, groups, OU",
                             "8-hour sessions",
                             "Google 2FA",
                             "SCIM support"});
-                table1376.AddRow(new string[] {
+                table1339.AddRow(new string[] {
                             "Microsoft AD",
                             "SAML/OIDC",
                             "UPN, groups, roles",
                             "Configurable",
                             "Azure MFA",
                             "Graph API"});
-                table1376.AddRow(new string[] {
+                table1339.AddRow(new string[] {
                             "Clever",
                             "OAuth 2.0",
                             "Student ID, grade",
                             "Portal-based",
                             "District policy",
                             "Instant Signup"});
-                table1376.AddRow(new string[] {
+                table1339.AddRow(new string[] {
                             "ClassLink",
                             "OAuth 2.0",
                             "Roster data",
                             "LaunchPad",
                             "OneClick",
                             "Auto-rostering"});
-                table1376.AddRow(new string[] {
+                table1339.AddRow(new string[] {
                             "Okta",
                             "SAML 2.0",
                             "Custom attributes",
                             "Policy-based",
                             "Okta Verify",
                             "SCIM 2.0"});
-                table1376.AddRow(new string[] {
+                table1339.AddRow(new string[] {
                             "District LDAP",
                             "LDAP bind",
                             "Directory attrs",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "LDAP MFA",
                             "Manual sync"});
 #line 52
-    testRunner.When("implementing SSO:", ((string)(null)), table1376, "When ");
+    testRunner.When("implementing SSO:", ((string)(null)), table1339, "When ");
 #line hidden
 #line 60
     testRunner.Then("SSO should work reliably", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 68
     testRunner.And("integration ensures goal alignment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1377 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1340 = new TechTalk.SpecFlow.Table(new string[] {
                             "IEP System",
                             "Integration Features",
                             "Data Exchange",
                             "Goal Tracking",
                             "Progress Reporting",
                             "Compliance"});
-                table1377.AddRow(new string[] {
+                table1340.AddRow(new string[] {
                             "Frontline IEP",
                             "Direct API",
                             "Goals, services, accommodations",
                             "Real-time sync",
                             "Automated reports",
                             "State compliant"});
-                table1377.AddRow(new string[] {
+                table1340.AddRow(new string[] {
                             "PowerSchool SES",
                             "Module integration",
                             "Complete IEP data",
                             "Goal alignment",
                             "Progress monitoring",
                             "Federal reports"});
-                table1377.AddRow(new string[] {
+                table1340.AddRow(new string[] {
                             "Goalbook",
                             "API integration",
                             "Goal bank, strategies",
                             "Evidence-based",
                             "Data collection",
                             "IDEA aligned"});
-                table1377.AddRow(new string[] {
+                table1340.AddRow(new string[] {
                             "SpEd Forms",
                             "Export/import",
                             "IEP documents",
                             "Manual tracking",
                             "Form generation",
                             "State specific"});
-                table1377.AddRow(new string[] {
+                table1340.AddRow(new string[] {
                             "Easy IEP",
                             "Web services",
                             "Full IEP access",
                             "Goal library",
                             "Custom reports",
                             "Multi-state"});
-                table1377.AddRow(new string[] {
+                table1340.AddRow(new string[] {
                             "SEAS",
                             "Database sync",
                             "Special ed data",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Compliance reports",
                             "State system"});
 #line 69
-    testRunner.When("connecting to IEP systems:", ((string)(null)), table1377, "When ");
+    testRunner.When("connecting to IEP systems:", ((string)(null)), table1340, "When ");
 #line hidden
 #line 77
     testRunner.Then("IEP data should inform therapy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 86
     testRunner.And("data integration improves outcomes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1378 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1341 = new TechTalk.SpecFlow.Table(new string[] {
                             "Assessment Platform",
                             "Data Available",
                             "Integration Method",
                             "Score Interpretation",
                             "Therapy Alignment",
                             "Reporting"});
-                table1378.AddRow(new string[] {
+                table1341.AddRow(new string[] {
                             "NWEA MAP",
                             "Growth scores",
                             "API access",
                             "Norm-referenced",
                             "Skill gap analysis",
                             "Growth reports"});
-                table1378.AddRow(new string[] {
+                table1341.AddRow(new string[] {
                             "i-Ready",
                             "Diagnostic data",
                             "REST API",
                             "Grade level",
                             "Prerequisite skills",
                             "Progress monitoring"});
-                table1378.AddRow(new string[] {
+                table1341.AddRow(new string[] {
                             "Renaissance STAR",
                             "Reading/math levels",
                             "Data export",
                             "Percentile ranks",
                             "Intervention areas",
                             "Benchmark reports"});
-                table1378.AddRow(new string[] {
+                table1341.AddRow(new string[] {
                             "DRA",
                             "Reading assessment",
                             "Manual import",
                             "Reading levels",
                             "Literacy support",
                             "Running records"});
-                table1378.AddRow(new string[] {
+                table1341.AddRow(new string[] {
                             "Fountas & Pinnell",
                             "Literacy levels",
                             "System integration",
                             "Guided reading",
                             "Reading intervention",
                             "Level tracking"});
-                table1378.AddRow(new string[] {
+                table1341.AddRow(new string[] {
                             "State assessments",
                             "Annual scores",
                             "Batch import",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Standards alignment",
                             "AYP tracking"});
 #line 87
-    testRunner.When("integrating assessment systems:", ((string)(null)), table1378, "When ");
+    testRunner.When("integrating assessment systems:", ((string)(null)), table1341, "When ");
 #line hidden
 #line 95
     testRunner.Then("assessment data should be accessible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 103
     testRunner.And("schools use various platforms", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1379 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1342 = new TechTalk.SpecFlow.Table(new string[] {
                             "Platform",
                             "Message Types",
                             "Delivery Methods",
                             "Translation",
                             "Tracking",
                             "Two-way"});
-                table1379.AddRow(new string[] {
+                table1342.AddRow(new string[] {
                             "Remind",
                             "Announcements, homework",
                             "SMS, app, email",
                             "90+ languages",
                             "Read receipts",
                             "Chat enabled"});
-                table1379.AddRow(new string[] {
+                table1342.AddRow(new string[] {
                             "ClassDojo",
                             "Behavior, photos, messages",
                             "App notifications",
                             "Auto-translate",
                             "Engagement metrics",
                             "Messaging"});
-                table1379.AddRow(new string[] {
+                table1342.AddRow(new string[] {
                             "Seesaw",
                             "Student work, updates",
                             "App, email, SMS",
                             "Multi-language",
                             "Portfolio views",
                             "Comments"});
-                table1379.AddRow(new string[] {
+                table1342.AddRow(new string[] {
                             "ParentSquare",
                             "All school comms",
                             "Unified platform",
                             "Professional trans",
                             "Analytics dashboard",
                             "Full messaging"});
-                table1379.AddRow(new string[] {
+                table1342.AddRow(new string[] {
                             "SchoolMessenger",
                             "Emergency, routine",
                             "Multi-channel",
                             "Language preference",
                             "Delivery reports",
                             "Response tracking"});
-                table1379.AddRow(new string[] {
+                table1342.AddRow(new string[] {
                             "Bloomz",
                             "Calendar, volunteer",
                             "App-based",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Participation",
                             "Interactive"});
 #line 104
-    testRunner.When("integrating communication systems:", ((string)(null)), table1379, "When ");
+    testRunner.When("integrating communication systems:", ((string)(null)), table1342, "When ");
 #line hidden
 #line 112
     testRunner.Then("communication should be unified", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 120
     testRunner.And("library systems manage digital content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1380 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1343 = new TechTalk.SpecFlow.Table(new string[] {
                             "Library System",
                             "Resource Types",
                             "Access Method",
                             "Authentication",
                             "Usage Tracking",
                             "Licensing"});
-                table1380.AddRow(new string[] {
+                table1343.AddRow(new string[] {
                             "Follett Destiny",
                             "eBooks, databases",
                             "API integration",
                             "SSO pass-through",
                             "Circulation stats",
                             "Site licenses"});
-                table1380.AddRow(new string[] {
+                table1343.AddRow(new string[] {
                             "OverDrive",
                             "Digital books, audio",
                             "API + widgets",
                             "Library cards",
                             "Checkout tracking",
                             "Simultaneous use"});
-                table1380.AddRow(new string[] {
+                table1343.AddRow(new string[] {
                             "EBSCO",
                             "Research databases",
                             "Federated search",
                             "IP + passwords",
                             "Search analytics",
                             "Subscription"});
-                table1380.AddRow(new string[] {
+                table1343.AddRow(new string[] {
                             "ProQuest",
                             "Academic resources",
                             "API access",
                             "Shibboleth",
                             "Usage reports",
                             "Institutional"});
-                table1380.AddRow(new string[] {
+                table1343.AddRow(new string[] {
                             "Gale",
                             "Reference materials",
                             "Embedded access",
                             "Context auth",
                             "Session tracking",
                             "Unlimited access"});
-                table1380.AddRow(new string[] {
+                table1343.AddRow(new string[] {
                             "MackinVIA",
                             "Digital content",
                             "LTI integration",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Reading analytics",
                             "School accounts"});
 #line 121
-    testRunner.When("integrating library platforms:", ((string)(null)), table1380, "When ");
+    testRunner.When("integrating library platforms:", ((string)(null)), table1343, "When ");
 #line hidden
 #line 129
     testRunner.Then("library resources should be accessible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 138
     testRunner.And("therapy aligns with tier support", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1381 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1344 = new TechTalk.SpecFlow.Table(new string[] {
                             "RTI Component",
                             "System Integration",
                             "Data Points",
                             "Tier Support",
                             "Progress Monitoring",
                             "Decision Rules"});
-                table1381.AddRow(new string[] {
+                table1344.AddRow(new string[] {
                             "Universal screening",
                             "Assessment import",
                             "Benchmark scores",
                             "Tier 1 data",
                             "Class-wide trends",
                             "Cut scores"});
-                table1381.AddRow(new string[] {
+                table1344.AddRow(new string[] {
                             "Progress monitoring",
                             "Weekly data sync",
                             "CBM scores",
                             "Tier 2/3 tracking",
                             "Trend analysis",
                             "Rate of improvement"});
-                table1381.AddRow(new string[] {
+                table1344.AddRow(new string[] {
                             "Intervention plans",
                             "Plan repository",
                             "Intervention details",
                             "Tiered strategies",
                             "Fidelity checks",
                             "Protocol adherence"});
-                table1381.AddRow(new string[] {
+                table1344.AddRow(new string[] {
                             "Data teams",
                             "Meeting notes",
                             "Decision points",
                             "Movement between tiers",
                             "Team reviews",
                             "Decision documentation"});
-                table1381.AddRow(new string[] {
+                table1344.AddRow(new string[] {
                             "Parent notification",
                             "Communication sync",
                             "Progress reports",
                             "Home strategies",
                             "Parent involvement",
                             "Consent tracking"});
-                table1381.AddRow(new string[] {
+                table1344.AddRow(new string[] {
                             "Outcome tracking",
                             "Results database",
                             "Goal attainment",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Success metrics",
                             "Effectiveness data"});
 #line 139
-    testRunner.When("implementing RTI integration:", ((string)(null)), table1381, "When ");
+    testRunner.When("implementing RTI integration:", ((string)(null)), table1344, "When ");
 #line hidden
 #line 147
     testRunner.Then("RTI data should guide therapy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 155
     testRunner.And("scheduling must coordinate with school", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1382 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1345 = new TechTalk.SpecFlow.Table(new string[] {
                             "System Feature",
                             "Integration Type",
                             "Data Synchronized",
                             "Conflict Resolution",
                             "Notifications",
                             "Reporting"});
-                table1382.AddRow(new string[] {
+                table1345.AddRow(new string[] {
                             "Master schedule",
                             "Real-time sync",
                             "Class periods, rooms",
                             "Priority rules",
                             "Schedule alerts",
                             "Utilization reports"});
-                table1382.AddRow(new string[] {
+                table1345.AddRow(new string[] {
                             "Student attendance",
                             "Bidirectional",
                             "Present/absent/tardy",
                             "Therapy overrides",
                             "Absence alerts",
                             "Attendance percentage"});
-                table1382.AddRow(new string[] {
+                table1345.AddRow(new string[] {
                             "Therapy schedule",
                             "Calendar integration",
                             "Session times",
                             "Academic priority",
                             "Reminder system",
                             "Service delivery"});
-                table1382.AddRow(new string[] {
+                table1345.AddRow(new string[] {
                             "Bell schedules",
                             "Time sync",
                             "Period times",
                             "Adjustment logic",
                             "Change notices",
                             "Time analysis"});
-                table1382.AddRow(new string[] {
+                table1345.AddRow(new string[] {
                             "Special schedules",
                             "Event awareness",
                             "Assemblies, testing",
                             "Auto-reschedule",
                             "Advance notice",
                             "Impact reports"});
-                table1382.AddRow(new string[] {
+                table1345.AddRow(new string[] {
                             "Make-up tracking",
                             "Session recovery",
                             "Missed sessions",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Parent notification",
                             "Compliance tracking"});
 #line 156
-    testRunner.When("integrating attendance systems:", ((string)(null)), table1382, "When ");
+    testRunner.When("integrating attendance systems:", ((string)(null)), table1345, "When ");
 #line hidden
 #line 164
     testRunner.Then("schedules should coordinate smoothly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 172
     testRunner.And("systems track discipline data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1383 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1346 = new TechTalk.SpecFlow.Table(new string[] {
                             "Behavior System",
                             "Data Available",
                             "Integration Use",
                             "Privacy Controls",
                             "Therapy Application",
                             "Outcomes"});
-                table1383.AddRow(new string[] {
+                table1346.AddRow(new string[] {
                             "PBIS systems",
                             "Positive behaviors",
                             "Reinforcement alignment",
                             "Role-based access",
                             "Behavior plans",
                             "Improvement tracking"});
-                table1383.AddRow(new string[] {
+                table1346.AddRow(new string[] {
                             "Discipline databases",
                             "Incidents, consequences",
                             "Pattern analysis",
                             "Need-to-know",
                             "Behavior interventions",
                             "Reduction goals"});
-                table1383.AddRow(new string[] {
+                table1346.AddRow(new string[] {
                             "Behavior contracts",
                             "Goals, strategies",
                             "Plan coordination",
                             "Parent consent",
                             "Consistent approach",
                             "Goal achievement"});
-                table1383.AddRow(new string[] {
+                table1346.AddRow(new string[] {
                             "Check-in/out",
                             "Daily ratings",
                             "Progress tracking",
                             "Student privacy",
                             "Skill building",
                             "Trend analysis"});
-                table1383.AddRow(new string[] {
+                table1346.AddRow(new string[] {
                             "Restorative practices",
                             "Circle participation",
                             "Social skills",
                             "Confidential",
                             "Group therapy",
                             "Relationship repair"});
-                table1383.AddRow(new string[] {
+                table1346.AddRow(new string[] {
                             "Threat assessment",
                             "Risk indicators",
                             "Safety planning",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Crisis intervention",
                             "Risk mitigation"});
 #line 173
-    testRunner.When("integrating behavior systems:", ((string)(null)), table1383, "When ");
+    testRunner.When("integrating behavior systems:", ((string)(null)), table1346, "When ");
 #line hidden
 #line 181
     testRunner.Then("behavior data should inform therapy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 190
     testRunner.And("educators need actionable insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1384 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1347 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Type",
                             "Data Sources",
                             "Visualization",
                             "Update Frequency",
                             "Access Control",
                             "Actions Enabled"});
-                table1384.AddRow(new string[] {
+                table1347.AddRow(new string[] {
                             "Student progress",
                             "All systems",
                             "Growth charts",
                             "Real-time",
                             "Teacher/admin",
                             "Intervention planning"});
-                table1384.AddRow(new string[] {
+                table1347.AddRow(new string[] {
                             "Therapy effectiveness",
                             "Outcome data",
                             "Effectiveness graphs",
                             "Weekly",
                             "Therapist/admin",
                             "Program adjustment"});
-                table1384.AddRow(new string[] {
+                table1347.AddRow(new string[] {
                             "IEP progress",
                             "Goal data",
                             "Goal attainment",
                             "Monthly",
                             "IEP team",
                             "Meeting preparation"});
-                table1384.AddRow(new string[] {
+                table1347.AddRow(new string[] {
                             "RTI effectiveness",
                             "Tier movement",
                             "Flowcharts",
                             "Quarterly",
                             "Data teams",
                             "Tier decisions"});
-                table1384.AddRow(new string[] {
+                table1347.AddRow(new string[] {
                             "Attendance impact",
                             "Attendance + progress",
                             "Correlation analysis",
                             "Daily",
                             "Admin/therapist",
                             "Schedule optimization"});
-                table1384.AddRow(new string[] {
+                table1347.AddRow(new string[] {
                             "Resource usage",
                             "LMS + therapy",
                             "Usage heatmaps",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Teachers",
                             "Resource recommendations"});
 #line 191
-    testRunner.When("creating integrated analytics:", ((string)(null)), table1384, "When ");
+    testRunner.When("creating integrated analytics:", ((string)(null)), table1347, "When ");
 #line hidden
 #line 199
     testRunner.Then("analytics should provide insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 207
     testRunner.And("therapy services are included in reports", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1385 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1348 = new TechTalk.SpecFlow.Table(new string[] {
                             "Report Type",
                             "Required Data",
                             "Format",
                             "Submission Method",
                             "Deadline",
                             "Validation"});
-                table1385.AddRow(new string[] {
+                table1348.AddRow(new string[] {
                             "Child Count",
                             "Special ed enrollment",
                             "State template",
                             "Direct submission",
                             "October 1",
                             "Error checking"});
-                table1385.AddRow(new string[] {
+                table1348.AddRow(new string[] {
                             "Service delivery",
                             "Therapy minutes",
                             "Federal format",
                             "EDFacts",
                             "Monthly",
                             "Completeness"});
-                table1385.AddRow(new string[] {
+                table1348.AddRow(new string[] {
                             "Progress reporting",
                             "Goal achievement",
                             "State system",
                             "API upload",
                             "Quarterly",
                             "Accuracy validation"});
-                table1385.AddRow(new string[] {
+                table1348.AddRow(new string[] {
                             "Due process",
                             "Compliance metrics",
                             "Legal format",
                             "Secure upload",
                             "As required",
                             "Legal review"});
-                table1385.AddRow(new string[] {
+                table1348.AddRow(new string[] {
                             "Fiscal reporting",
                             "Service costs",
                             "Financial format",
                             "State portal",
                             "Annual",
                             "Audit trail"});
-                table1385.AddRow(new string[] {
+                table1348.AddRow(new string[] {
                             "IDEA indicators",
                             "Performance data",
                             "Federal specs",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Annual",
                             "Indicator validation"});
 #line 208
-    testRunner.When("generating compliance reports:", ((string)(null)), table1385, "When ");
+    testRunner.When("generating compliance reports:", ((string)(null)), table1348, "When ");
 #line hidden
 #line 216
     testRunner.Then("reports should be accurate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 224
     testRunner.And("therapy staff must be informed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1386 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1349 = new TechTalk.SpecFlow.Table(new string[] {
                             "Emergency Type",
                             "Notification Method",
                             "Response Protocol",
                             "Communication Flow",
                             "Documentation",
                             "Recovery"});
-                table1386.AddRow(new string[] {
+                table1349.AddRow(new string[] {
                             "Lockdown",
                             "Instant alert",
                             "Shelter in place",
                             "Two-way status",
                             "Incident log",
                             "All-clear process"});
-                table1386.AddRow(new string[] {
+                table1349.AddRow(new string[] {
                             "Evacuation",
                             "Multi-channel",
                             "Evacuation assistance",
                             "Location tracking",
                             "Accountability",
                             "Reunification"});
-                table1386.AddRow(new string[] {
+                table1349.AddRow(new string[] {
                             "Medical emergency",
                             "Priority alert",
                             "Medical response",
                             "First responder info",
                             "Medical records",
                             "Follow-up care"});
-                table1386.AddRow(new string[] {
+                table1349.AddRow(new string[] {
                             "Weather emergency",
                             "Advance notice",
                             "Safety protocols",
                             "Parent notification",
                             "Closure decisions",
                             "Make-up planning"});
-                table1386.AddRow(new string[] {
+                table1349.AddRow(new string[] {
                             "Behavioral crisis",
                             "Targeted alert",
                             "Crisis team activation",
                             "Limited distribution",
                             "Incident report",
                             "Debrief process"});
-                table1386.AddRow(new string[] {
+                table1349.AddRow(new string[] {
                             "Technology outage",
                             "System notice",
                             "Offline procedures",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Downtime log",
                             "Service restoration"});
 #line 225
-    testRunner.When("integrating emergency systems:", ((string)(null)), table1386, "When ");
+    testRunner.When("integrating emergency systems:", ((string)(null)), table1349, "When ");
 #line hidden
 #line 233
     testRunner.Then("emergency notifications should be instant", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 241
     testRunner.And("scheduling must coordinate with routes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1387 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1350 = new TechTalk.SpecFlow.Table(new string[] {
                             "Integration Aspect",
                             "System Connection",
                             "Coordination Need",
                             "Safety Protocol",
                             "Communication",
                             "Tracking"});
-                table1387.AddRow(new string[] {
+                table1350.AddRow(new string[] {
                             "Route planning",
                             "GPS tracking",
                             "Therapy locations",
                             "Secure transport",
                             "Driver communication",
                             "Real-time location"});
-                table1387.AddRow(new string[] {
+                table1350.AddRow(new string[] {
                             "Schedule sync",
                             "Route timing",
                             "Session alignment",
                             "Safe handoff",
                             "Parent alerts",
                             "Arrival/departure"});
-                table1387.AddRow(new string[] {
+                table1350.AddRow(new string[] {
                             "Special needs",
                             "Equipment tracking",
                             "Accessibility",
                             "Equipment security",
                             "Requirements comm",
                             "Equipment location"});
-                table1387.AddRow(new string[] {
+                table1350.AddRow(new string[] {
                             "Field trips",
                             "Trip planning",
                             "Therapy coverage",
                             "Medical info",
                             "Emergency contacts",
                             "Student location"});
-                table1387.AddRow(new string[] {
+                table1350.AddRow(new string[] {
                             "Bus behavior",
                             "Incident reporting",
                             "Behavior support",
                             "Safety protocols",
                             "Parent notification",
                             "Pattern tracking"});
-                table1387.AddRow(new string[] {
+                table1350.AddRow(new string[] {
                             "Weather delays",
                             "Alert system",
                             "Schedule adjustment",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Multi-channel",
                             "Impact analysis"});
 #line 242
-    testRunner.When("integrating transportation:", ((string)(null)), table1387, "When ");
+    testRunner.When("integrating transportation:", ((string)(null)), table1350, "When ");
 #line hidden
 #line 250
     testRunner.Then("transportation should be coordinated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 258
     testRunner.And("dietary needs must be coordinated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1388 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1351 = new TechTalk.SpecFlow.Table(new string[] {
                             "Nutrition Aspect",
                             "System Data",
                             "Therapy Application",
                             "Coordination",
                             "Monitoring",
                             "Outcomes"});
-                table1388.AddRow(new string[] {
+                table1351.AddRow(new string[] {
                             "Dietary restrictions",
                             "Allergy database",
                             "Feeding therapy",
                             "Menu planning",
                             "Compliance tracking",
                             "Safety assurance"});
-                table1388.AddRow(new string[] {
+                table1351.AddRow(new string[] {
                             "Meal participation",
                             "Cafeteria POS",
                             "Social skills",
                             "Lunch groups",
                             "Participation rates",
                             "Social integration"});
-                table1388.AddRow(new string[] {
+                table1351.AddRow(new string[] {
                             "Special diets",
                             "Nutrition orders",
                             "Oral motor therapy",
                             "Diet consistency",
                             "Intake monitoring",
                             "Nutritional goals"});
-                table1388.AddRow(new string[] {
+                table1351.AddRow(new string[] {
                             "Food preferences",
                             "Menu selections",
                             "Sensory integration",
                             "Choice expansion",
                             "Preference tracking",
                             "Diet variety"});
-                table1388.AddRow(new string[] {
+                table1351.AddRow(new string[] {
                             "Feeding assistance",
                             "Support needs",
                             "Feeding plans",
                             "Staff coordination",
                             "Progress notes",
                             "Independence"});
-                table1388.AddRow(new string[] {
+                table1351.AddRow(new string[] {
                             "Nutrition education",
                             "Curriculum integration",
                             "Health goals",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Knowledge assessment",
                             "Behavior change"});
 #line 259
-    testRunner.When("integrating nutrition systems:", ((string)(null)), table1388, "When ");
+    testRunner.When("integrating nutrition systems:", ((string)(null)), table1351, "When ");
 #line hidden
 #line 267
     testRunner.Then("nutrition data should be integrated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 275
     testRunner.And("facility scheduling is complex", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1389 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1352 = new TechTalk.SpecFlow.Table(new string[] {
                             "Facility Need",
                             "System Integration",
                             "Booking Process",
                             "Equipment",
                             "Accessibility",
                             "Utilization"});
-                table1389.AddRow(new string[] {
+                table1352.AddRow(new string[] {
                             "Therapy rooms",
                             "Room scheduling",
                             "Priority booking",
                             "Specialized equipment",
                             "ADA compliant",
                             "Usage analytics"});
-                table1389.AddRow(new string[] {
+                table1352.AddRow(new string[] {
                             "Sensory spaces",
                             "Special rooms",
                             "Dedicated times",
                             "Sensory equipment",
                             "Sensory needs",
                             "Effectiveness tracking"});
-                table1389.AddRow(new string[] {
+                table1352.AddRow(new string[] {
                             "Group spaces",
                             "Multi-purpose",
                             "Shared calendar",
                             "Flexible setup",
                             "Wheelchair access",
                             "Group size tracking"});
-                table1389.AddRow(new string[] {
+                table1352.AddRow(new string[] {
                             "Outdoor areas",
                             "Grounds booking",
                             "Weather contingency",
                             "Outdoor equipment",
                             "Safe access",
                             "Seasonal usage"});
-                table1389.AddRow(new string[] {
+                table1352.AddRow(new string[] {
                             "Pool/gym",
                             "Athletic facilities",
                             "Shared scheduling",
                             "Adaptive equipment",
                             "Accessible routes",
                             "Therapy outcomes"});
-                table1389.AddRow(new string[] {
+                table1352.AddRow(new string[] {
                             "Quiet spaces",
                             "Library/resource",
                             "Noise management",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Easy access",
                             "Behavior impact"});
 #line 276
-    testRunner.When("integrating facility systems:", ((string)(null)), table1389, "When ");
+    testRunner.When("integrating facility systems:", ((string)(null)), table1352, "When ");
 #line hidden
 #line 284
     testRunner.Then("spaces should be available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1854,49 +1854,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 292
     testRunner.And("PD systems track compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1390 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1353 = new TechTalk.SpecFlow.Table(new string[] {
                             "PD Platform",
                             "Training Content",
                             "Delivery Method",
                             "Tracking",
                             "Certification",
                             "Application"});
-                table1390.AddRow(new string[] {
+                table1353.AddRow(new string[] {
                             "District LMS",
                             "Therapy awareness",
                             "Online modules",
                             "Completion tracking",
                             "CEU credits",
                             "Classroom strategies"});
-                table1390.AddRow(new string[] {
+                table1353.AddRow(new string[] {
                             "State systems",
                             "Compliance training",
                             "Required courses",
                             "State reporting",
                             "State certification",
                             "Legal compliance"});
-                table1390.AddRow(new string[] {
+                table1353.AddRow(new string[] {
                             "University partners",
                             "Graduate courses",
                             "Hybrid delivery",
                             "Academic credit",
                             "Degree progress",
                             "Advanced skills"});
-                table1390.AddRow(new string[] {
+                table1353.AddRow(new string[] {
                             "Professional orgs",
                             "Specialized training",
                             "Conferences/webinars",
                             "PD hours",
                             "Professional cert",
                             "Best practices"});
-                table1390.AddRow(new string[] {
+                table1353.AddRow(new string[] {
                             "Internal training",
                             "Platform-specific",
                             "In-service delivery",
                             "Competency tracking",
                             "Platform certification",
                             "System mastery"});
-                table1390.AddRow(new string[] {
+                table1353.AddRow(new string[] {
                             "Micro-learning",
                             "Just-in-time",
                             "Mobile delivery",
@@ -1904,7 +1904,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Micro-credentials",
                             "Immediate application"});
 #line 293
-    testRunner.When("integrating PD systems:", ((string)(null)), table1390, "When ");
+    testRunner.When("integrating PD systems:", ((string)(null)), table1353, "When ");
 #line hidden
 #line 301
     testRunner.Then("training should be accessible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1961,49 +1961,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
 #line 309
     testRunner.And("integration must be future-ready", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1391 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1354 = new TechTalk.SpecFlow.Table(new string[] {
                             "Technology Trend",
                             "Timeline",
                             "Integration Preparation",
                             "Pilot Approach",
                             "Expected Impact",
                             "Investment"});
-                table1391.AddRow(new string[] {
+                table1354.AddRow(new string[] {
                             "AI tutoring systems",
                             "1-2 years",
                             "API standardization",
                             "Limited pilot",
                             "Personalized support",
                             "Moderate"});
-                table1391.AddRow(new string[] {
+                table1354.AddRow(new string[] {
                             "VR/AR learning",
                             "2-3 years",
                             "3D content ready",
                             "Lab testing",
                             "Immersive therapy",
                             "Significant"});
-                table1391.AddRow(new string[] {
+                table1354.AddRow(new string[] {
                             "Blockchain credentials",
                             "3-5 years",
                             "Credential framework",
                             "Proof of concept",
                             "Verified achievements",
                             "Low initial"});
-                table1391.AddRow(new string[] {
+                table1354.AddRow(new string[] {
                             "IoT sensors",
                             "1-2 years",
                             "Data ingestion ready",
                             "Classroom pilots",
                             "Environmental data",
                             "Moderate"});
-                table1391.AddRow(new string[] {
+                table1354.AddRow(new string[] {
                             "Adaptive learning",
                             "Now-1 year",
                             "Algorithm integration",
                             "Subject pilots",
                             "Customized pacing",
                             "High"});
-                table1391.AddRow(new string[] {
+                table1354.AddRow(new string[] {
                             "Digital twins",
                             "3-5 years",
                             "Simulation ready",
@@ -2011,7 +2011,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Integration
                             "Predictive modeling",
                             "Research only"});
 #line 310
-    testRunner.When("planning future integrations:", ((string)(null)), table1391, "When ");
+    testRunner.When("planning future integrations:", ((string)(null)), table1354, "When ");
 #line hidden
 #line 318
     testRunner.Then("future technologies should be anticipated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

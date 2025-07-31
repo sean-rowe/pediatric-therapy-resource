@@ -56,7 +56,7 @@ public class PlatformStepDefinitions : BaseStepDefinitions
         using var content = new MultipartFormDataContent();
         content.Add(new StringContent("test file content"), "file", fileName);
         
-        LastResponse = await Client.PostAsync("/api/files/upload", content);
+        SetLastResponse(await Client.PostAsync("/api/files/upload", content));
     }
     [Then(@"file is processed and stored")]
     public void ThenFileIsProcessedAndStored()

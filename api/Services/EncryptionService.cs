@@ -10,9 +10,9 @@ public class EncryptionService : IEncryptionService
 
     public EncryptionService(IConfiguration configuration)
     {
-        var encryptionKey = configuration["Encryption:Key"] 
+        var encryptionKey = configuration["Encryption:Key"]
             ?? throw new InvalidOperationException("Encryption key not configured");
-        
+
         // Derive key and IV from configuration
         using var sha256 = SHA256.Create();
         var keyBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(encryptionKey));

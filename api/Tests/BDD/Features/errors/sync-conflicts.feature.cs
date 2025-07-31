@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 17
     testRunner.And("conflict detection must be comprehensive and accurate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1239 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1202 = new TechTalk.SpecFlow.Table(new string[] {
                             "Conflict Type",
                             "Detection Method",
                             "Conflict Scope",
                             "Detection Timing",
                             "Severity Level",
                             "Resolution Priority"});
-                table1239.AddRow(new string[] {
+                table1202.AddRow(new string[] {
                             "Simple overwrites",
                             "Timestamp comparison",
                             "Single field",
                             "During sync",
                             "Low",
                             "Automatic resolution"});
-                table1239.AddRow(new string[] {
+                table1202.AddRow(new string[] {
                             "Complex modifications",
                             "Content diff analysis",
                             "Multiple fields",
                             "Pre-sync validation",
                             "Medium",
                             "User-guided resolution"});
-                table1239.AddRow(new string[] {
+                table1202.AddRow(new string[] {
                             "Structural changes",
                             "Schema validation",
                             "Data structure",
                             "Schema check",
                             "High",
                             "Administrative resolution"});
-                table1239.AddRow(new string[] {
+                table1202.AddRow(new string[] {
                             "Business rule violations",
                             "Rule validation",
                             "Business logic",
                             "Rule check",
                             "High",
                             "Clinical resolution"});
-                table1239.AddRow(new string[] {
+                table1202.AddRow(new string[] {
                             "Referential integrity",
                             "Reference checking",
                             "Data relationships",
                             "Integrity validation",
                             "Critical",
                             "System resolution"});
-                table1239.AddRow(new string[] {
+                table1202.AddRow(new string[] {
                             "Concurrent modifications",
                             "Version tracking",
                             "Document/record",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Medium",
                             "Merge resolution"});
 #line 18
-    testRunner.When("detecting synchronization conflicts:", ((string)(null)), table1239, "When ");
+    testRunner.When("detecting synchronization conflicts:", ((string)(null)), table1202, "When ");
 #line hidden
 #line 26
     testRunner.Then("detection should be accurate and comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 34
     testRunner.And("automated resolution improves system efficiency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1240 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1203 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resolution Strategy",
                             "Conflict Type",
                             "Automation Level",
                             "Success Rate",
                             "Validation Required",
                             "Fallback Process"});
-                table1240.AddRow(new string[] {
+                table1203.AddRow(new string[] {
                             "Last-modified wins",
                             "Timestamp conflicts",
                             "Fully automated",
                             "95%",
                             "Automatic validation",
                             "Manual review"});
-                table1240.AddRow(new string[] {
+                table1203.AddRow(new string[] {
                             "Merge algorithms",
                             "Content conflicts",
                             "Semi-automated",
                             "85%",
                             "Algorithm validation",
                             "User intervention"});
-                table1240.AddRow(new string[] {
+                table1203.AddRow(new string[] {
                             "Priority-based",
                             "Priority conflicts",
                             "Fully automated",
                             "90%",
                             "Priority validation",
                             "Administrative review"});
-                table1240.AddRow(new string[] {
+                table1203.AddRow(new string[] {
                             "Rule-based",
                             "Business rule conflicts",
                             "Semi-automated",
                             "80%",
                             "Rule validation",
                             "Clinical review"});
-                table1240.AddRow(new string[] {
+                table1203.AddRow(new string[] {
                             "Schema-driven",
                             "Structure conflicts",
                             "Automated with limits",
                             "75%",
                             "Schema validation",
                             "Technical review"});
-                table1240.AddRow(new string[] {
+                table1203.AddRow(new string[] {
                             "Context-aware",
                             "Context conflicts",
                             "AI-assisted",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Context validation",
                             "Expert resolution"});
 #line 35
-    testRunner.When("implementing automated resolution:", ((string)(null)), table1240, "When ");
+    testRunner.When("implementing automated resolution:", ((string)(null)), table1203, "When ");
 #line hidden
 #line 43
     testRunner.Then("automation should handle appropriate conflicts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 51
     testRunner.And("manual resolution tools must be intuitive and powerful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1241 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1204 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resolution Tool",
                             "Conflict Complexity",
                             "User Interface",
                             "Decision Support",
                             "Resolution Time",
                             "Training Required"});
-                table1241.AddRow(new string[] {
+                table1204.AddRow(new string[] {
                             "Side-by-side comparison",
                             "Medium complexity",
                             "Split-screen view",
                             "Difference highlighting",
                             "2-5 minutes",
                             "Basic training"});
-                table1241.AddRow(new string[] {
+                table1204.AddRow(new string[] {
                             "Interactive merge tool",
                             "High complexity",
                             "Interactive editor",
                             "Merge suggestions",
                             "5-15 minutes",
                             "Advanced training"});
-                table1241.AddRow(new string[] {
+                table1204.AddRow(new string[] {
                             "Clinical review interface",
                             "Clinical conflicts",
                             "Clinical workflow",
                             "Clinical guidelines",
                             "10-30 minutes",
                             "Clinical training"});
-                table1241.AddRow(new string[] {
+                table1204.AddRow(new string[] {
                             "Administrative console",
                             "System conflicts",
                             "Admin interface",
                             "System recommendations",
                             "15-45 minutes",
                             "Technical training"});
-                table1241.AddRow(new string[] {
+                table1204.AddRow(new string[] {
                             "Collaborative resolution",
                             "Multi-user conflicts",
                             "Collaborative tools",
                             "Team communication",
                             "30-60 minutes",
                             "Collaboration training"});
-                table1241.AddRow(new string[] {
+                table1204.AddRow(new string[] {
                             "Expert consultation",
                             "Complex cases",
                             "Expert workflow",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "60+ minutes",
                             "Expert consultation"});
 #line 52
-    testRunner.When("providing manual resolution capabilities:", ((string)(null)), table1241, "When ");
+    testRunner.When("providing manual resolution capabilities:", ((string)(null)), table1204, "When ");
 #line hidden
 #line 60
     testRunner.Then("tools should match conflict complexity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 68
     testRunner.And("change tracking provides visibility into data evolution", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1242 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1205 = new TechTalk.SpecFlow.Table(new string[] {
                             "Versioning Aspect",
                             "Tracking Method",
                             "Storage Strategy",
                             "Retention Policy",
                             "Access Control",
                             "Audit Requirements"});
-                table1242.AddRow(new string[] {
+                table1205.AddRow(new string[] {
                             "Document versions",
                             "Version numbering",
                             "Full version storage",
                             "90-day retention",
                             "Role-based access",
                             "Complete audit trail"});
-                table1242.AddRow(new string[] {
+                table1205.AddRow(new string[] {
                             "Field-level changes",
                             "Change logging",
                             "Delta storage",
                             "30-day retention",
                             "Field-level access",
                             "Change audit"});
-                table1242.AddRow(new string[] {
+                table1205.AddRow(new string[] {
                             "User actions",
                             "Action tracking",
                             "Action logs",
                             "1-year retention",
                             "User-based access",
                             "Action audit"});
-                table1242.AddRow(new string[] {
+                table1205.AddRow(new string[] {
                             "System changes",
                             "System logging",
                             "System logs",
                             "7-year retention",
                             "Admin access",
                             "System audit"});
-                table1242.AddRow(new string[] {
+                table1205.AddRow(new string[] {
                             "Conflict history",
                             "Conflict logging",
                             "Conflict records",
                             "2-year retention",
                             "Conflict access",
                             "Conflict audit"});
-                table1242.AddRow(new string[] {
+                table1205.AddRow(new string[] {
                             "Resolution history",
                             "Resolution tracking",
                             "Resolution logs",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Resolution access",
                             "Resolution audit"});
 #line 69
-    testRunner.When("implementing version control:", ((string)(null)), table1242, "When ");
+    testRunner.When("implementing version control:", ((string)(null)), table1205, "When ");
 #line hidden
 #line 77
     testRunner.Then("versioning should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 86
     testRunner.And("healthcare regulations require special handling", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1243 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1206 = new TechTalk.SpecFlow.Table(new string[] {
                             "Clinical Data Type",
                             "Safety Requirements",
                             "Resolution Authority",
                             "Validation Process",
                             "Audit Requirements",
                             "Compliance Standards"});
-                table1243.AddRow(new string[] {
+                table1206.AddRow(new string[] {
                             "Patient assessments",
                             "Clinical validation",
                             "Licensed clinician",
                             "Peer review",
                             "Clinical audit",
                             "HIPAA compliance"});
-                table1243.AddRow(new string[] {
+                table1206.AddRow(new string[] {
                             "Treatment plans",
                             "Treatment validation",
                             "Supervising clinician",
                             "Clinical committee",
                             "Treatment audit",
                             "Clinical standards"});
-                table1243.AddRow(new string[] {
+                table1206.AddRow(new string[] {
                             "Progress notes",
                             "Documentation standards",
                             "Documenting clinician",
                             "Documentation review",
                             "Progress audit",
                             "Documentation compliance"});
-                table1243.AddRow(new string[] {
+                table1206.AddRow(new string[] {
                             "Medication records",
                             "Medication safety",
                             "Prescribing authority",
                             "Medication review",
                             "Medication audit",
                             "Pharmacy standards"});
-                table1243.AddRow(new string[] {
+                table1206.AddRow(new string[] {
                             "Diagnostic data",
                             "Diagnostic accuracy",
                             "Diagnosing clinician",
                             "Diagnostic review",
                             "Diagnostic audit",
                             "Diagnostic standards"});
-                table1243.AddRow(new string[] {
+                table1206.AddRow(new string[] {
                             "Care coordination",
                             "Coordination safety",
                             "Care coordinator",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Coordination audit",
                             "Care standards"});
 #line 87
-    testRunner.When("managing clinical conflicts:", ((string)(null)), table1243, "When ");
+    testRunner.When("managing clinical conflicts:", ((string)(null)), table1206, "When ");
 #line hidden
 #line 95
     testRunner.Then("clinical safety must be paramount", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 103
     testRunner.And("collaborative resolution requires coordination and communication", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1244 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1207 = new TechTalk.SpecFlow.Table(new string[] {
                             "Collaboration Scenario",
                             "Conflict Type",
                             "Resolution Process",
                             "Communication Method",
                             "Coordination Tool",
                             "Resolution Timeline"});
-                table1244.AddRow(new string[] {
+                table1207.AddRow(new string[] {
                             "Simultaneous editing",
                             "Edit conflicts",
                             "Real-time collaboration",
                             "Live chat",
                             "Collaborative editor",
                             "Real-time resolution"});
-                table1244.AddRow(new string[] {
+                table1207.AddRow(new string[] {
                             "Sequential modifications",
                             "Version conflicts",
                             "Sequential review",
                             "Email notifications",
                             "Review queue",
                             "24-hour resolution"});
-                table1244.AddRow(new string[] {
+                table1207.AddRow(new string[] {
                             "Cross-role editing",
                             "Authority conflicts",
                             "Role-based resolution",
                             "Role notifications",
                             "Authority matrix",
                             "Role-appropriate timeline"});
-                table1244.AddRow(new string[] {
+                table1207.AddRow(new string[] {
                             "Team collaborations",
                             "Team conflicts",
                             "Team consensus",
                             "Team meetings",
                             "Team workspace",
                             "Consensus timeline"});
-                table1244.AddRow(new string[] {
+                table1207.AddRow(new string[] {
                             "Interdisciplinary work",
                             "Discipline conflicts",
                             "Interdisciplinary review",
                             "Cross-discipline communication",
                             "Interdisciplinary platform",
                             "Professional timeline"});
-                table1244.AddRow(new string[] {
+                table1207.AddRow(new string[] {
                             "Supervisory oversight",
                             "Supervision conflicts",
                             "Supervisory resolution",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Supervision tools",
                             "Supervision timeline"});
 #line 104
-    testRunner.When("resolving multi-user conflicts:", ((string)(null)), table1244, "When ");
+    testRunner.When("resolving multi-user conflicts:", ((string)(null)), table1207, "When ");
 #line hidden
 #line 112
     testRunner.Then("collaboration should be seamless", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 120
     testRunner.And("legacy integration requires special conflict handling", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1245 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1208 = new TechTalk.SpecFlow.Table(new string[] {
                             "Migration Type",
                             "Conflict Source",
                             "Resolution Strategy",
                             "Data Validation",
                             "Quality Assurance",
                             "Migration Timeline"});
-                table1245.AddRow(new string[] {
+                table1208.AddRow(new string[] {
                             "Format migration",
                             "Format differences",
                             "Format transformation",
                             "Format validation",
                             "Format testing",
                             "Phased migration"});
-                table1245.AddRow(new string[] {
+                table1208.AddRow(new string[] {
                             "Schema migration",
                             "Schema mismatches",
                             "Schema mapping",
                             "Schema validation",
                             "Schema testing",
                             "Structured migration"});
-                table1245.AddRow(new string[] {
+                table1208.AddRow(new string[] {
                             "Content migration",
                             "Content conflicts",
                             "Content reconciliation",
                             "Content validation",
                             "Content review",
                             "Content migration"});
-                table1245.AddRow(new string[] {
+                table1208.AddRow(new string[] {
                             "User migration",
                             "User data conflicts",
                             "User mapping",
                             "User validation",
                             "User verification",
                             "User-centric migration"});
-                table1245.AddRow(new string[] {
+                table1208.AddRow(new string[] {
                             "System integration",
                             "System differences",
                             "Integration mapping",
                             "Integration validation",
                             "Integration testing",
                             "System-wide migration"});
-                table1245.AddRow(new string[] {
+                table1208.AddRow(new string[] {
                             "Historical data",
                             "Historical conflicts",
                             "Historical reconstruction",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Historical review",
                             "Archival migration"});
 #line 121
-    testRunner.When("managing migration conflicts:", ((string)(null)), table1245, "When ");
+    testRunner.When("managing migration conflicts:", ((string)(null)), table1208, "When ");
 #line hidden
 #line 129
     testRunner.Then("migration should preserve data integrity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 137
     testRunner.And("live conflict resolution maintains collaboration flow", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1246 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1209 = new TechTalk.SpecFlow.Table(new string[] {
                             "Real-time Scenario",
                             "Conflict Detection",
                             "Resolution Speed",
                             "User Experience",
                             "Collaboration Impact",
                             "Resolution Quality"});
-                table1246.AddRow(new string[] {
+                table1209.AddRow(new string[] {
                             "Simultaneous typing",
                             "Keystroke tracking",
                             "<100ms",
                             "Seamless typing",
                             "No interruption",
                             "Character-level accuracy"});
-                table1246.AddRow(new string[] {
+                table1209.AddRow(new string[] {
                             "Concurrent selections",
                             "Selection monitoring",
                             "<200ms",
                             "Visual feedback",
                             "Selection coordination",
                             "Selection preservation"});
-                table1246.AddRow(new string[] {
+                table1209.AddRow(new string[] {
                             "Parallel edits",
                             "Edit tracking",
                             "<500ms",
                             "Edit visualization",
                             "Edit coordination",
                             "Edit integrity"});
-                table1246.AddRow(new string[] {
+                table1209.AddRow(new string[] {
                             "Overlapping actions",
                             "Action monitoring",
                             "<1 second",
                             "Action feedback",
                             "Action coordination",
                             "Action consistency"});
-                table1246.AddRow(new string[] {
+                table1209.AddRow(new string[] {
                             "Conflicting operations",
                             "Operation tracking",
                             "<2 seconds",
                             "Operation resolution",
                             "Operation coordination",
                             "Operation validity"});
-                table1246.AddRow(new string[] {
+                table1209.AddRow(new string[] {
                             "Competing changes",
                             "Change monitoring",
                             "<5 seconds",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Change coordination",
                             "Change consensus"});
 #line 138
-    testRunner.When("managing real-time conflicts:", ((string)(null)), table1246, "When ");
+    testRunner.When("managing real-time conflicts:", ((string)(null)), table1209, "When ");
 #line hidden
 #line 146
     testRunner.Then("real-time resolution should be rapid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 155
     testRunner.And("validation ensures conflicts don\'t compromise data quality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1247 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1210 = new TechTalk.SpecFlow.Table(new string[] {
                             "Validation Type",
                             "Validation Scope",
                             "Validation Method",
                             "Quality Standards",
                             "Error Detection",
                             "Correction Process"});
-                table1247.AddRow(new string[] {
+                table1210.AddRow(new string[] {
                             "Structural validation",
                             "Data structure",
                             "Schema validation",
                             "Structure integrity",
                             "Structure errors",
                             "Structure correction"});
-                table1247.AddRow(new string[] {
+                table1210.AddRow(new string[] {
                             "Content validation",
                             "Data content",
                             "Content rules",
                             "Content accuracy",
                             "Content errors",
                             "Content correction"});
-                table1247.AddRow(new string[] {
+                table1210.AddRow(new string[] {
                             "Referential validation",
                             "Data relationships",
                             "Reference checking",
                             "Relationship integrity",
                             "Reference errors",
                             "Reference repair"});
-                table1247.AddRow(new string[] {
+                table1210.AddRow(new string[] {
                             "Business validation",
                             "Business rules",
                             "Rule enforcement",
                             "Business consistency",
                             "Rule violations",
                             "Rule compliance"});
-                table1247.AddRow(new string[] {
+                table1210.AddRow(new string[] {
                             "Clinical validation",
                             "Clinical data",
                             "Clinical review",
                             "Clinical safety",
                             "Clinical errors",
                             "Clinical correction"});
-                table1247.AddRow(new string[] {
+                table1210.AddRow(new string[] {
                             "Regulatory validation",
                             "Compliance requirements",
                             "Compliance checking",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Compliance violations",
                             "Compliance correction"});
 #line 156
-    testRunner.When("validating data during conflict resolution:", ((string)(null)), table1247, "When ");
+    testRunner.When("validating data during conflict resolution:", ((string)(null)), table1210, "When ");
 #line hidden
 #line 164
     testRunner.Then("validation should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 172
     testRunner.And("conflict resolution must be fully documented", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1248 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1211 = new TechTalk.SpecFlow.Table(new string[] {
                             "Audit Aspect",
                             "Tracking Detail",
                             "Storage Requirements",
                             "Retention Period",
                             "Access Control",
                             "Compliance Standards"});
-                table1248.AddRow(new string[] {
+                table1211.AddRow(new string[] {
                             "Conflict occurrence",
                             "Conflict detection details",
                             "Secure storage",
                             "7 years",
                             "Audit access",
                             "SOX compliance"});
-                table1248.AddRow(new string[] {
+                table1211.AddRow(new string[] {
                             "Resolution process",
                             "Resolution steps",
                             "Encrypted storage",
                             "5 years",
                             "Resolution access",
                             "HIPAA compliance"});
-                table1248.AddRow(new string[] {
+                table1211.AddRow(new string[] {
                             "User involvement",
                             "User actions",
                             "Audit logs",
                             "3 years",
                             "User access",
                             "FERPA compliance"});
-                table1248.AddRow(new string[] {
+                table1211.AddRow(new string[] {
                             "System actions",
                             "Automated actions",
                             "System logs",
                             "2 years",
                             "System access",
                             "Technical standards"});
-                table1248.AddRow(new string[] {
+                table1211.AddRow(new string[] {
                             "Data changes",
                             "Before/after states",
                             "Change logs",
                             "7 years",
                             "Change access",
                             "Data protection"});
-                table1248.AddRow(new string[] {
+                table1211.AddRow(new string[] {
                             "Compliance verification",
                             "Compliance checks",
                             "Compliance logs",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Compliance access",
                             "Regulatory standards"});
 #line 173
-    testRunner.When("maintaining conflict resolution audit trails:", ((string)(null)), table1248, "When ");
+    testRunner.When("maintaining conflict resolution audit trails:", ((string)(null)), table1211, "When ");
 #line hidden
 #line 181
     testRunner.Then("audit trails should be complete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 189
     testRunner.And("optimization ensures system responsiveness", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1249 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1212 = new TechTalk.SpecFlow.Table(new string[] {
                             "Performance Aspect",
                             "Optimization Strategy",
                             "Target Metrics",
                             "Measurement Method",
                             "Improvement Techniques",
                             "Success Criteria"});
-                table1249.AddRow(new string[] {
+                table1212.AddRow(new string[] {
                             "Detection speed",
                             "Efficient algorithms",
                             "<1 second detection",
                             "Detection timing",
                             "Algorithm optimization",
                             "Detection performance"});
-                table1249.AddRow(new string[] {
+                table1212.AddRow(new string[] {
                             "Resolution speed",
                             "Streamlined workflows",
                             "<30 seconds resolution",
                             "Resolution timing",
                             "Workflow optimization",
                             "Resolution efficiency"});
-                table1249.AddRow(new string[] {
+                table1212.AddRow(new string[] {
                             "User interface",
                             "Responsive UI",
                             "<100ms UI response",
                             "UI measurement",
                             "UI optimization",
                             "UI responsiveness"});
-                table1249.AddRow(new string[] {
+                table1212.AddRow(new string[] {
                             "Data processing",
                             "Optimized processing",
                             "<10 seconds processing",
                             "Processing timing",
                             "Processing optimization",
                             "Processing speed"});
-                table1249.AddRow(new string[] {
+                table1212.AddRow(new string[] {
                             "Storage efficiency",
                             "Efficient storage",
                             "<20% storage overhead",
                             "Storage monitoring",
                             "Storage optimization",
                             "Storage efficiency"});
-                table1249.AddRow(new string[] {
+                table1212.AddRow(new string[] {
                             "Network efficiency",
                             "Optimized sync",
                             "<50% bandwidth usage",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Sync optimization",
                             "Network efficiency"});
 #line 190
-    testRunner.When("optimizing conflict performance:", ((string)(null)), table1249, "When ");
+    testRunner.When("optimizing conflict performance:", ((string)(null)), table1212, "When ");
 #line hidden
 #line 198
     testRunner.Then("performance should be continuously optimized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 207
     testRunner.And("robust recovery ensures system reliability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1250 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1213 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failure Type",
                             "Detection Method",
                             "Recovery Strategy",
                             "Recovery Time",
                             "Data Protection",
                             "User Impact"});
-                table1250.AddRow(new string[] {
+                table1213.AddRow(new string[] {
                             "Resolution algorithm failure",
                             "Algorithm monitoring",
                             "Alternative algorithms",
                             "<2 minutes",
                             "State preservation",
                             "Minimal interruption"});
-                table1250.AddRow(new string[] {
+                table1213.AddRow(new string[] {
                             "User interface failure",
                             "UI monitoring",
                             "UI recovery",
                             "<1 minute",
                             "Session preservation",
                             "UI notification"});
-                table1250.AddRow(new string[] {
+                table1213.AddRow(new string[] {
                             "Data corruption during resolution",
                             "Integrity monitoring",
                             "Data rollback",
                             "<5 minutes",
                             "Backup restoration",
                             "Temporary disruption"});
-                table1250.AddRow(new string[] {
+                table1213.AddRow(new string[] {
                             "Network failure during sync",
                             "Network monitoring",
                             "Network retry",
                             "<3 minutes",
                             "Queue preservation",
                             "Network notification"});
-                table1250.AddRow(new string[] {
+                table1213.AddRow(new string[] {
                             "Authentication failure",
                             "Auth monitoring",
                             "Re-authentication",
                             "<1 minute",
                             "Session preservation",
                             "Re-login required"});
-                table1250.AddRow(new string[] {
+                table1213.AddRow(new string[] {
                             "Storage failure",
                             "Storage monitoring",
                             "Alternative storage",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Data migration",
                             "Storage notification"});
 #line 208
-    testRunner.When("conflict resolution failures occur:", ((string)(null)), table1250, "When ");
+    testRunner.When("conflict resolution failures occur:", ((string)(null)), table1213, "When ");
 #line hidden
 #line 216
     testRunner.Then("failures should be detected quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 224
     testRunner.And("escalation procedures ensure appropriate expertise is applied", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1251 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1214 = new TechTalk.SpecFlow.Table(new string[] {
                             "Escalation Level",
                             "Trigger Conditions",
                             "Expert Type",
                             "Response Time",
                             "Resolution Authority",
                             "Documentation Requirements"});
-                table1251.AddRow(new string[] {
+                table1214.AddRow(new string[] {
                             "Level 1",
                             "Automated resolution failure",
                             "Technical support",
                             "1 hour",
                             "Technical resolution",
                             "Technical documentation"});
-                table1251.AddRow(new string[] {
+                table1214.AddRow(new string[] {
                             "Level 2",
                             "User resolution difficulty",
                             "Clinical supervisor",
                             "4 hours",
                             "Clinical resolution",
                             "Clinical documentation"});
-                table1251.AddRow(new string[] {
+                table1214.AddRow(new string[] {
                             "Level 3",
                             "Clinical safety concerns",
                             "Medical director",
                             "30 minutes",
                             "Medical resolution",
                             "Medical documentation"});
-                table1251.AddRow(new string[] {
+                table1214.AddRow(new string[] {
                             "Level 4",
                             "System integrity issues",
                             "System administrator",
                             "2 hours",
                             "System resolution",
                             "System documentation"});
-                table1251.AddRow(new string[] {
+                table1214.AddRow(new string[] {
                             "Level 5",
                             "Legal/compliance concerns",
                             "Legal counsel",
                             "24 hours",
                             "Legal resolution",
                             "Legal documentation"});
-                table1251.AddRow(new string[] {
+                table1214.AddRow(new string[] {
                             "Emergency",
                             "Patient safety risk",
                             "Emergency response",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Emergency resolution",
                             "Emergency documentation"});
 #line 225
-    testRunner.When("escalating complex conflicts:", ((string)(null)), table1251, "When ");
+    testRunner.When("escalating complex conflicts:", ((string)(null)), table1214, "When ");
 #line hidden
 #line 233
     testRunner.Then("escalation should be systematic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 242
     testRunner.And("education improves conflict resolution effectiveness", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1252 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1215 = new TechTalk.SpecFlow.Table(new string[] {
                             "Education Type",
                             "Content Scope",
                             "Delivery Method",
                             "User Level",
                             "Training Duration",
                             "Effectiveness Metrics"});
-                table1252.AddRow(new string[] {
+                table1215.AddRow(new string[] {
                             "Basic conflict awareness",
                             "Common conflicts",
                             "Interactive tutorial",
                             "All users",
                             "30 minutes",
                             "Awareness assessment"});
-                table1252.AddRow(new string[] {
+                table1215.AddRow(new string[] {
                             "Resolution procedures",
                             "Resolution workflows",
                             "Hands-on training",
                             "Regular users",
                             "1 hour",
                             "Procedure competency"});
-                table1252.AddRow(new string[] {
+                table1215.AddRow(new string[] {
                             "Clinical conflict handling",
                             "Clinical scenarios",
                             "Clinical training",
                             "Clinical users",
                             "2 hours",
                             "Clinical competency"});
-                table1252.AddRow(new string[] {
+                table1215.AddRow(new string[] {
                             "Advanced resolution",
                             "Complex conflicts",
                             "Advanced workshop",
                             "Power users",
                             "4 hours",
                             "Advanced skills"});
-                table1252.AddRow(new string[] {
+                table1215.AddRow(new string[] {
                             "System administration",
                             "Administrative conflicts",
                             "Admin training",
                             "Administrators",
                             "8 hours",
                             "Admin certification"});
-                table1252.AddRow(new string[] {
+                table1215.AddRow(new string[] {
                             "Emergency procedures",
                             "Critical conflicts",
                             "Emergency training",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "1 hour",
                             "Emergency readiness"});
 #line 243
-    testRunner.When("providing conflict education:", ((string)(null)), table1252, "When ");
+    testRunner.When("providing conflict education:", ((string)(null)), table1215, "When ");
 #line hidden
 #line 251
     testRunner.Then("education should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 259
     testRunner.And("intuitive interfaces improve resolution quality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1253 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1216 = new TechTalk.SpecFlow.Table(new string[] {
                             "Interface Element",
                             "Visualization Method",
                             "User Interaction",
                             "Information Density",
                             "Visual Clarity",
                             "Accessibility"});
-                table1253.AddRow(new string[] {
+                table1216.AddRow(new string[] {
                             "Conflict overview",
                             "Summary dashboard",
                             "Click for details",
                             "High-level overview",
                             "Clear indicators",
                             "Screen reader support"});
-                table1253.AddRow(new string[] {
+                table1216.AddRow(new string[] {
                             "Detailed comparison",
                             "Side-by-side view",
                             "Interactive selection",
                             "Detailed comparison",
                             "Visual differences",
                             "Keyboard navigation"});
-                table1253.AddRow(new string[] {
+                table1216.AddRow(new string[] {
                             "Resolution options",
                             "Option presentation",
                             "Selection interface",
                             "Available choices",
                             "Clear options",
                             "Voice control"});
-                table1253.AddRow(new string[] {
+                table1216.AddRow(new string[] {
                             "Progress tracking",
                             "Progress visualization",
                             "Real-time updates",
                             "Progress status",
                             "Progress clarity",
                             "Progress announcement"});
-                table1253.AddRow(new string[] {
+                table1216.AddRow(new string[] {
                             "Result confirmation",
                             "Confirmation display",
                             "Confirmation actions",
                             "Resolution results",
                             "Result clarity",
                             "Result confirmation"});
-                table1253.AddRow(new string[] {
+                table1216.AddRow(new string[] {
                             "Help and guidance",
                             "Contextual help",
                             "Help integration",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Help clarity",
                             "Help accessibility"});
 #line 260
-    testRunner.When("designing conflict interfaces:", ((string)(null)), table1253, "When ");
+    testRunner.When("designing conflict interfaces:", ((string)(null)), table1216, "When ");
 #line hidden
 #line 268
     testRunner.Then("interfaces should be intuitive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 277
     testRunner.And("pattern recognition enables proactive conflict prevention", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1254 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1217 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Dimension",
                             "Analysis Method",
                             "Pattern Recognition",
                             "Prevention Strategy",
                             "Implementation Timeline",
                             "Success Metrics"});
-                table1254.AddRow(new string[] {
+                table1217.AddRow(new string[] {
                             "Conflict frequency",
                             "Frequency analysis",
                             "Trend identification",
                             "Process improvement",
                             "30-day implementation",
                             "Conflict reduction"});
-                table1254.AddRow(new string[] {
+                table1217.AddRow(new string[] {
                             "Conflict types",
                             "Type categorization",
                             "Type patterns",
                             "Type-specific prevention",
                             "60-day implementation",
                             "Type-specific reduction"});
-                table1254.AddRow(new string[] {
+                table1217.AddRow(new string[] {
                             "User behavior",
                             "Behavior analysis",
                             "Behavior patterns",
                             "User training",
                             "90-day implementation",
                             "Behavior improvement"});
-                table1254.AddRow(new string[] {
+                table1217.AddRow(new string[] {
                             "System factors",
                             "System analysis",
                             "System patterns",
                             "System optimization",
                             "120-day implementation",
                             "System improvement"});
-                table1254.AddRow(new string[] {
+                table1217.AddRow(new string[] {
                             "Temporal patterns",
                             "Time analysis",
                             "Temporal trends",
                             "Temporal optimization",
                             "30-day implementation",
                             "Temporal improvement"});
-                table1254.AddRow(new string[] {
+                table1217.AddRow(new string[] {
                             "Resolution effectiveness",
                             "Resolution analysis",
                             "Effectiveness patterns",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "60-day implementation",
                             "Resolution enhancement"});
 #line 278
-    testRunner.When("analyzing conflict patterns:", ((string)(null)), table1254, "When ");
+    testRunner.When("analyzing conflict patterns:", ((string)(null)), table1217, "When ");
 #line hidden
 #line 286
     testRunner.Then("analytics should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1851,49 +1851,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 293
     testRunner.Given("conflict management requires ongoing optimization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1255 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1218 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table1255.AddRow(new string[] {
+                table1218.AddRow(new string[] {
                             "Algorithm advancement",
                             "Evolving conflict patterns",
                             "Adaptive algorithms",
                             "Algorithm research",
                             "Algorithm effectiveness",
                             "Algorithm sustainability"});
-                table1255.AddRow(new string[] {
+                table1218.AddRow(new string[] {
                             "User competency",
                             "Complex conflict scenarios",
                             "Continuous education",
                             "Training resources",
                             "User competency",
                             "Education sustainability"});
-                table1255.AddRow(new string[] {
+                table1218.AddRow(new string[] {
                             "System scalability",
                             "Growing data volumes",
                             "Scalable architecture",
                             "Infrastructure investment",
                             "Performance maintenance",
                             "Scalability sustainability"});
-                table1255.AddRow(new string[] {
+                table1218.AddRow(new string[] {
                             "Technology evolution",
                             "Changing technology landscape",
                             "Technology adoption",
                             "Technology resources",
                             "Technology currency",
                             "Technology sustainability"});
-                table1255.AddRow(new string[] {
+                table1218.AddRow(new string[] {
                             "Regulatory compliance",
                             "Evolving regulations",
                             "Adaptive compliance",
                             "Compliance resources",
                             "Compliance maintenance",
                             "Compliance sustainability"});
-                table1255.AddRow(new string[] {
+                table1218.AddRow(new string[] {
                             "Quality assurance",
                             "Quality requirements",
                             "Quality systems",
@@ -1901,7 +1901,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Quality standards",
                             "Quality sustainability"});
 #line 294
-    testRunner.When("planning conflict management sustainability:", ((string)(null)), table1255, "When ");
+    testRunner.When("planning conflict management sustainability:", ((string)(null)), table1218, "When ");
 #line hidden
 #line 302
     testRunner.Then("sustainability should be systematically planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

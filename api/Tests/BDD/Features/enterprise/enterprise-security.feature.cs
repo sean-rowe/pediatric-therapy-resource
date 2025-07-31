@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 17
     testRunner.And("no implicit trust should exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table939 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table902 = new TechTalk.SpecFlow.Table(new string[] {
                             "Security Layer",
                             "Verification Required",
                             "Policy Enforcement",
                             "Monitoring",
                             "Response",
                             "Adaptation"});
-                table939.AddRow(new string[] {
+                table902.AddRow(new string[] {
                             "Identity verification",
                             "Multi-factor always",
                             "Conditional access",
                             "Login anomalies",
                             "Account lockout",
                             "Risk-based MFA"});
-                table939.AddRow(new string[] {
+                table902.AddRow(new string[] {
                             "Device trust",
                             "Device compliance",
                             "Health attestation",
                             "Device inventory",
                             "Quarantine",
                             "Remediation required"});
-                table939.AddRow(new string[] {
+                table902.AddRow(new string[] {
                             "Network segmentation",
                             "Micro-segmentation",
                             "Zero-trust network",
                             "Traffic analysis",
                             "Isolation",
                             "Dynamic perimeter"});
-                table939.AddRow(new string[] {
+                table902.AddRow(new string[] {
                             "Application access",
                             "Per-app verification",
                             "Least privilege",
                             "Usage patterns",
                             "Access revocation",
                             "Just-in-time access"});
-                table939.AddRow(new string[] {
+                table902.AddRow(new string[] {
                             "Data protection",
                             "Classification-based",
                             "Encryption mandatory",
                             "Data flow tracking",
                             "DLP activation",
                             "Contextual controls"});
-                table939.AddRow(new string[] {
+                table902.AddRow(new string[] {
                             "Continuous verification",
                             "Session validation",
                             "Re-authentication",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Session termination",
                             "Adaptive policies"});
 #line 18
-    testRunner.When("implementing zero-trust architecture:", ((string)(null)), table939, "When ");
+    testRunner.When("implementing zero-trust architecture:", ((string)(null)), table902, "When ");
 #line hidden
 #line 26
     testRunner.Then("trust should never be implicit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 34
     testRunner.And("PAM reduces attack surface", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table940 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table903 = new TechTalk.SpecFlow.Table(new string[] {
                             "PAM Component",
                             "Implementation",
                             "Security Controls",
                             "Monitoring",
                             "Compliance",
                             "Emergency Access"});
-                table940.AddRow(new string[] {
+                table903.AddRow(new string[] {
                             "Vault management",
                             "CyberArk/HashiCorp",
                             "Hardware security module",
                             "Access logging",
                             "Audit trails",
                             "Break-glass procedure"});
-                table940.AddRow(new string[] {
+                table903.AddRow(new string[] {
                             "Just-in-time access",
                             "Temporal elevation",
                             "Approval workflow",
                             "Time tracking",
                             "Policy compliance",
                             "Emergency override"});
-                table940.AddRow(new string[] {
+                table903.AddRow(new string[] {
                             "Session recording",
                             "Full session capture",
                             "Encrypted storage",
                             "Playback capability",
                             "Privacy controls",
                             "Forensic analysis"});
-                table940.AddRow(new string[] {
+                table903.AddRow(new string[] {
                             "Credential rotation",
                             "Automated rotation",
                             "Complexity enforcement",
                             "Rotation tracking",
                             "No hardcoding",
                             "Service continuity"});
-                table940.AddRow(new string[] {
+                table903.AddRow(new string[] {
                             "Privilege analytics",
                             "Behavior baseline",
                             "Anomaly detection",
                             "Risk scoring",
                             "Investigation tools",
                             "Threat hunting"});
-                table940.AddRow(new string[] {
+                table903.AddRow(new string[] {
                             "Service accounts",
                             "Managed identities",
                             "No interactive login",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Lifecycle management",
                             "Automated management"});
 #line 35
-    testRunner.When("implementing PAM controls:", ((string)(null)), table940, "When ");
+    testRunner.When("implementing PAM controls:", ((string)(null)), table903, "When ");
 #line hidden
 #line 43
     testRunner.Then("privileged access should be controlled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 52
     testRunner.And("detection must be sophisticated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table941 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table904 = new TechTalk.SpecFlow.Table(new string[] {
                             "Detection Method",
                             "Technology Stack",
                             "Detection Capabilities",
                             "Response Time",
                             "False Positive Rate",
                             "Improvement"});
-                table941.AddRow(new string[] {
+                table904.AddRow(new string[] {
                             "SIEM platform",
                             "Splunk/Sentinel",
                             "Log correlation",
                             "Real-time",
                             "<5% target",
                             "ML tuning"});
-                table941.AddRow(new string[] {
+                table904.AddRow(new string[] {
                             "EDR solution",
                             "CrowdStrike/Carbon Black",
                             "Endpoint behavior",
                             "<1 minute",
                             "<10% target",
                             "Threat intelligence"});
-                table941.AddRow(new string[] {
+                table904.AddRow(new string[] {
                             "Network monitoring",
                             "NDR/IDS systems",
                             "Traffic anomalies",
                             "<30 seconds",
                             "<3% target",
                             "Baseline refinement"});
-                table941.AddRow(new string[] {
+                table904.AddRow(new string[] {
                             "User analytics",
                             "UEBA platforms",
                             "Behavioral anomalies",
                             "<5 minutes",
                             "<8% target",
                             "Profile learning"});
-                table941.AddRow(new string[] {
+                table904.AddRow(new string[] {
                             "Cloud security",
                             "CSPM/CWPP",
                             "Cloud misconfigurations",
                             "Continuous",
                             "<2% target",
                             "Policy updates"});
-                table941.AddRow(new string[] {
+                table904.AddRow(new string[] {
                             "Deception technology",
                             "Honeypots/tokens",
                             "Attacker detection",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "<1% target",
                             "Deception expansion"});
 #line 53
-    testRunner.When("implementing threat detection:", ((string)(null)), table941, "When ");
+    testRunner.When("implementing threat detection:", ((string)(null)), table904, "When ");
 #line hidden
 #line 61
     testRunner.Then("threats should be detected quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 69
     testRunner.And("automation reduces damage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table942 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table905 = new TechTalk.SpecFlow.Table(new string[] {
                             "Incident Type",
                             "Detection Trigger",
                             "Automated Actions",
                             "Human Escalation",
                             "Recovery Process",
                             "Lessons Learned"});
-                table942.AddRow(new string[] {
+                table905.AddRow(new string[] {
                             "Brute force attack",
                             "Failed login threshold",
                             "Account lockout, IP block",
                             "SOC notification",
                             "Unlock procedure",
                             "Threshold tuning"});
-                table942.AddRow(new string[] {
+                table905.AddRow(new string[] {
                             "Data exfiltration",
                             "Unusual data transfer",
                             "Connection termination",
                             "Immediate alert",
                             "Data recovery",
                             "DLP enhancement"});
-                table942.AddRow(new string[] {
+                table905.AddRow(new string[] {
                             "Malware detection",
                             "Signature/behavior match",
                             "Isolation, scan, clean",
                             "Analyst review",
                             "System restore",
                             "Signature update"});
-                table942.AddRow(new string[] {
+                table905.AddRow(new string[] {
                             "Privilege escalation",
                             "Unauthorized elevation",
                             "Access revocation",
                             "Investigation",
                             "Permission audit",
                             "Policy tightening"});
-                table942.AddRow(new string[] {
+                table905.AddRow(new string[] {
                             "Insider threat",
                             "Behavioral anomaly",
                             "Access restriction",
                             "HR notification",
                             "Investigation",
                             "Training enhancement"});
-                table942.AddRow(new string[] {
+                table905.AddRow(new string[] {
                             "Zero-day exploit",
                             "Unknown pattern",
                             "Containment, analysis",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Patch development",
                             "Threat sharing"});
 #line 70
-    testRunner.When("automating incident response:", ((string)(null)), table942, "When ");
+    testRunner.When("automating incident response:", ((string)(null)), table905, "When ");
 #line hidden
 #line 78
     testRunner.Then("responses should be immediate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 87
     testRunner.And("protection must be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table943 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table906 = new TechTalk.SpecFlow.Table(new string[] {
                             "Protection Layer",
                             "Technology",
                             "Key Management",
                             "Access Control",
                             "Monitoring",
                             "Compliance"});
-                table943.AddRow(new string[] {
+                table906.AddRow(new string[] {
                             "At-rest encryption",
                             "AES-256",
                             "HSM-backed KMS",
                             "Role-based",
                             "Encryption status",
                             "FIPS 140-2"});
-                table943.AddRow(new string[] {
+                table906.AddRow(new string[] {
                             "In-transit encryption",
                             "TLS 1.3",
                             "Certificate management",
                             "mTLS required",
                             "Protocol monitoring",
                             "Perfect forward secrecy"});
-                table943.AddRow(new string[] {
+                table906.AddRow(new string[] {
                             "In-use encryption",
                             "Homomorphic/SGX",
                             "Secure enclaves",
                             "Computation limits",
                             "Performance impact",
                             "Privacy preserving"});
-                table943.AddRow(new string[] {
+                table906.AddRow(new string[] {
                             "Application encryption",
                             "Field-level",
                             "Key rotation",
                             "Crypto-shredding",
                             "Usage tracking",
                             "Right to forget"});
-                table943.AddRow(new string[] {
+                table906.AddRow(new string[] {
                             "Backup encryption",
                             "Immutable backups",
                             "Separate key hierarchy",
                             "Air-gapped storage",
                             "Restore testing",
                             "Ransomware protection"});
-                table943.AddRow(new string[] {
+                table906.AddRow(new string[] {
                             "Key management",
                             "KMIP standard",
                             "Split knowledge",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Key usage audit",
                             "Key ceremony"});
 #line 88
-    testRunner.When("protecting enterprise data:", ((string)(null)), table943, "When ");
+    testRunner.When("protecting enterprise data:", ((string)(null)), table906, "When ");
 #line hidden
 #line 96
     testRunner.Then("data should be protected everywhere", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 104
     testRunner.And("DLP provides defense in depth", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table944 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table907 = new TechTalk.SpecFlow.Table(new string[] {
                             "DLP Channel",
                             "Detection Methods",
                             "Prevention Actions",
                             "Policy Types",
                             "Monitoring",
                             "Refinement"});
-                table944.AddRow(new string[] {
+                table907.AddRow(new string[] {
                             "Email DLP",
                             "Content inspection",
                             "Block, encrypt, warn",
                             "PHI detection",
                             "Violation logs",
                             "False positive tuning"});
-                table944.AddRow(new string[] {
+                table907.AddRow(new string[] {
                             "Web DLP",
                             "Upload scanning",
                             "Block transfers",
                             "File type control",
                             "Web activity",
                             "Policy adjustment"});
-                table944.AddRow(new string[] {
+                table907.AddRow(new string[] {
                             "Endpoint DLP",
                             "Device monitoring",
                             "Disable ports",
                             "Removable media",
                             "Device events",
                             "Agent updates"});
-                table944.AddRow(new string[] {
+                table907.AddRow(new string[] {
                             "Cloud DLP",
                             "API monitoring",
                             "Access restriction",
                             "SaaS control",
                             "Cloud activity",
                             "Shadow IT discovery"});
-                table944.AddRow(new string[] {
+                table907.AddRow(new string[] {
                             "Network DLP",
                             "Deep packet inspection",
                             "Connection blocking",
                             "Protocol control",
                             "Traffic analysis",
                             "Signature updates"});
-                table944.AddRow(new string[] {
+                table907.AddRow(new string[] {
                             "Print DLP",
                             "Print monitoring",
                             "Watermarking",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Print logs",
                             "Policy enforcement"});
 #line 105
-    testRunner.When("implementing DLP controls:", ((string)(null)), table944, "When ");
+    testRunner.When("implementing DLP controls:", ((string)(null)), table907, "When ");
 #line hidden
 #line 113
     testRunner.Then("data loss should be prevented", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 122
     testRunner.And("attributes provide fine-grained control", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table945 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table908 = new TechTalk.SpecFlow.Table(new string[] {
                             "Attribute Type",
                             "Attribute Examples",
                             "Policy Logic",
                             "Evaluation",
                             "Caching",
                             "Audit"});
-                table945.AddRow(new string[] {
+                table908.AddRow(new string[] {
                             "User attributes",
                             "Department, clearance",
                             "Boolean logic",
                             "Real-time",
                             "5-minute TTL",
                             "All decisions"});
-                table945.AddRow(new string[] {
+                table908.AddRow(new string[] {
                             "Resource attributes",
                             "Classification, owner",
                             "Policy engine",
                             "Cached results",
                             "Invalidation",
                             "Access patterns"});
-                table945.AddRow(new string[] {
+                table908.AddRow(new string[] {
                             "Environmental",
                             "Time, location, device",
                             "Contextual rules",
                             "Dynamic",
                             "No caching",
                             "Context logging"});
-                table945.AddRow(new string[] {
+                table908.AddRow(new string[] {
                             "Action attributes",
                             "Read, write, execute",
                             "Permission matrix",
                             "Pre-computed",
                             "Permission cache",
                             "Action tracking"});
-                table945.AddRow(new string[] {
+                table908.AddRow(new string[] {
                             "Relationship",
                             "Manager, team member",
                             "Graph traversal",
                             "Lazy evaluation",
                             "Relationship cache",
                             "Relationship audit"});
-                table945.AddRow(new string[] {
+                table908.AddRow(new string[] {
                             "Risk attributes",
                             "Threat level, score",
                             "Risk engine",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Real-time update",
                             "Risk decisions"});
 #line 123
-    testRunner.When("implementing ABAC:", ((string)(null)), table945, "When ");
+    testRunner.When("implementing ABAC:", ((string)(null)), table908, "When ");
 #line hidden
 #line 131
     testRunner.Then("access should be fine-grained", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 139
     testRunner.And("security must be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table946 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table909 = new TechTalk.SpecFlow.Table(new string[] {
                             "Security Control",
                             "Implementation",
                             "Validation",
                             "Monitoring",
                             "Response",
                             "Standards"});
-                table946.AddRow(new string[] {
+                table909.AddRow(new string[] {
                             "Authentication",
                             "mTLS + OAuth 2.0",
                             "Certificate validation",
                             "Auth failures",
                             "Token revocation",
                             "RFC compliance"});
-                table946.AddRow(new string[] {
+                table909.AddRow(new string[] {
                             "Authorization",
                             "Scope-based + ABAC",
                             "Fine-grained permissions",
                             "Unauthorized attempts",
                             "Access denial",
                             "OWASP API"});
-                table946.AddRow(new string[] {
+                table909.AddRow(new string[] {
                             "Rate limiting",
                             "Token bucket algorithm",
                             "Per-client limits",
                             "Rate violations",
                             "Throttling",
                             "Fair use"});
-                table946.AddRow(new string[] {
+                table909.AddRow(new string[] {
                             "Input validation",
                             "Schema validation",
                             "OWASP rules",
                             "Malformed requests",
                             "Request blocking",
                             "Security headers"});
-                table946.AddRow(new string[] {
+                table909.AddRow(new string[] {
                             "Encryption",
                             "E2E encryption",
                             "TLS verification",
                             "Weak cipher attempts",
                             "Force upgrade",
                             "Current standards"});
-                table946.AddRow(new string[] {
+                table909.AddRow(new string[] {
                             "API gateway",
                             "WAF integration",
                             "Threat detection",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Auto-blocking",
                             "PCI compliance"});
 #line 140
-    testRunner.When("securing enterprise APIs:", ((string)(null)), table946, "When ");
+    testRunner.When("securing enterprise APIs:", ((string)(null)), table909, "When ");
 #line hidden
 #line 148
     testRunner.Then("APIs should be highly secure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 157
     testRunner.And("violations must be detected immediately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table947 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table910 = new TechTalk.SpecFlow.Table(new string[] {
                             "Compliance Area",
                             "Monitoring Method",
                             "Detection Rules",
                             "Alert Threshold",
                             "Remediation",
                             "Reporting"});
-                table947.AddRow(new string[] {
+                table910.AddRow(new string[] {
                             "Access compliance",
                             "Permission analytics",
                             "Excess privileges",
                             "Any violation",
                             "Auto-revocation",
                             "Daily report"});
-                table947.AddRow(new string[] {
+                table910.AddRow(new string[] {
                             "Data compliance",
                             "Classification scanning",
                             "Mislabeled data",
                             "Critical data",
                             "Reclassification",
                             "Compliance score"});
-                table947.AddRow(new string[] {
+                table910.AddRow(new string[] {
                             "Encryption compliance",
                             "Crypto monitoring",
                             "Unencrypted data",
                             "Any finding",
                             "Force encryption",
                             "Encryption status"});
-                table947.AddRow(new string[] {
+                table910.AddRow(new string[] {
                             "Audit compliance",
                             "Log integrity",
                             "Missing logs",
                             "Gap detected",
                             "Log recovery",
                             "Audit readiness"});
-                table947.AddRow(new string[] {
+                table910.AddRow(new string[] {
                             "Patch compliance",
                             "Vulnerability scanning",
                             "Missing patches",
                             "Critical patches",
                             "Auto-patching",
                             "Patch status"});
-                table947.AddRow(new string[] {
+                table910.AddRow(new string[] {
                             "Policy compliance",
                             "Policy engine",
                             "Policy violations",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Enforcement",
                             "Violation trends"});
 #line 158
-    testRunner.When("monitoring compliance continuously:", ((string)(null)), table947, "When ");
+    testRunner.When("monitoring compliance continuously:", ((string)(null)), table910, "When ");
 #line hidden
 #line 166
     testRunner.Then("compliance should be continuous", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 174
     testRunner.And("training reduces security incidents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table948 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table911 = new TechTalk.SpecFlow.Table(new string[] {
                             "Training Component",
                             "Delivery Method",
                             "Frequency",
                             "Measurement",
                             "Reinforcement",
                             "Effectiveness"});
-                table948.AddRow(new string[] {
+                table911.AddRow(new string[] {
                             "Phishing simulation",
                             "Simulated attacks",
                             "Monthly",
                             "Click rates",
                             "Just-in-time training",
                             "70% reduction target"});
-                table948.AddRow(new string[] {
+                table911.AddRow(new string[] {
                             "Security basics",
                             "Interactive modules",
                             "Onboarding + annual",
                             "Quiz scores",
                             "Micro-learning",
                             "90% completion"});
-                table948.AddRow(new string[] {
+                table911.AddRow(new string[] {
                             "Role-specific",
                             "Targeted content",
                             "Quarterly",
                             "Competency tests",
                             "Scenario practice",
                             "Behavior change"});
-                table948.AddRow(new string[] {
+                table911.AddRow(new string[] {
                             "Incident reporting",
                             "Clear procedures",
                             "Continuous",
                             "Report quality",
                             "Recognition program",
                             "Increased reporting"});
-                table948.AddRow(new string[] {
+                table911.AddRow(new string[] {
                             "Privacy training",
                             "HIPAA/FERPA focus",
                             "Annual + updates",
                             "Compliance test",
                             "Case studies",
                             "Zero violations"});
-                table948.AddRow(new string[] {
+                table911.AddRow(new string[] {
                             "Threat updates",
                             "Security bulletins",
                             "As needed",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Team discussions",
                             "Threat awareness"});
 #line 175
-    testRunner.When("implementing security awareness:", ((string)(null)), table948, "When ");
+    testRunner.When("implementing security awareness:", ((string)(null)), table911, "When ");
 #line hidden
 #line 183
     testRunner.Then("awareness should be high", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 192
     testRunner.And("security must be consistent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table949 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table912 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cloud Platform",
                             "Security Services",
                             "Integration Method",
                             "Monitoring",
                             "Compliance",
                             "Management"});
-                table949.AddRow(new string[] {
+                table912.AddRow(new string[] {
                             "AWS",
                             "GuardDuty, Shield",
                             "Security Hub",
                             "CloudTrail",
                             "AWS compliance",
                             "Control Tower"});
-                table949.AddRow(new string[] {
+                table912.AddRow(new string[] {
                             "Azure",
                             "Sentinel, Defender",
                             "Security Center",
                             "Activity logs",
                             "Azure compliance",
                             "Azure Policy"});
-                table949.AddRow(new string[] {
+                table912.AddRow(new string[] {
                             "Google Cloud",
                             "Chronicle, Armor",
                             "Security Command",
                             "Cloud Logging",
                             "GCP compliance",
                             "Organization Policy"});
-                table949.AddRow(new string[] {
+                table912.AddRow(new string[] {
                             "Cross-cloud",
                             "CSPM platform",
                             "API integration",
                             "Unified dashboard",
                             "Multi-cloud",
                             "Cloud Custodian"});
-                table949.AddRow(new string[] {
+                table912.AddRow(new string[] {
                             "Kubernetes",
                             "Falco, OPA",
                             "Admission control",
                             "Audit logs",
                             "CIS benchmarks",
                             "Rancher Security"});
-                table949.AddRow(new string[] {
+                table912.AddRow(new string[] {
                             "Edge locations",
                             "Edge security",
                             "Distributed policy",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Local compliance",
                             "Centralized management"});
 #line 193
-    testRunner.When("securing multi-cloud infrastructure:", ((string)(null)), table949, "When ");
+    testRunner.When("securing multi-cloud infrastructure:", ((string)(null)), table912, "When ");
 #line hidden
 #line 201
     testRunner.Then("security should be uniform", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 210
     testRunner.And("governance prevents security drift", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table950 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table913 = new TechTalk.SpecFlow.Table(new string[] {
                             "IGA Component",
                             "Processes",
                             "Automation Level",
                             "Review Frequency",
                             "Compliance Impact",
                             "Risk Reduction"});
-                table950.AddRow(new string[] {
+                table913.AddRow(new string[] {
                             "Access reviews",
                             "Certification campaigns",
                             "Manager-driven",
                             "Quarterly",
                             "SOX compliance",
                             "80% risk reduction"});
-                table950.AddRow(new string[] {
+                table913.AddRow(new string[] {
                             "Lifecycle management",
                             "Joiner/mover/leaver",
                             "Fully automated",
                             "Real-time",
                             "Immediate updates",
                             "Zero orphan accounts"});
-                table950.AddRow(new string[] {
+                table913.AddRow(new string[] {
                             "Segregation of duties",
                             "Conflict detection",
                             "Policy-based",
                             "Continuous",
                             "Fraud prevention",
                             "Conflict elimination"});
-                table950.AddRow(new string[] {
+                table913.AddRow(new string[] {
                             "Privileged governance",
                             "PAM integration",
                             "Risk-based",
                             "Monthly",
                             "Audit satisfaction",
                             "Privilege minimization"});
-                table950.AddRow(new string[] {
+                table913.AddRow(new string[] {
                             "Role management",
                             "Role mining",
                             "ML-assisted",
                             "Semi-annual",
                             "Clean RBAC",
                             "Role proliferation control"});
-                table950.AddRow(new string[] {
+                table913.AddRow(new string[] {
                             "Identity analytics",
                             "Anomaly detection",
                             "AI-powered",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Threat detection",
                             "Insider threat reduction"});
 #line 211
-    testRunner.When("implementing IGA:", ((string)(null)), table950, "When ");
+    testRunner.When("implementing IGA:", ((string)(null)), table913, "When ");
 #line hidden
 #line 219
     testRunner.Then("identities should be governed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 228
     testRunner.And("micro-segmentation improves security", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table951 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table914 = new TechTalk.SpecFlow.Table(new string[] {
                             "Network Component",
                             "Segmentation Strategy",
                             "Access Control",
                             "Monitoring",
                             "Threat Response",
                             "Maintenance"});
-                table951.AddRow(new string[] {
+                table914.AddRow(new string[] {
                             "Micro-segments",
                             "Application-based",
                             "Identity-based rules",
                             "Flow analysis",
                             "Auto-isolation",
                             "Policy updates"});
-                table951.AddRow(new string[] {
+                table914.AddRow(new string[] {
                             "Software-defined perimeter",
                             "Dynamic perimeter",
                             "Cryptographic identity",
                             "Connection monitoring",
                             "Instant revocation",
                             "SDP updates"});
-                table951.AddRow(new string[] {
+                table914.AddRow(new string[] {
                             "Service mesh",
                             "Sidecar proxies",
                             "mTLS everywhere",
                             "Service monitoring",
                             "Circuit breaking",
                             "Mesh upgrades"});
-                table951.AddRow(new string[] {
+                table914.AddRow(new string[] {
                             "Network policies",
                             "Kubernetes/cloud-native",
                             "Label selectors",
                             "Policy violations",
                             "Deny by default",
                             "GitOps management"});
-                table951.AddRow(new string[] {
+                table914.AddRow(new string[] {
                             "East-west firewall",
                             "Internal traffic control",
                             "Application-aware",
                             "Lateral movement",
                             "Breach containment",
                             "Rule optimization"});
-                table951.AddRow(new string[] {
+                table914.AddRow(new string[] {
                             "ZTNA",
                             "Application-specific",
                             "User + device trust",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Adaptive access",
                             "Trust updates"});
 #line 229
-    testRunner.When("implementing zero-trust networking:", ((string)(null)), table951, "When ");
+    testRunner.When("implementing zero-trust networking:", ((string)(null)), table914, "When ");
 #line hidden
 #line 237
     testRunner.Then("networks should be segmented", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 246
     testRunner.And("SOAR improves response efficiency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table952 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table915 = new TechTalk.SpecFlow.Table(new string[] {
                             "SOAR Capability",
                             "Use Cases",
                             "Integration Points",
                             "Automation Level",
                             "Time Savings",
                             "Quality Impact"});
-                table952.AddRow(new string[] {
+                table915.AddRow(new string[] {
                             "Incident triage",
                             "Alert prioritization",
                             "SIEM, ticketing",
                             "90% automated",
                             "80% reduction",
                             "Consistent triage"});
-                table952.AddRow(new string[] {
+                table915.AddRow(new string[] {
                             "Threat enrichment",
                             "Context gathering",
                             "TI feeds, OSINT",
                             "Fully automated",
                             "95% faster",
                             "Complete context"});
-                table952.AddRow(new string[] {
+                table915.AddRow(new string[] {
                             "Response playbooks",
                             "Standard procedures",
                             "All security tools",
                             "Guided automation",
                             "70% faster",
                             "Error reduction"});
-                table952.AddRow(new string[] {
+                table915.AddRow(new string[] {
                             "Evidence collection",
                             "Forensic gathering",
                             "Endpoints, logs",
                             "Automated collection",
                             "90% faster",
                             "Chain of custody"});
-                table952.AddRow(new string[] {
+                table915.AddRow(new string[] {
                             "Remediation",
                             "Containment actions",
                             "Infrastructure",
                             "Risk-based auto",
                             "Seconds vs hours",
                             "Damage limitation"});
-                table952.AddRow(new string[] {
+                table915.AddRow(new string[] {
                             "Reporting",
                             "Incident documentation",
                             "Templates, dashboards",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "85% reduction",
                             "Compliance ready"});
 #line 247
-    testRunner.When("implementing SOAR platform:", ((string)(null)), table952, "When ");
+    testRunner.When("implementing SOAR platform:", ((string)(null)), table915, "When ");
 #line hidden
 #line 255
     testRunner.Then("operations should be orchestrated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 264
     testRunner.And("patching must be rapid yet safe", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table953 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table916 = new TechTalk.SpecFlow.Table(new string[] {
                             "Vulnerability Stage",
                             "Tools/Process",
                             "Prioritization",
                             "Remediation SLA",
                             "Risk Mitigation",
                             "Verification"});
-                table953.AddRow(new string[] {
+                table916.AddRow(new string[] {
                             "Discovery",
                             "Continuous scanning",
                             "CVSS + exploitability",
                             "Critical: 24h",
                             "Virtual patching",
                             "Rescan validation"});
-                table953.AddRow(new string[] {
+                table916.AddRow(new string[] {
                             "Assessment",
                             "Threat intelligence",
                             "Business impact",
                             "High: 7 days",
                             "Compensating controls",
                             "Penetration testing"});
-                table953.AddRow(new string[] {
+                table916.AddRow(new string[] {
                             "Prioritization",
                             "Risk scoring",
                             "Crown jewel focus",
                             "Medium: 30 days",
                             "Network isolation",
                             "Risk acceptance"});
-                table953.AddRow(new string[] {
+                table916.AddRow(new string[] {
                             "Remediation",
                             "Patch management",
                             "Automated deployment",
                             "Low: 90 days",
                             "Configuration hardening",
                             "Compliance check"});
-                table953.AddRow(new string[] {
+                table916.AddRow(new string[] {
                             "Verification",
                             "Post-patch scanning",
                             "Effectiveness check",
                             "Immediate",
                             "Rollback ready",
                             "Clean scan required"});
-                table953.AddRow(new string[] {
+                table916.AddRow(new string[] {
                             "Exception handling",
                             "Risk acceptance",
                             "Executive approval",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Additional controls",
                             "Regular review"});
 #line 265
-    testRunner.When("managing vulnerabilities:", ((string)(null)), table953, "When ");
+    testRunner.When("managing vulnerabilities:", ((string)(null)), table916, "When ");
 #line hidden
 #line 273
     testRunner.Then("vulnerabilities should be found quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 282
     testRunner.And("engineering ensures protection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table954 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table917 = new TechTalk.SpecFlow.Table(new string[] {
                             "Privacy Principle",
                             "Implementation",
                             "Technical Controls",
                             "Verification",
                             "Documentation",
                             "Maintenance"});
-                table954.AddRow(new string[] {
+                table917.AddRow(new string[] {
                             "Data minimization",
                             "Collection limits",
                             "Field-level controls",
                             "Data audits",
                             "Privacy notices",
                             "Regular review"});
-                table954.AddRow(new string[] {
+                table917.AddRow(new string[] {
                             "Purpose limitation",
                             "Use restrictions",
                             "Access controls",
                             "Purpose tracking",
                             "Consent records",
                             "Consent refresh"});
-                table954.AddRow(new string[] {
+                table917.AddRow(new string[] {
                             "Transparency",
                             "Clear notices",
                             "Audit logs",
                             "User portal",
                             "Privacy policy",
                             "Annual updates"});
-                table954.AddRow(new string[] {
+                table917.AddRow(new string[] {
                             "User control",
                             "Self-service portal",
                             "CRUD operations",
                             "Function testing",
                             "User guides",
                             "Feature enhancement"});
-                table954.AddRow(new string[] {
+                table917.AddRow(new string[] {
                             "Security",
                             "Defense in depth",
                             "Encryption, access",
                             "Security testing",
                             "Security measures",
                             "Continuous improvement"});
-                table954.AddRow(new string[] {
+                table917.AddRow(new string[] {
                             "Accountability",
                             "Privacy program",
                             "Compliance monitoring",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Program documentation",
                             "Maturity assessment"});
 #line 283
-    testRunner.When("implementing privacy engineering:", ((string)(null)), table954, "When ");
+    testRunner.When("implementing privacy engineering:", ((string)(null)), table917, "When ");
 #line hidden
 #line 291
     testRunner.Then("privacy should be built-in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1854,49 +1854,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 300
     testRunner.And("actionable intel drives decisions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table955 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table918 = new TechTalk.SpecFlow.Table(new string[] {
                             "Intel Source",
                             "Collection Method",
                             "Processing",
                             "Distribution",
                             "Action",
                             "Effectiveness"});
-                table955.AddRow(new string[] {
+                table918.AddRow(new string[] {
                             "Commercial feeds",
                             "API integration",
                             "Normalization",
                             "SIEM enrichment",
                             "Auto-blocking",
                             "60% threat reduction"});
-                table955.AddRow(new string[] {
+                table918.AddRow(new string[] {
                             "Open source",
                             "OSINT tools",
                             "Validation",
                             "Team briefings",
                             "Threat hunting",
                             "Early warning"});
-                table955.AddRow(new string[] {
+                table918.AddRow(new string[] {
                             "Industry sharing",
                             "ISAC membership",
                             "Correlation",
                             "Relevant alerts",
                             "Proactive defense",
                             "Peer protection"});
-                table955.AddRow(new string[] {
+                table918.AddRow(new string[] {
                             "Internal telemetry",
                             "Log analysis",
                             "Pattern detection",
                             "Dashboard updates",
                             "Response tuning",
                             "Custom detection"});
-                table955.AddRow(new string[] {
+                table918.AddRow(new string[] {
                             "Dark web",
                             "Monitoring services",
                             "Risk assessment",
                             "Executive alerts",
                             "Preemptive action",
                             "Brand protection"});
-                table955.AddRow(new string[] {
+                table918.AddRow(new string[] {
                             "Government",
                             "Classified briefings",
                             "Clearance required",
@@ -1904,7 +1904,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Strategic planning",
                             "Nation-state defense"});
 #line 301
-    testRunner.When("operationalizing threat intelligence:", ((string)(null)), table955, "When ");
+    testRunner.When("operationalizing threat intelligence:", ((string)(null)), table918, "When ");
 #line hidden
 #line 309
     testRunner.Then("intelligence should be actionable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1961,49 +1961,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 318
     testRunner.And("forensics provides legal evidence", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table956 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table919 = new TechTalk.SpecFlow.Table(new string[] {
                             "Investigation Phase",
                             "Tools/Techniques",
                             "Evidence Types",
                             "Chain of Custody",
                             "Analysis Methods",
                             "Reporting"});
-                table956.AddRow(new string[] {
+                table919.AddRow(new string[] {
                             "Initial response",
                             "Triage toolkit",
                             "Memory, disk, network",
                             "Photography, hashing",
                             "Timeline analysis",
                             "Preliminary report"});
-                table956.AddRow(new string[] {
+                table919.AddRow(new string[] {
                             "Evidence collection",
                             "Forensic imaging",
                             "Full disk, selective",
                             "Write-blockers",
                             "Integrity verification",
                             "Collection report"});
-                table956.AddRow(new string[] {
+                table919.AddRow(new string[] {
                             "Analysis",
                             "Forensic suites",
                             "Artifacts, logs",
                             "Isolated environment",
                             "Correlation analysis",
                             "Technical findings"});
-                table956.AddRow(new string[] {
+                table919.AddRow(new string[] {
                             "Malware analysis",
                             "Sandboxing",
                             "Binary analysis",
                             "Secure storage",
                             "Static + dynamic",
                             "Malware report"});
-                table956.AddRow(new string[] {
+                table919.AddRow(new string[] {
                             "Attribution",
                             "TTP analysis",
                             "Indicators, patterns",
                             "Intelligence correlation",
                             "Diamond model",
                             "Attribution assessment"});
-                table956.AddRow(new string[] {
+                table919.AddRow(new string[] {
                             "Legal preparation",
                             "Evidence package",
                             "Court-ready format",
@@ -2011,7 +2011,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Expert testimony prep",
                             "Final report"});
 #line 319
-    testRunner.When("conducting investigations:", ((string)(null)), table956, "When ");
+    testRunner.When("conducting investigations:", ((string)(null)), table919, "When ");
 #line hidden
 #line 327
     testRunner.Then("investigations should be thorough", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -2068,49 +2068,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 336
     testRunner.And("preparation ensures resilience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table957 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table920 = new TechTalk.SpecFlow.Table(new string[] {
                             "Continuity Scenario",
                             "Security Considerations",
                             "Adapted Controls",
                             "Communication",
                             "Recovery Priority",
                             "Testing"});
-                table957.AddRow(new string[] {
+                table920.AddRow(new string[] {
                             "Pandemic response",
                             "Remote work security",
                             "VPN scaling, MFA",
                             "Security bulletins",
                             "Critical systems",
                             "Tabletop quarterly"});
-                table957.AddRow(new string[] {
+                table920.AddRow(new string[] {
                             "Natural disaster",
                             "Physical security loss",
                             "Cloud failover",
                             "Emergency contacts",
                             "Data protection",
                             "DR drills"});
-                table957.AddRow(new string[] {
+                table920.AddRow(new string[] {
                             "Cyber attack",
                             "Incident response",
                             "Isolation procedures",
                             "Crisis communication",
                             "Service restoration",
                             "Red team annually"});
-                table957.AddRow(new string[] {
+                table920.AddRow(new string[] {
                             "Supply chain",
                             "Vendor failure",
                             "Alternative providers",
                             "Stakeholder updates",
                             "Service continuity",
                             "Vendor assessment"});
-                table957.AddRow(new string[] {
+                table920.AddRow(new string[] {
                             "Key person loss",
                             "Knowledge transfer",
                             "Documentation, training",
                             "Succession planning",
                             "Operational continuity",
                             "Cross-training"});
-                table957.AddRow(new string[] {
+                table920.AddRow(new string[] {
                             "Regulatory change",
                             "Compliance adaptation",
                             "Policy updates",
@@ -2118,7 +2118,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "Compliance maintenance",
                             "Compliance testing"});
 #line 337
-    testRunner.When("planning security continuity:", ((string)(null)), table957, "When ");
+    testRunner.When("planning security continuity:", ((string)(null)), table920, "When ");
 #line hidden
 #line 345
     testRunner.Then("continuity should be maintained", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -2175,49 +2175,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
 #line 354
     testRunner.And("preparation prevents compromise", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table958 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table921 = new TechTalk.SpecFlow.Table(new string[] {
                             "Threat Category",
                             "Preparation Strategy",
                             "Detection Capability",
                             "Defense Measures",
                             "Research Investment",
                             "Timeline"});
-                table958.AddRow(new string[] {
+                table921.AddRow(new string[] {
                             "AI-powered attacks",
                             "AI defense systems",
                             "Behavioral analysis",
                             "Adversarial training",
                             "ML security team",
                             "Now-2 years"});
-                table958.AddRow(new string[] {
+                table921.AddRow(new string[] {
                             "Quantum computing",
                             "Post-quantum crypto",
                             "Algorithm inventory",
                             "Migration planning",
                             "Quantum research",
                             "2-5 years"});
-                table958.AddRow(new string[] {
+                table921.AddRow(new string[] {
                             "Supply chain attacks",
                             "SBOM management",
                             "Dependency scanning",
                             "Vendor assessment",
                             "Supply chain security",
                             "Now"});
-                table958.AddRow(new string[] {
+                table921.AddRow(new string[] {
                             "IoT/OT security",
                             "Device inventory",
                             "Anomaly detection",
                             "Segmentation",
                             "IoT security platform",
                             "Now-1 year"});
-                table958.AddRow(new string[] {
+                table921.AddRow(new string[] {
                             "Deepfakes",
                             "Detection algorithms",
                             "Media analysis",
                             "Verification systems",
                             "Detection research",
                             "1-2 years"});
-                table958.AddRow(new string[] {
+                table921.AddRow(new string[] {
                             "5G security",
                             "Edge security",
                             "Traffic inspection",
@@ -2225,7 +2225,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Enterprise
                             "5G security arch",
                             "Now-2 years"});
 #line 355
-    testRunner.When("preparing for emerging threats:", ((string)(null)), table958, "When ");
+    testRunner.When("preparing for emerging threats:", ((string)(null)), table921, "When ");
 #line hidden
 #line 363
     testRunner.Then("emerging threats should be anticipated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

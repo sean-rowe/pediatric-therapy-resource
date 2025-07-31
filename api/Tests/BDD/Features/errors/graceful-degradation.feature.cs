@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 17
     testRunner.And("service levels determine which features remain available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1120 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1083 = new TechTalk.SpecFlow.Table(new string[] {
                             "Performance Metric",
                             "Normal Threshold",
                             "Warning Threshold",
                             "Critical Threshold",
                             "Emergency Threshold",
                             "Degradation Response"});
-                table1120.AddRow(new string[] {
+                table1083.AddRow(new string[] {
                             "Response time",
                             "<500ms",
                             ">1 second",
                             ">3 seconds",
                             ">10 seconds",
                             "Progressive feature reduction"});
-                table1120.AddRow(new string[] {
+                table1083.AddRow(new string[] {
                             "CPU utilization",
                             "<70%",
                             ">80%",
                             ">90%",
                             ">95%",
                             "Resource prioritization"});
-                table1120.AddRow(new string[] {
+                table1083.AddRow(new string[] {
                             "Memory usage",
                             "<75%",
                             ">85%",
                             ">92%",
                             ">98%",
                             "Memory optimization"});
-                table1120.AddRow(new string[] {
+                table1083.AddRow(new string[] {
                             "Database connections",
                             "<80%",
                             ">90%",
                             ">95%",
                             ">98%",
                             "Connection limiting"});
-                table1120.AddRow(new string[] {
+                table1083.AddRow(new string[] {
                             "Error rate",
                             "<1%",
                             ">5%",
                             ">10%",
                             ">20%",
                             "Error handling enhancement"});
-                table1120.AddRow(new string[] {
+                table1083.AddRow(new string[] {
                             "Concurrent users",
                             "<10000",
                             ">15000",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             ">25000",
                             "User request limiting"});
 #line 18
-    testRunner.When("monitoring performance for degradation triggers:", ((string)(null)), table1120, "When ");
+    testRunner.When("monitoring performance for degradation triggers:", ((string)(null)), table1083, "When ");
 #line hidden
 #line 26
     testRunner.Then("thresholds should trigger appropriate degradation levels", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 34
     testRunner.And("feature prioritization ensures essential services remain available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1121 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1084 = new TechTalk.SpecFlow.Table(new string[] {
                             "Feature Category",
                             "Priority Level",
                             "Degradation Behavior",
                             "Resource Allocation",
                             "User Impact",
                             "Recovery Priority"});
-                table1121.AddRow(new string[] {
+                table1084.AddRow(new string[] {
                             "Authentication",
                             "Critical",
                             "Always available",
                             "Protected resources",
                             "No impact",
                             "First to recover"});
-                table1121.AddRow(new string[] {
+                table1084.AddRow(new string[] {
                             "Core therapy content",
                             "High",
                             "Full functionality",
                             "Priority resources",
                             "Minimal impact",
                             "High recovery"});
-                table1121.AddRow(new string[] {
+                table1084.AddRow(new string[] {
                             "Search functionality",
                             "Medium",
                             "Simplified search",
                             "Standard resources",
                             "Reduced capability",
                             "Medium recovery"});
-                table1121.AddRow(new string[] {
+                table1084.AddRow(new string[] {
                             "File uploads",
                             "Medium",
                             "Throttled uploads",
                             "Limited resources",
                             "Slower uploads",
                             "Medium recovery"});
-                table1121.AddRow(new string[] {
+                table1084.AddRow(new string[] {
                             "Analytics/reporting",
                             "Low",
                             "Delayed processing",
                             "Background resources",
                             "Delayed reports",
                             "Low recovery"});
-                table1121.AddRow(new string[] {
+                table1084.AddRow(new string[] {
                             "AI content generation",
                             "Low",
                             "Suspended service",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Feature unavailable",
                             "Last to recover"});
 #line 35
-    testRunner.When("implementing feature prioritization:", ((string)(null)), table1121, "When ");
+    testRunner.When("implementing feature prioritization:", ((string)(null)), table1084, "When ");
 #line hidden
 #line 43
     testRunner.Then("prioritization should reflect business criticality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 51
     testRunner.And("intelligent scaling adjusts to current conditions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1122 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1085 = new TechTalk.SpecFlow.Table(new string[] {
                             "Trigger Condition",
                             "Adaptive Response",
                             "Implementation Method",
                             "Resource Impact",
                             "User Communication",
                             "Effectiveness Measure"});
-                table1122.AddRow(new string[] {
+                table1085.AddRow(new string[] {
                             "High response times",
                             "Response caching",
                             "Aggressive cache policies",
                             "Cache memory increase",
                             "\"Using cached content\"",
                             "Response time improvement"});
-                table1122.AddRow(new string[] {
+                table1085.AddRow(new string[] {
                             "CPU overload",
                             "Process optimization",
                             "Background task deferral",
                             "CPU load reduction",
                             "\"Processing optimized\"",
                             "CPU utilization decrease"});
-                table1122.AddRow(new string[] {
+                table1085.AddRow(new string[] {
                             "Memory pressure",
                             "Memory management",
                             "Garbage collection tuning",
                             "Memory usage optimization",
                             "\"Memory optimized\"",
                             "Memory usage reduction"});
-                table1122.AddRow(new string[] {
+                table1085.AddRow(new string[] {
                             "Database strain",
                             "Query optimization",
                             "Query simplification",
                             "Database load reduction",
                             "\"Simplified queries\"",
                             "Query performance improvement"});
-                table1122.AddRow(new string[] {
+                table1085.AddRow(new string[] {
                             "Network congestion",
                             "Bandwidth optimization",
                             "Content compression",
                             "Network usage reduction",
                             "\"Optimized delivery\"",
                             "Bandwidth efficiency increase"});
-                table1122.AddRow(new string[] {
+                table1085.AddRow(new string[] {
                             "Storage limits",
                             "Storage optimization",
                             "Temporary file cleanup",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "\"Storage optimized\"",
                             "Storage availability increase"});
 #line 52
-    testRunner.When("implementing adaptive degradation responses:", ((string)(null)), table1122, "When ");
+    testRunner.When("implementing adaptive degradation responses:", ((string)(null)), table1085, "When ");
 #line hidden
 #line 60
     testRunner.Then("responses should be intelligent and effective", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 68
     testRunner.And("intelligent request management maintains service quality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1123 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1086 = new TechTalk.SpecFlow.Table(new string[] {
                             "Load Shedding Type",
                             "Trigger Criteria",
                             "Selection Method",
                             "User Impact",
                             "Recovery Behavior",
                             "Fairness Measures"});
-                table1123.AddRow(new string[] {
+                table1086.AddRow(new string[] {
                             "Random shedding",
                             "System overload",
                             "Random selection",
                             "Some requests dropped",
                             "Immediate retry allowed",
                             "Statistically fair"});
-                table1123.AddRow(new string[] {
+                table1086.AddRow(new string[] {
                             "Priority-based shedding",
                             "Resource exhaustion",
                             "Priority ranking",
                             "Lower priority affected",
                             "Priority queue recovery",
                             "Priority-based fairness"});
-                table1123.AddRow(new string[] {
+                table1086.AddRow(new string[] {
                             "User-based shedding",
                             "Concurrent user limits",
                             "User type priority",
                             "Guest users affected first",
                             "User-specific recovery",
                             "User tier fairness"});
-                table1123.AddRow(new string[] {
+                table1086.AddRow(new string[] {
                             "Feature-based shedding",
                             "Feature overload",
                             "Feature criticality",
                             "Non-essential features disabled",
                             "Feature-specific recovery",
                             "Feature importance fairness"});
-                table1123.AddRow(new string[] {
+                table1086.AddRow(new string[] {
                             "Geographic shedding",
                             "Regional overload",
                             "Geographic priority",
                             "Regional request limiting",
                             "Regional recovery",
                             "Geographic fairness"});
-                table1123.AddRow(new string[] {
+                table1086.AddRow(new string[] {
                             "Time-based shedding",
                             "Peak hour overload",
                             "Time window priority",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Time-based recovery",
                             "Temporal fairness"});
 #line 69
-    testRunner.When("implementing load shedding strategies:", ((string)(null)), table1123, "When ");
+    testRunner.When("implementing load shedding strategies:", ((string)(null)), table1086, "When ");
 #line hidden
 #line 77
     testRunner.Then("shedding should be intelligent and fair", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 86
     testRunner.And("integration with degradation provides comprehensive protection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1124 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1087 = new TechTalk.SpecFlow.Table(new string[] {
                             "Circuit State",
                             "Degradation Level",
                             "Service Behavior",
                             "Fallback Strategy",
                             "Recovery Conditions",
                             "Monitoring Requirements"});
-                table1124.AddRow(new string[] {
+                table1087.AddRow(new string[] {
                             "Closed circuit",
                             "Normal operation",
                             "Full functionality",
                             "No fallback needed",
                             "Service healthy",
                             "Standard monitoring"});
-                table1124.AddRow(new string[] {
+                table1087.AddRow(new string[] {
                             "Half-open circuit",
                             "Warning degradation",
                             "Limited functionality",
                             "Partial fallback",
                             "Testing recovery",
                             "Enhanced monitoring"});
-                table1124.AddRow(new string[] {
+                table1087.AddRow(new string[] {
                             "Open circuit",
                             "Critical degradation",
                             "Fallback functionality",
                             "Full fallback",
                             "Circuit recovery",
                             "Intensive monitoring"});
-                table1124.AddRow(new string[] {
+                table1087.AddRow(new string[] {
                             "Degraded circuit",
                             "Controlled degradation",
                             "Reduced functionality",
                             "Controlled fallback",
                             "Gradual recovery",
                             "Degradation monitoring"});
-                table1124.AddRow(new string[] {
+                table1087.AddRow(new string[] {
                             "Emergency circuit",
                             "Emergency degradation",
                             "Minimal functionality",
                             "Emergency fallback",
                             "Emergency recovery",
                             "Emergency monitoring"});
-                table1124.AddRow(new string[] {
+                table1087.AddRow(new string[] {
                             "Maintenance circuit",
                             "Planned degradation",
                             "Maintenance mode",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Maintenance completion",
                             "Maintenance monitoring"});
 #line 87
-    testRunner.When("integrating circuit breakers with degradation:", ((string)(null)), table1124, "When ");
+    testRunner.When("integrating circuit breakers with degradation:", ((string)(null)), table1087, "When ");
 #line hidden
 #line 95
     testRunner.Then("integration should provide layered protection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 103
     testRunner.And("bulkhead patterns compartmentalize system resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1125 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1088 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resource Type",
                             "Isolation Method",
                             "Partition Strategy",
                             "Failure Containment",
                             "Recovery Isolation",
                             "Performance Impact"});
-                table1125.AddRow(new string[] {
+                table1088.AddRow(new string[] {
                             "CPU resources",
                             "CPU affinity",
                             "Core allocation",
                             "CPU failure isolation",
                             "Independent recovery",
                             "Minimal impact"});
-                table1125.AddRow(new string[] {
+                table1088.AddRow(new string[] {
                             "Memory pools",
                             "Memory partitioning",
                             "Pool segmentation",
                             "Memory leak isolation",
                             "Pool recovery",
                             "Memory overhead"});
-                table1125.AddRow(new string[] {
+                table1088.AddRow(new string[] {
                             "Database connections",
                             "Connection pools",
                             "Pool separation",
                             "Connection failure isolation",
                             "Pool recovery",
                             "Connection overhead"});
-                table1125.AddRow(new string[] {
+                table1088.AddRow(new string[] {
                             "Network bandwidth",
                             "Bandwidth partitioning",
                             "Traffic shaping",
                             "Network failure isolation",
                             "Bandwidth recovery",
                             "Traffic delay"});
-                table1125.AddRow(new string[] {
+                table1088.AddRow(new string[] {
                             "Storage resources",
                             "Storage partitioning",
                             "Disk separation",
                             "Storage failure isolation",
                             "Storage recovery",
                             "Storage overhead"});
-                table1125.AddRow(new string[] {
+                table1088.AddRow(new string[] {
                             "Thread pools",
                             "Thread isolation",
                             "Pool separation",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Thread recovery",
                             "Thread overhead"});
 #line 104
-    testRunner.When("implementing resource isolation:", ((string)(null)), table1125, "When ");
+    testRunner.When("implementing resource isolation:", ((string)(null)), table1088, "When ");
 #line hidden
 #line 112
     testRunner.Then("isolation should prevent failure propagation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 120
     testRunner.And("adaptive UI maintains usability during degradation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1126 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1089 = new TechTalk.SpecFlow.Table(new string[] {
                             "Degradation Level",
                             "UI Adaptations",
                             "Feature Visibility",
                             "Interaction Changes",
                             "Performance Indicators",
                             "User Guidance"});
-                table1126.AddRow(new string[] {
+                table1089.AddRow(new string[] {
                             "Normal operation",
                             "Full UI",
                             "All features visible",
                             "Standard interactions",
                             "Performance metrics hidden",
                             "No degradation notice"});
-                table1126.AddRow(new string[] {
+                table1089.AddRow(new string[] {
                             "Light degradation",
                             "Simplified UI",
                             "Non-essential features dimmed",
                             "Slightly delayed responses",
                             "Performance indicators shown",
                             "Light degradation notice"});
-                table1126.AddRow(new string[] {
+                table1089.AddRow(new string[] {
                             "Moderate degradation",
                             "Reduced UI",
                             "Some features hidden",
                             "Noticeably delayed responses",
                             "Performance warnings displayed",
                             "Degradation explanation"});
-                table1126.AddRow(new string[] {
+                table1089.AddRow(new string[] {
                             "Heavy degradation",
                             "Minimal UI",
                             "Most features hidden",
                             "Significantly delayed responses",
                             "Performance alerts prominent",
                             "Alternative suggestions"});
-                table1126.AddRow(new string[] {
+                table1089.AddRow(new string[] {
                             "Emergency degradation",
                             "Emergency UI",
                             "Only critical features",
                             "Emergency mode interactions",
                             "Emergency indicators",
                             "Emergency guidance"});
-                table1126.AddRow(new string[] {
+                table1089.AddRow(new string[] {
                             "Recovery mode",
                             "Progressive UI",
                             "Features restored gradually",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Recovery progress shown",
                             "Recovery status"});
 #line 121
-    testRunner.When("adapting user interface for degradation:", ((string)(null)), table1126, "When ");
+    testRunner.When("adapting user interface for degradation:", ((string)(null)), table1089, "When ");
 #line hidden
 #line 129
     testRunner.Then("UI should clearly reflect system state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 138
     testRunner.And("resource efficiency maximizes available capability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1127 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1090 = new TechTalk.SpecFlow.Table(new string[] {
                             "Optimization Strategy",
                             "Implementation Method",
                             "Resource Savings",
                             "Performance Gain",
                             "Implementation Complexity",
                             "Effectiveness Measure"});
-                table1127.AddRow(new string[] {
+                table1090.AddRow(new string[] {
                             "Caching enhancement",
                             "Aggressive cache policies",
                             "Memory vs network trade-off",
                             "40% response improvement",
                             "Medium complexity",
                             "Cache hit rate increase"});
-                table1127.AddRow(new string[] {
+                table1090.AddRow(new string[] {
                             "Query optimization",
                             "Query simplification",
                             "Database resource savings",
                             "30% query improvement",
                             "High complexity",
                             "Query performance increase"});
-                table1127.AddRow(new string[] {
+                table1090.AddRow(new string[] {
                             "Compression increase",
                             "Enhanced compression",
                             "Network resource savings",
                             "25% bandwidth savings",
                             "Low complexity",
                             "Compression ratio improvement"});
-                table1127.AddRow(new string[] {
+                table1090.AddRow(new string[] {
                             "Background task deferral",
                             "Task prioritization",
                             "CPU resource savings",
                             "35% foreground improvement",
                             "Medium complexity",
                             "Task completion rate"});
-                table1127.AddRow(new string[] {
+                table1090.AddRow(new string[] {
                             "Connection pooling",
                             "Pool optimization",
                             "Connection resource savings",
                             "20% connection improvement",
                             "Medium complexity",
                             "Connection efficiency increase"});
-                table1127.AddRow(new string[] {
+                table1090.AddRow(new string[] {
                             "Garbage collection tuning",
                             "GC optimization",
                             "Memory resource optimization",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "High complexity",
                             "Memory usage efficiency"});
 #line 139
-    testRunner.When("optimizing performance during degradation:", ((string)(null)), table1127, "When ");
+    testRunner.When("optimizing performance during degradation:", ((string)(null)), table1090, "When ");
 #line hidden
 #line 147
     testRunner.Then("optimization should provide measurable benefits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 155
     testRunner.And("elastic scaling provides dynamic resource adjustment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1128 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1091 = new TechTalk.SpecFlow.Table(new string[] {
                             "Capacity Management",
                             "Scaling Strategy",
                             "Resource Allocation",
                             "Scaling Speed",
                             "Cost Consideration",
                             "Performance Impact"});
-                table1128.AddRow(new string[] {
+                table1091.AddRow(new string[] {
                             "Horizontal scaling",
                             "Add instances",
                             "Instance distribution",
                             "5-10 minutes",
                             "High cost",
                             "Performance improvement"});
-                table1128.AddRow(new string[] {
+                table1091.AddRow(new string[] {
                             "Vertical scaling",
                             "Increase resources",
                             "Resource upgrade",
                             "2-5 minutes",
                             "Medium cost",
                             "Immediate improvement"});
-                table1128.AddRow(new string[] {
+                table1091.AddRow(new string[] {
                             "Auto-scaling",
                             "Automatic adjustment",
                             "Algorithm-based",
                             "1-3 minutes",
                             "Variable cost",
                             "Responsive improvement"});
-                table1128.AddRow(new string[] {
+                table1091.AddRow(new string[] {
                             "Preemptive scaling",
                             "Predictive scaling",
                             "Forecast-based",
                             "Immediate",
                             "Planned cost",
                             "Proactive improvement"});
-                table1128.AddRow(new string[] {
+                table1091.AddRow(new string[] {
                             "Emergency scaling",
                             "Rapid deployment",
                             "Emergency resources",
                             "30 seconds",
                             "Emergency cost",
                             "Emergency improvement"});
-                table1128.AddRow(new string[] {
+                table1091.AddRow(new string[] {
                             "Resource reallocation",
                             "Internal rebalancing",
                             "Priority reallocation",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "No additional cost",
                             "Optimization improvement"});
 #line 156
-    testRunner.When("managing capacity during degradation:", ((string)(null)), table1128, "When ");
+    testRunner.When("managing capacity during degradation:", ((string)(null)), table1091, "When ");
 #line hidden
 #line 164
     testRunner.Then("capacity management should be responsive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 173
     testRunner.And("clear communication manages expectations appropriately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1129 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1092 = new TechTalk.SpecFlow.Table(new string[] {
                             "Communication Type",
                             "Information Provided",
                             "Communication Channel",
                             "Update Frequency",
                             "User Actions",
                             "Status Resolution"});
-                table1129.AddRow(new string[] {
+                table1092.AddRow(new string[] {
                             "Status notifications",
                             "Current system status",
                             "In-app banners",
                             "Real-time",
                             "Adjust expectations",
                             "Auto-dismiss on recovery"});
-                table1129.AddRow(new string[] {
+                table1092.AddRow(new string[] {
                             "Performance warnings",
                             "Performance impact",
                             "Performance indicators",
                             "Continuous",
                             "Optimize usage",
                             "Update on improvement"});
-                table1129.AddRow(new string[] {
+                table1092.AddRow(new string[] {
                             "Feature availability",
                             "Available/unavailable features",
                             "Feature tooltips",
                             "On-demand",
                             "Use available features",
                             "Update on restoration"});
-                table1129.AddRow(new string[] {
+                table1092.AddRow(new string[] {
                             "Degradation explanations",
                             "Reason for degradation",
                             "Help system",
                             "As needed",
                             "Understand limitations",
                             "Persistent until resolved"});
-                table1129.AddRow(new string[] {
+                table1092.AddRow(new string[] {
                             "Recovery progress",
                             "Recovery status",
                             "Progress indicators",
                             "Recovery milestones",
                             "Monitor progress",
                             "Complete on full recovery"});
-                table1129.AddRow(new string[] {
+                table1092.AddRow(new string[] {
                             "Alternative suggestions",
                             "Workaround options",
                             "Contextual help",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Use alternatives",
                             "Remove when unnecessary"});
 #line 174
-    testRunner.When("communicating degradation status:", ((string)(null)), table1129, "When ");
+    testRunner.When("communicating degradation status:", ((string)(null)), table1092, "When ");
 #line hidden
 #line 182
     testRunner.Then("communication should be proactive and helpful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 190
     testRunner.And("awareness enables appropriate user responses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1130 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1093 = new TechTalk.SpecFlow.Table(new string[] {
                             "Education Type",
                             "Content Scope",
                             "Delivery Method",
                             "Target Audience",
                             "Training Duration",
                             "Effectiveness Metrics"});
-                table1130.AddRow(new string[] {
+                table1093.AddRow(new string[] {
                             "Degradation basics",
                             "System degradation concepts",
                             "Tutorial",
                             "All users",
                             "15 minutes",
                             "Understanding assessment"});
-                table1130.AddRow(new string[] {
+                table1093.AddRow(new string[] {
                             "Response strategies",
                             "How to respond to degradation",
                             "Interactive guide",
                             "Regular users",
                             "20 minutes",
                             "Response competency"});
-                table1130.AddRow(new string[] {
+                table1093.AddRow(new string[] {
                             "Feature alternatives",
                             "Alternative approaches",
                             "Contextual help",
                             "Power users",
                             "10 minutes",
                             "Alternative usage"});
-                table1130.AddRow(new string[] {
+                table1093.AddRow(new string[] {
                             "Performance optimization",
                             "User optimization techniques",
                             "Tips and tricks",
                             "All users",
                             "25 minutes",
                             "Optimization adoption"});
-                table1130.AddRow(new string[] {
+                table1093.AddRow(new string[] {
                             "Emergency procedures",
                             "Critical situation responses",
                             "Emergency guide",
                             "All users",
                             "30 minutes",
                             "Emergency readiness"});
-                table1130.AddRow(new string[] {
+                table1093.AddRow(new string[] {
                             "System understanding",
                             "How system degradation works",
                             "Educational content",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "45 minutes",
                             "System comprehension"});
 #line 191
-    testRunner.When("providing degradation education:", ((string)(null)), table1130, "When ");
+    testRunner.When("providing degradation education:", ((string)(null)), table1093, "When ");
 #line hidden
 #line 199
     testRunner.Then("education should be comprehensive and accessible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 207
     testRunner.And("insights drive system and process improvements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1131 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1094 = new TechTalk.SpecFlow.Table(new string[] {
                             "Feedback Type",
                             "Collection Method",
                             "Collection Timing",
                             "Analysis Approach",
                             "Insight Generation",
                             "Improvement Implementation"});
-                table1131.AddRow(new string[] {
+                table1094.AddRow(new string[] {
                             "User experience",
                             "In-app surveys",
                             "During degradation",
                             "Experience analysis",
                             "UX insights",
                             "UX improvements"});
-                table1131.AddRow(new string[] {
+                table1094.AddRow(new string[] {
                             "Feature impact",
                             "Feature feedback",
                             "Feature limitation",
                             "Impact analysis",
                             "Feature insights",
                             "Feature prioritization"});
-                table1131.AddRow(new string[] {
+                table1094.AddRow(new string[] {
                             "Communication effectiveness",
                             "Communication surveys",
                             "After degradation",
                             "Communication analysis",
                             "Communication insights",
                             "Communication improvements"});
-                table1131.AddRow(new string[] {
+                table1094.AddRow(new string[] {
                             "Alternative usage",
                             "Usage pattern analysis",
                             "During alternatives",
                             "Pattern analysis",
                             "Usage insights",
                             "Alternative optimization"});
-                table1131.AddRow(new string[] {
+                table1094.AddRow(new string[] {
                             "Recovery satisfaction",
                             "Recovery feedback",
                             "After recovery",
                             "Satisfaction analysis",
                             "Recovery insights",
                             "Recovery improvements"});
-                table1131.AddRow(new string[] {
+                table1094.AddRow(new string[] {
                             "Overall system performance",
                             "Performance feedback",
                             "Continuous",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Performance insights",
                             "Performance optimization"});
 #line 208
-    testRunner.When("collecting degradation feedback:", ((string)(null)), table1131, "When ");
+    testRunner.When("collecting degradation feedback:", ((string)(null)), table1094, "When ");
 #line hidden
 #line 216
     testRunner.Then("feedback should be systematically collected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 225
     testRunner.And("system observability provides degradation insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1132 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1095 = new TechTalk.SpecFlow.Table(new string[] {
                             "Monitoring Aspect",
                             "Metrics Collected",
                             "Collection Frequency",
                             "Analysis Method",
                             "Alert Conditions",
                             "Dashboard Display"});
-                table1132.AddRow(new string[] {
+                table1095.AddRow(new string[] {
                             "Degradation triggers",
                             "Trigger events and thresholds",
                             "Real-time",
                             "Trigger analysis",
                             "Trigger alerts",
                             "Trigger dashboard"});
-                table1132.AddRow(new string[] {
+                table1095.AddRow(new string[] {
                             "Service availability",
                             "Service uptime and functionality",
                             "Continuous",
                             "Availability analysis",
                             "Availability alerts",
                             "Availability dashboard"});
-                table1132.AddRow(new string[] {
+                table1095.AddRow(new string[] {
                             "User impact",
                             "User experience metrics",
                             "Real-time",
                             "Impact analysis",
                             "Impact alerts",
                             "Impact dashboard"});
-                table1132.AddRow(new string[] {
+                table1095.AddRow(new string[] {
                             "Resource utilization",
                             "Resource usage and efficiency",
                             "30-second intervals",
                             "Utilization analysis",
                             "Utilization alerts",
                             "Utilization dashboard"});
-                table1132.AddRow(new string[] {
+                table1095.AddRow(new string[] {
                             "Recovery progress",
                             "Recovery metrics and timelines",
                             "Recovery intervals",
                             "Recovery analysis",
                             "Recovery alerts",
                             "Recovery dashboard"});
-                table1132.AddRow(new string[] {
+                table1095.AddRow(new string[] {
                             "Performance effectiveness",
                             "Performance improvement metrics",
                             "Continuous",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Effectiveness alerts",
                             "Effectiveness dashboard"});
 #line 226
-    testRunner.When("monitoring degradation scenarios:", ((string)(null)), table1132, "When ");
+    testRunner.When("monitoring degradation scenarios:", ((string)(null)), table1095, "When ");
 #line hidden
 #line 234
     testRunner.Then("monitoring should provide comprehensive visibility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 242
     testRunner.And("coordinated recovery minimizes disruption", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1133 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1096 = new TechTalk.SpecFlow.Table(new string[] {
                             "Recovery Phase",
                             "Recovery Actions",
                             "Coordination Method",
                             "Validation Requirements",
                             "Rollback Conditions",
                             "Success Criteria"});
-                table1133.AddRow(new string[] {
+                table1096.AddRow(new string[] {
                             "Initial recovery",
                             "Critical service restoration",
                             "Service priority order",
                             "Service validation",
                             "Service failure",
                             "Critical services operational"});
-                table1133.AddRow(new string[] {
+                table1096.AddRow(new string[] {
                             "Progressive recovery",
                             "Feature restoration",
                             "Feature priority order",
                             "Feature validation",
                             "Feature failure",
                             "Progressive functionality"});
-                table1133.AddRow(new string[] {
+                table1096.AddRow(new string[] {
                             "Performance recovery",
                             "Performance optimization",
                             "Performance coordination",
                             "Performance validation",
                             "Performance degradation",
                             "Performance targets met"});
-                table1133.AddRow(new string[] {
+                table1096.AddRow(new string[] {
                             "Full recovery",
                             "Complete restoration",
                             "Full system coordination",
                             "System validation",
                             "System issues",
                             "Full functionality restored"});
-                table1133.AddRow(new string[] {
+                table1096.AddRow(new string[] {
                             "Recovery validation",
                             "System health confirmation",
                             "Validation protocols",
                             "Health confirmation",
                             "Validation failure",
                             "System health confirmed"});
-                table1133.AddRow(new string[] {
+                table1096.AddRow(new string[] {
                             "Post-recovery monitoring",
                             "Stability monitoring",
                             "Monitoring coordination",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Stability issues",
                             "System stability confirmed"});
 #line 243
-    testRunner.When("orchestrating degradation recovery:", ((string)(null)), table1133, "When ");
+    testRunner.When("orchestrating degradation recovery:", ((string)(null)), table1096, "When ");
 #line hidden
 #line 251
     testRunner.Then("recovery should be systematic and coordinated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 260
     testRunner.And("insights drive continuous improvement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1134 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1097 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Dimension",
                             "Analysis Method",
                             "Pattern Recognition",
                             "Improvement Opportunity",
                             "Implementation Strategy",
                             "Success Metrics"});
-                table1134.AddRow(new string[] {
+                table1097.AddRow(new string[] {
                             "Degradation frequency",
                             "Frequency analysis",
                             "Degradation trends",
                             "Prevention strategies",
                             "Prevention implementation",
                             "Frequency reduction"});
-                table1134.AddRow(new string[] {
+                table1097.AddRow(new string[] {
                             "Degradation causes",
                             "Root cause analysis",
                             "Cause patterns",
                             "Cause elimination",
                             "Cause mitigation",
                             "Cause reduction"});
-                table1134.AddRow(new string[] {
+                table1097.AddRow(new string[] {
                             "User behavior during degradation",
                             "Behavior analysis",
                             "Adaptation patterns",
                             "User experience improvement",
                             "UX optimization",
                             "User satisfaction improvement"});
-                table1134.AddRow(new string[] {
+                table1097.AddRow(new string[] {
                             "System performance",
                             "Performance correlation",
                             "Performance patterns",
                             "Performance optimization",
                             "Performance tuning",
                             "Performance improvement"});
-                table1134.AddRow(new string[] {
+                table1097.AddRow(new string[] {
                             "Recovery effectiveness",
                             "Recovery analysis",
                             "Recovery patterns",
                             "Recovery optimization",
                             "Recovery improvement",
                             "Recovery efficiency"});
-                table1134.AddRow(new string[] {
+                table1097.AddRow(new string[] {
                             "Resource utilization",
                             "Resource analysis",
                             "Utilization patterns",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Resource management",
                             "Resource efficiency"});
 #line 261
-    testRunner.When("analyzing degradation patterns:", ((string)(null)), table1134, "When ");
+    testRunner.When("analyzing degradation patterns:", ((string)(null)), table1097, "When ");
 #line hidden
 #line 269
     testRunner.Then("analytics should provide actionable insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 277
     testRunner.And("proactive management prevents severe degradation scenarios", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1135 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1098 = new TechTalk.SpecFlow.Table(new string[] {
                             "Prediction Type",
                             "Prediction Model",
                             "Prediction Horizon",
                             "Accuracy Target",
                             "Proactive Actions",
                             "Prevention Effectiveness"});
-                table1135.AddRow(new string[] {
+                table1098.AddRow(new string[] {
                             "Load prediction",
                             "Load forecasting",
                             "30-minute forecast",
                             "85% accuracy",
                             "Preemptive scaling",
                             "Load spike prevention"});
-                table1135.AddRow(new string[] {
+                table1098.AddRow(new string[] {
                             "Performance prediction",
                             "Performance modeling",
                             "15-minute forecast",
                             "80% accuracy",
                             "Performance optimization",
                             "Performance degradation prevention"});
-                table1135.AddRow(new string[] {
+                table1098.AddRow(new string[] {
                             "Resource exhaustion",
                             "Resource forecasting",
                             "45-minute forecast",
                             "90% accuracy",
                             "Resource allocation",
                             "Resource shortage prevention"});
-                table1135.AddRow(new string[] {
+                table1098.AddRow(new string[] {
                             "User behavior prediction",
                             "Behavior modeling",
                             "60-minute forecast",
                             "75% accuracy",
                             "Capacity preparation",
                             "User impact reduction"});
-                table1135.AddRow(new string[] {
+                table1098.AddRow(new string[] {
                             "Failure prediction",
                             "Failure forecasting",
                             "10-minute forecast",
                             "70% accuracy",
                             "Preventive measures",
                             "Failure prevention"});
-                table1135.AddRow(new string[] {
+                table1098.AddRow(new string[] {
                             "Recovery prediction",
                             "Recovery modeling",
                             "Variable horizon",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Recovery preparation",
                             "Recovery optimization"});
 #line 278
-    testRunner.When("implementing predictive degradation management:", ((string)(null)), table1135, "When ");
+    testRunner.When("implementing predictive degradation management:", ((string)(null)), table1098, "When ");
 #line hidden
 #line 286
     testRunner.Then("predictions should be accurate and actionable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1851,49 +1851,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 294
     testRunner.Given("degradation systems may themselves encounter errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1136 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1099 = new TechTalk.SpecFlow.Table(new string[] {
                             "Error Type",
                             "Detection Method",
                             "Resolution Process",
                             "Timeline",
                             "System Impact",
                             "Prevention Measures"});
-                table1136.AddRow(new string[] {
+                table1099.AddRow(new string[] {
                             "Degradation policy failures",
                             "Policy monitoring",
                             "Policy correction",
                             "<2 minutes",
                             "Policy bypass",
                             "Policy testing"});
-                table1136.AddRow(new string[] {
+                table1099.AddRow(new string[] {
                             "Threshold monitoring failures",
                             "Monitor validation",
                             "Monitor restart",
                             "<1 minute",
                             "Threshold bypass",
                             "Monitor redundancy"});
-                table1136.AddRow(new string[] {
+                table1099.AddRow(new string[] {
                             "Resource allocation errors",
                             "Allocation monitoring",
                             "Allocation correction",
                             "<3 minutes",
                             "Resource misallocation",
                             "Allocation validation"});
-                table1136.AddRow(new string[] {
+                table1099.AddRow(new string[] {
                             "Circuit breaker failures",
                             "Breaker monitoring",
                             "Breaker reset",
                             "<30 seconds",
                             "Protection bypass",
                             "Breaker redundancy"});
-                table1136.AddRow(new string[] {
+                table1099.AddRow(new string[] {
                             "Communication failures",
                             "Communication monitoring",
                             "Communication restoration",
                             "<1 minute",
                             "User awareness loss",
                             "Communication redundancy"});
-                table1136.AddRow(new string[] {
+                table1099.AddRow(new string[] {
                             "Recovery orchestration errors",
                             "Recovery monitoring",
                             "Recovery intervention",
@@ -1901,7 +1901,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Recovery failure",
                             "Recovery validation"});
 #line 295
-    testRunner.When("degradation system errors occur:", ((string)(null)), table1136, "When ");
+    testRunner.When("degradation system errors occur:", ((string)(null)), table1099, "When ");
 #line hidden
 #line 303
     testRunner.Then("errors should be detected and resolved quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1955,49 +1955,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 310
     testRunner.Given("degradation management requires ongoing optimization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1137 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1100 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table1137.AddRow(new string[] {
+                table1100.AddRow(new string[] {
                             "Policy optimization",
                             "Complex degradation scenarios",
                             "Continuous policy refinement",
                             "Policy resources",
                             "Policy effectiveness",
                             "Policy sustainability"});
-                table1137.AddRow(new string[] {
+                table1100.AddRow(new string[] {
                             "Technology evolution",
                             "Changing infrastructure",
                             "Technology adaptation",
                             "Technology resources",
                             "Technology currency",
                             "Technology sustainability"});
-                table1137.AddRow(new string[] {
+                table1100.AddRow(new string[] {
                             "User experience optimization",
                             "User expectation management",
                             "UX improvement",
                             "UX resources",
                             "User satisfaction",
                             "UX sustainability"});
-                table1137.AddRow(new string[] {
+                table1100.AddRow(new string[] {
                             "Performance optimization",
                             "Performance complexity",
                             "Performance enhancement",
                             "Performance resources",
                             "Performance targets",
                             "Performance sustainability"});
-                table1137.AddRow(new string[] {
+                table1100.AddRow(new string[] {
                             "Operational efficiency",
                             "Operational complexity",
                             "Efficiency improvement",
                             "Efficiency resources",
                             "Operational metrics",
                             "Efficiency sustainability"});
-                table1137.AddRow(new string[] {
+                table1100.AddRow(new string[] {
                             "Innovation integration",
                             "Emerging capabilities",
                             "Innovation adoption",
@@ -2005,7 +2005,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Innovation benefits",
                             "Innovation sustainability"});
 #line 311
-    testRunner.When("planning degradation sustainability:", ((string)(null)), table1137, "When ");
+    testRunner.When("planning degradation sustainability:", ((string)(null)), table1100, "When ");
 #line hidden
 #line 319
     testRunner.Then("sustainability should be systematically planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

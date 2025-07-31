@@ -1,0 +1,227 @@
+# TODO-007: Repository Implementation
+
+These tasks implement the repository pattern for data access.
+
+## Base Repository Updates
+
+- [ ] Open Repositories/BaseRepository.cs file
+- [ ] Add method GetByIdAsync with includes parameter
+- [ ] Add method GetAllAsync with pagination parameters
+- [ ] Add method GetAllAsync with specification pattern
+- [ ] Add method ExistsAsync(Guid id)
+- [ ] Add method CountAsync()
+- [ ] Add method CountAsync with predicate
+- [ ] Add method FirstOrDefaultAsync with predicate
+- [ ] Add method GetPagedAsync with offset and limit
+- [ ] Add method AddRangeAsync for bulk inserts
+- [ ] Add method UpdateRange for bulk updates
+- [ ] Add method DeleteRange for bulk deletes
+- [ ] Add method ExecuteSqlRawAsync for stored procedures
+- [ ] Add method ExecuteSqlInterpolatedAsync
+- [ ] Add SaveChangesAsync override with user context
+- [ ] Add DetachEntity method for disconnected scenarios
+- [ ] Add AsNoTracking option for read-only queries
+
+## IResourceRepository Interface
+
+- [ ] Create IResourceRepository.cs in Interfaces folder
+- [ ] Add using statements for Models.Domain
+- [ ] Add namespace UPTRMS.Api.Interfaces
+- [ ] Create interface IResourceRepository
+- [ ] Inherit from IRepository<Resource>
+- [ ] Add method Task<Resource> GetByIdWithDetailsAsync(Guid id)
+- [ ] Add method Task<IEnumerable<Resource>> GetByTherapistAsync(Guid therapistId)
+- [ ] Add method Task<IEnumerable<Resource>> GetByCategoryAsync(Guid categoryId)
+- [ ] Add method Task<IEnumerable<Resource>> SearchAsync(string searchTerm)
+- [ ] Add method Task<IEnumerable<Resource>> GetBySkillAreaAsync(string skillArea)
+- [ ] Add method Task<IEnumerable<Resource>> GetByGradeLevelAsync(string gradeLevel)
+- [ ] Add method Task<IEnumerable<Resource>> GetByResourceTypeAsync(string resourceType)
+- [ ] Add method Task<IEnumerable<Resource>> GetMostDownloadedAsync(int count)
+- [ ] Add method Task<IEnumerable<Resource>> GetTopRatedAsync(int count)
+- [ ] Add method Task<IEnumerable<Resource>> GetRecentlyAddedAsync(int count)
+- [ ] Add method Task<IEnumerable<Resource>> GetByGoalAsync(Guid goalId)
+- [ ] Add method Task<bool> IncrementDownloadCountAsync(Guid resourceId)
+- [ ] Add method Task<bool> IncrementViewCountAsync(Guid resourceId)
+- [ ] Add method Task<bool> UpdateRatingAsync(Guid resourceId, decimal newRating, int totalRatings)
+- [ ] Add method Task<IEnumerable<Resource>> GetFavoritesAsync(Guid userId)
+- [ ] Add method Task<IEnumerable<Resource>> GetRecommendedAsync(Guid userId, int count)
+
+## ResourceRepository Implementation
+
+- [ ] Create ResourceRepository.cs in Repositories folder
+- [ ] Add using statements for all required namespaces
+- [ ] Add namespace UPTRMS.Api.Repositories
+- [ ] Create class ResourceRepository
+- [ ] Inherit from BaseRepository<Resource>
+- [ ] Implement IResourceRepository
+- [ ] Add constructor accepting ApplicationDbContext
+- [ ] Call base constructor with context
+- [ ] Implement GetByIdWithDetailsAsync method
+- [ ] Use Include for Creator navigation property
+- [ ] Use Include for Categories navigation property
+- [ ] Use Include for Ratings navigation property
+- [ ] Add null check and return null if not found
+- [ ] Implement GetByTherapistAsync method
+- [ ] Filter by CreatedBy equals therapistId
+- [ ] Order by CreatedAt descending
+- [ ] Return as list
+- [ ] Implement GetByCategoryAsync method
+- [ ] Join with ResourceCategories
+- [ ] Filter by CategoryId
+- [ ] Order by Title
+- [ ] Return as list
+- [ ] Implement SearchAsync method
+- [ ] Use EF.Functions.Like for pattern matching
+- [ ] Search in Title with wildcards
+- [ ] Search in Description with wildcards
+- [ ] Search in Tags with wildcards
+- [ ] Combine with OR condition
+- [ ] Order by relevance (exact match first)
+- [ ] Return top 100 results
+- [ ] Implement GetBySkillAreaAsync method
+- [ ] Use EF.Functions.Like on SkillAreas JSON
+- [ ] Filter for skill area presence
+- [ ] Order by Title
+- [ ] Return as list
+- [ ] Implement GetByGradeLevelAsync method
+- [ ] Use EF.Functions.Like on GradeLevels JSON
+- [ ] Filter for grade level presence
+- [ ] Order by Title
+- [ ] Return as list
+- [ ] Implement GetByResourceTypeAsync method
+- [ ] Filter by ResourceType equals parameter
+- [ ] Order by CreatedAt descending
+- [ ] Return as list
+- [ ] Implement GetMostDownloadedAsync method
+- [ ] Filter by IsDeleted equals false
+- [ ] Order by DownloadCount descending
+- [ ] Take specified count
+- [ ] Return as list
+- [ ] Implement GetTopRatedAsync method
+- [ ] Filter by IsDeleted equals false
+- [ ] Filter by TotalRatings greater than 5
+- [ ] Order by AverageRating descending
+- [ ] Take specified count
+- [ ] Return as list
+- [ ] Implement GetRecentlyAddedAsync method
+- [ ] Filter by IsDeleted equals false
+- [ ] Order by CreatedAt descending
+- [ ] Take specified count
+- [ ] Return as list
+- [ ] Implement GetByGoalAsync method
+- [ ] Join with GoalResources
+- [ ] Filter by GoalId
+- [ ] Order by Priority then Title
+- [ ] Return as list
+- [ ] Implement IncrementDownloadCountAsync method
+- [ ] Find resource by id
+- [ ] Return false if not found
+- [ ] Increment DownloadCount by 1
+- [ ] Call SaveChangesAsync
+- [ ] Return true
+- [ ] Implement IncrementViewCountAsync method
+- [ ] Find resource by id
+- [ ] Return false if not found
+- [ ] Increment ViewCount by 1
+- [ ] Call SaveChangesAsync
+- [ ] Return true
+- [ ] Implement UpdateRatingAsync method
+- [ ] Find resource by id
+- [ ] Return false if not found
+- [ ] Update AverageRating property
+- [ ] Update TotalRatings property
+- [ ] Call SaveChangesAsync
+- [ ] Return true
+- [ ] Implement GetFavoritesAsync method (placeholder)
+- [ ] Return empty list for now
+- [ ] Add TODO comment for favorites implementation
+- [ ] Implement GetRecommendedAsync method (placeholder)
+- [ ] Return GetTopRatedAsync result for now
+- [ ] Add TODO comment for ML recommendation
+
+## IStudentRepository Interface
+
+- [ ] Create IStudentRepository.cs in Interfaces folder
+- [ ] Add using statements for Models.Domain
+- [ ] Add namespace UPTRMS.Api.Interfaces
+- [ ] Create interface IStudentRepository
+- [ ] Inherit from IRepository<Student>
+- [ ] Add method Task<Student> GetByIdWithDetailsAsync(Guid id)
+- [ ] Add method Task<Student> GetByAccessCodeAsync(string accessCode)
+- [ ] Add method Task<IEnumerable<Student>> GetByTherapistAsync(Guid therapistId)
+- [ ] Add method Task<IEnumerable<Student>> GetByOrganizationAsync(Guid organizationId)
+- [ ] Add method Task<IEnumerable<Student>> GetActiveStudentsAsync()
+- [ ] Add method Task<IEnumerable<Student>> SearchAsync(string searchTerm)
+- [ ] Add method Task<bool> IsAccessCodeUniqueAsync(string accessCode)
+- [ ] Add method Task<string> GenerateUniqueAccessCodeAsync()
+- [ ] Add method Task<IEnumerable<Student>> GetByServiceTypeAsync(string serviceType)
+- [ ] Add method Task<IEnumerable<Student>> GetWithUpcomingGoalsAsync(int days)
+
+## StudentRepository Implementation
+
+- [ ] Create StudentRepository.cs in Repositories folder
+- [ ] Add using statements for all required namespaces
+- [ ] Add namespace UPTRMS.Api.Repositories
+- [ ] Create class StudentRepository
+- [ ] Inherit from BaseRepository<Student>
+- [ ] Implement IStudentRepository
+- [ ] Add constructor accepting ApplicationDbContext
+- [ ] Call base constructor with context
+- [ ] Add private readonly Random _random field
+- [ ] Initialize _random in constructor
+- [ ] Implement GetByIdWithDetailsAsync method
+- [ ] Use Include for Therapist navigation property
+- [ ] Use Include for Organization navigation property
+- [ ] Use Include for Goals navigation property
+- [ ] Use Include for Sessions ordered by date
+- [ ] Add null check and return null if not found
+- [ ] Implement GetByAccessCodeAsync method
+- [ ] Filter by AccessCode equals parameter
+- [ ] Include Therapist navigation property
+- [ ] Return FirstOrDefaultAsync result
+- [ ] Implement GetByTherapistAsync method
+- [ ] Filter by TherapistId equals parameter
+- [ ] Filter by IsActive equals true
+- [ ] Order by LastName then FirstName
+- [ ] Return as list
+- [ ] Implement GetByOrganizationAsync method
+- [ ] Filter by OrganizationId equals parameter
+- [ ] Filter by IsActive equals true
+- [ ] Order by LastName then FirstName
+- [ ] Return as list
+- [ ] Implement GetActiveStudentsAsync method
+- [ ] Filter by IsActive equals true
+- [ ] Include Therapist navigation property
+- [ ] Order by LastName then FirstName
+- [ ] Return as list
+- [ ] Implement SearchAsync method
+- [ ] Use EF.Functions.Like for pattern matching
+- [ ] Search in FirstName with wildcards
+- [ ] Search in LastName with wildcards
+- [ ] Search in combination "FirstName LastName"
+- [ ] Combine with OR condition
+- [ ] Filter by IsActive equals true
+- [ ] Order by relevance
+- [ ] Return top 50 results
+- [ ] Implement IsAccessCodeUniqueAsync method
+- [ ] Check if any student has the access code
+- [ ] Return NOT exists result
+- [ ] Implement GenerateUniqueAccessCodeAsync method
+- [ ] Create do-while loop
+- [ ] Generate 6-character alphanumeric code
+- [ ] Use Random to select from character set
+- [ ] Check uniqueness with IsAccessCodeUniqueAsync
+- [ ] Continue until unique code found
+- [ ] Return the unique code
+- [ ] Implement GetByServiceTypeAsync method
+- [ ] Filter by ServiceType equals parameter
+- [ ] Filter by IsActive equals true
+- [ ] Order by LastName then FirstName
+- [ ] Return as list
+- [ ] Implement GetWithUpcomingGoalsAsync method
+- [ ] Join with IEPGoals
+- [ ] Filter by Goal IsActive equals true
+- [ ] Filter by NextReviewDate within specified days
+- [ ] Select distinct students
+- [ ] Order by earliest NextReviewDate
+- [ ] Return as list

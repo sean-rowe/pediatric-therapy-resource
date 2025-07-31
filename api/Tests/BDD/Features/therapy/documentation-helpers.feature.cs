@@ -122,47 +122,47 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3133 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3096 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3133.AddRow(new string[] {
+                table3096.AddRow(new string[] {
                             "sessionId",
                             "session-123"});
-                table3133.AddRow(new string[] {
+                table3096.AddRow(new string[] {
                             "resourcesUsed",
                             "[\"res-1\", \"res-2\", \"res-3\"]"});
-                table3133.AddRow(new string[] {
+                table3096.AddRow(new string[] {
                             "dataPoints",
                             "[{\"metric\": \"accuracy\", \"value\": 85}]"});
-                table3133.AddRow(new string[] {
+                table3096.AddRow(new string[] {
                             "duration",
                             "30"});
-                table3133.AddRow(new string[] {
+                table3096.AddRow(new string[] {
                             "studentResponse",
                             "\"engaged, required cues\""});
 #line 13
-    testRunner.When("I send a POST request to \"/api/documentation/session-notes/generate\" with:", ((string)(null)), table3133, "When ");
+    testRunner.When("I send a POST request to \"/api/documentation/session-notes/generate\" with:", ((string)(null)), table3096, "When ");
 #line hidden
 #line 20
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3134 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3097 = new TechTalk.SpecFlow.Table(new string[] {
                             "section",
                             "content"});
-                table3134.AddRow(new string[] {
+                table3097.AddRow(new string[] {
                             "objective",
                             "Resources and goals used"});
-                table3134.AddRow(new string[] {
+                table3097.AddRow(new string[] {
                             "performance",
                             "Data-driven summary"});
-                table3134.AddRow(new string[] {
+                table3097.AddRow(new string[] {
                             "clinicalJudgment",
                             "Template for observations"});
-                table3134.AddRow(new string[] {
+                table3097.AddRow(new string[] {
                             "plan",
                             "Next session suggestions"});
 #line 21
-    testRunner.And("generated note should include:", ((string)(null)), table3134, "And ");
+    testRunner.And("generated note should include:", ((string)(null)), table3097, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -204,26 +204,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 32
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3135 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3098 = new TechTalk.SpecFlow.Table(new string[] {
                             "component",
                             "example"});
-                table3135.AddRow(new string[] {
+                table3098.AddRow(new string[] {
                             "condition",
                             "\"Given visual cues...\""});
-                table3135.AddRow(new string[] {
+                table3098.AddRow(new string[] {
                             "behavior",
                             "\"patient will complete...\""});
-                table3135.AddRow(new string[] {
+                table3098.AddRow(new string[] {
                             "criteria",
                             "\"with 80% accuracy...\""});
-                table3135.AddRow(new string[] {
+                table3098.AddRow(new string[] {
                             "timeframe",
                             "\"within 4 weeks\""});
-                table3135.AddRow(new string[] {
+                table3098.AddRow(new string[] {
                             "medicalNecessity",
                             "\"to improve independence\""});
 #line 33
-    testRunner.And("goals should be formatted with:", ((string)(null)), table3135, "And ");
+    testRunner.And("goals should be formatted with:", ((string)(null)), table3098, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -258,45 +258,45 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3136 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3099 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3136.AddRow(new string[] {
+                table3099.AddRow(new string[] {
                             "studentId",
                             "student-123"});
-                table3136.AddRow(new string[] {
+                table3099.AddRow(new string[] {
                             "dateRange",
                             "{\"start\": \"2024-01-01\", \"end\": \"2024-03-31\"}"});
-                table3136.AddRow(new string[] {
+                table3099.AddRow(new string[] {
                             "includeGraphs",
                             "true"});
-                table3136.AddRow(new string[] {
+                table3099.AddRow(new string[] {
                             "reportType",
                             "quarterly"});
 #line 44
     testRunner.When("I send a POST request to \"/api/documentation/progress-report/auto-generate\" with:" +
-                        "", ((string)(null)), table3136, "When ");
+                        "", ((string)(null)), table3099, "When ");
 #line hidden
 #line 50
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3137 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3100 = new TechTalk.SpecFlow.Table(new string[] {
                             "section",
                             "content"});
-                table3137.AddRow(new string[] {
+                table3100.AddRow(new string[] {
                             "attendance",
                             "Session summary"});
-                table3137.AddRow(new string[] {
+                table3100.AddRow(new string[] {
                             "goalProgress",
                             "Objective data charts"});
-                table3137.AddRow(new string[] {
+                table3100.AddRow(new string[] {
                             "recommendations",
                             "Data-driven suggestions"});
-                table3137.AddRow(new string[] {
+                table3100.AddRow(new string[] {
                             "parentSummary",
                             "Simplified version"});
 #line 51
-    testRunner.And("report should contain:", ((string)(null)), table3137, "And ");
+    testRunner.And("report should contain:", ((string)(null)), table3100, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -338,23 +338,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 62
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3138 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3101 = new TechTalk.SpecFlow.Table(new string[] {
                             "section",
                             "prompts"});
-                table3138.AddRow(new string[] {
+                table3101.AddRow(new string[] {
                             "subjective",
                             "[\"Parent report\", \"Pain level\"]"});
-                table3138.AddRow(new string[] {
+                table3101.AddRow(new string[] {
                             "objective",
                             "[\"ROM measurements\", \"Gait\"]"});
-                table3138.AddRow(new string[] {
+                table3101.AddRow(new string[] {
                             "assessment",
                             "[\"Progress toward goals\"]"});
-                table3138.AddRow(new string[] {
+                table3101.AddRow(new string[] {
                             "plan",
                             "[\"Continue current POC\"]"});
 #line 63
-    testRunner.And("templates should include:", ((string)(null)), table3138, "And ");
+    testRunner.And("templates should include:", ((string)(null)), table3101, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -389,41 +389,41 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3139 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3102 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3139.AddRow(new string[] {
+                table3102.AddRow(new string[] {
                             "sessionType",
                             "individual"});
-                table3139.AddRow(new string[] {
+                table3102.AddRow(new string[] {
                             "duration",
                             "45"});
-                table3139.AddRow(new string[] {
+                table3102.AddRow(new string[] {
                             "procedures",
                             "[\"ther-ex\", \"gait-training\"]"});
-                table3139.AddRow(new string[] {
+                table3102.AddRow(new string[] {
                             "setting",
                             "outpatient"});
 #line 73
-    testRunner.When("I send a POST request to \"/api/documentation/cpt-helper\" with:", ((string)(null)), table3139, "When ");
+    testRunner.When("I send a POST request to \"/api/documentation/cpt-helper\" with:", ((string)(null)), table3102, "When ");
 #line hidden
 #line 79
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3140 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3103 = new TechTalk.SpecFlow.Table(new string[] {
                             "cptCode",
                             "description",
                             "units"});
-                table3140.AddRow(new string[] {
+                table3103.AddRow(new string[] {
                             "97110",
                             "Therapeutic exercise",
                             "2"});
-                table3140.AddRow(new string[] {
+                table3103.AddRow(new string[] {
                             "97116",
                             "Gait training",
                             "1"});
 #line 80
-    testRunner.And("recommendations should include:", ((string)(null)), table3140, "And ");
+    testRunner.And("recommendations should include:", ((string)(null)), table3103, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -458,20 +458,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3141 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3104 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3141.AddRow(new string[] {
+                table3104.AddRow(new string[] {
                             "category",
                             "progress-notes"});
-                table3141.AddRow(new string[] {
+                table3104.AddRow(new string[] {
                             "phrase",
                             "\"Demonstrated improved motor planning\""});
-                table3141.AddRow(new string[] {
+                table3104.AddRow(new string[] {
                             "shortcut",
                             "\"imp-mp\""});
 #line 88
-    testRunner.When("I send a POST request to \"/api/documentation/quick-phrases/save\" with:", ((string)(null)), table3141, "When ");
+    testRunner.When("I send a POST request to \"/api/documentation/quick-phrases/save\" with:", ((string)(null)), table3104, "When ");
 #line hidden
 #line 93
     testRunner.Then("the response status should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -521,28 +521,28 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 101
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3142 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3105 = new TechTalk.SpecFlow.Table(new string[] {
                             "requirement",
                             "status",
                             "issue"});
-                table3142.AddRow(new string[] {
+                table3105.AddRow(new string[] {
                             "medicalNecessity",
                             "pass",
                             "null"});
-                table3142.AddRow(new string[] {
+                table3105.AddRow(new string[] {
                             "skillsAddressed",
                             "pass",
                             "null"});
-                table3142.AddRow(new string[] {
+                table3105.AddRow(new string[] {
                             "objectiveData",
                             "warning",
                             "\"Add measurements\""});
-                table3142.AddRow(new string[] {
+                table3105.AddRow(new string[] {
                             "signatureDate",
                             "fail",
                             "\"Missing\""});
 #line 102
-    testRunner.And("compliance check should show:", ((string)(null)), table3142, "And ");
+    testRunner.And("compliance check should show:", ((string)(null)), table3105, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -577,20 +577,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3143 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3106 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3143.AddRow(new string[] {
+                table3106.AddRow(new string[] {
                             "noteIds",
                             "[\"note-1\", \"note-2\", \"note-3\"]"});
-                table3143.AddRow(new string[] {
+                table3106.AddRow(new string[] {
                             "signatureType",
                             "electronic"});
-                table3143.AddRow(new string[] {
+                table3106.AddRow(new string[] {
                             "credentials",
                             "{\"pin\": \"1234\"}"});
 #line 112
-    testRunner.When("I send a POST request to \"/api/documentation/batch-sign\" with:", ((string)(null)), table3143, "When ");
+    testRunner.When("I send a POST request to \"/api/documentation/batch-sign\" with:", ((string)(null)), table3106, "When ");
 #line hidden
 #line 117
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -640,24 +640,24 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 125
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3144 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3107 = new TechTalk.SpecFlow.Table(new string[] {
                             "activity",
                             "duration",
                             "percentage"});
-                table3144.AddRow(new string[] {
+                table3107.AddRow(new string[] {
                             "direct service",
                             "360",
                             "75%"});
-                table3144.AddRow(new string[] {
+                table3107.AddRow(new string[] {
                             "documentation",
                             "90",
                             "19%"});
-                table3144.AddRow(new string[] {
+                table3107.AddRow(new string[] {
                             "prep time",
                             "30",
                             "6%"});
 #line 126
-    testRunner.And("tracking should show:", ((string)(null)), table3144, "And ");
+    testRunner.And("tracking should show:", ((string)(null)), table3107, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -692,44 +692,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3145 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3108 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table3145.AddRow(new string[] {
+                table3108.AddRow(new string[] {
                             "reportType",
                             "initial-evaluation"});
-                table3145.AddRow(new string[] {
+                table3108.AddRow(new string[] {
                             "testScores",
                             "{\"BOT-2\": 45, \"Beery\": 38}"});
-                table3145.AddRow(new string[] {
+                table3108.AddRow(new string[] {
                             "observations",
                             "\"Difficulty with bilateral coordination\""});
-                table3145.AddRow(new string[] {
+                table3108.AddRow(new string[] {
                             "diagnosis",
                             "\"Developmental Coordination Disorder\""});
 #line 135
-    testRunner.When("I send a POST request to \"/api/documentation/report-writer\" with:", ((string)(null)), table3145, "When ");
+    testRunner.When("I send a POST request to \"/api/documentation/report-writer\" with:", ((string)(null)), table3108, "When ");
 #line hidden
 #line 141
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3146 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3109 = new TechTalk.SpecFlow.Table(new string[] {
                             "section",
                             "content"});
-                table3146.AddRow(new string[] {
+                table3109.AddRow(new string[] {
                             "background",
                             "Referral information"});
-                table3146.AddRow(new string[] {
+                table3109.AddRow(new string[] {
                             "results",
                             "Test score interpretation"});
-                table3146.AddRow(new string[] {
+                table3109.AddRow(new string[] {
                             "recommendations",
                             "Evidence-based interventions"});
-                table3146.AddRow(new string[] {
+                table3109.AddRow(new string[] {
                             "goals",
                             "Measurable objectives"});
 #line 142
-    testRunner.And("draft report should include:", ((string)(null)), table3146, "And ");
+    testRunner.And("draft report should include:", ((string)(null)), table3109, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -773,96 +773,96 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 154
     testRunner.When("I access the auto-generated session note feature", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3147 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3110 = new TechTalk.SpecFlow.Table(new string[] {
                             "Time",
                             "Resource/Activity",
                             "Student Performance",
                             "Data Collected"});
-                table3147.AddRow(new string[] {
+                table3110.AddRow(new string[] {
                             "0-5min",
                             "Sensory warm-up cards",
                             "Required verbal cues",
                             "Engagement: High"});
-                table3147.AddRow(new string[] {
+                table3110.AddRow(new string[] {
                             "5-15min",
                             "Fine motor worksheets",
                             "75% accuracy",
                             "Correct: 15/20"});
-                table3147.AddRow(new string[] {
+                table3110.AddRow(new string[] {
                             "15-25min",
                             "Handwriting practice",
                             "Improved from baseline",
                             "Letter formation: 8/10"});
-                table3147.AddRow(new string[] {
+                table3110.AddRow(new string[] {
                             "25-30min",
                             "Calming activities",
                             "Independent use",
                             "Self-regulation: Yes"});
 #line 155
-    testRunner.And("I review the session timeline:", ((string)(null)), table3147, "And ");
+    testRunner.And("I review the session timeline:", ((string)(null)), table3110, "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table3148 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3111 = new TechTalk.SpecFlow.Table(new string[] {
                             "Session Section",
                             "Auto-Generated Content"});
-                table3148.AddRow(new string[] {
+                table3111.AddRow(new string[] {
                             "Objective activities",
                             "List of resources used with timestamps"});
-                table3148.AddRow(new string[] {
+                table3111.AddRow(new string[] {
                             "Performance data",
                             "Quantitative measures from activities"});
-                table3148.AddRow(new string[] {
+                table3111.AddRow(new string[] {
                             "Clinical observations",
                             "Template prompts for qualitative notes"});
-                table3148.AddRow(new string[] {
+                table3111.AddRow(new string[] {
                             "Student engagement",
                             "Engagement levels throughout session"});
-                table3148.AddRow(new string[] {
+                table3111.AddRow(new string[] {
                             "Progress indicators",
                             "Comparison to previous sessions"});
 #line 161
-    testRunner.Then("the system should auto-populate comprehensive notes:", ((string)(null)), table3148, "Then ");
+    testRunner.Then("the system should auto-populate comprehensive notes:", ((string)(null)), table3111, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3149 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3112 = new TechTalk.SpecFlow.Table(new string[] {
                             "Customization Option",
                             "Implementation"});
-                table3149.AddRow(new string[] {
+                table3112.AddRow(new string[] {
                             "Edit auto-text",
                             "Full text editing capability"});
-                table3149.AddRow(new string[] {
+                table3112.AddRow(new string[] {
                             "Add observations",
                             "Free text with clinical prompts"});
-                table3149.AddRow(new string[] {
+                table3112.AddRow(new string[] {
                             "Link to goals",
                             "Connect activities to IEP goals"});
-                table3149.AddRow(new string[] {
+                table3112.AddRow(new string[] {
                             "Insert quick phrases",
                             "Pre-saved common observations"});
 #line 168
-    testRunner.And("I should be able to customize each section:", ((string)(null)), table3149, "And ");
+    testRunner.And("I should be able to customize each section:", ((string)(null)), table3112, "And ");
 #line hidden
 #line 174
     testRunner.When("I finalize the session note", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3150 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3113 = new TechTalk.SpecFlow.Table(new string[] {
                             "Documentation Element",
                             "Content"});
-                table3150.AddRow(new string[] {
+                table3113.AddRow(new string[] {
                             "Time efficiency",
                             "Note completed in < 3 minutes"});
-                table3150.AddRow(new string[] {
+                table3113.AddRow(new string[] {
                             "Compliance check",
                             "All required fields verified"});
-                table3150.AddRow(new string[] {
+                table3113.AddRow(new string[] {
                             "Goal alignment",
                             "Activities linked to objectives"});
-                table3150.AddRow(new string[] {
+                table3113.AddRow(new string[] {
                             "Data integration",
                             "Quantitative measures included"});
-                table3150.AddRow(new string[] {
+                table3113.AddRow(new string[] {
                             "Professional format",
                             "Insurance-acceptable language"});
 #line 175
-    testRunner.Then("the documentation should include:", ((string)(null)), table3150, "Then ");
+    testRunner.Then("the documentation should include:", ((string)(null)), table3113, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -911,101 +911,101 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 188
     testRunner.And("I search for \"balance and mobility goals\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table3151 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3114 = new TechTalk.SpecFlow.Table(new string[] {
                             "Organization Method",
                             "Categories Available"});
-                table3151.AddRow(new string[] {
+                table3114.AddRow(new string[] {
                             "Insurance type",
                             "Medicare, Medicaid, Commercial"});
-                table3151.AddRow(new string[] {
+                table3114.AddRow(new string[] {
                             "Skill domain",
                             "Mobility, ADL, Cognitive, Motor"});
-                table3151.AddRow(new string[] {
+                table3114.AddRow(new string[] {
                             "Setting",
                             "Outpatient, Home health, School"});
-                table3151.AddRow(new string[] {
+                table3114.AddRow(new string[] {
                             "Age group",
                             "Pediatric, Adult, Geriatric"});
 #line 189
-    testRunner.Then("I should find goals organized by:", ((string)(null)), table3151, "Then ");
+    testRunner.Then("I should find goals organized by:", ((string)(null)), table3114, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3152 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3115 = new TechTalk.SpecFlow.Table(new string[] {
                             "Goal Component",
                             "Medicare Example"});
-                table3152.AddRow(new string[] {
+                table3115.AddRow(new string[] {
                             "Condition statement",
                             "\"With minimal assistance and visual cues...\""});
-                table3152.AddRow(new string[] {
+                table3115.AddRow(new string[] {
                             "Behavior description",
                             "\"Patient will maintain static balance...\""});
-                table3152.AddRow(new string[] {
+                table3115.AddRow(new string[] {
                             "Measurable criteria",
                             "\"for 30 seconds without loss of balance\""});
-                table3152.AddRow(new string[] {
+                table3115.AddRow(new string[] {
                             "Timeframe",
                             "\"within 4 weeks of treatment initiation\""});
-                table3152.AddRow(new string[] {
+                table3115.AddRow(new string[] {
                             "Medical necessity",
                             "\"to safely perform activities of daily living\""});
 #line 195
-    testRunner.And("each goal should include required components:", ((string)(null)), table3152, "And ");
+    testRunner.And("each goal should include required components:", ((string)(null)), table3115, "And ");
 #line hidden
 #line 202
     testRunner.When("I select and customize a goal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3153 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3116 = new TechTalk.SpecFlow.Table(new string[] {
                             "Customization Feature",
                             "Functionality"});
-                table3153.AddRow(new string[] {
+                table3116.AddRow(new string[] {
                             "Component editing",
                             "Modify each goal element"});
-                table3153.AddRow(new string[] {
+                table3116.AddRow(new string[] {
                             "Insurance validation",
                             "Check language compliance"});
-                table3153.AddRow(new string[] {
+                table3116.AddRow(new string[] {
                             "CPT code linking",
                             "Suggest appropriate billing codes"});
-                table3153.AddRow(new string[] {
+                table3116.AddRow(new string[] {
                             "Baseline integration",
                             "Connect to assessment data"});
 #line 203
-    testRunner.Then("the system should provide:", ((string)(null)), table3153, "Then ");
+    testRunner.Then("the system should provide:", ((string)(null)), table3116, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3154 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3117 = new TechTalk.SpecFlow.Table(new string[] {
                             "Validation Check",
                             "Requirement"});
-                table3154.AddRow(new string[] {
+                table3117.AddRow(new string[] {
                             "SMART criteria",
                             "Specific, Measurable, Achievable"});
-                table3154.AddRow(new string[] {
+                table3117.AddRow(new string[] {
                             "Medical necessity",
                             "Clear functional relevance"});
-                table3154.AddRow(new string[] {
+                table3117.AddRow(new string[] {
                             "Insurance language",
                             "Payer-specific terminology"});
-                table3154.AddRow(new string[] {
+                table3117.AddRow(new string[] {
                             "Timeframe feasibility",
                             "Realistic for condition"});
 #line 209
-    testRunner.And("goal validation should verify:", ((string)(null)), table3154, "And ");
+    testRunner.And("goal validation should verify:", ((string)(null)), table3117, "And ");
 #line hidden
 #line 215
     testRunner.When("goals are approved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3155 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3118 = new TechTalk.SpecFlow.Table(new string[] {
                             "Output Feature",
                             "Delivery"});
-                table3155.AddRow(new string[] {
+                table3118.AddRow(new string[] {
                             "Copy to evaluation",
                             "Insert into report template"});
-                table3155.AddRow(new string[] {
+                table3118.AddRow(new string[] {
                             "Progress tracking",
                             "Set up measurement schedule"});
-                table3155.AddRow(new string[] {
+                table3118.AddRow(new string[] {
                             "Goal library update",
                             "Save successful customizations"});
 #line 216
-    testRunner.Then("the system should:", ((string)(null)), table3155, "Then ");
+    testRunner.Then("the system should:", ((string)(null)), table3118, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1051,104 +1051,104 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 226
     testRunner.When("I initiate automated progress report generation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3156 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3119 = new TechTalk.SpecFlow.Table(new string[] {
                             "Parameter",
                             "Setting"});
-                table3156.AddRow(new string[] {
+                table3119.AddRow(new string[] {
                             "Time period",
                             "January 1 - March 31, 2024"});
-                table3156.AddRow(new string[] {
+                table3119.AddRow(new string[] {
                             "Audience",
                             "Parents and IEP team"});
-                table3156.AddRow(new string[] {
+                table3119.AddRow(new string[] {
                             "Detail level",
                             "Comprehensive with graphs"});
-                table3156.AddRow(new string[] {
+                table3119.AddRow(new string[] {
                             "Format",
                             "Professional PDF"});
 #line 227
-    testRunner.And("I specify report parameters:", ((string)(null)), table3156, "And ");
+    testRunner.And("I specify report parameters:", ((string)(null)), table3119, "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table3157 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3120 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Category",
                             "Information Included"});
-                table3157.AddRow(new string[] {
+                table3120.AddRow(new string[] {
                             "Attendance",
                             "22 sessions attended, 2 missed"});
-                table3157.AddRow(new string[] {
+                table3120.AddRow(new string[] {
                             "Goal progress",
                             "Percentage completion per goal"});
-                table3157.AddRow(new string[] {
+                table3120.AddRow(new string[] {
                             "Skill development",
                             "Trend analysis with graphs"});
-                table3157.AddRow(new string[] {
+                table3120.AddRow(new string[] {
                             "Resource effectiveness",
                             "Most beneficial materials used"});
-                table3157.AddRow(new string[] {
+                table3120.AddRow(new string[] {
                             "Engagement patterns",
                             "Motivation and participation data"});
 #line 233
-    testRunner.Then("the system should compile comprehensive data:", ((string)(null)), table3157, "Then ");
+    testRunner.Then("the system should compile comprehensive data:", ((string)(null)), table3120, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3158 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3121 = new TechTalk.SpecFlow.Table(new string[] {
                             "Graph Type",
                             "Data Displayed"});
-                table3158.AddRow(new string[] {
+                table3121.AddRow(new string[] {
                             "Line graphs",
                             "Progress trends over time"});
-                table3158.AddRow(new string[] {
+                table3121.AddRow(new string[] {
                             "Bar charts",
                             "Goal achievement comparison"});
-                table3158.AddRow(new string[] {
+                table3121.AddRow(new string[] {
                             "Heat maps",
                             "Skill development patterns"});
-                table3158.AddRow(new string[] {
+                table3121.AddRow(new string[] {
                             "Pie charts",
                             "Time allocation by activity type"});
 #line 240
-    testRunner.And("data visualization should include:", ((string)(null)), table3158, "And ");
+    testRunner.And("data visualization should include:", ((string)(null)), table3121, "And ");
 #line hidden
 #line 246
     testRunner.When("report generation is complete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3159 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3122 = new TechTalk.SpecFlow.Table(new string[] {
                             "Report Section",
                             "Content"});
-                table3159.AddRow(new string[] {
+                table3122.AddRow(new string[] {
                             "Executive summary",
                             "Overall progress statement"});
-                table3159.AddRow(new string[] {
+                table3122.AddRow(new string[] {
                             "Goal-by-goal analysis",
                             "Detailed progress per objective"});
-                table3159.AddRow(new string[] {
+                table3122.AddRow(new string[] {
                             "Visual data",
                             "Charts and graphs embedded"});
-                table3159.AddRow(new string[] {
+                table3122.AddRow(new string[] {
                             "Recommendations",
                             "Data-driven next steps"});
-                table3159.AddRow(new string[] {
+                table3122.AddRow(new string[] {
                             "Parent-friendly version",
                             "Simplified language summary"});
 #line 247
-    testRunner.Then("the report should contain:", ((string)(null)), table3159, "Then ");
+    testRunner.Then("the report should contain:", ((string)(null)), table3122, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3160 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3123 = new TechTalk.SpecFlow.Table(new string[] {
                             "Customization Type",
                             "Options Available"});
-                table3160.AddRow(new string[] {
+                table3123.AddRow(new string[] {
                             "Format selection",
                             "PDF, Word, PowerPoint"});
-                table3160.AddRow(new string[] {
+                table3123.AddRow(new string[] {
                             "Audience adaptation",
                             "Technical vs. family language"});
-                table3160.AddRow(new string[] {
+                table3123.AddRow(new string[] {
                             "Detail level",
                             "Summary vs. comprehensive"});
-                table3160.AddRow(new string[] {
+                table3123.AddRow(new string[] {
                             "Branding",
                             "Organization logo and colors"});
 #line 254
-    testRunner.And("report customization should allow:", ((string)(null)), table3160, "And ");
+    testRunner.And("report customization should allow:", ((string)(null)), table3123, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1194,101 +1194,101 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 265
     testRunner.When("I select \"Pediatric OT SOAP Template\" from documentation tools", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3161 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3124 = new TechTalk.SpecFlow.Table(new string[] {
                             "SOAP Section",
                             "Pediatric OT Prompts"});
-                table3161.AddRow(new string[] {
+                table3124.AddRow(new string[] {
                             "Subjective",
                             "Parent report of home function, child\'s mood"});
-                table3161.AddRow(new string[] {
+                table3124.AddRow(new string[] {
                             "Objective",
                             "Standardized test scores, clinical observations"});
-                table3161.AddRow(new string[] {
+                table3124.AddRow(new string[] {
                             "Assessment",
                             "Progress toward goals, clinical reasoning"});
-                table3161.AddRow(new string[] {
+                table3124.AddRow(new string[] {
                             "Plan",
                             "Next session focus, home program updates"});
 #line 266
-    testRunner.Then("the template should provide specialty-specific prompts:", ((string)(null)), table3161, "Then ");
+    testRunner.Then("the template should provide specialty-specific prompts:", ((string)(null)), table3124, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3162 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3125 = new TechTalk.SpecFlow.Table(new string[] {
                             "Template Feature",
                             "Functionality"});
-                table3162.AddRow(new string[] {
+                table3125.AddRow(new string[] {
                             "Quick phrase library",
                             "Common OT observations dropdown"});
-                table3162.AddRow(new string[] {
+                table3125.AddRow(new string[] {
                             "Goal auto-linking",
                             "Connect activities to IEP goals"});
-                table3162.AddRow(new string[] {
+                table3125.AddRow(new string[] {
                             "CPT code helper",
                             "Suggest billing codes based on activities"});
-                table3162.AddRow(new string[] {
+                table3125.AddRow(new string[] {
                             "Time validation",
                             "Ensure documented time matches billing"});
 #line 272
-    testRunner.And("each section should offer:", ((string)(null)), table3162, "And ");
+    testRunner.And("each section should offer:", ((string)(null)), table3125, "And ");
 #line hidden
 #line 278
     testRunner.When("I complete each SOAP section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3163 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3126 = new TechTalk.SpecFlow.Table(new string[] {
                             "Quality Assurance",
                             "Check Performed"});
-                table3163.AddRow(new string[] {
+                table3126.AddRow(new string[] {
                             "Completeness check",
                             "Flag missing required elements"});
-                table3163.AddRow(new string[] {
+                table3126.AddRow(new string[] {
                             "Consistency validation",
                             "Align objective data with assessment"});
-                table3163.AddRow(new string[] {
+                table3126.AddRow(new string[] {
                             "Billing compliance",
                             "Verify time units and procedures"});
-                table3163.AddRow(new string[] {
+                table3126.AddRow(new string[] {
                             "Medical necessity",
                             "Ensure therapeutic justification"});
 #line 279
-    testRunner.Then("the system should provide:", ((string)(null)), table3163, "Then ");
+    testRunner.Then("the system should provide:", ((string)(null)), table3126, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3164 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3127 = new TechTalk.SpecFlow.Table(new string[] {
                             "Workflow Step",
                             "System Support"});
-                table3164.AddRow(new string[] {
+                table3127.AddRow(new string[] {
                             "Draft creation",
                             "Auto-save every 30 seconds"});
-                table3164.AddRow(new string[] {
+                table3127.AddRow(new string[] {
                             "Peer review",
                             "Share for clinical feedback"});
-                table3164.AddRow(new string[] {
+                table3127.AddRow(new string[] {
                             "Supervisor approval",
                             "Electronic signature workflow"});
-                table3164.AddRow(new string[] {
+                table3127.AddRow(new string[] {
                             "Final documentation",
                             "Lock note after signature"});
 #line 285
-    testRunner.And("documentation workflow should include:", ((string)(null)), table3164, "And ");
+    testRunner.And("documentation workflow should include:", ((string)(null)), table3127, "And ");
 #line hidden
 #line 291
     testRunner.When("SOAP note is finalized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3165 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3128 = new TechTalk.SpecFlow.Table(new string[] {
                             "Final Step",
                             "Action"});
-                table3165.AddRow(new string[] {
+                table3128.AddRow(new string[] {
                             "Compliance archive",
                             "Store per retention policy"});
-                table3165.AddRow(new string[] {
+                table3128.AddRow(new string[] {
                             "Billing integration",
                             "Send to revenue cycle if applicable"});
-                table3165.AddRow(new string[] {
+                table3128.AddRow(new string[] {
                             "Progress tracking",
                             "Update student goal data"});
-                table3165.AddRow(new string[] {
+                table3128.AddRow(new string[] {
                             "Template refinement",
                             "Learn from successful notes"});
 #line 292
-    testRunner.Then("the system should:", ((string)(null)), table3165, "Then ");
+    testRunner.Then("the system should:", ((string)(null)), table3128, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1332,83 +1332,83 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 303
     testRunner.When("I create documentation for continued therapy authorization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3166 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3129 = new TechTalk.SpecFlow.Table(new string[] {
                             "Justification Element",
                             "Required Content"});
-                table3166.AddRow(new string[] {
+                table3129.AddRow(new string[] {
                             "Functional limitations",
                             "Specific ADL/work impairments"});
-                table3166.AddRow(new string[] {
+                table3129.AddRow(new string[] {
                             "Objective measures",
                             "Standardized test scores"});
-                table3166.AddRow(new string[] {
+                table3129.AddRow(new string[] {
                             "Progress indicators",
                             "Measurable improvement data"});
-                table3166.AddRow(new string[] {
+                table3129.AddRow(new string[] {
                             "Skilled intervention",
                             "Why therapy expertise needed"});
-                table3166.AddRow(new string[] {
+                table3129.AddRow(new string[] {
                             "Goal relevance",
                             "How goals address limitations"});
 #line 304
-    testRunner.Then("medical necessity justification should include:", ((string)(null)), table3166, "Then ");
+    testRunner.Then("medical necessity justification should include:", ((string)(null)), table3129, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3167 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3130 = new TechTalk.SpecFlow.Table(new string[] {
                             "Demonstration Requirement",
                             "Evidence Type"});
-                table3167.AddRow(new string[] {
+                table3130.AddRow(new string[] {
                             "Skilled care necessity",
                             "Complex intervention rationale"});
-                table3167.AddRow(new string[] {
+                table3130.AddRow(new string[] {
                             "Measurable progress",
                             "Objective data trends"});
-                table3167.AddRow(new string[] {
+                table3130.AddRow(new string[] {
                             "Functional relevance",
                             "Real-world application"});
-                table3167.AddRow(new string[] {
+                table3130.AddRow(new string[] {
                             "Safety considerations",
                             "Risk factors if untreated"});
 #line 311
-    testRunner.And("documentation should demonstrate:", ((string)(null)), table3167, "And ");
+    testRunner.And("documentation should demonstrate:", ((string)(null)), table3130, "And ");
 #line hidden
 #line 317
     testRunner.When("I submit for insurance review", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3168 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3131 = new TechTalk.SpecFlow.Table(new string[] {
                             "Review Support",
                             "Feature"});
-                table3168.AddRow(new string[] {
+                table3131.AddRow(new string[] {
                             "Compliance checker",
                             "Flag missing required elements"});
-                table3168.AddRow(new string[] {
+                table3131.AddRow(new string[] {
                             "Language optimizer",
                             "Suggest insurance-preferred terms"});
-                table3168.AddRow(new string[] {
+                table3131.AddRow(new string[] {
                             "Supporting data",
                             "Include relevant test scores"});
-                table3168.AddRow(new string[] {
+                table3131.AddRow(new string[] {
                             "Denial prevention",
                             "Highlight strong justifications"});
 #line 318
-    testRunner.Then("the system should:", ((string)(null)), table3168, "Then ");
+    testRunner.Then("the system should:", ((string)(null)), table3131, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3169 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3132 = new TechTalk.SpecFlow.Table(new string[] {
                             "Package Component",
                             "Content"});
-                table3169.AddRow(new string[] {
+                table3132.AddRow(new string[] {
                             "Primary note",
                             "Detailed skilled intervention"});
-                table3169.AddRow(new string[] {
+                table3132.AddRow(new string[] {
                             "Supporting data",
                             "Assessment scores and graphs"});
-                table3169.AddRow(new string[] {
+                table3132.AddRow(new string[] {
                             "Progress summary",
                             "Trend analysis over time"});
-                table3169.AddRow(new string[] {
+                table3132.AddRow(new string[] {
                             "Functional goals",
                             "ADL-focused objectives"});
 #line 324
-    testRunner.And("documentation package should include:", ((string)(null)), table3169, "And ");
+    testRunner.And("documentation package should include:", ((string)(null)), table3132, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1452,80 +1452,80 @@ namespace UPTRMS.Api.Tests.BDD.Features.Therapy
 #line 335
     testRunner.When("I use comprehensive documentation tracking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3170 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3133 = new TechTalk.SpecFlow.Table(new string[] {
                             "Efficiency Metric",
                             "Measurement"});
-                table3170.AddRow(new string[] {
+                table3133.AddRow(new string[] {
                             "Time per note",
                             "Average minutes for completion"});
-                table3170.AddRow(new string[] {
+                table3133.AddRow(new string[] {
                             "Template usage",
                             "Most efficient formats"});
-                table3170.AddRow(new string[] {
+                table3133.AddRow(new string[] {
                             "Compliance rate",
                             "First-time approval percentage"});
-                table3170.AddRow(new string[] {
+                table3133.AddRow(new string[] {
                             "Productivity trends",
                             "Documentation time over months"});
 #line 336
-    testRunner.Then("the system should monitor:", ((string)(null)), table3170, "Then ");
+    testRunner.Then("the system should monitor:", ((string)(null)), table3133, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3171 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3134 = new TechTalk.SpecFlow.Table(new string[] {
                             "Optimization Feature",
                             "Benefit"});
-                table3171.AddRow(new string[] {
+                table3134.AddRow(new string[] {
                             "Template learning",
                             "Faster note completion"});
-                table3171.AddRow(new string[] {
+                table3134.AddRow(new string[] {
                             "Quick phrase expansion",
                             "Reduce typing time"});
-                table3171.AddRow(new string[] {
+                table3134.AddRow(new string[] {
                             "Voice-to-text",
                             "Hands-free documentation"});
-                table3171.AddRow(new string[] {
+                table3134.AddRow(new string[] {
                             "Bulk operations",
                             "Sign multiple notes at once"});
 #line 342
-    testRunner.And("efficiency optimization should provide:", ((string)(null)), table3171, "And ");
+    testRunner.And("efficiency optimization should provide:", ((string)(null)), table3134, "And ");
 #line hidden
 #line 348
     testRunner.When("I review productivity data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3172 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3135 = new TechTalk.SpecFlow.Table(new string[] {
                             "Productivity Insight",
                             "Analysis"});
-                table3172.AddRow(new string[] {
+                table3135.AddRow(new string[] {
                             "Peak efficiency times",
                             "When documentation is fastest"});
-                table3172.AddRow(new string[] {
+                table3135.AddRow(new string[] {
                             "Template effectiveness",
                             "Which formats save most time"});
-                table3172.AddRow(new string[] {
+                table3135.AddRow(new string[] {
                             "Error patterns",
                             "Common compliance issues"});
-                table3172.AddRow(new string[] {
+                table3135.AddRow(new string[] {
                             "Improvement opportunities",
                             "Suggested workflow changes"});
 #line 349
-    testRunner.Then("insights should include:", ((string)(null)), table3172, "Then ");
+    testRunner.Then("insights should include:", ((string)(null)), table3135, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3173 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3136 = new TechTalk.SpecFlow.Table(new string[] {
                             "Recommendation Type",
                             "Specific Suggestion"});
-                table3173.AddRow(new string[] {
+                table3136.AddRow(new string[] {
                             "Workflow optimization",
                             "Schedule documentation blocks"});
-                table3173.AddRow(new string[] {
+                table3136.AddRow(new string[] {
                             "Template refinement",
                             "Customize for frequent cases"});
-                table3173.AddRow(new string[] {
+                table3136.AddRow(new string[] {
                             "Training needs",
                             "Areas requiring skill development"});
-                table3173.AddRow(new string[] {
+                table3136.AddRow(new string[] {
                             "Technology adoption",
                             "New tools to improve efficiency"});
 #line 355
-    testRunner.And("system recommendations should suggest:", ((string)(null)), table3173, "And ");
+    testRunner.And("system recommendations should suggest:", ((string)(null)), table3136, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

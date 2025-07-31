@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using UPTRMS.Api.Models.Domain;
 using UPTRMS.Api.Services;
-using UPTRMS.Api.Controllers;
 
 namespace UPTRMS.Api.Data;
 
@@ -47,7 +46,7 @@ public class ApplicationDbContext : DbContext
     // Junction tables
     public DbSet<ResourceCategory> ResourceCategories { get; set; } = null!;
     public DbSet<SessionResource> SessionResources { get; set; } = null!;
-    
+
     // Authentication and audit entities
     public DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
     public DbSet<EmailVerificationToken> EmailVerificationTokens { get; set; } = null!;
@@ -180,7 +179,7 @@ public class ApplicationDbContext : DbContext
         modelBuilder.Entity<SessionResource>(entity =>
         {
             entity.HasOne(sr => sr.Session)
-                .WithMany(s => s.ResourcesUsed)
+                .WithMany(s => s.SessionResources)
                 .HasForeignKey(sr => sr.SessionId);
             entity.HasOne(sr => sr.Resource)
                 .WithMany(r => r.SessionUses)
@@ -212,13 +211,13 @@ public class ApplicationDbContext : DbContext
         {
             entity.HasIndex(e => e.StripePaymentIntentId);
             entity.HasIndex(e => e.CreatedAt);
-            
+
             // Configure foreign keys to avoid multiple cascade paths
             entity.HasOne(mt => mt.Buyer)
                 .WithMany()
                 .HasForeignKey(mt => mt.BuyerId)
                 .OnDelete(DeleteBehavior.Restrict);
-                
+
             entity.HasOne(mt => mt.Seller)
                 .WithMany()
                 .HasForeignKey(mt => mt.SellerId)
@@ -229,13 +228,13 @@ public class ApplicationDbContext : DbContext
         modelBuilder.Entity<SellerFollower>(entity =>
         {
             entity.HasIndex(e => new { e.SellerId, e.UserId }).IsUnique();
-            
+
             // Configure foreign keys to avoid multiple cascade paths
             entity.HasOne(sf => sf.Seller)
                 .WithMany()
                 .HasForeignKey(sf => sf.SellerId)
                 .OnDelete(DeleteBehavior.Restrict);
-                
+
             entity.HasOne(sf => sf.User)
                 .WithMany()
                 .HasForeignKey(sf => sf.UserId)
@@ -247,13 +246,13 @@ public class ApplicationDbContext : DbContext
         {
             entity.HasIndex(e => e.AccessCode).IsUnique();
             entity.HasIndex(e => new { e.StudentId, e.ParentUserId }).IsUnique();
-            
+
             // Configure foreign keys to avoid multiple cascade paths
             entity.HasOne(pa => pa.Student)
                 .WithMany()
                 .HasForeignKey(pa => pa.StudentId)
                 .OnDelete(DeleteBehavior.Restrict);
-                
+
             entity.HasOne(pa => pa.ParentUser)
                 .WithMany()
                 .HasForeignKey(pa => pa.ParentUserId)
@@ -310,7 +309,7 @@ public class ApplicationDbContext : DbContext
             entity.HasIndex(e => e.UserId);
             entity.HasIndex(e => e.ExpiresAt);
             entity.HasIndex(e => new { e.UserId, e.IsRevoked });
-            
+
             // Configure foreign key to avoid cascade issues
             entity.HasOne(rt => rt.User)
                 .WithMany()
@@ -326,7 +325,7 @@ public class ApplicationDbContext : DbContext
             entity.HasIndex(e => e.UserId);
             entity.HasIndex(e => e.ExpiresAt);
             entity.HasIndex(e => new { e.UserId, e.IsUsed });
-            
+
             // Configure foreign key to avoid cascade issues
             entity.HasOne(evt => evt.User)
                 .WithMany()
@@ -342,7 +341,7 @@ public class ApplicationDbContext : DbContext
             entity.HasIndex(e => e.UserId);
             entity.HasIndex(e => e.ExpiresAt);
             entity.HasIndex(e => new { e.UserId, e.IsUsed });
-            
+
             // Configure foreign key to avoid cascade issues
             entity.HasOne(prt => prt.User)
                 .WithMany()
@@ -367,7 +366,7 @@ public class ApplicationDbContext : DbContext
                 }
             }
         }
-        
+
         // Apply decimal precision
         foreach (var entityType in modelBuilder.Model.GetEntityTypes())
         {

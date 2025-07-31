@@ -142,7 +142,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 17
     testRunner.And("various transaction types require different handling", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1667 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1630 = new TechTalk.SpecFlow.Table(new string[] {
                             "Transaction Type",
                             "Sale Amount",
                             "Seller Share",
@@ -151,7 +151,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Tax Amount",
                             "Net to Seller",
                             "Platform Net"});
-                table1667.AddRow(new string[] {
+                table1630.AddRow(new string[] {
                             "Standard sale",
                             "$24.99",
                             "$17.49",
@@ -160,7 +160,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$2.00",
                             "$14.74",
                             "$4.75"});
-                table1667.AddRow(new string[] {
+                table1630.AddRow(new string[] {
                             "Bundle sale",
                             "$89.95",
                             "$62.97",
@@ -169,7 +169,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$7.20",
                             "$53.07",
                             "$17.08"});
-                table1667.AddRow(new string[] {
+                table1630.AddRow(new string[] {
                             "Subscription sale",
                             "$19.99/month",
                             "$13.99",
@@ -178,7 +178,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$1.60",
                             "$11.79",
                             "$3.80"});
-                table1667.AddRow(new string[] {
+                table1630.AddRow(new string[] {
                             "Discounted sale",
                             "$15.00 (40% off)",
                             "$10.50",
@@ -187,7 +187,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$1.20",
                             "$8.85",
                             "$2.85"});
-                table1667.AddRow(new string[] {
+                table1630.AddRow(new string[] {
                             "International sale",
                             "€22.50",
                             "€15.75",
@@ -196,7 +196,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "€3.60",
                             "€11.47",
                             "€3.47"});
-                table1667.AddRow(new string[] {
+                table1630.AddRow(new string[] {
                             "Refunded sale",
                             "-$24.99",
                             "-$17.49",
@@ -206,7 +206,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "-$14.74",
                             "-$4.75"});
 #line 18
-    testRunner.When("processing revenue calculations:", ((string)(null)), table1667, "When ");
+    testRunner.When("processing revenue calculations:", ((string)(null)), table1630, "When ");
 #line hidden
 #line 26
     testRunner.Then("revenue splits should be calculated accurately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -263,7 +263,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 34
     testRunner.And("tax rates vary by location and product type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1668 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1631 = new TechTalk.SpecFlow.Table(new string[] {
                             "Seller Location",
                             "Buyer Location",
                             "Product Type",
@@ -272,7 +272,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Tax Type",
                             "Tax Amount",
                             "Net Amount"});
-                table1668.AddRow(new string[] {
+                table1631.AddRow(new string[] {
                             "California, US",
                             "California, US",
                             "Digital goods",
@@ -281,7 +281,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Sales tax",
                             "$2.56",
                             "$22.44"});
-                table1668.AddRow(new string[] {
+                table1631.AddRow(new string[] {
                             "New York, US",
                             "Florida, US",
                             "Physical goods",
@@ -290,7 +290,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Sales tax",
                             "$2.89",
                             "$32.11"});
-                table1668.AddRow(new string[] {
+                table1631.AddRow(new string[] {
                             "Ontario, CA",
                             "British Columbia, CA",
                             "Educational materials",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "HST",
                             "$5.40",
                             "$39.60"});
-                table1668.AddRow(new string[] {
+                table1631.AddRow(new string[] {
                             "London, UK",
                             "Berlin, DE",
                             "Digital resources",
@@ -308,7 +308,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "VAT",
                             "€5.70",
                             "€24.30"});
-                table1668.AddRow(new string[] {
+                table1631.AddRow(new string[] {
                             "Texas, US",
                             "International",
                             "Therapy tools",
@@ -317,7 +317,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Export exempt",
                             "$0.00",
                             "$50.00"});
-                table1668.AddRow(new string[] {
+                table1631.AddRow(new string[] {
                             "France",
                             "France",
                             "Subscription",
@@ -327,7 +327,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "€3.00",
                             "€12.00"});
 #line 35
-    testRunner.When("calculating taxes for marketplace transactions:", ((string)(null)), table1668, "When ");
+    testRunner.When("calculating taxes for marketplace transactions:", ((string)(null)), table1631, "When ");
 #line hidden
 #line 43
     testRunner.Then("tax calculations should be jurisdiction-specific", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -384,49 +384,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 51
     testRunner.And("volume-based incentives encourage growth", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1669 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1632 = new TechTalk.SpecFlow.Table(new string[] {
                             "Seller Tier",
                             "Monthly Sales Volume",
                             "Commission Rate",
                             "Additional Benefits",
                             "Qualification Period",
                             "Review Frequency"});
-                table1669.AddRow(new string[] {
+                table1632.AddRow(new string[] {
                             "Bronze",
                             "$0 - $999",
                             "30% platform fee",
                             "Standard support",
                             "Immediate",
                             "Quarterly"});
-                table1669.AddRow(new string[] {
+                table1632.AddRow(new string[] {
                             "Silver",
                             "$1,000 - $4,999",
                             "25% platform fee",
                             "Priority support",
                             "3 months",
                             "Quarterly"});
-                table1669.AddRow(new string[] {
+                table1632.AddRow(new string[] {
                             "Gold",
                             "$5,000 - $14,999",
                             "20% platform fee",
                             "Marketing support",
                             "6 months",
                             "Bi-annually"});
-                table1669.AddRow(new string[] {
+                table1632.AddRow(new string[] {
                             "Platinum",
                             "$15,000 - $49,999",
                             "15% platform fee",
                             "Featured placement",
                             "12 months",
                             "Annually"});
-                table1669.AddRow(new string[] {
+                table1632.AddRow(new string[] {
                             "Diamond",
                             "$50,000+",
                             "10% platform fee",
                             "Dedicated account manager",
                             "18 months",
                             "Annually"});
-                table1669.AddRow(new string[] {
+                table1632.AddRow(new string[] {
                             "Partner",
                             "Invitation only",
                             "5% platform fee",
@@ -434,7 +434,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "By invitation",
                             "Ongoing"});
 #line 52
-    testRunner.When("applying tiered commission structures:", ((string)(null)), table1669, "When ");
+    testRunner.When("applying tiered commission structures:", ((string)(null)), table1632, "When ");
 #line hidden
 #line 60
     testRunner.Then("commission rates should adjust based on tier", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -491,7 +491,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 68
     testRunner.And("various discount types require different handling", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1670 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1633 = new TechTalk.SpecFlow.Table(new string[] {
                             "Promotion Type",
                             "Original Price",
                             "Discount Amount",
@@ -499,7 +499,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Platform Absorbs",
                             "Seller Absorbs",
                             "Revenue Split Basis"});
-                table1670.AddRow(new string[] {
+                table1633.AddRow(new string[] {
                             "Platform coupon",
                             "$30.00",
                             "20% ($6.00)",
@@ -507,7 +507,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$6.00",
                             "$0.00",
                             "Original price"});
-                table1670.AddRow(new string[] {
+                table1633.AddRow(new string[] {
                             "Seller discount",
                             "$30.00",
                             "15% ($4.50)",
@@ -515,7 +515,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$0.00",
                             "$4.50",
                             "Discounted price"});
-                table1670.AddRow(new string[] {
+                table1633.AddRow(new string[] {
                             "First-time buyer",
                             "$30.00",
                             "$5.00 flat",
@@ -523,7 +523,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$2.50",
                             "$2.50",
                             "Discounted price"});
-                table1670.AddRow(new string[] {
+                table1633.AddRow(new string[] {
                             "Bundle discount",
                             "$100.00",
                             "25% ($25.00)",
@@ -531,7 +531,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$0.00",
                             "$25.00",
                             "Discounted price"});
-                table1670.AddRow(new string[] {
+                table1633.AddRow(new string[] {
                             "Seasonal sale",
                             "$30.00",
                             "30% ($9.00)",
@@ -539,7 +539,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$4.50",
                             "$4.50",
                             "Discounted price"});
-                table1670.AddRow(new string[] {
+                table1633.AddRow(new string[] {
                             "Volume discount",
                             "$200.00",
                             "10% ($20.00)",
@@ -548,7 +548,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$20.00",
                             "Discounted price"});
 #line 69
-    testRunner.When("processing promotional revenue:", ((string)(null)), table1670, "When ");
+    testRunner.When("processing promotional revenue:", ((string)(null)), table1633, "When ");
 #line hidden
 #line 77
     testRunner.Then("discount absorption should be calculated correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -605,7 +605,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 86
     testRunner.And("different subscription models require specific handling", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1671 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1634 = new TechTalk.SpecFlow.Table(new string[] {
                             "Subscription Type",
                             "Billing Frequency",
                             "Base Price",
@@ -614,7 +614,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Seller Net",
                             "Annual Value",
                             "Churn Impact"});
-                table1671.AddRow(new string[] {
+                table1634.AddRow(new string[] {
                             "Monthly therapy plans",
                             "Monthly",
                             "$19.99",
@@ -623,7 +623,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$13.39",
                             "$160.68",
                             "-$13.39/month"});
-                table1671.AddRow(new string[] {
+                table1634.AddRow(new string[] {
                             "Quarterly resource access",
                             "Quarterly",
                             "$49.99",
@@ -632,7 +632,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$33.49",
                             "$133.96",
                             "-$33.49/quarter"});
-                table1671.AddRow(new string[] {
+                table1634.AddRow(new string[] {
                             "Annual premium membership",
                             "Annually",
                             "$199.99",
@@ -641,7 +641,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$133.99",
                             "$133.99",
                             "-$133.99/year"});
-                table1671.AddRow(new string[] {
+                table1634.AddRow(new string[] {
                             "Weekly activity updates",
                             "Weekly",
                             "$4.99",
@@ -650,7 +650,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$3.34",
                             "$173.68",
                             "-$3.34/week"});
-                table1671.AddRow(new string[] {
+                table1634.AddRow(new string[] {
                             "Bi-annual certification",
                             "Bi-annually",
                             "$99.99",
@@ -659,7 +659,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$66.99",
                             "$133.98",
                             "-$66.99/6months"});
-                table1671.AddRow(new string[] {
+                table1634.AddRow(new string[] {
                             "Usage-based pricing",
                             "Variable",
                             "$0.50/use",
@@ -669,7 +669,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Variable",
                             "Variable"});
 #line 87
-    testRunner.When("managing subscription revenue:", ((string)(null)), table1671, "When ");
+    testRunner.When("managing subscription revenue:", ((string)(null)), table1634, "When ");
 #line hidden
 #line 95
     testRunner.Then("recurring calculations should be accurate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -726,7 +726,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 103
     testRunner.And("exchange rates fluctuate daily", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1672 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1635 = new TechTalk.SpecFlow.Table(new string[] {
                             "Base Currency",
                             "Transaction Currency",
                             "Amount",
@@ -735,7 +735,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Rate Date",
                             "Fee Structure",
                             "Settlement Currency"});
-                table1672.AddRow(new string[] {
+                table1635.AddRow(new string[] {
                             "USD",
                             "EUR",
                             "€25.00",
@@ -744,7 +744,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "2025-01-15",
                             "USD-based",
                             "USD"});
-                table1672.AddRow(new string[] {
+                table1635.AddRow(new string[] {
                             "USD",
                             "GBP",
                             "£20.00",
@@ -753,7 +753,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "2025-01-15",
                             "GBP-based",
                             "GBP"});
-                table1672.AddRow(new string[] {
+                table1635.AddRow(new string[] {
                             "USD",
                             "CAD",
                             "CAD $30.00",
@@ -762,7 +762,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "2025-01-15",
                             "USD-based",
                             "USD"});
-                table1672.AddRow(new string[] {
+                table1635.AddRow(new string[] {
                             "USD",
                             "AUD",
                             "AUD $35.00",
@@ -771,7 +771,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "2025-01-15",
                             "AUD-based",
                             "AUD"});
-                table1672.AddRow(new string[] {
+                table1635.AddRow(new string[] {
                             "USD",
                             "JPY",
                             "¥3,000",
@@ -780,7 +780,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "2025-01-15",
                             "USD-based",
                             "USD"});
-                table1672.AddRow(new string[] {
+                table1635.AddRow(new string[] {
                             "USD",
                             "INR",
                             "₹2,000",
@@ -790,7 +790,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "USD-based",
                             "USD"});
 #line 104
-    testRunner.When("processing international transactions:", ((string)(null)), table1672, "When ");
+    testRunner.When("processing international transactions:", ((string)(null)), table1635, "When ");
 #line hidden
 #line 112
     testRunner.Then("exchange rates should be applied at transaction time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -847,7 +847,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 120
     testRunner.And("refund policies vary by product type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1673 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1636 = new TechTalk.SpecFlow.Table(new string[] {
                             "Original Sale",
                             "Refund Type",
                             "Refund Amount",
@@ -856,7 +856,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Processing Reversal",
                             "Platform Cost",
                             "Timeline"});
-                table1673.AddRow(new string[] {
+                table1636.AddRow(new string[] {
                             "$30.00",
                             "Full refund",
                             "$30.00",
@@ -865,7 +865,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$0.90",
                             "$0.00",
                             "Within 30 days"});
-                table1673.AddRow(new string[] {
+                table1636.AddRow(new string[] {
                             "$50.00",
                             "Partial refund",
                             "$20.00",
@@ -874,7 +874,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$0.60",
                             "$0.50",
                             "Within 60 days"});
-                table1673.AddRow(new string[] {
+                table1636.AddRow(new string[] {
                             "$100.00",
                             "Store credit",
                             "$100.00",
@@ -883,7 +883,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$0.00",
                             "$3.00",
                             "Credit issued"});
-                table1673.AddRow(new string[] {
+                table1636.AddRow(new string[] {
                             "$25.00",
                             "Defective product",
                             "$25.00",
@@ -892,7 +892,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$0.75",
                             "$0.00",
                             "Seller fault"});
-                table1673.AddRow(new string[] {
+                table1636.AddRow(new string[] {
                             "$75.00",
                             "Policy violation",
                             "$75.00",
@@ -901,7 +901,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$2.25",
                             "$0.00",
                             "Platform fault"});
-                table1673.AddRow(new string[] {
+                table1636.AddRow(new string[] {
                             "$45.00",
                             "Disputed charge",
                             "$45.00",
@@ -911,7 +911,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "$15.00",
                             "Chargeback"});
 #line 121
-    testRunner.When("processing refund transactions:", ((string)(null)), table1673, "When ");
+    testRunner.When("processing refund transactions:", ((string)(null)), table1636, "When ");
 #line hidden
 #line 129
     testRunner.Then("refund amounts should be calculated proportionally", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -968,49 +968,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 137
     testRunner.And("reports must be accurate and timely", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1674 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1637 = new TechTalk.SpecFlow.Table(new string[] {
                             "Report Type",
                             "Audience",
                             "Frequency",
                             "Data Included",
                             "Accuracy Requirement",
                             "Delivery Method"});
-                table1674.AddRow(new string[] {
+                table1637.AddRow(new string[] {
                             "Seller earnings",
                             "Individual sellers",
                             "Monthly",
                             "Personal sales, fees, taxes, net",
                             "99.9% accuracy",
                             "Email + dashboard"});
-                table1674.AddRow(new string[] {
+                table1637.AddRow(new string[] {
                             "Platform revenue",
                             "Management",
                             "Monthly",
                             "Total sales, commission, costs",
                             "99.9% accuracy",
                             "Management dashboard"});
-                table1674.AddRow(new string[] {
+                table1637.AddRow(new string[] {
                             "Tax reporting",
                             "Tax authorities",
                             "Quarterly",
                             "Tax collected, jurisdictions",
                             "100% accuracy",
                             "Regulatory filing"});
-                table1674.AddRow(new string[] {
+                table1637.AddRow(new string[] {
                             "Investor reports",
                             "Investors",
                             "Quarterly",
                             "GMV, revenue, growth metrics",
                             "99.9% accuracy",
                             "Investor portal"});
-                table1674.AddRow(new string[] {
+                table1637.AddRow(new string[] {
                             "Compliance reports",
                             "Auditors",
                             "Annually",
                             "Full transaction history",
                             "100% accuracy",
                             "Secure download"});
-                table1674.AddRow(new string[] {
+                table1637.AddRow(new string[] {
                             "Marketplace metrics",
                             "Public",
                             "Quarterly",
@@ -1018,7 +1018,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "99% accuracy",
                             "Public website"});
 #line 138
-    testRunner.When("generating financial reports:", ((string)(null)), table1674, "When ");
+    testRunner.When("generating financial reports:", ((string)(null)), table1637, "When ");
 #line hidden
 #line 146
     testRunner.Then("reports should be generated automatically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1075,49 +1075,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 155
     testRunner.And("insights help optimize marketplace performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1675 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1638 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Type",
                             "Metrics Tracked",
                             "Analysis Period",
                             "Insights Generated",
                             "Action Recommendations",
                             "Business Impact"});
-                table1675.AddRow(new string[] {
+                table1638.AddRow(new string[] {
                             "Revenue trends",
                             "GMV, commission, growth",
                             "Monthly/quarterly",
                             "Seasonal patterns",
                             "Marketing timing",
                             "Revenue optimization"});
-                table1675.AddRow(new string[] {
+                table1638.AddRow(new string[] {
                             "Seller performance",
                             "Sales volume, conversion rates",
                             "Monthly",
                             "Top performers",
                             "Seller incentives",
                             "Seller retention"});
-                table1675.AddRow(new string[] {
+                table1638.AddRow(new string[] {
                             "Product analysis",
                             "Category performance, pricing",
                             "Weekly",
                             "Popular categories",
                             "Inventory focus",
                             "Category growth"});
-                table1675.AddRow(new string[] {
+                table1638.AddRow(new string[] {
                             "Geographic analysis",
                             "Regional sales, currency",
                             "Monthly",
                             "Market opportunities",
                             "Expansion strategy",
                             "Market penetration"});
-                table1675.AddRow(new string[] {
+                table1638.AddRow(new string[] {
                             "Customer analysis",
                             "Purchase patterns, lifetime value",
                             "Quarterly",
                             "Customer segments",
                             "Targeting strategy",
                             "Customer retention"});
-                table1675.AddRow(new string[] {
+                table1638.AddRow(new string[] {
                             "Competitive analysis",
                             "Market share, pricing trends",
                             "Quarterly",
@@ -1125,7 +1125,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Pricing strategy",
                             "Market advantage"});
 #line 156
-    testRunner.When("analyzing revenue data:", ((string)(null)), table1675, "When ");
+    testRunner.When("analyzing revenue data:", ((string)(null)), table1638, "When ");
 #line hidden
 #line 164
     testRunner.Then("analytics should provide actionable insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1182,49 +1182,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 172
     testRunner.And("projections help with resource allocation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1676 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1639 = new TechTalk.SpecFlow.Table(new string[] {
                             "Forecast Type",
                             "Time Horizon",
                             "Input Variables",
                             "Model Type",
                             "Accuracy Target",
                             "Confidence Interval"});
-                table1676.AddRow(new string[] {
+                table1639.AddRow(new string[] {
                             "Monthly GMV",
                             "3 months",
                             "Historical sales, seasonality",
                             "Time series",
                             "85% accuracy",
                             "90% confidence"});
-                table1676.AddRow(new string[] {
+                table1639.AddRow(new string[] {
                             "Quarterly revenue",
                             "12 months",
                             "Growth trends, market factors",
                             "Regression",
                             "80% accuracy",
                             "85% confidence"});
-                table1676.AddRow(new string[] {
+                table1639.AddRow(new string[] {
                             "Annual projections",
                             "3 years",
                             "Strategic initiatives, market",
                             "Scenario-based",
                             "70% accuracy",
                             "75% confidence"});
-                table1676.AddRow(new string[] {
+                table1639.AddRow(new string[] {
                             "Seller growth",
                             "6 months",
                             "Individual performance",
                             "Machine learning",
                             "90% accuracy",
                             "95% confidence"});
-                table1676.AddRow(new string[] {
+                table1639.AddRow(new string[] {
                             "Category trends",
                             "12 months",
                             "Category adoption rates",
                             "Trend analysis",
                             "75% accuracy",
                             "80% confidence"});
-                table1676.AddRow(new string[] {
+                table1639.AddRow(new string[] {
                             "Market expansion",
                             "24 months",
                             "Geographic opportunities",
@@ -1232,7 +1232,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "65% accuracy",
                             "70% confidence"});
 #line 173
-    testRunner.When("creating revenue forecasts:", ((string)(null)), table1676, "When ");
+    testRunner.When("creating revenue forecasts:", ((string)(null)), table1639, "When ");
 #line hidden
 #line 181
     testRunner.Then("forecasts should be statistically sound", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1289,49 +1289,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 189
     testRunner.And("regulatory compliance demands detailed records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1677 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1640 = new TechTalk.SpecFlow.Table(new string[] {
                             "Transaction Element",
                             "Audit Information",
                             "Retention Period",
                             "Access Controls",
                             "Compliance Requirements",
                             "Verification Methods"});
-                table1677.AddRow(new string[] {
+                table1640.AddRow(new string[] {
                             "Revenue calculations",
                             "Formulas, rates, amounts",
                             "7 years",
                             "Finance team only",
                             "SOX compliance",
                             "Independent verification"});
-                table1677.AddRow(new string[] {
+                table1640.AddRow(new string[] {
                             "Tax calculations",
                             "Rates, jurisdictions, amounts",
                             "7 years",
                             "Tax team + auditors",
                             "Tax authority requirements",
                             "Tax software validation"});
-                table1677.AddRow(new string[] {
+                table1640.AddRow(new string[] {
                             "Commission changes",
                             "Old rate, new rate, effective date",
                             "Indefinite",
                             "Admin approval",
                             "Internal controls",
                             "Approval workflow"});
-                table1677.AddRow(new string[] {
+                table1640.AddRow(new string[] {
                             "Refund processing",
                             "Reason, authorization, amounts",
                             "7 years",
                             "Customer service + finance",
                             "Consumer protection",
                             "Manager approval"});
-                table1677.AddRow(new string[] {
+                table1640.AddRow(new string[] {
                             "Currency conversions",
                             "Rates, sources, timestamps",
                             "5 years",
                             "Finance team",
                             "Foreign exchange regulations",
                             "Rate source verification"});
-                table1677.AddRow(new string[] {
+                table1640.AddRow(new string[] {
                             "Promotional impacts",
                             "Campaign details, financial impact",
                             "3 years",
@@ -1339,7 +1339,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Marketing compliance",
                             "Campaign tracking"});
 #line 190
-    testRunner.When("maintaining audit trails:", ((string)(null)), table1677, "When ");
+    testRunner.When("maintaining audit trails:", ((string)(null)), table1640, "When ");
 #line hidden
 #line 198
     testRunner.Then("audit trails should be complete and immutable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1396,49 +1396,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 207
     testRunner.And("automation reduces errors and delays", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1678 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1641 = new TechTalk.SpecFlow.Table(new string[] {
                             "Payment Processor",
                             "Integration Type",
                             "Fee Structure",
                             "Settlement Timeline",
                             "Currency Support",
                             "Automation Level"});
-                table1678.AddRow(new string[] {
+                table1641.AddRow(new string[] {
                             "Stripe Connect",
                             "API integration",
                             "2.9% + 30¢",
                             "2-7 business days",
                             "135+ currencies",
                             "Fully automated"});
-                table1678.AddRow(new string[] {
+                table1641.AddRow(new string[] {
                             "PayPal Marketplace",
                             "Webhook integration",
                             "2.9% + fixed fee",
                             "1-3 business days",
                             "25 currencies",
                             "Semi-automated"});
-                table1678.AddRow(new string[] {
+                table1641.AddRow(new string[] {
                             "Square",
                             "Direct API",
                             "2.6% + 10¢",
                             "Next business day",
                             "USD, CAD, GBP, AUD",
                             "Fully automated"});
-                table1678.AddRow(new string[] {
+                table1641.AddRow(new string[] {
                             "Adyen",
                             "Platform integration",
                             "2.8% + interchange",
                             "1-2 business days",
                             "150+ currencies",
                             "Fully automated"});
-                table1678.AddRow(new string[] {
+                table1641.AddRow(new string[] {
                             "Braintree",
                             "Marketplace API",
                             "2.9% + 30¢",
                             "1-3 business days",
                             "45+ currencies",
                             "Fully automated"});
-                table1678.AddRow(new string[] {
+                table1641.AddRow(new string[] {
                             "Bank transfers",
                             "ACH/Wire integration",
                             "Fixed fees",
@@ -1446,7 +1446,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Local currencies",
                             "Manual verification"});
 #line 208
-    testRunner.When("integrating payment processing:", ((string)(null)), table1678, "When ");
+    testRunner.When("integrating payment processing:", ((string)(null)), table1641, "When ");
 #line hidden
 #line 216
     testRunner.Then("payment processing should be seamless", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1503,49 +1503,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 224
     testRunner.And("automated bookkeeping reduces errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1679 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1642 = new TechTalk.SpecFlow.Table(new string[] {
                             "Accounting System",
                             "Integration Method",
                             "Data Synchronization",
                             "Account Mapping",
                             "Reconciliation",
                             "Reporting Integration"});
-                table1679.AddRow(new string[] {
+                table1642.AddRow(new string[] {
                             "QuickBooks Online",
                             "API integration",
                             "Real-time",
                             "Automated",
                             "Daily",
                             "Monthly P&L"});
-                table1679.AddRow(new string[] {
+                table1642.AddRow(new string[] {
                             "Xero",
                             "OAuth connection",
                             "Hourly batches",
                             "Manual setup",
                             "Weekly",
                             "Financial statements"});
-                table1679.AddRow(new string[] {
+                table1642.AddRow(new string[] {
                             "NetSuite",
                             "Cloud integration",
                             "Real-time",
                             "Automated",
                             "Daily",
                             "Management reports"});
-                table1679.AddRow(new string[] {
+                table1642.AddRow(new string[] {
                             "FreshBooks",
                             "API sync",
                             "Daily batches",
                             "Semi-automated",
                             "Weekly",
                             "Invoice tracking"});
-                table1679.AddRow(new string[] {
+                table1642.AddRow(new string[] {
                             "Sage Intacct",
                             "Enterprise API",
                             "Real-time",
                             "Automated",
                             "Daily",
                             "Advanced analytics"});
-                table1679.AddRow(new string[] {
+                table1642.AddRow(new string[] {
                             "Custom ERP",
                             "API development",
                             "Configurable",
@@ -1553,7 +1553,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Configurable",
                             "Custom reports"});
 #line 225
-    testRunner.When("integrating with accounting systems:", ((string)(null)), table1679, "When ");
+    testRunner.When("integrating with accounting systems:", ((string)(null)), table1642, "When ");
 #line hidden
 #line 233
     testRunner.Then("integration should maintain data integrity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1609,49 +1609,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 241
     testRunner.Given("calculation errors can cause financial losses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1680 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1643 = new TechTalk.SpecFlow.Table(new string[] {
                             "Error Type",
                             "Detection Method",
                             "Resolution Process",
                             "Timeline",
                             "Impact Assessment",
                             "Prevention Measures"});
-                table1680.AddRow(new string[] {
+                table1643.AddRow(new string[] {
                             "Split rate error",
                             "Automated validation",
                             "Recalculate and adjust",
                             "<24 hours",
                             "Financial impact analysis",
                             "Rate validation rules"});
-                table1680.AddRow(new string[] {
+                table1643.AddRow(new string[] {
                             "Tax calculation error",
                             "Tax service verification",
                             "Tax recalculation",
                             "<48 hours",
                             "Compliance risk assessment",
                             "Tax service redundancy"});
-                table1680.AddRow(new string[] {
+                table1643.AddRow(new string[] {
                             "Currency conversion error",
                             "Rate source validation",
                             "Exchange rate correction",
                             "<12 hours",
                             "Exchange impact analysis",
                             "Multiple rate sources"});
-                table1680.AddRow(new string[] {
+                table1643.AddRow(new string[] {
                             "Processing fee error",
                             "Fee structure audit",
                             "Fee recalculation",
                             "<24 hours",
                             "Fee impact assessment",
                             "Fee validation logic"});
-                table1680.AddRow(new string[] {
+                table1643.AddRow(new string[] {
                             "Rounding error",
                             "Precision validation",
                             "Precision adjustment",
                             "<6 hours",
                             "Accuracy impact analysis",
                             "Standardized rounding"});
-                table1680.AddRow(new string[] {
+                table1643.AddRow(new string[] {
                             "System calculation error",
                             "Algorithm verification",
                             "Code correction",
@@ -1659,7 +1659,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "System impact analysis",
                             "Algorithm testing"});
 #line 242
-    testRunner.When("calculation errors occur:", ((string)(null)), table1680, "When ");
+    testRunner.When("calculation errors occur:", ((string)(null)), table1643, "When ");
 #line hidden
 #line 250
     testRunner.Then("errors should be detected quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1713,49 +1713,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 257
     testRunner.Given("revenue systems require long-term sustainability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1681 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1644 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table1681.AddRow(new string[] {
+                table1644.AddRow(new string[] {
                             "Calculation accuracy",
                             "Complex calculations",
                             "Automated validation systems",
                             "Validation infrastructure",
                             "99.9% accuracy",
                             "Accuracy sustainability"});
-                table1681.AddRow(new string[] {
+                table1644.AddRow(new string[] {
                             "System scalability",
                             "Growing transaction volume",
                             "Scalable architecture",
                             "Computing resources",
                             "Linear scaling",
                             "Performance sustainability"});
-                table1681.AddRow(new string[] {
+                table1644.AddRow(new string[] {
                             "Regulatory compliance",
                             "Changing regulations",
                             "Adaptive compliance systems",
                             "Legal resources",
                             "Full compliance",
                             "Compliance sustainability"});
-                table1681.AddRow(new string[] {
+                table1644.AddRow(new string[] {
                             "Cost management",
                             "Processing costs",
                             "Cost optimization",
                             "Efficiency resources",
                             "Controlled costs",
                             "Financial sustainability"});
-                table1681.AddRow(new string[] {
+                table1644.AddRow(new string[] {
                             "Integration maintenance",
                             "System dependencies",
                             "Robust integration architecture",
                             "Technical resources",
                             "Reliable integrations",
                             "Technical sustainability"});
-                table1681.AddRow(new string[] {
+                table1644.AddRow(new string[] {
                             "Revenue optimization",
                             "Market competition",
                             "Competitive pricing strategies",
@@ -1763,7 +1763,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Market competitiveness",
                             "Business sustainability"});
 #line 258
-    testRunner.When("planning sustainability:", ((string)(null)), table1681, "When ");
+    testRunner.When("planning sustainability:", ((string)(null)), table1644, "When ");
 #line hidden
 #line 266
     testRunner.Then("sustainability should be systematically planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

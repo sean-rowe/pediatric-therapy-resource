@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 17
     testRunner.And("different disciplines require specialized competency frameworks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table834 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table797 = new TechTalk.SpecFlow.Table(new string[] {
                             "Discipline",
                             "Framework Standard",
                             "Competency Domains",
                             "Assessment Methods",
                             "Proficiency Levels",
                             "Certification Requirements"});
-                table834.AddRow(new string[] {
+                table797.AddRow(new string[] {
                             "Speech-Language Pathology",
                             "ASHA standards",
                             "Prevention, assessment, intervention",
                             "Direct observation, portfolio",
                             "Emerging, developing, proficient, advanced",
                             "ASHA certification"});
-                table834.AddRow(new string[] {
+                table797.AddRow(new string[] {
                             "Occupational Therapy",
                             "AOTA standards",
                             "Evaluation, intervention, management",
                             "Clinical evaluation, case studies",
                             "Novice, advanced beginner, competent, proficient",
                             "AOTA requirements"});
-                table834.AddRow(new string[] {
+                table797.AddRow(new string[] {
                             "Physical Therapy",
                             "APTA standards",
                             "Examination, evaluation, intervention",
                             "Practical assessment, peer review",
                             "Beginning, intermediate, advanced, expert",
                             "APTA standards"});
-                table834.AddRow(new string[] {
+                table797.AddRow(new string[] {
                             "Special Education",
                             "CEC standards",
                             "Planning, assessment, instruction",
                             "Teaching observation, student outcomes",
                             "Initial, developing, proficient, distinguished",
                             "State certification"});
-                table834.AddRow(new string[] {
+                table797.AddRow(new string[] {
                             "Psychology",
                             "APA standards",
                             "Assessment, intervention, ethics",
                             "Supervised practice, competency exam",
                             "Foundational, functional, proficient",
                             "APA accreditation"});
-                table834.AddRow(new string[] {
+                table797.AddRow(new string[] {
                             "Interdisciplinary",
                             "Custom framework",
                             "Collaboration, communication, leadership",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "Basic, intermediate, advanced, expert",
                             "Program-specific"});
 #line 18
-    testRunner.When("implementing competency frameworks:", ((string)(null)), table834, "When ");
+    testRunner.When("implementing competency frameworks:", ((string)(null)), table797, "When ");
 #line hidden
 #line 26
     testRunner.Then("frameworks should be evidence-based and current", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 34
     testRunner.And("multiple assessment methods provide comprehensive evaluation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table835 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table798 = new TechTalk.SpecFlow.Table(new string[] {
                             "Assessment Type",
                             "Assessment Method",
                             "Evaluator Requirements",
                             "Scoring Criteria",
                             "Reliability Measures",
                             "Validity Evidence"});
-                table835.AddRow(new string[] {
+                table798.AddRow(new string[] {
                             "Direct observation",
                             "Live skill demonstration",
                             "Certified supervisor",
                             "Detailed rubrics",
                             "Inter-rater reliability >80%",
                             "Content validity"});
-                table835.AddRow(new string[] {
+                table798.AddRow(new string[] {
                             "Clinical portfolio",
                             "Work sample collection",
                             "Portfolio reviewer",
                             "Portfolio rubrics",
                             "Portfolio consistency",
                             "Construct validity"});
-                table835.AddRow(new string[] {
+                table798.AddRow(new string[] {
                             "Peer assessment",
                             "Colleague evaluation",
                             "Trained peer assessors",
                             "Peer assessment tools",
                             "Peer agreement >75%",
                             "Criterion validity"});
-                table835.AddRow(new string[] {
+                table798.AddRow(new string[] {
                             "Self-assessment",
                             "Self-evaluation tools",
                             "Self-reflection training",
                             "Self-assessment rubrics",
                             "Self-awareness accuracy",
                             "Face validity"});
-                table835.AddRow(new string[] {
+                table798.AddRow(new string[] {
                             "Simulation assessment",
                             "Standardized scenarios",
                             "Simulation specialist",
                             "Simulation rubrics",
                             "Scenario consistency",
                             "Ecological validity"});
-                table835.AddRow(new string[] {
+                table798.AddRow(new string[] {
                             "Comprehensive exam",
                             "Knowledge and application",
                             "Exam administrator",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "Test-retest reliability",
                             "Predictive validity"});
 #line 35
-    testRunner.When("conducting competency assessments:", ((string)(null)), table835, "When ");
+    testRunner.When("conducting competency assessments:", ((string)(null)), table798, "When ");
 #line hidden
 #line 43
     testRunner.Then("assessments should be fair and accurate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 51
     testRunner.And("progression tracking enables targeted support and intervention", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table836 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table799 = new TechTalk.SpecFlow.Table(new string[] {
                             "Progression Tracking",
                             "Measurement Approach",
                             "Data Collection",
                             "Analysis Methods",
                             "Intervention Triggers",
                             "Success Indicators"});
-                table836.AddRow(new string[] {
+                table799.AddRow(new string[] {
                             "Longitudinal assessment",
                             "Repeated measures",
                             "Monthly assessments",
                             "Trend analysis",
                             "Plateau detection",
                             "Consistent growth"});
-                table836.AddRow(new string[] {
+                table799.AddRow(new string[] {
                             "Milestone achievement",
                             "Competency milestones",
                             "Milestone evaluations",
                             "Milestone analysis",
                             "Missed milestones",
                             "Milestone completion"});
-                table836.AddRow(new string[] {
+                table799.AddRow(new string[] {
                             "Skill curve analysis",
                             "Learning curves",
                             "Performance data",
                             "Curve fitting",
                             "Atypical curves",
                             "Optimal learning rates"});
-                table836.AddRow(new string[] {
+                table799.AddRow(new string[] {
                             "Comparative progression",
                             "Cohort comparisons",
                             "Peer performance",
                             "Comparative analysis",
                             "Below-average progress",
                             "Peer-level performance"});
-                table836.AddRow(new string[] {
+                table799.AddRow(new string[] {
                             "Individual growth plans",
                             "Personal development",
                             "Growth planning",
                             "Plan effectiveness",
                             "Plan deviations",
                             "Plan achievement"});
-                table836.AddRow(new string[] {
+                table799.AddRow(new string[] {
                             "Competency gaps",
                             "Skill gap analysis",
                             "Gap assessments",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "Persistent gaps",
                             "Gap closure"});
 #line 52
-    testRunner.When("tracking competency progression:", ((string)(null)), table836, "When ");
+    testRunner.When("tracking competency progression:", ((string)(null)), table799, "When ");
 #line hidden
 #line 60
     testRunner.Then("progression should be continuously monitored", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 68
     testRunner.And("performance improvement requires systematic support", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table837 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table800 = new TechTalk.SpecFlow.Table(new string[] {
                             "Feedback Type",
                             "Delivery Method",
                             "Timing",
                             "Content Focus",
                             "Development Planning",
                             "Follow-up Support"});
-                table837.AddRow(new string[] {
+                table800.AddRow(new string[] {
                             "Immediate feedback",
                             "Real-time coaching",
                             "During performance",
                             "Specific behaviors",
                             "Immediate correction",
                             "Skill practice"});
-                table837.AddRow(new string[] {
+                table800.AddRow(new string[] {
                             "Formative feedback",
                             "Regular check-ins",
                             "Weekly/monthly",
                             "Progress patterns",
                             "Development goals",
                             "Ongoing support"});
-                table837.AddRow(new string[] {
+                table800.AddRow(new string[] {
                             "Summative feedback",
                             "Formal evaluation",
                             "End of rotation",
                             "Overall competency",
                             "Comprehensive planning",
                             "Resource allocation"});
-                table837.AddRow(new string[] {
+                table800.AddRow(new string[] {
                             "Peer feedback",
                             "Peer consultation",
                             "As appropriate",
                             "Collaborative insights",
                             "Peer learning",
                             "Peer support"});
-                table837.AddRow(new string[] {
+                table800.AddRow(new string[] {
                             "Multi-source feedback",
                             "360-degree evaluation",
                             "Quarterly",
                             "Multiple perspectives",
                             "Holistic development",
                             "Multi-faceted support"});
-                table837.AddRow(new string[] {
+                table800.AddRow(new string[] {
                             "Self-reflection feedback",
                             "Guided self-assessment",
                             "Ongoing",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "Self-directed learning",
                             "Reflection support"});
 #line 69
-    testRunner.When("providing competency feedback:", ((string)(null)), table837, "When ");
+    testRunner.When("providing competency feedback:", ((string)(null)), table800, "When ");
 #line hidden
 #line 77
     testRunner.Then("feedback should be specific and actionable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 86
     testRunner.And("recorded sessions enable repeated review and objective evaluation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table838 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table801 = new TechTalk.SpecFlow.Table(new string[] {
                             "Video Assessment Type",
                             "Recording Setup",
                             "Analysis Methods",
                             "Scoring Approach",
                             "Collaboration Features",
                             "Privacy Protection"});
-                table838.AddRow(new string[] {
+                table801.AddRow(new string[] {
                             "Live session recording",
                             "Multi-camera setup",
                             "Frame-by-frame analysis",
                             "Time-coded scoring",
                             "Supervisor review",
                             "FERPA compliance"});
-                table838.AddRow(new string[] {
+                table801.AddRow(new string[] {
                             "Skill demonstration",
                             "Single-camera focus",
                             "Skill breakdown analysis",
                             "Rubric-based scoring",
                             "Peer comparison",
                             "Secure storage"});
-                table838.AddRow(new string[] {
+                table801.AddRow(new string[] {
                             "Patient interaction",
                             "Interaction recording",
                             "Communication analysis",
                             "Interaction scoring",
                             "Team review",
                             "Patient consent"});
-                table838.AddRow(new string[] {
+                table801.AddRow(new string[] {
                             "Team collaboration",
                             "Group recording",
                             "Collaboration analysis",
                             "Team scoring",
                             "Group feedback",
                             "Team privacy"});
-                table838.AddRow(new string[] {
+                table801.AddRow(new string[] {
                             "Standardized patient",
                             "SP session recording",
                             "Standardized analysis",
                             "Standardized scoring",
                             "SP feedback",
                             "Standardized privacy"});
-                table838.AddRow(new string[] {
+                table801.AddRow(new string[] {
                             "Self-recording",
                             "Student self-capture",
                             "Self-analysis tools",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "Self-reflection",
                             "Personal privacy"});
 #line 87
-    testRunner.When("implementing video assessment:", ((string)(null)), table838, "When ");
+    testRunner.When("implementing video assessment:", ((string)(null)), table801, "When ");
 #line hidden
 #line 95
     testRunner.Then("video quality should support detailed analysis", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 103
     testRunner.And("standardized scenarios ensure fair and comparable evaluation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table839 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table802 = new TechTalk.SpecFlow.Table(new string[] {
                             "Simulation Type",
                             "Scenario Design",
                             "Assessment Focus",
                             "Standardization Level",
                             "Realism Factors",
                             "Learning Integration"});
-                table839.AddRow(new string[] {
+                table802.AddRow(new string[] {
                             "High-fidelity simulation",
                             "Complex scenarios",
                             "Advanced skills",
                             "Highly standardized",
                             "Maximum realism",
                             "Simulation-to-clinic transfer"});
-                table839.AddRow(new string[] {
+                table802.AddRow(new string[] {
                             "Standardized patients",
                             "Trained actors",
                             "Interpersonal skills",
                             "Actor training",
                             "Human interaction",
                             "Communication skills"});
-                table839.AddRow(new string[] {
+                table802.AddRow(new string[] {
                             "Virtual reality",
                             "VR environments",
                             "Technical skills",
                             "Digital standardization",
                             "Immersive experience",
                             "VR-to-reality transfer"});
-                table839.AddRow(new string[] {
+                table802.AddRow(new string[] {
                             "Case-based simulation",
                             "Written scenarios",
                             "Clinical reasoning",
                             "Case standardization",
                             "Realistic complexity",
                             "Case-to-practice transfer"});
-                table839.AddRow(new string[] {
+                table802.AddRow(new string[] {
                             "Equipment simulation",
                             "Device training",
                             "Technical competency",
                             "Equipment standardization",
                             "Hands-on experience",
                             "Equipment proficiency"});
-                table839.AddRow(new string[] {
+                table802.AddRow(new string[] {
                             "Emergency simulation",
                             "Crisis scenarios",
                             "Crisis management",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "High-stress realism",
                             "Emergency preparedness"});
 #line 104
-    testRunner.When("implementing simulation assessment:", ((string)(null)), table839, "When ");
+    testRunner.When("implementing simulation assessment:", ((string)(null)), table802, "When ");
 #line hidden
 #line 112
     testRunner.Then("simulations should be realistic and relevant", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 120
     testRunner.And("personalized evaluation maximizes learning and assessment efficiency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table840 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table803 = new TechTalk.SpecFlow.Table(new string[] {
                             "Adaptive Feature",
                             "Adaptation Method",
                             "Personalization Level",
                             "Assessment Efficiency",
                             "Learning Optimization",
                             "Validation Approach"});
-                table840.AddRow(new string[] {
+                table803.AddRow(new string[] {
                             "Difficulty adjustment",
                             "Item response theory",
                             "Individual calibration",
                             "Reduced assessment time",
                             "Optimal challenge level",
                             "Statistical validation"});
-                table840.AddRow(new string[] {
+                table803.AddRow(new string[] {
                             "Competency routing",
                             "Branching logic",
                             "Competency-based paths",
                             "Focused assessment",
                             "Targeted evaluation",
                             "Expert validation"});
-                table840.AddRow(new string[] {
+                table803.AddRow(new string[] {
                             "Learning style adaptation",
                             "Style detection",
                             "Style-matched assessment",
                             "Enhanced engagement",
                             "Style-appropriate tasks",
                             "Learning research"});
-                table840.AddRow(new string[] {
+                table803.AddRow(new string[] {
                             "Prior knowledge integration",
                             "Knowledge assessment",
                             "Knowledge-based adjustment",
                             "Efficient coverage",
                             "Building on strengths",
                             "Cognitive validation"});
-                table840.AddRow(new string[] {
+                table803.AddRow(new string[] {
                             "Performance-based adaptation",
                             "Real-time adjustment",
                             "Performance matching",
                             "Dynamic difficulty",
                             "Continuous optimization",
                             "Performance validation"});
-                table840.AddRow(new string[] {
+                table803.AddRow(new string[] {
                             "Multi-modal assessment",
                             "Multiple modalities",
                             "Modality preferences",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "Preferred assessment modes",
                             "Multi-modal validation"});
 #line 121
-    testRunner.When("implementing adaptive assessment:", ((string)(null)), table840, "When ");
+    testRunner.When("implementing adaptive assessment:", ((string)(null)), table803, "When ");
 #line hidden
 #line 129
     testRunner.Then("adaptation should be evidence-based", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 138
     testRunner.And("mentoring relationships enhance professional growth", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table841 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table804 = new TechTalk.SpecFlow.Table(new string[] {
                             "Supervision Model",
                             "Structure",
                             "Frequency",
                             "Focus Areas",
                             "Relationship Dynamics",
                             "Outcome Expectations"});
-                table841.AddRow(new string[] {
+                table804.AddRow(new string[] {
                             "Individual supervision",
                             "One-on-one meetings",
                             "Weekly sessions",
                             "Personal development",
                             "Supervisor-supervisee",
                             "Individual growth"});
-                table841.AddRow(new string[] {
+                table804.AddRow(new string[] {
                             "Group supervision",
                             "Small group format",
                             "Bi-weekly sessions",
                             "Peer learning",
                             "Group dynamics",
                             "Collaborative learning"});
-                table841.AddRow(new string[] {
+                table804.AddRow(new string[] {
                             "Peer supervision",
                             "Colleague partnerships",
                             "Monthly meetings",
                             "Mutual support",
                             "Peer relationships",
                             "Mutual development"});
-                table841.AddRow(new string[] {
+                table804.AddRow(new string[] {
                             "Administrative supervision",
                             "Management focus",
                             "As needed",
                             "Administrative tasks",
                             "Authority relationships",
                             "Administrative compliance"});
-                table841.AddRow(new string[] {
+                table804.AddRow(new string[] {
                             "Clinical supervision",
                             "Clinical practice focus",
                             "Weekly sessions",
                             "Clinical skills",
                             "Clinical relationships",
                             "Clinical competence"});
-                table841.AddRow(new string[] {
+                table804.AddRow(new string[] {
                             "Educational supervision",
                             "Learning focus",
                             "Regular schedule",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "Teaching relationships",
                             "Educational achievement"});
 #line 139
-    testRunner.When("implementing supervision programs:", ((string)(null)), table841, "When ");
+    testRunner.When("implementing supervision programs:", ((string)(null)), table804, "When ");
 #line hidden
 #line 147
     testRunner.Then("supervision should be structured and purposeful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 155
     testRunner.And("structured mentoring programs improve outcomes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table842 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table805 = new TechTalk.SpecFlow.Table(new string[] {
                             "Mentoring Type",
                             "Matching Process",
                             "Relationship Structure",
                             "Development Focus",
                             "Support Provided",
                             "Success Measures"});
-                table842.AddRow(new string[] {
+                table805.AddRow(new string[] {
                             "Senior-junior mentoring",
                             "Experience-based matching",
                             "Formal structure",
                             "Career guidance",
                             "Mentoring training",
                             "Career advancement"});
-                table842.AddRow(new string[] {
+                table805.AddRow(new string[] {
                             "Peer mentoring",
                             "Interest-based matching",
                             "Informal structure",
                             "Mutual growth",
                             "Peer support",
                             "Mutual satisfaction"});
-                table842.AddRow(new string[] {
+                table805.AddRow(new string[] {
                             "Expert mentoring",
                             "Expertise matching",
                             "Structured guidance",
                             "Specialized skills",
                             "Expert access",
                             "Skill acquisition"});
-                table842.AddRow(new string[] {
+                table805.AddRow(new string[] {
                             "Cross-disciplinary mentoring",
                             "Discipline matching",
                             "Learning structure",
                             "Interdisciplinary skills",
                             "Cross-training",
                             "Collaboration skills"});
-                table842.AddRow(new string[] {
+                table805.AddRow(new string[] {
                             "Leadership mentoring",
                             "Leadership potential",
                             "Leadership structure",
                             "Leadership skills",
                             "Leadership training",
                             "Leadership development"});
-                table842.AddRow(new string[] {
+                table805.AddRow(new string[] {
                             "Research mentoring",
                             "Research interest",
                             "Research structure",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "Research support",
                             "Research productivity"});
 #line 156
-    testRunner.When("facilitating mentoring programs:", ((string)(null)), table842, "When ");
+    testRunner.When("facilitating mentoring programs:", ((string)(null)), table805, "When ");
 #line hidden
 #line 164
     testRunner.Then("matching should be strategic and appropriate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 172
     testRunner.And("compliance is essential for program accreditation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table843 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table806 = new TechTalk.SpecFlow.Table(new string[] {
                             "Supervision Category",
                             "Hour Requirements",
                             "Documentation Standards",
                             "Verification Methods",
                             "Compliance Monitoring",
                             "Audit Preparation"});
-                table843.AddRow(new string[] {
+                table806.AddRow(new string[] {
                             "Direct supervision",
                             "25% of clinical hours",
                             "Detailed time logs",
                             "Supervisor verification",
                             "Real-time tracking",
                             "Documentation review"});
-                table843.AddRow(new string[] {
+                table806.AddRow(new string[] {
                             "Indirect supervision",
                             "Additional hours as required",
                             "Activity documentation",
                             "Supervisee confirmation",
                             "Compliance reporting",
                             "Hours verification"});
-                table843.AddRow(new string[] {
+                table806.AddRow(new string[] {
                             "Group supervision",
                             "Credit limitations",
                             "Group attendance",
                             "Group verification",
                             "Group tracking",
                             "Group documentation"});
-                table843.AddRow(new string[] {
+                table806.AddRow(new string[] {
                             "Administrative supervision",
                             "Administrative requirements",
                             "Administrative logs",
                             "Administrative verification",
                             "Administrative tracking",
                             "Administrative review"});
-                table843.AddRow(new string[] {
+                table806.AddRow(new string[] {
                             "Professional development",
                             "Continuing education",
                             "CE documentation",
                             "CE verification",
                             "CE tracking",
                             "CE audit"});
-                table843.AddRow(new string[] {
+                table806.AddRow(new string[] {
                             "Special populations",
                             "Population-specific requirements",
                             "Specialized logs",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "Specialized tracking",
                             "Specialized review"});
 #line 173
-    testRunner.When("tracking supervision hours:", ((string)(null)), table843, "When ");
+    testRunner.When("tracking supervision hours:", ((string)(null)), table806, "When ");
 #line hidden
 #line 181
     testRunner.Then("hour tracking should be accurate and complete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 190
     testRunner.And("mobile assessment enables real-time evaluation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table844 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table807 = new TechTalk.SpecFlow.Table(new string[] {
                             "Mobile Feature",
                             "Field Application",
                             "Connectivity Requirements",
                             "Data Synchronization",
                             "Offline Capabilities",
                             "Security Features"});
-                table844.AddRow(new string[] {
+                table807.AddRow(new string[] {
                             "Tablet assessment",
                             "On-site evaluation",
                             "WiFi/cellular",
                             "Real-time sync",
                             "Complete offline",
                             "Encrypted storage"});
-                table844.AddRow(new string[] {
+                table807.AddRow(new string[] {
                             "Smartphone scoring",
                             "Quick evaluations",
                             "Minimal connectivity",
                             "Batch sync",
                             "Limited offline",
                             "Secure authentication"});
-                table844.AddRow(new string[] {
+                table807.AddRow(new string[] {
                             "Wearable monitoring",
                             "Continuous assessment",
                             "Bluetooth/WiFi",
                             "Periodic sync",
                             "Local storage",
                             "Privacy protection"});
-                table844.AddRow(new string[] {
+                table807.AddRow(new string[] {
                             "IoT device integration",
                             "Equipment monitoring",
                             "Network connectivity",
                             "Automated sync",
                             "Edge computing",
                             "Secure transmission"});
-                table844.AddRow(new string[] {
+                table807.AddRow(new string[] {
                             "Voice recording",
                             "Audio documentation",
                             "Cloud connectivity",
                             "Automatic upload",
                             "Local recording",
                             "Voice encryption"});
-                table844.AddRow(new string[] {
+                table807.AddRow(new string[] {
                             "Photo documentation",
                             "Visual evidence",
                             "Data connectivity",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "Local storage",
                             "Image security"});
 #line 191
-    testRunner.When("implementing mobile assessment:", ((string)(null)), table844, "When ");
+    testRunner.When("implementing mobile assessment:", ((string)(null)), table807, "When ");
 #line hidden
 #line 199
     testRunner.Then("mobile access should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 207
     testRunner.And("intelligent evaluation provides consistent and objective analysis", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table845 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table808 = new TechTalk.SpecFlow.Table(new string[] {
                             "AI Application",
                             "Technology Used",
                             "Assessment Type",
                             "Accuracy Target",
                             "Human Oversight",
                             "Validation Process"});
-                table845.AddRow(new string[] {
+                table808.AddRow(new string[] {
                             "Skill recognition",
                             "Computer vision",
                             "Motor skills",
                             "90% accuracy",
                             "Expert validation",
                             "Clinical validation"});
-                table845.AddRow(new string[] {
+                table808.AddRow(new string[] {
                             "Speech analysis",
                             "Natural language processing",
                             "Communication skills",
                             "85% accuracy",
                             "SLP validation",
                             "Linguistic validation"});
-                table845.AddRow(new string[] {
+                table808.AddRow(new string[] {
                             "Performance prediction",
                             "Machine learning",
                             "Competency prediction",
                             "80% accuracy",
                             "Supervisor review",
                             "Predictive validation"});
-                table845.AddRow(new string[] {
+                table808.AddRow(new string[] {
                             "Feedback generation",
                             "AI text generation",
                             "Automated feedback",
                             "75% relevance",
                             "Supervisor editing",
                             "Feedback validation"});
-                table845.AddRow(new string[] {
+                table808.AddRow(new string[] {
                             "Pattern recognition",
                             "Data analytics",
                             "Learning patterns",
                             "88% accuracy",
                             "Educator interpretation",
                             "Pattern validation"});
-                table845.AddRow(new string[] {
+                table808.AddRow(new string[] {
                             "Risk assessment",
                             "Predictive modeling",
                             "Performance risk",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "Clinical judgment",
                             "Risk validation"});
 #line 208
-    testRunner.When("implementing AI assessment:", ((string)(null)), table845, "When ");
+    testRunner.When("implementing AI assessment:", ((string)(null)), table808, "When ");
 #line hidden
 #line 216
     testRunner.Then("AI should enhance rather than replace human judgment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 224
     testRunner.And("performance insights enable optimization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table846 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table809 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Type",
                             "Data Sources",
                             "Analysis Methods",
                             "Insight Generation",
                             "Action Recommendations",
                             "Outcome Tracking"});
-                table846.AddRow(new string[] {
+                table809.AddRow(new string[] {
                             "Learning progression",
                             "Assessment data",
                             "Progression modeling",
                             "Learning trajectories",
                             "Personalized interventions",
                             "Progress acceleration"});
-                table846.AddRow(new string[] {
+                table809.AddRow(new string[] {
                             "Competency analytics",
                             "Competency assessments",
                             "Competency analysis",
                             "Skill development patterns",
                             "Skill-building focus",
                             "Competency achievement"});
-                table846.AddRow(new string[] {
+                table809.AddRow(new string[] {
                             "Engagement analytics",
                             "Learning activities",
                             "Engagement analysis",
                             "Engagement patterns",
                             "Engagement optimization",
                             "Engagement improvement"});
-                table846.AddRow(new string[] {
+                table809.AddRow(new string[] {
                             "Performance analytics",
                             "Performance data",
                             "Performance modeling",
                             "Performance predictors",
                             "Performance enhancement",
                             "Performance gains"});
-                table846.AddRow(new string[] {
+                table809.AddRow(new string[] {
                             "Intervention analytics",
                             "Intervention data",
                             "Intervention analysis",
                             "Intervention effectiveness",
                             "Intervention optimization",
                             "Intervention success"});
-                table846.AddRow(new string[] {
+                table809.AddRow(new string[] {
                             "Outcome analytics",
                             "Outcome measures",
                             "Outcome analysis",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "Success replication",
                             "Outcome achievement"});
 #line 225
-    testRunner.When("implementing learning analytics:", ((string)(null)), table846, "When ");
+    testRunner.When("implementing learning analytics:", ((string)(null)), table809, "When ");
 #line hidden
 #line 233
     testRunner.Then("analytics should be evidence-based and actionable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 242
     testRunner.And("validity ensures assessments measure what they intend", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table847 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table810 = new TechTalk.SpecFlow.Table(new string[] {
                             "Quality Component",
                             "Quality Standards",
                             "Validation Methods",
                             "Quality Monitoring",
                             "Improvement Processes",
                             "Quality Documentation"});
-                table847.AddRow(new string[] {
+                table810.AddRow(new string[] {
                             "Content validity",
                             "Expert review",
                             "Content validation",
                             "Content monitoring",
                             "Content improvement",
                             "Content documentation"});
-                table847.AddRow(new string[] {
+                table810.AddRow(new string[] {
                             "Construct validity",
                             "Statistical analysis",
                             "Factor analysis",
                             "Construct monitoring",
                             "Construct refinement",
                             "Construct documentation"});
-                table847.AddRow(new string[] {
+                table810.AddRow(new string[] {
                             "Criterion validity",
                             "Predictive studies",
                             "Correlation analysis",
                             "Validity monitoring",
                             "Validity enhancement",
                             "Validity documentation"});
-                table847.AddRow(new string[] {
+                table810.AddRow(new string[] {
                             "Reliability assessment",
                             "Psychometric analysis",
                             "Reliability testing",
                             "Reliability monitoring",
                             "Reliability improvement",
                             "Reliability documentation"});
-                table847.AddRow(new string[] {
+                table810.AddRow(new string[] {
                             "Fairness evaluation",
                             "Bias analysis",
                             "Differential analysis",
                             "Fairness monitoring",
                             "Bias elimination",
                             "Fairness documentation"});
-                table847.AddRow(new string[] {
+                table810.AddRow(new string[] {
                             "Usability testing",
                             "User experience",
                             "Usability studies",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "Usability enhancement",
                             "Usability documentation"});
 #line 243
-    testRunner.When("implementing quality assurance:", ((string)(null)), table847, "When ");
+    testRunner.When("implementing quality assurance:", ((string)(null)), table810, "When ");
 #line hidden
 #line 251
     testRunner.Then("quality should be systematically ensured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 259
     testRunner.And("credentialing ensures practice standards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table848 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table811 = new TechTalk.SpecFlow.Table(new string[] {
                             "Certification Type",
                             "Requirements",
                             "Documentation",
                             "Verification",
                             "Maintenance",
                             "Renewal Process"});
-                table848.AddRow(new string[] {
+                table811.AddRow(new string[] {
                             "Professional certification",
                             "Competency demonstration",
                             "Portfolio submission",
                             "Third-party verification",
                             "Continuing education",
                             "Periodic renewal"});
-                table848.AddRow(new string[] {
+                table811.AddRow(new string[] {
                             "Specialty certification",
                             "Specialized competencies",
                             "Specialized portfolio",
                             "Specialty verification",
                             "Specialty education",
                             "Specialty renewal"});
-                table848.AddRow(new string[] {
+                table811.AddRow(new string[] {
                             "Institutional certification",
                             "Institutional standards",
                             "Institutional documentation",
                             "Institutional verification",
                             "Institutional maintenance",
                             "Institutional renewal"});
-                table848.AddRow(new string[] {
+                table811.AddRow(new string[] {
                             "Program accreditation",
                             "Program standards",
                             "Program documentation",
                             "Accreditation review",
                             "Program improvement",
                             "Reaccreditation"});
-                table848.AddRow(new string[] {
+                table811.AddRow(new string[] {
                             "Individual licensure",
                             "Licensure requirements",
                             "Licensure documentation",
                             "State verification",
                             "License maintenance",
                             "License renewal"});
-                table848.AddRow(new string[] {
+                table811.AddRow(new string[] {
                             "Continuing certification",
                             "Ongoing competence",
                             "Continuing documentation",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "Continuous learning",
                             "Continuous renewal"});
 #line 260
-    testRunner.When("supporting certification processes:", ((string)(null)), table848, "When ");
+    testRunner.When("supporting certification processes:", ((string)(null)), table811, "When ");
 #line hidden
 #line 268
     testRunner.Then("certification should be rigorous and meaningful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 276
     testRunner.And("evidence collection demonstrates growth over time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table849 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table812 = new TechTalk.SpecFlow.Table(new string[] {
                             "Portfolio Component",
                             "Evidence Types",
                             "Organization Method",
                             "Review Process",
                             "Quality Standards",
                             "Digital Features"});
-                table849.AddRow(new string[] {
+                table812.AddRow(new string[] {
                             "Competency artifacts",
                             "Work samples, reflections",
                             "Competency organization",
                             "Systematic review",
                             "Quality rubrics",
                             "Digital portfolio"});
-                table849.AddRow(new string[] {
+                table812.AddRow(new string[] {
                             "Performance evidence",
                             "Assessments, evaluations",
                             "Chronological organization",
                             "Performance review",
                             "Performance standards",
                             "Performance tracking"});
-                table849.AddRow(new string[] {
+                table812.AddRow(new string[] {
                             "Learning documentation",
                             "Learning activities, outcomes",
                             "Learning organization",
                             "Learning review",
                             "Learning standards",
                             "Learning analytics"});
-                table849.AddRow(new string[] {
+                table812.AddRow(new string[] {
                             "Reflection materials",
                             "Self-reflections, insights",
                             "Reflective organization",
                             "Reflection review",
                             "Reflection standards",
                             "Reflection prompts"});
-                table849.AddRow(new string[] {
+                table812.AddRow(new string[] {
                             "Feedback collection",
                             "Supervisor, peer feedback",
                             "Feedback organization",
                             "Feedback review",
                             "Feedback standards",
                             "Feedback integration"});
-                table849.AddRow(new string[] {
+                table812.AddRow(new string[] {
                             "Growth documentation",
                             "Before/after evidence",
                             "Growth organization",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "Growth standards",
                             "Growth visualization"});
 #line 277
-    testRunner.When("implementing portfolio systems:", ((string)(null)), table849, "When ");
+    testRunner.When("implementing portfolio systems:", ((string)(null)), table812, "When ");
 #line hidden
 #line 285
     testRunner.Then("portfolios should be comprehensive and organized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1851,49 +1851,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 293
     testRunner.Given("assessment errors can affect educational decisions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table850 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table813 = new TechTalk.SpecFlow.Table(new string[] {
                             "Error Type",
                             "Detection Method",
                             "Resolution Process",
                             "Timeline",
                             "Impact Mitigation",
                             "Prevention Measures"});
-                table850.AddRow(new string[] {
+                table813.AddRow(new string[] {
                             "Assessment scoring errors",
                             "Score validation",
                             "Score review and correction",
                             "<24 hours",
                             "Score correction",
                             "Scoring validation"});
-                table850.AddRow(new string[] {
+                table813.AddRow(new string[] {
                             "Data entry errors",
                             "Data validation",
                             "Data correction",
                             "<12 hours",
                             "Data integrity",
                             "Entry validation"});
-                table850.AddRow(new string[] {
+                table813.AddRow(new string[] {
                             "System calculation errors",
                             "Algorithm validation",
                             "Calculation review",
                             "<6 hours",
                             "Manual calculation",
                             "Algorithm testing"});
-                table850.AddRow(new string[] {
+                table813.AddRow(new string[] {
                             "Progress tracking errors",
                             "Progress validation",
                             "Progress correction",
                             "<24 hours",
                             "Progress adjustment",
                             "Tracking validation"});
-                table850.AddRow(new string[] {
+                table813.AddRow(new string[] {
                             "Competency mapping errors",
                             "Mapping validation",
                             "Mapping correction",
                             "<48 hours",
                             "Mapping adjustment",
                             "Mapping verification"});
-                table850.AddRow(new string[] {
+                table813.AddRow(new string[] {
                             "Certification errors",
                             "Certification validation",
                             "Certification correction",
@@ -1901,7 +1901,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "Certification adjustment",
                             "Certification verification"});
 #line 294
-    testRunner.When("competency tracking errors occur:", ((string)(null)), table850, "When ");
+    testRunner.When("competency tracking errors occur:", ((string)(null)), table813, "When ");
 #line hidden
 #line 302
     testRunner.Then("errors should be detected quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1955,49 +1955,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
 #line 309
     testRunner.Given("competency tracking requires long-term sustainability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table851 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table814 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table851.AddRow(new string[] {
+                table814.AddRow(new string[] {
                             "Framework currency",
                             "Evolving standards",
                             "Framework updates",
                             "Standards monitoring",
                             "Current frameworks",
                             "Framework sustainability"});
-                table851.AddRow(new string[] {
+                table814.AddRow(new string[] {
                             "Assessment validity",
                             "Changing practice",
                             "Validity maintenance",
                             "Validation resources",
                             "Maintained validity",
                             "Validity sustainability"});
-                table851.AddRow(new string[] {
+                table814.AddRow(new string[] {
                             "Technology advancement",
                             "Evolving technology",
                             "Technology integration",
                             "Technology resources",
                             "Technology currency",
                             "Technology sustainability"});
-                table851.AddRow(new string[] {
+                table814.AddRow(new string[] {
                             "Faculty development",
                             "Faculty competency",
                             "Faculty training",
                             "Training resources",
                             "Faculty competence",
                             "Faculty sustainability"});
-                table851.AddRow(new string[] {
+                table814.AddRow(new string[] {
                             "Student support",
                             "Support needs",
                             "Support optimization",
                             "Support resources",
                             "Student success",
                             "Support sustainability"});
-                table851.AddRow(new string[] {
+                table814.AddRow(new string[] {
                             "Quality assurance",
                             "Quality maintenance",
                             "Quality systems",
@@ -2005,7 +2005,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Education
                             "Quality standards",
                             "Quality sustainability"});
 #line 310
-    testRunner.When("planning competency sustainability:", ((string)(null)), table851, "When ");
+    testRunner.When("planning competency sustainability:", ((string)(null)), table814, "When ");
 #line hidden
 #line 318
     testRunner.Then("sustainability should be systematically planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

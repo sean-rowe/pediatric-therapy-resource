@@ -34,7 +34,7 @@ public class TherapyStepDefinitions : BaseStepDefinitions
     {
         var planParams = TableToJson(parameters);
         var content = new StringContent(planParams, System.Text.Encoding.UTF8, "application/json");
-        LastResponse = await Client.PostAsync("/api/therapy-plans/generate", content);
+        SetLastResponse(await Client.PostAsync("/api/therapy-plans/generate", content));
     }
     [Then(@"the system should generate a plan with:")]
     public async Task ThenTheSystemShouldGenerateAPlanWith(Table expectedPlan)
@@ -126,7 +126,7 @@ public class TherapyStepDefinitions : BaseStepDefinitions
         
         var json = System.Text.Json.JsonSerializer.Serialize(sessionData);
         var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
-        LastResponse = await Client.PostAsync("/api/documentation/session-notes/generate", content);
+        SetLastResponse(await Client.PostAsync("/api/documentation/session-notes/generate", content));
     }
 
     

@@ -128,47 +128,47 @@ namespace UPTRMS.Api.Tests.BDD.Features.Notifications
 #line 14
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1725 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1688 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1725.AddRow(new string[] {
+                table1688.AddRow(new string[] {
                             "notifications",
                             "array"});
-                table1725.AddRow(new string[] {
+                table1688.AddRow(new string[] {
                             "unreadCount",
                             "number"});
-                table1725.AddRow(new string[] {
+                table1688.AddRow(new string[] {
                             "total",
                             "number"});
 #line 15
-    testRunner.And("the response should contain:", ((string)(null)), table1725, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1688, "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1726 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1689 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1726.AddRow(new string[] {
+                table1689.AddRow(new string[] {
                             "id",
                             "string"});
-                table1726.AddRow(new string[] {
+                table1689.AddRow(new string[] {
                             "type",
                             "string"});
-                table1726.AddRow(new string[] {
+                table1689.AddRow(new string[] {
                             "title",
                             "string"});
-                table1726.AddRow(new string[] {
+                table1689.AddRow(new string[] {
                             "message",
                             "string"});
-                table1726.AddRow(new string[] {
+                table1689.AddRow(new string[] {
                             "createdAt",
                             "string"});
-                table1726.AddRow(new string[] {
+                table1689.AddRow(new string[] {
                             "read",
                             "boolean"});
-                table1726.AddRow(new string[] {
+                table1689.AddRow(new string[] {
                             "actionUrl",
                             "string"});
 #line 20
-    testRunner.And("each notification should contain:", ((string)(null)), table1726, "And ");
+    testRunner.And("each notification should contain:", ((string)(null)), table1689, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -305,29 +305,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Notifications
 #line 52
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1727 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1690 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1727.AddRow(new string[] {
+                table1690.AddRow(new string[] {
                             "email",
                             "object"});
-                table1727.AddRow(new string[] {
+                table1690.AddRow(new string[] {
                             "push",
                             "object"});
-                table1727.AddRow(new string[] {
+                table1690.AddRow(new string[] {
                             "inApp",
                             "object"});
-                table1727.AddRow(new string[] {
+                table1690.AddRow(new string[] {
                             "sms",
                             "object"});
-                table1727.AddRow(new string[] {
+                table1690.AddRow(new string[] {
                             "quietHours",
                             "object"});
-                table1727.AddRow(new string[] {
+                table1690.AddRow(new string[] {
                             "frequency",
                             "string"});
 #line 53
-    testRunner.And("the response should contain:", ((string)(null)), table1727, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1690, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -362,29 +362,29 @@ namespace UPTRMS.Api.Tests.BDD.Features.Notifications
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1728 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1691 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1728.AddRow(new string[] {
+                table1691.AddRow(new string[] {
                             "email.newResources",
                             "true"});
-                table1728.AddRow(new string[] {
+                table1691.AddRow(new string[] {
                             "email.studentProgress",
                             "true"});
-                table1728.AddRow(new string[] {
+                table1691.AddRow(new string[] {
                             "push.sessionReminders",
                             "true"});
-                table1728.AddRow(new string[] {
+                table1691.AddRow(new string[] {
                             "quietHours.start",
                             "22:00"});
-                table1728.AddRow(new string[] {
+                table1691.AddRow(new string[] {
                             "quietHours.end",
                             "07:00"});
-                table1728.AddRow(new string[] {
+                table1691.AddRow(new string[] {
                             "frequency",
                             "immediate"});
 #line 65
-    testRunner.When("I send a PUT request to \"/api/notifications/preferences\" with:", ((string)(null)), table1728, "When ");
+    testRunner.When("I send a PUT request to \"/api/notifications/preferences\" with:", ((string)(null)), table1691, "When ");
 #line hidden
 #line 73
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -428,20 +428,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Notifications
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1729 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1692 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1729.AddRow(new string[] {
+                table1692.AddRow(new string[] {
                             "deviceToken",
                             "device-token-123"});
-                table1729.AddRow(new string[] {
+                table1692.AddRow(new string[] {
                             "deviceType",
                             "ios"});
-                table1729.AddRow(new string[] {
+                table1692.AddRow(new string[] {
                             "appVersion",
                             "1.2.3"});
 #line 80
-    testRunner.When("I send a POST request to \"/api/notifications/subscribe\" with:", ((string)(null)), table1729, "When ");
+    testRunner.When("I send a POST request to \"/api/notifications/subscribe\" with:", ((string)(null)), table1692, "When ");
 #line hidden
 #line 85
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -539,14 +539,14 @@ namespace UPTRMS.Api.Tests.BDD.Features.Notifications
 #line 102
     testRunner.Then("connection should be established", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1730 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1693 = new TechTalk.SpecFlow.Table(new string[] {
                             "type",
                             "connected"});
-                table1730.AddRow(new string[] {
+                table1693.AddRow(new string[] {
                             "userId",
                             "user-123"});
 #line 103
-    testRunner.And("I should receive message:", ((string)(null)), table1730, "And ");
+    testRunner.And("I should receive message:", ((string)(null)), table1693, "And ");
 #line hidden
 #line 106
     testRunner.And("real-time notifications should be received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -590,20 +590,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Notifications
 #line 112
     testRunner.When("I connect to WebSocket \"/ws/session/session-123\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1731 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1694 = new TechTalk.SpecFlow.Table(new string[] {
                             "event",
                             "data"});
-                table1731.AddRow(new string[] {
+                table1694.AddRow(new string[] {
                             "student.progress",
                             "Goal achievement"});
-                table1731.AddRow(new string[] {
+                table1694.AddRow(new string[] {
                             "resource.shared",
                             "New resource added"});
-                table1731.AddRow(new string[] {
+                table1694.AddRow(new string[] {
                             "data.collected",
                             "Progress updated"});
 #line 113
-    testRunner.Then("I should receive real-time updates:", ((string)(null)), table1731, "Then ");
+    testRunner.Then("I should receive real-time updates:", ((string)(null)), table1694, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -644,20 +644,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Notifications
 #line 123
     testRunner.When("I connect to WebSocket \"/ws/marketplace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1732 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1695 = new TechTalk.SpecFlow.Table(new string[] {
                             "event",
                             "data"});
-                table1732.AddRow(new string[] {
+                table1695.AddRow(new string[] {
                             "sale.completed",
                             "Order details"});
-                table1732.AddRow(new string[] {
+                table1695.AddRow(new string[] {
                             "review.posted",
                             "New review"});
-                table1732.AddRow(new string[] {
+                table1695.AddRow(new string[] {
                             "question.asked",
                             "Buyer question"});
 #line 124
-    testRunner.Then("I should receive:", ((string)(null)), table1732, "Then ");
+    testRunner.Then("I should receive:", ((string)(null)), table1695, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -695,26 +695,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Notifications
 #line 133
     testRunner.Given("I have admin privileges", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1733 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1696 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1733.AddRow(new string[] {
+                table1696.AddRow(new string[] {
                             "audience",
                             "all-active-users"});
-                table1733.AddRow(new string[] {
+                table1696.AddRow(new string[] {
                             "title",
                             "System Maintenance"});
-                table1733.AddRow(new string[] {
+                table1696.AddRow(new string[] {
                             "message",
                             "Scheduled maintenance tonight"});
-                table1733.AddRow(new string[] {
+                table1696.AddRow(new string[] {
                             "priority",
                             "high"});
-                table1733.AddRow(new string[] {
+                table1696.AddRow(new string[] {
                             "channels",
                             "[\"email\", \"push\", \"in-app\"]"});
 #line 134
-    testRunner.When("I send a POST request to \"/api/notifications/broadcast\" with:", ((string)(null)), table1733, "When ");
+    testRunner.When("I send a POST request to \"/api/notifications/broadcast\" with:", ((string)(null)), table1696, "When ");
 #line hidden
 #line 141
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -767,26 +767,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Notifications
 #line 150
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1734 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1697 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1734.AddRow(new string[] {
+                table1697.AddRow(new string[] {
                             "sent",
                             "number"});
-                table1734.AddRow(new string[] {
+                table1697.AddRow(new string[] {
                             "delivered",
                             "number"});
-                table1734.AddRow(new string[] {
+                table1697.AddRow(new string[] {
                             "opened",
                             "number"});
-                table1734.AddRow(new string[] {
+                table1697.AddRow(new string[] {
                             "failed",
                             "number"});
-                table1734.AddRow(new string[] {
+                table1697.AddRow(new string[] {
                             "channels",
                             "object"});
 #line 151
-    testRunner.And("the response should contain:", ((string)(null)), table1734, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1697, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -824,20 +824,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Notifications
 #line 162
     testRunner.When("I connect to SSE endpoint \"/sse/updates\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1735 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1698 = new TechTalk.SpecFlow.Table(new string[] {
                             "event",
                             "data"});
-                table1735.AddRow(new string[] {
+                table1698.AddRow(new string[] {
                             "resource.new",
                             "New resources info"});
-                table1735.AddRow(new string[] {
+                table1698.AddRow(new string[] {
                             "student.milestone",
                             "Goal achieved"});
-                table1735.AddRow(new string[] {
+                table1698.AddRow(new string[] {
                             "system.announcement",
                             "Platform updates"});
 #line 163
-    testRunner.Then("I should receive events:", ((string)(null)), table1735, "Then ");
+    testRunner.Then("I should receive events:", ((string)(null)), table1698, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -872,17 +872,17 @@ namespace UPTRMS.Api.Tests.BDD.Features.Notifications
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1736 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1699 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1736.AddRow(new string[] {
+                table1699.AddRow(new string[] {
                             "channel",
                             "email"});
-                table1736.AddRow(new string[] {
+                table1699.AddRow(new string[] {
                             "template",
                             "welcome"});
 #line 172
-    testRunner.When("I send a POST request to \"/api/notifications/test\" with:", ((string)(null)), table1736, "When ");
+    testRunner.When("I send a POST request to \"/api/notifications/test\" with:", ((string)(null)), table1699, "When ");
 #line hidden
 #line 176
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -935,26 +935,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Notifications
 #line 185
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1737 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1700 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1737.AddRow(new string[] {
+                table1700.AddRow(new string[] {
                             "templateId",
                             "string"});
-                table1737.AddRow(new string[] {
+                table1700.AddRow(new string[] {
                             "name",
                             "string"});
-                table1737.AddRow(new string[] {
+                table1700.AddRow(new string[] {
                             "channels",
                             "array"});
-                table1737.AddRow(new string[] {
+                table1700.AddRow(new string[] {
                             "variables",
                             "array"});
-                table1737.AddRow(new string[] {
+                table1700.AddRow(new string[] {
                             "lastModified",
                             "string"});
 #line 186
-    testRunner.And("the response should contain array of:", ((string)(null)), table1737, "And ");
+    testRunner.And("the response should contain array of:", ((string)(null)), table1700, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

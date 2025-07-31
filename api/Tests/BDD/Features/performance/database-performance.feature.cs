@@ -133,50 +133,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 15
     testRunner.Given("therapy platform requires efficient data access patterns", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1754 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1717 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Model Type",
                             "Query Complexity",
                             "Target Response Time",
                             "Record Volume",
                             "Index Strategy"});
-                table1754.AddRow(new string[] {
+                table1717.AddRow(new string[] {
                             "Student records",
                             "Simple lookup",
                             "<25ms",
                             "100K records",
                             "Primary key index"});
-                table1754.AddRow(new string[] {
+                table1717.AddRow(new string[] {
                             "Therapy sessions",
                             "Filtered search",
                             "<100ms",
                             "1M records",
                             "Composite index"});
-                table1754.AddRow(new string[] {
+                table1717.AddRow(new string[] {
                             "Resource metadata",
                             "Full-text search",
                             "<200ms",
                             "500K records",
                             "Search index"});
-                table1754.AddRow(new string[] {
+                table1717.AddRow(new string[] {
                             "Assessment results",
                             "Analytics query",
                             "<500ms",
                             "2M records",
                             "Materialized view"});
-                table1754.AddRow(new string[] {
+                table1717.AddRow(new string[] {
                             "Progress tracking",
                             "Time-series",
                             "<150ms",
                             "5M data points",
                             "Time-based index"});
-                table1754.AddRow(new string[] {
+                table1717.AddRow(new string[] {
                             "Marketplace items",
                             "Complex filters",
                             "<300ms",
                             "250K records",
                             "Multi-column index"});
 #line 16
-    testRunner.When("database query performance is tested across data types:", ((string)(null)), table1754, "When ");
+    testRunner.When("database query performance is tested across data types:", ((string)(null)), table1717, "When ");
 #line hidden
 #line 24
     testRunner.Then("all database queries should meet response time targets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -226,50 +226,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 31
     testRunner.Given("database indexing is critical for therapy platform performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1755 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1718 = new TechTalk.SpecFlow.Table(new string[] {
                             "Index Type",
                             "Use Case",
                             "Performance Gain",
                             "Maintenance Cost",
                             "Storage Overhead"});
-                table1755.AddRow(new string[] {
+                table1718.AddRow(new string[] {
                             "Primary key indexes",
                             "Direct record lookup",
                             "1000x faster",
                             "Minimal",
                             "5%"});
-                table1755.AddRow(new string[] {
+                table1718.AddRow(new string[] {
                             "Composite indexes",
                             "Multi-field filtering",
                             "100x faster",
                             "Low",
                             "15%"});
-                table1755.AddRow(new string[] {
+                table1718.AddRow(new string[] {
                             "Partial indexes",
                             "Conditional queries",
                             "50x faster",
                             "Medium",
                             "8%"});
-                table1755.AddRow(new string[] {
+                table1718.AddRow(new string[] {
                             "Full-text indexes",
                             "Content search",
                             "200x faster",
                             "High",
                             "25%"});
-                table1755.AddRow(new string[] {
+                table1718.AddRow(new string[] {
                             "Geospatial indexes",
                             "Location-based queries",
                             "500x faster",
                             "Medium",
                             "12%"});
-                table1755.AddRow(new string[] {
+                table1718.AddRow(new string[] {
                             "Expression indexes",
                             "Computed field queries",
                             "75x faster",
                             "Medium",
                             "10%"});
 #line 32
-    testRunner.When("indexing effectiveness is tested across access patterns:", ((string)(null)), table1755, "When ");
+    testRunner.When("indexing effectiveness is tested across access patterns:", ((string)(null)), table1718, "When ");
 #line hidden
 #line 40
     testRunner.Then("indexing should provide significant performance improvements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -319,44 +319,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 47
     testRunner.Given("database connections are expensive resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1756 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1719 = new TechTalk.SpecFlow.Table(new string[] {
                             "Pool Configuration",
                             "Pool Size",
                             "Connection Timeout",
                             "Query Throughput",
                             "Resource Usage"});
-                table1756.AddRow(new string[] {
+                table1719.AddRow(new string[] {
                             "Minimum pool setup",
                             "10",
                             "30 seconds",
                             "1K queries/sec",
                             "Low memory"});
-                table1756.AddRow(new string[] {
+                table1719.AddRow(new string[] {
                             "Standard pool config",
                             "50",
                             "15 seconds",
                             "5K queries/sec",
                             "Medium memory"});
-                table1756.AddRow(new string[] {
+                table1719.AddRow(new string[] {
                             "High-traffic pool",
                             "100",
                             "10 seconds",
                             "10K queries/sec",
                             "High memory"});
-                table1756.AddRow(new string[] {
+                table1719.AddRow(new string[] {
                             "Peak load pool",
                             "200",
                             "5 seconds",
                             "20K queries/sec",
                             "Very high memory"});
-                table1756.AddRow(new string[] {
+                table1719.AddRow(new string[] {
                             "Auto-scaling pool",
                             "20-150",
                             "Variable",
                             "Adaptive",
                             "Dynamic"});
 #line 48
-    testRunner.When("connection pooling performance is tested:", ((string)(null)), table1756, "When ");
+    testRunner.When("connection pooling performance is tested:", ((string)(null)), table1719, "When ");
 #line hidden
 #line 55
     testRunner.Then("connection pooling should optimize resource usage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -406,50 +406,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 62
     testRunner.Given("therapy data requires ACID compliance with optimal performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1757 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1720 = new TechTalk.SpecFlow.Table(new string[] {
                             "Transaction Type",
                             "Isolation Level",
                             "Expected Duration",
                             "Conflict Rate",
                             "Rollback Rate"});
-                table1757.AddRow(new string[] {
+                table1720.AddRow(new string[] {
                             "Simple CRUD",
                             "Read Committed",
                             "<10ms",
                             "<1%",
                             "<0.1%"});
-                table1757.AddRow(new string[] {
+                table1720.AddRow(new string[] {
                             "Session documentation",
                             "Read Committed",
                             "<50ms",
                             "<2%",
                             "<0.5%"});
-                table1757.AddRow(new string[] {
+                table1720.AddRow(new string[] {
                             "Bulk data import",
                             "Read Uncommitted",
                             "<5 seconds",
                             "<0.1%",
                             "<0.01%"});
-                table1757.AddRow(new string[] {
+                table1720.AddRow(new string[] {
                             "Report generation",
                             "Repeatable Read",
                             "<2 seconds",
                             "<5%",
                             "<1%"});
-                table1757.AddRow(new string[] {
+                table1720.AddRow(new string[] {
                             "Payment processing",
                             "Serializable",
                             "<100ms",
                             "<10%",
                             "<2%"});
-                table1757.AddRow(new string[] {
+                table1720.AddRow(new string[] {
                             "Data analytics",
                             "Read Committed",
                             "<30 seconds",
                             "<0.5%",
                             "<0.1%"});
 #line 63
-    testRunner.When("transaction performance is tested:", ((string)(null)), table1757, "When ");
+    testRunner.When("transaction performance is tested:", ((string)(null)), table1720, "When ");
 #line hidden
 #line 71
     testRunner.Then("transactions should complete within target timeframes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -499,44 +499,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 78
     testRunner.Given("therapy platform data grows continuously over time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1758 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1721 = new TechTalk.SpecFlow.Table(new string[] {
                             "Partition Strategy",
                             "Partition Key",
                             "Query Performance",
                             "Maintenance Overhead",
                             "Storage Efficiency"});
-                table1758.AddRow(new string[] {
+                table1721.AddRow(new string[] {
                             "Time-based partitioning",
                             "Created date",
                             "10x faster",
                             "Weekly maintenance",
                             "95% efficient"});
-                table1758.AddRow(new string[] {
+                table1721.AddRow(new string[] {
                             "Hash partitioning",
                             "User ID",
                             "5x faster",
                             "Monthly maintenance",
                             "90% efficient"});
-                table1758.AddRow(new string[] {
+                table1721.AddRow(new string[] {
                             "Range partitioning",
                             "Geographic region",
                             "8x faster",
                             "Quarterly maintenance",
                             "92% efficient"});
-                table1758.AddRow(new string[] {
+                table1721.AddRow(new string[] {
                             "List partitioning",
                             "Therapy type",
                             "6x faster",
                             "As-needed maintenance",
                             "88% efficient"});
-                table1758.AddRow(new string[] {
+                table1721.AddRow(new string[] {
                             "Composite partitioning",
                             "Date + User ID",
                             "15x faster",
                             "Automated",
                             "97% efficient"});
 #line 79
-    testRunner.When("data partitioning performance is tested:", ((string)(null)), table1758, "When ");
+    testRunner.When("data partitioning performance is tested:", ((string)(null)), table1721, "When ");
 #line hidden
 #line 86
     testRunner.Then("partitioning should improve query performance significantly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -586,44 +586,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 93
     testRunner.Given("frequently accessed data should be cached for performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1759 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1722 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cache Level",
                             "Cache Type",
                             "Hit Rate Target",
                             "Cache Size Limit",
                             "TTL Strategy"});
-                table1759.AddRow(new string[] {
+                table1722.AddRow(new string[] {
                             "Query result cache",
                             "In-memory",
                             ">85%",
                             "2GB",
                             "30 minutes"});
-                table1759.AddRow(new string[] {
+                table1722.AddRow(new string[] {
                             "Prepared statement",
                             "Connection-level",
                             ">95%",
                             "100MB",
                             "Session lifetime"});
-                table1759.AddRow(new string[] {
+                table1722.AddRow(new string[] {
                             "Materialized views",
                             "Database-level",
                             ">90%",
                             "10GB",
                             "Refresh on demand"});
-                table1759.AddRow(new string[] {
+                table1722.AddRow(new string[] {
                             "Application cache",
                             "Redis",
                             ">80%",
                             "5GB",
                             "Variable TTL"});
-                table1759.AddRow(new string[] {
+                table1722.AddRow(new string[] {
                             "CDN edge cache",
                             "Geographic",
                             ">75%",
                             "50GB",
                             "24 hours"});
 #line 94
-    testRunner.When("query caching effectiveness is tested:", ((string)(null)), table1759, "When ");
+    testRunner.When("query caching effectiveness is tested:", ((string)(null)), table1722, "When ");
 #line hidden
 #line 101
     testRunner.Then("cache hit rates should meet performance targets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -673,38 +673,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 109
     testRunner.Given("read operations can be distributed across database replicas", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1760 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1723 = new TechTalk.SpecFlow.Table(new string[] {
                             "Replica Configuration",
                             "Replication Lag",
                             "Read Load Distribution",
                             "Failover Time",
                             "Consistency Level"});
-                table1760.AddRow(new string[] {
+                table1723.AddRow(new string[] {
                             "Single read replica",
                             "<1 second",
                             "50% reads redirected",
                             "<10 seconds",
                             "Eventually consistent"});
-                table1760.AddRow(new string[] {
+                table1723.AddRow(new string[] {
                             "Multiple read replicas",
                             "<500ms",
                             "80% reads redirected",
                             "<5 seconds",
                             "Eventually consistent"});
-                table1760.AddRow(new string[] {
+                table1723.AddRow(new string[] {
                             "Cross-region replicas",
                             "<2 seconds",
                             "30% reads redirected",
                             "<30 seconds",
                             "Eventually consistent"});
-                table1760.AddRow(new string[] {
+                table1723.AddRow(new string[] {
                             "Priority-based routing",
                             "<200ms",
                             "Intelligent routing",
                             "<3 seconds",
                             "Eventually consistent"});
 #line 110
-    testRunner.When("read replica performance is tested:", ((string)(null)), table1760, "When ");
+    testRunner.When("read replica performance is tested:", ((string)(null)), table1723, "When ");
 #line hidden
 #line 116
     testRunner.Then("read replicas should handle read load effectively", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -754,44 +754,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 123
     testRunner.Given("database backups are critical for data protection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1761 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1724 = new TechTalk.SpecFlow.Table(new string[] {
                             "Backup Type",
                             "Database Size",
                             "Backup Duration",
                             "Recovery Duration",
                             "Storage Overhead"});
-                table1761.AddRow(new string[] {
+                table1724.AddRow(new string[] {
                             "Full backup",
                             "100GB",
                             "<2 hours",
                             "<4 hours",
                             "100%"});
-                table1761.AddRow(new string[] {
+                table1724.AddRow(new string[] {
                             "Incremental backup",
                             "10GB delta",
                             "<15 minutes",
                             "<30 minutes",
                             "10%"});
-                table1761.AddRow(new string[] {
+                table1724.AddRow(new string[] {
                             "Transaction log backup",
                             "1GB",
                             "<2 minutes",
                             "<5 minutes",
                             "1%"});
-                table1761.AddRow(new string[] {
+                table1724.AddRow(new string[] {
                             "Point-in-time recovery",
                             "Any size",
                             "N/A",
                             "<1 hour",
                             "Variable"});
-                table1761.AddRow(new string[] {
+                table1724.AddRow(new string[] {
                             "Cross-region backup",
                             "100GB",
                             "<4 hours",
                             "<8 hours",
                             "200%"});
 #line 124
-    testRunner.When("backup and recovery performance is tested:", ((string)(null)), table1761, "When ");
+    testRunner.When("backup and recovery performance is tested:", ((string)(null)), table1724, "When ");
 #line hidden
 #line 131
     testRunner.Then("backup operations should not impact production performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -841,50 +841,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 138
     testRunner.Given("therapy platform requires comprehensive analytics capabilities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1762 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1725 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Type",
                             "Data Volume",
                             "Query Complexity",
                             "Target Response",
                             "Resource Usage"});
-                table1762.AddRow(new string[] {
+                table1725.AddRow(new string[] {
                             "Student progress reports",
                             "1M records",
                             "Medium",
                             "<5 seconds",
                             "2 CPU cores"});
-                table1762.AddRow(new string[] {
+                table1725.AddRow(new string[] {
                             "Therapy outcome analytics",
                             "5M records",
                             "High",
                             "<30 seconds",
                             "4 CPU cores"});
-                table1762.AddRow(new string[] {
+                table1725.AddRow(new string[] {
                             "Resource usage statistics",
                             "10M records",
                             "Medium",
                             "<10 seconds",
                             "3 CPU cores"});
-                table1762.AddRow(new string[] {
+                table1725.AddRow(new string[] {
                             "Financial reporting",
                             "2M records",
                             "High",
                             "<15 seconds",
                             "3 CPU cores"});
-                table1762.AddRow(new string[] {
+                table1725.AddRow(new string[] {
                             "Platform health metrics",
                             "50M records",
                             "Very High",
                             "<60 seconds",
                             "8 CPU cores"});
-                table1762.AddRow(new string[] {
+                table1725.AddRow(new string[] {
                             "Predictive analytics",
                             "20M records",
                             "Very High",
                             "<120 seconds",
                             "16 CPU cores"});
 #line 139
-    testRunner.When("analytics query performance is tested:", ((string)(null)), table1762, "When ");
+    testRunner.When("analytics query performance is tested:", ((string)(null)), table1725, "When ");
 #line hidden
 #line 147
     testRunner.Then("analytics queries should complete within business requirements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -934,38 +934,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 154
     testRunner.Given("old therapy data must be archived for compliance and performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1763 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1726 = new TechTalk.SpecFlow.Table(new string[] {
                             "Archive Strategy",
                             "Data Age Threshold",
                             "Archive Duration",
                             "Storage Savings",
                             "Query Impact"});
-                table1763.AddRow(new string[] {
+                table1726.AddRow(new string[] {
                             "Cold storage migration",
                             ">2 years",
                             "<6 hours",
                             "70% reduction",
                             "No impact"});
-                table1763.AddRow(new string[] {
+                table1726.AddRow(new string[] {
                             "Compressed archiving",
                             ">1 year",
                             "<3 hours",
                             "80% reduction",
                             "No impact"});
-                table1763.AddRow(new string[] {
+                table1726.AddRow(new string[] {
                             "Selective purging",
                             ">5 years",
                             "<1 hour",
                             "90% reduction",
                             "No impact"});
-                table1763.AddRow(new string[] {
+                table1726.AddRow(new string[] {
                             "Automated lifecycle",
                             "Configurable",
                             "Continuous",
                             "Variable",
                             "Minimal impact"});
 #line 155
-    testRunner.When("data archiving performance is tested:", ((string)(null)), table1763, "When ");
+    testRunner.When("data archiving performance is tested:", ((string)(null)), table1726, "When ");
 #line hidden
 #line 161
     testRunner.Then("archiving should not impact production database performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1015,44 +1015,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 168
     testRunner.Given("multiple therapists access the platform simultaneously", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1764 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1727 = new TechTalk.SpecFlow.Table(new string[] {
                             "Concurrent Operations",
                             "Operation Mix",
                             "Target Throughput",
                             "Lock Contention",
                             "Deadlock Rate"});
-                table1764.AddRow(new string[] {
+                table1727.AddRow(new string[] {
                             "100 concurrent users",
                             "70% read, 30% write",
                             "1K ops/sec",
                             "<5%",
                             "<0.1%"});
-                table1764.AddRow(new string[] {
+                table1727.AddRow(new string[] {
                             "500 concurrent users",
                             "80% read, 20% write",
                             "3K ops/sec",
                             "<10%",
                             "<0.2%"});
-                table1764.AddRow(new string[] {
+                table1727.AddRow(new string[] {
                             "1K concurrent users",
                             "85% read, 15% write",
                             "5K ops/sec",
                             "<15%",
                             "<0.3%"});
-                table1764.AddRow(new string[] {
+                table1727.AddRow(new string[] {
                             "2K concurrent users",
                             "90% read, 10% write",
                             "8K ops/sec",
                             "<20%",
                             "<0.5%"});
-                table1764.AddRow(new string[] {
+                table1727.AddRow(new string[] {
                             "Peak load (5K users)",
                             "95% read, 5% write",
                             "10K ops/sec",
                             "<25%",
                             "<0.8%"});
 #line 169
-    testRunner.When("concurrent database load is tested:", ((string)(null)), table1764, "When ");
+    testRunner.When("concurrent database load is tested:", ((string)(null)), table1727, "When ");
 #line hidden
 #line 176
     testRunner.Then("concurrent operations should scale efficiently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1104,33 +1104,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 184
     testRunner.Given("database connections may fail due to network or server issues", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1765 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1728 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failure Type",
                             "Failure Duration",
                             "Recovery Strategy",
                             "Application Impact"});
-                table1765.AddRow(new string[] {
+                table1728.AddRow(new string[] {
                             "Network timeout",
                             "5-30 seconds",
                             "Connection retry",
                             "Brief delay"});
-                table1765.AddRow(new string[] {
+                table1728.AddRow(new string[] {
                             "Database server restart",
                             "1-5 minutes",
                             "Connection pool refresh",
                             "Service interruption"});
-                table1765.AddRow(new string[] {
+                table1728.AddRow(new string[] {
                             "Network partition",
                             "30+ seconds",
                             "Read-only mode",
                             "Degraded functionality"});
-                table1765.AddRow(new string[] {
+                table1728.AddRow(new string[] {
                             "Connection pool exhaustion",
                             "Variable",
                             "Queue management",
                             "Slower responses"});
 #line 185
-    testRunner.When("database connection failure scenarios are tested:", ((string)(null)), table1765, "When ");
+    testRunner.When("database connection failure scenarios are tested:", ((string)(null)), table1728, "When ");
 #line hidden
 #line 191
     testRunner.Then("connection failures should be detected quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1182,33 +1182,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 198
     testRunner.Given("some database queries may exceed reasonable execution time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1766 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1729 = new TechTalk.SpecFlow.Table(new string[] {
                             "Query Type",
                             "Timeout Threshold",
                             "Timeout Action",
                             "Recovery Strategy"});
-                table1766.AddRow(new string[] {
+                table1729.AddRow(new string[] {
                             "Simple CRUD operations",
                             "5 seconds",
                             "Cancel and retry",
                             "Automatic retry"});
-                table1766.AddRow(new string[] {
+                table1729.AddRow(new string[] {
                             "Complex analytics",
                             "60 seconds",
                             "Background processing",
                             "Async notification"});
-                table1766.AddRow(new string[] {
+                table1729.AddRow(new string[] {
                             "Report generation",
                             "300 seconds",
                             "Partial results",
                             "Incremental delivery"});
-                table1766.AddRow(new string[] {
+                table1729.AddRow(new string[] {
                             "Data import operations",
                             "1800 seconds",
                             "Checkpoint and resume",
                             "Manual intervention"});
 #line 199
-    testRunner.When("query timeout scenarios are tested:", ((string)(null)), table1766, "When ");
+    testRunner.When("query timeout scenarios are tested:", ((string)(null)), table1729, "When ");
 #line hidden
 #line 205
     testRunner.Then("query timeouts should prevent resource monopolization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1260,33 +1260,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 212
     testRunner.Given("data corruption can occur due to hardware or software issues", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1767 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1730 = new TechTalk.SpecFlow.Table(new string[] {
                             "Corruption Type",
                             "Detection Method",
                             "Repair Strategy",
                             "Recovery Time"});
-                table1767.AddRow(new string[] {
+                table1730.AddRow(new string[] {
                             "Table corruption",
                             "CHECKDB validation",
                             "Restore from backup",
                             "<30 minutes"});
-                table1767.AddRow(new string[] {
+                table1730.AddRow(new string[] {
                             "Index corruption",
                             "Query plan analysis",
                             "Rebuild indexes",
                             "<15 minutes"});
-                table1767.AddRow(new string[] {
+                table1730.AddRow(new string[] {
                             "Transaction log corruption",
                             "Log validation",
                             "Point-in-time recovery",
                             "<60 minutes"});
-                table1767.AddRow(new string[] {
+                table1730.AddRow(new string[] {
                             "Page-level corruption",
                             "Automatic detection",
                             "Page restore",
                             "<5 minutes"});
 #line 213
-    testRunner.When("data corruption scenarios are tested:", ((string)(null)), table1767, "When ");
+    testRunner.When("data corruption scenarios are tested:", ((string)(null)), table1730, "When ");
 #line hidden
 #line 219
     testRunner.Then("corruption should be detected proactively", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1338,38 +1338,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 226
     testRunner.Given("database resources may become exhausted under high load", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1768 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1731 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resource Type",
                             "Exhaustion Threshold",
                             "Protection Mechanism",
                             "Recovery Strategy"});
-                table1768.AddRow(new string[] {
+                table1731.AddRow(new string[] {
                             "Memory usage",
                             ">90% of allocated",
                             "Query result limiting",
                             "Memory cleanup"});
-                table1768.AddRow(new string[] {
+                table1731.AddRow(new string[] {
                             "Storage space",
                             ">95% capacity",
                             "Archive old data",
                             "Storage expansion"});
-                table1768.AddRow(new string[] {
+                table1731.AddRow(new string[] {
                             "CPU utilization",
                             ">85% sustained",
                             "Query throttling",
                             "Load balancing"});
-                table1768.AddRow(new string[] {
+                table1731.AddRow(new string[] {
                             "I/O bandwidth",
                             ">80% capacity",
                             "I/O scheduling",
                             "Hardware upgrade"});
-                table1768.AddRow(new string[] {
+                table1731.AddRow(new string[] {
                             "Lock resources",
                             ">90% of limit",
                             "Lock timeout reduction",
                             "Deadlock resolution"});
 #line 227
-    testRunner.When("database resource exhaustion occurs:", ((string)(null)), table1768, "When ");
+    testRunner.When("database resource exhaustion occurs:", ((string)(null)), table1731, "When ");
 #line hidden
 #line 234
     testRunner.Then("resource exhaustion should be prevented through monitoring", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1421,38 +1421,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 241
     testRunner.Given("database issues can cascade to dependent application services", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1769 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1732 = new TechTalk.SpecFlow.Table(new string[] {
                             "Failure Origin",
                             "Potential Cascade",
                             "Prevention Strategy",
                             "Isolation Mechanism"});
-                table1769.AddRow(new string[] {
+                table1732.AddRow(new string[] {
                             "Primary database down",
                             "All write operations",
                             "Failover to replica",
                             "Database clustering"});
-                table1769.AddRow(new string[] {
+                table1732.AddRow(new string[] {
                             "Slow query blocking",
                             "Connection pool exhaustion",
                             "Query killing",
                             "Connection limits"});
-                table1769.AddRow(new string[] {
+                table1732.AddRow(new string[] {
                             "Index corruption",
                             "Slow read operations",
                             "Query plan fallback",
                             "Alternative indexes"});
-                table1769.AddRow(new string[] {
+                table1732.AddRow(new string[] {
                             "Storage full",
                             "All write operations",
                             "Read-only mode",
                             "Storage monitoring"});
-                table1769.AddRow(new string[] {
+                table1732.AddRow(new string[] {
                             "Memory exhaustion",
                             "Query failures",
                             "Query prioritization",
                             "Resource quotas"});
 #line 242
-    testRunner.When("database cascading failure scenarios are tested:", ((string)(null)), table1769, "When ");
+    testRunner.When("database cascading failure scenarios are tested:", ((string)(null)), table1732, "When ");
 #line hidden
 #line 249
     testRunner.Then("database failures should be contained effectively", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

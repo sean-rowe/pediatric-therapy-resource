@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 17
     testRunner.And("timeout policies prevent resource exhaustion and improve user experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1256 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1219 = new TechTalk.SpecFlow.Table(new string[] {
                             "Request Type",
                             "Default Timeout",
                             "Maximum Timeout",
                             "Timeout Strategy",
                             "Retry Policy",
                             "User Notification"});
-                table1256.AddRow(new string[] {
+                table1219.AddRow(new string[] {
                             "Authentication",
                             "30 seconds",
                             "60 seconds",
                             "Fixed timeout",
                             "3 retries with backoff",
                             "Auth timeout notice"});
-                table1256.AddRow(new string[] {
+                table1219.AddRow(new string[] {
                             "File uploads",
                             "300 seconds",
                             "600 seconds",
                             "Progressive timeout",
                             "2 retries",
                             "Upload progress timeout"});
-                table1256.AddRow(new string[] {
+                table1219.AddRow(new string[] {
                             "Database queries",
                             "30 seconds",
                             "120 seconds",
                             "Query-based timeout",
                             "1 retry",
                             "Query timeout alert"});
-                table1256.AddRow(new string[] {
+                table1219.AddRow(new string[] {
                             "API calls",
                             "60 seconds",
                             "180 seconds",
                             "Service-based timeout",
                             "3 retries with circuit breaker",
                             "API timeout notice"});
-                table1256.AddRow(new string[] {
+                table1219.AddRow(new string[] {
                             "Report generation",
                             "600 seconds",
                             "1800 seconds",
                             "Complexity-based timeout",
                             "No retries",
                             "Report timeout notice"});
-                table1256.AddRow(new string[] {
+                table1219.AddRow(new string[] {
                             "Search operations",
                             "10 seconds",
                             "30 seconds",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "2 retries",
                             "Search timeout notice"});
 #line 18
-    testRunner.When("implementing timeout policies:", ((string)(null)), table1256, "When ");
+    testRunner.When("implementing timeout policies:", ((string)(null)), table1219, "When ");
 #line hidden
 #line 26
     testRunner.Then("timeouts should be appropriate for request complexity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 34
     testRunner.And("adaptive timeouts optimize for current system state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1257 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1220 = new TechTalk.SpecFlow.Table(new string[] {
                             "System Condition",
                             "Timeout Adjustment",
                             "Adjustment Algorithm",
                             "Performance Monitoring",
                             "Adaptation Speed",
                             "User Impact"});
-                table1257.AddRow(new string[] {
+                table1220.AddRow(new string[] {
                             "Low load",
                             "Reduced timeouts",
                             "20% reduction",
                             "Response time tracking",
                             "Immediate",
                             "Faster responses"});
-                table1257.AddRow(new string[] {
+                table1220.AddRow(new string[] {
                             "Normal load",
                             "Standard timeouts",
                             "Baseline values",
                             "Load monitoring",
                             "Gradual",
                             "Standard responses"});
-                table1257.AddRow(new string[] {
+                table1220.AddRow(new string[] {
                             "High load",
                             "Increased timeouts",
                             "50% increase",
                             "Resource monitoring",
                             "Responsive",
                             "Delayed responses"});
-                table1257.AddRow(new string[] {
+                table1220.AddRow(new string[] {
                             "Peak load",
                             "Extended timeouts",
                             "100% increase",
                             "Capacity monitoring",
                             "Rapid",
                             "Extended responses"});
-                table1257.AddRow(new string[] {
+                table1220.AddRow(new string[] {
                             "System stress",
                             "Maximum timeouts",
                             "200% increase",
                             "Stress monitoring",
                             "Immediate",
                             "Maximum patience"});
-                table1257.AddRow(new string[] {
+                table1220.AddRow(new string[] {
                             "Recovery phase",
                             "Gradual reduction",
                             "Step-down algorithm",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Controlled",
                             "Improving responses"});
 #line 35
-    testRunner.When("implementing adaptive timeouts:", ((string)(null)), table1257, "When ");
+    testRunner.When("implementing adaptive timeouts:", ((string)(null)), table1220, "When ");
 #line hidden
 #line 43
     testRunner.Then("adjustments should be proportional to system state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 51
     testRunner.And("priority-based timeouts ensure critical operations complete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1258 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1221 = new TechTalk.SpecFlow.Table(new string[] {
                             "Priority Level",
                             "Timeout Multiplier",
                             "Queue Position",
                             "Resource Allocation",
                             "Preemption Rights",
                             "Recovery Priority"});
-                table1258.AddRow(new string[] {
+                table1221.AddRow(new string[] {
                             "Emergency",
                             "3x standard timeout",
                             "Front of queue",
                             "Dedicated resources",
                             "Can preempt others",
                             "Highest recovery"});
-                table1258.AddRow(new string[] {
+                table1221.AddRow(new string[] {
                             "High priority",
                             "2x standard timeout",
                             "Priority queue",
                             "Enhanced resources",
                             "Limited preemption",
                             "High recovery"});
-                table1258.AddRow(new string[] {
+                table1221.AddRow(new string[] {
                             "Standard priority",
                             "1x standard timeout",
                             "Standard queue",
                             "Standard resources",
                             "No preemption",
                             "Standard recovery"});
-                table1258.AddRow(new string[] {
+                table1221.AddRow(new string[] {
                             "Low priority",
                             "0.8x standard timeout",
                             "Background queue",
                             "Shared resources",
                             "Can be preempted",
                             "Low recovery"});
-                table1258.AddRow(new string[] {
+                table1221.AddRow(new string[] {
                             "Batch priority",
                             "0.5x standard timeout",
                             "Batch queue",
                             "Batch resources",
                             "Background processing",
                             "Batch recovery"});
-                table1258.AddRow(new string[] {
+                table1221.AddRow(new string[] {
                             "Guest user",
                             "0.6x standard timeout",
                             "Guest queue",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Lowest priority",
                             "Basic recovery"});
 #line 52
-    testRunner.When("implementing priority-based timeouts:", ((string)(null)), table1258, "When ");
+    testRunner.When("implementing priority-based timeouts:", ((string)(null)), table1221, "When ");
 #line hidden
 #line 60
     testRunner.Then("priority should determine timeout allowances", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 68
     testRunner.And("progressive timeouts provide increasing patience for complex operations", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1259 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1222 = new TechTalk.SpecFlow.Table(new string[] {
                             "Timeout Stage",
                             "Duration",
                             "User Communication",
                             "System Action",
                             "Cancellation Option",
                             "Progress Indicators"});
-                table1259.AddRow(new string[] {
+                table1222.AddRow(new string[] {
                             "Initial timeout",
                             "Standard duration",
                             "\"Processing...\"",
                             "Continue processing",
                             "Standard cancel",
                             "Progress bar"});
-                table1259.AddRow(new string[] {
+                table1222.AddRow(new string[] {
                             "Extended timeout",
                             "2x initial",
                             "\"Taking longer than expected\"",
                             "Continue with monitoring",
                             "Easy cancel",
                             "Detailed progress"});
-                table1259.AddRow(new string[] {
+                table1222.AddRow(new string[] {
                             "Long timeout",
                             "3x initial",
                             "\"Complex operation in progress\"",
                             "Continue with alerts",
                             "Prominent cancel",
                             "Step-by-step progress"});
-                table1259.AddRow(new string[] {
+                table1222.AddRow(new string[] {
                             "Maximum timeout",
                             "5x initial",
                             "\"Maximum processing time\"",
                             "Final attempt",
                             "Forced completion",
                             "Completion estimate"});
-                table1259.AddRow(new string[] {
+                table1222.AddRow(new string[] {
                             "Timeout exceeded",
                             "Operation limit",
                             "\"Operation timed out\"",
                             "Graceful termination",
                             "Retry option",
                             "Failure explanation"});
-                table1259.AddRow(new string[] {
+                table1222.AddRow(new string[] {
                             "Manual override",
                             "Admin extension",
                             "\"Administrator extended timeout\"",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Admin cancel",
                             "Admin monitoring"});
 #line 69
-    testRunner.When("implementing progressive timeouts:", ((string)(null)), table1259, "When ");
+    testRunner.When("implementing progressive timeouts:", ((string)(null)), table1222, "When ");
 #line hidden
 #line 77
     testRunner.Then("stages should provide increasing patience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 86
     testRunner.And("coordinated timeout handling prevents partial failures", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1260 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1223 = new TechTalk.SpecFlow.Table(new string[] {
                             "Distribution Type",
                             "Coordination Method",
                             "Timeout Propagation",
                             "Failure Handling",
                             "Recovery Strategy",
                             "Consistency Management"});
-                table1260.AddRow(new string[] {
+                table1223.AddRow(new string[] {
                             "Microservices",
                             "Service mesh",
                             "Hierarchical timeouts",
                             "Service isolation",
                             "Service retry",
                             "Service consistency"});
-                table1260.AddRow(new string[] {
+                table1223.AddRow(new string[] {
                             "Database cluster",
                             "Transaction coordination",
                             "Transaction timeouts",
                             "Node failover",
                             "Cluster recovery",
                             "ACID consistency"});
-                table1260.AddRow(new string[] {
+                table1223.AddRow(new string[] {
                             "CDN distribution",
                             "Edge coordination",
                             "Edge timeouts",
                             "Edge fallback",
                             "Content recovery",
                             "Content consistency"});
-                table1260.AddRow(new string[] {
+                table1223.AddRow(new string[] {
                             "Geographic distribution",
                             "Regional coordination",
                             "Regional timeouts",
                             "Region failover",
                             "Geographic recovery",
                             "Geographic consistency"});
-                table1260.AddRow(new string[] {
+                table1223.AddRow(new string[] {
                             "Load balancer",
                             "Load coordination",
                             "Balanced timeouts",
                             "Instance failover",
                             "Load recovery",
                             "Load consistency"});
-                table1260.AddRow(new string[] {
+                table1223.AddRow(new string[] {
                             "Cache cluster",
                             "Cache coordination",
                             "Cache timeouts",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Cache recovery",
                             "Cache consistency"});
 #line 87
-    testRunner.When("handling distributed timeouts:", ((string)(null)), table1260, "When ");
+    testRunner.When("handling distributed timeouts:", ((string)(null)), table1223, "When ");
 #line hidden
 #line 95
     testRunner.Then("coordination should prevent cascading timeouts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 103
     testRunner.And("graceful termination preserves system state and user data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1261 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1224 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cancellation Type",
                             "Trigger Condition",
                             "Cancellation Method",
                             "State Preservation",
                             "Resource Cleanup",
                             "User Notification"});
-                table1261.AddRow(new string[] {
+                table1224.AddRow(new string[] {
                             "User cancellation",
                             "User action",
                             "Immediate cancellation",
                             "Save progress",
                             "Release resources",
                             "Cancellation confirmed"});
-                table1261.AddRow(new string[] {
+                table1224.AddRow(new string[] {
                             "Timeout cancellation",
                             "Timeout exceeded",
                             "Graceful termination",
                             "Checkpoint state",
                             "Cleanup resources",
                             "Timeout explanation"});
-                table1261.AddRow(new string[] {
+                table1224.AddRow(new string[] {
                             "System cancellation",
                             "System overload",
                             "Priority cancellation",
                             "Preserve critical state",
                             "Priority cleanup",
                             "System notice"});
-                table1261.AddRow(new string[] {
+                table1224.AddRow(new string[] {
                             "Error cancellation",
                             "Error condition",
                             "Error termination",
                             "Error state handling",
                             "Error cleanup",
                             "Error explanation"});
-                table1261.AddRow(new string[] {
+                table1224.AddRow(new string[] {
                             "Forced cancellation",
                             "Emergency condition",
                             "Immediate termination",
                             "Emergency preservation",
                             "Emergency cleanup",
                             "Emergency notice"});
-                table1261.AddRow(new string[] {
+                table1224.AddRow(new string[] {
                             "Batch cancellation",
                             "Batch timeout",
                             "Batch termination",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Batch cleanup",
                             "Batch notice"});
 #line 104
-    testRunner.When("implementing request cancellation:", ((string)(null)), table1261, "When ");
+    testRunner.When("implementing request cancellation:", ((string)(null)), table1224, "When ");
 #line hidden
 #line 112
     testRunner.Then("cancellation should be safe and predictable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 120
     testRunner.And("proactive management improves user experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1262 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1225 = new TechTalk.SpecFlow.Table(new string[] {
                             "Prediction Type",
                             "Prediction Model",
                             "Prediction Accuracy",
                             "Early Warning Time",
                             "Intervention Strategy",
                             "Success Rate"});
-                table1262.AddRow(new string[] {
+                table1225.AddRow(new string[] {
                             "Request complexity",
                             "Complexity analysis",
                             "80% accuracy",
                             "50% of timeout",
                             "Resource boost",
                             "75% success"});
-                table1262.AddRow(new string[] {
+                table1225.AddRow(new string[] {
                             "System load",
                             "Load forecasting",
                             "85% accuracy",
                             "30% of timeout",
                             "Load balancing",
                             "80% success"});
-                table1262.AddRow(new string[] {
+                table1225.AddRow(new string[] {
                             "Resource availability",
                             "Resource monitoring",
                             "90% accuracy",
                             "25% of timeout",
                             "Resource allocation",
                             "85% success"});
-                table1262.AddRow(new string[] {
+                table1225.AddRow(new string[] {
                             "User patterns",
                             "Behavioral analysis",
                             "70% accuracy",
                             "40% of timeout",
                             "User guidance",
                             "70% success"});
-                table1262.AddRow(new string[] {
+                table1225.AddRow(new string[] {
                             "Historical trends",
                             "Trend analysis",
                             "75% accuracy",
                             "45% of timeout",
                             "Proactive scaling",
                             "78% success"});
-                table1262.AddRow(new string[] {
+                table1225.AddRow(new string[] {
                             "External dependencies",
                             "Dependency monitoring",
                             "85% accuracy",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Service switching",
                             "82% success"});
 #line 121
-    testRunner.When("implementing timeout prediction:", ((string)(null)), table1262, "When ");
+    testRunner.When("implementing timeout prediction:", ((string)(null)), table1225, "When ");
 #line hidden
 #line 129
     testRunner.Then("predictions should be accurate and actionable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 138
     testRunner.And("clear communication reduces frustration and enables appropriate action", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1263 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1226 = new TechTalk.SpecFlow.Table(new string[] {
                             "Communication Type",
                             "Information Provided",
                             "Timing",
                             "Communication Channel",
                             "User Actions",
                             "Progress Indication"});
-                table1263.AddRow(new string[] {
+                table1226.AddRow(new string[] {
                             "Timeout warnings",
                             "Approaching timeout",
                             "75% of timeout elapsed",
                             "In-app notification",
                             "Cancel or wait",
                             "Time remaining"});
-                table1263.AddRow(new string[] {
+                table1226.AddRow(new string[] {
                             "Progress updates",
                             "Operation progress",
                             "Regular intervals",
                             "Progress indicators",
                             "Monitor progress",
                             "Completion percentage"});
-                table1263.AddRow(new string[] {
+                table1226.AddRow(new string[] {
                             "Delay explanations",
                             "Reason for delay",
                             "When delay detected",
                             "Status messages",
                             "Continue or cancel",
                             "Estimated completion"});
-                table1263.AddRow(new string[] {
+                table1226.AddRow(new string[] {
                             "Timeout occurrences",
                             "Timeout explanation",
                             "When timeout occurs",
                             "Error messages",
                             "Retry or alternative",
                             "Retry options"});
-                table1263.AddRow(new string[] {
+                table1226.AddRow(new string[] {
                             "Recovery status",
                             "Recovery progress",
                             "During recovery",
                             "Recovery notifications",
                             "Wait for recovery",
                             "Recovery progress"});
-                table1263.AddRow(new string[] {
+                table1226.AddRow(new string[] {
                             "Prevention guidance",
                             "How to avoid timeouts",
                             "Contextual help",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Optimize requests",
                             "Best practices"});
 #line 139
-    testRunner.When("communicating timeout information:", ((string)(null)), table1263, "When ");
+    testRunner.When("communicating timeout information:", ((string)(null)), table1226, "When ");
 #line hidden
 #line 147
     testRunner.Then("communication should be timely and informative", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 155
     testRunner.And("user control improves satisfaction and productivity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1264 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1227 = new TechTalk.SpecFlow.Table(new string[] {
                             "Preference Type",
                             "User Options",
                             "Default Setting",
                             "Impact on System",
                             "Validation Rules",
                             "Override Conditions"});
-                table1264.AddRow(new string[] {
+                table1227.AddRow(new string[] {
                             "Patience level",
                             "Impatient, Normal, Patient",
                             "Normal",
                             "Timeout adjustments",
                             "Reasonable limits",
                             "System constraints"});
-                table1264.AddRow(new string[] {
+                table1227.AddRow(new string[] {
                             "Retry preferences",
                             "Auto-retry, Ask, Never",
                             "Ask",
                             "Retry behavior",
                             "Retry limits",
                             "Critical operations"});
-                table1264.AddRow(new string[] {
+                table1227.AddRow(new string[] {
                             "Progress detail",
                             "Minimal, Standard, Detailed",
                             "Standard",
                             "Communication level",
                             "Display capacity",
                             "System performance"});
-                table1264.AddRow(new string[] {
+                table1227.AddRow(new string[] {
                             "Cancellation ease",
                             "Easy cancel, Standard, Confirm",
                             "Standard",
                             "Cancellation behavior",
                             "Safety checks",
                             "Data protection"});
-                table1264.AddRow(new string[] {
+                table1227.AddRow(new string[] {
                             "Background processing",
                             "Allow, Ask, Disable",
                             "Ask",
                             "Processing options",
                             "Resource limits",
                             "System capacity"});
-                table1264.AddRow(new string[] {
+                table1227.AddRow(new string[] {
                             "Notification frequency",
                             "Frequent, Normal, Minimal",
                             "Normal",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "User attention",
                             "Critical updates"});
 #line 156
-    testRunner.When("providing timeout preferences:", ((string)(null)), table1264, "When ");
+    testRunner.When("providing timeout preferences:", ((string)(null)), table1227, "When ");
 #line hidden
 #line 164
     testRunner.Then("preferences should be respected within system limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 172
     testRunner.And("inclusive design serves users with diverse needs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1265 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1228 = new TechTalk.SpecFlow.Table(new string[] {
                             "Accessibility Feature",
                             "Implementation",
                             "User Benefit",
                             "Compliance Standard",
                             "Testing Method",
                             "Maintenance Requirements"});
-                table1265.AddRow(new string[] {
+                table1228.AddRow(new string[] {
                             "Screen reader support",
                             "ARIA labels and announcements",
                             "Vision accessibility",
                             "WCAG 2.1 AA",
                             "Screen reader testing",
                             "Label updates"});
-                table1265.AddRow(new string[] {
+                table1228.AddRow(new string[] {
                             "Keyboard navigation",
                             "Full keyboard control",
                             "Motor accessibility",
                             "WCAG 2.1 AA",
                             "Keyboard testing",
                             "Interaction updates"});
-                table1265.AddRow(new string[] {
+                table1228.AddRow(new string[] {
                             "High contrast mode",
                             "High contrast indicators",
                             "Vision accessibility",
                             "WCAG 2.1 AA",
                             "Contrast testing",
                             "Visual updates"});
-                table1265.AddRow(new string[] {
+                table1228.AddRow(new string[] {
                             "Voice control",
                             "Voice command support",
                             "Motor accessibility",
                             "Platform standards",
                             "Voice testing",
                             "Command updates"});
-                table1265.AddRow(new string[] {
+                table1228.AddRow(new string[] {
                             "Cognitive support",
                             "Simple clear language",
                             "Cognitive accessibility",
                             "Plain language standards",
                             "Cognitive testing",
                             "Language updates"});
-                table1265.AddRow(new string[] {
+                table1228.AddRow(new string[] {
                             "Customizable timing",
                             "Extended timeout options",
                             "Processing differences",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Timing testing",
                             "Option updates"});
 #line 173
-    testRunner.When("designing accessible timeout handling:", ((string)(null)), table1265, "When ");
+    testRunner.When("designing accessible timeout handling:", ((string)(null)), table1228, "When ");
 #line hidden
 #line 181
     testRunner.Then("accessibility should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 190
     testRunner.And("efficient processing maximizes system throughput", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1266 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1229 = new TechTalk.SpecFlow.Table(new string[] {
                             "Optimization Strategy",
                             "Performance Target",
                             "Implementation Method",
                             "Resource Usage",
                             "Effectiveness Measure",
                             "Scalability Impact"});
-                table1266.AddRow(new string[] {
+                table1229.AddRow(new string[] {
                             "Timeout monitoring",
                             "<1ms overhead",
                             "Efficient timers",
                             "Minimal CPU",
                             "Monitoring efficiency",
                             "Linear scaling"});
-                table1266.AddRow(new string[] {
+                table1229.AddRow(new string[] {
                             "Cancellation handling",
                             "<5ms cancellation",
                             "Async cancellation",
                             "Cancellation resources",
                             "Cancellation speed",
                             "Cancellation scaling"});
-                table1266.AddRow(new string[] {
+                table1229.AddRow(new string[] {
                             "State management",
                             "<10ms state ops",
                             "Optimized state handling",
                             "Memory optimization",
                             "State efficiency",
                             "Memory scaling"});
-                table1266.AddRow(new string[] {
+                table1229.AddRow(new string[] {
                             "Resource cleanup",
                             "<100ms cleanup",
                             "Efficient cleanup",
                             "Cleanup resources",
                             "Cleanup thoroughness",
                             "Cleanup scaling"});
-                table1266.AddRow(new string[] {
+                table1229.AddRow(new string[] {
                             "Communication overhead",
                             "<2ms communication",
                             "Optimized messaging",
                             "Communication resources",
                             "Message efficiency",
                             "Communication scaling"});
-                table1266.AddRow(new string[] {
+                table1229.AddRow(new string[] {
                             "Prediction processing",
                             "<50ms prediction",
                             "ML optimization",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Prediction accuracy",
                             "Prediction scaling"});
 #line 191
-    testRunner.When("optimizing timeout handling:", ((string)(null)), table1266, "When ");
+    testRunner.When("optimizing timeout handling:", ((string)(null)), table1229, "When ");
 #line hidden
 #line 199
     testRunner.Then("optimization should maintain low overhead", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 207
     testRunner.And("efficient management optimizes system performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1267 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1230 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resource Type",
                             "Management Strategy",
                             "Allocation Method",
                             "Monitoring Approach",
                             "Optimization Technique",
                             "Recovery Process"});
-                table1267.AddRow(new string[] {
+                table1230.AddRow(new string[] {
                             "CPU resources",
                             "CPU priority management",
                             "Priority allocation",
                             "CPU monitoring",
                             "CPU optimization",
                             "CPU recovery"});
-                table1267.AddRow(new string[] {
+                table1230.AddRow(new string[] {
                             "Memory resources",
                             "Memory pool management",
                             "Pool allocation",
                             "Memory monitoring",
                             "Memory optimization",
                             "Memory recovery"});
-                table1267.AddRow(new string[] {
+                table1230.AddRow(new string[] {
                             "Network resources",
                             "Network bandwidth management",
                             "Bandwidth allocation",
                             "Network monitoring",
                             "Network optimization",
                             "Network recovery"});
-                table1267.AddRow(new string[] {
+                table1230.AddRow(new string[] {
                             "Database connections",
                             "Connection pool management",
                             "Pool allocation",
                             "Connection monitoring",
                             "Connection optimization",
                             "Connection recovery"});
-                table1267.AddRow(new string[] {
+                table1230.AddRow(new string[] {
                             "File handles",
                             "Handle management",
                             "Handle allocation",
                             "Handle monitoring",
                             "Handle optimization",
                             "Handle recovery"});
-                table1267.AddRow(new string[] {
+                table1230.AddRow(new string[] {
                             "Thread resources",
                             "Thread pool management",
                             "Thread allocation",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Thread optimization",
                             "Thread recovery"});
 #line 208
-    testRunner.When("managing timeout resources:", ((string)(null)), table1267, "When ");
+    testRunner.When("managing timeout resources:", ((string)(null)), table1230, "When ");
 #line hidden
 #line 216
     testRunner.Then("management should be proactive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 225
     testRunner.And("resilient operations maintain service availability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1268 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1231 = new TechTalk.SpecFlow.Table(new string[] {
                             "Recovery Type",
                             "Recovery Strategy",
                             "Recovery Time",
                             "Data Integrity",
                             "Service Availability",
                             "User Experience"});
-                table1268.AddRow(new string[] {
+                table1231.AddRow(new string[] {
                             "Automatic retry",
                             "Intelligent retry with backoff",
                             "<30 seconds",
                             "Preserved",
                             "Maintained",
                             "Retry notification"});
-                table1268.AddRow(new string[] {
+                table1231.AddRow(new string[] {
                             "Manual retry",
                             "User-initiated retry",
                             "User-controlled",
                             "Preserved",
                             "User-dependent",
                             "Retry options"});
-                table1268.AddRow(new string[] {
+                table1231.AddRow(new string[] {
                             "Alternative processing",
                             "Fallback mechanisms",
                             "<60 seconds",
                             "Alternative approach",
                             "Degraded service",
                             "Alternative notification"});
-                table1268.AddRow(new string[] {
+                table1231.AddRow(new string[] {
                             "Deferred processing",
                             "Queue for later",
                             "Variable",
                             "Queued safely",
                             "Delayed service",
                             "Queue notification"});
-                table1268.AddRow(new string[] {
+                table1231.AddRow(new string[] {
                             "Partial recovery",
                             "Partial operation completion",
                             "<15 seconds",
                             "Partial preservation",
                             "Partial service",
                             "Partial notification"});
-                table1268.AddRow(new string[] {
+                table1231.AddRow(new string[] {
                             "Emergency recovery",
                             "Emergency procedures",
                             "<5 minutes",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Emergency service",
                             "Emergency notification"});
 #line 226
-    testRunner.When("implementing timeout recovery:", ((string)(null)), table1268, "When ");
+    testRunner.When("implementing timeout recovery:", ((string)(null)), table1231, "When ");
 #line hidden
 #line 234
     testRunner.Then("recovery should be comprehensive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 242
     testRunner.And("prevention mechanisms ensure system stability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1269 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1232 = new TechTalk.SpecFlow.Table(new string[] {
                             "Prevention Strategy",
                             "Implementation Method",
                             "Detection Criteria",
                             "Intervention Actions",
                             "Effectiveness Measure",
                             "System Impact"});
-                table1269.AddRow(new string[] {
+                table1232.AddRow(new string[] {
                             "Circuit breakers",
                             "Service isolation",
                             "Timeout rate thresholds",
                             "Service disconnection",
                             "Isolation effectiveness",
                             "Service degradation"});
-                table1269.AddRow(new string[] {
+                table1232.AddRow(new string[] {
                             "Load shedding",
                             "Request dropping",
                             "System load monitoring",
                             "Priority-based dropping",
                             "Load reduction",
                             "User impact"});
-                table1269.AddRow(new string[] {
+                table1232.AddRow(new string[] {
                             "Bulkhead isolation",
                             "Resource partitioning",
                             "Resource exhaustion",
                             "Resource isolation",
                             "Partition effectiveness",
                             "Resource limitation"});
-                table1269.AddRow(new string[] {
+                table1232.AddRow(new string[] {
                             "Backpressure",
                             "Flow control",
                             "Queue depth monitoring",
                             "Request throttling",
                             "Flow control effectiveness",
                             "Throughput reduction"});
-                table1269.AddRow(new string[] {
+                table1232.AddRow(new string[] {
                             "Timeout hierarchies",
                             "Layered timeouts",
                             "Layer timeout monitoring",
                             "Layer isolation",
                             "Hierarchy effectiveness",
                             "Layer impact"});
-                table1269.AddRow(new string[] {
+                table1232.AddRow(new string[] {
                             "Emergency modes",
                             "System protection",
                             "System stress detection",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Protection effectiveness",
                             "Service limitation"});
 #line 243
-    testRunner.When("preventing cascading timeouts:", ((string)(null)), table1269, "When ");
+    testRunner.When("preventing cascading timeouts:", ((string)(null)), table1232, "When ");
 #line hidden
 #line 251
     testRunner.Then("prevention should be proactive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 260
     testRunner.And("insights drive optimization and improvement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1270 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1233 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Dimension",
                             "Analysis Method",
                             "Pattern Recognition",
                             "Optimization Opportunity",
                             "Implementation Strategy",
                             "Success Metrics"});
-                table1270.AddRow(new string[] {
+                table1233.AddRow(new string[] {
                             "Timeout frequency",
                             "Frequency analysis",
                             "Timeout trends",
                             "Timeout reduction",
                             "Timeout optimization",
                             "Frequency reduction"});
-                table1270.AddRow(new string[] {
+                table1233.AddRow(new string[] {
                             "Timeout causes",
                             "Root cause analysis",
                             "Cause patterns",
                             "Cause elimination",
                             "Cause mitigation",
                             "Cause reduction"});
-                table1270.AddRow(new string[] {
+                table1233.AddRow(new string[] {
                             "User impact",
                             "Impact analysis",
                             "Impact patterns",
                             "Impact reduction",
                             "User experience improvement",
                             "Impact mitigation"});
-                table1270.AddRow(new string[] {
+                table1233.AddRow(new string[] {
                             "System performance",
                             "Performance correlation",
                             "Performance patterns",
                             "Performance optimization",
                             "System tuning",
                             "Performance improvement"});
-                table1270.AddRow(new string[] {
+                table1233.AddRow(new string[] {
                             "Resource utilization",
                             "Resource analysis",
                             "Resource patterns",
                             "Resource optimization",
                             "Resource management",
                             "Resource efficiency"});
-                table1270.AddRow(new string[] {
+                table1233.AddRow(new string[] {
                             "Recovery effectiveness",
                             "Recovery analysis",
                             "Recovery patterns",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Recovery optimization",
                             "Recovery success"});
 #line 261
-    testRunner.When("analyzing timeout patterns:", ((string)(null)), table1270, "When ");
+    testRunner.When("analyzing timeout patterns:", ((string)(null)), table1233, "When ");
 #line hidden
 #line 269
     testRunner.Then("analytics should provide actionable insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 277
     testRunner.And("proactive optimization prevents timeout issues", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1271 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1234 = new TechTalk.SpecFlow.Table(new string[] {
                             "Prediction Type",
                             "Prediction Model",
                             "Prediction Horizon",
                             "Accuracy Target",
                             "Action Triggers",
                             "Optimization Actions"});
-                table1271.AddRow(new string[] {
+                table1234.AddRow(new string[] {
                             "Timeout likelihood",
                             "ML classification",
                             "5-minute forecast",
                             "85% accuracy",
                             "High likelihood",
                             "Proactive intervention"});
-                table1271.AddRow(new string[] {
+                table1234.AddRow(new string[] {
                             "System capacity",
                             "Capacity modeling",
                             "15-minute forecast",
                             "80% accuracy",
                             "Capacity exhaustion",
                             "Capacity scaling"});
-                table1271.AddRow(new string[] {
+                table1234.AddRow(new string[] {
                             "Load patterns",
                             "Load forecasting",
                             "30-minute forecast",
                             "90% accuracy",
                             "Load spikes",
                             "Load balancing"});
-                table1271.AddRow(new string[] {
+                table1234.AddRow(new string[] {
                             "Performance degradation",
                             "Performance prediction",
                             "10-minute forecast",
                             "75% accuracy",
                             "Performance decline",
                             "Performance tuning"});
-                table1271.AddRow(new string[] {
+                table1234.AddRow(new string[] {
                             "Resource exhaustion",
                             "Resource modeling",
                             "20-minute forecast",
                             "85% accuracy",
                             "Resource depletion",
                             "Resource allocation"});
-                table1271.AddRow(new string[] {
+                table1234.AddRow(new string[] {
                             "User behavior",
                             "Behavioral prediction",
                             "60-minute forecast",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Usage pattern changes",
                             "Behavior adaptation"});
 #line 278
-    testRunner.When("implementing predictive timeout analytics:", ((string)(null)), table1271, "When ");
+    testRunner.When("implementing predictive timeout analytics:", ((string)(null)), table1234, "When ");
 #line hidden
 #line 286
     testRunner.Then("predictions should be accurate and actionable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1854,49 +1854,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 295
     testRunner.And("operational guides ensure consistent timeout management", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1272 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1235 = new TechTalk.SpecFlow.Table(new string[] {
                             "Documentation Type",
                             "Content Scope",
                             "Audience",
                             "Update Frequency",
                             "Review Process",
                             "Quality Standards"});
-                table1272.AddRow(new string[] {
+                table1235.AddRow(new string[] {
                             "User guides",
                             "User timeout information",
                             "End users",
                             "Quarterly",
                             "User feedback",
                             "User comprehension"});
-                table1272.AddRow(new string[] {
+                table1235.AddRow(new string[] {
                             "Admin guides",
                             "Timeout configuration",
                             "Administrators",
                             "Monthly",
                             "Admin review",
                             "Technical accuracy"});
-                table1272.AddRow(new string[] {
+                table1235.AddRow(new string[] {
                             "Developer docs",
                             "Timeout API documentation",
                             "Developers",
                             "Bi-weekly",
                             "Developer feedback",
                             "API completeness"});
-                table1272.AddRow(new string[] {
+                table1235.AddRow(new string[] {
                             "Operational runbooks",
                             "Timeout troubleshooting",
                             "Operations team",
                             "Monthly",
                             "Operations review",
                             "Operational effectiveness"});
-                table1272.AddRow(new string[] {
+                table1235.AddRow(new string[] {
                             "Performance guides",
                             "Timeout optimization",
                             "Performance team",
                             "Quarterly",
                             "Performance review",
                             "Performance accuracy"});
-                table1272.AddRow(new string[] {
+                table1235.AddRow(new string[] {
                             "Compliance docs",
                             "Timeout compliance requirements",
                             "Compliance team",
@@ -1904,7 +1904,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Compliance review",
                             "Compliance accuracy"});
 #line 296
-    testRunner.When("maintaining timeout documentation:", ((string)(null)), table1272, "When ");
+    testRunner.When("maintaining timeout documentation:", ((string)(null)), table1235, "When ");
 #line hidden
 #line 304
     testRunner.Then("documentation should be comprehensive and current", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1958,49 +1958,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
 #line 311
     testRunner.Given("timeout handling systems require long-term sustainability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1273 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1236 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table1273.AddRow(new string[] {
+                table1236.AddRow(new string[] {
                             "Performance optimization",
                             "Complex timeout scenarios",
                             "Continuous optimization",
                             "Performance resources",
                             "Performance targets",
                             "Performance sustainability"});
-                table1273.AddRow(new string[] {
+                table1236.AddRow(new string[] {
                             "Technology evolution",
                             "Changing infrastructure",
                             "Technology adaptation",
                             "Technology resources",
                             "Technology currency",
                             "Technology sustainability"});
-                table1273.AddRow(new string[] {
+                table1236.AddRow(new string[] {
                             "User experience",
                             "Rising expectations",
                             "UX improvement",
                             "UX resources",
                             "User satisfaction",
                             "UX sustainability"});
-                table1273.AddRow(new string[] {
+                table1236.AddRow(new string[] {
                             "System complexity",
                             "Growing system complexity",
                             "Complexity management",
                             "Management resources",
                             "Complexity control",
                             "Complexity sustainability"});
-                table1273.AddRow(new string[] {
+                table1236.AddRow(new string[] {
                             "Operational efficiency",
                             "Operational overhead",
                             "Efficiency improvement",
                             "Efficiency resources",
                             "Operational metrics",
                             "Efficiency sustainability"});
-                table1273.AddRow(new string[] {
+                table1236.AddRow(new string[] {
                             "Innovation integration",
                             "Emerging capabilities",
                             "Innovation adoption",
@@ -2008,7 +2008,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Errors
                             "Innovation benefits",
                             "Innovation sustainability"});
 #line 312
-    testRunner.When("planning timeout handling sustainability:", ((string)(null)), table1273, "When ");
+    testRunner.When("planning timeout handling sustainability:", ((string)(null)), table1236, "When ");
 #line hidden
 #line 320
     testRunner.Then("sustainability should be systematically planned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

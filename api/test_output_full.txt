@@ -1,0 +1,13 @@
+Test run for /home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/UPTRMS.Api.Tests.dll (.NETCoreApp,Version=v9.0)
+VSTest version 17.12.0 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.4.1+b9eacec401 (64-bit .NET 9.0.6)
+[xUnit.net 00:00:00.09]   Discovering: UPTRMS.Api.Tests
+[xUnit.net 00:00:00.49]   Discovered:  UPTRMS.Api.Tests
+[xUnit.net 00:00:00.49]   Starting:    UPTRMS.Api.Tests
+-> Loading plugin /home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/LivingDoc.SpecFlowPlugin.dll
+-> Loading plugin /home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/TechTalk.SpecFlow.xUnit.SpecFlowPlugin.dll
+-> Loading plugin /home/srowe/workspace/pediatric-therapy-resource/api/Tests/bin/Debug/UPTRMS.Api.Tests.dll
+-> Using specflow.json

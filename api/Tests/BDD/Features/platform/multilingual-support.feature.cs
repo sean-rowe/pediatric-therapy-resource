@@ -128,32 +128,32 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 14
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1912 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1875 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1912.AddRow(new string[] {
+                table1875.AddRow(new string[] {
                             "languageCode",
                             "string"});
-                table1912.AddRow(new string[] {
+                table1875.AddRow(new string[] {
                             "nativeName",
                             "string"});
-                table1912.AddRow(new string[] {
+                table1875.AddRow(new string[] {
                             "englishName",
                             "string"});
-                table1912.AddRow(new string[] {
+                table1875.AddRow(new string[] {
                             "rtl",
                             "boolean"});
-                table1912.AddRow(new string[] {
+                table1875.AddRow(new string[] {
                             "coverage",
                             "number"});
-                table1912.AddRow(new string[] {
+                table1875.AddRow(new string[] {
                             "flag",
                             "string"});
-                table1912.AddRow(new string[] {
+                table1875.AddRow(new string[] {
                             "regions",
                             "array"});
 #line 15
-    testRunner.And("the response should contain array of:", ((string)(null)), table1912, "And ");
+    testRunner.And("the response should contain array of:", ((string)(null)), table1875, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -188,26 +188,26 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1913 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1876 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1913.AddRow(new string[] {
+                table1876.AddRow(new string[] {
                             "primaryLanguage",
                             "es"});
-                table1913.AddRow(new string[] {
+                table1876.AddRow(new string[] {
                             "secondaryLanguage",
                             "en"});
-                table1913.AddRow(new string[] {
+                table1876.AddRow(new string[] {
                             "region",
                             "MX"});
-                table1913.AddRow(new string[] {
+                table1876.AddRow(new string[] {
                             "dateFormat",
                             "DD/MM/YYYY"});
-                table1913.AddRow(new string[] {
+                table1876.AddRow(new string[] {
                             "numberFormat",
                             "1.234,56"});
 #line 28
-    testRunner.When("I send a PUT request to \"/api/localization/user-language\" with:", ((string)(null)), table1913, "When ");
+    testRunner.When("I send a PUT request to \"/api/localization/user-language\" with:", ((string)(null)), table1876, "When ");
 #line hidden
 #line 35
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -260,23 +260,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 44
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1914 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1877 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1914.AddRow(new string[] {
+                table1877.AddRow(new string[] {
                             "originalLanguage",
                             "string"});
-                table1914.AddRow(new string[] {
+                table1877.AddRow(new string[] {
                             "availableLanguages",
                             "array"});
-                table1914.AddRow(new string[] {
+                table1877.AddRow(new string[] {
                             "translationQuality",
                             "object"});
-                table1914.AddRow(new string[] {
+                table1877.AddRow(new string[] {
                             "lastUpdated",
                             "object"});
 #line 45
-    testRunner.And("the response should contain:", ((string)(null)), table1914, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1877, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -314,44 +314,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 55
     testRunner.Given("resource \"res-123\" is in English", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1915 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1878 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1915.AddRow(new string[] {
+                table1878.AddRow(new string[] {
                             "targetLanguage",
                             "es"});
-                table1915.AddRow(new string[] {
+                table1878.AddRow(new string[] {
                             "priority",
                             "high"});
-                table1915.AddRow(new string[] {
+                table1878.AddRow(new string[] {
                             "culturalAdapt",
                             "true"});
-                table1915.AddRow(new string[] {
+                table1878.AddRow(new string[] {
                             "preserveLayout",
                             "true"});
 #line 56
-    testRunner.When("I send a POST request to \"/api/localization/resources/res-123/translate\" with:", ((string)(null)), table1915, "When ");
+    testRunner.When("I send a POST request to \"/api/localization/resources/res-123/translate\" with:", ((string)(null)), table1878, "When ");
 #line hidden
 #line 62
     testRunner.Then("the response status should be 202", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1916 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1879 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1916.AddRow(new string[] {
+                table1879.AddRow(new string[] {
                             "translationId",
                             "string"});
-                table1916.AddRow(new string[] {
+                table1879.AddRow(new string[] {
                             "status",
                             "string"});
-                table1916.AddRow(new string[] {
+                table1879.AddRow(new string[] {
                             "estimatedTime",
                             "string"});
-                table1916.AddRow(new string[] {
+                table1879.AddRow(new string[] {
                             "method",
                             "string"});
 #line 63
-    testRunner.And("the response should contain:", ((string)(null)), table1916, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1879, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -392,23 +392,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 74
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1917 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1880 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "type"});
-                table1917.AddRow(new string[] {
+                table1880.AddRow(new string[] {
                             "language",
                             "string"});
-                table1917.AddRow(new string[] {
+                table1880.AddRow(new string[] {
                             "strings",
                             "object"});
-                table1917.AddRow(new string[] {
+                table1880.AddRow(new string[] {
                             "coverage",
                             "number"});
-                table1917.AddRow(new string[] {
+                table1880.AddRow(new string[] {
                             "lastUpdated",
                             "string"});
 #line 75
-    testRunner.And("the response should contain:", ((string)(null)), table1917, "And ");
+    testRunner.And("the response should contain:", ((string)(null)), table1880, "And ");
 #line hidden
 #line 81
     testRunner.And("all UI elements should have translations", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -446,23 +446,23 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 6
   this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1918 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1881 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1918.AddRow(new string[] {
+                table1881.AddRow(new string[] {
                             "templateType",
                             "progress-report"});
-                table1918.AddRow(new string[] {
+                table1881.AddRow(new string[] {
                             "studentId",
                             "student-123"});
-                table1918.AddRow(new string[] {
+                table1881.AddRow(new string[] {
                             "languages",
                             "[\"es\", \"zh\", \"ar\"]"});
-                table1918.AddRow(new string[] {
+                table1881.AddRow(new string[] {
                             "includeVisuals",
                             "true"});
 #line 86
-    testRunner.When("I send a POST request to \"/api/localization/parent-communications\" with:", ((string)(null)), table1918, "When ");
+    testRunner.When("I send a POST request to \"/api/localization/parent-communications\" with:", ((string)(null)), table1881, "When ");
 #line hidden
 #line 92
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -555,20 +555,20 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 107
     testRunner.Given("I switch to Arabic interface", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1919 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1882 = new TechTalk.SpecFlow.Table(new string[] {
                             "field",
                             "value"});
-                table1919.AddRow(new string[] {
+                table1882.AddRow(new string[] {
                             "mirrorLayout",
                             "true"});
-                table1919.AddRow(new string[] {
+                table1882.AddRow(new string[] {
                             "textDirection",
                             "rtl"});
-                table1919.AddRow(new string[] {
+                table1882.AddRow(new string[] {
                             "numberFormat",
                             "eastern-arabic"});
 #line 108
-    testRunner.When("I send a PUT request to \"/api/localization/rtl-settings\" with:", ((string)(null)), table1919, "When ");
+    testRunner.When("I send a PUT request to \"/api/localization/rtl-settings\" with:", ((string)(null)), table1882, "When ");
 #line hidden
 #line 113
     testRunner.Then("the response status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -621,50 +621,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 122
     testRunner.When("I switch the interface to Arabic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1920 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1883 = new TechTalk.SpecFlow.Table(new string[] {
                             "UI Element",
                             "RTL Transformation"});
-                table1920.AddRow(new string[] {
+                table1883.AddRow(new string[] {
                             "Navigation menu",
                             "Right side to left side"});
-                table1920.AddRow(new string[] {
+                table1883.AddRow(new string[] {
                             "Text alignment",
                             "Right-aligned"});
-                table1920.AddRow(new string[] {
+                table1883.AddRow(new string[] {
                             "Progress bars",
                             "Fill right to left"});
-                table1920.AddRow(new string[] {
+                table1883.AddRow(new string[] {
                             "Breadcrumbs",
                             "Start from right"});
-                table1920.AddRow(new string[] {
+                table1883.AddRow(new string[] {
                             "Modal dialogs",
                             "Right-to-left text flow"});
-                table1920.AddRow(new string[] {
+                table1883.AddRow(new string[] {
                             "Form fields",
                             "Labels on right, inputs on left"});
-                table1920.AddRow(new string[] {
+                table1883.AddRow(new string[] {
                             "Data tables",
                             "Column order reversed"});
 #line 123
-    testRunner.Then("the entire layout should flip to RTL within 2 seconds:", ((string)(null)), table1920, "Then ");
+    testRunner.Then("the entire layout should flip to RTL within 2 seconds:", ((string)(null)), table1883, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1921 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1884 = new TechTalk.SpecFlow.Table(new string[] {
                             "Text Feature",
                             "Implementation"});
-                table1921.AddRow(new string[] {
+                table1884.AddRow(new string[] {
                             "Font selection",
                             "Arabic-optimized fonts"});
-                table1921.AddRow(new string[] {
+                table1884.AddRow(new string[] {
                             "Number handling",
                             "Eastern Arabic numerals option"});
-                table1921.AddRow(new string[] {
+                table1884.AddRow(new string[] {
                             "Mixed content",
                             "Proper bidirectional text"});
-                table1921.AddRow(new string[] {
+                table1884.AddRow(new string[] {
                             "Date formatting",
                             "Arabic date format"});
 #line 132
-    testRunner.And("Arabic text should display properly:", ((string)(null)), table1921, "And ");
+    testRunner.And("Arabic text should display properly:", ((string)(null)), table1884, "And ");
 #line hidden
 #line 138
     testRunner.When("I search for therapy resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -714,44 +714,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 145
     testRunner.When("I switch the interface to Hebrew", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1922 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1885 = new TechTalk.SpecFlow.Table(new string[] {
                             "Hebrew Feature",
                             "Implementation"});
-                table1922.AddRow(new string[] {
+                table1885.AddRow(new string[] {
                             "Text direction",
                             "Right-to-left flow"});
-                table1922.AddRow(new string[] {
+                table1885.AddRow(new string[] {
                             "Menu orientation",
                             "Right-side primary navigation"});
-                table1922.AddRow(new string[] {
+                table1885.AddRow(new string[] {
                             "Calendar layout",
                             "Hebrew date support"});
-                table1922.AddRow(new string[] {
+                table1885.AddRow(new string[] {
                             "Number formatting",
                             "Hebrew numerals option"});
-                table1922.AddRow(new string[] {
+                table1885.AddRow(new string[] {
                             "Keyboard input",
                             "Hebrew keyboard support"});
 #line 146
-    testRunner.Then("the platform should support full Hebrew RTL:", ((string)(null)), table1922, "Then ");
+    testRunner.Then("the platform should support full Hebrew RTL:", ((string)(null)), table1885, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1923 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1886 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resource Type",
                             "Hebrew Content"});
-                table1923.AddRow(new string[] {
+                table1886.AddRow(new string[] {
                             "Worksheets",
                             "Hebrew text and instructions"});
-                table1923.AddRow(new string[] {
+                table1886.AddRow(new string[] {
                             "Visual schedules",
                             "Hebrew labels and descriptions"});
-                table1923.AddRow(new string[] {
+                table1886.AddRow(new string[] {
                             "Communication cards",
                             "Hebrew vocabulary and phrases"});
-                table1923.AddRow(new string[] {
+                table1886.AddRow(new string[] {
                             "Parent materials",
                             "Hebrew educational content"});
 #line 153
-    testRunner.And("Hebrew therapy resources should be available:", ((string)(null)), table1923, "And ");
+    testRunner.And("Hebrew therapy resources should be available:", ((string)(null)), table1886, "And ");
 #line hidden
 #line 159
     testRunner.When("I create custom materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -801,44 +801,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 166
     testRunner.When("I access Spanish language resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1924 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1887 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cultural Element",
                             "Adaptation"});
-                table1924.AddRow(new string[] {
+                table1887.AddRow(new string[] {
                             "Family imagery",
                             "Hispanic/Latino representation"});
-                table1924.AddRow(new string[] {
+                table1887.AddRow(new string[] {
                             "Food references",
                             "Culturally relevant foods"});
-                table1924.AddRow(new string[] {
+                table1887.AddRow(new string[] {
                             "Holiday content",
                             "Include Hispanic holidays"});
-                table1924.AddRow(new string[] {
+                table1887.AddRow(new string[] {
                             "Family structure",
                             "Extended family consideration"});
-                table1924.AddRow(new string[] {
+                table1887.AddRow(new string[] {
                             "Social customs",
                             "Respect for cultural practices"});
 #line 167
-    testRunner.Then("resources should be culturally adapted:", ((string)(null)), table1924, "Then ");
+    testRunner.Then("resources should be culturally adapted:", ((string)(null)), table1887, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1925 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1888 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resource Type",
                             "Cultural Adaptation"});
-                table1925.AddRow(new string[] {
+                table1888.AddRow(new string[] {
                             "Parent handouts",
                             "Formal vs informal Spanish"});
-                table1925.AddRow(new string[] {
+                table1888.AddRow(new string[] {
                             "Communication boards",
                             "Culturally relevant vocabulary"});
-                table1925.AddRow(new string[] {
+                table1888.AddRow(new string[] {
                             "Assessment tools",
                             "Culturally unbiased items"});
-                table1925.AddRow(new string[] {
+                table1888.AddRow(new string[] {
                             "Progress reports",
                             "Family-friendly language"});
 #line 174
-    testRunner.And("Spanish resources should include:", ((string)(null)), table1925, "And ");
+    testRunner.And("Spanish resources should include:", ((string)(null)), table1888, "And ");
 #line hidden
 #line 180
     testRunner.When("I generate parent materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -888,47 +888,47 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 187
     testRunner.When("I access resources for Asian families", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1926 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1889 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cultural Element",
                             "Adaptation"});
-                table1926.AddRow(new string[] {
+                table1889.AddRow(new string[] {
                             "Communication style",
                             "Respect for hierarchy"});
-                table1926.AddRow(new string[] {
+                table1889.AddRow(new string[] {
                             "Family involvement",
                             "Multi-generational approach"});
-                table1926.AddRow(new string[] {
+                table1889.AddRow(new string[] {
                             "Educational values",
                             "Academic achievement focus"});
-                table1926.AddRow(new string[] {
+                table1889.AddRow(new string[] {
                             "Visual representation",
                             "Asian family imagery"});
-                table1926.AddRow(new string[] {
+                table1889.AddRow(new string[] {
                             "Language mixing",
                             "Support for code-switching"});
 #line 188
-    testRunner.Then("cultural adaptations should include:", ((string)(null)), table1926, "Then ");
+    testRunner.Then("cultural adaptations should include:", ((string)(null)), table1889, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1927 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1890 = new TechTalk.SpecFlow.Table(new string[] {
                             "Language",
                             "Cultural Considerations"});
-                table1927.AddRow(new string[] {
+                table1890.AddRow(new string[] {
                             "Mandarin Chinese",
                             "Simplified and traditional"});
-                table1927.AddRow(new string[] {
+                table1890.AddRow(new string[] {
                             "Korean",
                             "Formal language levels"});
-                table1927.AddRow(new string[] {
+                table1890.AddRow(new string[] {
                             "Vietnamese",
                             "Tone mark accuracy"});
-                table1927.AddRow(new string[] {
+                table1890.AddRow(new string[] {
                             "Japanese",
                             "Hiragana, katakana, kanji"});
-                table1927.AddRow(new string[] {
+                table1890.AddRow(new string[] {
                             "Tagalog",
                             "Regional variations"});
 #line 195
-    testRunner.And("resources should be available in:", ((string)(null)), table1927, "And ");
+    testRunner.And("resources should be available in:", ((string)(null)), table1890, "And ");
 #line hidden
 #line 202
     testRunner.When("creating assessment materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -978,68 +978,68 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 209
     testRunner.When("I access ASL resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1928 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1891 = new TechTalk.SpecFlow.Table(new string[] {
                             "Resource Type",
                             "ASL Features"});
-                table1928.AddRow(new string[] {
+                table1891.AddRow(new string[] {
                             "Instruction videos",
                             "ASL with English captions"});
-                table1928.AddRow(new string[] {
+                table1891.AddRow(new string[] {
                             "Story books",
                             "ASL storytelling videos"});
-                table1928.AddRow(new string[] {
+                table1891.AddRow(new string[] {
                             "Vocabulary",
                             "Sign demonstrations"});
-                table1928.AddRow(new string[] {
+                table1891.AddRow(new string[] {
                             "Parent resources",
                             "ASL learning materials"});
-                table1928.AddRow(new string[] {
+                table1891.AddRow(new string[] {
                             "Assessment tools",
                             "ASL-accessible evaluations"});
 #line 210
-    testRunner.Then("I should find comprehensive video content:", ((string)(null)), table1928, "Then ");
+    testRunner.Then("I should find comprehensive video content:", ((string)(null)), table1891, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1929 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1892 = new TechTalk.SpecFlow.Table(new string[] {
                             "Video Feature",
                             "Purpose"});
-                table1929.AddRow(new string[] {
+                table1892.AddRow(new string[] {
                             "Speed control",
                             "Slow down for learning"});
-                table1929.AddRow(new string[] {
+                table1892.AddRow(new string[] {
                             "Full screen mode",
                             "Clear view of signs"});
-                table1929.AddRow(new string[] {
+                table1892.AddRow(new string[] {
                             "Captions toggle",
                             "On/off English text"});
-                table1929.AddRow(new string[] {
+                table1892.AddRow(new string[] {
                             "Download option",
                             "Offline viewing"});
-                table1929.AddRow(new string[] {
+                table1892.AddRow(new string[] {
                             "Loop function",
                             "Repeat difficult signs"});
 #line 217
-    testRunner.And("video player should include:", ((string)(null)), table1929, "And ");
+    testRunner.And("video player should include:", ((string)(null)), table1892, "And ");
 #line hidden
 #line 224
     testRunner.When("I assign ASL resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1930 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1893 = new TechTalk.SpecFlow.Table(new string[] {
                             "Communication Type",
                             "Format"});
-                table1930.AddRow(new string[] {
+                table1893.AddRow(new string[] {
                             "Instructions",
                             "Written English or ASL video"});
-                table1930.AddRow(new string[] {
+                table1893.AddRow(new string[] {
                             "Progress updates",
                             "Visual charts and ASL video"});
-                table1930.AddRow(new string[] {
+                table1893.AddRow(new string[] {
                             "Practice tips",
                             "ASL video demonstrations"});
-                table1930.AddRow(new string[] {
+                table1893.AddRow(new string[] {
                             "Homework",
                             "ASL-accessible activities"});
 #line 225
-    testRunner.Then("parents should receive:", ((string)(null)), table1930, "Then ");
+    testRunner.Then("parents should receive:", ((string)(null)), table1893, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1081,62 +1081,62 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 236
     testRunner.When("I switch languages during therapy session", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1931 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1894 = new TechTalk.SpecFlow.Table(new string[] {
                             "Switching Feature",
                             "Implementation"});
-                table1931.AddRow(new string[] {
+                table1894.AddRow(new string[] {
                             "Quick toggle",
                             "One-click language change"});
-                table1931.AddRow(new string[] {
+                table1894.AddRow(new string[] {
                             "Mixed content",
                             "Bilingual resource display"});
-                table1931.AddRow(new string[] {
+                table1894.AddRow(new string[] {
                             "Session notes",
                             "Multilingual documentation"});
-                table1931.AddRow(new string[] {
+                table1894.AddRow(new string[] {
                             "Real-time translate",
                             "Auto-translate parent messages"});
 #line 237
-    testRunner.Then("the platform should support:", ((string)(null)), table1931, "Then ");
+    testRunner.Then("the platform should support:", ((string)(null)), table1894, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1932 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1895 = new TechTalk.SpecFlow.Table(new string[] {
                             "Data Continuity",
                             "Preservation"});
-                table1932.AddRow(new string[] {
+                table1895.AddRow(new string[] {
                             "Session progress",
                             "Maintained across languages"});
-                table1932.AddRow(new string[] {
+                table1895.AddRow(new string[] {
                             "Student data",
                             "Consistent regardless of language"});
-                table1932.AddRow(new string[] {
+                table1895.AddRow(new string[] {
                             "Assessment scores",
                             "Language-neutral storage"});
-                table1932.AddRow(new string[] {
+                table1895.AddRow(new string[] {
                             "Resource history",
                             "Tracked in all languages"});
 #line 243
-    testRunner.And("language switching should preserve:", ((string)(null)), table1932, "And ");
+    testRunner.And("language switching should preserve:", ((string)(null)), table1895, "And ");
 #line hidden
 #line 249
     testRunner.When("I document sessions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1933 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1896 = new TechTalk.SpecFlow.Table(new string[] {
                             "Documentation Feature",
                             "Capability"});
-                table1933.AddRow(new string[] {
+                table1896.AddRow(new string[] {
                             "Write in multiple languages",
                             "Code-switching support"});
-                table1933.AddRow(new string[] {
+                table1896.AddRow(new string[] {
                             "Auto-translate notes",
                             "For monolingual colleagues"});
-                table1933.AddRow(new string[] {
+                table1896.AddRow(new string[] {
                             "Language-tag content",
                             "Identify language per section"});
-                table1933.AddRow(new string[] {
+                table1896.AddRow(new string[] {
                             "Generate reports",
                             "In parent\'s preferred language"});
 #line 250
-    testRunner.Then("I should be able to:", ((string)(null)), table1933, "Then ");
+    testRunner.Then("I should be able to:", ((string)(null)), table1896, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1177,62 +1177,62 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 260
     testRunner.When("I report translation concerns", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1934 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1897 = new TechTalk.SpecFlow.Table(new string[] {
                             "Quality Action",
                             "Process"});
-                table1934.AddRow(new string[] {
+                table1897.AddRow(new string[] {
                             "Flag inaccuracies",
                             "Select text, describe concern"});
-                table1934.AddRow(new string[] {
+                table1897.AddRow(new string[] {
                             "Suggest corrections",
                             "Provide alternative translation"});
-                table1934.AddRow(new string[] {
+                table1897.AddRow(new string[] {
                             "Set priority level",
                             "Low/Medium/High clinical impact"});
-                table1934.AddRow(new string[] {
+                table1897.AddRow(new string[] {
                             "Track resolution",
                             "Monitor correction status"});
 #line 261
-    testRunner.Then("I should be able to:", ((string)(null)), table1934, "Then ");
+    testRunner.Then("I should be able to:", ((string)(null)), table1897, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1935 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1898 = new TechTalk.SpecFlow.Table(new string[] {
                             "Review Step",
                             "Responsible Party"});
-                table1935.AddRow(new string[] {
+                table1898.AddRow(new string[] {
                             "Initial review",
                             "Native speaker therapist"});
-                table1935.AddRow(new string[] {
+                table1898.AddRow(new string[] {
                             "Clinical review",
                             "Bilingual clinical expert"});
-                table1935.AddRow(new string[] {
+                table1898.AddRow(new string[] {
                             "Final approval",
                             "Translation committee"});
-                table1935.AddRow(new string[] {
+                table1898.AddRow(new string[] {
                             "Quality assurance",
                             "Automated consistency check"});
 #line 267
-    testRunner.And("the review process should include:", ((string)(null)), table1935, "And ");
+    testRunner.And("the review process should include:", ((string)(null)), table1898, "And ");
 #line hidden
 #line 273
     testRunner.When("translations are updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1936 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1899 = new TechTalk.SpecFlow.Table(new string[] {
                             "Update Notification",
                             "Content"});
-                table1936.AddRow(new string[] {
+                table1899.AddRow(new string[] {
                             "Version tracking",
                             "See translation history"});
-                table1936.AddRow(new string[] {
+                table1899.AddRow(new string[] {
                             "Credit translators",
                             "Acknowledge contributors"});
-                table1936.AddRow(new string[] {
+                table1899.AddRow(new string[] {
                             "Consistency check",
                             "Terminology database sync"});
-                table1936.AddRow(new string[] {
+                table1899.AddRow(new string[] {
                             "Quality metrics",
                             "Translation accuracy scores"});
 #line 274
-    testRunner.Then("users should receive:", ((string)(null)), table1936, "Then ");
+    testRunner.Then("users should receive:", ((string)(null)), table1899, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1273,62 +1273,62 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 284
     testRunner.When("I need to communicate therapy progress", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1937 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1900 = new TechTalk.SpecFlow.Table(new string[] {
                             "Communication Feature",
                             "Implementation"});
-                table1937.AddRow(new string[] {
+                table1900.AddRow(new string[] {
                             "Auto-detect language",
                             "Determine family preference"});
-                table1937.AddRow(new string[] {
+                table1900.AddRow(new string[] {
                             "Send translated messages",
                             "Real-time translation"});
-                table1937.AddRow(new string[] {
+                table1900.AddRow(new string[] {
                             "Include visual aids",
                             "Culture-appropriate images"});
-                table1937.AddRow(new string[] {
+                table1900.AddRow(new string[] {
                             "Provide audio messages",
                             "Text-to-speech in native language"});
 #line 285
-    testRunner.Then("I should be able to:", ((string)(null)), table1937, "Then ");
+    testRunner.Then("I should be able to:", ((string)(null)), table1900, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1938 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1901 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cultural Factor",
                             "Adaptation"});
-                table1938.AddRow(new string[] {
+                table1901.AddRow(new string[] {
                             "Formality level",
                             "Appropriate respectful tone"});
-                table1938.AddRow(new string[] {
+                table1901.AddRow(new string[] {
                             "Family structure",
                             "Address extended family"});
-                table1938.AddRow(new string[] {
+                table1901.AddRow(new string[] {
                             "Educational background",
                             "Adjust vocabulary complexity"});
-                table1938.AddRow(new string[] {
+                table1901.AddRow(new string[] {
                             "Communication style",
                             "Direct vs indirect approaches"});
 #line 291
-    testRunner.And("communication should adapt to:", ((string)(null)), table1938, "And ");
+    testRunner.And("communication should adapt to:", ((string)(null)), table1901, "And ");
 #line hidden
 #line 297
     testRunner.When("families respond", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1939 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1902 = new TechTalk.SpecFlow.Table(new string[] {
                             "Response Feature",
                             "Support"});
-                table1939.AddRow(new string[] {
+                table1902.AddRow(new string[] {
                             "Translated messages",
                             "Auto-translate to English"});
-                table1939.AddRow(new string[] {
+                table1902.AddRow(new string[] {
                             "Cultural context",
                             "Notes on cultural significance"});
-                table1939.AddRow(new string[] {
+                table1902.AddRow(new string[] {
                             "Urgency indicators",
                             "Culturally appropriate flags"});
-                table1939.AddRow(new string[] {
+                table1902.AddRow(new string[] {
                             "Preferred method",
                             "Text, email, or voice preference"});
 #line 298
-    testRunner.Then("I should receive:", ((string)(null)), table1939, "Then ");
+    testRunner.Then("I should receive:", ((string)(null)), table1902, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1369,71 +1369,71 @@ namespace UPTRMS.Api.Tests.BDD.Features.Platform
 #line 308
     testRunner.When("I access localized resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1940 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1903 = new TechTalk.SpecFlow.Table(new string[] {
                             "Localization Element",
                             "Implementation"});
-                table1940.AddRow(new string[] {
+                table1903.AddRow(new string[] {
                             "Currency formatting",
                             "Local currency symbols"});
-                table1940.AddRow(new string[] {
+                table1903.AddRow(new string[] {
                             "Date/time formats",
                             "Regional conventions"});
-                table1940.AddRow(new string[] {
+                table1903.AddRow(new string[] {
                             "Address formats",
                             "Country-specific layouts"});
-                table1940.AddRow(new string[] {
+                table1903.AddRow(new string[] {
                             "Phone number formats",
                             "National numbering plans"});
-                table1940.AddRow(new string[] {
+                table1903.AddRow(new string[] {
                             "Units of measurement",
                             "Metric vs imperial systems"});
-                table1940.AddRow(new string[] {
+                table1903.AddRow(new string[] {
                             "Color associations",
                             "Cultural color meanings"});
-                table1940.AddRow(new string[] {
+                table1903.AddRow(new string[] {
                             "Holiday calendars",
                             "Local and religious holidays"});
 #line 309
-    testRunner.Then("localization should include:", ((string)(null)), table1940, "Then ");
+    testRunner.Then("localization should include:", ((string)(null)), table1903, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1941 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1904 = new TechTalk.SpecFlow.Table(new string[] {
                             "Quality Metric",
                             "Requirement"});
-                table1941.AddRow(new string[] {
+                table1904.AddRow(new string[] {
                             "Cultural sensitivity",
                             "No offensive or inappropriate content"});
-                table1941.AddRow(new string[] {
+                table1904.AddRow(new string[] {
                             "Linguistic accuracy",
                             "Proper grammar and idioms"});
-                table1941.AddRow(new string[] {
+                table1904.AddRow(new string[] {
                             "Visual appropriateness",
                             "Culturally relevant imagery"});
-                table1941.AddRow(new string[] {
+                table1904.AddRow(new string[] {
                             "Functional compatibility",
                             "Works in target locale"});
 #line 318
-    testRunner.And("resources should be tested for:", ((string)(null)), table1941, "And ");
+    testRunner.And("resources should be tested for:", ((string)(null)), table1904, "And ");
 #line hidden
 #line 324
     testRunner.When("I create custom localized content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1942 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1905 = new TechTalk.SpecFlow.Table(new string[] {
                             "Creation Support",
                             "Feature"});
-                table1942.AddRow(new string[] {
+                table1905.AddRow(new string[] {
                             "Suggest improvements",
                             "Cultural adaptation tips"});
-                table1942.AddRow(new string[] {
+                table1905.AddRow(new string[] {
                             "Validate content",
                             "Automated cultural checks"});
-                table1942.AddRow(new string[] {
+                table1905.AddRow(new string[] {
                             "Provide templates",
                             "Locale-specific formats"});
-                table1942.AddRow(new string[] {
+                table1905.AddRow(new string[] {
                             "Enable collaboration",
                             "Work with cultural consultants"});
 #line 325
-    testRunner.Then("the platform should:", ((string)(null)), table1942, "Then ");
+    testRunner.Then("the platform should:", ((string)(null)), table1905, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -133,50 +133,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 15
     testRunner.Given("mobile apps require smooth animations and interactions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1801 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1764 = new TechTalk.SpecFlow.Table(new string[] {
                             "Device Category",
                             "Target Frame Rate",
                             "Animation Types",
                             "Performance Budget",
                             "Battery Impact"});
-                table1801.AddRow(new string[] {
+                table1764.AddRow(new string[] {
                             "High-end smartphones",
                             "60fps",
                             "Complex transitions",
                             "16.67ms/frame",
                             "<5%/hour"});
-                table1801.AddRow(new string[] {
+                table1764.AddRow(new string[] {
                             "Mid-range smartphones",
                             "45fps",
                             "Standard animations",
                             "22.22ms/frame",
                             "<8%/hour"});
-                table1801.AddRow(new string[] {
+                table1764.AddRow(new string[] {
                             "Budget smartphones",
                             "30fps",
                             "Simple animations",
                             "33.33ms/frame",
                             "<12%/hour"});
-                table1801.AddRow(new string[] {
+                table1764.AddRow(new string[] {
                             "Tablets (premium)",
                             "60fps",
                             "Multi-touch gestures",
                             "16.67ms/frame",
                             "<4%/hour"});
-                table1801.AddRow(new string[] {
+                table1764.AddRow(new string[] {
                             "Tablets (standard)",
                             "45fps",
                             "Standard interactions",
                             "22.22ms/frame",
                             "<7%/hour"});
-                table1801.AddRow(new string[] {
+                table1764.AddRow(new string[] {
                             "Older devices (3+ years)",
                             "24fps",
                             "Essential animations",
                             "41.67ms/frame",
                             "<15%/hour"});
 #line 16
-    testRunner.When("mobile animation performance is tested across device types:", ((string)(null)), table1801, "When ");
+    testRunner.When("mobile animation performance is tested across device types:", ((string)(null)), table1764, "When ");
 #line hidden
 #line 24
     testRunner.Then("animations should maintain target frame rates consistently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -226,62 +226,62 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 31
     testRunner.Given("touch interactions are critical for therapy activities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1802 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1765 = new TechTalk.SpecFlow.Table(new string[] {
                             "Interaction Type",
                             "Response Time Target",
                             "Accuracy Requirement",
                             "Multi-touch Support",
                             "Gesture Complexity"});
-                table1802.AddRow(new string[] {
+                table1765.AddRow(new string[] {
                             "Single tap",
                             "<16ms",
                             ">99%",
                             "N/A",
                             "Simple"});
-                table1802.AddRow(new string[] {
+                table1765.AddRow(new string[] {
                             "Double tap",
                             "<50ms",
                             ">95%",
                             "N/A",
                             "Simple"});
-                table1802.AddRow(new string[] {
+                table1765.AddRow(new string[] {
                             "Long press",
                             "<100ms",
                             ">98%",
                             "N/A",
                             "Simple"});
-                table1802.AddRow(new string[] {
+                table1765.AddRow(new string[] {
                             "Drag and drop",
                             "<16ms (tracking)",
                             ">95%",
                             "N/A",
                             "Medium"});
-                table1802.AddRow(new string[] {
+                table1765.AddRow(new string[] {
                             "Pinch to zoom",
                             "<16ms",
                             ">90%",
                             "Required",
                             "Medium"});
-                table1802.AddRow(new string[] {
+                table1765.AddRow(new string[] {
                             "Multi-finger gestures",
                             "<33ms",
                             ">85%",
                             "Required",
                             "Complex"});
-                table1802.AddRow(new string[] {
+                table1765.AddRow(new string[] {
                             "Drawing/tracing",
                             "<8ms",
                             ">98%",
                             "Optional",
                             "High precision"});
-                table1802.AddRow(new string[] {
+                table1765.AddRow(new string[] {
                             "Swipe gestures",
                             "<25ms",
                             ">95%",
                             "N/A",
                             "Medium"});
 #line 32
-    testRunner.When("touch responsiveness is tested across interaction types:", ((string)(null)), table1802, "When ");
+    testRunner.When("touch responsiveness is tested across interaction types:", ((string)(null)), table1765, "When ");
 #line hidden
 #line 42
     testRunner.Then("touch responses should be immediate and accurate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -331,44 +331,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 49
     testRunner.Given("fast app startup is essential for user engagement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1803 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1766 = new TechTalk.SpecFlow.Table(new string[] {
                             "Startup Scenario",
                             "Cold Start Target",
                             "Warm Start Target",
                             "Memory Usage",
                             "Storage Impact"});
-                table1803.AddRow(new string[] {
+                table1766.AddRow(new string[] {
                             "First-time installation",
                             "<3 seconds",
                             "N/A",
                             "<200MB",
                             "<500MB"});
-                table1803.AddRow(new string[] {
+                table1766.AddRow(new string[] {
                             "Daily first launch",
                             "<2 seconds",
                             "<1 second",
                             "<150MB",
                             "<400MB"});
-                table1803.AddRow(new string[] {
+                table1766.AddRow(new string[] {
                             "Frequent usage",
                             "<1.5 seconds",
                             "<500ms",
                             "<120MB",
                             "<350MB"});
-                table1803.AddRow(new string[] {
+                table1766.AddRow(new string[] {
                             "After background kill",
                             "<2.5 seconds",
                             "<800ms",
                             "<180MB",
                             "<450MB"});
-                table1803.AddRow(new string[] {
+                table1766.AddRow(new string[] {
                             "Low storage conditions",
                             "<4 seconds",
                             "<1.2 seconds",
                             "<100MB",
                             "Optimized"});
 #line 50
-    testRunner.When("app startup performance is tested:", ((string)(null)), table1803, "When ");
+    testRunner.When("app startup performance is tested:", ((string)(null)), table1766, "When ");
 #line hidden
 #line 57
     testRunner.Then("app startup should be fast and responsive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -418,44 +418,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 64
     testRunner.Given("mobile devices have limited memory resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1804 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1767 = new TechTalk.SpecFlow.Table(new string[] {
                             "Usage Pattern",
                             "Peak Memory Target",
                             "Average Memory",
                             "Memory Growth",
                             "Garbage Collection"});
-                table1804.AddRow(new string[] {
+                table1767.AddRow(new string[] {
                             "Light usage (reading)",
                             "<100MB",
                             "<75MB",
                             "<1MB/hour",
                             "Frequent, brief"});
-                table1804.AddRow(new string[] {
+                table1767.AddRow(new string[] {
                             "Moderate usage (activities)",
                             "<200MB",
                             "<150MB",
                             "<2MB/hour",
                             "Regular, efficient"});
-                table1804.AddRow(new string[] {
+                table1767.AddRow(new string[] {
                             "Heavy usage (video+activities)",
                             "<300MB",
                             "<250MB",
                             "<5MB/hour",
                             "Proactive"});
-                table1804.AddRow(new string[] {
+                table1767.AddRow(new string[] {
                             "Extended sessions",
                             "<250MB",
                             "<200MB",
                             "<1MB/hour",
                             "Memory compaction"});
-                table1804.AddRow(new string[] {
+                table1767.AddRow(new string[] {
                             "Background mode",
                             "<50MB",
                             "<30MB",
                             "Minimal",
                             "Aggressive cleanup"});
 #line 65
-    testRunner.When("memory usage is tested across app usage patterns:", ((string)(null)), table1804, "When ");
+    testRunner.When("memory usage is tested across app usage patterns:", ((string)(null)), table1767, "When ");
 #line hidden
 #line 72
     testRunner.Then("memory usage should remain within device-appropriate limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -505,50 +505,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 79
     testRunner.Given("mobile devices often have limited or unreliable connectivity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1805 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1768 = new TechTalk.SpecFlow.Table(new string[] {
                             "Connection Type",
                             "Data Usage Target",
                             "Sync Efficiency",
                             "Offline Duration",
                             "Recovery Time"});
-                table1805.AddRow(new string[] {
+                table1768.AddRow(new string[] {
                             "5G high-speed",
                             "Standard usage",
                             "Real-time",
                             "24 hours",
                             "<5 seconds"});
-                table1805.AddRow(new string[] {
+                table1768.AddRow(new string[] {
                             "4G LTE",
                             "20% reduction",
                             "Near real-time",
                             "12 hours",
                             "<10 seconds"});
-                table1805.AddRow(new string[] {
+                table1768.AddRow(new string[] {
                             "3G moderate",
                             "50% reduction",
                             "Batched sync",
                             "6 hours",
                             "<30 seconds"});
-                table1805.AddRow(new string[] {
+                table1768.AddRow(new string[] {
                             "2G slow",
                             "80% reduction",
                             "Essential only",
                             "2 hours",
                             "<2 minutes"});
-                table1805.AddRow(new string[] {
+                table1768.AddRow(new string[] {
                             "WiFi intermittent",
                             "Adaptive",
                             "Opportunistic",
                             "8 hours",
                             "<15 seconds"});
-                table1805.AddRow(new string[] {
+                table1768.AddRow(new string[] {
                             "Offline mode",
                             "Zero usage",
                             "None",
                             "Unlimited",
                             "Auto-sync"});
 #line 80
-    testRunner.When("network efficiency is tested across connection types:", ((string)(null)), table1805, "When ");
+    testRunner.When("network efficiency is tested across connection types:", ((string)(null)), table1768, "When ");
 #line hidden
 #line 88
     testRunner.Then("data usage should be optimized for connection quality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -598,43 +598,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 96
     testRunner.Given("therapy apps must work across a wide range of devices", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1806 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1769 = new TechTalk.SpecFlow.Table(new string[] {
                             "Device Specification",
                             "Performance Adaptation",
                             "Feature Availability",
                             "Quality Settings"});
-                table1806.AddRow(new string[] {
+                table1769.AddRow(new string[] {
                             "High-end (8GB+ RAM)",
                             "Full features, max quality",
                             "100% features",
                             "Ultra quality"});
-                table1806.AddRow(new string[] {
+                table1769.AddRow(new string[] {
                             "Mid-range (4-6GB RAM)",
                             "Standard features, good quality",
                             "95% features",
                             "High quality"});
-                table1806.AddRow(new string[] {
+                table1769.AddRow(new string[] {
                             "Budget (2-3GB RAM)",
                             "Essential features, basic quality",
                             "85% features",
                             "Medium quality"});
-                table1806.AddRow(new string[] {
+                table1769.AddRow(new string[] {
                             "Entry-level (<2GB RAM)",
                             "Core features, low quality",
                             "70% features",
                             "Low quality"});
-                table1806.AddRow(new string[] {
+                table1769.AddRow(new string[] {
                             "Tablets (large screen)",
                             "Enhanced UI, additional features",
                             "105% features",
                             "Optimized for size"});
-                table1806.AddRow(new string[] {
+                table1769.AddRow(new string[] {
                             "Foldables/dual screen",
                             "Adaptive layout",
                             "Specialized UI",
                             "Context-aware"});
 #line 97
-    testRunner.When("device-specific performance is tested:", ((string)(null)), table1806, "When ");
+    testRunner.When("device-specific performance is tested:", ((string)(null)), table1769, "When ");
 #line hidden
 #line 105
     testRunner.Then("performance should adapt automatically to device capabilities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -684,44 +684,44 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 112
     testRunner.Given("therapy sessions may last 30-60 minutes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1807 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1770 = new TechTalk.SpecFlow.Table(new string[] {
                             "Usage Scenario",
                             "Session Duration",
                             "Battery Drain Target",
                             "CPU Usage",
                             "Screen Impact"});
-                table1807.AddRow(new string[] {
+                table1770.AddRow(new string[] {
                             "Video-based therapy",
                             "45 minutes",
                             "<15%",
                             "<30%",
                             "Auto-brightness"});
-                table1807.AddRow(new string[] {
+                table1770.AddRow(new string[] {
                             "Interactive activities",
                             "30 minutes",
                             "<10%",
                             "<25%",
                             "Optimized"});
-                table1807.AddRow(new string[] {
+                table1770.AddRow(new string[] {
                             "Assessment tools",
                             "60 minutes",
                             "<12%",
                             "<20%",
                             "Minimal"});
-                table1807.AddRow(new string[] {
+                table1770.AddRow(new string[] {
                             "Audio-only activities",
                             "45 minutes",
                             "<8%",
                             "<15%",
                             "Can dim"});
-                table1807.AddRow(new string[] {
+                table1770.AddRow(new string[] {
                             "Background data sync",
                             "Continuous",
                             "<2%/hour",
                             "<5%",
                             "Screen off"});
 #line 113
-    testRunner.When("battery optimization is tested across usage scenarios:", ((string)(null)), table1807, "When ");
+    testRunner.When("battery optimization is tested across usage scenarios:", ((string)(null)), table1770, "When ");
 #line hidden
 #line 120
     testRunner.Then("battery consumption should be minimized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -771,50 +771,50 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 127
     testRunner.Given("mobile storage is often limited and valuable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1808 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1771 = new TechTalk.SpecFlow.Table(new string[] {
                             "Storage Component",
                             "Size Target",
                             "Growth Limit",
                             "Cleanup Strategy",
                             "User Control"});
-                table1808.AddRow(new string[] {
+                table1771.AddRow(new string[] {
                             "App installation",
                             "<200MB",
                             "Fixed",
                             "N/A",
                             "None required"});
-                table1808.AddRow(new string[] {
+                table1771.AddRow(new string[] {
                             "Offline content cache",
                             "<1GB",
                             "<2GB",
                             "LRU eviction",
                             "Manual purge"});
-                table1808.AddRow(new string[] {
+                table1771.AddRow(new string[] {
                             "User-generated content",
                             "<500MB",
                             "<1GB",
                             "Compression",
                             "User manages"});
-                table1808.AddRow(new string[] {
+                table1771.AddRow(new string[] {
                             "Temporary files",
                             "<100MB",
                             "<200MB",
                             "Auto-cleanup",
                             "Transparent"});
-                table1808.AddRow(new string[] {
+                table1771.AddRow(new string[] {
                             "Database storage",
                             "<300MB",
                             "<500MB",
                             "Data archiving",
                             "Auto-managed"});
-                table1808.AddRow(new string[] {
+                table1771.AddRow(new string[] {
                             "Media downloads",
                             "Variable",
                             "User-controlled",
                             "Manual deletion",
                             "Full user control"});
 #line 128
-    testRunner.When("storage optimization is tested:", ((string)(null)), table1808, "When ");
+    testRunner.When("storage optimization is tested:", ((string)(null)), table1771, "When ");
 #line hidden
 #line 136
     testRunner.Then("storage usage should be efficient and predictable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -864,43 +864,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 144
     testRunner.Given("iOS devices have specific performance characteristics", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1809 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1772 = new TechTalk.SpecFlow.Table(new string[] {
                             "iOS Device Type",
                             "Performance Target",
                             "iOS Version Support",
                             "Metal Utilization"});
-                table1809.AddRow(new string[] {
+                table1772.AddRow(new string[] {
                             "iPhone 15 Pro",
                             "Maximum performance",
                             "iOS 17+",
                             "Full GPU acceleration"});
-                table1809.AddRow(new string[] {
+                table1772.AddRow(new string[] {
                             "iPhone 13/14",
                             "High performance",
                             "iOS 16+",
                             "Standard GPU use"});
-                table1809.AddRow(new string[] {
+                table1772.AddRow(new string[] {
                             "iPhone 11/12",
                             "Good performance",
                             "iOS 15+",
                             "Optimized GPU"});
-                table1809.AddRow(new string[] {
+                table1772.AddRow(new string[] {
                             "iPhone X/XS",
                             "Acceptable performance",
                             "iOS 14+",
                             "Basic GPU"});
-                table1809.AddRow(new string[] {
+                table1772.AddRow(new string[] {
                             "iPad Pro (latest)",
                             "Enhanced features",
                             "iPadOS 17+",
                             "Pro GPU features"});
-                table1809.AddRow(new string[] {
+                table1772.AddRow(new string[] {
                             "iPad Air/Mini",
                             "Standard performance",
                             "iPadOS 16+",
                             "Standard GPU"});
 #line 145
-    testRunner.When("iOS performance is tested across device generations:", ((string)(null)), table1809, "When ");
+    testRunner.When("iOS performance is tested across device generations:", ((string)(null)), table1772, "When ");
 #line hidden
 #line 153
     testRunner.Then("iOS-specific optimizations should be utilized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -950,43 +950,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 160
     testRunner.Given("Android ecosystem has massive device diversity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1810 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1773 = new TechTalk.SpecFlow.Table(new string[] {
                             "Android Category",
                             "Performance Requirement",
                             "API Level Support",
                             "Vulkan Support"});
-                table1810.AddRow(new string[] {
+                table1773.AddRow(new string[] {
                             "Flagship phones",
                             "Premium experience",
                             "API 33+ (Android 13)",
                             "Preferred"});
-                table1810.AddRow(new string[] {
+                table1773.AddRow(new string[] {
                             "Premium mid-range",
                             "Excellent performance",
                             "API 31+ (Android 12)",
                             "Optional"});
-                table1810.AddRow(new string[] {
+                table1773.AddRow(new string[] {
                             "Budget devices",
                             "Smooth core experience",
                             "API 30+ (Android 11)",
                             "Fallback to OpenGL"});
-                table1810.AddRow(new string[] {
+                table1773.AddRow(new string[] {
                             "Android tablets",
                             "Tablet-optimized UI",
                             "API 31+",
                             "Device-dependent"});
-                table1810.AddRow(new string[] {
+                table1773.AddRow(new string[] {
                             "Android Go devices",
                             "Lightweight experience",
                             "API 29+ (Android 10)",
                             "Not available"});
-                table1810.AddRow(new string[] {
+                table1773.AddRow(new string[] {
                             "Older devices",
                             "Basic functionality",
                             "API 28+ (Android 9)",
                             "Legacy rendering"});
 #line 161
-    testRunner.When("Android performance is tested across device categories:", ((string)(null)), table1810, "When ");
+    testRunner.When("Android performance is tested across device categories:", ((string)(null)), table1773, "When ");
 #line hidden
 #line 169
     testRunner.Then("Android performance should scale with device capabilities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1036,43 +1036,43 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 177
     testRunner.Given("accessibility features are essential for inclusive therapy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1811 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1774 = new TechTalk.SpecFlow.Table(new string[] {
                             "Accessibility Feature",
                             "Performance Impact",
                             "Implementation Strategy",
                             "User Experience"});
-                table1811.AddRow(new string[] {
+                table1774.AddRow(new string[] {
                             "VoiceOver/TalkBack",
                             "<10% overhead",
                             "Optimized descriptions",
                             "Seamless integration"});
-                table1811.AddRow(new string[] {
+                table1774.AddRow(new string[] {
                             "Large text support",
                             "<5% overhead",
                             "Dynamic font scaling",
                             "Automatic adaptation"});
-                table1811.AddRow(new string[] {
+                table1774.AddRow(new string[] {
                             "High contrast mode",
                             "<3% overhead",
                             "Theme switching",
                             "Instant application"});
-                table1811.AddRow(new string[] {
+                table1774.AddRow(new string[] {
                             "Switch control",
                             "<15% overhead",
                             "Custom input handling",
                             "Responsive controls"});
-                table1811.AddRow(new string[] {
+                table1774.AddRow(new string[] {
                             "Voice control",
                             "<20% overhead",
                             "Speech recognition",
                             "Natural interaction"});
-                table1811.AddRow(new string[] {
+                table1774.AddRow(new string[] {
                             "Motor accessibility",
                             "<8% overhead",
                             "Extended touch targets",
                             "Easier interaction"});
 #line 178
-    testRunner.When("accessibility performance is tested:", ((string)(null)), table1811, "When ");
+    testRunner.When("accessibility performance is tested:", ((string)(null)), table1774, "When ");
 #line hidden
 #line 186
     testRunner.Then("accessibility features should not significantly impact performance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1124,33 +1124,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 194
     testRunner.Given("mobile devices may experience memory pressure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1812 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1775 = new TechTalk.SpecFlow.Table(new string[] {
                             "Memory Pressure Level",
                             "Available Memory",
                             "Response Strategy",
                             "Feature Impact"});
-                table1812.AddRow(new string[] {
+                table1775.AddRow(new string[] {
                             "Warning level",
                             "50MB remaining",
                             "Clear non-essential cache",
                             "Minimal reduction"});
-                table1812.AddRow(new string[] {
+                table1775.AddRow(new string[] {
                             "Critical level",
                             "20MB remaining",
                             "Reduce background activity",
                             "Some features paused"});
-                table1812.AddRow(new string[] {
+                table1775.AddRow(new string[] {
                             "Emergency level",
                             "10MB remaining",
                             "Emergency cleanup",
                             "Core features only"});
-                table1812.AddRow(new string[] {
+                table1775.AddRow(new string[] {
                             "System pressure",
                             "<5MB remaining",
                             "Graceful degradation",
                             "Essential functions"});
 #line 195
-    testRunner.When("low memory conditions are simulated:", ((string)(null)), table1812, "When ");
+    testRunner.When("low memory conditions are simulated:", ((string)(null)), table1775, "When ");
 #line hidden
 #line 201
     testRunner.Then("app should respond appropriately to memory pressure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1202,33 +1202,33 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 208
     testRunner.Given("devices may throttle performance when overheating", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1813 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1776 = new TechTalk.SpecFlow.Table(new string[] {
                             "Thermal State",
                             "Performance Impact",
                             "Adaptation Strategy",
                             "User Communication"});
-                table1813.AddRow(new string[] {
+                table1776.AddRow(new string[] {
                             "Normal temperature",
                             "No throttling",
                             "Full performance",
                             "None required"});
-                table1813.AddRow(new string[] {
+                table1776.AddRow(new string[] {
                             "Warm (60-70°C)",
                             "Light throttling",
                             "Reduce background tasks",
                             "Subtle notification"});
-                table1813.AddRow(new string[] {
+                table1776.AddRow(new string[] {
                             "Hot (70-80°C)",
                             "Moderate throttling",
                             "Lower frame rates",
                             "Performance notice"});
-                table1813.AddRow(new string[] {
+                table1776.AddRow(new string[] {
                             "Critical (>80°C)",
                             "Heavy throttling",
                             "Minimum operations",
                             "Cooling suggestion"});
 #line 209
-    testRunner.When("thermal throttling scenarios are tested:", ((string)(null)), table1813, "When ");
+    testRunner.When("thermal throttling scenarios are tested:", ((string)(null)), table1776, "When ");
 #line hidden
 #line 215
     testRunner.Then("performance should adapt to thermal conditions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1280,38 +1280,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 222
     testRunner.Given("mobile connectivity is often unstable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1814 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1777 = new TechTalk.SpecFlow.Table(new string[] {
                             "Network Interruption",
                             "Duration",
                             "Handling Strategy",
                             "User Experience"});
-                table1814.AddRow(new string[] {
+                table1777.AddRow(new string[] {
                             "Brief disconnection",
                             "<5 seconds",
                             "Retry automatically",
                             "Transparent"});
-                table1814.AddRow(new string[] {
+                table1777.AddRow(new string[] {
                             "Extended outage",
                             "30+ seconds",
                             "Enable offline mode",
                             "Clear communication"});
-                table1814.AddRow(new string[] {
+                table1777.AddRow(new string[] {
                             "Slow connection",
                             "Ongoing",
                             "Adaptive quality",
                             "Degraded but functional"});
-                table1814.AddRow(new string[] {
+                table1777.AddRow(new string[] {
                             "Connection switching",
                             "WiFi to cellular",
                             "Seamless handoff",
                             "Uninterrupted"});
-                table1814.AddRow(new string[] {
+                table1777.AddRow(new string[] {
                             "Metered connection",
                             "Variable",
                             "Data conservation",
                             "Usage awareness"});
 #line 223
-    testRunner.When("network interruption scenarios are tested:", ((string)(null)), table1814, "When ");
+    testRunner.When("network interruption scenarios are tested:", ((string)(null)), table1777, "When ");
 #line hidden
 #line 230
     testRunner.Then("network interruptions should be handled transparently", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1363,38 +1363,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 237
     testRunner.Given("mobile apps are frequently interrupted by other activities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1815 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1778 = new TechTalk.SpecFlow.Table(new string[] {
                             "Interruption Type",
                             "Expected Behavior",
                             "State Preservation",
                             "Recovery Time"});
-                table1815.AddRow(new string[] {
+                table1778.AddRow(new string[] {
                             "Incoming phone call",
                             "Pause gracefully",
                             "Complete state",
                             "Instant resume"});
-                table1815.AddRow(new string[] {
+                table1778.AddRow(new string[] {
                             "App switching",
                             "Background mode",
                             "Session state",
                             "<2 seconds"});
-                table1815.AddRow(new string[] {
+                table1778.AddRow(new string[] {
                             "Device lock",
                             "Secure pause",
                             "Encrypted state",
                             "Authentication req"});
-                table1815.AddRow(new string[] {
+                table1778.AddRow(new string[] {
                             "Low battery warning",
                             "Reduce activity",
                             "Essential state",
                             "Immediate"});
-                table1815.AddRow(new string[] {
+                table1778.AddRow(new string[] {
                             "System notifications",
                             "Continue operation",
                             "Minimal state",
                             "No interruption"});
 #line 238
-    testRunner.When("background interruption scenarios are tested:", ((string)(null)), table1815, "When ");
+    testRunner.When("background interruption scenarios are tested:", ((string)(null)), table1778, "When ");
 #line hidden
 #line 245
     testRunner.Then("interruptions should be handled seamlessly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1446,38 +1446,38 @@ namespace UPTRMS.Api.Tests.BDD.Features.Performance
 #line 252
     testRunner.Given("therapy activities may involve device rotation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1816 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1779 = new TechTalk.SpecFlow.Table(new string[] {
                             "Orientation Change",
                             "Transition Time",
                             "Layout Adaptation",
                             "State Preservation"});
-                table1816.AddRow(new string[] {
+                table1779.AddRow(new string[] {
                             "Portrait to landscape",
                             "<500ms",
                             "Automatic reflow",
                             "Complete"});
-                table1816.AddRow(new string[] {
+                table1779.AddRow(new string[] {
                             "Landscape to portrait",
                             "<500ms",
                             "UI reorganization",
                             "Complete"});
-                table1816.AddRow(new string[] {
+                table1779.AddRow(new string[] {
                             "Rapid rotations",
                             "<300ms each",
                             "Debounced updates",
                             "Stable"});
-                table1816.AddRow(new string[] {
+                table1779.AddRow(new string[] {
                             "Multi-window mode",
                             "<800ms",
                             "Responsive layout",
                             "Maintained"});
-                table1816.AddRow(new string[] {
+                table1779.AddRow(new string[] {
                             "Picture-in-picture",
                             "<400ms",
                             "Minimal interface",
                             "Background state"});
 #line 253
-    testRunner.When("device orientation scenarios are tested:", ((string)(null)), table1816, "When ");
+    testRunner.When("device orientation scenarios are tested:", ((string)(null)), table1779, "When ");
 #line hidden
 #line 260
     testRunner.Then("orientation changes should be smooth and fast", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

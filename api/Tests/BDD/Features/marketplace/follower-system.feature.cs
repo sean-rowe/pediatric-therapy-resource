@@ -142,49 +142,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 17
     testRunner.And("sellers benefit from building follower communities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1614 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1577 = new TechTalk.SpecFlow.Table(new string[] {
                             "Follow Action",
                             "User Experience",
                             "Seller Benefits",
                             "Privacy Controls",
                             "Notification Triggers",
                             "Engagement Features"});
-                table1614.AddRow(new string[] {
+                table1577.AddRow(new string[] {
                             "Follow seller",
                             "One-click follow button",
                             "Follower count increase",
                             "Public/private profile",
                             "New product alerts",
                             "Direct communication"});
-                table1614.AddRow(new string[] {
+                table1577.AddRow(new string[] {
                             "Unfollow seller",
                             "One-click unfollow",
                             "Follower count decrease",
                             "Block/unblock options",
                             "Follow status changes",
                             "Preference management"});
-                table1614.AddRow(new string[] {
+                table1577.AddRow(new string[] {
                             "Follow recommendations",
                             "Suggested sellers",
                             "Discovery opportunities",
                             "Recommendation control",
                             "Suggestion notifications",
                             "Cross-promotion"});
-                table1614.AddRow(new string[] {
+                table1577.AddRow(new string[] {
                             "Follower management",
                             "Follower list access",
                             "Audience insights",
                             "Follower privacy",
                             "Follower updates",
                             "Community building"});
-                table1614.AddRow(new string[] {
+                table1577.AddRow(new string[] {
                             "Following list",
                             "Personal following feed",
                             "Market research data",
                             "Following privacy",
                             "Activity summaries",
                             "Curated content"});
-                table1614.AddRow(new string[] {
+                table1577.AddRow(new string[] {
                             "Mutual following",
                             "Bidirectional relationships",
                             "Partnership opportunities",
@@ -192,7 +192,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Collaboration alerts",
                             "Network effects"});
 #line 18
-    testRunner.When("implementing following functionality:", ((string)(null)), table1614, "When ");
+    testRunner.When("implementing following functionality:", ((string)(null)), table1577, "When ");
 #line hidden
 #line 26
     testRunner.Then("following should be intuitive and rewarding", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -249,49 +249,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 34
     testRunner.And("algorithmic recommendations improve user experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1615 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1578 = new TechTalk.SpecFlow.Table(new string[] {
                             "Recommendation Type",
                             "Algorithm Basis",
                             "Personalization Level",
                             "Update Frequency",
                             "Recommendation Quality",
                             "Discovery Impact"});
-                table1615.AddRow(new string[] {
+                table1578.AddRow(new string[] {
                             "Similar interests",
                             "Purchase history",
                             "High personalization",
                             "Daily updates",
                             "85% relevance",
                             "40% discovery rate"});
-                table1615.AddRow(new string[] {
+                table1578.AddRow(new string[] {
                             "Popular sellers",
                             "Follower counts, ratings",
                             "Medium personalization",
                             "Weekly updates",
                             "80% relevance",
                             "30% discovery rate"});
-                table1615.AddRow(new string[] {
+                table1578.AddRow(new string[] {
                             "New sellers",
                             "Recent additions",
                             "Low personalization",
                             "Real-time",
                             "70% relevance",
                             "60% discovery rate"});
-                table1615.AddRow(new string[] {
+                table1578.AddRow(new string[] {
                             "Trending sellers",
                             "Growth metrics",
                             "Medium personalization",
                             "Hourly updates",
                             "82% relevance",
                             "45% discovery rate"});
-                table1615.AddRow(new string[] {
+                table1578.AddRow(new string[] {
                             "Category leaders",
                             "Category performance",
                             "High personalization",
                             "Weekly updates",
                             "90% relevance",
                             "35% discovery rate"});
-                table1615.AddRow(new string[] {
+                table1578.AddRow(new string[] {
                             "Friend connections",
                             "Social graph",
                             "High personalization",
@@ -299,7 +299,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "88% relevance",
                             "50% discovery rate"});
 #line 35
-    testRunner.When("implementing seller recommendation system:", ((string)(null)), table1615, "When ");
+    testRunner.When("implementing seller recommendation system:", ((string)(null)), table1578, "When ");
 #line hidden
 #line 43
     testRunner.Then("recommendations should be relevant and diverse", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,49 +356,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 51
     testRunner.And("community building benefits both users and sellers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1616 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1579 = new TechTalk.SpecFlow.Table(new string[] {
                             "Social Feature",
                             "Functionality",
                             "User Benefits",
                             "Seller Benefits",
                             "Privacy Controls",
                             "Moderation Requirements"});
-                table1616.AddRow(new string[] {
+                table1579.AddRow(new string[] {
                             "Activity feeds",
                             "Follow updates",
                             "Stay informed",
                             "Increased visibility",
                             "Feed privacy settings",
                             "Content moderation"});
-                table1616.AddRow(new string[] {
+                table1579.AddRow(new string[] {
                             "Social sharing",
                             "Share products/sellers",
                             "Recommend to friends",
                             "Viral marketing",
                             "Sharing permissions",
                             "Share monitoring"});
-                table1616.AddRow(new string[] {
+                table1579.AddRow(new string[] {
                             "Comments/reviews",
                             "Product feedback",
                             "Community input",
                             "Customer feedback",
                             "Comment privacy",
                             "Review moderation"});
-                table1616.AddRow(new string[] {
+                table1579.AddRow(new string[] {
                             "Wish lists",
                             "Save favorites",
                             "Personal organization",
                             "Demand insights",
                             "List privacy",
                             "Content validation"});
-                table1616.AddRow(new string[] {
+                table1579.AddRow(new string[] {
                             "Collections",
                             "Curated groups",
                             "Content curation",
                             "Showcase platform",
                             "Collection privacy",
                             "Quality control"});
-                table1616.AddRow(new string[] {
+                table1579.AddRow(new string[] {
                             "User profiles",
                             "Personal pages",
                             "Identity expression",
@@ -406,7 +406,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Profile privacy",
                             "Profile moderation"});
 #line 52
-    testRunner.When("implementing social networking features:", ((string)(null)), table1616, "When ");
+    testRunner.When("implementing social networking features:", ((string)(null)), table1579, "When ");
 #line hidden
 #line 60
     testRunner.Then("social features should foster community", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -463,49 +463,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 69
     testRunner.And("personalization improves notification relevance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1617 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1580 = new TechTalk.SpecFlow.Table(new string[] {
                             "Notification Type",
                             "Trigger Conditions",
                             "Personalization Factors",
                             "Delivery Methods",
                             "Frequency Controls",
                             "Effectiveness Metrics"});
-                table1617.AddRow(new string[] {
+                table1580.AddRow(new string[] {
                             "New product alerts",
                             "Seller posts new product",
                             "Interest matching, purchase history",
                             "Push, email, in-app",
                             "Immediate, batched",
                             "Click-through rates"});
-                table1617.AddRow(new string[] {
+                table1580.AddRow(new string[] {
                             "Price drop alerts",
                             "Product price reduction",
                             "Wishlist items, viewed products",
                             "Push, email",
                             "Real-time",
                             "Conversion rates"});
-                table1617.AddRow(new string[] {
+                table1580.AddRow(new string[] {
                             "Back in stock",
                             "Inventory restoration",
                             "Out-of-stock interests",
                             "Push, email, SMS",
                             "Immediate",
                             "Purchase rates"});
-                table1617.AddRow(new string[] {
+                table1580.AddRow(new string[] {
                             "Seller announcements",
                             "Seller updates/news",
                             "Following relationship",
                             "Push, email, in-app",
                             "Seller frequency",
                             "Engagement rates"});
-                table1617.AddRow(new string[] {
+                table1580.AddRow(new string[] {
                             "Sale notifications",
                             "Promotional campaigns",
                             "Category preferences",
                             "Push, email",
                             "Campaign timing",
                             "Sale participation"});
-                table1617.AddRow(new string[] {
+                table1580.AddRow(new string[] {
                             "Social activities",
                             "Follows, likes, shares",
                             "Social connections",
@@ -513,7 +513,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Activity-based",
                             "Social engagement"});
 #line 70
-    testRunner.When("implementing personalized notification system:", ((string)(null)), table1617, "When ");
+    testRunner.When("implementing personalized notification system:", ((string)(null)), table1580, "When ");
 #line hidden
 #line 78
     testRunner.Then("notifications should be timely and relevant", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -570,49 +570,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 86
     testRunner.And("preference management improves user satisfaction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1618 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1581 = new TechTalk.SpecFlow.Table(new string[] {
                             "Preference Category",
                             "Customization Options",
                             "Granularity Level",
                             "Default Settings",
                             "Override Capabilities",
                             "Preference Analytics"});
-                table1618.AddRow(new string[] {
+                table1581.AddRow(new string[] {
                             "Notification types",
                             "All types selectable",
                             "Individual notifications",
                             "Opt-in for important",
                             "Global disable",
                             "Usage patterns"});
-                table1618.AddRow(new string[] {
+                table1581.AddRow(new string[] {
                             "Delivery methods",
                             "Email, push, SMS, in-app",
                             "Method per type",
                             "Email + push",
                             "Method switching",
                             "Delivery effectiveness"});
-                table1618.AddRow(new string[] {
+                table1581.AddRow(new string[] {
                             "Frequency controls",
                             "Immediate, hourly, daily, weekly",
                             "Type-specific frequency",
                             "Balanced frequency",
                             "Emergency overrides",
                             "Frequency optimization"});
-                table1618.AddRow(new string[] {
+                table1581.AddRow(new string[] {
                             "Content filtering",
                             "Keywords, categories, sellers",
                             "Fine-grained filters",
                             "Broad preferences",
                             "Filter exceptions",
                             "Filter effectiveness"});
-                table1618.AddRow(new string[] {
+                table1581.AddRow(new string[] {
                             "Quiet hours",
                             "Time-based restrictions",
                             "Timezone-aware",
                             "Night hours",
                             "Urgent exceptions",
                             "Respect compliance"});
-                table1618.AddRow(new string[] {
+                table1581.AddRow(new string[] {
                             "Device preferences",
                             "Per-device settings",
                             "Device-specific",
@@ -620,7 +620,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Device management",
                             "Device engagement"});
 #line 87
-    testRunner.When("implementing notification preferences:", ((string)(null)), table1618, "When ");
+    testRunner.When("implementing notification preferences:", ((string)(null)), table1581, "When ");
 #line hidden
 #line 95
     testRunner.Then("preferences should be easily manageable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -677,49 +677,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 103
     testRunner.And("intelligent delivery improves notification effectiveness", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1619 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1582 = new TechTalk.SpecFlow.Table(new string[] {
                             "Optimization Factor",
                             "Analysis Method",
                             "Delivery Timing",
                             "User Behavior Learning",
                             "Effectiveness Measurement",
                             "Optimization Algorithm"});
-                table1619.AddRow(new string[] {
+                table1582.AddRow(new string[] {
                             "User activity patterns",
                             "Behavioral analysis",
                             "Peak activity times",
                             "Activity history",
                             "Open rates",
                             "Machine learning"});
-                table1619.AddRow(new string[] {
+                table1582.AddRow(new string[] {
                             "Device usage patterns",
                             "Device analytics",
                             "Preferred devices",
                             "Device switching",
                             "Engagement rates",
                             "Predictive modeling"});
-                table1619.AddRow(new string[] {
+                table1582.AddRow(new string[] {
                             "Content preferences",
                             "Interaction data",
                             "Relevant content timing",
                             "Content engagement",
                             "Click-through rates",
                             "Recommendation engine"});
-                table1619.AddRow(new string[] {
+                table1582.AddRow(new string[] {
                             "Notification fatigue",
                             "Frequency analysis",
                             "Optimal spacing",
                             "Saturation detection",
                             "Unsubscribe rates",
                             "Fatigue prevention"});
-                table1619.AddRow(new string[] {
+                table1582.AddRow(new string[] {
                             "Urgency assessment",
                             "Content analysis",
                             "Priority-based timing",
                             "Urgency learning",
                             "Response times",
                             "Priority algorithms"});
-                table1619.AddRow(new string[] {
+                table1582.AddRow(new string[] {
                             "Context awareness",
                             "Situational data",
                             "Context-appropriate timing",
@@ -727,7 +727,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Conversion rates",
                             "Context modeling"});
 #line 104
-    testRunner.When("implementing smart delivery optimization:", ((string)(null)), table1619, "When ");
+    testRunner.When("implementing smart delivery optimization:", ((string)(null)), table1582, "When ");
 #line hidden
 #line 112
     testRunner.Then("delivery should be optimized for each user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -784,49 +784,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 121
     testRunner.And("analytics drive informed engagement strategies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1620 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1583 = new TechTalk.SpecFlow.Table(new string[] {
                             "Analytics Category",
                             "Metrics Provided",
                             "Insights Generated",
                             "Actionable Intelligence",
                             "Reporting Features",
                             "Growth Recommendations"});
-                table1620.AddRow(new string[] {
+                table1583.AddRow(new string[] {
                             "Follower demographics",
                             "Age, location, interests",
                             "Audience composition",
                             "Targeting strategies",
                             "Demographic reports",
                             "Audience expansion"});
-                table1620.AddRow(new string[] {
+                table1583.AddRow(new string[] {
                             "Engagement patterns",
                             "Activity, interactions",
                             "Engagement trends",
                             "Content optimization",
                             "Engagement reports",
                             "Engagement improvement"});
-                table1620.AddRow(new string[] {
+                table1583.AddRow(new string[] {
                             "Growth tracking",
                             "Follower acquisition/loss",
                             "Growth drivers",
                             "Growth strategies",
                             "Growth reports",
                             "Growth acceleration"});
-                table1620.AddRow(new string[] {
+                table1583.AddRow(new string[] {
                             "Content performance",
                             "Post engagement",
                             "Content effectiveness",
                             "Content strategy",
                             "Content reports",
                             "Content optimization"});
-                table1620.AddRow(new string[] {
+                table1583.AddRow(new string[] {
                             "Conversion analysis",
                             "Follower-to-customer",
                             "Conversion funnels",
                             "Sales optimization",
                             "Conversion reports",
                             "Conversion improvement"});
-                table1620.AddRow(new string[] {
+                table1583.AddRow(new string[] {
                             "Competitive analysis",
                             "Benchmark comparisons",
                             "Market position",
@@ -834,7 +834,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Competitive reports",
                             "Market differentiation"});
 #line 122
-    testRunner.When("providing seller follower analytics:", ((string)(null)), table1620, "When ");
+    testRunner.When("providing seller follower analytics:", ((string)(null)), table1583, "When ");
 #line hidden
 #line 130
     testRunner.Then("analytics should provide actionable insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -891,49 +891,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 138
     testRunner.And("engaged communities drive organic growth", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1621 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1584 = new TechTalk.SpecFlow.Table(new string[] {
                             "Community Feature",
                             "Functionality",
                             "Seller Benefits",
                             "Follower Benefits",
                             "Management Tools",
                             "Success Metrics"});
-                table1621.AddRow(new string[] {
+                table1584.AddRow(new string[] {
                             "Seller announcements",
                             "Broadcast updates",
                             "Direct communication",
                             "Exclusive information",
                             "Scheduling, targeting",
                             "Reach, engagement"});
-                table1621.AddRow(new string[] {
+                table1584.AddRow(new string[] {
                             "Exclusive offers",
                             "Follower-only deals",
                             "Loyalty rewards",
                             "Special access",
                             "Offer management",
                             "Conversion rates"});
-                table1621.AddRow(new string[] {
+                table1584.AddRow(new string[] {
                             "Early access",
                             "Preview privileges",
                             "Feedback collection",
                             "VIP treatment",
                             "Access control",
                             "Adoption rates"});
-                table1621.AddRow(new string[] {
+                table1584.AddRow(new string[] {
                             "Community events",
                             "Virtual gatherings",
                             "Community engagement",
                             "Social interaction",
                             "Event management",
                             "Participation rates"});
-                table1621.AddRow(new string[] {
+                table1584.AddRow(new string[] {
                             "Feedback collection",
                             "Follower surveys",
                             "Product insights",
                             "Voice in development",
                             "Survey tools",
                             "Response rates"});
-                table1621.AddRow(new string[] {
+                table1584.AddRow(new string[] {
                             "Recognition programs",
                             "Follower rewards",
                             "Relationship building",
@@ -941,7 +941,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Recognition management",
                             "Loyalty metrics"});
 #line 139
-    testRunner.When("implementing community building tools:", ((string)(null)), table1621, "When ");
+    testRunner.When("implementing community building tools:", ((string)(null)), table1584, "When ");
 #line hidden
 #line 147
     testRunner.Then("community features should strengthen relationships", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -998,49 +998,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 155
     testRunner.And("collaborations create value for all parties", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1622 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1585 = new TechTalk.SpecFlow.Table(new string[] {
                             "Collaboration Type",
                             "Platform Support",
                             "Partnership Models",
                             "Revenue Sharing",
                             "Content Guidelines",
                             "Performance Tracking"});
-                table1622.AddRow(new string[] {
+                table1585.AddRow(new string[] {
                             "Product endorsements",
                             "Endorsement tools",
                             "Commission-based",
                             "Revenue percentage",
                             "Brand alignment",
                             "Sales attribution"});
-                table1622.AddRow(new string[] {
+                table1585.AddRow(new string[] {
                             "Content creation",
                             "Creation platform",
                             "Flat fee + commission",
                             "Negotiated terms",
                             "Quality standards",
                             "Content performance"});
-                table1622.AddRow(new string[] {
+                table1585.AddRow(new string[] {
                             "Event partnerships",
                             "Event coordination",
                             "Event revenue share",
                             "Mutual benefits",
                             "Event guidelines",
                             "Event success metrics"});
-                table1622.AddRow(new string[] {
+                table1585.AddRow(new string[] {
                             "Cross-promotion",
                             "Promotion tools",
                             "Mutual promotion",
                             "Cross-audience access",
                             "Promotion standards",
                             "Audience growth"});
-                table1622.AddRow(new string[] {
+                table1585.AddRow(new string[] {
                             "Collaborative products",
                             "Co-creation tools",
                             "Joint development",
                             "Shared ownership",
                             "Development guidelines",
                             "Product success"});
-                table1622.AddRow(new string[] {
+                table1585.AddRow(new string[] {
                             "Ambassador programs",
                             "Ambassador platform",
                             "Ongoing partnerships",
@@ -1048,7 +1048,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Program requirements",
                             "Ambassador effectiveness"});
 #line 156
-    testRunner.When("enabling influencer collaboration:", ((string)(null)), table1622, "When ");
+    testRunner.When("enabling influencer collaboration:", ((string)(null)), table1585, "When ");
 #line hidden
 #line 164
     testRunner.Then("collaboration should be mutually beneficial", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1105,49 +1105,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 173
     testRunner.And("follower metrics indicate seller credibility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1623 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1586 = new TechTalk.SpecFlow.Table(new string[] {
                             "Social Proof Element",
                             "Display Method",
                             "Trust Indicators",
                             "Influence Metrics",
                             "Authenticity Measures",
                             "Impact Assessment"});
-                table1623.AddRow(new string[] {
+                table1586.AddRow(new string[] {
                             "Follower counts",
                             "Prominent display",
                             "Popularity indication",
                             "Social influence",
                             "Verified followers",
                             "Trust increase"});
-                table1623.AddRow(new string[] {
+                table1586.AddRow(new string[] {
                             "Follower quality",
                             "Quality indicators",
                             "Credibility signals",
                             "Engagement quality",
                             "Quality verification",
                             "Credibility impact"});
-                table1623.AddRow(new string[] {
+                table1586.AddRow(new string[] {
                             "Social activity",
                             "Activity streams",
                             "Social validation",
                             "Activity influence",
                             "Authentic engagement",
                             "Validation effect"});
-                table1623.AddRow(new string[] {
+                table1586.AddRow(new string[] {
                             "Endorsements",
                             "Endorsement display",
                             "Expert validation",
                             "Authority influence",
                             "Verified endorsements",
                             "Authority impact"});
-                table1623.AddRow(new string[] {
+                table1586.AddRow(new string[] {
                             "Community size",
                             "Community metrics",
                             "Network effects",
                             "Community influence",
                             "Active community",
                             "Network benefits"});
-                table1623.AddRow(new string[] {
+                table1586.AddRow(new string[] {
                             "Growth trends",
                             "Trend indicators",
                             "Momentum signals",
@@ -1155,7 +1155,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Organic growth",
                             "Momentum impact"});
 #line 174
-    testRunner.When("implementing social proof features:", ((string)(null)), table1623, "When ");
+    testRunner.When("implementing social proof features:", ((string)(null)), table1586, "When ");
 #line hidden
 #line 182
     testRunner.Then("social proof should build trust", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1212,49 +1212,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 190
     testRunner.And("interconnected users create ecosystem benefits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1624 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1587 = new TechTalk.SpecFlow.Table(new string[] {
                             "Network Feature",
                             "Interaction Type",
                             "Value Creation",
                             "Network Benefits",
                             "Scaling Effects",
                             "Platform Benefits"});
-                table1624.AddRow(new string[] {
+                table1587.AddRow(new string[] {
                             "Follower recommendations",
                             "Social recommendations",
                             "Trust-based discovery",
                             "Improved discovery",
                             "Viral growth",
                             "User retention"});
-                table1624.AddRow(new string[] {
+                table1587.AddRow(new string[] {
                             "Social shopping",
                             "Group purchases",
                             "Collective benefits",
                             "Social experiences",
                             "Volume benefits",
                             "Transaction increase"});
-                table1624.AddRow(new string[] {
+                table1587.AddRow(new string[] {
                             "Community reviews",
                             "Collective intelligence",
                             "Quality assurance",
                             "Better decisions",
                             "Review quality",
                             "Platform trust"});
-                table1624.AddRow(new string[] {
+                table1587.AddRow(new string[] {
                             "Knowledge sharing",
                             "Information exchange",
                             "Learning networks",
                             "Skill development",
                             "Knowledge scaling",
                             "Platform value"});
-                table1624.AddRow(new string[] {
+                table1587.AddRow(new string[] {
                             "Collaborative filtering",
                             "Preference matching",
                             "Personalized recommendations",
                             "Relevant discoveries",
                             "Matching accuracy",
                             "Engagement increase"});
-                table1624.AddRow(new string[] {
+                table1587.AddRow(new string[] {
                             "Viral mechanics",
                             "Sharing incentives",
                             "Organic growth",
@@ -1262,7 +1262,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Exponential growth",
                             "User acquisition"});
 #line 191
-    testRunner.When("implementing network effect features:", ((string)(null)), table1624, "When ");
+    testRunner.When("implementing network effect features:", ((string)(null)), table1587, "When ");
 #line hidden
 #line 199
     testRunner.Then("network effects should increase value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1319,49 +1319,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 207
     testRunner.And("competitive elements motivate participation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1625 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1588 = new TechTalk.SpecFlow.Table(new string[] {
                             "Gamification Element",
                             "Mechanics",
                             "Rewards System",
                             "Competition Types",
                             "Progress Tracking",
                             "Engagement Benefits"});
-                table1625.AddRow(new string[] {
+                table1588.AddRow(new string[] {
                             "Achievement badges",
                             "Milestone rewards",
                             "Recognition system",
                             "Personal achievements",
                             "Badge collection",
                             "Status motivation"});
-                table1625.AddRow(new string[] {
+                table1588.AddRow(new string[] {
                             "Leaderboards",
                             "Ranking systems",
                             "Competitive recognition",
                             "Community rankings",
                             "Performance tracking",
                             "Competitive motivation"});
-                table1625.AddRow(new string[] {
+                table1588.AddRow(new string[] {
                             "Point systems",
                             "Activity points",
                             "Point accumulation",
                             "Point competitions",
                             "Point history",
                             "Activity motivation"});
-                table1625.AddRow(new string[] {
+                table1588.AddRow(new string[] {
                             "Challenges",
                             "Task completion",
                             "Challenge rewards",
                             "Community challenges",
                             "Challenge progress",
                             "Goal motivation"});
-                table1625.AddRow(new string[] {
+                table1588.AddRow(new string[] {
                             "Levels/tiers",
                             "Progression systems",
                             "Tier benefits",
                             "Tier advancement",
                             "Level tracking",
                             "Progression motivation"});
-                table1625.AddRow(new string[] {
+                table1588.AddRow(new string[] {
                             "Streaks",
                             "Consistency rewards",
                             "Streak bonuses",
@@ -1369,7 +1369,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Streak monitoring",
                             "Consistency motivation"});
 #line 208
-    testRunner.When("implementing gamification features:", ((string)(null)), table1625, "When ");
+    testRunner.When("implementing gamification features:", ((string)(null)), table1588, "When ");
 #line hidden
 #line 216
     testRunner.Then("gamification should increase engagement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1426,49 +1426,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 225
     testRunner.And("cross-platform presence increases brand visibility", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1626 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1589 = new TechTalk.SpecFlow.Table(new string[] {
                             "Platform",
                             "Integration Type",
                             "Sharing Capabilities",
                             "Import Features",
                             "Cross-promotion",
                             "Analytics Integration"});
-                table1626.AddRow(new string[] {
+                table1589.AddRow(new string[] {
                             "Facebook",
                             "OAuth + API",
                             "Product sharing",
                             "Friend finding",
                             "Page promotion",
                             "Facebook insights"});
-                table1626.AddRow(new string[] {
+                table1589.AddRow(new string[] {
                             "Instagram",
                             "API integration",
                             "Visual sharing",
                             "Contact import",
                             "Story integration",
                             "Instagram analytics"});
-                table1626.AddRow(new string[] {
+                table1589.AddRow(new string[] {
                             "Twitter",
                             "OAuth + API",
                             "Tweet sharing",
                             "Follower import",
                             "Tweet promotion",
                             "Twitter analytics"});
-                table1626.AddRow(new string[] {
+                table1589.AddRow(new string[] {
                             "LinkedIn",
                             "API connection",
                             "Professional sharing",
                             "Network import",
                             "Content promotion",
                             "LinkedIn insights"});
-                table1626.AddRow(new string[] {
+                table1589.AddRow(new string[] {
                             "TikTok",
                             "API integration",
                             "Video sharing",
                             "Creator import",
                             "Video promotion",
                             "TikTok analytics"});
-                table1626.AddRow(new string[] {
+                table1589.AddRow(new string[] {
                             "Pinterest",
                             "API connection",
                             "Pin sharing",
@@ -1476,7 +1476,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Board promotion",
                             "Pinterest analytics"});
 #line 226
-    testRunner.When("integrating with social media platforms:", ((string)(null)), table1626, "When ");
+    testRunner.When("integrating with social media platforms:", ((string)(null)), table1589, "When ");
 #line hidden
 #line 234
     testRunner.Then("integration should be seamless and secure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1533,49 +1533,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 242
     testRunner.And("unified customer data improves relationship management", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1627 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1590 = new TechTalk.SpecFlow.Table(new string[] {
                             "CRM Platform",
                             "Data Synchronization",
                             "Customer Insights",
                             "Relationship Tracking",
                             "Marketing Integration",
                             "Sales Optimization"});
-                table1627.AddRow(new string[] {
+                table1590.AddRow(new string[] {
                             "Salesforce",
                             "Bi-directional sync",
                             "Complete customer view",
                             "Interaction history",
                             "Campaign targeting",
                             "Lead scoring"});
-                table1627.AddRow(new string[] {
+                table1590.AddRow(new string[] {
                             "HubSpot",
                             "Real-time integration",
                             "Customer journey",
                             "Engagement tracking",
                             "Automated workflows",
                             "Conversion optimization"});
-                table1627.AddRow(new string[] {
+                table1590.AddRow(new string[] {
                             "Mailchimp",
                             "Email integration",
                             "Segmentation data",
                             "Email engagement",
                             "List management",
                             "Campaign optimization"});
-                table1627.AddRow(new string[] {
+                table1590.AddRow(new string[] {
                             "Constant Contact",
                             "Marketing sync",
                             "Contact insights",
                             "Communication history",
                             "Automated marketing",
                             "Engagement tracking"});
-                table1627.AddRow(new string[] {
+                table1590.AddRow(new string[] {
                             "Pipedrive",
                             "Sales integration",
                             "Sales funnel data",
                             "Deal tracking",
                             "Lead management",
                             "Sales acceleration"});
-                table1627.AddRow(new string[] {
+                table1590.AddRow(new string[] {
                             "Custom CRM",
                             "API integration",
                             "Custom data fields",
@@ -1583,7 +1583,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Custom workflows",
                             "Tailored optimization"});
 #line 243
-    testRunner.When("integrating with CRM systems:", ((string)(null)), table1627, "When ");
+    testRunner.When("integrating with CRM systems:", ((string)(null)), table1590, "When ");
 #line hidden
 #line 251
     testRunner.Then("CRM integration should provide unified customer view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1640,49 +1640,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 260
     testRunner.And("privacy regulations require strict compliance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1628 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1591 = new TechTalk.SpecFlow.Table(new string[] {
                             "Privacy Aspect",
                             "Protection Measures",
                             "User Controls",
                             "Compliance Standards",
                             "Data Handling",
                             "Rights Management"});
-                table1628.AddRow(new string[] {
+                table1591.AddRow(new string[] {
                             "Personal data",
                             "Encryption, access controls",
                             "Privacy settings",
                             "GDPR, CCPA",
                             "Minimal collection",
                             "Right to deletion"});
-                table1628.AddRow(new string[] {
+                table1591.AddRow(new string[] {
                             "Follower lists",
                             "Private by default",
                             "Visibility controls",
                             "Platform policies",
                             "Consensual sharing",
                             "Access controls"});
-                table1628.AddRow(new string[] {
+                table1591.AddRow(new string[] {
                             "Activity tracking",
                             "Opt-in tracking",
                             "Tracking preferences",
                             "Privacy laws",
                             "Anonymous analytics",
                             "Tracking opt-out"});
-                table1628.AddRow(new string[] {
+                table1591.AddRow(new string[] {
                             "Data sharing",
                             "Explicit consent",
                             "Sharing permissions",
                             "Data agreements",
                             "Limited sharing",
                             "Consent management"});
-                table1628.AddRow(new string[] {
+                table1591.AddRow(new string[] {
                             "Cross-platform data",
                             "Isolation controls",
                             "Platform permissions",
                             "Platform policies",
                             "Secure transfer",
                             "Platform controls"});
-                table1628.AddRow(new string[] {
+                table1591.AddRow(new string[] {
                             "Analytics data",
                             "Aggregated data",
                             "Analytics opt-out",
@@ -1690,7 +1690,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "De-identification",
                             "Usage controls"});
 #line 261
-    testRunner.When("implementing privacy protection:", ((string)(null)), table1628, "When ");
+    testRunner.When("implementing privacy protection:", ((string)(null)), table1591, "When ");
 #line hidden
 #line 269
     testRunner.Then("privacy should be protected by design", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1747,49 +1747,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 277
     testRunner.And("engagement fraud affects marketplace trust", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1629 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1592 = new TechTalk.SpecFlow.Table(new string[] {
                             "Fraud Type",
                             "Detection Methods",
                             "Prevention Measures",
                             "Response Actions",
                             "Verification Systems",
                             "Trust Metrics"});
-                table1629.AddRow(new string[] {
+                table1592.AddRow(new string[] {
                             "Fake followers",
                             "Behavioral analysis",
                             "Account verification",
                             "Account suspension",
                             "Identity verification",
                             "Authenticity scores"});
-                table1629.AddRow(new string[] {
+                table1592.AddRow(new string[] {
                             "Bot activity",
                             "Pattern recognition",
                             "CAPTCHA systems",
                             "Bot removal",
                             "Human verification",
                             "Activity validation"});
-                table1629.AddRow(new string[] {
+                table1592.AddRow(new string[] {
                             "Engagement fraud",
                             "Anomaly detection",
                             "Rate limiting",
                             "Engagement reset",
                             "Engagement verification",
                             "Quality metrics"});
-                table1629.AddRow(new string[] {
+                table1592.AddRow(new string[] {
                             "Click farms",
                             "IP analysis",
                             "Geographic filtering",
                             "Account blocking",
                             "Location verification",
                             "Geographic diversity"});
-                table1629.AddRow(new string[] {
+                table1592.AddRow(new string[] {
                             "Purchased followers",
                             "Purchase detection",
                             "Payment tracking",
                             "Follower removal",
                             "Purchase monitoring",
                             "Organic growth tracking"});
-                table1629.AddRow(new string[] {
+                table1592.AddRow(new string[] {
                             "Coordinated attacks",
                             "Network analysis",
                             "Attack prevention",
@@ -1797,7 +1797,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Coordination detection",
                             "Network integrity"});
 #line 278
-    testRunner.When("implementing fraud prevention:", ((string)(null)), table1629, "When ");
+    testRunner.When("implementing fraud prevention:", ((string)(null)), table1592, "When ");
 #line hidden
 #line 286
     testRunner.Then("fraud detection should be proactive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1851,49 +1851,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 294
     testRunner.Given("system failures can disrupt user relationships", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1630 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1593 = new TechTalk.SpecFlow.Table(new string[] {
                             "Error Type",
                             "Detection Method",
                             "Resolution Process",
                             "Timeline",
                             "Impact Mitigation",
                             "Prevention Measures"});
-                table1630.AddRow(new string[] {
+                table1593.AddRow(new string[] {
                             "Follow/unfollow failures",
                             "API monitoring",
                             "Transaction retry",
                             "<30 seconds",
                             "State consistency",
                             "Transaction logging"});
-                table1630.AddRow(new string[] {
+                table1593.AddRow(new string[] {
                             "Notification delivery failures",
                             "Delivery tracking",
                             "Retry mechanisms",
                             "<5 minutes",
                             "Alternative delivery",
                             "Redundant systems"});
-                table1630.AddRow(new string[] {
+                table1593.AddRow(new string[] {
                             "Data synchronization errors",
                             "Sync monitoring",
                             "Data reconciliation",
                             "<15 minutes",
                             "Data backup",
                             "Sync validation"});
-                table1630.AddRow(new string[] {
+                table1593.AddRow(new string[] {
                             "Performance degradation",
                             "Performance monitoring",
                             "Resource scaling",
                             "<2 minutes",
                             "Graceful degradation",
                             "Capacity planning"});
-                table1630.AddRow(new string[] {
+                table1593.AddRow(new string[] {
                             "Database failures",
                             "Database monitoring",
                             "Failover systems",
                             "<1 minute",
                             "Service continuity",
                             "Database redundancy"});
-                table1630.AddRow(new string[] {
+                table1593.AddRow(new string[] {
                             "Integration failures",
                             "Integration monitoring",
                             "Connection restoration",
@@ -1901,7 +1901,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "Fallback options",
                             "Integration redundancy"});
 #line 295
-    testRunner.When("follower system errors occur:", ((string)(null)), table1630, "When ");
+    testRunner.When("follower system errors occur:", ((string)(null)), table1593, "When ");
 #line hidden
 #line 303
     testRunner.Then("errors should be detected and resolved quickly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -1955,49 +1955,49 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
 #line 310
     testRunner.Given("follower systems require long-term sustainability", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1631 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1594 = new TechTalk.SpecFlow.Table(new string[] {
                             "Sustainability Factor",
                             "Current Challenge",
                             "Sustainability Strategy",
                             "Resource Requirements",
                             "Success Indicators",
                             "Long-term Viability"});
-                table1631.AddRow(new string[] {
+                table1594.AddRow(new string[] {
                             "System scalability",
                             "Growing user base",
                             "Scalable architecture",
                             "Infrastructure resources",
                             "Linear scaling",
                             "Performance sustainability"});
-                table1631.AddRow(new string[] {
+                table1594.AddRow(new string[] {
                             "Feature evolution",
                             "Changing user needs",
                             "Modular development",
                             "Development resources",
                             "Feature adoption",
                             "Technical sustainability"});
-                table1631.AddRow(new string[] {
+                table1594.AddRow(new string[] {
                             "Community health",
                             "Community management",
                             "Community guidelines",
                             "Moderation resources",
                             "Healthy interactions",
                             "Social sustainability"});
-                table1631.AddRow(new string[] {
+                table1594.AddRow(new string[] {
                             "Privacy compliance",
                             "Evolving regulations",
                             "Adaptive compliance",
                             "Legal resources",
                             "Regulatory compliance",
                             "Legal sustainability"});
-                table1631.AddRow(new string[] {
+                table1594.AddRow(new string[] {
                             "Economic viability",
                             "Platform costs",
                             "Revenue optimization",
                             "Financial resources",
                             "Positive ROI",
                             "Financial sustainability"});
-                table1631.AddRow(new string[] {
+                table1594.AddRow(new string[] {
                             "Technology maintenance",
                             "System complexity",
                             "Technical debt management",
@@ -2005,7 +2005,7 @@ namespace UPTRMS.Api.Tests.BDD.Features.Marketplace
                             "System reliability",
                             "Technical sustainability"});
 #line 311
-    testRunner.When("planning sustainability:", ((string)(null)), table1631, "When ");
+    testRunner.When("planning sustainability:", ((string)(null)), table1594, "When ");
 #line hidden
 #line 319
     testRunner.Then("sustainability should be built into system design", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
